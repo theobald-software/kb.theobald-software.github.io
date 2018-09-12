@@ -1,0 +1,19 @@
+{% if page.title %}
+  <header class="header-section">
+	<div class="intro-header no-img">
+	  <div class="container">
+		<div class="row">
+		  <div class="col-lg-10 col-md-10">
+			<div class="page-heading">
+			  <h1>{% if page.title %}{{ page.title }}{% else %}<br/>{% endif %}</h1>
+				<span class="page-subheading">former breadcrumb</span>
+				<hr class="small">
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </header>
+{% else %}
+  <div class="intro-header"></div>
+{% endif %}

@@ -1,0 +1,59 @@
+---
+layout: base
+description: The online help portal of Theobald Software
+permalink: /
+common-css:
+- "/css/instantsearch.min.css"
+- "/css/instantsearch-theme-algolia.min.css"
+---
+
+<header class="header-section header-section-search header-section-search-homepage">
+    <div class="intro-header intro-header-search">
+        <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-4 col-xs-10 col-md-offset-1 col-sm-offset-1 col-xs-offset-1">
+                <div class="search-heading">
+                    <h1>{{ site.content.homepage-search-title | markdownify }}</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-4 col-xs-10 col-md-offset-1 col-sm-offset-1 col-xs-offset-1">
+            <div id="search-box">
+                <form class="homepage-search-form" action="search.html">
+                    <div class="ais-search-box">
+                        <input autocapitalize="off" autocomplete="off" autocorrect="off" placeholder="Search..." role="textbox" spellcheck="false" type="text" value="" name="fromHomepage" class="ais-search-box--input">
+                        <span class="ais-search-box--magnifier-wrapper">
+                            <div class="ais-search-box--magnifier">
+                              <svg xmlns="http://www.w3.org/2000/svg" id="sbx-icon-search-13" viewBox="0 0 40 40" width="100%" height="100%">
+                                <path d="M26.804 29.01c-2.832 2.34-6.465 3.746-10.426 3.746C7.333 32.756 0 25.424 0 16.378 0 7.333 7.333 0 16.378 0c9.046 0 16.378 7.333 16.378 16.378 0 3.96-1.406 7.594-3.746 10.426l10.534 10.534c.607.607.61 1.59-.004 2.202-.61.61-1.597.61-2.202.004L26.804 29.01zm-10.426.627c7.323 0 13.26-5.936 13.26-13.26 0-7.32-5.937-13.257-13.26-13.257C9.056 3.12 3.12 9.056 3.12 16.378c0 7.323 5.936 13.26 13.258 13.26z" fill-rule="evenodd">
+                                </path>
+                              </svg>
+                            </div>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</header>
+
+<header class="header-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="homepage-heading">
+                    <h1 class="text-center">{{ site.content.homepage-title | markdownify}}</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="row" role="main">
+    <div class="col-md-8 col-md-offset-4">
+        <div class="row">
+            **Under Construction**Knowledge Base**
+        </div>
+    </div>
+</div>

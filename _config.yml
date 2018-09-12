@@ -1,0 +1,119 @@
+########## SECTION 1 - GENERAL SETTINGS ##########
+########## Will probably never change
+url: "https://kbtest.theobald-software.com"
+baseurl: ""
+
+# Name of website
+title: Theobald Knowledgebase
+# Short description of site
+description: Theobald's Knowledgebase contains tips, tricks and updates about our products
+
+# For variables in the head such as for twitter cards
+author:
+  name: Theobald Software
+  twitter: TheobaldSoftw
+
+twitter:
+  username: TheobaldSoftw
+  card: summary
+
+logo: /img/company/theobald_knowledgebase_logo.png
+
+# Only for SEO purposes, change the footer under _include/_footer as well if any of this changes.
+social:
+  name: Theobald Software
+  links:
+  - https://www.facebook.com/TheobaldSoftware
+  - https://twitter.com/TheobaldSoftw
+  - https://www.linkedin.com/company/theobald-software/
+  - https://www.youtube.com/user/TheobaldSoftware
+  - http://blog.theobald-software.com
+
+# TODO: please fill in
+# google_site_verification:
+
+algolia:
+  application_id: '4C27F1P1UC'
+  index_name: theobald-software-knowledgebase
+  settings:
+    attributesForFaceting: ['title','searchable(collection)', 'searchable(title)', 'searchable(lang)', 'searchable(old_url)']
+    searchableAttributes: ['title','unordered(content)','collection','description','lang','old_url']
+
+########## SECTION 2 - CONTENT ##########
+########## Content is configurable here rather than in the html pages and include files
+content:
+  navbar-links:
+    - title: "Go to Online Help"
+      url: "https://help.theobald-software.com"
+    - title: "Return to Theobald Software"
+      url: "https://theobald-software.com/en/"
+  homepage: "Homepage"
+  homepage-title: "Browse through our documentation"
+  homepage-search-title: "How can we help?"
+  search-no-results: "We didn't find any results for the search: "
+  search-title: "Search the Online Help"
+  search-results: "Results"
+  search-box-text: "Search..."
+  search-filters: "Filters"
+  search-filter-all-products: "Search through all products"
+
+########## SECTION 3 - COLLECTION CONFIGURATIONS ##########
+########## Languages can easily be added this way.
+##########  see the readme file for more information regarding that,
+##########  requires more than just adding a language here.
+collections_dir: content
+collections:
+  erpconnect-general:
+    output: true
+    name: 'ERPConnect - General'
+  erpconnect-samples:
+    output: true
+    name: 'ERPConnect - Samples'
+
+########## SECTION 4 - OTHER SETTINGS ##########
+########## Be careful with changes to these settings, as it could break things.
+timezone: "Europe/Berlin"
+markdown: kramdown
+highlighter: rouge
+plugins:
+- jekyll-sitemap
+- jekyll-redirect-from
+- jekyll-seo-tag
+- jekyll-paginate
+# sass (styling)
+sass:
+  sass_dir: css/scss
+  style: compressed
+# Default YAML values
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+      image: /img/company/theobald_knowledgebase_logo.png
+      lang: en_GB
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      image: /img/company/theobald_knowledgebase_logo.png
+      lang: en_GB
+# Exclude
+exclude:
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - Vagrantfile
+  - .idea/workspace.xml
+  - vendor
+
+########## SECTION 5 - TRACK SETTINGS ##########
+# GA gatg.js ID
+#gtag: ""
+# GA ID
+#google_analytics: ""
+# GTM ID
+#gtm: ""

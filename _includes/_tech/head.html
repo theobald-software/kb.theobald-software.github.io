@@ -1,0 +1,37 @@
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
+
+  {% include _tech/gtag.html %}
+  {% include _tech/gtm_head.html %}
+
+  {% if layout.common-css %}
+    {% for css in layout.common-css %}
+      <link rel="stylesheet" href="{{ css | prepend: site.baseurl | replace: '//', '/' }}" />
+    {% endfor %}
+  {% endif %}
+
+  {% if page.common-css %}
+    {% for css in page.common-css %}
+      <link rel="stylesheet" href="{{ css | prepend: site.baseurl | replace: '//', '/' }}" />
+    {% endfor %}
+  {% endif %}
+
+  {% seo %}
+
+  {% if layout.head-js %}
+    {% for js in layout.head-js %}
+      {% if js contains 'jquery' %}
+        <script>
+            if (typeof jQuery == 'undefined') {
+                document.write('<script src="{{ js | prepend: site.baseurl | replace: "//", "/" }}"></scr' + 'ipt>');
+            }
+        </script>
+      {% else %}
+        <script src="{{ js | prepend: site.baseurl | replace: '//', '/' }}"></script>
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+
+</head>

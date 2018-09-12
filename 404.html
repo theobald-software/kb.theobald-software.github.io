@@ -1,0 +1,43 @@
+---
+layout: 404-layout
+title: 404 - Page not found
+permalink: /404.html
+---
+
+<div class="container">
+  <div class="row">
+    <div class="col-xl-12 col-lg-12 col-md-12">
+      {% include _tech/header.html %}
+    </div>
+  </div>
+</div>
+
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-md-12">
+      <div id="hits">
+        <!-- Hits -->
+      </div>
+      <div class="redirect-message invisible">
+        <p>We haven't found the page you were looking for. Return to <a href="{{ site.url }}">Homepage</a>.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TEMPLATES -->
+{% raw %}
+<script type="text/html" id="redirect-template">
+  <div class="redirect-message">
+    <p>The page you wanted to see has changed, just like our Help Portal! Were you looking for "<a href="{{url}}">{{title}}</a>"?</p>
+  </div>
+</script>
+<script type="text/html" id="no-redirect-template">
+  <div class="redirect-message">
+    <p>We haven't found the page you were looking for. Return to <a href="{{ site.url }}">Homepage</a>.</p>
+  </div>
+</script>
+{% endraw %}
+<!-- /TEMPLATES -->
+
+<div style="margin-bottom: 200px;"> </div>
