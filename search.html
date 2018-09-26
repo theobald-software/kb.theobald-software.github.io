@@ -3,6 +3,7 @@ layout: search
 title: Search
 description: The search page for the Theobald Software Knowledgebase
 permalink: /search.html
+search-ignore: true
 ---
 
 <!-- PAGE -->
@@ -27,10 +28,7 @@ permalink: /search.html
 <div class="container" role="main">
     <div class="row">
         <div class="col-md-12">
-            <div id="categories-menuSelect">
-                <!-- Product Select -->
-            </div>
-            <div class="ais-menu-select--header ais-header">
+            <div id="results" class="ais-menu-select--header ais-header">
                 {{ site.content.search-results }}
             </div>
             <div id="hits">
@@ -51,7 +49,6 @@ permalink: /search.html
         <div class="hit">
             <div class="hit-content">
                 <h3 class="hit-page-title">{{title}}</h3>
-                <div class="hit-for-product"><p class="hit-for-product-title invisible">{{label}}</p></div>
                 <p class="hit-description">{{{_highlightResult.content.value}}}</p>
             </div>
         </div>
@@ -68,8 +65,5 @@ permalink: /search.html
 <!-- /TEMPLATES -->
 
 <!-- LANGUAGE -->
-<div id="language" class="invisible"></div>
 <div id="search-box-text" class="invisible">{{ site.content.search-box-text }}</div>
-<div id="search-filters" class="invisible">{{ site.content.search-filters }}</div>
-<div id="search-filter-all-products" class="invisible">{{ site.content.search-filter-all-products }}</div>
 <!-- /LANGUAGE -->

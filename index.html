@@ -1,7 +1,8 @@
 ---
 layout: base
-description: The online help portal of Theobald Software
+description: The knowledgebase of Theobald Software
 permalink: /
+search-ignore: true
 common-css:
 - "/css/instantsearch.min.css"
 - "/css/instantsearch-theme-algolia.min.css"
@@ -9,6 +10,10 @@ common-css:
 
 <header class="header-section header-section-search header-section-search-homepage">
     <div class="intro-header intro-header-search">
+        <div class="row" style="min-height: 50px;">
+            <div class="col-lg-3 col-md-4 col-sm-4 col-xs-10 col-md-offset-1 col-sm-offset-1 col-xs-offset-1">
+            </div>
+        </div>
         <div class="row">
             <div class="col-lg-3 col-md-4 col-sm-4 col-xs-10 col-md-offset-1 col-sm-offset-1 col-xs-offset-1">
                 <div class="search-heading">
@@ -38,22 +43,28 @@ common-css:
     </div>
 </header>
 
-<header class="header-section">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="homepage-heading">
-                    <h1 class="text-center">{{ site.content.homepage-title | markdownify}}</h1>
+<div class="row row-centered" role="main">
+    {% for collection in site.collections %}
+        {% unless collection.label == "posts" %}
+            <div class="col-md-6 col-sm-6">
+                <div class="double-listing {% cycle 'double-listing-even', 'double-listing-uneven' %}">
+                    <h2>{{ collection.name }}</h2>
+                    <hr class="length">
+                    {% assign filtered_docs = collection.docs | sort: 'homepage-weight' %}
+                    {% for doc in filtered_docs limit:6 %}
+                        {% unless doc.relative_path contains '/index' %}
+                            <div class="double-listing-item">
+                                <a class="double-listing-link" href="{{doc.url}}">{{doc.title}}</a>
+                            </div>
+                        {% endunless %}
+                    {% endfor %}
+                    <br>
+                    {% assign collection_doc = collection.docs | where_exp:"doc", "doc.relative_path contains '/index'" %}
+                    {% if collection_doc != '' %}
+                        <a class="double-listing-link-read-more" href="{{ site.url }}{{ collection_doc[0].url }}">Read more about {{ collection.name }}</a>
+                    {% endif %}
                 </div>
             </div>
-        </div>
-    </div>
-</header>
-
-<div class="row" role="main">
-    <div class="col-md-8 col-md-offset-4">
-        <div class="row">
-            **Under Construction**Knowledge Base**
-        </div>
-    </div>
+        {% endunless %}
+    {% endfor %}
 </div>
