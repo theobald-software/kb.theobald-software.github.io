@@ -643,19 +643,6 @@ footer .fab {
   }
 }
 
-.side-menu-product {
-  height: 50px;
-  max-height: 50px;
-  background-color: $color-background-secondary;
-}
-
-.side-menu-product-image {
-  height: 100%;
-  width: 50px;
-  float: left;
-  padding: 10px 5px;
-}
-
 .side-menu-product-text {
   font-weight: 600;
   padding-left: 5px;
@@ -777,9 +764,6 @@ footer .fab {
 }
 
 @media only screen and (min-width: 768px) {
-  .intro-header {
-    margin-top: 130px;
-  }
   .intro-header .page-heading h1 {
     font-size: 34px;
   }
@@ -1086,6 +1070,14 @@ td.gutter pre {
 
 .hit-content h3 {
   margin-bottom: 0;
+}
+
+.hit-category {
+  font-style: italic;
+  margin-top: 3px;
+}
+.hit-category em {
+  color: $color-highlight;
 }
 
 #pagination {

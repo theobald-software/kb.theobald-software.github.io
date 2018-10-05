@@ -57,6 +57,8 @@ content:
   search-results: "Results"
   search-box-text: "Search..."
   search-filter-all-products: "Search through all products"
+  search-hit-section: "Section: "
+  search-hit-category: "Category: "
   other-category: "Other"
 
 ########## SECTION 3 - COLLECTION CONFIGURATIONS ##########

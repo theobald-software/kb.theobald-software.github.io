@@ -45,11 +45,12 @@ search-ignore: true
 <!-- TEMPLATES -->
 {% raw %}
 <script type="text/html" id="hit-template">
-    <a href="{{url}}?fromSearch=true">
+    <a href="{{ url }}?fromSearch=true">
         <div class="hit">
             <div class="hit-content">
-                <h3 class="hit-page-title">{{title}}</h3>
-                <p class="hit-description">{{{_highlightResult.content.value}}}</p>
+                <h3 class="hit-page-title">{{ title }}</h3>
+                <p class="hit-category">{{ collection }}</p>
+                <p class="hit-description">{{{ _highlightResult.content.value }}}</p>
             </div>
         </div>
     </a>
@@ -58,7 +59,7 @@ search-ignore: true
 
 <script type="text/html" id="no-results-template">
     <div id="no-results-message">
-        <p>{% endraw %}{{ site.search-no-results }}{% raw %} <em>"{{query}}"</em>.</p>
+        <p>{% endraw %}{{ site.content.search-no-results }}{% raw %} <em>"{{ query }}"</em>.</p>
     </div>
 </script>
 {% endraw %}
