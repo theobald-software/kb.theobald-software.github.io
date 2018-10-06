@@ -3,25 +3,32 @@
 
 <div class="side-menu">
 	<ul class="side-menu-list" id="accordion">
-		<div class="side-menu-list-item-hover side-menu-background-primary">
-			<li class="side-menu-list-item side-menu-list-item-parent">
-				<a href="{{ site.url }}" class="side-menu-list-item-link">
-					{{ site.content.sidemenu-return-to-home }}
-				</a>
-			</li>
-		</div>
+		<li class="side-menu-list-item side-menu-background-primary">
+			<a href="{{ site.url }}" class="side-menu-list-item-link">
+				{{ site.content.sidemenu-return-to-home }}
+			</a>
+		</li>
 		{% assign additional-search-class = "side-menu-background-secondary" %}
 		{% unless page.path contains 'index.md' %}
-			<div class="side-menu-list-item-hover side-menu-background-secondary">
-				<li class="side-menu-list-item side-menu-list-item-parent">
-					<a href="{{ site.url }}{{ collection_doc[0].url }}" class="side-menu-list-item-link">
-						{{ site.content.sidemenu-return-to-category }}<strong>{{ collection[0].name }}</strong>
-					</a>
-				</li>
-			</div>
-			{% assign additional-search-class = "side-menu-background-tertiary" %}
+			{% unless page.path contains 'news.html' %}
+				{% if page.is_post != true %}
+					<li class="side-menu-list-item side-menu-background-secondary">
+						<a href="{{ site.url }}{{ collection_doc[0].url }}" class="side-menu-list-item-link">
+							{{ site.content.sidemenu-return-to-category }}<strong>{{ collection[0].name }}</strong>
+						</a>
+					</li>
+				{% else %}
+					<li class="side-menu-list-item side-menu-background-secondary">
+						<a href="{{ site.url }}/news" class="side-menu-list-item-link">
+							{{ site.content.sidemenu-return-to-category }}<strong> News</strong>
+						</a>
+					</li>
+				{% endif %}
+
+				{% assign additional-search-class = "side-menu-background-tertiary" %}
+			{% endunless %}
 		{% endunless %}
 
-		<div id="side-menu-list-item-search"></div>
+		<div id="side-menu-list-item-search" class="side-menu-background-tertiary"></div>
 	</ul>
 </div>

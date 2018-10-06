@@ -1,0 +1,21 @@
+---
+layout: page
+title: News
+description: News
+permalink: /news
+search-ignore: true
+---
+
+<div class="row" role="main">
+    {% for post in site.posts %}
+        {% unless post.relative_path contains '/index' %}
+            <div class="col-md-6 col-sm-6">
+                <div class="double-listing {% cycle 'double-listing-uneven', 'double-listing-even' %}">
+                    <div class="double-listing-item">
+                        <a class="double-listing-link" href="{{ post.url }}"><i>{{ post.date | date: '%B %d, %Y' }}</i><br>{{ post.title }}</a>
+                    </div>
+                </div>
+            </div>
+        {% endunless %}
+    {% endfor %}
+</div>

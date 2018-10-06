@@ -43,28 +43,47 @@ common-css:
     </div>
 </header>
 
-<div class="row row-centered" role="main">
-    {% for collection in site.collections %}
-        {% unless collection.label == "posts" %}
-            <div class="col-md-6 col-sm-6">
-                <div class="double-listing {% cycle 'double-listing-even', 'double-listing-uneven' %}">
-                    <h2>{{ collection.name }}</h2>
-                    <hr class="length">
-                    {% assign filtered_docs = collection.docs | sort: 'homepage-weight' %}
-                    {% for doc in filtered_docs limit:6 %}
-                        {% unless doc.relative_path contains '/index' %}
-                            <div class="double-listing-item">
-                                <a class="double-listing-link" href="{{doc.url}}">{{doc.title}}</a>
-                            </div>
-                        {% endunless %}
-                    {% endfor %}
-                    <br>
-                    {% assign collection_doc = collection.docs | where_exp:"doc", "doc.relative_path contains '/index'" %}
-                    {% if collection_doc != '' %}
-                        <a class="double-listing-link-read-more" href="{{ site.url }}{{ collection_doc[0].url }}">Read more about {{ collection.name }}</a>
-                    {% endif %}
-                </div>
+<div class="row row-centered aligned-row" role="main">
+        <div class="col-md-6 col-sm-6">
+            <div class="double-listing double-listing-even">
+                <h2>News</h2>
+                <hr class="length">
+                {% for post in site.posts limit:6 %}
+                    {% unless post.relative_path contains '/index' %}
+                        <div class="double-listing-item">
+                            <a class="double-listing-link" href="{{ post.url }}"><i>{{ post.date | date: '%B %d, %Y' }}</i><br>{{ post.title }}</a>
+                        </div>
+                    {% endunless %}
+                {% endfor %}
+                <br>
+                {% assign collection_post = site.posts | where_exp:"post", "post.relative_path contains '/index'" %}
+                {% if collection_post != '' %}
+                    <a class="double-listing-link-read-more" href="{{ site.url }}/news">Read more News</a>
+                {% endif %}
             </div>
-        {% endunless %}
-    {% endfor %}
+        </div>
+
+        {% for collection in site.collections %}
+            {% unless collection.label == "posts" %}
+                <div class="col-md-6 col-sm-6">
+                    <div class="double-listing {% cycle 'double-listing-uneven', 'double-listing-even' %}">
+                        <h2>{{ collection.name }}</h2>
+                        <hr class="length">
+                        {% assign filtered_docs = collection.docs | sort: 'homepage-weight' %}
+                        {% for doc in filtered_docs limit:6 %}
+                            {% unless doc.relative_path contains '/index' %}
+                                <div class="double-listing-item">
+                                    <a class="double-listing-link" href="{{doc.url}}">{{doc.title}}</a>
+                                </div>
+                            {% endunless %}
+                        {% endfor %}
+                        <br>
+                        {% assign collection_doc = collection.docs | where_exp:"doc", "doc.relative_path contains '/index'" %}
+                        {% if collection_doc != '' %}
+                            <a class="double-listing-link-read-more" href="{{ site.url }}{{ collection_doc[0].url }}">Read more about {{ collection.name }}</a>
+                        {% endif %}
+                    </div>
+                </div>
+            {% endunless %}
+        {% endfor %}
 </div>

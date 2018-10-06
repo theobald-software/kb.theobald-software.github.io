@@ -2,19 +2,21 @@
 layout: base
 ---
 
-<div class="container container-no-left">
-    <div class="row">
-        <div class="col-xl-2 col-lg-3 col-md-3 col-sm-3 affix side-menu-add-margin" id="side-menu-col">
-            {% include _tech/side-menu.html %}
-        </div>
-        <div class="col-xl-9 col-lg-9 col-md-8 col-sm-8 col-xl-offset-3 col-lg-offset-3 col-md-offset-3 col-sm-offset-3 content-side-border">
-            {% include _tech/header.html %}
+<div class="row">
+    <div class="col-xl-11 col-lg-11 col-md-11 col-sm-11 col-xl-offset-1 col-lg-offset-1 col-md-offset-1 col-sm-offset-1" id="side-menu-col">
+        {% include _tech/top-menu.html %}
+    </div>
+</div>
+<div class="row row-page-padding">
+    <div class="col-xl-11 col-lg-11 col-md-11 col-sm-11 col-xl-offset-1 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
+        {% include _tech/header.html %}
 
-            <div class="container container-content" role="main">
-                <div class="row">
-                    <div class="col-lg-10 col-md-10">
+        <div class="container-content" role="main">
+            <div class="row">
+                <div class="col-lg-10 col-md-10">
+                    <article>
                         {{ content }}
-                    </div>
+                    </article>
                 </div>
             </div>
         </div>
