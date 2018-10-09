@@ -34,6 +34,16 @@ a:focus {
   text-decoration: underline;
 }
 
+.no-link-highlight {
+  color: $color-text-primary;
+}
+
+.no-link-highlight:hover,
+.no-link-highlight:focus {
+  color: $color-text-primary;
+  text-decoration: none;
+}
+
 b {
   color: $color-highlight;
   font-weight: 400;

@@ -36,8 +36,8 @@ algolia:
   application_id: '54P6URVM83'
   index_name: theobald-software-knowledgebase
   settings:
-    attributesForFaceting: ['title','searchable(collection)', 'searchable(category)', 'searchable(categories)', 'searchable(tags)', 'searchable(search-ignore)']
-    searchableAttributes: ['title','unordered(content)','collection','description','category','categories','tags','search-ignore']
+    attributesForFaceting: ['title','searchable(collection)', 'searchable(categories)', 'searchable(tags)', 'searchable(search-ignore)']
+    searchableAttributes: ['title','unordered(content)','collection','description','categories','tags','search-ignore']
 
 ########## SECTION 2 - CONTENT ##########
 ########## Content is configurable here rather than in the html pages and include files
@@ -50,13 +50,14 @@ content:
   homepage-title: "Browse through our knowledge articles"
   homepage-search-title: "How can we help?"
   sidemenu-return-to-home: "Back to <strong>Homepage</strong> of Knowledgebase"
-  sidemenu-return-to-category: "Back to overview for "
+  sidemenu-return-to-section: "Back to overview for "
   search-no-results: "We didn't find any results for the search: "
   search-title: "Search the Knowledgebase"
   search-results: "Results"
   search-box-text: "Search..."
-  search-hit-category: "Category: "
-  other-category: "Other"
+  search-hit-section: "Section: "
+  section-page-default-explanation: "The following knowledge articles are in this section."
+  news-overview-page-default-explanation: "All news articles can be found here."
 
 ########## SECTION 3 - COLLECTION CONFIGURATIONS ##########
 ########## Languages can easily be added this way.

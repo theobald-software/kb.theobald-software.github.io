@@ -3,7 +3,6 @@ layout: page
 title: Reset User's Password
 description: Reset User's Password
 permalink: /:collection/:path
-category: FI - Financial Accounting
 homepage-weight: 20
 ---
 

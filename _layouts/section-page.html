@@ -2,26 +2,24 @@
 layout: page
 ---
 
-<div class="row" role="main">
+{{ content }}
+<br>
+
+<div class="row aligned-row" role="main">
     {% assign collection = site.collections | where:"label", page.collection %}
-    {% assign filtered_docs = collection[0].docs | group_by:'category' | sort:'category' %}
-    {% for category in filtered_docs %}
-        <div class="col-md-6 col-sm-6">
-            <div class="double-listing {% cycle 'double-listing-even', 'double-listing-uneven' %}">
-                {% if category.name == '' %}
-                    <h2>{{ site.content.other-category }}</h2>
-                {% else %}
-                    <h2>{{ category.name }}</h2>
-                {% endif %}
+    {% assign filtered_docs = collection[0].docs %}
 
-                <hr class="length">
-
-                {% for page in category.items %}
-                    {% unless page.relative_path contains '/index' %}
-                        <dd><a href="{{ page.url }}">{{ page.title }}</a></dd>
-                    {% endunless %}
-                {% endfor %}
-            </div>
-        </div>
-    {% endfor %}
+    <div class="col-md-6 col-sm-6">
+        {% for doc in filtered_docs %}
+            {% unless doc.relative_path contains '/index' %}
+                <div class="col-md-6 col-sm-6">
+                    <div class="double-listing">
+                        <div class="double-listing-item">
+                            <a class="double-listing-link" href="{{doc.url}}">{{doc.title}}</a>
+                        </div>
+                    </div>
+                </div>
+            {% endunless %}
+        {% endfor %}
+    </div>
 </div>

@@ -3,7 +3,6 @@ layout: page
 title: Creating RFQ IDocs
 description: Creating RFQ IDocs
 permalink: /:collection/:path
-category: Test category
 homepage-weight: 2
 ---
 
