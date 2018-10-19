@@ -9,19 +9,51 @@
       </button>
       <a class="navbar-brand navbar-brand-logo" href="{{ site.url }}"><img src="{{ site.url }}{{ site.logo }}"/></a>
     </div>
-      <div class="collapse navbar-collapse navbar-right" id="main-navbar" style="">
-        <div class="row row-eq-height">
-          <div class="col-md-8 col-sm-8 col-xs-8 col-md-offset-4 col-sm-offset-4 col-xs-offset-4">
-            <ul class="nav nav-stacked">
-              {% for entry in site.content.navbar-links %}
-                {% if entry.title %}
-                  <li>
-                    <a href="{{entry.url}}">{{entry.title}}</a>
-                  </li>
-                {% endif %}
-              {% endfor %}
+    <div class="collapse navbar-collapse navbar-right" id="main-navbar" style="">
+      <div class="row row-eq-height">
+        {% if page.title != 'Homepage' %}
+          <div class="col-md-6 col-sm-6 col-xs-6">
+            <ul class="nav nav-stacked nav-stacked-left">
+              <li>
+                <a href="{{ site.url }}">
+                  {{ site.content.sidemenu-return-to-home }}
+                </a>
+              </li>
+              {% unless page.path contains 'index.md' %}
+                {% unless page.path contains 'news.html' %}
+                  {% if page.is_post != true %}
+                    {% assign collection = site.collections | where:"label",page.collection %}
+                    {% assign collection_doc = collection[0].docs | where_exp:"doc", "doc.relative_path contains 'index'" %}
+
+                    <li>
+                      <a href="{{ site.url }}{{ collection_doc[0].url }}">
+                        {{ site.content.sidemenu-return-to-section }}<strong>{{ collection[0].name }}</strong>
+                      </a>
+                    </li>
+                    {% else %}
+                    <li>
+                      <a href="{{ site.url }}/news">
+                        {{ site.content.sidemenu-return-to-section }}<strong> News</strong>
+                      </a>
+                    </li>
+                  {% endif %}
+                {% endunless %}
+              {% endunless %}
             </ul>
           </div>
+          <div class="col-md-6 col-sm-6 col-xs-6">
+        {% else %}
+          <div class="col-md-8 col-sm-8 col-xs-8 col-md-offset-4 col-sm-offset-4 col-xs-offset-4">
+        {% endif %}
+          <ul class="nav nav-stacked nav-stacked-right">
+            {% for entry in site.content.navbar-links %}
+              {% if entry.title %}
+                <li>
+                  <a href="{{entry.url}}">{{ entry.title }}</a>
+                </li>
+              {% endif %}
+            {% endfor %}
+          </ul>
         </div>
       </div>
     </div>

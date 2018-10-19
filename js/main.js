@@ -5,10 +5,10 @@ var main = {
     $(window).scroll(function() {
         if ($(".navbar").offset().top > 50) {
             $(".navbar").addClass("top-nav-short");
-            $(".side-menu").addClass("nav-shortened");
+            $(".header-section").addClass("nav-shortened");
         } else {
             $(".navbar").removeClass("top-nav-short");
-            $(".side-menu").removeClass("nav-shortened");
+            $(".header-section").removeClass("nav-shortened");
         }
     });
 

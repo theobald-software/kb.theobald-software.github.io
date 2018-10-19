@@ -86,11 +86,6 @@ figure {
   margin-right: 30px;
 }
 
-.row-page-padding {
-  padding-left: 10px;
-  padding-top: 10px;
-}
-
 @media (min-width: 768px) {
   .row-page-padding {
     padding: 0;
@@ -109,6 +104,11 @@ figure {
     margin-left: 150px;
     margin-right: 150px;
   }
+}
+
+.row-bottom-border {
+  border-bottom: 3px solid $color-border-primary;
+  margin-bottom: 10px;
 }
 
 .main-content {
@@ -210,13 +210,21 @@ img {
   width: 25px;
 }
 
-.nav-stacked {
-    float: right!important;
-    text-align: right;
-    border-left: 1px solid $color-border-primary;
-    margin-left: 15px;
-    padding-left: 15px;
+@media (min-width: 768px) {
+  .nav-stacked {
     white-space: nowrap;
+  }
+}
+
+.nav-stacked-right {
+  float: right!important;
+  text-align: right;
+  padding-left: 15px;
+  border-left: 1px solid $color-border-primary;
+}
+.nav-stacked-left {
+  float: left!important;
+  text-align: left;
 }
 
 .navbar-custom {
@@ -225,15 +233,14 @@ img {
   font-family: 'Lato', Helvetica, Arial, sans-serif;
 }
 
+.navbar-custom .navbar-brand,
 .navbar-custom .nav li a {
-  font-size: 15px;
-  letter-spacing: 1px;
+  color: $color-text-primary;
 }
 
 .navbar-custom .navbar-brand,
-.navbar-custom .nav li a {
-  font-weight: 600;
-  color: $color-text-primary;
+.navbar-custom .nav strong {
+  color: $color-highlight;
 }
 
 .navbar-custom .navbar-brand:hover,
@@ -628,7 +635,7 @@ footer .fab {
 
 @media only screen and (min-width: 768px) {
   .side-menu {
-    margin: 107px 0 20px 0;
+    margin: 107px 0 10px 0;
     -webkit-transition: margin .58s ease-in-out;
     -moz-transition: margin .58s ease-in-out;
     transition: margin .58s ease-in-out;
@@ -685,16 +692,6 @@ footer .fab {
   color: $color-highlight;
 }
 
-.side-menu-background-primary {
-  background-color: $color-background-primary;
-}
-.side-menu-background-secondary {
-  background-color: $color-background-primary;
-}
-.side-menu-background-tertiary {
-  background-color: $color-background-primary;
-}
-
 /* --- Page headers --- */
 
 .intro-header {
@@ -702,6 +699,7 @@ footer .fab {
 }
 .intro-header .page-heading {
   text-align: left;
+  margin-top: 20px;
 }
 .intro-header .homepage-heading {
     text-align: center;
@@ -730,6 +728,19 @@ footer .fab {
 @media only screen and (min-width: 768px) {
   .intro-header .page-heading h1 {
     font-size: 34px;
+  }
+}
+
+.header-section {
+  margin-top: 73px;
+}
+
+@media only screen and (min-width: 768px) {
+  .header-section {
+    margin: 107px 0 10px 0;
+  }
+  .nav-shortened {
+    margin: 70px 0 20px 0;
   }
 }
 
