@@ -1,15 +1,13 @@
 var main = {
 
     init: function () {
-        var referrer = document.referrer;
+        var referrer = document.URL;
         var referrer_relative;
         if(referrer.indexOf(':4000') === -1) {
             referrer_relative = referrer.split('.com')[1];
         } else {
             referrer_relative = referrer.split(':4000')[1];
         }
-
-        console.log("using: " + referrer_relative);
 
         if(referrer_relative) {
             // general settings for instant search
