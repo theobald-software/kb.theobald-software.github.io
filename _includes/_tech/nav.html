@@ -21,22 +21,26 @@
               </li>
               {% unless page.path contains 'index.md' %}
                 {% unless page.path contains 'news.html' %}
-                  {% if page.is_post != true %}
-                    {% assign collection = site.collections | where:"label",page.collection %}
-                    {% assign collection_doc = collection[0].docs | where_exp:"doc", "doc.relative_path contains 'index'" %}
+                  {% unless page.path contains '404.html' %}
+                    {% unless page.path contains 'search.html' %}
+                      {% if page.is_post != true %}
+                        {% assign collection = site.collections | where:"label",page.collection %}
+                        {% assign collection_doc = collection[0].docs | where_exp:"doc", "doc.relative_path contains 'index'" %}
 
-                    <li>
-                      <a href="{{ site.url }}{{ collection_doc[0].url }}">
-                        {{ site.content.sidemenu-return-to-section }}<strong>{{ collection[0].name }}</strong>
-                      </a>
-                    </li>
-                    {% else %}
-                    <li>
-                      <a href="{{ site.url }}/news">
-                        {{ site.content.sidemenu-return-to-section }}<strong> News</strong>
-                      </a>
-                    </li>
-                  {% endif %}
+                        <li>
+                          <a href="{{ site.url }}{{ collection_doc[0].url }}">
+                            {{ site.content.sidemenu-return-to-section }}<strong>{{ collection[0].name }}</strong>
+                          </a>
+                        </li>
+                        {% else %}
+                        <li>
+                          <a href="{{ site.url }}/news">
+                            {{ site.content.sidemenu-return-to-section }}<strong> News</strong>
+                          </a>
+                        </li>
+                      {% endif %}
+                    {% endunless %}
+                  {% endunless %}
                 {% endunless %}
               {% endunless %}
             </ul>
