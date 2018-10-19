@@ -65,6 +65,9 @@ content:
 ##########  requires more than just adding a language here.
 collections_dir: content
 collections:
+  board-connector:
+    output: true
+    name: 'Board Connector'
   erpconnect-general:
     output: true
     name: 'ERPConnect - General'
