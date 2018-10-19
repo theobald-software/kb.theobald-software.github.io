@@ -227,6 +227,12 @@ img {
   text-align: left;
 }
 
+@media (max-width: 1024px) {
+  .nav-hidden-custom-size {
+    display:none;
+  }
+}
+
 .navbar-custom {
   background-color: $color-background-primary;
   border-bottom: 3px solid $color-border-primary;
