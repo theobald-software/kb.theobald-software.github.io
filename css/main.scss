@@ -86,6 +86,10 @@ figure {
   margin-right: 30px;
 }
 
+.row-page-padding {
+  padding: 0 0 0 5px;
+}
+
 @media (min-width: 768px) {
   .row-page-padding {
     padding: 0;
@@ -631,71 +635,6 @@ footer .fab {
     margin-top: 0;
     float: left;
   }
-}
-
-/* --- Side menu --- */
-
-.side-menu {
-  margin-top: 73px;
-}
-
-@media only screen and (min-width: 768px) {
-  .side-menu {
-    margin: 107px 0 10px 0;
-    -webkit-transition: margin .58s ease-in-out;
-    -moz-transition: margin .58s ease-in-out;
-    transition: margin .58s ease-in-out;
-    border-bottom: 0 solid transparent;
-  }
-  .nav-shortened {
-    margin: 70px 0 20px 0;
-    -webkit-transition: margin .45s ease-in-out;
-    -moz-transition: margin .45s ease-in-out;
-    transition: margin .45s ease-in-out;
-  }
-}
-
-.side-menu-list {
-  list-style: none;
-  margin-bottom: 0;
-  padding: 10px 0 0 0;
-}
-
-@media only screen and (min-width: 768px) {
-  .side-menu .side-menu-list {
-    z-index: -100000;
-  }
-}
-
-.side-menu-list-item {
-  font-size: 12px;
-  font-weight: 400;
-  padding-bottom: 2px;
-  padding-top: 2px;
-  padding-left: 10px;
-}
-@media only screen and (min-width: 768px) {
-  .side-menu-list-item {
-    padding-left: 0;
-  }
-}
-
-.side-menu-list-item:before {
-  content: '\2039';
-  padding-right: 10px;
-  position: absolute;
-}
-
-.side-menu-list-item a {
-  padding-left: 10px;
-  color: $color-text-primary;
-  text-decoration: none;
-  display: block;
-}
-
-.side-menu-list-item-link strong {
-  font-weight: 600;
-  color: $color-highlight;
 }
 
 /* --- Page headers --- */
