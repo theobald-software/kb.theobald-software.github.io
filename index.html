@@ -52,7 +52,7 @@ common-css:
                 {% for post in site.posts limit:6 %}
                     {% unless post.relative_path contains '/index' %}
                         <div class="double-listing-item">
-                            <a class="double-listing-link" href="{{ post.url }}"><i>{{ post.date | date: '%B %d, %Y' }}</i><br>{{ post.title }}</a>
+                            <a class="double-listing-link" href="{{ post.url }}"><i>{{ post.date | date: '%B %d, %Y' }}</i> - {{ post.title }}</a>
                         </div>
                     {% endunless %}
                 {% endfor %}

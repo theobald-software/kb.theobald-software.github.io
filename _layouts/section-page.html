@@ -9,7 +9,7 @@ layout: page
     {% assign collection = site.collections | where:"label", page.collection %}
     {% assign filtered_docs = collection[0].docs %}
 
-    <div class="col-md-6 col-sm-6">
+    <div class="col-md-12 col-sm-12">
         {% for doc in filtered_docs %}
             {% unless doc.relative_path contains '/index' %}
                 <div class="col-md-6 col-sm-6">
