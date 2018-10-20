@@ -3,7 +3,7 @@ layout: page
 title: ERPConnect License Key
 description: ERPConnect License Key
 permalink: /:collection/:path
-homepage-weight: 100
+homepage-weight: 1
 ---
 
 ERPConnect checks the license number on every call (client and server). After the end of the test period ERPConnect will not run without a valid license.
