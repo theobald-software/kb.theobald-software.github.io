@@ -1,0 +1,67 @@
+<%@ Assembly Name="$SharePoint.Project.AssemblyFullName$" %>
+<%@ Assembly Name="Microsoft.Web.CommandUI, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+<%@ Register TagPrefix="SharePoint" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+<%@ Register TagPrefix="Utilities" Namespace="Microsoft.SharePoint.Utilities" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+<%@ Register TagPrefix="asp" Namespace="System.Web.UI" Assembly="System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" %>
+<%@ Import Namespace="Microsoft.SharePoint" %>
+<%@ Register TagPrefix="WebPartPages" Namespace="Microsoft.SharePoint.WebPartPages" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="KEECSJS01.ascx.cs" Inherits="KESPDemo01.KEECSJS01.KEECSJS01" %>
+
+<script src="http://code.jquery.com/jquery-2.2.3.min.js"> </script>
+<script src="http://static.theobald-software.com/theobald.ecs.micro/5.4.2/theobald.ecs.micro.js"> </script>
+<link href="http://maxcdn.bootstrapcdn.com/bootswatch/3.2.0/yeti/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+SAP Customer Name:
+<input type="text" id="cname" value="X*"> &nbsp; <button type="button" id="getcustomers">Get SAP Customers!</button>
+
+<div id="sapContent">
+</div>
+<script>
+    $(document).ready(function () {
+        theobald.ready(function () {
+            var sapContentTable = $('<table>', {
+                class: 'table'
+            }),
+                inputCustomer = $('#cname'),
+                buttonGetCustomers = $('#getcustomers');
+
+            sapContentTable.css('padding-top', '50px');
+            $('#sapContent').append(sapContentTable);
+
+            buttonGetCustomers.click(function () {                
+                tEcs.executeFunction({
+                    connection: {
+                        ecs: {
+                            serviceApplication: "EC5"
+                        }
+                    },
+                    name: 'SD_RFC_CUSTOMER_GET',
+                    data: {
+                        exports: {
+                            NAME1: inputCustomer.val()
+                        }
+                    },
+                    done: function (data) {
+                        sapContentTable.empty();
+                        sapContentTable.append($('<tr><th>Customer Nr</th><th>Title</th><th>Name</th><th>POB</th><th>Street</th><th>Zip code</th><th>City</th><th>Telephone</th><th>Fax</th></tr>'));
+                        data.tables.CUSTOMER_T.rows.forEach(function (row) {
+                            var tr = $('<tr>');
+                            for (var fieldName in row) {
+                                tr.append($('<td>').html(row[fieldName]));
+                            }
+                            sapContentTable.append(tr);
+                        });
+                    },
+                    fail: function () {
+                        alert(JSON.stringify(tEcs.getLastError()));
+                    }
+                });
+            });
+
+        });
+
+    });
+</script>
+
+

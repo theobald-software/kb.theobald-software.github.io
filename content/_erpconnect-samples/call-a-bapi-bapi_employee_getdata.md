@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Call a BAPI: BAPI_EMPLOYEE_GETDATA
-description: Call a BAPI: BAPI_EMPLOYEE_GETDATA
+title: Call a BAPI- BAPI_EMPLOYEE_GETDATA
+description: Call a BAPI- BAPI_EMPLOYEE_GETDATA
 permalink: /:collection/:path
 homepage-weight: 15
 ---
