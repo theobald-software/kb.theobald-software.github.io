@@ -3,7 +3,7 @@ layout: page
 title: Creating RFQ IDocs
 description: Creating RFQ IDocs
 permalink: /:collection/:path
-homepage-weight: 2
+homepage-weight: 4
 ---
 
 **Create an RFC Destination / Logical System**

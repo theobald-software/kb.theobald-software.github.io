@@ -3,8 +3,10 @@ layout: page
 title: Reset User's Password
 description: Reset User's Password
 permalink: /:collection/:path
-homepage-weight: 20
+homepage-weight: 7
 ---
+
+Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
 
 The sample below shows how to reset a user's password. This might be useful in web portals with employee self services.  
 
