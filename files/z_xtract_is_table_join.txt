@@ -1,0 +1,3116 @@
+FUNCTION Z_XTRACT_IS_TABLE_JOIN.
+*"----------------------------------------------------------------------
+*"*"Local Interface:
+*"  IMPORTING
+*"     VALUE(QUERYTABLE) TYPE  TABNAME OPTIONAL
+*"     VALUE(DELIMITER) TYPE  CHAR1 OPTIONAL
+*"     VALUE(NODATA) TYPE  CHAR1 OPTIONAL
+*"     VALUE(ROWSKIP) TYPE  INT4 OPTIONAL
+*"     VALUE(ROWCOUNT) TYPE  INT4 OPTIONAL
+*"     VALUE(PACKAGESIZE) TYPE  INT4 DEFAULT '50000'
+*"     VALUE(USEFIELDEXITS) TYPE  CHAR1 OPTIONAL
+*"  EXPORTING
+*"     VALUE(RECLENGTH) TYPE  INT4
+*"     VALUE(RECCOUNT) TYPE  INT4
+*"     VALUE(MOREDATA) TYPE  CHAR1
+*"     VALUE(RETURN) TYPE  SYMSGNO
+*"  TABLES
+*"      FIELDS STRUCTURE  ZXTRACTTABLEFIELDS OPTIONAL
+*"      OPTIONS STRUCTURE  RFC_DB_OPT OPTIONAL
+*"      HAVING STRUCTURE  RFC_DB_OPT OPTIONAL
+*"      JOINS STRUCTURE  ZXTRACTTABLEJOINDEF OPTIONAL
+*"      DATA STRUCTURE  CHAR8000 OPTIONAL
+*"      CODE STRUCTURE  ZXTRACTTABLECODELINE OPTIONAL
+*"      MESSAGES STRUCTURE  BAPIRETURN1 OPTIONAL
+*"      PKWHERECLAUSE STRUCTURE  ZXTRACTRANGE OPTIONAL
+*"----------------------------------------------------------------------
+
+* CHANGE LOG
+* ----------
+* - 1.7 - 01/02/2018 - Ali Babi
+*   Change the order of the Table Limit Check
+* - 1.6 - 11/15/2017 - YW
+*   FORM GENERATE_HEADER_NONPCK
+*   Corrected parameter DELIMITERVALUE to type String (formerly c).
+* - 1.5 - 08/01/2017 - FM
+*   Added type for t_code
+* - 1.4 - 07/27/2017 - YW
+*   Added types to formerly untyped parameters in FORM routines
+* - 1.3 - 06/24/2016 - Jürgen Bäurle
+*   Fixed bug with table alias after extending the packaging logic.
+* - 1.2 - 06/21/2016 - Jürgen Bäurle
+*   Changed handling for LEFT OUTER JOINS, no packaging logic
+*   available anymore, since SAPSQL does not allow to contain
+*   fields in the WHERE clause from the right, joined tables.
+* - 1.1 - 05/03/2016 - Jürgen Bäurle
+*   Extended packaging logic to contain primary keys of all tables.
+* - 1.0 - 01/09/2015 - Jürgen Bäurle
+*   Initial version to support table joins.
+* ----------
+
+  DATA:
+    EXTRACTROWCOUNT TYPE I,
+    UPDATEDROWCOUNT TYPE I.
+
+  DATA t_code TYPE ty_t_code.
+
+* Clear all global variables before using them in this function module
+* to avoid predefined values.
+  CLEAR:
+    ERROR, JOINED, OUTERJOIN, BASETABNAME, BASETABCLASS, ABAPVERSION,
+    DATEFORMAT,DECIMALPOINTFORMAT, DECIMALPOINT, DECIMALGROUP,
+    DATA, CODE, RECLENGTH, RECCOUNT, MOREDATA,
+    T_MESSAGE, T_JOINTABLE, T_TABLE, T_FIELDDEF, T_FIELDPKS,
+    T_OUTPUTFIELD.
+  REFRESH:
+    DATA, CODE,
+    T_MESSAGE, T_JOINTABLE, T_TABLE, T_FIELDDEF, T_FIELDPKS,
+    T_OUTPUTFIELD.
+
+* Check base input parameters and may adjust them.
+  PERFORM CHECK_BASEDATA CHANGING PACKAGESIZE ROWCOUNT ROWSKIP.
+* Check base table (QUERYTABLE) and joined tables, if available.
+  PERFORM CHECK_TABLES TABLES JOINS USING QUERYTABLE.
+  IF ERROR EQ 'X'.
+    PERFORM UPDATE_RETURNPARAMETERS TABLES MESSAGES USING RETURN.
+    EXIT.
+  ENDIF.
+* Determine if this is an aggregation query.
+  AGGREGATED = SPACE.
+  LOOP AT FIELDS WHERE AGGREFUNC IS NOT INITIAL.
+    AGGREGATED = 'X'.
+    EXIT.
+  ENDLOOP.
+* Clear unneeded structures and parameters.
+  IF AGGREGATED EQ 'X' OR OUTERJOIN EQ 'X'.
+    CLEAR   PKWHERECLAUSE.
+    REFRESH PKWHERECLAUSE.
+  ENDIF.
+* Check selected output fields.
+  IF AGGREGATED NE 'X' AND OUTERJOIN NE 'X'.
+    PERFORM CHECK_TABLEOUTPUT        TABLES FIELDS USING USEFIELDEXITS.
+  ELSE.
+    PERFORM CHECK_TABLEOUTPUT_NONPCK TABLES FIELDS USING USEFIELDEXITS.
+  ENDIF.
+  IF ERROR EQ 'X'.
+    PERFORM UPDATE_RETURNPARAMETERS  TABLES MESSAGES USING RETURN.
+    EXIT.
+  ENDIF.
+* Extract data if requested, otherwise just return the record length.
+  IF NODATA NE 'X'.
+    IF AGGREGATED NE 'X' AND OUTERJOIN NE 'X'.
+      PERFORM EXTRACT_DATA    TABLES    DATA
+                                        PKWHERECLAUSE
+                                        OPTIONS
+                                        JOINS
+                                        T_CODE
+                                 USING  PACKAGESIZE
+                                        DELIMITER
+                                        ROWCOUNT
+                                        ROWSKIP
+                               CHANGING EXTRACTROWCOUNT.
+    ELSE.
+     PERFORM EXTRACT_DATA_NONPCK TABLES DATA
+                                        OPTIONS
+                                        HAVING
+                                        JOINS
+                                        T_CODE
+                                  USING DELIMITER
+                               CHANGING RECCOUNT.
+    ENDIF.
+    IF ERROR EQ 'X'.
+      PERFORM UPDATE_RETURNPARAMETERS TABLES MESSAGES USING RETURN.
+*     Return dynamic created query code back to caller for further
+*     analysis on any syntax errors.
+      IF RETURN EQ '052'.
+        CODE[] = T_CODE[].
+      ENDIF.
+      EXIT.
+    ENDIF.
+  ENDIF.
+* Determine record length based on the delimiter setting.
+  PERFORM GET_RECORDLENGTH USING DELIMITER CHANGING RECLENGTH.
+* Do housekeeping if packaging is activated.
+  IF AGGREGATED NE 'X' AND OUTERJOIN NE 'X'.
+*   Return record count.
+    RECCOUNT = EXTRACTROWCOUNT.
+*   Set indicator for more data, subtract rowskip from ROWCOUNT to have
+*   the proper comparison.
+    UPDATEDROWCOUNT = ROWCOUNT - ROWSKIP.
+    IF RECCOUNT EQ UPDATEDROWCOUNT.
+      MOREDATA = 'X'.
+    ENDIF.
+*   If no more data are available then clear PKWHERECLAUSE table.
+    IF MOREDATA NE 'X'.
+      CLEAR   PKWHERECLAUSE.
+      REFRESH PKWHERECLAUSE.
+    ENDIF.
+  ENDIF.
+* Return information and warning messages.
+  PERFORM UPDATE_RETURNPARAMETERS TABLES MESSAGES USING RETURN.
+
+ENDFUNCTION.
+
+FORM CREATE_MESSAGE    USING TYPE TYPE c NUMBER TYPE c.
+
+  PERFORM CREATE_MESSAGE4V USING TYPE NUMBER SPACE SPACE SPACE SPACE.
+
+ENDFORM.                    " CREATE_MESSAGE
+
+FORM CREATE_MESSAGE1V USING TYPE TYPE c NUMBER TYPE c V1 TYPE ANY.
+
+  PERFORM CREATE_MESSAGE4V USING TYPE NUMBER V1 SPACE SPACE SPACE.
+
+ENDFORM.                    " CREATE_MESSAGE1V
+
+FORM CREATE_MESSAGE2V USING TYPE TYPE c NUMBER TYPE c V1 TYPE c V2 TYPE c.
+
+  PERFORM CREATE_MESSAGE4V USING TYPE NUMBER V1 V2 SPACE SPACE.
+
+ENDFORM.                    " CREATE_MESSAGE2V
+
+FORM CREATE_MESSAGE3V USING TYPE TYPE c NUMBER TYPE c V1 TYPE TABNAME V2 TYPE FIELDNAME V3 TYPE FIELDNAME.
+
+  PERFORM CREATE_MESSAGE4V USING TYPE NUMBER V1 V2 V3 SPACE.
+
+ENDFORM.                    " CREATE_MESSAGE3V
+
+FORM CREATE_MESSAGE4V USING TYPE TYPE c NUMBER TYPE c V1 TYPE c V2 TYPE c V3 TYPE c V4 TYPE c.
+
+  DATA MESSAGE(8) TYPE C.
+
+  FIELD-SYMBOLS: <MESSAGE> TYPE ANY.
+
+  CLEAR T_MESSAGE.
+* Default to 'E' if TYPE is not valid.
+  IF TYPE EQ 'S' OR TYPE EQ 'I' OR TYPE EQ 'W' OR TYPE EQ 'E'.
+    T_MESSAGE-TYPE = TYPE.
+  ELSE.
+    T_MESSAGE-TYPE = 'E'.
+  ENDIF.
+* If special case then use V1 as NUMBER and V2 as MESSAGE.
+  IF NUMBER EQ 'MSG'.
+    T_MESSAGE-NUMBER  = V1.
+    T_MESSAGE-MESSAGE = V2.
+  ELSE.
+    T_MESSAGE-NUMBER = NUMBER.
+    T_MESSAGE-MESSAGE_V1 = V1.
+    T_MESSAGE-MESSAGE_V2 = V2.
+    T_MESSAGE-MESSAGE_V3 = V3.
+    T_MESSAGE-MESSAGE_V4 = V4.
+*   Retrieve message from text symbols.
+    CONCATENATE 'TEXT-' NUMBER INTO MESSAGE.
+    ASSIGN (MESSAGE) TO <MESSAGE>.
+*   If text symbols exist then replace variables.
+    IF SY-SUBRC EQ 0.
+      T_MESSAGE-MESSAGE = <MESSAGE>.
+      REPLACE '&1' WITH V1 INTO T_MESSAGE-MESSAGE.
+      REPLACE '&2' WITH V2 INTO T_MESSAGE-MESSAGE.
+      REPLACE '&3' WITH V3 INTO T_MESSAGE-MESSAGE.
+      REPLACE '&4' WITH V4 INTO T_MESSAGE-MESSAGE.
+      CONDENSE T_MESSAGE-MESSAGE.
+    ENDIF.
+  ENDIF.
+  APPEND T_MESSAGE.
+* Set gloabl error flag if TYPE equals to 'E'.
+  IF TYPE EQ 'E' AND ERROR IS INITIAL.
+    ERROR = 'X'.
+  ENDIF.
+
+ENDFORM.                    " CREATE_MESSAGE4V
+
+FORM UPDATE_RETURNPARAMETERS TABLES MESSAGES STRUCTURE BAPIRETURN1
+                           CHANGING RETURN TYPE SYMSGNO.
+
+  IF T_MESSAGE[] IS INITIAL.
+    CLEAR RETURN.
+    CLEAR MESSAGES.
+    REFRESH MESSAGES.
+  ELSE.
+    IF RETURN IS INITIAL.
+      READ TABLE T_MESSAGE WITH KEY TYPE = 'E'.
+      IF SY-SUBRC EQ 0.
+        RETURN = T_MESSAGE-NUMBER.
+      ENDIF.
+    ENDIF.
+    MESSAGES[] = T_MESSAGE[].
+  ENDIF.
+
+ENDFORM.                    " UPDATE_RETURNPARAMETERS
+
+FORM CHECK_BASEDATA CHANGING PACKAGESIZE TYPE INT4 ROWCOUNT TYPE INT4 ROWSKIP TYPE INT4.
+
+  DATA:
+    ROWSKIPLIMIT TYPE INT4,
+    DATFM        LIKE USR01-DATFM,
+    DCPFM        LIKE USR01-DCPFM.
+
+* Check PACKAGESIZE, set to a safe default.
+  IF PACKAGESIZE LE 0.
+    PACKAGESIZE = 50000.
+  ENDIF.
+* Check ROWCOUNT, set to a safe default.
+  IF ROWCOUNT LE 0.
+    ROWCOUNT = C_MAX_INT.
+  ENDIF.
+* Make sure row skip is not greater than packet size.
+  IF ROWSKIP GE PACKAGESIZE.
+    ROWSKIP = PACKAGESIZE - 1.
+  ENDIF.
+* If ROWSKIP and ROWCOUNT both are specified, we have to increase
+* ROWCOUNT by ROWSKIP in order to extract up to ROWCOUNT rows.
+* Watch the C_MAX_INT limit to avoid overflow!
+  ROWSKIPLIMIT = C_MAX_INT - ROWCOUNT.
+  IF ROWSKIP GT 0 AND ROWSKIP LE ROWSKIPLIMIT.
+    ADD ROWSKIP TO ROWCOUNT.
+  ELSEIF ROWSKIP GT 0 AND
+         ROWSKIP GT ROWSKIPLIMIT AND ROWCOUNT LE C_MAX_INT.
+    ROWCOUNT = C_MAX_INT.
+  ENDIF.
+* Determine ABAP version used later on to define PK handling.
+  SELECT SINGLE RELEASE INTO ABAPVERSION
+    FROM CVERS
+   WHERE COMPONENT EQ 'SAP_ABA'.
+  IF SY-SUBRC NE 0.
+    ABAPVERSION = '46C'.
+  ENDIF.
+* Determine negative integer size depending on ABAP version.
+  IF ABAPVERSION LE '46C'.
+    C_MAX_INT_NEG = C_MAX_INT_NEG_46.
+  ELSE.
+    C_MAX_INT_NEG = C_MAX_INT_NEG_47.
+  ENDIF.
+* Retrieve user settings.
+  SELECT SINGLE DATFM DCPFM INTO (DATFM, DCPFM)
+    FROM USR01
+   WHERE BNAME = SY-UNAME.
+  IF SY-SUBRC EQ 0.
+    DATEFORMAT         = DATFM.
+    DECIMALPOINTFORMAT = DCPFM.
+  ELSE.
+    DATEFORMAT         =  2.  " Default to MM/DD/YYYY
+    DECIMALPOINTFORMAT = 'X'. " Default to period as decimal point
+  ENDIF.
+* Define decimal settings.
+  IF DECIMALPOINTFORMAT EQ 'X'.
+    DECIMALPOINT = '.'.
+    DECIMALGROUP = ','.
+  ELSE.
+    DECIMALPOINT = ','.
+    DECIMALGROUP = '.'.
+  ENDIF.
+
+ENDFORM.                    " CHECK_BASEDATA
+
+FORM CHECK_TABLES TABLES JOINS STRUCTURE ZXTRACTTABLEJOINDEF
+                   USING QUERYTABLE TYPE TABNAME.
+
+  DATA:
+    LINES   TYPE I,
+    JOINOP  TYPE C,
+    TABNAME LIKE DD03L-TABNAME.
+
+* Check if user is authorized to access join table.
+  PERFORM CHECK_TABLEAUTHORIZATION USING QUERYTABLE.
+  CHECK ERROR IS INITIAL.
+* Check if table is activated and type is valid (e.g. TRANSP).
+  PERFORM CHECK_TABLESTATES USING QUERYTABLE 'X'.
+  CHECK ERROR IS INITIAL.
+* Check table fields and update field metadata.
+  PERFORM CHECK_TABLEFIELDS USING QUERYTABLE.
+  CHECK ERROR IS INITIAL.
+  CLEAR   T_JOINTABLE.
+  REFRESH T_JOINTABLE.
+  DESCRIBE TABLE JOINS LINES LINES.
+* Check joined tables if defined.
+  IF LINES GT 0.
+*   Create list of join tables.
+    LOOP AT JOINS.
+      MOVE JOINS-RTABNAME TO T_JOINTABLE-TABNAME.
+      MOVE JOINS-RALIASNAME TO T_JOINTABLE-ALIASNAME.
+      APPEND T_JOINTABLE.
+    ENDLOOP.
+*   Remove duplicated table names and aliases from join table list.
+    SORT T_JOINTABLE BY TABNAME ASCENDING ALIASNAME ASCENDING.
+    DELETE ADJACENT DUPLICATES FROM T_JOINTABLE COMPARING TABNAME
+                                                          ALIASNAME.
+
+*   Check that not more than 10 tables are joined.
+    DESCRIBE TABLE T_JOINTABLE LINES LINES.
+    IF LINES GT 10.
+      PERFORM CREATE_MESSAGE USING 'E' 'Please do not join more than 10 Tables !'.
+      EXIT.
+    ENDIF.
+
+
+
+
+*   Validate all join tables.
+    LOOP AT T_JOINTABLE.
+*     Ignore duplicated table names.
+      IF TABNAME EQ T_JOINTABLE-TABNAME.
+        CONTINUE.
+      ENDIF.
+      TABNAME = T_JOINTABLE-TABNAME.
+*     Check if user is authorized to access join table.
+      PERFORM CHECK_TABLEAUTHORIZATION USING T_JOINTABLE-TABNAME.
+      IF ERROR EQ 'X'.
+        RETURN.
+      ENDIF.
+*     Check if table is activated and type is valid (e.g. TRANSP).
+      PERFORM CHECK_TABLESTATES USING T_JOINTABLE-TABNAME SPACE.
+      IF ERROR EQ 'X'.
+        RETURN.
+      ENDIF.
+*     Check table fields and update field metadata.
+      PERFORM CHECK_TABLEFIELDS USING T_JOINTABLE-TABNAME.
+      IF ERROR EQ 'X'.
+        RETURN.
+      ENDIF.
+    ENDLOOP.
+*   Check that none of the joined tables is a cluster or a pool table,
+*   otherwise stop further processing for now.
+    LOOP AT T_TABLE WHERE TABCLASS EQ 'CLUSTER' OR
+                          TABCLASS EQ 'POOL'.
+      PERFORM CREATE_MESSAGE1V USING 'E' 'Cluster and Pool Tables are not allowed !' T_TABLE-TABNAME.
+      RETURN.
+    ENDLOOP.
+*   Validate join definition in detail.
+    LOOP AT JOINS.
+*     Check operation type: I = INNER JOIN; O = OUTER JOIN!
+      IF JOINS-JOINOPERATOR NE 'I' AND JOINS-JOINOPERATOR NE 'O'.
+        PERFORM CREATE_MESSAGE1V USING 'E' '110' JOINS-JOINOPERATOR.
+      ENDIF.
+*     Mark if OUTER JOIN!
+      IF JOINS-JOINOPERATOR EQ 'O'.
+         OUTERJOIN = 'X'.
+      ENDIF.
+      IF JOINOP IS INITIAL.
+        JOINOP = JOINS-JOINOPERATOR.
+*     ELSEIF JOINS-JOINOPERATOR NE JOINOP.
+*        PERFORM CREATE_MESSAGE1V USING 'E' '111' JOINS-JOINOPERATOR.
+      ENDIF.
+*     Only EQ or INITIAL are allowed for JOINCONDITION in case of
+*     INNER JOINS.
+      IF JOINS-JOINOPERATOR  EQ 'I'  AND
+         JOINS-JOINCONDITION NE 'EQ' AND
+         JOINS-JOINCONDITION IS NOT INITIAL.
+        PERFORM CREATE_MESSAGE1V USING 'E' '112' JOINS-JOINCONDITION.
+      ENDIF.
+*     Check that left field exists in table.
+      READ TABLE T_FIELDDEF WITH KEY TABNAME  = JOINS-LTABNAME
+                                  FIELDNAME = JOINS-LFIELDNAME.
+      IF SY-SUBRC NE 0.
+        PERFORM CREATE_MESSAGE2V USING 'E' '113' JOINS-LTABNAME
+                                                 JOINS-LFIELDNAME.
+      ENDIF.
+*     Check that right field exists in table.
+      READ TABLE T_FIELDDEF WITH KEY TABNAME   = JOINS-RTABNAME
+                                  FIELDNAME = JOINS-RFIELDNAME.
+      IF SY-SUBRC NE 0.
+        PERFORM CREATE_MESSAGE2V USING 'E' '113' JOINS-RTABNAME
+                                                 JOINS-RFIELDNAME.
+      ENDIF.
+*     TODO: May check that WHERE CLAUSE does not contain any fields from
+*     the right table in LEFT OUTER JOIN?
+    ENDLOOP.
+*   Mark this query as joined query.
+    JOINED = 'X'.
+  ENDIF.
+* Create list of PK fields over all tables.
+  LOOP AT T_FIELDDEF WHERE NOT KEYFLAG   IS INITIAL
+                           AND FIELDNAME NE 'MANDT'.
+    READ TABLE T_FIELDPKS WITH KEY FIELDNAME = T_FIELDDEF-FIELDNAME.
+    IF SY-SUBRC NE 0.
+      T_FIELDPKS = T_FIELDDEF.
+      APPEND T_FIELDPKS.
+    ENDIF.
+  ENDLOOP.
+* Check PK length. In systems < 46C WHERE CLAUSE values must be <= 70
+* bytes, because of limitation in the dynamic WHERE CLAUSE syntax.
+  IF ABAPVERSION LE '46C'.
+    LOOP AT T_FIELDPKS.
+      IF T_FIELDPKS-OUTPUTLEN GT C_MAX_WHERE_LIMIT_46.
+        PERFORM CREATE_MESSAGE1V USING 'E' '074' T_FIELDPKS-FIELDNAME.
+      ENDIF.
+    ENDLOOP.
+  ENDIF.
+
+ENDFORM.                    " CHECK_TABLES
+
+FORM CHECK_TABLEAUTHORIZATION USING TABNAME TYPE TABNAME.
+
+* Validate user authorization for table object.
+  CALL FUNCTION 'VIEW_AUTHORITY_CHECK'
+    EXPORTING
+      VIEW_ACTION                    = 'S'
+      VIEW_NAME                      = TABNAME
+    EXCEPTIONS
+      NO_AUTHORITY                   = 2
+      NO_LINEDEPENDENT_AUTHORITY     = 2
+      NO_CLIENTINDEPENDENT_AUTHORITY = 2
+      OTHERS                         = 1.
+  IF SY-SUBRC EQ 2.
+    PERFORM CREATE_MESSAGE1V USING 'E' '005' TABNAME.
+  ELSEIF SY-SUBRC = 1.
+    PERFORM CREATE_MESSAGE1V USING 'E' '006' TABNAME.
+  ENDIF.
+
+ENDFORM.                    " CHECK_TABLEAUTHORIZATION
+
+FORM CHECK_TABLESTATES USING TABNAME TYPE TABNAME ISBASETAB TYPE c.
+
+* Check if active version of the requested table exists.
+  SELECT TABNAME TABCLASS VIEWCLASS INTO T_TABLE UP TO 1 ROWS
+    FROM DD02L
+   WHERE TABNAME EQ TABNAME AND AS4LOCAL EQ 'A'.
+  ENDSELECT.
+  IF SY-SUBRC EQ 0.
+*   Check if table and view class are supported.
+    IF T_TABLE-TABCLASS EQ 'TRANSP'  OR
+       T_TABLE-TABCLASS EQ 'CLUSTER' OR
+       T_TABLE-TABCLASS EQ 'POOL'    OR
+       T_TABLE-TABCLASS EQ 'VIEW'.
+*     Check for special view type.
+      IF T_TABLE-TABCLASS  EQ 'VIEW' AND
+         T_TABLE-VIEWCLASS NE 'D'    AND
+         T_TABLE-VIEWCLASS NE 'P'.
+        PERFORM CREATE_MESSAGE1V USING 'E' '045' T_TABLE-VIEWCLASS.
+      ELSEIF TABNAME CP 'PCL*'.
+        PERFORM CREATE_MESSAGE1V USING 'E' '046' TABNAME.
+      ELSE.
+        T_TABLE-ISBASETAB = ISBASETAB.
+        APPEND T_TABLE.
+      ENDIF.
+      IF ISBASETAB EQ 'X'.
+        BASETABNAME  = T_TABLE-TABNAME.
+        BASETABCLASS = T_TABLE-TABCLASS.
+      ENDIF.
+    ELSE.
+      PERFORM CREATE_MESSAGE1V USING 'E' '044' T_TABLE-TABCLASS.
+    ENDIF.
+  ELSE.
+*   Table not active in DD02L
+    PERFORM CREATE_MESSAGE1V USING 'E' '002' TABNAME.
+  ENDIF.
+
+ENDFORM.                    " CHECK_TABLESTATES
+
+FORM CHECK_TABLEFIELDS USING TABNAME TYPE TABNAME.
+
+  DATA:
+    GOTSTATE TYPE DDGOTSTATE,
+    DD02V_WA TYPE DD02V,
+    DD09L_WA TYPE DD09L,
+    T_DD03P  TYPE STANDARD TABLE OF DD03P WITH HEADER LINE.
+
+* Check for already loaded table.
+  READ TABLE T_FIELDDEF WITH KEY TABNAME = TABNAME.
+  IF SY-SUBRC EQ 0.
+    RETURN.
+  ENDIF.
+* Retrieve table field metadata.
+  CALL FUNCTION 'DDIF_TABL_GET'
+    EXPORTING
+      NAME          = TABNAME
+      STATE         = 'A'
+      LANGU         = SY-LANGU
+    IMPORTING
+      GOTSTATE      = GOTSTATE
+      DD02V_WA      = DD02V_WA
+      DD09L_WA      = DD09L_WA
+    TABLES
+      DD03P_TAB     = T_DD03P
+    EXCEPTIONS
+      ILLEGAL_INPUT = 1
+      OTHERS        = 2.
+  IF SY-SUBRC NE 0.
+    PERFORM CREATE_MESSAGE2V USING 'E' '009' TABNAME SY-LANGU.
+    EXIT.
+  ENDIF.
+* Exclude .INCLUDE, etc.
+  LOOP AT T_DD03P WHERE FIELDNAME NA '.'.
+*   Update OUTPUTLEN to the value of LENG if LENG is greater than
+*   OUTPUTLEN.
+    IF T_DD03P-LENG GT T_DD03P-OUTPUTLEN.
+      T_DD03P-OUTPUTLEN = T_DD03P-LENG.
+    ENDIF.
+*   Double the OUTPUTLEN for RAW fields to accomodate hex
+*   representation.
+    IF T_DD03P-DATATYPE  EQ 'RAW' AND
+       T_DD03P-OUTPUTLEN LE T_DD03P-LENG.
+      T_DD03P-OUTPUTLEN = T_DD03P-LENG * 2.
+    ENDIF.
+*   TIMS fields do not get the appropriate OUTPUTLEN value if
+*   built-in types are used.
+    IF T_DD03P-DATATYPE  EQ 'TIMS' AND
+       T_DD03P-OUTPUTLEN NE 8.
+      T_DD03P-OUTPUTLEN = 8.
+    ENDIF.
+*   DATS fields do not get the appropriate OUTPUTLEN value if
+*   built-in types are used.
+    IF T_DD03P-DATATYPE  EQ 'DATS' AND
+       T_DD03P-OUTPUTLEN NE 10.
+      T_DD03P-OUTPUTLEN = 10.
+    ENDIF.
+*   Add space for the negative sign.
+    IF NOT T_DD03P-SIGNFLAG IS INITIAL OR
+       T_DD03P-DATATYPE EQ 'INT2'      OR
+       T_DD03P-DATATYPE EQ 'INT4'.
+      ADD 1 TO T_DD03P-OUTPUTLEN.
+    ENDIF.
+*   Make room for negative sign, decimal point and 1000 separators.
+    IF T_DD03P-INTTYPE EQ 'P'.
+      T_DD03P-OUTPUTLEN = T_DD03P-INTLEN * 2 + 1 +
+                       ( ( T_DD03P-INTLEN * 2 ) DIV 3 ).
+    ENDIF.
+*   OUTPUTLEN for float fields is returned as 16 that is not big enough
+*   for a character representation of a large float number.
+    IF T_DD03P-INTTYPE = 'F'.
+*     Set precision to 0 to see if RS/SSIS handle it better.
+      T_DD03P-LENG = 0.
+      T_DD03P-OUTPUTLEN = 24.
+    ENDIF.
+*   Build generic domain name for int* fields to be able to generate
+*   conversion exit calls later.
+    IF T_DD03P-ROLLNAME IS INITIAL.
+      CASE T_DD03P-DATATYPE.
+        WHEN 'INT1' OR 'INT2' OR 'INT4'.
+          T_DD03P-ROLLNAME = T_DD03P-DATATYPE.
+        WHEN OTHERS.
+      ENDCASE.
+    ENDIF.
+    MOVE-CORRESPONDING T_DD03P TO T_FIELDDEF.
+    APPEND T_FIELDDEF.
+  ENDLOOP.
+* For views, if no field is marked as KEY, mark all fields KEY.
+  READ TABLE T_TABLE WITH KEY ISBASETAB = 'X'.
+  IF SY-SUBRC EQ 0 AND T_TABLE-TABCLASS = 'VIEW'.
+    READ TABLE T_FIELDDEF WITH KEY TABNAME = BASETABNAME
+                                KEYFLAG = 'X'.
+    IF SY-SUBRC GT 0.
+      LOOP AT T_FIELDDEF WHERE TABNAME EQ BASETABNAME.
+        T_FIELDDEF-KEYFLAG = 'X'.
+        MODIFY T_FIELDDEF.
+      ENDLOOP.
+    ENDIF.
+  ENDIF.
+
+ENDFORM.                    " CHECK_TABLEFIELDS
+
+FORM CHECK_TABLEOUTPUT TABLES FIELDS STRUCTURE ZXTRACTTABLEFIELDS
+                        USING USEFIELDEXITS TYPE c.
+
+  DATA:
+    FIELDCOUNT TYPE I,
+    TABALIAS   TYPE DD03P-TABNAME,
+    FIELDALIAS TYPE DD03P-FIELDNAME,
+    FUNCTEMP   LIKE TFDIR-FUNCNAME,
+    FUNCNAME   LIKE TFDIR-FUNCNAME.
+
+  DESCRIBE TABLE FIELDS LINES FIELDCOUNT.
+* Check number of output fields to reduce risk of DOS attacks by
+* allocating too much memory.
+  IF FIELDCOUNT GT 1000.
+    PERFORM CREATE_MESSAGE1V USING 'E' '012' FIELDCOUNT.
+    EXIT.
+  ENDIF.
+* If user has not specified any output fields then select all of them.
+  IF FIELDS[] IS INITIAL.
+*   Check COMPTYPE EQ 'E' -> data element;
+*         COMPTYPE EQ ' ' -> built-in type
+    LOOP AT T_FIELDDEF
+      WHERE TABNAME EQ BASETABNAME AND ( COMPTYPE EQ 'E' OR
+                                         COMPTYPE EQ ' ' ).
+      FIELDS-TABNAME   = T_FIELDDEF-TABNAME.
+      FIELDS-FIELDNAME = T_FIELDDEF-FIELDNAME.
+      APPEND FIELDS.
+    ENDLOOP.
+  ENDIF.
+* Retrieve useful metadata for each selected output field.
+  LOOP AT FIELDS.
+*   Check for duplicated output fields.
+    READ TABLE T_OUTPUTFIELD WITH KEY TABNAME   = FIELDS-TABNAME
+                                      FIELDNAME = FIELDS-FIELDNAME
+                                      ALIASNAME = FIELDS-ALIASNAME.
+    IF SY-SUBRC EQ 0.
+      PERFORM CREATE_MESSAGE3V USING 'I' '054' FIELDS-TABNAME
+                                               FIELDS-FIELDNAME
+                                               FIELDS-ALIASNAME.
+      CONTINUE. " Check all the fields before quitting
+    ENDIF.
+*   Check that field metadata are existing.
+    CLEAR: T_FIELDDEF, TABALIAS.
+    READ TABLE T_FIELDDEF WITH KEY TABNAME   = FIELDS-TABNAME
+                                FIELDNAME = FIELDS-FIELDNAME.
+    IF SY-SUBRC NE 0.
+*       Check for alias table name.
+        READ TABLE T_JOINTABLE WITH KEY ALIASNAME = FIELDS-TABNAME.
+        IF SY-SUBRC EQ 0.
+          READ TABLE T_FIELDDEF
+            WITH KEY TABNAME   = T_JOINTABLE-TABNAME
+                     FIELDNAME = FIELDS-FIELDNAME.
+          IF SY-SUBRC NE 0.
+            PERFORM CREATE_MESSAGE2V USING 'E' '003'
+                                           FIELDS-TABNAME
+                                           FIELDS-FIELDNAME.
+            CONTINUE. " Check all the fields before quitting
+          ENDIF.
+          TABALIAS = FIELDS-TABNAME.
+        ELSE.
+          PERFORM CREATE_MESSAGE2V USING 'E' '003' FIELDS-TABNAME
+                                                   FIELDS-FIELDNAME.
+          CONTINUE. " Check all the fields before quitting
+        ENDIF.
+    ENDIF.
+*   XtractKernel table extraction classes are using field details.
+    FIELDALIAS = FIELDS-ALIASNAME.
+    FIELDS = T_FIELDDEF.
+    FIELDS-ALIASNAME = FIELDALIAS.
+    If TABALIAS IS NOT INITIAL.
+      FIELDS-TABNAME = TABALIAS.
+    ENDIF.
+    MODIFY FIELDS.
+*   Check for duplicated alias name.
+    IF FIELDS-ALIASNAME IS NOT INITIAL.
+      READ TABLE T_OUTPUTFIELD WITH KEY ALIASNAME = FIELDS-ALIASNAME.
+      IF SY-SUBRC EQ 0.
+        PERFORM CREATE_MESSAGE1V USING 'E' '123' FIELDS-ALIASNAME.
+        CONTINUE. " Check all the fields before quitting
+      ENDIF.
+    ENDIF.
+    CLEAR T_OUTPUTFIELD.
+    T_OUTPUTFIELD-TABNAME   = FIELDS-TABNAME.
+    T_OUTPUTFIELD-FIELDNAME = FIELDS-FIELDNAME.
+    T_OUTPUTFIELD-ALIASNAME = FIELDS-ALIASNAME.
+    T_OUTPUTFIELD-DATATYPE  = T_FIELDDEF-DATATYPE.
+    T_OUTPUTFIELD-OUTPUTLEN = T_FIELDDEF-OUTPUTLEN.
+    T_OUTPUTFIELD-CONVEXIT  = T_FIELDDEF-CONVEXIT.
+*   Only use exits if selected by user.
+    IF USEFIELDEXITS EQ 'X'.
+      IF T_FIELDDEF-CONVEXIT EQ 'ALPHA'.
+        FUNCNAME = 'CONVERSION_EXIT_ALPHA_INPUT'.
+      ELSE.
+        CONCATENATE 'CONVERSION_EXIT_' T_FIELDDEF-CONVEXIT '_OUTPUT'
+               INTO FUNCNAME.
+      ENDIF.
+*     Default leading zeros for numc types.
+      IF T_FIELDDEF-DATATYPE EQ 'NUMC' AND
+         T_FIELDDEF-CONVEXIT IS INITIAL.
+        FUNCNAME = 'CONVERSION_EXIT_ALPHA_INPUT'.
+      ENDIF.
+*     Check conversion exit exists, if it doesn't don't use an exit
+      SELECT SINGLE FUNCNAME INTO FUNCTEMP
+        FROM TFDIR
+       WHERE FUNCNAME = FUNCNAME.
+      IF SY-SUBRC EQ 0.
+        T_OUTPUTFIELD-FUNCNAME = FUNCNAME.
+      ENDIF.
+    ENDIF.
+*   The internal types in DD03l are not always useful for example INT4
+*   have type X. We assign our own INTTYPE to determine handling. We
+*   need output type for writing to CHAR output with the correct offset.
+    CASE T_OUTPUTFIELD-DATATYPE.
+      WHEN 'CHAR' OR 'LCHR'.
+        T_OUTPUTFIELD-INTTYPE = 'C'.
+      WHEN 'NUMC'.
+        T_OUTPUTFIELD-INTTYPE = 'N'.
+*       T_OUTPUTFIELD-SPECIAL = 'X'.
+      WHEN 'CLNT'.
+        T_OUTPUTFIELD-INTTYPE = 'C'.
+      WHEN 'DATS'.
+        T_OUTPUTFIELD-INTTYPE = 'D'.
+      WHEN 'CURR'.
+        T_OUTPUTFIELD-INTTYPE = 'P'.
+        T_OUTPUTFIELD-SPECIAL = 'X'.
+      WHEN 'CUKY'.
+        T_OUTPUTFIELD-INTTYPE = 'C'.
+      WHEN 'DEC'.
+        T_OUTPUTFIELD-INTTYPE = 'P'.
+        T_OUTPUTFIELD-SPECIAL = 'X'.
+      WHEN 'FLTP'.
+        T_OUTPUTFIELD-INTTYPE = 'F'.
+        T_OUTPUTFIELD-SPECIAL = 'X'.
+      WHEN 'D34D'.
+        T_OUTPUTFIELD-INTTYPE = 'F'.
+        T_OUTPUTFIELD-SPECIAL = 'X'.
+      WHEN 'INT1'.
+        T_OUTPUTFIELD-INTTYPE = 'b'.
+        T_OUTPUTFIELD-SPECIAL = 'X'.
+      WHEN 'INT2'.
+        T_OUTPUTFIELD-INTTYPE = 's'.
+        T_OUTPUTFIELD-SPECIAL = 'X'.
+      WHEN 'INT4'.
+        T_OUTPUTFIELD-INTTYPE = 'I'.
+        T_OUTPUTFIELD-SPECIAL = 'X'.
+      WHEN 'LANG'.
+*do nothing
+      WHEN 'PREC'.
+        T_OUTPUTFIELD-INTTYPE = 's'.
+        T_OUTPUTFIELD-SPECIAL = 'X'.
+      WHEN 'QUAN'.
+        T_OUTPUTFIELD-INTTYPE = 'P'.
+        T_OUTPUTFIELD-SPECIAL = 'X'.
+      WHEN 'TIMS'.
+        T_OUTPUTFIELD-INTTYPE = 'T'.
+      WHEN 'UNIT'.
+        T_OUTPUTFIELD-INTTYPE = 'C'.
+      WHEN 'ACCP'.
+        T_OUTPUTFIELD-INTTYPE = 'C'.
+      WHEN 'RAW' OR 'LRAW'.
+        T_OUTPUTFIELD-INTTYPE = 'X'.
+        T_OUTPUTFIELD-SPECIAL = 'X'.
+      WHEN OTHERS.
+        PERFORM CREATE_MESSAGE2V USING 'E' '023' T_OUTPUTFIELD-FIELDNAME
+                                                 T_OUTPUTFIELD-DATATYPE.
+        CONTINUE. " Check all the fields before quitting
+    ENDCASE.
+    APPEND T_OUTPUTFIELD.
+  ENDLOOP.
+
+ENDFORM.                    " CHECK_TABLEOUTPUT
+
+FORM CHECK_TABLEOUTPUT_NONPCK TABLES FIELDS
+                                       STRUCTURE ZXTRACTTABLEFIELDS
+                               USING USEFIELDEXITS TYPE c.
+
+  DATA:
+    FIELDLOADM TYPE C,
+    FIELDCOUNT TYPE I,
+    AGGRECOUNT TYPE I,
+    TABALIAS   TYPE DD03P-TABNAME,
+    FIELDALIAS TYPE DD03P-FIELDNAME,
+    AGGREFUNC  TYPE ZXTRACTTABLEFIELDS-AGGREFUNC,
+    FUNCTEMP   LIKE TFDIR-FUNCNAME,
+    FUNCNAME   LIKE TFDIR-FUNCNAME.
+
+  DESCRIBE TABLE FIELDS LINES FIELDCOUNT.
+* Check number of output fields to reduce risk of DOS attacks by
+* allocating too much memory.
+  IF FIELDCOUNT GT 1000.
+    PERFORM CREATE_MESSAGE1V USING 'E' '012' FIELDCOUNT.
+    EXIT.
+  ENDIF.
+* If user has not specified any output fields then select all of them.
+  IF FIELDS[] IS INITIAL.
+*   Check COMPTYPE EQ 'E' -> data element;
+*         COMPTYPE EQ ' ' -> built-in type
+    LOOP AT T_FIELDDEF
+      WHERE TABNAME EQ BASETABNAME AND ( COMPTYPE EQ 'E' OR
+                                         COMPTYPE EQ ' ' ).
+      FIELDS-TABNAME   = T_FIELDDEF-TABNAME.
+      FIELDS-FIELDNAME = T_FIELDDEF-FIELDNAME.
+      APPEND FIELDS.
+    ENDLOOP.
+  ENDIF.
+* Retrieve useful metadata for each selected output field.
+  LOOP AT FIELDS.
+*   This is need to support XtractKernel object model.
+    IF FIELDS-TABNAME EQ '-' OR FIELDS-FIELDNAME EQ '-'.
+      CLEAR FIELDS-TABNAME.
+      CLEAR FIELDS-FIELDNAME.
+      MODIFY FIELDS.
+    ENDIF.
+    CLEAR TABALIAS.
+    FIELDLOADM = 'X'.
+*   Check if aggregate functions is defined.
+    IF FIELDS-AGGREFUNC IS NOT INITIAL.
+*     Check that aggregate function is valid.
+      IF FIELDS-AGGREFUNC NE 'COUNT'         AND
+         FIELDS-AGGREFUNC NE 'COUNTDISTINCT' AND
+         FIELDS-AGGREFUNC NE 'AVG'           AND
+         FIELDS-AGGREFUNC NE 'MIN'           AND
+         FIELDS-AGGREFUNC NE 'MINDISTINCT'   AND
+         FIELDS-AGGREFUNC NE 'MAX'           AND
+         FIELDS-AGGREFUNC NE 'MAXDISTINCT'   AND
+         FIELDS-AGGREFUNC NE 'SUM'           AND
+         FIELDS-AGGREFUNC NE 'SUMDISTINCT'.
+        PERFORM CREATE_MESSAGE1V USING 'E' '121' FIELDS-AGGREFUNC.
+        CONTINUE. " Check all the fields before quitting
+      ENDIF.
+*     Check that alias name is defined.
+      IF FIELDS-ALIASNAME IS INITIAL.
+        FIELDS-ALIASNAME = FIELDS-FIELDNAME.
+*       PERFORM CREATE_MESSAGE USING 'E' '122'.
+*       CONTINUE. " Check all the fields before quitting
+*     Check for duplicated alias name.
+      ELSE.
+        READ TABLE T_OUTPUTFIELD WITH KEY ALIASNAME = FIELDS-ALIASNAME.
+        IF SY-SUBRC EQ 0.
+          PERFORM CREATE_MESSAGE1V USING 'E' '123' FIELDS-ALIASNAME.
+          CONTINUE. " Check all the fields before quitting
+        ENDIF.
+      ENDIF.
+*     Check that table and field name is defined if not COUNT function.
+      IF FIELDS-AGGREFUNC NE 'COUNT' AND (
+         FIELDS-TABNAME   IS INITIAL OR
+         FIELDS-FIELDNAME IS INITIAL ).
+          PERFORM CREATE_MESSAGE USING 'E' '124'.
+          CONTINUE. " Check all the fields before quitting
+      ENDIF.
+*     Define data type depending on aggregate function.
+      CASE FIELDS-AGGREFUNC.
+        WHEN 'COUNT' OR 'COUNTDISTINCT'.
+          FIELDS-DATATYPE  = 'INT4'.
+          FIELDS-DECIMALS  = '000000'.
+          FIELDS-OUTPUTLEN = '000010'.
+          FIELDLOADM = SPACE.
+        WHEN 'AVG' OR 'AVGDISTINCT'.
+          FIELDS-DATATYPE  = 'FLTP'.
+          FIELDS-DECIMALS  = '000016'.
+          FIELDS-OUTPUTLEN = '000022'.
+          FIELDLOADM = SPACE.
+      ENDCASE.
+      ADD 1 TO AGGRECOUNT.
+*   Check that table and field name is defined.
+    ELSEIF FIELDS-TABNAME IS INITIAL OR FIELDS-FIELDNAME IS INITIAL.
+      PERFORM CREATE_MESSAGE USING 'E' '125'.
+      CONTINUE. " Check all the fields before quitting
+    ENDIF.
+*   Check that table and field name is correct id defined (most cases).
+    IF FIELDS-TABNAME   IS NOT INITIAL AND
+       FIELDS-FIELDNAME IS NOT INITIAL AND FIELDLOADM EQ 'X'.
+*     Check for duplicated output fields.
+      IF FIELDS-ALIASNAME IS INITIAL.
+        READ TABLE T_OUTPUTFIELD WITH KEY TABNAME   = FIELDS-TABNAME
+                                          FIELDNAME = FIELDS-FIELDNAME.
+        IF SY-SUBRC EQ 0.
+          PERFORM CREATE_MESSAGE2V USING 'I' '054' FIELDS-TABNAME
+                                                   FIELDS-FIELDNAME.
+          CONTINUE. " Check all the fields before quitting
+        ENDIF.
+*     Check for duplicated alias name if defined.
+      ELSE.
+        READ TABLE T_OUTPUTFIELD WITH KEY ALIASNAME = FIELDS-ALIASNAME.
+        IF SY-SUBRC EQ 0.
+          PERFORM CREATE_MESSAGE1V USING 'E' '123' FIELDS-ALIASNAME.
+          CONTINUE. " Check all the fields before quitting
+        ENDIF.
+      ENDIF.
+*     Check that field metadata are existing.
+      CLEAR T_FIELDDEF.
+      READ TABLE T_FIELDDEF WITH KEY TABNAME   = FIELDS-TABNAME
+                                  FIELDNAME = FIELDS-FIELDNAME.
+      IF SY-SUBRC NE 0.
+*       Check for alias table name.
+        READ TABLE T_JOINTABLE WITH KEY ALIASNAME = FIELDS-TABNAME.
+        IF SY-SUBRC EQ 0.
+          READ TABLE T_FIELDDEF
+            WITH KEY TABNAME   = T_JOINTABLE-TABNAME
+                     FIELDNAME = FIELDS-FIELDNAME.
+          IF SY-SUBRC NE 0.
+            PERFORM CREATE_MESSAGE2V USING 'E' '003'
+                                           FIELDS-TABNAME
+                                           FIELDS-FIELDNAME.
+            CONTINUE. " Check all the fields before quitting
+          ENDIF.
+          TABALIAS = FIELDS-TABNAME.
+        ELSE.
+          PERFORM CREATE_MESSAGE2V USING 'E' '003' FIELDS-TABNAME
+                                                   FIELDS-FIELDNAME.
+          CONTINUE. " Check all the fields before quitting
+        ENDIF.
+      ENDIF.
+      FIELDALIAS = FIELDS-ALIASNAME.
+      AGGREFUNC = FIELDS-AGGREFUNC.
+      MOVE-CORRESPONDING T_FIELDDEF TO FIELDS.
+      FIELDS-ALIASNAME = FIELDALIAS.
+      FIELDS-AGGREFUNC = AGGREFUNC.
+      If TABALIAS IS NOT INITIAL.
+        FIELDS-TABNAME = TABALIAS.
+      ENDIF.
+    ENDIF.
+*   XtractKernel table extraction classes are using field details.
+    MODIFY FIELDS.
+*   Create internal output field definition.
+    CLEAR T_OUTPUTFIELD.
+    T_OUTPUTFIELD-TABNAME   = FIELDS-TABNAME.
+    T_OUTPUTFIELD-FIELDNAME = FIELDS-FIELDNAME.
+    T_OUTPUTFIELD-ALIASNAME = FIELDS-ALIASNAME.
+    T_OUTPUTFIELD-AGGREFUNC = FIELDS-AGGREFUNC.
+*   Define data type depending on aggregate function.
+    CASE FIELDS-AGGREFUNC.
+      WHEN 'COUNT' OR 'COUNTDISTINCT'.
+        T_OUTPUTFIELD-DATATYPE  = 'INT4'.
+        T_OUTPUTFIELD-OUTPUTLEN = '000010'.
+      WHEN 'AVG' OR 'AVGDISTINCT'.
+        T_OUTPUTFIELD-DATATYPE  = 'FLTP'.
+        T_OUTPUTFIELD-OUTPUTLEN = '000022'.
+      WHEN OTHERS.
+        T_OUTPUTFIELD-DATATYPE  = T_FIELDDEF-DATATYPE.
+        T_OUTPUTFIELD-OUTPUTLEN = T_FIELDDEF-OUTPUTLEN.
+        T_OUTPUTFIELD-ROLLNAME  = T_FIELDDEF-ROLLNAME.
+    ENDCASE.
+*   Only use exits if selected by user.
+    IF USEFIELDEXITS EQ 'X'.
+      IF T_FIELDDEF-CONVEXIT EQ 'ALPHA'.
+        FUNCNAME = 'CONVERSION_EXIT_ALPHA_INPUT'.
+      ELSE.
+        CONCATENATE 'CONVERSION_EXIT_' T_FIELDDEF-CONVEXIT '_OUTPUT'
+               INTO FUNCNAME.
+      ENDIF.
+*     Default leading zeros for numc types.
+      IF T_FIELDDEF-DATATYPE EQ 'NUMC' AND
+         T_FIELDDEF-CONVEXIT IS INITIAL.
+        FUNCNAME = 'CONVERSION_EXIT_ALPHA_INPUT'.
+      ENDIF.
+*     Check conversion exit exists, if it doesn't don't use an exit
+      SELECT SINGLE FUNCNAME INTO FUNCTEMP
+        FROM TFDIR
+       WHERE FUNCNAME = FUNCNAME.
+      IF SY-SUBRC EQ 0.
+        T_OUTPUTFIELD-FUNCNAME = FUNCNAME.
+      ENDIF.
+    ENDIF.
+*   The internal types in DD03l are not always useful for example INT4
+*   have type X. We assign our own INTTYPE to determine handling. We
+*   need output type for writing to CHAR output with the correct offset.
+    CASE T_OUTPUTFIELD-DATATYPE.
+      WHEN 'CHAR' OR 'LCHR'.
+        T_OUTPUTFIELD-INTTYPE = 'C'.
+      WHEN 'NUMC'.
+        T_OUTPUTFIELD-INTTYPE = 'N'.
+*       T_OUTPUTFIELD-SPECIAL = 'X'.
+      WHEN 'CLNT'.
+        T_OUTPUTFIELD-INTTYPE = 'C'.
+      WHEN 'DATS'.
+        T_OUTPUTFIELD-INTTYPE = 'D'.
+      WHEN 'CURR'.
+        T_OUTPUTFIELD-INTTYPE = 'P'.
+        T_OUTPUTFIELD-SPECIAL = 'X'.
+      WHEN 'CUKY'.
+        T_OUTPUTFIELD-INTTYPE = 'C'.
+      WHEN 'DEC'.
+        T_OUTPUTFIELD-INTTYPE = 'P'.
+        T_OUTPUTFIELD-SPECIAL = 'X'.
+      WHEN 'FLTP'.
+        T_OUTPUTFIELD-INTTYPE = 'F'.
+        T_OUTPUTFIELD-SPECIAL = 'X'.
+      WHEN 'D34D'.
+        T_OUTPUTFIELD-INTTYPE = 'F'.
+        T_OUTPUTFIELD-SPECIAL = 'X'.
+      WHEN 'INT1'.
+        T_OUTPUTFIELD-INTTYPE = 'b'.
+        T_OUTPUTFIELD-SPECIAL = 'X'.
+      WHEN 'INT2'.
+        T_OUTPUTFIELD-INTTYPE = 's'.
+        T_OUTPUTFIELD-SPECIAL = 'X'.
+      WHEN 'INT4'.
+        T_OUTPUTFIELD-INTTYPE = 'I'.
+        T_OUTPUTFIELD-SPECIAL = 'X'.
+      WHEN 'LANG'.
+* do nothing
+      WHEN 'PREC'.
+        T_OUTPUTFIELD-INTTYPE = 's'.
+        T_OUTPUTFIELD-SPECIAL = 'X'.
+      WHEN 'QUAN'.
+        T_OUTPUTFIELD-INTTYPE = 'P'.
+        T_OUTPUTFIELD-SPECIAL = 'X'.
+      WHEN 'TIMS'.
+        T_OUTPUTFIELD-INTTYPE = 'T'.
+      WHEN 'UNIT'.
+        T_OUTPUTFIELD-INTTYPE = 'C'.
+      WHEN 'ACCP'.
+        T_OUTPUTFIELD-INTTYPE = 'C'.
+      WHEN 'RAW' OR 'LRAW'.
+        T_OUTPUTFIELD-INTTYPE = 'X'.
+        T_OUTPUTFIELD-SPECIAL = 'X'.
+      WHEN OTHERS.
+        PERFORM CREATE_MESSAGE2V USING 'E' '023' T_OUTPUTFIELD-FIELDNAME
+                                                 T_OUTPUTFIELD-DATATYPE.
+        CONTINUE. " Check all the fields before quitting
+    ENDCASE.
+    APPEND T_OUTPUTFIELD.
+  ENDLOOP.
+* Check that at least one aggregate function is defiend.
+  IF AGGRECOUNT EQ 0 AND OUTERJOIN NE 'X'.
+    PERFORM CREATE_MESSAGE USING 'E' '128'.
+  ENDIF.
+
+ENDFORM.                    " CHECK_TABLEOUTPUT_NONPCK
+
+FORM CHECK_PKWHERECLAUSE TABLES PKWHERECLAUSE STRUCTURE ZXTRACTRANGE
+                                PKWHERECLAUSETABLE
+                                PKFIELDLIST TYPE STRING_TABLE
+                       CHANGING PKWHERECLAUSESTRING TYPE STRING
+                                PKFIELDCOUNT TYPE INT4
+                                CURRENTGTPOS TYPE INT4.
+* PKWHERECLAUSETABLE TYPE TALBE OF CHAR72
+
+  DATA ISINITIAL(1) TYPE C.
+
+* The logic only works for transparent tables or views. The intial PK
+* WHERE CLAUSE values for cluster and pool tables look different.
+  IF NOT PKWHERECLAUSE[] IS INITIAL.
+    ISINITIAL = 'X'.
+*   Check if we are dealing with an initial PK WHERE CLAUSE where all
+*   clauses are IS NOT NULL.
+    LOOP AT PKWHERECLAUSE.
+      IF PKWHERECLAUSE-SIGN   NE 'E'  OR
+         PKWHERECLAUSE-OPTION NE 'NL' OR
+         PKWHERECLAUSE-LOW    NE SPACE.
+        CLEAR ISINITIAL.
+        EXIT.
+      ENDIF.
+    ENDLOOP.
+*   If PK WHERE CLAUSE is initial, physically clear it and have the
+*   subsequent PK WHERE CLAUSE generation build the initial clause
+*   from metadata.
+    IF ISINITIAL EQ 'X'.
+      CLEAR   PKWHERECLAUSE.
+      REFRESH PKWHERECLAUSE.
+    ENDIF.
+  ENDIF.
+* Initialize PK WHERE CLAUSE table as lower boundary for SELECT.
+  IF PKWHERECLAUSE[] IS INITIAL.
+    PERFORM CREATE_PKWHERECLAUSE TABLES PKWHERECLAUSE
+                                        PKWHERECLAUSETABLE
+                               CHANGING PKWHERECLAUSESTRING
+                                        PKFIELDCOUNT.
+  ELSE.
+    PERFORM CHECK_PKWHERECLAUSEVALUES TABLES PKWHERECLAUSE.
+    CHECK ERROR IS INITIAL.
+    DESCRIBE TABLE PKWHERECLAUSE LINES PKFIELDCOUNT.
+    PERFORM CREATE_PKWHERECLAUSESTRING TABLES PKWHERECLAUSE
+                                              PKWHERECLAUSETABLE
+                                     CHANGING PKWHERECLAUSESTRING.
+*   On a new batch the gt is always on the far right.
+    CURRENTGTPOS = PKFIELDCOUNT.
+  ENDIF.
+* Initialize PK field list (including TABNAME)
+  CLEAR PKFIELDLIST.
+  LOOP AT PKWHERECLAUSE.
+    CONCATENATE PKWHERECLAUSE-TABNAME '~' PKWHERECLAUSE-FIELD
+           INTO PKFIELDLIST.
+    APPEND PKFIELDLIST.
+  ENDLOOP.
+
+ENDFORM.                    " CHECK_PKWHERECLAUSE
+
+FORM CHECK_PKWHERECLAUSEVALUES TABLES PKWHERECLAUSE
+                                        STRUCTURE ZXTRACTRANGE.
+
+  DATA:
+    LINES             TYPE INT4,
+    GTCOUNT           TYPE INT4,
+    LASTINDEX         LIKE SY-TABIX,
+    PKWHERECLAUSETEMP TYPE STANDARD TABLE OF ZXTRACTRANGE.
+
+* Check for duplicates in PK WHERE CLAUSE.
+  PKWHERECLAUSETEMP[] = PKWHERECLAUSE[].
+  SORT PKWHERECLAUSETEMP BY FIELD ASCENDING.
+  DELETE ADJACENT DUPLICATES FROM PKWHERECLAUSETEMP COMPARING FIELD.
+  IF SY-SUBRC = 0.
+    PERFORM CREATE_MESSAGE USING 'E' '087'.
+    EXIT.
+  ENDIF.
+  DESCRIBE TABLE PKWHERECLAUSE LINES LINES.
+* Check and validate values passed in PK WHERE CLAUSE if defined.
+  IF LINES > 0.
+    LOOP AT T_FIELDPKS.
+      READ TABLE PKWHERECLAUSE WITH KEY FIELD = T_FIELDPKS-FIELDNAME.
+*     Check that PK field exist in the table.
+      IF SY-SUBRC NE 0.
+        PERFORM CREATE_MESSAGE1V USING 'E' '075' T_FIELDPKS-FIELDNAME.
+        RETURN.
+      ENDIF.
+      LASTINDEX = SY-TABIX.
+*     Check that sign equals to I.
+      IF PKWHERECLAUSE-SIGN NE 'I'.
+        PERFORM CREATE_MESSAGE1V USING 'E' '076' PKWHERECLAUSE-SIGN.
+        RETURN.
+      ENDIF.
+*     Check that operator is AND.
+      IF PKWHERECLAUSE-OPERATOR EQ 'OR'.
+        PERFORM CREATE_MESSAGE    USING 'E' '085'.
+        RETURN.
+      ENDIF.
+*     Check that option contains valid operators.
+      IF PKWHERECLAUSE-OPTION NE '='  AND
+         PKWHERECLAUSE-OPTION NE 'EQ' AND
+         PKWHERECLAUSE-OPTION NE '>'  AND
+         PKWHERECLAUSE-OPTION NE 'GT'.
+        PERFORM CREATE_MESSAGE1V USING 'E' '078' PKWHERECLAUSE-OPTION.
+        RETURN.
+      ENDIF.
+*     Check that GT sign is at the end.
+      IF LASTINDEX            EQ LINES AND
+         PKWHERECLAUSE-OPTION NE 'GT'  AND
+         PKWHERECLAUSE-OPTION NE '>'.
+        PERFORM CREATE_MESSAGE1V USING 'E' '086' PKWHERECLAUSE-OPTION.
+        RETURN.
+      ENDIF.
+*     Check if there is only one GT sign.
+      IF PKWHERECLAUSE-OPTION EQ 'GT' OR
+         PKWHERECLAUSE-OPTION EQ '>'.
+        ADD 1 TO GTCOUNT.
+        IF GTCOUNT > 1.
+          PERFORM CREATE_MESSAGE  USING 'E' '079'.
+          RETURN.
+        ENDIF.
+      ENDIF.
+    ENDLOOP.
+  ENDIF.
+
+ENDFORM.                    " CHECK_PKWHERECLAUSEVALUES
+
+FORM CREATE_PKWHERECLAUSE TABLES PKWHERECLAUSE
+                                   STRUCTURE ZXTRACTRANGE
+                                 PKWHERECLAUSETABLE
+                        CHANGING PKWHERECLAUSESTRING TYPE STRING
+                                 PKFIELDCOUNT TYPE INT4.
+* PKWHERECLAUSETABLE TYPE STANDARD TABLE OF CHAR72
+
+  DATA:
+    HEXNULL    LIKE ZXTRACTRANGE-LOW,
+    LASTINDEX  LIKE SY-TABIX,
+    DIGITCOUNT TYPE I,
+    PKTABCLASS LIKE TABCLASS.
+
+  CONCATENATE
+    '00000000000000000000000000000000000000000000000000'
+    '00000000000000000000000000000000000000000000000000'
+    INTO HEXNULL.
+
+  CLEAR:
+    PKFIELDCOUNT,
+    PKWHERECLAUSESTRING.
+  REFRESH:
+    PKWHERECLAUSE,
+    PKWHERECLAUSETABLE.
+
+* Looping over all key fields.
+  LOOP AT T_FIELDPKS.
+    READ TABLE T_TABLE WITH KEY TABNAME = T_FIELDPKS-TABNAME.
+    IF SY-SUBRC EQ 0.
+      PKTABCLASS = T_TABLE-TABCLASS.
+    ELSE.
+      PERFORM CREATE_MESSAGE USING 'E' '064'.
+      EXIT.
+    ENDIF.
+    CLEAR PKWHERECLAUSE.
+    PKWHERECLAUSE-TABNAME = T_FIELDPKS-TABNAME.
+    PKWHERECLAUSE-FIELD   = T_FIELDPKS-FIELDNAME.
+*   Read field alias name.
+    READ TABLE T_OUTPUTFIELD WITH KEY TABNAME   = PKWHERECLAUSE-TABNAME
+                                      FIELDNAME = PKWHERECLAUSE-FIELD.
+*   SUBRC is not 0 for automatically added primary key fields and we
+*   can ignore it, since there is no alias name defined anyway.
+    IF SY-SUBRC EQ 0 AND T_OUTPUTFIELD-ALIASNAME IS NOT INITIAL.
+      PKWHERECLAUSE-ALIAS = T_OUTPUTFIELD-ALIASNAME.
+    ENDIF.
+*   For transparent tables and view we use NOT IS NULL logic.
+    IF PKTABCLASS EQ 'TRANSP' OR PKTABCLASS EQ 'VIEW'.
+      PKWHERECLAUSE-SIGN     = 'E'.
+      PKWHERECLAUSE-OPTION   = 'NL'.
+      PKWHERECLAUSE-LOW      = SPACE.
+*   For cluster and pool tables we must use GE logic.
+    ELSE.
+      PKWHERECLAUSE-SIGN   = 'I'.
+      PKWHERECLAUSE-OPTION = 'GE'.
+      CASE T_FIELDPKS-INTTYPE.
+        WHEN 'C'.
+          PKWHERECLAUSE-LOW = SPACE.
+        WHEN 'D'.
+          PKWHERECLAUSE-LOW = '00000000'.
+        WHEN 'T'.
+          PKWHERECLAUSE-LOW = '000000'.
+        WHEN 'P'.
+*         Generate maximum negative number for packed numbers.
+          DIGITCOUNT = T_FIELDPKS-LENG - T_FIELDPKS-DECIMALS.
+          CONCATENATE   PKWHERECLAUSE-LOW '-' INTO PKWHERECLAUSE-LOW.
+          DO DIGITCOUNT TIMES.
+            CONCATENATE PKWHERECLAUSE-LOW '9' INTO PKWHERECLAUSE-LOW.
+          ENDDO.
+          CONCATENATE   PKWHERECLAUSE-LOW DECIMALPOINT
+                                              INTO PKWHERECLAUSE-LOW.
+          DO T_FIELDPKS-DECIMALS TIMES.
+            CONCATENATE PKWHERECLAUSE-LOW '9' INTO PKWHERECLAUSE-LOW.
+          ENDDO.
+        WHEN 'F'.
+          PKWHERECLAUSE-LOW = C_MAX_FLOAT_NEG.
+        WHEN 'X'.
+          CASE T_FIELDPKS-DATATYPE.
+            WHEN 'INT1'.
+              PKWHERECLAUSE-LOW = '0'.
+            WHEN 'INT2'.
+              PKWHERECLAUSE-LOW = C_MAX_INT2_NEG.
+            WHEN 'INT4'.
+              PKWHERECLAUSE-LOW = C_MAX_INT_NEG.
+*             Warn users of the issue with 11 digit integers in 4.6C!
+              IF ABAPVERSION <= '46C'.
+                PERFORM CREATE_MESSAGE USING 'W' '072'.
+              ENDIF.
+            WHEN OTHERS.
+              PKWHERECLAUSE-LOW = HEXNULL(T_FIELDPKS-OUTPUTLEN).
+          ENDCASE.
+        WHEN OTHERS.
+          PKWHERECLAUSE-LOW = SPACE.
+      ENDCASE.
+    ENDIF.
+    PKWHERECLAUSE-HIGH     = SPACE.
+    PKWHERECLAUSE-OPERATOR = 'AND'.
+    CONDENSE PKWHERECLAUSE-LOW NO-GAPS.
+    APPEND   PKWHERECLAUSE.
+    ADD 1 TO PKFIELDCOUNT.
+    LASTINDEX = SY-TABIX.
+  ENDLOOP.
+  CHECK ERROR IS INITIAL.
+* Remove operator on last row to allow further chaining.
+  PKWHERECLAUSE-OPERATOR = SPACE.
+  MODIFY PKWHERECLAUSE FROM PKWHERECLAUSE INDEX LASTINDEX.
+* Create WHERE clause string.
+  PERFORM CREATE_PKWHERECLAUSESTRING TABLES PKWHERECLAUSE
+                                            PKWHERECLAUSETABLE
+                                   CHANGING PKWHERECLAUSESTRING.
+
+ENDFORM.                    " CREATE_PKWHERECLAUSE
+
+FORM CREATE_PKWHERECLAUSESTRING TABLES PKWHERECLAUSE
+                                         STRUCTURE ZXTRACTRANGE
+                                       PKWHERECLAUSETABLE
+                              CHANGING PKWHERECLAUSESTRING TYPE STRING.
+*PKWHERECLAUSETABLE TYPE STANDARD TABLE OF CHAR72
+
+  DATA:
+    TEXTBLOCK(72)          TYPE C,
+    USEPKWHERECLAUSESTRING TYPE C.
+
+  CLEAR:
+    PKWHERECLAUSETABLE,
+    PKWHERECLAUSESTRING.
+  REFRESH:
+    PKWHERECLAUSETABLE.
+* For ABAP version 620 and higher generate a WHERE CLAUSE string
+* otherwise generate a WHERE CLAUSE table.
+  IF ABAPVERSION >= '620'.
+    USEPKWHERECLAUSESTRING = 'X'.
+  ENDIF.
+* Start build PK WHERE CLAUSE string.
+  LOOP AT PKWHERECLAUSE.
+*   Append table and field name.
+    CONCATENATE PKWHERECLAUSE-TABNAME '~' PKWHERECLAUSE-FIELD
+           INTO TEXTBLOCK.
+    IF USEPKWHERECLAUSESTRING IS INITIAL.
+      PKWHERECLAUSETABLE = TEXTBLOCK.
+      APPEND PKWHERECLAUSETABLE.
+    ELSE.
+      CONCATENATE PKWHERECLAUSESTRING TEXTBLOCK
+             INTO PKWHERECLAUSESTRING SEPARATED BY SPACE.
+    ENDIF.
+
+*   Append NOT depending on given sign.
+"    CASE PKWHERECLAUSE-SIGN.
+"      WHEN 'I'.
+"      WHEN 'E'.
+"        IF PKWHERECLAUSE-OPTION NE 'NL'.
+"          IF USEPKWHERECLAUSESTRING IS INITIAL.
+"            PKWHERECLAUSETABLE = 'NOT'.
+"            APPEND PKWHERECLAUSETABLE.
+"          ELSE.
+"            CONCATENATE PKWHERECLAUSESTRING 'NOT'
+"                   INTO PKWHERECLAUSESTRING SEPARATED BY SPACE.
+"          ENDIF.
+"        ENDIF.
+"      WHEN OTHERS.
+"        PERFORM CREATE_MESSAGE1V USING 'E' '005' PKWHERECLAUSE-SIGN.
+"        RETURN.
+"    ENDCASE.
+
+*   Append NOT depending on given sign.
+    IF PKWHERECLAUSE-SIGN = 'E'.
+    IF PKWHERECLAUSE-OPTION NE 'NL'.
+          IF USEPKWHERECLAUSESTRING IS INITIAL.
+            PKWHERECLAUSETABLE = 'NOT'.
+            APPEND PKWHERECLAUSETABLE.
+          ELSE.
+            CONCATENATE PKWHERECLAUSESTRING 'NOT'
+                   INTO PKWHERECLAUSESTRING SEPARATED BY SPACE.
+          ENDIF.
+        ENDIF.
+    ELSEIF PKWHERECLAUSE-SIGN <> 'I'.
+      PERFORM CREATE_MESSAGE1V USING 'E' '005' PKWHERECLAUSE-SIGN.
+        RETURN.
+    ENDIF.
+
+
+*   Read field metadata.
+    READ TABLE T_FIELDDEF WITH KEY TABNAME   = PKWHERECLAUSE-TABNAME
+                                FIELDNAME = PKWHERECLAUSE-FIELD.
+    IF SY-SUBRC NE 0.
+      PERFORM CREATE_MESSAGE2V USING 'E' '003' PKWHERECLAUSE-TABNAME
+                                                PKWHERECLAUSE-FIELD.
+      RETURN.
+    ENDIF.
+*   Data validation is not necessary for option NL (IS NULL) as there
+*   are no values to validate. Always do conversion exit ALPHA for
+*   NUMC data type.
+    IF PKWHERECLAUSE-OPTION NE 'NL' AND T_FIELDDEF-DATATYPE EQ 'NUMC'.
+      PERFORM CONVERT_NUMCVALUE USING T_FIELDDEF-ROLLNAME
+                                      'ALPHA'
+                                      T_FIELDDEF-OUTPUTLEN
+                             CHANGING PKWHERECLAUSE-LOW.
+      CHECK ERROR IS INITIAL.
+    ENDIF.
+*   Append option.
+    CASE PKWHERECLAUSE-OPTION.
+      WHEN 'EQ'.
+        IF USEPKWHERECLAUSESTRING IS INITIAL.
+          PKWHERECLAUSETABLE = '='.
+          APPEND PKWHERECLAUSETABLE.
+          CONCATENATE '''' PKWHERECLAUSE-LOW '''' INTO TEXTBLOCK.
+          PKWHERECLAUSETABLE = TEXTBLOCK.
+          APPEND PKWHERECLAUSETABLE.
+        ELSE.
+          CONCATENATE PKWHERECLAUSESTRING '=' ''''
+                 INTO PKWHERECLAUSESTRING SEPARATED BY SPACE.
+          CONCATENATE PKWHERECLAUSESTRING PKWHERECLAUSE-LOW ''''
+                 INTO PKWHERECLAUSESTRING.
+        ENDIF.
+      WHEN 'GE'.
+        IF USEPKWHERECLAUSESTRING IS INITIAL.
+          PKWHERECLAUSETABLE = '>='.
+          APPEND PKWHERECLAUSETABLE.
+          CONCATENATE '''' PKWHERECLAUSE-LOW '''' INTO TEXTBLOCK.
+          PKWHERECLAUSETABLE = TEXTBLOCK.
+          APPEND PKWHERECLAUSETABLE.
+        ELSE.
+          CONCATENATE PKWHERECLAUSESTRING '>=' ''''
+                 INTO PKWHERECLAUSESTRING SEPARATED BY SPACE.
+          CONCATENATE PKWHERECLAUSESTRING PKWHERECLAUSE-LOW ''''
+                 INTO PKWHERECLAUSESTRING.
+        ENDIF.
+      WHEN 'GT'.
+        IF USEPKWHERECLAUSESTRING IS INITIAL.
+          PKWHERECLAUSETABLE = '>'.
+          APPEND PKWHERECLAUSETABLE.
+          CONCATENATE '''' PKWHERECLAUSE-LOW '''' INTO TEXTBLOCK.
+          PKWHERECLAUSETABLE = TEXTBLOCK.
+          APPEND PKWHERECLAUSETABLE.
+        ELSE.
+          CONCATENATE PKWHERECLAUSESTRING '>' ''''
+                 INTO PKWHERECLAUSESTRING SEPARATED BY SPACE.
+          CONCATENATE PKWHERECLAUSESTRING PKWHERECLAUSE-LOW ''''
+                 INTO PKWHERECLAUSESTRING.
+        ENDIF.
+      WHEN 'NL'.
+        IF PKWHERECLAUSE-SIGN = 'I'.
+          IF USEPKWHERECLAUSESTRING IS INITIAL.
+            PKWHERECLAUSETABLE = 'IS NULL'.
+            APPEND PKWHERECLAUSETABLE.
+          ELSE.
+            CONCATENATE PKWHERECLAUSESTRING 'IS NULL'
+                   INTO PKWHERECLAUSESTRING SEPARATED BY SPACE.
+          ENDIF.
+        ELSE.
+          IF USEPKWHERECLAUSESTRING IS INITIAL.
+            PKWHERECLAUSETABLE = 'IS NOT NULL'.
+            APPEND PKWHERECLAUSETABLE.
+          ELSE.
+            CONCATENATE PKWHERECLAUSESTRING 'IS NOT NULL'
+                   INTO PKWHERECLAUSESTRING SEPARATED BY SPACE.
+          ENDIF.
+        ENDIF.
+      WHEN OTHERS.
+        PERFORM CREATE_MESSAGE1V USING 'E' '007' PKWHERECLAUSE-OPTION.
+        RETURN.
+    ENDCASE.
+*   Append operator.
+    IF NOT PKWHERECLAUSE-OPERATOR IS INITIAL.
+      IF USEPKWHERECLAUSESTRING IS INITIAL.
+        PKWHERECLAUSETABLE = PKWHERECLAUSE-OPERATOR.
+        APPEND PKWHERECLAUSETABLE.
+      ELSE.
+        CONCATENATE PKWHERECLAUSESTRING PKWHERECLAUSE-OPERATOR
+               INTO PKWHERECLAUSESTRING SEPARATED BY SPACE.
+      ENDIF.
+    ENDIF.
+  ENDLOOP.
+
+ENDFORM.                    " CREATE_PKWHERECLAUSESTRING
+
+FORM CONVERT_NUMCVALUE USING ROLLNAME TYPE ROLLNAME CONVEXIT TYPE c OUTPUTLEN TYPE OUTPUTLEN
+                    CHANGING VALUE TYPE ZXTRACTRANGE-LOW.
+
+  DATA:
+    OFFSET   TYPE INT4,
+    FUNCTEMP LIKE TFDIR-FUNCNAME,
+    FUNCNAME LIKE TFDIR-FUNCNAME.
+
+  FIELD-SYMBOLS: <VALUE> TYPE ANY.
+
+* Use data element as casting type if available, otherwise use default.
+  IF NOT ROLLNAME IS INITIAL.
+    ASSIGN VALUE TO <VALUE> CASTING TYPE (ROLLNAME).
+  ELSE.
+    ASSIGN VALUE(OUTPUTLEN) TO <VALUE>.
+  ENDIF.
+* Check if conversion exit exists.
+  CONCATENATE 'CONVERSION_EXIT_' CONVEXIT '_INPUT' INTO FUNCNAME.
+  SELECT SINGLE FUNCNAME INTO FUNCTEMP
+    FROM TFDIR
+   WHERE FUNCNAME = FUNCNAME.
+  IF SY-SUBRC NE 0.
+    PERFORM CREATE_MESSAGE2V USING 'E' '022' VALUE FUNCNAME.
+    EXIT.
+  ENDIF.
+* Execute conversion exit.
+  CALL FUNCTION FUNCNAME
+    EXPORTING
+      INPUT         = <VALUE>
+    IMPORTING
+      OUTPUT        = <VALUE>
+    EXCEPTIONS
+      ERROR_MESSAGE = 1
+      OTHERS        = 2.
+  IF SY-SUBRC NE 0.
+    PERFORM CREATE_MESSAGE2V USING 'E' '022' VALUE FUNCNAME.
+    EXIT.
+  ENDIF.
+  VALUE = <VALUE>.
+
+ENDFORM.                    " CONVERT_NUMCVALUE
+
+FORM GET_RECORDLENGTH USING DELIMITER TYPE CHAR1
+                   CHANGING LENGTH TYPE INT4.
+
+  DATA:
+    COLDELIMITERLENGTH TYPE INT4,
+    ROWDELIMITERLENGTH TYPE INT4.
+
+  COLDELIMITERLENGTH = STRLEN( C_COLDELIMITER ).
+  ROWDELIMITERLENGTH = STRLEN( C_ROWDELIMITER ).
+* Iterate all output fields and add lengths.
+  CLEAR LENGTH.
+  LOOP AT T_OUTPUTFIELD.
+    ADD T_OUTPUTFIELD-OUTPUTLEN TO LENGTH.
+    IF NOT DELIMITER IS INITIAL.
+      ADD COLDELIMITERLENGTH TO LENGTH.
+    ENDIF.
+  ENDLOOP.
+*Subtract last column delimiter length because it doesn't get populated.
+  IF NOT DELIMITER IS INITIAL.
+    SUBTRACT COLDELIMITERLENGTH FROM LENGTH.
+    ADD ROWDELIMITERLENGTH TO LENGTH.
+  ENDIF.
+
+ENDFORM.                    " GET_RECORDLENGTH
+
+FORM EXTRACT_DATA TABLES T_DATA              STRUCTURE CHAR8000
+                         T_P_PK_WHERE_CLAUSE STRUCTURE ZXTRACTRANGE
+                         T_OPTIONS           STRUCTURE RFC_DB_OPT
+                         T_JOINS             STRUCTURE
+   ZXTRACTTABLEJOINDEF
+                         T_CODE TYPE ty_t_code
+                   USING BUFFERSIZE TYPE INT4
+                         DELIMITER TYPE c
+                         ROWCOUNT TYPE INT4
+                         ROWSKIP TYPE INT4
+                CHANGING EXTRACTROWCOUNT TYPE INT4.
+
+* PK WHERE CLAUSE variables.
+  DATA:
+    PK_WHERE_STRING     TYPE STRING,
+    PK_FIELD_COUNT      TYPE INT4,
+    T_PK_WHERE_CLAUSE   TYPE STANDARD TABLE OF ZXTRACTRANGE
+                                 WITH HEADER LINE,
+    T_PK_WHERE_TAB      TYPE STANDARD TABLE OF CHAR72
+                                 WITH HEADER LINE,
+    T_PK_FIELD_LIST     TYPE STANDARD TABLE OF STRING,
+    PKWHERECLAUSEBACKUP TYPE STANDARD TABLE OF ZXTRACTRANGE.
+* Extract control variables.
+  DATA:
+    DELIMITERVALUE         TYPE STRING,
+    INTBATCHNBR(10)        TYPE N,
+    MOREDATA               TYPE C,
+    CURRENT_GT_POS         TYPE INT4,
+    MAXBUFFERSIZE          TYPE INT4,
+    BUFFERREMAINING        TYPE INT4,
+    TOTAL_READROWCOUNT     TYPE INT4,
+    BATCH_READROWCOUNT     TYPE INT4,
+    TOTAL_EXTRACTROWCOUNT  TYPE INT4,
+    BATCH_EXTRACTROWCOUNT  TYPE INT4,
+    EXTRACTROWSREMAINING   TYPE INT4,
+    OUTPUTROWCOUNT         TYPE INT4,
+    OUTPUTOFFSET           TYPE INT4,
+    ROWSKIPVALUE           TYPE INT4,
+    APPENDPENDING(1)       TYPE C.
+* Code generation variables.
+  DATA:
+    PROG(30)     TYPE C,
+    LINE         TYPE INT4,
+    POS          TYPE INT4,
+    WORD(100)    TYPE C,
+    MESSAGE(200) TYPE C.
+
+* Initialize data table.
+  CLEAR:
+    T_DATA.
+  REFRESH:
+    T_DATA.
+* Intialize control variables.
+  ROWSKIPVALUE          = ROWSKIP.
+  MAXBUFFERSIZE         = BUFFERSIZE.
+  BUFFERREMAINING       = MAXBUFFERSIZE.
+  CURRENT_GT_POS        = 0.
+  TOTAL_READROWCOUNT    = 0.
+  BATCH_READROWCOUNT    = 0.
+  TOTAL_EXTRACTROWCOUNT = 0.
+  BATCH_EXTRACTROWCOUNT = 0.
+* Use internal table for PH handling.
+  T_PK_WHERE_CLAUSE[] = T_P_PK_WHERE_CLAUSE[].
+* Check PK WHERE CLAUSE.
+  PERFORM CHECK_PKWHERECLAUSE TABLES T_PK_WHERE_CLAUSE
+                                     T_PK_WHERE_TAB
+                                     T_PK_FIELD_LIST
+                            CHANGING PK_WHERE_STRING
+                                     PK_FIELD_COUNT
+                                     CURRENT_GT_POS.
+  CHECK ERROR IS INITIAL.
+* Backup initial PK WHERE CLAUSE.
+  PKWHERECLAUSEBACKUP[] = T_PK_WHERE_CLAUSE[].
+* Flag is cleared by the dynamically created query code.
+  MOREDATA = 'X'.
+* Set delimiter value.
+  IF NOT DELIMITER IS INITIAL.
+    DELIMITERVALUE = C_COLDELIMITER.
+  ENDIF.
+* Create dynamic query code.
+  PERFORM GENERATE_READANDCONVERT TABLES T_PK_FIELD_LIST
+                                         T_CODE
+                                         T_OPTIONS
+                                         T_JOINS
+                                   USING DELIMITERVALUE
+                                         ROWSKIPVALUE.
+  CHECK ERROR IS INITIAL.
+* Generate subroutine pool with dynamic created query code.
+  CATCH SYSTEM-EXCEPTIONS GENERATE_SUBPOOL_DIR_FULL = 10.
+    GENERATE SUBROUTINE POOL T_CODE NAME PROG
+      MESSAGE MESSAGE
+      WORD WORD
+      LINE LINE
+      OFFSET POS.
+    IF SY-SUBRC GT 0.
+      PERFORM CREATE_MESSAGE2V USING 'E' 'MSG' '052' MESSAGE.
+      EXIT.
+    ENDIF.
+  ENDCATCH.
+* Handle runtime errors.
+  IF SY-SUBRC EQ 10.
+    PERFORM CREATE_MESSAGE USING 'E' '010'.
+    EXIT.
+  ENDIF.
+  EXTRACTROWSREMAINING = ROWCOUNT.
+  CATCH SYSTEM-EXCEPTIONS OTHERS = 10.
+*   Looping until all selected data has been extracted. Select one
+*   batch of data.
+    WHILE MOREDATA EQ 'X'.
+      ADD 1 TO INTBATCHNBR.
+      CLEAR BATCH_READROWCOUNT.
+      CLEAR BATCH_EXTRACTROWCOUNT.
+*     As long as there are more rows to be extracted than fit in a
+*     read buffer, set BUFFERREMAINING to MAXBUFFERSIZE, otherwise
+*     only extract as many rows as required to extract.
+      IF MAXBUFFERSIZE LT EXTRACTROWSREMAINING.
+        BUFFERREMAINING = MAXBUFFERSIZE.
+      ELSE.
+        BUFFERREMAINING = EXTRACTROWSREMAINING.
+      ENDIF.
+*     Start extraction loop.
+      WHILE BUFFERREMAINING GT 0 AND NOT MOREDATA IS INITIAL.
+*       Execute dynmaic created query code.
+        PERFORM READANDCONVERT IN PROGRAM (PROG)
+                  TABLES
+                      T_PK_WHERE_CLAUSE
+                      T_FIELDPKS
+                      T_PK_WHERE_TAB
+                      T_DATA
+                   USING
+                      PK_FIELD_COUNT
+                      PK_WHERE_STRING
+                      ROWSKIPVALUE
+                   CHANGING
+                      BATCH_READROWCOUNT
+                      BATCH_EXTRACTROWCOUNT
+                      BUFFERREMAINING
+                      EXTRACTROWSREMAINING
+                      INTBATCHNBR
+                      MOREDATA
+                      CURRENT_GT_POS
+                      OUTPUTOFFSET
+                      OUTPUTROWCOUNT
+                      APPENDPENDING.
+        IF ERROR EQ 'X'.
+          RETURN.
+        ENDIF.
+        CLEAR PK_WHERE_STRING.
+*       Adjust extractrowsremaining for rowskip.
+        EXTRACTROWSREMAINING = EXTRACTROWSREMAINING - ROWSKIPVALUE.
+*       Only skip for first batch, therefore clear variable.
+        CLEAR ROWSKIPVALUE.
+*       If nothing was found for a query, restore the initial
+*       PK WHERE CLAUSE table.
+        IF MOREDATA IS INITIAL AND BATCH_READROWCOUNT EQ 0 AND
+                                   TOTAL_READROWCOUNT EQ 0.
+          T_PK_WHERE_CLAUSE[] = PKWHERECLAUSEBACKUP[].
+        ENDIF.
+*       Create next PK WHERE CLAUSE (or itab on older systems).
+        PERFORM CREATE_PKWHERECLAUSESTRING TABLES T_PK_WHERE_CLAUSE
+                                                  T_PK_WHERE_TAB
+                                         CHANGING PK_WHERE_STRING.
+        IF ERROR EQ 'X'.
+          RETURN.
+        ENDIF.
+      ENDWHILE.
+*     Update control variables.
+      ADD BATCH_READROWCOUNT    TO TOTAL_READROWCOUNT.
+      ADD BATCH_EXTRACTROWCOUNT TO TOTAL_EXTRACTROWCOUNT.
+      CLEAR OUTPUTROWCOUNT.
+      COMMIT WORK.
+*     If we are done, stop further processing.
+      IF TOTAL_EXTRACTROWCOUNT GE ROWCOUNT.
+        CLEAR MOREDATA.
+      ENDIF.
+    ENDWHILE.
+*   Set pk where clause parameter to latest PK WHERE CLAUSE.
+    T_P_PK_WHERE_CLAUSE[] = T_PK_WHERE_CLAUSE[].
+  ENDCATCH.
+* Handle runtime errors.
+  IF SY-SUBRC EQ 10.
+    PERFORM CREATE_MESSAGE USING 'E' '010'.
+    EXIT.
+  ENDIF.
+* Return number of extracted records.
+  EXTRACTROWCOUNT = TOTAL_READROWCOUNT.
+
+ENDFORM.                    " EXTRACT_DATA
+
+FORM EXTRACT_DATA_NONPCK TABLES T_DATA    STRUCTURE CHAR8000
+                                T_OPTIONS STRUCTURE RFC_DB_OPT
+                                T_HAVING  STRUCTURE RFC_DB_OPT
+                                T_JOINS   STRUCTURE ZXTRACTTABLEJOINDEF
+                                T_CODE TYPE ty_t_code
+                          USING DELIMITER TYPE c
+                       CHANGING RECCOUNT TYPE INT4.
+
+* Extract control variables.
+  DATA:
+    DELIMITERVALUE TYPE STRING.
+* Code generation variables.
+  DATA:
+    PROG(30)       TYPE C,
+    LINE           TYPE INT4,
+    POS            TYPE INT4,
+    WORD(100)      TYPE C,
+    MESSAGE(200)   TYPE C.
+
+* Initialize data table.
+  CLEAR   T_DATA.
+  REFRESH T_DATA.
+* Set delimiter value.
+  IF NOT DELIMITER IS INITIAL.
+    DELIMITERVALUE = C_COLDELIMITER.
+  ENDIF.
+* Create dynamic query code.
+  PERFORM GENERATE_READANDCONVERT_NONPCK TABLES T_CODE
+                                                T_OPTIONS
+                                                T_HAVING
+                                                T_JOINS
+                                          USING DELIMITERVALUE.
+  CHECK ERROR IS INITIAL.
+* Generate subroutine pool with dynamic created query code.
+  CATCH SYSTEM-EXCEPTIONS GENERATE_SUBPOOL_DIR_FULL = 10.
+    GENERATE SUBROUTINE POOL T_CODE NAME PROG
+                                 MESSAGE MESSAGE
+                                    WORD WORD
+                                    LINE LINE
+                                  OFFSET POS.
+    IF SY-SUBRC GT 0.
+      PERFORM CREATE_MESSAGE2V USING 'E' 'MSG' '052' MESSAGE.
+      EXIT.
+    ENDIF.
+  ENDCATCH.
+* Handle runtime errors.
+  IF SY-SUBRC EQ 10.
+    PERFORM CREATE_MESSAGE USING 'E' '010'.
+    EXIT.
+  ENDIF.
+*  Execute dynmaic created query code.
+  CATCH SYSTEM-EXCEPTIONS OTHERS = 10.
+    PERFORM READANDCONVERTAGGRE IN PROGRAM (PROG) TABLES T_DATA
+                                                CHANGING RECCOUNT.
+    IF ERROR EQ 'X'.
+      RETURN.
+    ENDIF.
+  ENDCATCH.
+* Handle runtime errors.
+  IF SY-SUBRC EQ 10.
+    PERFORM CREATE_MESSAGE USING 'E' '010'.
+    EXIT.
+  ENDIF.
+
+ENDFORM.                    " EXTRACT_DATA_NONPCK
+
+FORM GENERATE_READANDCONVERT TABLES T_PK_FIELD_LIST TYPE STRING_TABLE
+                                    T_CODE TYPE ty_t_code
+                                    T_OPTIONS STRUCTURE RFC_DB_OPT
+                                    T_JOINS STRUCTURE ZXTRACTTABLEJOINDEF
+                              USING DELIMITERVALUE TYPE STRING
+                                    ROWSKIP TYPE INT4.
+
+  DATA:
+    T_SELECTFIELDLIST LIKE STANDARD TABLE OF T_OUTPUTFIELD
+                      WITH HEADER LINE,
+    T_OUTPUTFIELDLIST LIKE STANDARD TABLE OF T_OUTPUTFIELD
+                      WITH HEADER LINE.
+
+* The output structure contains only the fields specified by the user.
+  T_OUTPUTFIELDLIST[] = T_OUTPUTFIELD[].
+* The packaging logic requires all key fields to be present.
+  T_SELECTFIELDLIST[] = T_OUTPUTFIELD[].
+  LOOP AT T_FIELDPKS.
+    READ TABLE T_SELECTFIELDLIST WITH
+                                  KEY TABNAME   = T_FIELDPKS-TABNAME
+                                      FIELDNAME = T_FIELDPKS-FIELDNAME.
+    IF SY-SUBRC > 0.
+      CLEAR T_SELECTFIELDLIST.
+      T_SELECTFIELDLIST-TABNAME   = T_FIELDPKS-TABNAME.
+      T_SELECTFIELDLIST-FIELDNAME = T_FIELDPKS-FIELDNAME.
+      T_SELECTFIELDLIST-ALIASNAME = T_FIELDPKS-ALIASNAME.
+      APPEND T_SELECTFIELDLIST.
+    ENDIF.
+  ENDLOOP.
+* Generate header with structure definitions.
+  PERFORM GENERATE_HEADER  TABLES T_SELECTFIELDLIST
+                                  T_OUTPUTFIELDLIST
+                                  T_CODE
+                            USING DELIMITERVALUE
+                                  ROWSKIP.
+  CHECK ERROR IS INITIAL.
+* Generate SELECT statement.
+  PERFORM GENERATE_SELECT  TABLES T_SELECTFIELDLIST
+                                  T_PK_FIELD_LIST
+                                  T_CODE
+                                  T_OPTIONS
+                                  T_JOINS.
+  CHECK ERROR IS INITIAL.
+* Generate data conversion code.
+  PERFORM GENERATE_CONVERT TABLES T_CODE
+                            USING DELIMITERVALUE
+                                  ROWSKIP.
+  CHECK ERROR IS INITIAL.
+* Generate PK update code. For transparent tables and views use
+* IS NOT NULL on PK fields.
+  IF BASETABCLASS EQ 'TRANSP' OR BASETABCLASS EQ 'VIEW'.
+    PERFORM GENERATE_UPDATEPK        TABLES T_CODE.
+  ELSE.
+    PERFORM GENERATE_UPDATEPKCLUSTER TABLES T_CODE.
+  ENDIF.
+
+ENDFORM.                    " GENERATE_READANDCONVERT
+
+FORM GENERATE_READANDCONVERT_NONPCK TABLES T_CODE TYPE ty_t_code
+                                           T_OPTIONS STRUCTURE RFC_DB_OPT
+                                           T_HAVING STRUCTURE RFC_DB_OPT
+                                           T_JOINS STRUCTURE ZXTRACTTABLEJOINDEF
+                                     USING DELIMITERVALUE TYPE ANY.
+* DELIMITERVALUE: TYPE STRING, TYPE c
+
+
+* Generate header with structure definitions.
+  PERFORM GENERATE_HEADER_NONPCK TABLES T_CODE
+                                  USING DELIMITERVALUE.
+  CHECK ERROR IS INITIAL.
+* Generate SELECT statement.
+  PERFORM GENERATE_SELECT_NONPCK TABLES T_CODE
+                                        T_OPTIONS
+                                        T_HAVING
+                                        T_JOINS.
+  CHECK ERROR IS INITIAL.
+* Generate data conversion code.
+  PERFORM GENERATE_CONVERT_NONPCK TABLES T_CODE
+                                   USING DELIMITERVALUE.
+  CHECK ERROR IS INITIAL.
+
+ENDFORM.                    " GENERATE_READANDCONVERT_NONPCK
+
+FORM GENERATE_HEADER TABLES T_SELECTFIELDLIST
+                              STRUCTURE T_OUTPUTFIELD
+                            T_OUTPUTFIELDLIST
+                              STRUCTURE T_OUTPUTFIELD
+                            T_CODE TYPE ty_t_code
+                      USING DELIMITERVALUE TYPE STRING
+                            ROWSKIP TYPE INT4.
+
+  DATA:
+    TEXTBLOCK1            TYPE STRING,
+    TEXTBLOCK2            TYPE STRING,
+    CODELINE              TYPE STRING,
+    CHARINT(11)           TYPE C,
+    CHARINT2(6)           TYPE C,
+    CHARFLOAT(28)         TYPE C,
+    FIELDCOUNT            TYPE INT4,
+    FIELDINDEX            TYPE INT4,
+    DELIMITERINDEX(4)     TYPE N,
+    DELIMITERLENGTH(1)    TYPE N,
+    ROWDELIMITERLENGTH(1) TYPE N.
+
+  DELIMITERINDEX     = 1.
+  DELIMITERLENGTH    = STRLEN( DELIMITERVALUE ).
+  ROWDELIMITERLENGTH = STRLEN( C_ROWDELIMITER ).
+
+  APPEND 'PROGRAM extract.' TO T_CODE.
+* write form interface
+  APPEND 'FORM READANDCONVERT' TO T_CODE.
+  APPEND '     TABLES' TO T_CODE.
+  APPEND '       t_pk_where_clause structure ZXTRACTRANGE' TO
+T_CODE.
+  APPEND '       T_FIELDDEF structure ZXTRACTTABLEFIELDS' TO T_CODE.
+  APPEND '       t_pk_where_tab' TO T_CODE.
+  APPEND '       t_data structure CHAR8000' TO T_CODE.
+  APPEND '     USING' TO T_CODE.
+  APPEND '       pk_field_count type int4' TO T_CODE.
+  APPEND '       pk_where_string type string' TO T_CODE.
+  APPEND '       ROWSKIP type int4' TO T_CODE.
+  APPEND '     CHANGING' TO T_CODE.
+  APPEND '       batch_readrowcount type int4' TO T_CODE.
+  APPEND '       batch_extractrowcount type int4' TO T_CODE.
+  APPEND '       bufferremaining type int4' TO T_CODE.
+  APPEND '       extractrowsremaining type int4' TO T_CODE.
+  APPEND '       intbatchnbr' TO T_CODE.
+  APPEND '       moredata type c' TO T_CODE.
+  APPEND '       current_gt_pos type int4' TO T_CODE.
+  APPEND '       outputoffset TYPE int4' TO T_CODE.
+  APPEND '       outputrowcount type int4' TO T_CODE.
+  APPEND '       appendpending type char1.' TO T_CODE.
+* Get constant values from global constants rather than retyping them
+* here. Some of them may change from version.
+* +INT4
+  WRITE C_MAX_INT TO CHARINT.
+  CONCATENATE 'CONSTANTS c_max_int TYPE int4 VALUE' CHARINT '.'
+         INTO CODELINE SEPARATED BY SPACE.
+  APPEND CODELINE TO T_CODE.
+* -INT4
+  CHARINT = C_MAX_INT_NEG.
+  SHIFT CHARINT RIGHT DELETING TRAILING SPACE.
+  SHIFT CHARINT RIGHT CIRCULAR.
+  CONDENSE CHARINT NO-GAPS.
+  CONCATENATE 'CONSTANTS c_max_int_neg TYPE int4 VALUE' CHARINT '.'
+         INTO CODELINE SEPARATED BY SPACE.
+  APPEND CODELINE TO T_CODE.
+* -INT2
+  CHARINT2 = C_MAX_INT2_NEG.
+  SHIFT CHARINT2 RIGHT DELETING TRAILING SPACE.
+  SHIFT CHARINT2 RIGHT CIRCULAR.
+  CONDENSE CHARINT2 NO-GAPS.
+  CONCATENATE 'CONSTANTS c_max_int2_neg TYPE int4 VALUE' CHARINT2 '.'
+         INTO CODELINE SEPARATED BY SPACE.
+  APPEND CODELINE TO T_CODE.
+* -FLOAT
+  CHARFLOAT = C_MAX_FLOAT_NEG.
+  SHIFT CHARFLOAT LEFT DELETING LEADING SPACE.
+  CONCATENATE 'CONSTANTS c_max_float_neg TYPE float VALUE' ' '''
+              CHARFLOAT '''' '.'
+         INTO CODELINE.
+  APPEND CODELINE TO T_CODE.
+  APPEND 'DATA hexnull LIKE ZXTRACTRANGE-low.' TO T_CODE.
+  APPEND 'CONCATENATE' TO T_CODE.
+  APPEND '  ''0000000000000000000000000''' TO T_CODE.
+  APPEND '  ''0000000000000000000000000''' TO T_CODE.
+  APPEND '  ''0000000000000000000000000''' TO T_CODE.
+  APPEND '  ''0000000000000000000000000''' TO T_CODE.
+  APPEND '  INTO hexnull.' TO T_CODE.
+  APPEND 'DATA decimalpoint type c.' TO T_CODE.
+  APPEND 'DATA queryrowcount TYPE int4.' TO T_CODE.
+  APPEND 'DATA lastrowindex LIKE sy-tabix.' TO T_CODE.
+  APPEND 'DATA pkwhereindex LIKE sy-tabix.' TO T_CODE.
+  APPEND 'DATA digitcount type I.' TO T_CODE.
+  IF ROWSKIP > 0.
+    APPEND 'DATA startrowindex LIKE sy-tabix.' TO T_CODE.
+  ENDIF.
+  APPEND 'DATA maxoutputlength TYPE int4.' TO T_CODE.
+  APPEND 'DATA totalinputlength TYPE int4.' TO T_CODE.
+  APPEND 'DATA inputlengthremaining TYPE int4.' TO T_CODE.
+  APPEND 'DATA outputlengthremaining TYPE int4.' TO T_CODE.
+  APPEND 'DATA transferlength TYPE int4.' TO T_CODE.
+  APPEND 'DATA inputoffset TYPE int4.' TO T_CODE.
+  APPEND 'DATA sapdataindex  TYPE int4.' TO T_CODE.
+  APPEND 'DATA transfercomplete(1) TYPE c.' TO T_CODE.
+* For views create a variable to hold the ORDER BY fields.
+  IF BASETABCLASS EQ 'VIEW' OR JOINED EQ 'X'.
+    APPEND 'DATA:' TO T_CODE.
+    APPEND '  begin of t_orderby occurs 0,' TO T_CODE.
+    APPEND '    fieldname(72) type c,' TO T_CODE.
+    APPEND '  end of t_orderby.' TO T_CODE.
+  ENDIF.
+  APPEND 'decimalpoint = ''.''.' TO T_CODE.
+  APPEND 'FIELD-SYMBOLS <fld> TYPE ANY.' TO T_CODE.
+  APPEND '* Structure for query result (SAP types)' TO T_CODE.
+  APPEND 'DATA:' TO T_CODE.
+  APPEND 'BEGIN OF t_sapstruct OCCURS 0,' TO T_CODE.
+  LOOP AT T_SELECTFIELDLIST.
+    READ TABLE T_FIELDDEF
+      WITH KEY   TABNAME = T_SELECTFIELDLIST-TABNAME
+               FIELDNAME = T_SELECTFIELDLIST-FIELDNAME.
+    IF SY-SUBRC NE 0.
+*       Check for alias table name.
+        READ TABLE T_JOINTABLE
+          WITH KEY ALIASNAME = T_SELECTFIELDLIST-TABNAME.
+        IF SY-SUBRC EQ 0.
+          READ TABLE T_FIELDDEF
+            WITH KEY TABNAME   = T_JOINTABLE-TABNAME
+                     FIELDNAME = T_SELECTFIELDLIST-FIELDNAME.
+          IF SY-SUBRC NE 0.
+            PERFORM CREATE_MESSAGE2V USING 'E' '003'
+                                           T_SELECTFIELDLIST-TABNAME
+                                           T_SELECTFIELDLIST-FIELDNAME.
+            RETURN.
+          ENDIF.
+        ELSE.
+          PERFORM CREATE_MESSAGE2V USING 'E' '003'
+                                         T_SELECTFIELDLIST-TABNAME
+                                         T_SELECTFIELDLIST-FIELDNAME.
+          RETURN.
+        ENDIF.
+    ENDIF.
+    IF NOT T_FIELDDEF-ROLLNAME IS INITIAL.
+      IF T_SELECTFIELDLIST-ALIASNAME IS NOT INITIAL.
+        CONCATENATE T_SELECTFIELDLIST-ALIASNAME 'TYPE'
+                    T_FIELDDEF-ROLLNAME ','
+               INTO CODELINE SEPARATED BY SPACE.
+      ELSE.
+        CONCATENATE T_SELECTFIELDLIST-FIELDNAME 'TYPE'
+                    T_FIELDDEF-ROLLNAME ','
+               INTO CODELINE SEPARATED BY SPACE.
+      ENDIF.
+    ELSE.
+*     TODO: Add check (once) for variable length fields in table here
+*     and fail if any are present.
+      IF T_SELECTFIELDLIST-ALIASNAME IS NOT INITIAL.
+        CONCATENATE T_SELECTFIELDLIST-ALIASNAME ' LIKE'
+               INTO TEXTBLOCK1.
+      ELSE.
+        CONCATENATE T_SELECTFIELDLIST-FIELDNAME ' LIKE'
+               INTO TEXTBLOCK1.
+      ENDIF.
+      CONCATENATE T_SELECTFIELDLIST-TABNAME '-'
+                  T_SELECTFIELDLIST-FIELDNAME ','
+             INTO TEXTBLOCK2.
+      CONCATENATE TEXTBLOCK1 TEXTBLOCK2
+             INTO CODELINE SEPARATED BY SPACE.
+    ENDIF.
+    APPEND CODELINE TO T_CODE.
+  ENDLOOP.
+  APPEND 'END OF t_sapstruct.' TO T_CODE.
+* Generate output structure.
+  APPEND '* Output structure for converted data (char types)' TO T_CODE.
+  APPEND 'DATA:' TO T_CODE.
+  APPEND 'BEGIN OF outstruct,' TO T_CODE.
+  DESCRIBE TABLE T_OUTPUTFIELDLIST LINES FIELDCOUNT.
+  CLEAR FIELDINDEX.
+  LOOP AT T_OUTPUTFIELDLIST.
+    ADD 1 TO FIELDINDEX.
+    READ TABLE T_FIELDDEF WITH KEY TABNAME   = T_OUTPUTFIELDLIST-TABNAME
+                                FIELDNAME = T_OUTPUTFIELDLIST-FIELDNAME.
+    IF SY-SUBRC NE 0.
+*       Check for alias table name.
+        READ TABLE T_JOINTABLE
+          WITH KEY ALIASNAME = T_OUTPUTFIELDLIST-TABNAME.
+        IF SY-SUBRC EQ 0.
+          READ TABLE T_FIELDDEF
+            WITH KEY TABNAME   = T_JOINTABLE-TABNAME
+                     FIELDNAME = T_OUTPUTFIELDLIST-FIELDNAME.
+          IF SY-SUBRC NE 0.
+            PERFORM CREATE_MESSAGE2V USING 'E' '003'
+                                           T_OUTPUTFIELDLIST-TABNAME
+                                           T_OUTPUTFIELDLIST-FIELDNAME.
+            RETURN.
+          ENDIF.
+        ELSE.
+          PERFORM CREATE_MESSAGE2V USING 'E' '003'
+                                         T_OUTPUTFIELDLIST-TABNAME
+                                         T_OUTPUTFIELDLIST-FIELDNAME.
+          RETURN.
+        ENDIF.
+    ENDIF.
+    IF T_OUTPUTFIELDLIST-ALIASNAME IS NOT INITIAL.
+      CONCATENATE T_OUTPUTFIELDLIST-ALIASNAME '('
+                  T_FIELDDEF-OUTPUTLEN ') type c,'
+             INTO CODELINE.
+    ELSE.
+      CONCATENATE T_OUTPUTFIELDLIST-FIELDNAME '('
+                  T_FIELDDEF-OUTPUTLEN ') type c,'
+             INTO CODELINE.
+    ENDIF.
+    APPEND CODELINE TO T_CODE.
+    IF DELIMITERLENGTH GT 0.
+*     Do not add delimiter after the last field.
+      IF FIELDINDEX LT FIELDCOUNT.
+        CONCATENATE 'delim' DELIMITERINDEX '(' DELIMITERLENGTH
+                    ') type c value ''' DELIMITERVALUE ''','
+               INTO CODELINE.
+        APPEND CODELINE TO T_CODE.
+        ADD 1 TO DELIMITERINDEX.
+      ELSEIF FIELDINDEX EQ FIELDCOUNT.
+*       Add row delimiter at the end of the row.
+        CONCATENATE 'EOL(' ROWDELIMITERLENGTH
+                    ') type c value ''' C_ROWDELIMITER ''','
+               INTO CODELINE.
+        APPEND CODELINE TO T_CODE.
+      ENDIF.
+    ELSEIF DELIMITERLENGTH EQ 0 AND FIELDINDEX EQ FIELDCOUNT.
+      APPEND 'EOL(1) type c value ''.'',' TO T_CODE.
+    ENDIF.
+  ENDLOOP.
+  APPEND 'end of outstruct.' TO T_CODE.
+  APPEND 'DATA fieldoralias like DD03L-FIELDNAME.' TO T_CODE.
+
+ENDFORM.                    " GENERATE_HEADER
+
+FORM GENERATE_HEADER_NONPCK TABLES T_CODE
+                             USING DELIMITERVALUE TYPE STRING.
+
+  DATA:
+    TEXTBLOCK1            TYPE STRING,
+    TEXTBLOCK2            TYPE STRING,
+    CODELINE              TYPE STRING,
+    CHARINT(11)           TYPE C,
+    CHARINT2(6)           TYPE C,
+    CHARFLOAT(28)         TYPE C,
+    FIELDCOUNT            TYPE INT4,
+    FIELDINDEX            TYPE INT4,
+    DELIMITERINDEX(4)     TYPE N,
+    DELIMITERLENGTH(1)    TYPE N,
+    ROWDELIMITERLENGTH(1) TYPE N.
+
+  DELIMITERINDEX     = 1.
+  DELIMITERLENGTH    = STRLEN( DELIMITERVALUE ).
+  ROWDELIMITERLENGTH = STRLEN( C_ROWDELIMITER ).
+
+  APPEND 'PROGRAM extractaggre.' TO T_CODE.
+* Write FORM interface.
+  APPEND 'FORM READANDCONVERTAGGRE' TO T_CODE.
+  APPEND '     TABLES' TO T_CODE.
+  APPEND '       T_DATA STRUCTURE CHAR8000' TO T_CODE.
+  APPEND '     CHANGING' TO T_CODE.
+  APPEND '       RECCOUNT TYPE INT4.' TO T_CODE.
+  APPEND 'DATA queryrowcount TYPE int4.' TO T_CODE.
+  APPEND 'DATA maxoutputlength TYPE int4 VALUE ''8000''.' TO T_CODE.
+  APPEND 'DATA totalinputlength TYPE int4.' TO T_CODE.
+  APPEND 'DATA inputlengthremaining TYPE int4.' TO T_CODE.
+  APPEND 'DATA outputlengthremaining TYPE int4.' TO T_CODE.
+  APPEND 'DATA inputoffset TYPE int4.' TO T_CODE.
+  APPEND 'DATA outputoffset TYPE int4.' TO T_CODE.
+  APPEND 'DATA sapdataindex  TYPE int4.' TO T_CODE.
+  APPEND 'DATA appendpending TYPE c.' TO T_CODE.
+  APPEND 'DATA transferlength TYPE int4.' TO T_CODE.
+  APPEND 'DATA transfercomplete TYPE c.' TO T_CODE.
+  APPEND '* Structure for query result (SAP types)' TO T_CODE.
+  APPEND 'DATA:' TO T_CODE.
+  APPEND 'BEGIN OF t_sapstruct OCCURS 0,' TO T_CODE.
+  LOOP AT T_OUTPUTFIELD.
+    IF T_OUTPUTFIELD-AGGREFUNC IS NOT INITIAL.
+      CASE T_OUTPUTFIELD-AGGREFUNC.
+        WHEN 'COUNT' OR 'COUNTDISTINCT'.
+          CONCATENATE T_OUTPUTFIELD-ALIASNAME 'TYPE INT4,'
+                 INTO CODELINE SEPARATED BY SPACE.
+          APPEND CODELINE TO T_CODE.
+          CONTINUE.
+        WHEN 'AVG' OR 'AVGDISTINCT'.
+          CONCATENATE T_OUTPUTFIELD-ALIASNAME 'TYPE F,'
+                 INTO CODELINE SEPARATED BY SPACE.
+          APPEND CODELINE TO T_CODE.
+          CONTINUE.
+      ENDCASE.
+    ENDIF.
+    IF T_OUTPUTFIELD-ROLLNAME IS NOT INITIAL.
+      IF T_OUTPUTFIELD-ALIASNAME IS NOT INITIAL.
+        CONCATENATE T_OUTPUTFIELD-ALIASNAME 'TYPE'
+                    T_OUTPUTFIELD-ROLLNAME ','
+               INTO CODELINE SEPARATED BY SPACE.
+      ELSE.
+        CONCATENATE T_OUTPUTFIELD-FIELDNAME 'TYPE'
+                    T_OUTPUTFIELD-ROLLNAME ','
+               INTO CODELINE SEPARATED BY SPACE.
+      ENDIF.
+    ELSE.
+*     TODO: Add check (once) for variable length fields in table here
+*     and fail if any are present.
+      IF T_OUTPUTFIELD-ALIASNAME IS NOT INITIAL.
+        CONCATENATE T_OUTPUTFIELD-ALIASNAME ' LIKE'
+               INTO TEXTBLOCK1.
+      ELSE.
+        CONCATENATE T_OUTPUTFIELD-FIELDNAME ' LIKE'
+               INTO TEXTBLOCK1.
+      ENDIF.
+      CONCATENATE T_OUTPUTFIELD-TABNAME '-'
+                  T_OUTPUTFIELD-FIELDNAME ','
+             INTO TEXTBLOCK2.
+      CONCATENATE TEXTBLOCK1 TEXTBLOCK2
+             INTO CODELINE SEPARATED BY SPACE.
+    ENDIF.
+    APPEND CODELINE TO T_CODE.
+  ENDLOOP.
+  APPEND 'END OF t_sapstruct.' TO T_CODE.
+* Generate output structure.
+  APPEND '* Output structure for converted data (char types)' TO T_CODE.
+  APPEND 'DATA:' TO T_CODE.
+  APPEND 'BEGIN OF outstruct,' TO T_CODE.
+  DESCRIBE TABLE T_OUTPUTFIELD LINES FIELDCOUNT.
+  CLEAR FIELDINDEX.
+  LOOP AT T_OUTPUTFIELD.
+    ADD 1 TO FIELDINDEX.
+    IF T_OUTPUTFIELD-ALIASNAME IS NOT INITIAL.
+      CONCATENATE T_OUTPUTFIELD-ALIASNAME '('
+                  T_OUTPUTFIELD-OUTPUTLEN ') type c,'
+             INTO CODELINE.
+    ELSE.
+      CONCATENATE T_OUTPUTFIELD-FIELDNAME '('
+                  T_OUTPUTFIELD-OUTPUTLEN ') type c,'
+             INTO CODELINE.
+    ENDIF.
+    APPEND CODELINE TO T_CODE.
+    IF DELIMITERLENGTH GT 0.
+*     Do not add delimiter after the last field.
+      IF FIELDINDEX LT FIELDCOUNT.
+        CONCATENATE 'delim' DELIMITERINDEX '(' DELIMITERLENGTH
+                    ') type c value ''' DELIMITERVALUE ''','
+               INTO CODELINE.
+        APPEND CODELINE TO T_CODE.
+        ADD 1 TO DELIMITERINDEX.
+      ELSEIF FIELDINDEX EQ FIELDCOUNT.
+*       Add row delimiter at the end of the row.
+        CONCATENATE 'EOL(' ROWDELIMITERLENGTH
+                    ') type c value ''' C_ROWDELIMITER ''','
+               INTO CODELINE.
+        APPEND CODELINE TO T_CODE.
+      ENDIF.
+    ELSEIF DELIMITERLENGTH EQ 0 AND FIELDINDEX EQ FIELDCOUNT.
+      APPEND 'EOL(1) type c value ''.'',' TO T_CODE.
+    ENDIF.
+  ENDLOOP.
+  APPEND 'end of outstruct.' TO T_CODE.
+
+ENDFORM.                    " GENERATE_HEADER_NONPCK
+
+FORM GENERATE_SELECT TABLES T_SELECTFIELDLIST
+                              STRUCTURE T_OUTPUTFIELD
+                            T_PK_FIELD_LIST
+                            T_CODE TYPE ty_t_code
+                            T_OPTIONS
+                            T_JOINS STRUCTURE ZXTRACTTABLEJOINDEF.
+
+  DATA:
+    TEXTBLOCK1   TYPE STRING,
+    TEXTBLOCK2   TYPE STRING,
+    CODELINE     TYPE STRING,
+    PKFIELDCOUNT TYPE INT4,
+    LINES        TYPE I,
+    JOINADDOP    TYPE C,
+    JOINTABLE    LIKE ZXTRACTTABLEJOINDEF-LTABNAME.
+
+* Generate ORDER BY field list for view in itab to be compatible with
+* version 46C and 47+. ORDER BY f1..fn statement is not allowed for
+* cluster tables!
+  IF BASETABCLASS EQ 'VIEW' OR JOINED EQ 'X'.
+    APPEND 'clear t_orderby.' TO T_CODE.
+    APPEND 'refresh t_orderby.' TO T_CODE.
+    DESCRIBE TABLE T_PK_FIELD_LIST LINES PKFIELDCOUNT.
+    IF PKFIELDCOUNT > 0.
+      LOOP AT T_PK_FIELD_LIST.
+        CONCATENATE 'APPEND' ' ''' T_PK_FIELD_LIST '''' ' TO t_orderby.'
+               INTO CODELINE.
+        APPEND CODELINE TO T_CODE.
+      ENDLOOP.
+    ELSE.
+      LOOP AT T_SELECTFIELDLIST.
+        CONCATENATE T_SELECTFIELDLIST-TABNAME '~'
+                    T_SELECTFIELDLIST-FIELDNAME
+               INTO TEXTBLOCK1.
+        CONCATENATE 'APPEND' ' ''' TEXTBLOCK1      '''' ' TO t_orderby.'
+               INTO CODELINE.
+        APPEND CODELINE TO T_CODE.
+      ENDLOOP.
+    ENDIF.
+  ENDIF.
+* Generate SELECT statement.
+  APPEND '* SELECT statement' TO T_CODE.
+  APPEND 'SELECT' TO T_CODE.
+  LOOP AT T_SELECTFIELDLIST.
+    READ TABLE T_JOINTABLE WITH KEY TABNAME = T_SELECTFIELDLIST-TABNAME.
+    IF SY-SUBRC EQ 0.
+      IF T_JOINTABLE-ALIASNAME IS NOT INITIAL.
+        T_SELECTFIELDLIST-TABNAME = T_JOINTABLE-ALIASNAME.
+      ENDIF.
+    ENDIF.
+    CONCATENATE T_SELECTFIELDLIST-TABNAME '~'
+                T_SELECTFIELDLIST-FIELDNAME
+           INTO TEXTBLOCK1.
+    IF T_SELECTFIELDLIST-ALIASNAME IS NOT INITIAL.
+      CONCATENATE 'AS' T_SELECTFIELDLIST-ALIASNAME
+             INTO TEXTBLOCK2 SEPARATED BY SPACE.
+    ELSE.
+      CLEAR TEXTBLOCK2.
+    ENDIF.
+    CONCATENATE TEXTBLOCK1 TEXTBLOCK2
+           INTO CODELINE SEPARATED BY SPACE.
+    APPEND CODELINE TO T_CODE.
+  ENDLOOP.
+  CONCATENATE 'FROM' BASETABNAME
+         INTO CODELINE SEPARATED BY SPACE.
+  APPEND CODELINE TO T_CODE.
+* Generate JOIN parts.
+  DESCRIBE TABLE T_JOINS LINES LINES.
+  IF LINES GT 0.
+    LOOP AT T_JOINS.
+      IF ( T_JOINS-RALIASNAME IS INITIAL AND
+              JOINTABLE NE T_JOINS-RTABNAME ) OR
+         ( T_JOINS-RALIASNAME IS NOT INITIAL AND
+              JOINTABLE NE T_JOINS-RALIASNAME ).
+        IF T_JOINS-RALIASNAME IS NOT INITIAL.
+          JOINTABLE = T_JOINS-RALIASNAME.
+        ELSE.
+          JOINTABLE = T_JOINS-RTABNAME.
+        ENDIF.
+        JOINADDOP = SPACE.
+        IF T_JOINS-JOINOPERATOR EQ 'I'.
+          IF T_JOINS-RALIASNAME IS NOT INITIAL.
+            CONCATENATE 'INNER JOIN' T_JOINS-RTABNAME 'AS'
+                        T_JOINS-RALIASNAME 'ON'
+                   INTO CODELINE SEPARATED BY SPACE.
+          ELSE.
+            CONCATENATE 'INNER JOIN' T_JOINS-RTABNAME 'ON'
+                   INTO CODELINE SEPARATED BY SPACE.
+          ENDIF.
+          APPEND CODELINE TO T_CODE.
+        ELSEIF T_JOINS-JOINOPERATOR EQ 'O'.
+          IF T_JOINS-RALIASNAME IS NOT INITIAL.
+            CONCATENATE 'LEFT OUTER JOIN' T_JOINS-RTABNAME 'AS'
+                        T_JOINS-RALIASNAME 'ON'
+                   INTO CODELINE SEPARATED BY SPACE.
+          ELSE.
+            CONCATENATE 'LEFT OUTER JOIN' T_JOINS-RTABNAME 'ON'
+                   INTO CODELINE SEPARATED BY SPACE.
+          ENDIF.
+          APPEND CODELINE TO T_CODE.
+        ENDIF.
+      ENDIF.
+      IF JOINADDOP EQ 'X'.
+        APPEND 'AND' TO T_CODE.
+      ENDIF.
+      CONCATENATE T_JOINS-LTABNAME '~' T_JOINS-LFIELDNAME
+             INTO TEXTBLOCK1.
+      IF T_JOINS-RALIASNAME IS NOT INITIAL.
+        CONCATENATE T_JOINS-RALIASNAME '~' T_JOINS-RFIELDNAME
+               INTO TEXTBLOCK2.
+      ELSE.
+        CONCATENATE T_JOINS-RTABNAME   '~' T_JOINS-RFIELDNAME
+               INTO TEXTBLOCK2.
+      ENDIF.
+      CONCATENATE TEXTBLOCK1 T_JOINS-JOINCONDITION TEXTBLOCK2
+             INTO CODELINE SEPARATED BY SPACE.
+      APPEND CODELINE TO T_CODE.
+      JOINADDOP = 'X'.
+    ENDLOOP.
+  ENDIF.
+  APPEND 'BYPASSING BUFFER UP TO bufferremaining ROWS' TO T_CODE.
+  APPEND 'INTO TABLE t_sapstruct' TO T_CODE.
+  APPEND 'WHERE' TO T_CODE.
+* Use where strings for abap version 620 and above
+  IF ABAPVERSION >= '620'.
+    APPEND '(pk_where_string)' TO T_CODE.
+  ELSE.
+    APPEND '(t_pk_where_tab)' TO T_CODE.
+  ENDIF.
+  DESCRIBE TABLE T_OPTIONS LINES LINES.
+* Add OPTIONS lines (user defined WHERE clause).
+  IF LINES > 0.
+    APPEND 'AND (' TO T_CODE.
+    LOOP AT T_OPTIONS.
+      APPEND T_OPTIONS TO T_CODE.
+    ENDLOOP.
+    APPEND ')' TO T_CODE.
+  ENDIF.
+* Use ORDER BY with PK fields for table.
+  IF BASETABCLASS EQ 'VIEW' OR JOINED EQ 'X'.
+    APPEND 'ORDER BY (t_orderby).' TO T_CODE.
+  ELSE.
+    APPEND 'ORDER BY PRIMARY KEY.' TO T_CODE.
+  ENDIF.
+* Generate error handling.
+  APPEND 'queryrowcount = sy-dbcnt.' TO T_CODE.
+  APPEND 'IF SY-SUBRC EQ 0.' TO T_CODE.
+  APPEND 'batch_readrowcount = batch_readrowcount + queryrowcount.'
+    TO T_CODE.
+* If we have to expect duplicates (in a view without keys) delete
+* adjacent duplicates
+* TODO: How to handle in JOIN situations?
+  IF BASETABCLASS EQ 'VIEW' AND PKFIELDCOUNT EQ 0.
+    APPEND 'DELETE ADJACENT DUPLICATES FROM t_sapstruct.' TO T_CODE.
+  ENDIF.
+  APPEND 'ENDIF.' TO T_CODE.
+  APPEND '* if the query returned as many rows as necessary to satisfy'
+    TO T_CODE.
+  APPEND '* the requested rowcount, the extract is complete' TO T_CODE.
+  APPEND 'IF queryrowcount = extractrowsremaining.' TO T_CODE.
+  APPEND 'CLEAR moredata.' TO T_CODE.
+  APPEND 'ENDIF.' TO T_CODE.
+  APPEND '* on the first batch (no PK constraint)' TO T_CODE.
+  APPEND '* if fewer rows than specified were returned the extract'
+    TO T_CODE.
+  APPEND '* is complete' TO T_CODE.
+  APPEND 'IF     intbatchnbr = 1' TO T_CODE.
+  APPEND '   AND current_gt_pos = 0. "pkwhere not provided'
+    TO T_CODE.
+  APPEND 'IF queryrowcount < bufferremaining.' TO T_CODE.
+  APPEND 'CLEAR moredata.' TO T_CODE.
+  APPEND 'ENDIF.' TO T_CODE.
+  APPEND 'ELSE.' TO T_CODE.
+  APPEND '* on subsequent batches, if the PK is not constrained'
+    TO T_CODE.
+  APPEND '* i.e. GT operator on a field other than the first PK'
+    TO T_CODE.
+  APPEND '* field if any and the resultset is smaller than the'
+    TO T_CODE.
+  APPEND '* specified rowcount, the extract is complete' TO T_CODE.
+  APPEND 'IF    (    current_gt_pos = 0' TO T_CODE.
+  APPEND '        OR current_gt_pos = 1 )' TO T_CODE.
+  APPEND '   AND queryrowcount < bufferremaining.' TO T_CODE.
+  APPEND 'CLEAR moredata.' TO T_CODE.
+  APPEND 'ENDIF.' TO T_CODE.
+  APPEND 'ENDIF.' TO T_CODE.
+
+ENDFORM.                    " GENERATE_SELECT
+
+FORM GENERATE_SELECT_NONPCK TABLES T_CODE
+                                   T_OPTIONS
+                                   T_HAVING
+                                   T_JOINS
+                                     STRUCTURE ZXTRACTTABLEJOINDEF.
+
+  DATA:
+    TEXTBLOCK1   TYPE STRING,
+    TEXTBLOCK2   TYPE STRING,
+    CODELINE     TYPE STRING,
+    PKFIELDCOUNT TYPE INT4,
+    LINES        TYPE I,
+    JOINADDOP    TYPE C,
+    JOINTABLE    LIKE ZXTRACTTABLEJOINDEF-LTABNAME.
+
+* Generate SELECT statement.
+  APPEND '* SELECT statement' TO T_CODE.
+  APPEND 'SELECT' TO T_CODE.
+  LOOP AT T_OUTPUTFIELD.
+    CLEAR: TEXTBLOCK1, TEXTBLOCK2.
+    IF T_OUTPUTFIELD-AGGREFUNC IS NOT INITIAL.
+      CASE T_OUTPUTFIELD-AGGREFUNC.
+        WHEN 'COUNT'.
+          TEXTBLOCK1 = 'COUNT( * '.
+        WHEN 'COUNTDISTINCT'.
+          TEXTBLOCK1 = 'COUNT( DISTINCT '.
+        WHEN 'AVG'.
+          TEXTBLOCK1 = 'AVG( '.
+        WHEN 'AVGDISTINCT'.
+          TEXTBLOCK1 = 'AVG( DISTINCT '.
+        WHEN 'MIN'.
+          TEXTBLOCK1 = 'MIN( '.
+        WHEN 'MINDISTINCT'.
+          TEXTBLOCK1 = 'MIN( DISTINCT '.
+        WHEN 'MAX'.
+          TEXTBLOCK1 = 'MAX( '.
+        WHEN 'MAXDISTINCT'.
+          TEXTBLOCK1 = 'MAX( DISTINCT '.
+        WHEN 'SUM'.
+          TEXTBLOCK1 = 'SUM( '.
+        WHEN 'SUMDISTINCT'.
+          TEXTBLOCK1 = 'SUM( DISTINCT '.
+      ENDCASE.
+    ENDIF.
+    IF T_OUTPUTFIELD-TABNAME IS NOT INITIAL.
+      CONCATENATE T_OUTPUTFIELD-TABNAME '~'
+                  T_OUTPUTFIELD-FIELDNAME
+             INTO TEXTBLOCK2.
+    ENDIF.
+    IF T_OUTPUTFIELD-AGGREFUNC IS NOT INITIAL.
+      CONCATENATE TEXTBLOCK2 ')'
+             INTO TEXTBLOCK2 SEPARATED BY SPACE.
+    ENDIF.
+    IF T_OUTPUTFIELD-ALIASNAME IS NOT INITIAL.
+      CONCATENATE TEXTBLOCK2 'AS' T_OUTPUTFIELD-ALIASNAME
+             INTO TEXTBLOCK2 SEPARATED BY SPACE.
+    ENDIF.
+    CONCATENATE TEXTBLOCK1 TEXTBLOCK2
+           INTO CODELINE SEPARATED BY SPACE.
+    SHIFT CODELINE RIGHT DELETING TRAILING SPACE.
+    SHIFT CODELINE LEFT  DELETING LEADING  SPACE.
+    APPEND CODELINE TO T_CODE.
+  ENDLOOP.
+  CONCATENATE 'FROM' BASETABNAME
+         INTO CODELINE SEPARATED BY SPACE.
+  APPEND CODELINE TO T_CODE.
+* Generate JOIN parts.
+  DESCRIBE TABLE T_JOINS LINES LINES.
+  IF LINES GT 0.
+    LOOP AT T_JOINS.
+      IF JOINTABLE NE T_JOINS-RTABNAME OR (
+         T_JOINS-RALIASNAME IS NOT INITIAL AND
+         JOINTABLE NE T_JOINS-RALIASNAME ).
+        JOINTABLE = T_JOINS-RTABNAME.
+        JOINADDOP = SPACE.
+        IF T_JOINS-JOINOPERATOR EQ 'I'.
+          IF T_JOINS-RALIASNAME IS NOT INITIAL.
+            CONCATENATE 'INNER JOIN' JOINTABLE 'AS'
+                        T_JOINS-RALIASNAME 'ON'
+                   INTO CODELINE SEPARATED BY SPACE.
+          ELSE.
+            CONCATENATE 'INNER JOIN' JOINTABLE 'ON'
+                   INTO CODELINE SEPARATED BY SPACE.
+          ENDIF.
+          APPEND CODELINE TO T_CODE.
+        ELSEIF T_JOINS-JOINOPERATOR EQ 'O'.
+          IF T_JOINS-RALIASNAME IS NOT INITIAL.
+            CONCATENATE 'LEFT OUTER JOIN' JOINTABLE 'AS'
+                        T_JOINS-RALIASNAME 'ON'
+                   INTO CODELINE SEPARATED BY SPACE.
+          ELSE.
+            CONCATENATE 'LEFT OUTER JOIN' JOINTABLE 'ON'
+                   INTO CODELINE SEPARATED BY SPACE.
+          ENDIF.
+          APPEND CODELINE TO T_CODE.
+        ENDIF.
+      ENDIF.
+      IF JOINADDOP EQ 'X'.
+        APPEND 'AND' TO T_CODE.
+      ENDIF.
+      CONCATENATE T_JOINS-LTABNAME '~' T_JOINS-LFIELDNAME
+             INTO TEXTBLOCK1.
+      IF T_JOINS-RALIASNAME IS NOT INITIAL.
+        CONCATENATE T_JOINS-RALIASNAME '~' T_JOINS-RFIELDNAME
+               INTO TEXTBLOCK2.
+      ELSE.
+        CONCATENATE T_JOINS-RTABNAME   '~' T_JOINS-RFIELDNAME
+               INTO TEXTBLOCK2.
+      ENDIF.
+      CONCATENATE TEXTBLOCK1 T_JOINS-JOINCONDITION TEXTBLOCK2
+             INTO CODELINE SEPARATED BY SPACE.
+      APPEND CODELINE TO T_CODE.
+      JOINADDOP = 'X'.
+    ENDLOOP.
+  ENDIF.
+  APPEND 'INTO TABLE t_sapstruct' TO T_CODE.
+* Add OPTIONS lines (user defined WHERE clause).
+  DESCRIBE TABLE T_OPTIONS LINES LINES.
+  IF LINES > 0.
+    APPEND 'WHERE' TO T_CODE.
+    LOOP AT T_OPTIONS.
+      APPEND T_OPTIONS TO T_CODE.
+    ENDLOOP.
+  ENDIF.
+* Add GROUP BY statement only if AGGREGATED is set
+  IF AGGREGATED EQ 'X'.
+    APPEND 'GROUP BY' TO T_CODE.
+    LOOP AT T_OUTPUTFIELD.
+      IF T_OUTPUTFIELD-AGGREFUNC IS INITIAL.
+        CONCATENATE T_OUTPUTFIELD-TABNAME '~'
+                    T_OUTPUTFIELD-FIELDNAME
+               INTO CODELINE.
+        APPEND CODELINE TO T_CODE.
+      ENDIF.
+    ENDLOOP.
+  ENDIF.
+* Add GROUP BY statement only if AGGREGATED is set
+  IF AGGREGATED EQ 'X'.
+*   Add HAVING lines (user defined HAVING clause).
+    DESCRIBE TABLE T_HAVING LINES LINES.
+    IF LINES > 0.
+      APPEND 'HAVING' TO T_CODE.
+      LOOP AT T_HAVING.
+        APPEND T_HAVING TO T_CODE.
+      ENDLOOP.
+    ENDIF.
+  ENDIF.
+  APPEND 'ORDER BY' TO T_CODE.
+  LOOP AT T_OUTPUTFIELD.
+    IF T_OUTPUTFIELD-AGGREFUNC IS INITIAL.
+      CONCATENATE T_OUTPUTFIELD-TABNAME '~'
+                  T_OUTPUTFIELD-FIELDNAME
+             INTO CODELINE.
+      APPEND CODELINE TO T_CODE.
+    ENDIF.
+  ENDLOOP.
+  APPEND '.' TO T_CODE.
+* Generate error handling.
+  APPEND 'queryrowcount = sy-dbcnt.' TO T_CODE.
+
+ENDFORM.                    " GENERATE_SELECT_NONPCK
+
+FORM GENERATE_CONVERT TABLES T_CODE TYPE ty_t_code
+                       USING DELIMITERVALUE TYPE STRING
+                             ROWSKIP TYPE INT4.
+
+  DATA:
+    CODELINE  TYPE STRING,
+    FIELDNAME TYPE STRING.
+
+* Do ROWSKIP on first batch only.
+  IF ROWSKIP > 0.
+    APPEND 'IF intbatchnbr = 1.' TO T_CODE.
+    APPEND 'startrowindex = ROWSKIP + 1.' TO T_CODE.
+    APPEND '* fewer rows than rowskip -> set batch rowcount to 0'
+      TO T_CODE.
+    APPEND 'IF ROWSKIP <= batch_readrowcount.' TO T_CODE.
+    APPEND 'batch_readrowcount = batch_readrowcount - ROWSKIP.'
+      TO T_CODE.
+    APPEND 'ELSE.' TO T_CODE.
+    APPEND 'batch_readrowcount = 0.' TO T_CODE.
+    APPEND 'ENDIF.' TO T_CODE.
+    APPEND 'ELSE.' TO T_CODE.
+    APPEND 'startrowindex = 1.' TO T_CODE.
+    APPEND 'ENDIF.' TO T_CODE.
+  ENDIF.
+  APPEND 'CLEAR sapdataindex.' TO T_CODE.
+  IF ROWSKIP > 0.
+    APPEND 'LOOP AT t_sapstruct from startrowindex.' TO T_CODE.
+  ELSE.
+    APPEND 'LOOP AT t_sapstruct.' TO T_CODE.
+  ENDIF.
+  APPEND 'ADD 1 TO sapdataindex.' TO T_CODE.
+  LOOP AT T_OUTPUTFIELD.
+    IF T_OUTPUTFIELD-ALIASNAME IS INITIAL.
+      FIELDNAME = T_OUTPUTFIELD-FIELDNAME.
+    ELSE.
+      FIELDNAME = T_OUTPUTFIELD-ALIASNAME.
+    ENDIF.
+    IF T_OUTPUTFIELD-SPECIAL = 'X'.
+      IF NOT T_OUTPUTFIELD-FUNCNAME IS INITIAL.
+*       Execute conversion exit.
+        CONCATENATE 'CALL FUNCTION ''' T_OUTPUTFIELD-FUNCNAME ''''
+        INTO CODELINE.
+        APPEND CODELINE TO T_CODE.
+        APPEND '  EXPORTING' TO T_CODE.
+        CONCATENATE 'input = t_sapstruct-' FIELDNAME
+               INTO CODELINE.
+        APPEND CODELINE TO T_CODE.
+        APPEND '  importing' TO T_CODE.
+        CONCATENATE 'output = outstruct-' FIELDNAME '.'
+               INTO CODELINE.
+        APPEND CODELINE TO T_CODE.
+      ELSE.
+*       Suppress 1000s separators.
+        CONCATENATE 'WRITE t_sapstruct-' FIELDNAME
+                    ' TO outstruct-' FIELDNAME
+                    ' NO-GROUPING using no edit mask.'
+               INTO CODELINE.
+        APPEND CODELINE TO T_CODE.
+      ENDIF.
+      IF T_OUTPUTFIELD-INTTYPE CA 'IPs' AND
+         T_OUTPUTFIELD-DATATYPE NE 'PREC'.
+        CONCATENATE 'SHIFT outstruct-' FIELDNAME
+                    ' RIGHT CIRCULAR.'
+               INTO CODELINE.
+        APPEND CODELINE TO T_CODE.
+        CONCATENATE 'condense outstruct-' FIELDNAME
+                    ' NO-GAPS.'
+               INTO CODELINE.
+        APPEND CODELINE TO T_CODE.
+        CONCATENATE 'WRITE outstruct-' FIELDNAME
+                    ' TO outstruct-' FIELDNAME
+                    ' RIGHT-JUSTIFIED.'
+               INTO CODELINE.
+        APPEND CODELINE TO T_CODE.
+      ENDIF.
+    ELSE.
+      IF NOT T_OUTPUTFIELD-FUNCNAME IS INITIAL.
+*       Execute conversion exit.
+        CONCATENATE 'CALL FUNCTION ''' T_OUTPUTFIELD-FUNCNAME ''''
+               INTO CODELINE.
+        APPEND CODELINE TO T_CODE.
+        APPEND '  EXPORTING' TO T_CODE.
+        CONCATENATE 'input = t_sapstruct-' FIELDNAME
+               INTO CODELINE.
+        APPEND CODELINE TO T_CODE.
+        APPEND '  IMPORTING' TO T_CODE.
+        CONCATENATE 'output = outstruct-' FIELDNAME '.'
+               INTO CODELINE.
+        APPEND CODELINE TO T_CODE.
+        APPEND 'IF sy-subrc > 0.' TO T_CODE.
+        APPEND 'CONTINUE.' TO T_CODE.
+        APPEND 'ENDIF.' TO T_CODE.
+      ELSE.
+*       Regular assign for all other types.
+        CONCATENATE 'outstruct-' FIELDNAME ' ='
+                    ' t_sapstruct-' FIELDNAME '.'
+               INTO CODELINE.
+        APPEND CODELINE TO T_CODE.
+      ENDIF.
+    ENDIF.
+  ENDLOOP.
+  APPEND '* convert TO return STRUCTURE' TO T_CODE.
+  APPEND 'maxoutputlength = 8000.' TO T_CODE.
+* For fixed length output ignore the end of line marker, i.e. reduce
+* input length by 1.
+  IF DELIMITERVALUE IS INITIAL.
+    APPEND 'totalinputlength = strlen( outstruct ) - 1.' TO T_CODE.
+    APPEND 'inputlengthremaining = strlen( outstruct ) - 1.' TO T_CODE.
+  ELSE.
+*   For delimited output extract the whole structure.
+    APPEND 'totalinputlength = strlen( outstruct ).' TO T_CODE.
+    APPEND 'inputlengthremaining = strlen( outstruct ).' TO T_CODE.
+  ENDIF.
+  APPEND 'inputoffset = 0.' TO T_CODE.
+  APPEND '*   outputoffset is parameter' TO T_CODE.
+  APPEND 'outputlengthremaining = maxoutputlength' TO T_CODE.
+  APPEND '                        - outputoffset.' TO T_CODE.
+  APPEND '* ignore empty rows' TO T_CODE.
+  APPEND 'if inputlengthremaining > 0. ' TO T_CODE.
+  APPEND 'clear transfercomplete.' TO T_CODE.
+  APPEND 'while transfercomplete is initial.' TO T_CODE.
+  APPEND 'if inputlengthremaining > outputlengthremaining.' TO T_CODE.
+  APPEND 'transferlength = outputlengthremaining.' TO T_CODE.
+  APPEND 'else.' TO T_CODE.
+  APPEND 'transferlength = inputlengthremaining.' TO T_CODE.
+  APPEND 'endif.' TO T_CODE.
+  APPEND 't_data+outputoffset(transferlength) =' TO T_CODE.
+  APPEND 'outstruct+inputoffset(transferlength).' TO T_CODE.
+  APPEND 'appendpending = ''X''.' TO T_CODE.
+  APPEND 'outputoffset = outputoffset + transferlength.' TO T_CODE.
+  APPEND 'inputoffset = inputoffset + transferlength.' TO T_CODE.
+  APPEND 'inputlengthremaining = totalinputlength' TO T_CODE.
+  APPEND '                       - inputoffset.' TO T_CODE.
+* This output row is full.
+  APPEND 'if      outputoffset = maxoutputlength' TO T_CODE.
+* This is the end of the last row of the extract.
+  APPEND '     or (     sapdataindex = queryrowcount' TO T_CODE.
+  APPEND '          and moredata is initial' TO T_CODE.
+  APPEND '          and inputlengthremaining = 0 ).' TO T_CODE.
+  APPEND 'append t_data.' TO T_CODE.
+  APPEND 'clear t_data.' TO T_CODE.
+  APPEND 'clear appendpending.' TO T_CODE.
+  APPEND 'add 1 to outputrowcount.' TO T_CODE.
+  APPEND 'outputoffset = 0.' TO T_CODE.
+  APPEND 'endif.' TO T_CODE.
+  APPEND 'outputlengthremaining = maxoutputlength ' TO T_CODE.
+  APPEND '                        - outputoffset.' TO T_CODE.
+  APPEND 'if inputlengthremaining <= 0.' TO T_CODE.
+  APPEND 'transfercomplete = ''x''.' TO T_CODE.
+  APPEND 'add 1 to batch_extractrowcount.' TO T_CODE.
+  APPEND 'subtract 1 from extractrowsremaining.' TO T_CODE.
+  APPEND 'if extractrowsremaining <= 0.' TO T_CODE.
+  APPEND 'clear moredata.' TO T_CODE.
+  APPEND 'endif.' TO T_CODE.
+  APPEND 'endif.' TO T_CODE.
+  APPEND 'endwhile.' TO T_CODE.
+  APPEND 'endif.' TO T_CODE.
+  APPEND 'ENDLOOP. "AT t_sapstruct' TO T_CODE.
+* Post query evaluations and prep for next query.
+  APPEND 'bufferremaining =   bufferremaining ' TO T_CODE.
+  APPEND '                  - queryrowcount.' TO T_CODE.
+
+ENDFORM.                    " GENERATE_CONVERT
+
+FORM GENERATE_CONVERT_NONPCK TABLES T_CODE TYPE ty_t_code
+                              USING DELIMITERVALUE TYPE STRING.
+
+  DATA:
+    CODELINE  TYPE STRING,
+    FIELDNAME TYPE STRING.
+
+  APPEND 'CLEAR reccount.' TO T_CODE.
+  APPEND 'CLEAR sapdataindex.' TO T_CODE.
+  APPEND 'LOOP AT t_sapstruct.' TO T_CODE.
+  APPEND 'ADD 1 TO sapdataindex.' TO T_CODE.
+  LOOP AT T_OUTPUTFIELD.
+    IF T_OUTPUTFIELD-ALIASNAME IS INITIAL.
+      FIELDNAME = T_OUTPUTFIELD-FIELDNAME.
+    ELSE.
+      FIELDNAME = T_OUTPUTFIELD-ALIASNAME.
+    ENDIF.
+    IF T_OUTPUTFIELD-SPECIAL = 'X'.
+      IF NOT T_OUTPUTFIELD-FUNCNAME IS INITIAL.
+*       Execute conversion exit.
+        CONCATENATE 'CALL FUNCTION ''' T_OUTPUTFIELD-FUNCNAME ''''
+        INTO CODELINE.
+        APPEND CODELINE TO T_CODE.
+        APPEND '  EXPORTING' TO T_CODE.
+        CONCATENATE 'input = t_sapstruct-' FIELDNAME
+               INTO CODELINE.
+        APPEND CODELINE TO T_CODE.
+        APPEND '  importing' TO T_CODE.
+        CONCATENATE 'output = outstruct-' FIELDNAME '.'
+               INTO CODELINE.
+        APPEND CODELINE TO T_CODE.
+      ELSE.
+*       Suppress 1000s separators.
+        CONCATENATE 'WRITE t_sapstruct-' FIELDNAME
+                    ' TO outstruct-' FIELDNAME
+                    ' NO-GROUPING using no edit mask.'
+               INTO CODELINE.
+        APPEND CODELINE TO T_CODE.
+      ENDIF.
+      IF T_OUTPUTFIELD-INTTYPE  CA 'IPs' AND
+         T_OUTPUTFIELD-DATATYPE NE 'PREC'.
+        CONCATENATE 'SHIFT outstruct-' FIELDNAME
+                    ' RIGHT CIRCULAR.'
+               INTO CODELINE.
+        APPEND CODELINE TO T_CODE.
+        CONCATENATE 'condense outstruct-' FIELDNAME
+                    ' NO-GAPS.'
+               INTO CODELINE.
+        APPEND CODELINE TO T_CODE.
+        CONCATENATE 'WRITE outstruct-' FIELDNAME
+                    ' TO outstruct-' FIELDNAME
+                    ' RIGHT-JUSTIFIED.'
+               INTO CODELINE.
+        APPEND CODELINE TO T_CODE.
+      ENDIF.
+    ELSE.
+      IF NOT T_OUTPUTFIELD-FUNCNAME IS INITIAL.
+*       Execute conversion exit.
+        CONCATENATE 'CALL FUNCTION ''' T_OUTPUTFIELD-FUNCNAME ''''
+               INTO CODELINE.
+        APPEND CODELINE TO T_CODE.
+        APPEND '  EXPORTING' TO T_CODE.
+        CONCATENATE 'input = t_sapstruct-' FIELDNAME
+               INTO CODELINE.
+        APPEND CODELINE TO T_CODE.
+        APPEND '  IMPORTING' TO T_CODE.
+        CONCATENATE 'output = outstruct-' FIELDNAME '.'
+               INTO CODELINE.
+        APPEND CODELINE TO T_CODE.
+        APPEND 'IF sy-subrc > 0.' TO T_CODE.
+        APPEND 'CONTINUE.' TO T_CODE.
+        APPEND 'ENDIF.' TO T_CODE.
+      ELSE.
+*       Regular assign for all other types.
+        CONCATENATE 'outstruct-' FIELDNAME ' ='
+                    ' t_sapstruct-' FIELDNAME '.'
+               INTO CODELINE.
+        APPEND CODELINE TO T_CODE.
+      ENDIF.
+    ENDIF.
+  ENDLOOP.
+  APPEND '* Copy data into out structure.' TO T_CODE.
+* For fixed length output ignore the end of line marker, i.e. reduce
+* input length by 1.
+  IF DELIMITERVALUE IS INITIAL.
+    APPEND 'totalinputlength = strlen( outstruct ) - 1.' TO T_CODE.
+    APPEND 'inputlengthremaining = strlen( outstruct ) - 1.' TO T_CODE.
+  ELSE.
+*   For delimited output extract the whole structure.
+    APPEND 'totalinputlength = strlen( outstruct ).' TO T_CODE.
+    APPEND 'inputlengthremaining = strlen( outstruct ).' TO T_CODE.
+  ENDIF.
+  APPEND 'inputoffset = 0.' TO T_CODE.
+  APPEND 'outputlengthremaining = maxoutputlength' TO T_CODE.
+  APPEND '                        - outputoffset.' TO T_CODE.
+  APPEND '* Ignore empty rows.' TO T_CODE.
+  APPEND 'if inputlengthremaining > 0. ' TO T_CODE.
+  APPEND 'clear transfercomplete.' TO T_CODE.
+  APPEND 'while transfercomplete is initial.' TO T_CODE.
+  APPEND 'if inputlengthremaining > outputlengthremaining.' TO T_CODE.
+  APPEND 'transferlength = outputlengthremaining.' TO T_CODE.
+  APPEND 'else.' TO T_CODE.
+  APPEND 'transferlength = inputlengthremaining.' TO T_CODE.
+  APPEND 'endif.' TO T_CODE.
+  APPEND 't_data+outputoffset(transferlength) =' TO T_CODE.
+  APPEND 'outstruct+inputoffset(transferlength).' TO T_CODE.
+  APPEND 'appendpending = ''X''.' TO T_CODE.
+  APPEND 'outputoffset = outputoffset + transferlength.' TO T_CODE.
+  APPEND 'inputoffset = inputoffset + transferlength.' TO T_CODE.
+  APPEND 'inputlengthremaining = totalinputlength' TO T_CODE.
+  APPEND '                       - inputoffset.' TO T_CODE.
+* This output row is full.
+  APPEND 'if outputoffset = maxoutputlength' TO T_CODE.
+* This is the end of the last row of the extract.
+  APPEND '   or ( sapdataindex = queryrowcount and' TO T_CODE.
+  APPEND '        inputlengthremaining = 0 ).' TO T_CODE.
+  APPEND 'append t_data.' TO T_CODE.
+  APPEND 'clear t_data.' TO T_CODE.
+  APPEND 'clear appendpending.' TO T_CODE.
+  APPEND 'outputoffset = 0.' TO T_CODE.
+  APPEND 'endif.' TO T_CODE.
+  APPEND 'outputlengthremaining = maxoutputlength ' TO T_CODE.
+  APPEND '                        - outputoffset.' TO T_CODE.
+  APPEND 'if inputlengthremaining <= 0.' TO T_CODE.
+  APPEND 'transfercomplete = ''X''.' TO T_CODE.
+  APPEND 'add 1 to RECCOUNT.' TO T_CODE.
+  APPEND 'endif.' TO T_CODE.
+  APPEND 'endwhile.' TO T_CODE.
+  APPEND 'endif.' TO T_CODE.
+  APPEND 'ENDLOOP. "AT t_sapstruct' TO T_CODE.
+  APPEND 'IF NOT appendpending IS INITIAL.' TO T_CODE.
+  APPEND 'APPEND t_data.' TO T_CODE.
+  APPEND 'ENDIF.' TO T_CODE.
+  APPEND 'ENDFORM. "READANDCONVERTAGGRE' TO T_CODE.
+
+ENDFORM.                    " GENERATE_CONVERT_NONPCK
+
+FORM GENERATE_UPDATEPK TABLES T_CODE.
+
+  DATA CODELINE TYPE STRING.
+
+  APPEND '********************************************' TO T_CODE.
+  APPEND '*update PK where clause with pk values of' TO T_CODE.
+  APPEND '*last row of previous batch as lower bound' TO T_CODE.
+  APPEND '*for the next batch' TO T_CODE.
+  APPEND '********************************************' TO T_CODE.
+  APPEND '*read last row of buffer' TO T_CODE.
+  APPEND 'DESCRIBE TABLE t_sapstruct LINES lastrowindex.' TO T_CODE.
+  APPEND 'IF lastrowindex > 0.' TO T_CODE.
+  APPEND 'READ TABLE t_sapstruct INDEX lastrowindex.' TO T_CODE.
+  APPEND 'ENDIF.' TO T_CODE.
+  APPEND 'IF sy-subrc = 0 OR lastrowindex = 0.' TO T_CODE.
+  APPEND '*if there is more data to be extracted in this batch'
+    TO T_CODE.
+  APPEND '*continue progression of GT sign' TO T_CODE.
+  APPEND 'IF bufferremaining > 0.' TO T_CODE.
+  APPEND 'CASE current_gt_pos.' TO T_CODE.
+  APPEND 'WHEN 0.' TO T_CODE.
+  APPEND 'current_gt_pos = pk_field_count.' TO T_CODE.
+  APPEND 'WHEN 1.' TO T_CODE.
+  APPEND '*we should not get here. This means the logic above'
+    TO T_CODE.
+  APPEND '*determined that another query is to be run even though'
+    TO T_CODE.
+  APPEND '*the PK is unconstrained and no more data is to be' TO T_CODE.
+  APPEND '*expected. I will clear the flag' TO T_CODE.
+  APPEND 'CLEAR moredata.' TO T_CODE.
+  APPEND 'WHEN OTHERS.' TO T_CODE.
+  APPEND 'current_gt_pos = current_gt_pos - 1.' TO T_CODE.
+  APPEND 'ENDCASE.' TO T_CODE.
+  APPEND 'ELSE.' TO T_CODE.
+  APPEND '*at the end of a batch set the position of the GT sign'
+    TO T_CODE.
+  APPEND '*to the rightmost PK field so the next batch will pick'
+    TO T_CODE.
+  APPEND '*up at the next record' TO T_CODE.
+  APPEND 'current_gt_pos = pk_field_count.' TO T_CODE.
+  APPEND 'ENDIF.' TO T_CODE.
+  APPEND 'LOOP AT t_pk_where_clause.' TO T_CODE.
+  APPEND 'pkwhereindex = sy-tabix.' TO T_CODE.
+  APPEND 'READ TABLE T_FIELDDEF' TO T_CODE.
+  APPEND '  WITH KEY tabname   = t_pk_where_clause-tabname' TO T_CODE.
+  APPEND '           fieldname = t_pk_where_clause-field.' TO T_CODE.
+  APPEND 'IF sy-subrc = 0.' TO T_CODE.
+  APPEND '*we only need to update values if something was found'
+    TO T_CODE.
+  APPEND '*with the current query' TO T_CODE.
+  APPEND 'IF lastrowindex <> 0.' TO T_CODE.
+  APPEND 'fieldoralias = t_pk_where_clause-field.' TO T_CODE.
+  APPEND 'IF NOT t_pk_where_clause-alias IS INITIAL.' TO T_CODE.
+  APPEND '  fieldoralias = t_pk_where_clause-alias.' TO T_CODE.
+  APPEND 'ENDIF.' TO T_CODE.
+  APPEND 'IF NOT T_FIELDDEF-rollname IS INITIAL.' TO T_CODE.
+  APPEND 'ASSIGN COMPONENT fieldoralias' TO T_CODE.
+  APPEND '  OF STRUCTURE t_sapstruct TO <fld>' TO T_CODE.
+  APPEND '  CASTING TYPE (T_FIELDDEF-rollname).' TO T_CODE.
+  APPEND 'ELSE.' TO T_CODE.
+  APPEND 'ASSIGN COMPONENT fieldoralias' TO T_CODE.
+  APPEND '  OF STRUCTURE t_sapstruct TO <fld>.' TO T_CODE.
+  APPEND 'ENDIF.' TO T_CODE.
+  APPEND 'ENDIF.' TO T_CODE.
+  APPEND '*relying on the sequence in the table as position indicator'
+    TO T_CODE.
+  APPEND '*Right from the GT sign, we want NOT NULL' TO T_CODE.
+  APPEND 'IF sy-tabix > current_gt_pos.' TO T_CODE.
+  APPEND 'CLEAR t_pk_where_clause-low.' TO T_CODE.
+  APPEND 't_pk_where_clause-sign = ''E''.' TO T_CODE.
+  APPEND 't_pk_where_clause-option = ''NL''.' TO T_CODE.
+* Determine appropriate minimum values by data type.
+  APPEND 't_pk_where_clause-low = space.' TO T_CODE.
+  APPEND '* On the new position of the GT sign, we want GT last value'
+    TO T_CODE.
+  APPEND 'ELSEIF sy-tabix = current_gt_pos.' TO T_CODE.
+  APPEND 't_pk_where_clause-sign = ''I''.' TO T_CODE.
+  APPEND 't_pk_where_clause-option = ''GT''.' TO T_CODE.
+  APPEND 'IF lastrowindex <> 0.' TO T_CODE.
+  APPEND 't_pk_where_clause-low = <fld>.' TO T_CODE.
+  APPEND 'ENDIF.' TO T_CODE.
+  APPEND '*Left of the GT sign we want the value to remain constant'
+    TO T_CODE.
+  APPEND 'ELSEIF sy-tabix < current_gt_pos.' TO T_CODE.
+  APPEND 't_pk_where_clause-sign = ''I''.' TO T_CODE.
+  APPEND 't_pk_where_clause-option = ''EQ''.' TO T_CODE.
+  APPEND 'IF lastrowindex <> 0.' TO T_CODE.
+  APPEND 't_pk_where_clause-low = <fld>.' TO T_CODE.
+  APPEND 'ENDIF.' TO T_CODE.
+  APPEND 'ENDIF.' TO T_CODE.
+  APPEND '* delete leading spaces for numeric values' TO T_CODE.
+  APPEND 'IF     T_FIELDDEF-inttype NE ''C''' TO T_CODE.
+  APPEND '   AND T_FIELDDEF-inttype NE ''D''' TO T_CODE.
+  APPEND '   AND T_FIELDDEF-inttype NE ''T''.' TO T_CODE.
+  APPEND 'SHIFT t_pk_where_clause-low LEFT' TO T_CODE.
+  APPEND '  DELETING LEADING space.' TO T_CODE.
+  APPEND 'ENDIF.' TO T_CODE.
+  APPEND 'MODIFY t_pk_where_clause' TO T_CODE.
+  APPEND 'FROM t_pk_where_clause' TO T_CODE.
+  APPEND 'INDEX pkwhereindex.' TO T_CODE.
+  APPEND 'ELSE.' TO T_CODE.
+  APPEND 'ENDIF.' TO T_CODE.
+  APPEND 'ENDLOOP.' TO T_CODE.
+  APPEND 'ENDIF.' TO T_CODE.
+  APPEND 'IF     moredata is initial' TO T_CODE.
+  APPEND '   AND NOT appendpending IS INITIAL.' TO T_CODE.
+  APPEND 'APPEND t_data.' TO T_CODE.
+  APPEND 'CLEAR t_data.' TO T_CODE.
+  APPEND 'CLEAR appendpending.' TO T_CODE.
+  APPEND 'ADD 1 TO outputrowcount.' TO T_CODE.
+  APPEND 'outputoffset = 0.' TO T_CODE.
+  APPEND 'ENDIF.' TO T_CODE.
+  APPEND 'ENDFORM."readandconvert' TO T_CODE.
+
+ENDFORM.                    " GENERATE_UPDATEPK
+
+FORM GENERATE_UPDATEPKCLUSTER TABLES T_CODE.
+
+  DATA CODELINE TYPE STRING.
+
+  APPEND '********************************************' TO T_CODE.
+  APPEND '*update PK where clause with pk values of' TO T_CODE.
+  APPEND '*last row of previous batch as lower bound' TO T_CODE.
+  APPEND '*for the next batch' TO T_CODE.
+  APPEND '********************************************' TO T_CODE.
+  APPEND '*read last row of buffer' TO T_CODE.
+  APPEND 'DESCRIBE TABLE t_sapstruct LINES lastrowindex.' TO T_CODE.
+  APPEND 'IF lastrowindex > 0.' TO T_CODE.
+  APPEND 'READ TABLE t_sapstruct INDEX lastrowindex.' TO T_CODE.
+  APPEND 'ENDIF.' TO T_CODE.
+  APPEND 'IF sy-subrc = 0 OR lastrowindex = 0.' TO T_CODE.
+  APPEND '*if there is more data to be extracted in this batch'
+    TO T_CODE.
+  APPEND '*continue progression of GT sign' TO T_CODE.
+  APPEND 'IF bufferremaining > 0.' TO T_CODE.
+  APPEND 'CASE current_gt_pos.' TO T_CODE.
+  APPEND 'WHEN 0.' TO T_CODE.
+  APPEND 'current_gt_pos = pk_field_count.' TO T_CODE.
+  APPEND 'WHEN 1.' TO T_CODE.
+  APPEND '*we should not get here. This means the logic above'
+    TO T_CODE.
+  APPEND '*determined that another query is to be run even though'
+    TO T_CODE.
+  APPEND '*the PK is unconstrained and no more data is to be' TO T_CODE.
+  APPEND '*expected. I will clear the flag' TO T_CODE.
+  APPEND 'CLEAR moredata.' TO T_CODE.
+  APPEND 'WHEN OTHERS.' TO T_CODE.
+  APPEND 'current_gt_pos = current_gt_pos - 1.' TO T_CODE.
+  APPEND 'ENDCASE.' TO T_CODE.
+  APPEND 'ELSE.' TO T_CODE.
+  APPEND '*at the end of a batch set the position of the GT sign'
+    TO T_CODE.
+  APPEND '*to the rightmost PK field so the next batch will pick'
+    TO T_CODE.
+  APPEND '*up at the next record' TO T_CODE.
+  APPEND 'current_gt_pos = pk_field_count.' TO T_CODE.
+  APPEND 'ENDIF.' TO T_CODE.
+  APPEND 'LOOP AT t_pk_where_clause.' TO T_CODE.
+  APPEND 'pkwhereindex = sy-tabix.' TO T_CODE.
+  APPEND 'READ TABLE T_FIELDDEF' TO T_CODE.
+  APPEND '  WITH KEY tabname   = t_pk_where_clause-tabname' TO T_CODE.
+  APPEND '           fieldname = t_pk_where_clause-field.' TO T_CODE.
+  APPEND 'IF sy-subrc = 0.' TO T_CODE.
+  APPEND '*we only need to update values if something was found'
+    TO T_CODE.
+  APPEND '*with the current query' TO T_CODE.
+  APPEND 'IF lastrowindex <> 0.' TO T_CODE.
+  APPEND 'fieldoralias = t_pk_where_clause-field.' TO T_CODE.
+  APPEND 'IF NOT t_pk_where_clause-alias IS INITIAL.' TO T_CODE.
+  APPEND '  fieldoralias = t_pk_where_clause-alias.' TO T_CODE.
+  APPEND 'ENDIF.' TO T_CODE.
+  APPEND 'IF NOT T_FIELDDEF-rollname IS INITIAL.' TO T_CODE.
+  APPEND 'ASSIGN COMPONENT fieldoralias' TO T_CODE.
+  APPEND '  OF STRUCTURE t_sapstruct TO <fld>' TO T_CODE.
+  APPEND '  CASTING TYPE (T_FIELDDEF-rollname).' TO T_CODE.
+  APPEND 'ELSE.' TO T_CODE.
+  APPEND 'ASSIGN COMPONENT fieldoralias' TO T_CODE.
+  APPEND '  OF STRUCTURE t_sapstruct TO <fld>.' TO T_CODE.
+  APPEND 'ENDIF.' TO T_CODE.
+  APPEND 'ENDIF.' TO T_CODE.
+  APPEND '*relying on the sequence in the table as position indicator'
+    TO T_CODE.
+  APPEND '*Right from the GT sign, we want GE min value' TO T_CODE.
+  APPEND 'IF sy-tabix > current_gt_pos.' TO T_CODE.
+  APPEND 'CLEAR t_pk_where_clause-low.' TO T_CODE.
+  APPEND 't_pk_where_clause-option = ''GE''.' TO T_CODE.
+* Determine appropriate minimum values by data type.
+  APPEND 'CASE T_FIELDDEF-inttype.' TO T_CODE.
+  APPEND 'WHEN ''C''.' TO T_CODE.
+  APPEND 't_pk_where_clause-low = space.' TO T_CODE.
+  APPEND 'WHEN ''D''.' TO T_CODE.
+  APPEND 't_pk_where_clause-low = ''00000000''.' TO T_CODE.
+  APPEND 'WHEN ''T''.' TO T_CODE.
+  APPEND 't_pk_where_clause-low = ''000000''.' TO T_CODE.
+  APPEND 'WHEN ''P''.' TO T_CODE.
+  APPEND '*generate maximum negative number for packed' TO T_CODE.
+  APPEND '*numbers' TO T_CODE.
+  APPEND 'digitcount = T_FIELDDEF-leng - T_FIELDDEF-decimals.' TO
+T_CODE.
+  APPEND 'CONCATENATE  t_pk_where_clause-low ''-''' TO T_CODE.
+  APPEND '  INTO t_pk_where_clause-low.' TO T_CODE.
+  APPEND 'DO digitcount TIMES.' TO T_CODE.
+  APPEND 'CONCATENATE  t_pk_where_clause-low ''9''' TO T_CODE.
+  APPEND '  INTO t_pk_where_clause-low.' TO T_CODE.
+  APPEND 'ENDDO.' TO T_CODE.
+  APPEND 'CONCATENATE  t_pk_where_clause-low decimalpoint' TO T_CODE.
+  APPEND '  INTO t_pk_where_clause-low.' TO T_CODE.
+  APPEND 'DO T_FIELDDEF-decimals TIMES.' TO T_CODE.
+  APPEND 'CONCATENATE  t_pk_where_clause-low ''9''' TO T_CODE.
+  APPEND '  INTO t_pk_where_clause-low.' TO T_CODE.
+  APPEND 'ENDDO.' TO T_CODE.
+  APPEND 'WHEN ''F''.' TO T_CODE.
+  APPEND 't_pk_where_clause-low     = c_max_float_neg.' TO T_CODE.
+  APPEND 'WHEN ''X''.' TO T_CODE.
+  APPEND 'CASE T_FIELDDEF-datatype.' TO T_CODE.
+  APPEND 'WHEN ''INT1''.' TO T_CODE.
+  APPEND 't_pk_where_clause-low = ''0''.' TO T_CODE.
+  APPEND 'WHEN ''INT2''.' TO T_CODE.
+  APPEND 't_pk_where_clause-low = c_max_int2_neg.' TO T_CODE.
+  APPEND 'WHEN ''INT4''.' TO T_CODE.
+  APPEND 't_pk_where_clause-low = c_max_int_neg.' TO T_CODE.
+  APPEND 'WHEN OTHERS.' TO T_CODE.
+  APPEND 't_pk_where_clause-low = hexnull(T_FIELDDEF-outputlen).'
+    TO T_CODE.
+  APPEND 'ENDCASE.' TO T_CODE.
+  APPEND 'WHEN OTHERS.' TO T_CODE.
+  APPEND 't_pk_where_clause-low = space.' TO T_CODE.
+  APPEND 'ENDCASE.' TO T_CODE.
+  APPEND 'CONDENSE t_pk_where_clause-low no-gaps.' TO T_CODE.
+  APPEND '* On the new position of the GT sign, we want GT last value'
+    TO T_CODE.
+  APPEND 'ELSEIF sy-tabix = current_gt_pos.' TO T_CODE.
+  APPEND 't_pk_where_clause-option = ''GT''.' TO T_CODE.
+  APPEND 'IF lastrowindex <> 0.' TO T_CODE.
+  APPEND 't_pk_where_clause-low = <fld>.' TO T_CODE.
+  APPEND 'ENDIF.' TO T_CODE.
+  APPEND '*Left of the GT sign we want the value to remain constant'
+    TO T_CODE.
+  APPEND 'ELSEIF sy-tabix < current_gt_pos.' TO T_CODE.
+  APPEND 't_pk_where_clause-option = ''EQ''.' TO T_CODE.
+  APPEND 'IF lastrowindex <> 0.' TO T_CODE.
+  APPEND 't_pk_where_clause-low = <fld>.' TO T_CODE.
+  APPEND 'ENDIF.' TO T_CODE.
+  APPEND 'ENDIF.' TO T_CODE.
+  APPEND '* delete leading spaces for numeric values' TO T_CODE.
+  APPEND 'IF     T_FIELDDEF-inttype NE ''C''' TO T_CODE.
+  APPEND '   AND T_FIELDDEF-inttype NE ''D''' TO T_CODE.
+  APPEND '   AND T_FIELDDEF-inttype NE ''T''.' TO T_CODE.
+  APPEND 'SHIFT t_pk_where_clause-low LEFT' TO T_CODE.
+  APPEND '  DELETING LEADING space.' TO T_CODE.
+  APPEND 'ENDIF.' TO T_CODE.
+  APPEND 'MODIFY t_pk_where_clause' TO T_CODE.
+  APPEND 'FROM t_pk_where_clause' TO T_CODE.
+  APPEND 'INDEX pkwhereindex.' TO T_CODE.
+  APPEND 'ELSE.' TO T_CODE.
+  APPEND 'ENDIF.' TO T_CODE.
+  APPEND 'ENDLOOP.' TO T_CODE.
+  APPEND 'ENDIF.' TO T_CODE.
+  APPEND 'IF     moredata is initial' TO T_CODE.
+  APPEND '   AND NOT appendpending IS INITIAL.' TO T_CODE.
+  APPEND 'APPEND t_data.' TO T_CODE.
+  APPEND 'CLEAR appendpending.' TO T_CODE.
+  APPEND 'CLEAR t_data.' TO T_CODE.
+  APPEND 'ADD 1 TO outputrowcount.' TO T_CODE.
+  APPEND 'outputoffset = 0.' TO T_CODE.
+  APPEND 'ENDIF.' TO T_CODE.
+  APPEND 'ENDFORM."readandconvert' TO T_CODE.
+
+ENDFORM.                    " GENERATE_UPDATEPKCLUSTER
