@@ -74,6 +74,24 @@ collections:
   erpconnect-samples:
     output: true
     name: 'ERPConnect - Samples'
+  erpconnect-services:
+    output: true
+    name: 'ERPConnect Services'
+  general:
+    output: true
+    name: 'General'
+  sap:
+    output: true
+    name: 'SAP'
+  troubleshooting:
+    output: true
+    name: 'Trobleshooting'
+  version-history:
+    output: true
+    name: 'Version History'
+  xtract-is:
+    output: true
+    name: 'Xtract IS'
   posts:
     output: true
 
