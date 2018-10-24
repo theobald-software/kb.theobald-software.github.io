@@ -230,8 +230,21 @@ img {
   float: left!important;
   text-align: left;
 }
+.nav-stacked-homepage {
+  float: left !important;
+  text-align: left;
+  padding-left: 15px;
+}
+@media (min-width: 768px) {
+  .nav-stacked-homepage {
+    float: right !important;
+    text-align: right;
+    padding-left: 15px;
+  }
+}
 
-@media (max-width: 1024px) {
+
+@media (max-width: 945px) {
   .nav-hidden-custom-size {
     display:none;
   }

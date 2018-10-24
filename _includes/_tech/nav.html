@@ -13,6 +13,7 @@
       <div class="row row-eq-height">
         {% if page.title != 'Homepage' %}
           {% if page.title != 'Search' %}
+          {% comment %} this shows the search bar on all pages except Homepage and Search {% endcomment %}
           <div class="col-md-6 col-sm-6 col-xs-6">
             <form class="homepage-search-form" action="{{ site.url }}/{{ current_lang }}/search.html" style="display: table;height: 100%;width: 100%;padding-right:5px;">
               <div class="ais-search-box" style="display: table-cell;text-align: center;vertical-align: middle;">
@@ -30,6 +31,7 @@
           </div>
           {% endif %}
 
+        {% comment %} the return-to-home link appears on all pages except Homepage {% endcomment %}
           <div class="col-md-6 col-sm-6 col-xs-6">
             <ul class="nav nav-stacked nav-stacked-left">
               <li>
@@ -39,6 +41,7 @@
               </li>
               {% unless page.path contains 'index.md' or page.path contains 'news.html' or page.path contains '404.html' or page.path contains 'search.html' %}
                 {% if page.is_post != true %}
+                  {% comment %} the return-to-section link appears on all pages except Homepage, Search, 404 and all overview pages {% endcomment %}
                   {% assign collection = site.collections | where:"label",page.collection %}
                   {% assign collection_doc = collection[0].docs | where_exp:"doc", "doc.relative_path contains 'index'" %}
 
@@ -47,7 +50,7 @@
                       {{ site.content.sidemenu-return-to-section }}<strong>{{ collection[0].name }}</strong>
                     </a>
                   </li>
-                  {% else %}
+                {% else %}
                   <li>
                     <a href="{{ site.url }}/news">
                       {{ site.content.sidemenu-return-to-section }}<strong> News</strong>
@@ -59,9 +62,9 @@
           </div>
           <div class="col-md-6 col-sm-6 nav-hidden-custom-size">
         {% else %}
-          <div class="col-md-8 col-sm-8 col-xs-8 col-md-offset-4 col-sm-offset-4 col-xs-offset-4 nav-hidden-custom-size">
+          <div class="col-md-8 col-sm-8 col-xs-8 col-md-offset-4 col-sm-offset-4">
         {% endif %}
-            <ul class="nav nav-stacked nav-stacked-right">
+            <ul class="nav nav-stacked {% if page.title != 'Homepage' %}nav-stacked-right{% else %}nav-stacked-homepage{% endif %}">
               {% for entry in site.content.navbar-links %}
                 {% if entry.title %}
                   <li>
