@@ -85,7 +85,7 @@ collections:
     name: 'SAP'
   troubleshooting:
     output: true
-    name: 'Trobleshooting'
+    name: 'Troubleshooting'
   version-history:
     output: true
     name: 'Version History'
