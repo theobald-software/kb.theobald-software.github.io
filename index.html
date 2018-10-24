@@ -68,7 +68,11 @@ common-css:
             {% unless collection.label == "posts" %}
                 <div class="col-md-6 col-sm-6">
                     <div class="double-listing {% cycle 'double-listing-uneven', 'double-listing-even' %}">
-                        <a href="{{ site.url }}{{ collection_doc[0].url }}"><h2>{{ collection.name }}</h2></a>
+                        {% assign collection_doc = collection.docs | where_exp:"doc", "doc.relative_path contains '/index'" %}
+                        {% if collection_doc != '' %}
+                            {% capture read_more_link %}{{ site.url }}{{ collection_doc[0].url }}{% endcapture %}
+                            <a href="{{ read_more_link }}"><h2>{{ collection.name }}</h2></a>
+                        {% endif %}
                         <hr class="length">
                         {% assign filtered_docs = collection.docs | sort: 'homepage-weight' %}
                         {% for doc in filtered_docs limit:6 %}
@@ -79,9 +83,8 @@ common-css:
                             {% endunless %}
                         {% endfor %}
                         <br>
-                        {% assign collection_doc = collection.docs | where_exp:"doc", "doc.relative_path contains '/index'" %}
                         {% if collection_doc != '' %}
-                            <a class="double-listing-link-read-more" href="{{ site.url }}{{ collection_doc[0].url }}">Read more about {{ collection.name }}</a>
+                            <a class="double-listing-link-read-more" href="{{ read_more_link }}">Read more about {{ collection.name }}</a>
                         {% endif %}
                     </div>
                 </div>
