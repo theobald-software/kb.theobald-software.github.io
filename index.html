@@ -47,7 +47,7 @@ common-css:
 <div class="row row-centered aligned-row" role="main">
         <div class="col-md-6 col-sm-6">
             <div class="double-listing double-listing-even">
-                <h2>News</h2>
+                <a href="{{ site.url }}/news"><h2>News</h2></a>
                 <hr class="length">
                 {% for post in site.posts limit:6 %}
                     {% unless post.relative_path contains '/index' %}
@@ -68,7 +68,7 @@ common-css:
             {% unless collection.label == "posts" %}
                 <div class="col-md-6 col-sm-6">
                     <div class="double-listing {% cycle 'double-listing-uneven', 'double-listing-even' %}">
-                        <h2>{{ collection.name }}</h2>
+                        <a href="{{ site.url }}{{ collection_doc[0].url }}"><h2>{{ collection.name }}</h2></a>
                         <hr class="length">
                         {% assign filtered_docs = collection.docs | sort: 'homepage-weight' %}
                         {% for doc in filtered_docs limit:6 %}
