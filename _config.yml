@@ -55,7 +55,6 @@ content:
   search-title: "Search the Knowledgebase"
   search-results: "Results"
   search-box-text: "Search..."
-  search-hit-section: "Section: "
   section-page-default-explanation: "The following knowledge articles are in this section."
   news-overview-page-default-explanation: "All news articles can be found here."
 
