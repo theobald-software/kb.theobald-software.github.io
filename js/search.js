@@ -62,7 +62,7 @@ var main = {
                 switch ($(this).text()) {
                     {% for collection in site.collections %}
                         case '{{ collection.label }}':
-                            $(this).html('Section: <em>{{ collection.name }}</em>');
+                            $(this).html('{{ collection.name }}');
                             break;
                     {% endfor %}
                     default:
