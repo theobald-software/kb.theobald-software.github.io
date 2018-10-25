@@ -92,6 +92,15 @@ collections:
   xtract-is:
     output: true
     name: 'Xtract IS'
+  xtract-qv:
+    output: true
+    name: 'Xtract QV'
+  xtract-rs:
+    output: true
+    name: 'Xtract RS'
+  xtract-universal:
+    output: true
+    name: 'Xtract Universal'
   posts:
     output: true
 
