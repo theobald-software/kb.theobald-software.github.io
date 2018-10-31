@@ -4,6 +4,6 @@
     <ShortName>Theobald Software Knowledge Base</ShortName>
     <Description>Search the Theobald Software Knowledge Base</Description>
     <InputEncoding>UTF-8</InputEncoding>
-    <Url method="get" type="text/html" template="https://kb.theobald-software.com/search.html?query={searchTerms}"/>
-    <SearchForm>https://kb.theobald-software.com/</SearchForm>
+    <Url method="get" type="text/html" template="http://kb.theobald-software.com/search.html?query={searchTerms}"/>
+    <SearchForm>http://kb.theobald-software.com/</SearchForm>
 </OpenSearchDescription>
