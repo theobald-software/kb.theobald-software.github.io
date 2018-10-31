@@ -3,7 +3,7 @@ layout: page
 title: A List of LINQ expressions which are supported by LINQToERP
 description: A List of LINQ expressions which are supported by LINQToERP
 permalink: /:collection/:path
-homepage-weight: 12
+weight: 12
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

@@ -3,7 +3,7 @@ layout: page
 title: Using ERPConnect in Powershell
 description: Using ERPConnect in Powershell
 permalink: /:collection/:path
-homepage-weight: 23
+weight: 23
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

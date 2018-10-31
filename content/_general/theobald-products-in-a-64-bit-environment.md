@@ -3,7 +3,7 @@ layout: page
 title: Theobald Products in a 64-Bit environment
 description: Theobald Products in a 64-Bit environment
 permalink: /:collection/:path
-homepage-weight: 2
+weight: 2
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

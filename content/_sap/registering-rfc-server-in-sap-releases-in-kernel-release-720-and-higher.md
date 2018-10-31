@@ -3,7 +3,7 @@ layout: page
 title: Registering RFC Server in SAP Releases in Kernel Release 720 and higher
 description: Registering RFC Server in SAP Releases in Kernel Release 720 and higher
 permalink: /:collection/:path
-homepage-weight: 4
+weight: 4
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

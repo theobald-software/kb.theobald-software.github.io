@@ -3,7 +3,7 @@ layout: page
 title: Using Current Date in the Where Clause of the Xtract IS Table Component
 description: Using Current Date in the Where Clause of the Xtract IS Table Component
 permalink: /:collection/:path
-homepage-weight: 1
+weight: 1
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

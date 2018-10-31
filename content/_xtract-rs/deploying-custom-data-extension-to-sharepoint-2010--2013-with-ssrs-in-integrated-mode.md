@@ -3,7 +3,7 @@ layout: page
 title: Deploying Custom Data Extension to SharePoint 2010 / 2013 with SSRS in integrated mode
 description: Deploying Custom Data Extension to SharePoint 2010 / 2013 with SSRS in integrated mode
 permalink: /:collection/:path
-homepage-weight: 2
+weight: 2
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

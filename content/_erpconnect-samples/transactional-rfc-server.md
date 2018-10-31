@@ -3,7 +3,7 @@ layout: page
 title: Transactional RFC Server
 description: Transactional RFC Server
 permalink: /:collection/:path
-homepage-weight: 29
+weight: 29
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

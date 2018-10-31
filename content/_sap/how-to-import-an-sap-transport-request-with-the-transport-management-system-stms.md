@@ -3,7 +3,7 @@ layout: page
 title: How to import an SAP Transport Request with the Transport Management System STMS
 description: How to import an SAP Transport Request with the Transport Management System STMS
 permalink: /:collection/:path
-homepage-weight: 2
+weight: 2
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

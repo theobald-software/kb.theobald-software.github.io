@@ -3,7 +3,7 @@ layout: page
 title: ERPConnect Version History
 description: ERPConnect Version History
 permalink: /:collection/:path
-homepage-weight: 6
+weight: 6
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

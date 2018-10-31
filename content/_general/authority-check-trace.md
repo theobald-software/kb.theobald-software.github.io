@@ -3,7 +3,7 @@ layout: page
 title: Authority Check Trace
 description: Authority Check Trace
 permalink: /:collection/:path
-homepage-weight: 5
+weight: 5
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

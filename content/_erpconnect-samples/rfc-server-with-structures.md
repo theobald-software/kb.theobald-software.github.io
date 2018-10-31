@@ -3,7 +3,7 @@ layout: page
 title: RFC Server with structures
 description: RFC Server with structures
 permalink: /:collection/:path
-homepage-weight: 28
+weight: 28
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

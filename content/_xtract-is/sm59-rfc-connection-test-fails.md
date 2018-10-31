@@ -3,7 +3,7 @@ layout: page
 title: SM59 RFC - Connection Test fails
 description: SM59 RFC - Connection Test fails
 permalink: /:collection/:path
-homepage-weight: 17
+weight: 17
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

@@ -3,7 +3,7 @@ layout: page
 title: How to-Create a provider-hosted app for SharePoint Online to access SAP data via ERPConnect Services Core
 description: How to- Create a provider-hosted app for SharePoint Online to access SAP data via ERPConnect Services Core
 permalink: /:collection/:path
-homepage-weight: 10
+weight: 10
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

@@ -3,7 +3,7 @@ layout: page
 title: Workaround for missing UseRFCWrapper function
 description: Workaround for missing UseRFCWrapper function
 permalink: /:collection/:path
-homepage-weight: 9
+weight: 9
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

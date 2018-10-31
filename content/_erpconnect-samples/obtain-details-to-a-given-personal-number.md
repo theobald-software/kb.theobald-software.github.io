@@ -3,7 +3,7 @@ layout: page
 title: Obtain details to a given personal number
 description: Obtain details to a given personal number
 permalink: /:collection/:path
-homepage-weight: 17
+weight: 17
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

@@ -3,7 +3,7 @@ layout: page
 title: ERROR service ‚?‘ unknown or service sapms<SID> unknown
 description: ERROR service ‚?‘ unknown or service sapms<SID> unknown
 permalink: /:collection/:path
-homepage-weight: 7
+weight: 7
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

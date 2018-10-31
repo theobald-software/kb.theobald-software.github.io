@@ -3,7 +3,7 @@ layout: page
 title: Xtract Table Component Exception Could not find Element 'PACKAGESIZE'
 description: Xtract Table Component Exception Could not find Element 'PACKAGESIZE'
 permalink: /:collection/:path
-homepage-weight: 3
+weight: 3
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

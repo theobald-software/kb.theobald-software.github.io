@@ -3,7 +3,7 @@ layout: page
 title: SNC Connection with SSO
 description: SNC Connection with SSO
 permalink: /:collection/:path
-homepage-weight: 7
+weight: 7
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

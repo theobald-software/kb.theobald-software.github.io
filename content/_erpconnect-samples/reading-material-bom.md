@@ -3,7 +3,7 @@ layout: page
 title: Reading material BOM
 description: Reading material BOM
 permalink: /:collection/:path
-homepage-weight: 38
+weight: 38
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

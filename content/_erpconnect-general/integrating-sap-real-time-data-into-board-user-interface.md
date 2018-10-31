@@ -3,7 +3,7 @@ layout: page
 title: Integrating SAP real-time data into BOARD user interface
 description: Integrating SAP real-time data into BOARD user interface
 permalink: /:collection/:path
-homepage-weight: 11
+weight: 11
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

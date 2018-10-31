@@ -3,7 +3,7 @@ layout: page
 title: The Syntax of XtractQL and Examples
 description: The Syntax of XtractQL and Examples
 permalink: /:collection/:path
-homepage-weight: 2
+weight: 2
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

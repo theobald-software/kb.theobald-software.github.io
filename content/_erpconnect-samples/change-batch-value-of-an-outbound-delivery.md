@@ -3,7 +3,7 @@ layout: page
 title: Change Batch value of an Outbound delivery
 description: Change Batch value of an Outbound delivery
 permalink: /:collection/:path
-homepage-weight: 47
+weight: 47
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

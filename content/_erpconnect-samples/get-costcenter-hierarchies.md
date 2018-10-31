@@ -3,7 +3,7 @@ layout: page
 title: Get CostCenter hierarchies
 description: Get CostCenter hierarchies
 permalink: /:collection/:path
-homepage-weight: 11
+weight: 11
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

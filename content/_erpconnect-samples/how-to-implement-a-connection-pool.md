@@ -3,7 +3,7 @@ layout: page
 title: How to implement a connection pool
 description: How to implement a connection pool
 permalink: /:collection/:path
-homepage-weight: 34
+weight: 34
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

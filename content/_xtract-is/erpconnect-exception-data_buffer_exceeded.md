@@ -3,7 +3,7 @@ layout: page
 title: ERPConnect Exception - DATA_BUFFER_EXCEEDED
 description: ERPConnect Exception - DATA_BUFFER_EXCEEDED
 permalink: /:collection/:path
-homepage-weight: 16
+weight: 16
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

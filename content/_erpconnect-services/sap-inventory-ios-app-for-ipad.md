@@ -3,7 +3,7 @@ layout: page
 title: SAP Inventory iOS App for iPad
 description: SAP Inventory iOS App for iPad
 permalink: /:collection/:path
-homepage-weight: 7
+weight: 7
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

@@ -3,7 +3,7 @@ layout: page
 title: Using the ArchiveLink BAPI to send barcodes to SAP
 description: Using the ArchiveLink BAPI to send barcodes to SAP
 permalink: /:collection/:path
-homepage-weight: 8
+weight: 8
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

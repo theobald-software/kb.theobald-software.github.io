@@ -3,7 +3,7 @@ layout: page
 title: How to call an SSIS Package from .NET
 description: How to call an SSIS Package from .NET
 permalink: /:collection/:path
-homepage-weight: 7
+weight: 7
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

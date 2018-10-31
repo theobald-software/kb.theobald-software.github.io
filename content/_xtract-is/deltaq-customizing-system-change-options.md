@@ -3,7 +3,7 @@ layout: page
 title: DeltaQ Customizing System Change Options
 description: DeltaQ Customizing System Change Options
 permalink: /:collection/:path
-homepage-weight: 21
+weight: 21
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

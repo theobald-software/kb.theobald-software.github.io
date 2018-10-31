@@ -3,7 +3,7 @@ layout: page
 title: How to install the license for Xtract QV
 description: How to install the license for Xtract QV
 permalink: /:collection/:path
-homepage-weight: 7
+weight: 7
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

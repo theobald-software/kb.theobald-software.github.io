@@ -3,7 +3,7 @@ layout: page
 title: Post Goods Movement
 description: Post Goods Movement
 permalink: /:collection/:path
-homepage-weight: 27
+weight: 27
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

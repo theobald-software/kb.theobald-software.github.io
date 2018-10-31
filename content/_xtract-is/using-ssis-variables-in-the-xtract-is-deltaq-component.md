@@ -3,7 +3,7 @@ layout: page
 title: Using SSIS Variables in the Xtract IS DeltaQ Component
 description: Using SSIS Variables in the Xtract IS DeltaQ Component
 permalink: /:collection/:path
-homepage-weight: 8
+weight: 8
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

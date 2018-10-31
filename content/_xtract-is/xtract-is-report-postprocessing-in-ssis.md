@@ -3,7 +3,7 @@ layout: page
 title: Xtract IS Report Postprocessing in SSIS
 description: Xtract IS Report Postprocessing in SSIS
 permalink: /:collection/:path
-homepage-weight: 4
+weight: 4
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

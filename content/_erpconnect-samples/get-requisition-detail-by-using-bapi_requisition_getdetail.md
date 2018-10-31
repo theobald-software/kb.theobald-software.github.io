@@ -3,7 +3,7 @@ layout: page
 title: Get Requisition Detail by using BAPI_REQUISITION_GETDETAIL
 description: Get Requisition Detail by using BAPI_REQUISITION_GETDETAIL
 permalink: /:collection/:path
-homepage-weight: 40
+weight: 40
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

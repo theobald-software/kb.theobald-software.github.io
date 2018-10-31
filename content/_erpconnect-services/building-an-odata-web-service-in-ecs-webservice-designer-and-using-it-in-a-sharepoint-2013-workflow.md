@@ -3,7 +3,7 @@ layout: page
 title: Building an OData web service in ECS WebService Designer and using it in a SharePoint 2013 workflow
 description: Building an OData web service in ECS WebService Designer and using it in a SharePoint 2013 workflow
 permalink: /:collection/:path
-homepage-weight: 12
+weight: 12
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

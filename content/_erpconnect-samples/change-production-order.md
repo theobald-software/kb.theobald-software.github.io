@@ -3,7 +3,7 @@ layout: page
 title: Change Production Order
 description: Change Production Order
 permalink: /:collection/:path
-homepage-weight: 44
+weight: 44
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

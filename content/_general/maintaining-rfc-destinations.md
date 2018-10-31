@@ -3,7 +3,7 @@ layout: page
 title: Maintaining RFC Destinations
 description: Maintaining RFC Destinations
 permalink: /:collection/:path
-homepage-weight: 4
+weight: 4
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

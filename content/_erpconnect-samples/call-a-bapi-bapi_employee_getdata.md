@@ -3,7 +3,7 @@ layout: page
 title: Call a BAPI- BAPI_EMPLOYEE_GETDATA
 description: Call a BAPI- BAPI_EMPLOYEE_GETDATA
 permalink: /:collection/:path
-homepage-weight: 15
+weight: 15
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

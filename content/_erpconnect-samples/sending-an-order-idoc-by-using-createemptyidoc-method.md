@@ -3,7 +3,7 @@ layout: page
 title: Sending an ORDER IDoc by using CreateEmptyIdoc method
 description: Sending an ORDER IDoc by using CreateEmptyIdoc method
 permalink: /:collection/:path
-homepage-weight: 20
+weight: 20
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

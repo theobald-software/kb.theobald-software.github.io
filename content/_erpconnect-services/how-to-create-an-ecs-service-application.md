@@ -3,7 +3,7 @@ layout: page
 title: How to create an ECS Service Application
 description: How to create an ECS Service Application
 permalink: /:collection/:path
-homepage-weight: 1
+weight: 1
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

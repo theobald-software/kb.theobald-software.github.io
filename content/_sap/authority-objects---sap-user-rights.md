@@ -3,7 +3,7 @@ layout: page
 title: Authority Objects - SAP User Rights
 description: Authority Objects - SAP User Rights
 permalink: /:collection/:path
-homepage-weight: 1
+weight: 1
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

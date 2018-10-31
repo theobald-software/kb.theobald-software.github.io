@@ -3,7 +3,7 @@ layout: page
 title: Download Business Object Attachments (e.g. from a purchase order)
 description: Download Business Object Attachments (e.g. from a purchase order)
 permalink: /:collection/:path
-homepage-weight: 39
+weight: 39
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

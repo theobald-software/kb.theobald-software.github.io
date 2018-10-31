@@ -3,7 +3,7 @@ layout: page
 title: Create your own AskUserAndOpen() function
 description: Create your own AskUserAndOpen() function
 permalink: /:collection/:path
-homepage-weight: 8
+weight: 8
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

@@ -3,7 +3,7 @@ layout: page
 title: Consume ERPConnect Services REST/JSON Webservice from Java
 description: Consume ERPConnect Services REST/JSON Webservice from Java
 permalink: /:collection/:path
-homepage-weight: 6
+weight: 6
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

@@ -3,7 +3,7 @@ layout: page
 title: Showing SAP Data in a Grid within SharePoint with 50 lines of JavaScript (Updated!)
 description: Showing SAP Data in a Grid within SharePoint with 50 lines of JavaScript (Updated!)
 permalink: /:collection/:path
-homepage-weight: 4
+weight: 4
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

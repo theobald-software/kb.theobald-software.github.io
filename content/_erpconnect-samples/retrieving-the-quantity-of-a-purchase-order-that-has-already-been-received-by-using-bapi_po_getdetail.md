@@ -3,7 +3,7 @@ layout: page
 title: Retrieving the quantity of a purchase order that has already been received by using BAPI_PO_GETDETAIL
 description: Retrieving the quantity of a purchase order that has already been received by using BAPI_PO_GETDETAIL
 permalink: /:collection/:path
-homepage-weight: 37
+weight: 37
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

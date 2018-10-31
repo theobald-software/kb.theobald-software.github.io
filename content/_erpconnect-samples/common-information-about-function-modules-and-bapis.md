@@ -3,7 +3,7 @@ layout: page
 title: Common Information about function modules and BAPIs
 description: Common Information about function modules and BAPIs
 permalink: /:collection/:path
-homepage-weight: 12
+weight: 12
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

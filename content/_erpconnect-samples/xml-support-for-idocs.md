@@ -3,7 +3,7 @@ layout: page
 title: XML Support for IDocs
 description: XML Support for IDocs
 permalink: /:collection/:path
-homepage-weight: 22
+weight: 22
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

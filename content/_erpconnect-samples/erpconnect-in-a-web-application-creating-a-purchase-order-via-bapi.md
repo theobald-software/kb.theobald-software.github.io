@@ -3,7 +3,7 @@ layout: page
 title: ERPConnect in a web application- Creating a Purchase Order via BAPI
 description: ERPConnect in a web application- Creating a Purchase Order via BAPI
 permalink: /:collection/:path
-homepage-weight: 14
+weight: 14
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

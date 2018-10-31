@@ -3,7 +3,7 @@ layout: page
 title: List of the SSIS/VS Versions Supported by Xtract IS
 description: List of the SSIS/VS Versions Supported by Xtract IS
 permalink: /:collection/:path
-homepage-weight: 25
+weight: 25
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

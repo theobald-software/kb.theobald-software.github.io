@@ -3,7 +3,7 @@ layout: page
 title: SAP Inventory Windows 8.1 RT App for tablet computers
 description: SAP Inventory Windows 8.1 RT App for tablet computers
 permalink: /:collection/:path
-homepage-weight: 8
+weight: 8
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

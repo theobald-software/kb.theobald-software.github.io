@@ -3,7 +3,7 @@ layout: page
 title: Getting started with SAP / SharePoint Apps in the Cloud
 description: Getting started with SAP / SharePoint Apps in the Cloud
 permalink: /:collection/:path
-homepage-weight: 9
+weight: 9
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

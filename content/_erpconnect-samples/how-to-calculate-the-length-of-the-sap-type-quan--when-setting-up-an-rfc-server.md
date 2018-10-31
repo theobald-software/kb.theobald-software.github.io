@@ -3,7 +3,7 @@ layout: page
 title: How to calculate the length of the SAP type QUAN when setting up an RFC-Server
 description: How to calculate the length of the SAP type QUAN when setting up an RFC-Server
 permalink: /:collection/:path
-homepage-weight: 32
+weight: 32
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

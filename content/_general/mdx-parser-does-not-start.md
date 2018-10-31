@@ -3,7 +3,7 @@ layout: page
 title: MDX parser does not start
 description: MDX parser does not start
 permalink: /:collection/:path
-homepage-weight: 9
+weight: 9
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

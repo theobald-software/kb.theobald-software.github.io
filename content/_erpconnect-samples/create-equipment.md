@@ -3,7 +3,7 @@ layout: page
 title: Create Equipment
 description: Create Equipment
 permalink: /:collection/:path
-homepage-weight: 42
+weight: 42
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

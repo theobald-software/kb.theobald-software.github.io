@@ -3,7 +3,7 @@ layout: page
 title: Reading SAP Tables Directly
 description: Reading SAP Tables Directly
 permalink: /:collection/:path
-homepage-weight: 1
+weight: 1
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

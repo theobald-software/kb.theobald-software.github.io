@@ -3,7 +3,7 @@ layout: page
 title: Retrieve texts from a sales order by using RFC_READ_TEXT
 description: Retrieve texts from a sales order by using RFC_READ_TEXT
 permalink: /:collection/:path
-homepage-weight: 45
+weight: 45
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

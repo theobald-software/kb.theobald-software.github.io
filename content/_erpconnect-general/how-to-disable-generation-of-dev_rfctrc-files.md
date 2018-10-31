@@ -3,7 +3,7 @@ layout: page
 title: How to disable generation of dev_rfc.trc files or send them to a specific location
 description: How to disable generation of dev_rfc.trc files or send them to a specific location
 permalink: /:collection/:path
-homepage-weight: 5
+weight: 5
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

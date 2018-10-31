@@ -3,7 +3,7 @@ layout: page
 title: Xtract Report - Screen output without connection to user
 description: Xtract Report - Screen output without connection to user
 permalink: /:collection/:path
-homepage-weight: 3
+weight: 3
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

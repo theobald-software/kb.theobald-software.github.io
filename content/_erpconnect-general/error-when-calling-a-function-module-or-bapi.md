@@ -3,7 +3,7 @@ layout: page
 title: Error when calling a Function Module or BAPI
 description: Error when calling a Function Module or BAPI
 permalink: /:collection/:path
-homepage-weight: 13
+weight: 13
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

@@ -3,7 +3,7 @@ layout: page
 title: Receiving an IDoc
 description: Receiving an IDoc
 permalink: /:collection/:path
-homepage-weight: 36
+weight: 36
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

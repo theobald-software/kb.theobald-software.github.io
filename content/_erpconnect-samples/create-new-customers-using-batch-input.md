@@ -3,7 +3,7 @@ layout: page
 title: Create New Customers using Batch Input
 description: Create New Customers using Batch Input
 permalink: /:collection/:path
-homepage-weight: 46
+weight: 46
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

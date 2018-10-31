@@ -3,7 +3,7 @@ layout: page
 title: Xtract DeltaQ Component Exception DataSource XXX has to be replicated
 description: Xtract DeltaQ Component Exception DataSource XXX has to be replicated
 permalink: /:collection/:path
-homepage-weight: 15
+weight: 15
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

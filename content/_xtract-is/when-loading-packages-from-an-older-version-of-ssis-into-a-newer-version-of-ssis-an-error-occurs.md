@@ -3,7 +3,7 @@ layout: page
 title: When loading packages from an older version of SSIS into a newer version of SSIS an error occurs
 description: When loading packages from an older version of SSIS into a newer version of SSIS an error occurs
 permalink: /:collection/:path
-homepage-weight: 18
+weight: 18
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

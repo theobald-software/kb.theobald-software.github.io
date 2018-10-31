@@ -3,7 +3,7 @@ layout: page
 title: Executing BW Queries
 description: Executing BW Queries
 permalink: /:collection/:path
-homepage-weight: 31
+weight: 31
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

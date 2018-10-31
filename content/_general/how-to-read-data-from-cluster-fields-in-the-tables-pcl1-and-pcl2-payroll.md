@@ -3,7 +3,7 @@ layout: page
 title: How to read data from Cluster Fields in the Tables PCL1 and PCL2 (Payroll)
 description: How to read data from Cluster Fields in the Tables PCL1 and PCL2 (Payroll)
 permalink: /:collection/:path
-homepage-weight: 8
+weight: 8
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

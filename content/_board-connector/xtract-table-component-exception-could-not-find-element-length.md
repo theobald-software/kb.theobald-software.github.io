@@ -3,7 +3,7 @@ layout: page
 title: Xtract Table Component Exception Could not find Element 'LENGTH'
 description: Xtract Table Component Exception Could not find Element 'LENGTH'
 permalink: /:collection/:path
-homepage-weight: 4
+weight: 4
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

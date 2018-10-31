@@ -3,7 +3,7 @@ layout: page
 title: Transferring data packets with BWQuery class
 description: Transferring data packets with BWQuery class
 permalink: /:collection/:path
-homepage-weight: 30
+weight: 30
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

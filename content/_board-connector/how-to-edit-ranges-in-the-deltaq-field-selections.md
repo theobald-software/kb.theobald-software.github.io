@@ -3,7 +3,7 @@ layout: page
 title: How to Edit Ranges in the DeltaQ Field Selections
 description: How to Edit Ranges in the DeltaQ Field Selections
 permalink: /:collection/:path
-homepage-weight: 3
+weight: 3
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

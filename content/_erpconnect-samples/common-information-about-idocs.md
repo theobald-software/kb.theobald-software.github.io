@@ -3,7 +3,7 @@ layout: page
 title: Common information about IDocs
 description: Common information about IDocs
 permalink: /:collection/:path
-homepage-weight: 18
+weight: 18
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

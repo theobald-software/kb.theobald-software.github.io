@@ -7,7 +7,7 @@ layout: page
 
 <div class="row aligned-row" role="main">
     {% assign collection = site.collections | where:"label", page.collection %}
-    {% assign filtered_docs = collection[0].docs %}
+    {% assign filtered_docs = collection[0].docs | sort: 'weight' %}
 
     <div class="col-md-12 col-sm-12">
         {% for doc in filtered_docs %}

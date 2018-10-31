@@ -3,7 +3,7 @@ layout: page
 title: RFC Server with tables
 description: RFC Server with tables
 permalink: /:collection/:path
-homepage-weight: 5
+weight: 5
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

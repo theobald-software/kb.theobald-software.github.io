@@ -3,7 +3,7 @@ layout: page
 title: Xtract IS DeltaQ Convert String to Decimal
 description: Xtract IS DeltaQ Convert String to Decimal
 permalink: /:collection/:path
-homepage-weight: 5
+weight: 5
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

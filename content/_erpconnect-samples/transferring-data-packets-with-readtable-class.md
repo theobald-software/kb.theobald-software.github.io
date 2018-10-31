@@ -3,7 +3,7 @@ layout: page
 title: Transferring data packets with ReadTable class
 description: Transferring data packets with ReadTable class
 permalink: /:collection/:path
-homepage-weight: 6
+weight: 6
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

@@ -74,7 +74,7 @@ common-css:
                             <a href="{{ read_more_link }}"><h2>{{ collection.name }}</h2></a>
                         {% endif %}
                         <hr class="length">
-                        {% assign filtered_docs = collection.docs | sort: 'homepage-weight' %}
+                        {% assign filtered_docs = collection.docs | sort: 'weight' %}
                         {% for doc in filtered_docs limit:6 %}
                             {% unless doc.relative_path contains '/index' %}
                                 <div class="double-listing-item">

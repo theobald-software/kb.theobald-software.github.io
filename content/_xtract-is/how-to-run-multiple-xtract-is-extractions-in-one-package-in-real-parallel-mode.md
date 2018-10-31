@@ -3,7 +3,7 @@ layout: page
 title: How to run multiple Xtract IS extractions in one package in real parallel mode
 description: How to run multiple Xtract IS extractions in one package in real parallel mode
 permalink: /:collection/:path
-homepage-weight: 10
+weight: 10
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

@@ -3,7 +3,7 @@ layout: page
 title: Create Functional Location
 description: Create Functional Location
 permalink: /:collection/:path
-homepage-weight: 41
+weight: 41
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

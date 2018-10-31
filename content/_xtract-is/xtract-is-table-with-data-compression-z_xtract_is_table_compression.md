@@ -3,7 +3,7 @@ layout: page
 title: Xtract IS Table with Data Compression Z_XTRACT_IS_TABLE_COMPRESSION
 description: Xtract IS Table with Data Compression Z_XTRACT_IS_TABLE_COMPRESSION
 permalink: /:collection/:path
-homepage-weight: 22
+weight: 22
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

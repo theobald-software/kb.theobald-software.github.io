@@ -3,7 +3,7 @@ layout: page
 title: Get meta data of a table
 description: Get meta data of a table
 permalink: /:collection/:path
-homepage-weight: 10
+weight: 10
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

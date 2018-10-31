@@ -3,7 +3,7 @@ layout: page
 title: How to easily browse through SAP data
 description: How to easily browse through SAP data
 permalink: /:collection/:path
-homepage-weight: 10
+weight: 10
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

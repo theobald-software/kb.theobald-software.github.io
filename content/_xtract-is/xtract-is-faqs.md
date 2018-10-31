@@ -3,7 +3,7 @@ layout: page
 title: Xtract IS FAQs
 description: Xtract IS FAQs
 permalink: /:collection/:path
-homepage-weight: 19
+weight: 19
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

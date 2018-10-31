@@ -3,7 +3,7 @@ layout: page
 title: Getting an equipment list by using BAPI EQUI GETLIST / Using Select Ranges
 description: Getting an equipment list by using BAPI EQUI GETLIST / Using Select Ranges
 permalink: /:collection/:path
-homepage-weight: 43
+weight: 43
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

@@ -3,7 +3,7 @@ layout: page
 title: Look up purchase orders
 description: Look up purchase orders
 permalink: /:collection/:path
-homepage-weight: 26
+weight: 26
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

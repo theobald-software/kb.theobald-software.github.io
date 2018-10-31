@@ -3,7 +3,7 @@ layout: page
 title: Resend IDocs which where set to CPICERR in SM58
 description: Resend IDocs which where set to CPICERR in SM58
 permalink: /:collection/:path
-homepage-weight: 33
+weight: 33
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
