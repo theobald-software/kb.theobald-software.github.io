@@ -20,7 +20,4 @@ Definition for version numbering: **A.B.C [X]**
 
 #### YunIO
 
-| Version   | Date       | Component | Description                                                                      |
-|-----------|------------|-----------|----------------------------------------------------------------------------------|
-| 2.0.0 [M] | 2018-10-09 | General   | New serialization mechanism.                                                     |
-| 1.0.0 [M] | 2018-07-04 | General   | First edition of the product. Please check the online help for more information. |
+{% include _generated-version-history/YunIO.html %}
