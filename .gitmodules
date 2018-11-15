@@ -1,0 +1,3 @@
+[submodule "content/_version-history/generated"]
+	path = content/_version-history/generated
+	url = https://github.com/theobald-software/VersionHistoryUpdates
