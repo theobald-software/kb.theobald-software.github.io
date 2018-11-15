@@ -22,6 +22,7 @@ Definition for version numbering: **A.B.C [X]**
 
 [See also: Xtract Kernel Version History](./xtract-kernel-version-history)
 
+{% include generated/BOARDConnector.html %}
 
 | Version     | Date       | Component  | Description                                                                                                                                                                                                                       |
 |-------------|------------|------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
