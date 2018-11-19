@@ -1,0 +1,3278 @@
+<html>
+  <table border="1" cellspacing="0" cellpadding="3">
+    <tbody>
+      <tr>
+        <th class="col_ver">Version</th>
+        <th class="col_date">Date</th>
+        <th class="col_comp">Component</th>
+        <th class="col_desc">Description</th>
+      </tr>
+      <tr>
+        <td>3.5.12 [L]</td>
+        <td>2018-10-19</td>
+        <td>Query</td>
+        <td>Fixed a bug that caused queries without selection parameters to fail</td>
+      </tr>
+      <tr>
+        <td>3.5.11 [L]</td>
+        <td>2018-10-11</td>
+        <td>Destinations</td>
+        <td>SQLServer/AzureDWH: Increased timeouts to 4 hours</td>
+      </tr>
+      <tr>
+        <td>3.5.10 [L]</td>
+        <td>2018-10-11</td>
+        <td>Server</td>
+        <td>Fix for converting primary keys of query extractions from versions before 3.0</td>
+      </tr>
+      <tr>
+        <td>3.5.9 [L]</td>
+        <td>2018-10-11</td>
+        <td>General</td>
+        <td>Fix for transport request with certain SAP releases</td>
+      </tr>
+      <tr>
+        <td>3.5.8 [L]</td>
+        <td>2018-10-10</td>
+        <td>Server</td>
+        <td>Fix for converting sources from version 2.x (bug introduced in 3.5.2)</td>
+      </tr>
+      <tr>
+        <td>3.5.7 [L]</td>
+        <td>2018-10-09</td>
+        <td>Server</td>
+        <td>Fix for timeout during startup with large number of extractions</td>
+      </tr>
+      <tr>
+        <td>3.5.6 [L]</td>
+        <td>2018-10-04</td>
+        <td>Table</td>
+        <td>Added auto detection of compression function modules</td>
+      </tr>
+      <tr>
+        <td>3.5.5 [L]</td>
+        <td>2018-10-02</td>
+        <td>Table</td>
+        <td>Added support for RFC_READ_TABLE2 function modules</td>
+      </tr>
+      <tr>
+        <td>3.5.4 [M]</td>
+        <td>2018-10-01</td>
+        <td>Destinations</td>
+        <td>Database destinations: Fix for NULLs /  empty strings in SAP source values</td>
+      </tr>
+      <tr>
+        <td>3.5.3 [L]</td>
+        <td>2018-09-28</td>
+        <td>Designer</td>
+        <td>Added support for searching Active Directory users/groups in other domains</td>
+      </tr>
+      <tr>
+        <td>3.5.2 [M]</td>
+        <td>2018-09-28</td>
+        <td>Server</td>
+        <td>Fixes &amp; improvements for converting configuration &amp; logs from Xtract Universal before 3.x and Xtract QV</td>
+      </tr>
+      <tr>
+        <td>3.5.1 [L]</td>
+        <td>2018-09-25</td>
+        <td>General</td>
+        <td>Reduced network timeout for opening SAP connections</td>
+      </tr>
+      <tr>
+        <td>3.5.0 [M]</td>
+        <td>2018-09-24</td>
+        <td>General</td>
+        <td>Duration of extraction runs is now recoreded and displayed in main window and log viewer</td>
+      </tr>
+      <tr>
+        <td>3.4.1 [L]</td>
+        <td>2018-09-21</td>
+        <td>Destinations</td>
+        <td>Oracle: Fix for binary types larger than 1000 bytes (BLOB, e. g. table STXL), updated ODP.NET to 12.2</td>
+      </tr>
+      <tr>
+        <td>3.4.0 [M]</td>
+        <td>2018-09-19</td>
+        <td>Destinations</td>
+        <td>Alteryx Plugin: SAP credentials and run parameters can now be mapped to input fields for dynamic population at workflow runtime</td>
+      </tr>
+      <tr>
+        <td>3.3.15 [M]</td>
+        <td>2018-09-17</td>
+        <td>Server</td>
+        <td>Fixed missing row restriction in live preview (Table, TableJoin)</td>
+      </tr>
+      <tr>
+        <td>3.3.14 [M]</td>
+        <td>2018-09-13</td>
+        <td>Designer</td>
+        <td>Fix for changing primary key of Query and Table extractions</td>
+      </tr>
+      <tr>
+        <td>3.3.13 [L]</td>
+        <td>2018-09-12</td>
+        <td>Designer</td>
+        <td>Editing the source of multiple extractions at once is now supported</td>
+      </tr>
+      <tr>
+        <td>3.3.12 [L]</td>
+        <td>2018-09-11</td>
+        <td>General</td>
+        <td>Updated NWRFC libraries to 7.50</td>
+      </tr>
+      <tr>
+        <td>3.3.11 [L]</td>
+        <td>2018-08-30</td>
+        <td>General</td>
+        <td>Updated NWRFC libraries to 720 patchlevel 49</td>
+      </tr>
+      <tr>
+        <td>3.3.10 [M]</td>
+        <td>2018-08-28</td>
+        <td>Table</td>
+        <td>Fix for "use conversion routines" checkbox</td>
+      </tr>
+      <tr>
+        <td>3.3.9 [L]</td>
+        <td>2018-08-17</td>
+        <td>Destinations</td>
+        <td>MicroStrategy destination: Added ability to define folder name. </td>
+      </tr>
+      <tr>
+        <td>3.3.8 [L]</td>
+        <td>2018-08-15</td>
+        <td>Setup</td>
+        <td>Tableau: Added VC++2015 for Hyper</td>
+      </tr>
+      <tr>
+        <td>3.3.7 [M]</td>
+        <td>2018-08-14</td>
+        <td>General</td>
+        <td>Fix for primary key with all extraction types except Hierarchy, Table and Query (broken since 3.0).</td>
+      </tr>
+      <tr>
+        <td>3.3.6 [L]</td>
+        <td>2018-08-14</td>
+        <td>Setup</td>
+        <td>Installation of Tableau Extract API is now optional</td>
+      </tr>
+      <tr>
+        <td>3.3.5 [M]</td>
+        <td>2018-08-13</td>
+        <td>Destinations</td>
+        <td>Tableau: Updated Hyper SDK to 2018.2</td>
+      </tr>
+      <tr>
+        <td>3.3.4 [L]</td>
+        <td>2018-08-13</td>
+        <td>Destinations</td>
+        <td>Tableau: Fix for multiple instances of TDE SDK on same machine</td>
+      </tr>
+      <tr>
+        <td>3.3.3 [L]</td>
+        <td>2018-08-09</td>
+        <td>DeltaQ</td>
+        <td>Removed Z_XTRACT_DELTAQ_CUST from transport request, because of problems with missing data types</td>
+      </tr>
+      <tr>
+        <td>3.3.2 [L]</td>
+        <td>2018-08-09</td>
+        <td>Server</td>
+        <td>Added support for converting old xml destinations</td>
+      </tr>
+      <tr>
+        <td>3.3.1 [L]</td>
+        <td>2018-08-09</td>
+        <td>Destinations</td>
+        <td>Tableau Destination: Fixed connectivity issues with default sites</td>
+      </tr>
+      <tr>
+        <td>3.3.0 [M]</td>
+        <td>2018-08-08</td>
+        <td>Destinations</td>
+        <td>Added Alteryx Connect Destination</td>
+      </tr>
+      <tr>
+        <td>3.2.4 [L]</td>
+        <td>2018-08-08</td>
+        <td>Destinations</td>
+        <td>Tableau Destination: fixed an error when trying to select a project from default site</td>
+      </tr>
+      <tr>
+        <td>3.2.3 [M]</td>
+        <td>2018-08-07</td>
+        <td>Security</td>
+        <td>Explicitly enabled TLS1.1 &amp; 1.2, disabled TLS1.0 &amp; SSL3</td>
+      </tr>
+      <tr>
+        <td>3.2.2 [L]</td>
+        <td>2018-08-06</td>
+        <td>Destinations</td>
+        <td>Fix for missing log run in browser (Azure Blob &amp; S3)</td>
+      </tr>
+      <tr>
+        <td>3.2.1 [M]</td>
+        <td>2018-08-03</td>
+        <td>Designer</td>
+        <td>Fixed help links (question mark button)</td>
+      </tr>
+      <tr>
+        <td>3.2.0 [M]</td>
+        <td>2018-07-24</td>
+        <td>General</td>
+        <td>Added support for non-Unicode multibyte systems (Asian characters), removed background extraction (Table)</td>
+      </tr>
+      <tr>
+        <td>3.1.15 [L]</td>
+        <td>2018-07-17</td>
+        <td>Report</td>
+        <td>Updated the function module for report extracting</td>
+      </tr>
+      <tr>
+        <td>3.1.14 [L]</td>
+        <td>2018-07-12</td>
+        <td>Destinations</td>
+        <td>SQLServer: TLS encryption can be enforced now</td>
+      </tr>
+      <tr>
+        <td>3.1.13 [M]</td>
+        <td>2018-07-12</td>
+        <td>Server</td>
+        <td>Fix for run parameter 'destination'</td>
+      </tr>
+      <tr>
+        <td>3.1.12 [M]</td>
+        <td>2018-07-12</td>
+        <td>Server</td>
+        <td>Fix for selecting X.509 certificates</td>
+      </tr>
+      <tr>
+        <td>3.1.11 [L]</td>
+        <td>2018-07-05</td>
+        <td>Server</td>
+        <td>Server configuration: Fix for converting default Int values from V2.x (e. g. config server starting on port 0 in some cases)</td>
+      </tr>
+      <tr>
+        <td>3.1.10 [L]</td>
+        <td>2018-06-29</td>
+        <td>Destinations</td>
+        <td>Tableau Destination: now supports Hyper extracts and Tableau 10.5+ project structure</td>
+      </tr>
+      <tr>
+        <td>3.1.9 [L]</td>
+        <td>2018-06-26</td>
+        <td>Destinations</td>
+        <td>Added support for MicroStrategy 10.11.</td>
+      </tr>
+      <tr>
+        <td>3.1.8 [L]</td>
+        <td>2018-06-22</td>
+        <td>Server</td>
+        <td>Fix for metadata API (e. g. Alteryx)</td>
+      </tr>
+      <tr>
+        <td>3.1.7 [L]</td>
+        <td>2018-06-21</td>
+        <td>Designer</td>
+        <td>Fix for connect window showing when connected</td>
+      </tr>
+      <tr>
+        <td>3.1.6 [M]</td>
+        <td>2018-06-21</td>
+        <td>Table</td>
+        <td>Fix for scripted expressions in WHERE (not working since 3.0.0.0)</td>
+      </tr>
+      <tr>
+        <td>3.1.5 [M]</td>
+        <td>2018-06-21</td>
+        <td>Server</td>
+        <td>Stability improvements for broken extractions (Alteryx, CSV API)</td>
+      </tr>
+      <tr>
+        <td>3.1.4 [M]</td>
+        <td>2018-06-21</td>
+        <td>General</td>
+        <td>Designer communication: Stability improvements</td>
+      </tr>
+      <tr>
+        <td>3.1.3 [M]</td>
+        <td>2018-06-21</td>
+        <td>Designer</td>
+        <td>GUI fixes (buttons not visible at some screen resolutions etc.)</td>
+      </tr>
+      <tr>
+        <td>3.1.2 [L]</td>
+        <td>2018-06-14</td>
+        <td>Destinations</td>
+        <td>Fixed a bug in the MicroStrategy destination, that caused cubes to be unintentionally replaced in some situations.</td>
+      </tr>
+      <tr>
+        <td>3.1.1 [L]</td>
+        <td>2018-06-08</td>
+        <td>Destinations</td>
+        <td>Added definition of MicroStrategy attributes and metrics.</td>
+      </tr>
+      <tr>
+        <td>3.1.0 [M]</td>
+        <td>2018-05-30</td>
+        <td>Security</td>
+        <td>Added "Require SAP credentials" to source, removed X.509 certificate path
+(please configure via SNC solution)</td>
+      </tr>
+      <tr>
+        <td>3.0.8 [M]</td>
+        <td>2018-05-30</td>
+        <td>BW Cube</td>
+        <td>Set package size to 20.000 for new extractions</td>
+      </tr>
+      <tr>
+        <td>3.0.7 [L]</td>
+        <td>2018-05-30</td>
+        <td>Destinations</td>
+        <td>SQLServer/AzureDWH: Increased timeouts to 60 minutes</td>
+      </tr>
+      <tr>
+        <td>3.0.6 [M]</td>
+        <td>2018-05-24</td>
+        <td>General</td>
+        <td>Fixes &amp; improvements for Designer/Server communication</td>
+      </tr>
+      <tr>
+        <td>3.0.5 [M]</td>
+        <td>2018-05-24</td>
+        <td>Designer</td>
+        <td>Fix for sorting columns</td>
+      </tr>
+      <tr>
+        <td>3.0.4 [M]</td>
+        <td>2018-05-24</td>
+        <td>Designer</td>
+        <td>Main form scrolls to selected row after refresh</td>
+      </tr>
+      <tr>
+        <td>3.0.3 [M]</td>
+        <td>2018-05-24</td>
+        <td>Security</td>
+        <td>Option "Require SAP credentials" implicitly disables result cache now</td>
+      </tr>
+      <tr>
+        <td>3.0.2 [H]</td>
+        <td>2018-05-24</td>
+        <td>Security</td>
+        <td>Option "Require SAP credentials" could not be modified for all extraction types except for Hierarchy, Query and Table</td>
+      </tr>
+      <tr>
+        <td>3.0.1 [M]</td>
+        <td>2018-05-22</td>
+        <td>Server</td>
+        <td>Fix for converting security settings</td>
+      </tr>
+      <tr><td><a class="ReleaseNote" href="https://my.theobald-software.com/ReleaseNotes/XtractUniversal/XtractUniversal-3.0.0.html">3.0.0 [M]</a></td><td>2018-05-17</td><td>General</td><td>Improvements for Designer/Server communication, security and configuration persistence(<a class="ReleaseNote" href="https://my.theobald-software.com/ReleaseNotes/XtractUniversal/XtractUniversal-3.0.0.html">Release note</a>)</td></tr>
+      <tr>
+        <td>2.109.7 [M]</td>
+        <td>2018-05-16</td>
+        <td>BW Cube</td>
+        <td>Fix for decimal count in MDX mode</td>
+      </tr>
+      <tr>
+        <td>2.109.6 [L]</td>
+        <td>2018-04-17</td>
+        <td>General</td>
+        <td>Updated EULA</td>
+      </tr>
+      <tr>
+        <td>2.109.5 [L]</td>
+        <td>2018-04-06</td>
+        <td>Destinations</td>
+        <td>Extended error logging in exasol destination.</td>
+      </tr>
+      <tr>
+        <td>2.109.4 [L]</td>
+        <td>2018-03-06</td>
+        <td>Destinations</td>
+        <td>Alteryx Plugin: adjustment for Alteryx SDK for columns with more than 15 decimals places</td>
+      </tr>
+      <tr>
+        <td>2.109.3 [L]</td>
+        <td>2018-02-07</td>
+        <td>Server</td>
+        <td>Fixed a bug with extraction metadata.</td>
+      </tr>
+      <tr>
+        <td>2.109.2 [L]</td>
+        <td>2018-02-01</td>
+        <td>Destinations</td>
+        <td>Fix for Drop And Create update policy in MicroStrategy destination.</td>
+      </tr>
+      <tr>
+        <td>2.109.1 [L]</td>
+        <td>2018-01-15</td>
+        <td>Server</td>
+        <td>Improved handling of multiple http requests to the xtract universal server.</td>
+      </tr>
+      <tr>
+        <td>2.109.0 [L]</td>
+        <td>2017-12-22</td>
+        <td>Destinations</td>
+        <td>Added MicroStrategy destination.</td>
+      </tr>
+      <tr>
+        <td>2.108.8 [M]</td>
+        <td>2017-12-05</td>
+        <td>Destinations</td>
+        <td>OData: Fix for Excel/PowerPivot 2016</td>
+      </tr>
+      <tr>
+        <td>2.108.7 [L]</td>
+        <td>2017-12-04</td>
+        <td>Destinations</td>
+        <td>Fixed an issue in S3 destination where extracting a large amount of rows would cause an overflow</td>
+      </tr>
+      <tr>
+        <td>2.108.6 [L]</td>
+        <td>2017-12-04</td>
+        <td>Destinations</td>
+        <td>Improved error handling in S3 destination</td>
+      </tr>
+      <tr>
+        <td>2.108.5 [L]</td>
+        <td>2017-12-01</td>
+        <td>Destinations</td>
+        <td>Added basic authentication to Alteryx plugin</td>
+      </tr>
+      <tr>
+        <td>2.108.4 [L]</td>
+        <td>2017-11-30</td>
+        <td>Designer</td>
+        <td>Fixes for GUI scaling</td>
+      </tr>
+      <tr>
+        <td>2.108.3 [L]</td>
+        <td>2017-11-30</td>
+        <td>General</td>
+        <td>Updated transport for Z_XTRACT_IS_TABLE_JOIN</td>
+      </tr>
+      <tr>
+        <td>2.108.2 [L]</td>
+        <td>2017-11-27</td>
+        <td>Destinations</td>
+        <td>Improved error handling for S3 destination</td>
+      </tr>
+      <tr>
+        <td>2.108.1 [M]</td>
+        <td>2017-11-21</td>
+        <td>Destinations</td>
+        <td>Fix for Alteryx plugin setup</td>
+      </tr>
+      <tr>
+        <td>2.108.0 [M]</td>
+        <td>2017-11-20</td>
+        <td>Destinations</td>
+        <td>Added Azure Blob Storage destination</td>
+      </tr>
+      <tr>
+        <td>2.107.11 [L]</td>
+        <td>2017-11-20</td>
+        <td>Table Join</td>
+        <td>Adjustments in Z_XTRACT_IS_TABLE_JOIN function.</td>
+      </tr>
+      <tr>
+        <td>2.107.9 [M]</td>
+        <td>2017-10-02</td>
+        <td>Destinations</td>
+        <td>EXASOL: Fix for DBNull values</td>
+      </tr>
+      <tr>
+        <td>2.107.8 [L]</td>
+        <td>2017-09-15</td>
+        <td>Destinations</td>
+        <td>CSV: Improved error message</td>
+      </tr>
+      <tr>
+        <td>2.107.7 [L]</td>
+        <td>2017-09-13</td>
+        <td>Designer</td>
+        <td>Disabled "..." button when creating new extraction without admin privileges</td>
+      </tr>
+      <tr>
+        <td>2.107.6 [L]</td>
+        <td>2017-09-12</td>
+        <td>Destinations</td>
+        <td>SQLServer - Prepare Merge: Fix for collations</td>
+      </tr>
+      <tr>
+        <td>2.107.5 [M]</td>
+        <td>2017-09-12</td>
+        <td>Destinations</td>
+        <td>Fix for "Finalize Merge"</td>
+      </tr>
+      <tr>
+        <td>2.107.4 [M]</td>
+        <td>2017-09-08</td>
+        <td>Destinations</td>
+        <td>Fixes &amp; improvements for Oracle destination</td>
+      </tr>
+      <tr>
+        <td>2.107.3 [L]</td>
+        <td>2017-09-08</td>
+        <td>Destinations</td>
+        <td>Fix for Oracle Destination (bug introduced in 2.107.0.0)</td>
+      </tr>
+      <tr>
+        <td>2.107.2 [M]</td>
+        <td>2017-09-08</td>
+        <td>Destinations</td>
+        <td>EXASOL: Fix for DBNull values</td>
+      </tr>
+      <tr>
+        <td>2.107.1 [M]</td>
+        <td>2017-09-06</td>
+        <td>BW Cube</td>
+        <td>Fix for BWCube</td>
+      </tr>
+      <tr>
+        <td>2.107.0 [M]</td>
+        <td>2017-09-05</td>
+        <td>Destinations</td>
+        <td>Merge with staging table is now available for all database destinations</td>
+      </tr>
+      <tr>
+        <td>2.106.0 [M]</td>
+        <td>2017-09-05</td>
+        <td>Destinations</td>
+        <td>Added Amazon S3 Destination</td>
+      </tr>
+      <tr>
+        <td>2.105.17 [L]</td>
+        <td>2017-08-11</td>
+        <td>General</td>
+        <td>License: Added support for FQDN</td>
+      </tr>
+      <tr>
+        <td>2.105.16 [L]</td>
+        <td>2017-08-04</td>
+        <td>General</td>
+        <td>Updated ABAP code &amp; transports</td>
+      </tr>
+      <tr>
+        <td>2.105.15 [L]</td>
+        <td>2017-08-04</td>
+        <td>BAPI</td>
+        <td>Fix for switching between non-Unicode and Unicode systems</td>
+      </tr>
+      <tr>
+        <td>2.105.14 [L]</td>
+        <td>2017-08-03</td>
+        <td>General</td>
+        <td>License: Added support for server names longer than 15 bytes</td>
+      </tr>
+      <tr>
+        <td>2.105.13 [L]</td>
+        <td>2017-07-12</td>
+        <td>Designer</td>
+        <td>Fix for "the specified network password is not correct"</td>
+      </tr>
+      <tr>
+        <td>2.105.12 [M]</td>
+        <td>2017-07-06</td>
+        <td>DeltaQ</td>
+        <td>Enabled automatic synchronization by default</td>
+      </tr>
+      <tr>
+        <td>2.105.11 [L]</td>
+        <td>2017-07-05</td>
+        <td>General</td>
+        <td>Fix for server license check in clusters</td>
+      </tr>
+      <tr>
+        <td>2.105.10 [L]</td>
+        <td>2017-07-04</td>
+        <td>General</td>
+        <td>Improved error message for license server mismatch</td>
+      </tr>
+      <tr>
+        <td>2.105.9 [L]</td>
+        <td>2017-07-03</td>
+        <td>Server</td>
+        <td>Fix for "the specified network password is not correct"</td>
+      </tr>
+      <tr>
+        <td>2.105.8 [M]</td>
+        <td>2017-06-22</td>
+        <td>Server</td>
+        <td>Server no longer runs separate app domain</td>
+      </tr>
+      <tr>
+        <td>2.105.7 [L]</td>
+        <td>2017-06-02</td>
+        <td>Server</td>
+        <td>Fixes &amp; improvements for result cache</td>
+      </tr>
+      <tr>
+        <td>2.105.6 [L]</td>
+        <td>2017-05-31</td>
+        <td>BW Cube</td>
+        <td>Added setting "legacy metadata retrieval"</td>
+      </tr>
+      <tr>
+        <td>2.105.5 [L]</td>
+        <td>2017-05-24</td>
+        <td>Destinations</td>
+        <td>SharePoint: Fix of the merge operation for some users (GetListItems failed).</td>
+      </tr>
+      <tr>
+        <td>2.105.4 [M]</td>
+        <td>2017-05-09</td>
+        <td>Table</td>
+        <td>Z_XTRACT_IS_TABLE_COMPRESSION: Added support for decimal floats</td>
+      </tr>
+      <tr>
+        <td>2.105.3 [L]</td>
+        <td>2017-05-08</td>
+        <td>General</td>
+        <td>Fix for Alteryx and Qlik support in xu.exe</td>
+      </tr>
+      <tr>
+        <td>2.105.2 [L]</td>
+        <td>2017-05-02</td>
+        <td>General</td>
+        <td>Fix in xu.exe for extraction names with length of 1 character.</td>
+      </tr>
+      <tr>
+        <td>2.105.1 [L]</td>
+        <td>2017-04-27</td>
+        <td>Destinations</td>
+        <td>Added support for Tableau server 10.2</td>
+      </tr>
+      <tr>
+        <td>2.105.0 [M]</td>
+        <td>2017-04-26</td>
+        <td>DeltaQ</td>
+        <td>Moved server pool to separate process</td>
+      </tr>
+      <tr>
+        <td>2.104.2 [L]</td>
+        <td>2017-04-18</td>
+        <td>Table Join</td>
+        <td>Fixes for TableJoin data transfer</td>
+      </tr>
+      <tr>
+        <td>2.104.1 [M]</td>
+        <td>2017-04-06</td>
+        <td>Designer</td>
+        <td>Fixes for destination multiselect</td>
+      </tr>
+      <tr>
+        <td>2.104.0 [L]</td>
+        <td>2017-04-03</td>
+        <td>Designer</td>
+        <td>Destination of more than one extractions can be changed at once</td>
+      </tr>
+      <tr>
+        <td>2.103.9 [L]</td>
+        <td>2017-03-29</td>
+        <td>BW Cube</td>
+        <td>Fix for buffer error when output column transformation exchanged measure with dimension or vice versa</td>
+      </tr>
+      <tr>
+        <td>2.103.8 [L]</td>
+        <td>2017-03-28</td>
+        <td>General</td>
+        <td>xu.exe: Increased error tolerance</td>
+      </tr>
+      <tr>
+        <td>2.103.7 [L]</td>
+        <td>2017-03-23</td>
+        <td>OHS</td>
+        <td>Ignoring SAP error 307 (empty result)</td>
+      </tr>
+      <tr>
+        <td>2.103.6 [H]</td>
+        <td>2017-03-17</td>
+        <td>Destinations</td>
+        <td>CSV: Fix for missing values (bug introduced in 2.103.3)</td>
+      </tr>
+      <tr>
+        <td>2.103.5 [M]</td>
+        <td>2017-03-16</td>
+        <td>Server</td>
+        <td>Reduced amount of messages in server log</td>
+      </tr>
+      <tr>
+        <td>2.103.4 [M]</td>
+        <td>2017-03-16</td>
+        <td>General</td>
+        <td>Fixed wrong xu.exe exit code when extraction was aborted</td>
+      </tr>
+      <tr>
+        <td>2.103.3 [M]</td>
+        <td>2017-03-10</td>
+        <td>Destinations</td>
+        <td>CSV: Fix for NULL values</td>
+      </tr>
+      <tr>
+        <td>2.103.2 [L]</td>
+        <td>2017-03-09</td>
+        <td>Destinations</td>
+        <td>EXASOL: Fix for null values and improved error message</td>
+      </tr>
+      <tr>
+        <td>2.103.1 [L]</td>
+        <td>2017-03-09</td>
+        <td>General</td>
+        <td>Updated build tools to MSBuild 15.0</td>
+      </tr>
+      <tr>
+        <td>2.103.0 [L]</td>
+        <td>2017-03-01</td>
+        <td>General</td>
+        <td>Improvements to XtractUniversal command line tool.</td>
+      </tr>
+      <tr>
+        <td>2.102.0 [L]</td>
+        <td>2017-02-23</td>
+        <td>Destinations</td>
+        <td>Added transaction selection dropdown to table destinations. Switched to the Redshift ODBC driver. Fixed HANA transaction commit issues.</td>
+      </tr>
+      <tr>
+        <td>2.101.1 [M]</td>
+        <td>2017-02-14</td>
+        <td>Destinations</td>
+        <td>Comparison of project names on Tableau Server is case-insensitive now</td>
+      </tr>
+      <tr>
+        <td>2.101.0 [L]</td>
+        <td>2017-02-10</td>
+        <td>Destinations</td>
+        <td>Added Extraction.RunState and Extraction.Timestamp for scripted expressions</td>
+      </tr>
+      <tr>
+        <td>2.100.3 [L]</td>
+        <td>2017-02-08</td>
+        <td>General</td>
+        <td>Fix for "Keyset does not exist" in certain AD environments</td>
+      </tr>
+      <tr>
+        <td>2.100.2 [L]</td>
+        <td>2017-01-27</td>
+        <td>Service</td>
+        <td>Fixed serviceLog.txt</td>
+      </tr>
+      <tr>
+        <td>2.100.1 [L]</td>
+        <td>2017-01-24</td>
+        <td>Destinations</td>
+        <td>Destination name and type is written to extraction log now</td>
+      </tr>
+      <tr>
+        <td>2.100.0 [M]</td>
+        <td>2017-01-23</td>
+        <td>General</td>
+        <td>Updated to .NET Framework 4.5.2</td>
+      </tr>
+      <tr>
+        <td>2.99.4 [L]</td>
+        <td>2017-01-19</td>
+        <td>Destinations</td>
+        <td>Improved error messages for failed HANA connection tests.</td>
+      </tr>
+      <tr>
+        <td>2.99.3 [L]</td>
+        <td>2017-01-18</td>
+        <td>Destinations</td>
+        <td>Bug fix in data conversion for HANA destinations.</td>
+      </tr>
+      <tr>
+        <td>2.99.2 [L]</td>
+        <td>2017-01-12</td>
+        <td>Setup</td>
+        <td>VC++2013 installer is silent now</td>
+      </tr>
+      <tr>
+        <td>2.99.1 [M]</td>
+        <td>2017-01-11</td>
+        <td>Designer</td>
+        <td>Source: Fix for file/directory pickers</td>
+      </tr>
+      <tr>
+        <td>2.99.0 [L]</td>
+        <td>2017-01-11</td>
+        <td>General</td>
+        <td>Updated licensing to support json format.</td>
+      </tr>
+      <tr>
+        <td>2.98.7 [L]</td>
+        <td>2017-01-09</td>
+        <td>BW Cube</td>
+        <td>Fix for missing primary key when order of output columns is modified</td>
+      </tr>
+      <tr>
+        <td>2.98.6 [L]</td>
+        <td>2017-01-04</td>
+        <td>DeltaQ</td>
+        <td>Select options support either variables or scripted expression, but not both</td>
+      </tr>
+      <tr>
+        <td>2.98.5 [L]</td>
+        <td>2017-01-04</td>
+        <td>Table</td>
+        <td>WHERE-clause supports either variables or scripted expression, but not both</td>
+      </tr>
+      <tr>
+        <td>2.98.4 [L]</td>
+        <td>2016-12-22</td>
+        <td>BW Cube</td>
+        <td>Added detection of missing authorization for RFC_READ_TABLE</td>
+      </tr>
+      <tr>
+        <td>2.98.3 [M]</td>
+        <td>2016-12-21</td>
+        <td>Setup</td>
+        <td>Tableau: VC++2013 is now optionally installed at the end</td>
+      </tr>
+      <tr>
+        <td>2.98.2 [M]</td>
+        <td>2016-12-20</td>
+        <td>Setup</td>
+        <td>Tableau: Added VC++2013 redistributable to setup</td>
+      </tr>
+      <tr>
+        <td>2.98.1 [L]</td>
+        <td>2016-12-14</td>
+        <td>BW Cube</td>
+        <td>BWCube date exception handling improved</td>
+      </tr>
+      <tr>
+        <td>2.98.0 [M]</td>
+        <td>2016-11-25</td>
+        <td>DeltaQ</td>
+        <td>Resending errors is deprecated now</td>
+      </tr>
+      <tr>
+        <td>2.97.4 [L]</td>
+        <td>2016-11-22</td>
+        <td>Designer</td>
+        <td>Renamed "Upsert" statment to "Merge (Upsert)"</td>
+      </tr>
+      <tr>
+        <td>2.97.2 [M]</td>
+        <td>2016-11-17</td>
+        <td>Destinations</td>
+        <td>CSV: Date conversion uses empty string as NULL replacement instead of "NULL"-string</td>
+      </tr>
+      <tr>
+        <td>2.97.1 [L]</td>
+        <td>2016-11-17</td>
+        <td>Destinations</td>
+        <td>Fixed wrong table name generation in HANA destination</td>
+      </tr>
+      <tr>
+        <td>2.97.0 [M]</td>
+        <td>2016-11-14</td>
+        <td>Destinations</td>
+        <td>Fixes for name-delimiters in column names (DB destinations)</td>
+      </tr>
+      <tr>
+        <td>2.96.0 [L]</td>
+        <td>2016-11-14</td>
+        <td>Destinations</td>
+        <td>Extraction errors are passed to alteryx now</td>
+      </tr>
+      <tr>
+        <td>2.95.0 [L]</td>
+        <td>2016-11-11</td>
+        <td>Destinations</td>
+        <td>Added HANA destination.</td>
+      </tr>
+      <tr>
+        <td>2.94.2 [L]</td>
+        <td>2016-11-09</td>
+        <td>Destinations</td>
+        <td>Optimized the MySQL library warning</td>
+      </tr>
+      <tr>
+        <td>2.94.1 [L]</td>
+        <td>2016-11-02</td>
+        <td>Report</td>
+        <td>Fix for report preview with parameters</td>
+      </tr>
+      <tr>
+        <td>2.94.0 [L]</td>
+        <td>2016-10-31</td>
+        <td>Destinations</td>
+        <td>Added support for undeclared parameters (e. g. for custom SQL)</td>
+      </tr>
+      <tr>
+        <td>2.93.1 [L]</td>
+        <td>2016-10-20</td>
+        <td>BW Cube</td>
+        <td>Improved lookup error handling</td>
+      </tr>
+      <tr>
+        <td>2.93.0 [M]</td>
+        <td>2016-10-18</td>
+        <td>Setup</td>
+        <td>Updated transport request thtrans.zip</td>
+      </tr>
+      <tr>
+        <td>2.92.3 [L]</td>
+        <td>2016-10-18</td>
+        <td>DeltaQ</td>
+        <td>Added URL-parameter logicalDestination</td>
+      </tr>
+      <tr>
+        <td>2.92.2 [L]</td>
+        <td>2016-10-18</td>
+        <td>DeltaQ</td>
+        <td>Added update mode for activation only ('A')</td>
+      </tr>
+      <tr>
+        <td>2.92.1 [L]</td>
+        <td>2016-10-18</td>
+        <td>DeltaQ</td>
+        <td>Fix for updateType URL-parameter</td>
+      </tr>
+      <tr>
+        <td>2.92.0 [L]</td>
+        <td>2016-10-14</td>
+        <td>Destinations</td>
+        <td>Added new MySQL ADO.NET driver support</td>
+      </tr>
+      <tr>
+        <td>2.91.0 [L]</td>
+        <td>2016-10-11</td>
+        <td>BW Cube</td>
+        <td>Output transformation allows removal of columns now</td>
+      </tr>
+      <tr>
+        <td>2.90.4 [L]</td>
+        <td>2016-10-08</td>
+        <td>General</td>
+        <td>Added log entry for SAP application server / system number</td>
+      </tr>
+      <tr>
+        <td>2.90.3 [L]</td>
+        <td>2016-10-04</td>
+        <td>General</td>
+        <td>Fixed a licensing bug in the SharePoint destination.</td>
+      </tr>
+      <tr>
+        <td>2.90.2 [L]</td>
+        <td>2016-10-04</td>
+        <td>Destinations</td>
+        <td>Fix for preparation command timeout (DB destinations)</td>
+      </tr>
+      <tr>
+        <td>2.90.1 [L]</td>
+        <td>2016-09-28</td>
+        <td>Destinations</td>
+        <td>Fixed timeout error for alteryx destination.</td>
+      </tr>
+      <tr>
+        <td>2.90.0 [M]</td>
+        <td>2016-09-28</td>
+        <td>DeltaQ</td>
+        <td>All hierarchies may be activated now</td>
+      </tr>
+      <tr>
+        <td>2.89.0 [M]</td>
+        <td>2016-09-26</td>
+        <td>Server</td>
+        <td>Finalization statement is skipped now in case of errors</td>
+      </tr>
+      <tr>
+        <td>2.88.0 [M]</td>
+        <td>2016-09-26</td>
+        <td>Server</td>
+        <td>Queued data packages are dropped now in case of errors</td>
+      </tr>
+      <tr>
+        <td>2.87.3 [L]</td>
+        <td>2016-09-24</td>
+        <td>Destinations</td>
+        <td>File CSV: Date conversion is disabled for extractions from previous versions</td>
+      </tr>
+      <tr>
+        <td>2.87.2 [L]</td>
+        <td>2016-09-19</td>
+        <td>Destinations</td>
+        <td>Fixes for Tableau destination (older Windows versions, 32-bit)</td>
+      </tr>
+      <tr>
+        <td>2.87.1 [L]</td>
+        <td>2016-09-15</td>
+        <td>Report</td>
+        <td>Fix for preview without columns but "automatic column detection" enabled</td>
+      </tr>
+      <tr>
+        <td>2.87.0 [L]</td>
+        <td>2016-09-12</td>
+        <td>Server</td>
+        <td>Added HTTP/CSV API for destinations</td>
+      </tr>
+      <tr>
+        <td>2.86.2 [L]</td>
+        <td>2016-08-30</td>
+        <td>Server</td>
+        <td>Fix for HTTP content type when running extractions with push destinations</td>
+      </tr>
+      <tr>
+        <td>2.86.1 [M]</td>
+        <td>2016-08-25</td>
+        <td>BAPI</td>
+        <td>Fix for passing values to tables</td>
+      </tr>
+      <tr>
+        <td>2.86.0 [M]</td>
+        <td>2016-08-23</td>
+        <td>BAPI</td>
+        <td>Added support for export parameters &amp; multiple tables in result</td>
+      </tr>
+      <tr>
+        <td>2.85.2 [L]</td>
+        <td>2016-08-22</td>
+        <td>Table</td>
+        <td>Removed 'bg' run parameter</td>
+      </tr>
+      <tr>
+        <td>2.85.1 [M]</td>
+        <td>2016-08-22</td>
+        <td>General</td>
+        <td>Removed client, mshost, r3name, group, ashost, sysnr, ashost connection parameters</td>
+      </tr>
+      <tr>
+        <td>2.85.0 [M]</td>
+        <td>2016-08-22</td>
+        <td>General</td>
+        <td>Added 'source' and 'destination' run parameters</td>
+      </tr>
+      <tr>
+        <td>2.84.4 [L]</td>
+        <td>2016-08-22</td>
+        <td>Destinations</td>
+        <td>Increased timeout for finalization statement to 30 minutes</td>
+      </tr>
+      <tr>
+        <td>2.84.3 [M]</td>
+        <td>2016-08-19</td>
+        <td>Destinations</td>
+        <td>Updated Tableau SDK to 10.0.0</td>
+      </tr>
+      <tr>
+        <td>2.84.2 [M]</td>
+        <td>2016-08-12</td>
+        <td>Destinations</td>
+        <td>Updated Tableau SDK to 9.3.4</td>
+      </tr>
+      <tr>
+        <td>2.84.0 [L]</td>
+        <td>2016-08-05</td>
+        <td>Destinations</td>
+        <td>Fix for Power BI authentication</td>
+      </tr>
+      <tr>
+        <td>2.83.4 [L]</td>
+        <td>2016-08-03</td>
+        <td>Server</td>
+        <td>Improved handling of empty results</td>
+      </tr>
+      <tr>
+        <td>2.83.3 [L]</td>
+        <td>2016-08-02</td>
+        <td>Destinations</td>
+        <td>Fix for Power BI with an old access token</td>
+      </tr>
+      <tr>
+        <td>2.83.2 [L]</td>
+        <td>2016-08-02</td>
+        <td>Server</td>
+        <td>Using wait=false returns timestamp of run now</td>
+      </tr>
+      <tr>
+        <td>2.83.1 [L]</td>
+        <td>2016-08-02</td>
+        <td>DeltaQ</td>
+        <td>Fix for DeltaQ hierarchy datasources</td>
+      </tr>
+      <tr>
+        <td>2.83.0 [L]</td>
+        <td>2016-07-28</td>
+        <td>Destinations</td>
+        <td>Alteryx: added support for description texts of columns</td>
+      </tr>
+      <tr>
+        <td>2.82.3 [L]</td>
+        <td>2016-07-25</td>
+        <td>Hierarchy</td>
+        <td>DataTo attribute can be set through a variable</td>
+      </tr>
+      <tr>
+        <td>2.82.2 [M]</td>
+        <td>2016-07-22</td>
+        <td>DeltaQ</td>
+        <td>Disabled caching for all update types except "full"</td>
+      </tr>
+      <tr>
+        <td>2.82.0 [L]</td>
+        <td>2016-07-21</td>
+        <td>Server</td>
+        <td>Added "wait" parameter for running extractions</td>
+      </tr>
+      <tr>
+        <td>2.81.16 [L]</td>
+        <td>2016-07-21</td>
+        <td>Destinations</td>
+        <td>SQLServer/AzureDWH: Increased timeouts to 30 minutes</td>
+      </tr>
+      <tr>
+        <td>2.81.15 [L]</td>
+        <td>2016-07-18</td>
+        <td>Destinations</td>
+        <td>Increased SQL server command timeout to 600 sec.</td>
+      </tr>
+      <tr>
+        <td>2.81.14 [M]</td>
+        <td>2016-07-12</td>
+        <td>DeltaQ</td>
+        <td>Fix for DeltaQ activation</td>
+      </tr>
+      <tr>
+        <td>2.81.13 [M]</td>
+        <td>2016-07-12</td>
+        <td>DeltaQ</td>
+        <td>Re-enabled result buffering</td>
+      </tr>
+      <tr>
+        <td>2.81.12 [L]</td>
+        <td>2016-07-11</td>
+        <td>Destinations</td>
+        <td>Added OpenUrlTimeout to Qlik script generator</td>
+      </tr>
+      <tr>
+        <td>2.81.11 [L]</td>
+        <td>2016-07-05</td>
+        <td>Service</td>
+        <td>Service account settings are preserved during updates</td>
+      </tr>
+      <tr>
+        <td>2.81.9 [M]</td>
+        <td>2016-06-27</td>
+        <td>Server</td>
+        <td>Increased default for ListenerThreads to 8</td>
+      </tr>
+      <tr>
+        <td>2.81.8 [L]</td>
+        <td>2016-06-16</td>
+        <td>Destinations</td>
+        <td>CSV: Empty column/row/decimal separtors and quote symbol are replaced with defaults</td>
+      </tr>
+      <tr>
+        <td>2.81.7 [L]</td>
+        <td>2016-06-16</td>
+        <td>General</td>
+        <td>Reverted default RFC library to classic</td>
+      </tr>
+      <tr>
+        <td>2.81.6 [L]</td>
+        <td>2016-06-08</td>
+        <td>Destinations</td>
+        <td>Increased maximum length of custom SQL</td>
+      </tr>
+      <tr>
+        <td>2.81.5 [L]</td>
+        <td>2016-06-07</td>
+        <td>Destinations</td>
+        <td>SharePointDestination: Improved error messages for invalid sites and access restrictions.</td>
+      </tr>
+      <tr>
+        <td>2.81.4 [L]</td>
+        <td>2016-06-06</td>
+        <td>Designer</td>
+        <td>Improved "Edit SQL" window</td>
+      </tr>
+      <tr>
+        <td>2.81.3 [L]</td>
+        <td>2016-05-31</td>
+        <td>Destinations</td>
+        <td>Increased size of Oracle data source text box for clusters etc.</td>
+      </tr>
+      <tr>
+        <td>2.81.2 [L]</td>
+        <td>2016-05-31</td>
+        <td>Destinations</td>
+        <td>SharePointDestination: Fixed exception handling in connection test for SharePoint Online.</td>
+      </tr>
+      <tr>
+        <td>2.81.0 [L]</td>
+        <td>2016-05-27</td>
+        <td>Destinations</td>
+        <td>Fix in Power BI convert</td>
+      </tr>
+      <tr>
+        <td>2.80.0 [M]</td>
+        <td>2016-05-24</td>
+        <td>Destinations</td>
+        <td>Description texts can be used in column names now</td>
+      </tr>
+      <tr>
+        <td>2.79.0 [M]</td>
+        <td>2016-05-24</td>
+        <td>Destinations</td>
+        <td>Improvements and fixes for Power BI destination</td>
+      </tr>
+      <tr>
+        <td>2.78.0 [L]</td>
+        <td>2016-05-24</td>
+        <td>Destinations</td>
+        <td>Added Azure DWH destination</td>
+      </tr>
+      <tr>
+        <td>2.77.0 [M]</td>
+        <td>2016-05-24</td>
+        <td>Destinations</td>
+        <td>SQL Server: Bulk inserts are enbaled by default</td>
+      </tr>
+      <tr>
+        <td>2.76.1 [L]</td>
+        <td>2016-05-20</td>
+        <td>Destinations</td>
+        <td>DB2 &amp; Vertica: improved SQL lengths for NUMC and RAW (were larger than neccessary)</td>
+      </tr>
+      <tr>
+        <td>2.76.0 [L]</td>
+        <td>2016-05-19</td>
+        <td>Destinations</td>
+        <td>Removed XML destination</td>
+      </tr>
+      <tr>
+        <td>2.75.5 [L]</td>
+        <td>2016-05-18</td>
+        <td>Destinations</td>
+        <td>SharePointDestination: Changed mode 'Drop &amp; Create' to 'Drop, Create &amp; Insert', set as default for newly created destinations.</td>
+      </tr>
+      <tr>
+        <td>2.75.4 [L]</td>
+        <td>2016-05-17</td>
+        <td>Destinations</td>
+        <td>Fix for DB2 destination</td>
+      </tr>
+      <tr>
+        <td>2.75.3 [L]</td>
+        <td>2016-05-11</td>
+        <td>Destinations</td>
+        <td>SharePointDestination: Added more detailed error message for the connection test.</td>
+      </tr>
+      <tr>
+        <td>2.75.2 [L]</td>
+        <td>2016-05-09</td>
+        <td>Table Join</td>
+        <td>Updated Join dialog logic</td>
+      </tr>
+      <tr>
+        <td>2.75.1 [L]</td>
+        <td>2016-05-06</td>
+        <td>Destinations</td>
+        <td>XML: Fix for INT1 and INT2</td>
+      </tr>
+      <tr>
+        <td>2.75.0 [L]</td>
+        <td>2016-05-04</td>
+        <td>Destinations</td>
+        <td>Added Qlik destination</td>
+      </tr>
+      <tr>
+        <td>2.74.1 [L]</td>
+        <td>2016-05-04</td>
+        <td>General</td>
+        <td>Replaced support client executable with download link</td>
+      </tr>
+      <tr>
+        <td>2.74.0 [L]</td>
+        <td>2016-05-03</td>
+        <td>Destinations</td>
+        <td>Added support for run parameters to Alteryx destination</td>
+      </tr>
+      <tr>
+        <td>2.73.1 [M]</td>
+        <td>2016-04-26</td>
+        <td>Destinations</td>
+        <td>File CSV &amp; Alteryx: Fix for InvalidCast while reading from buffer</td>
+      </tr>
+      <tr>
+        <td>2.73.0 [M]</td>
+        <td>2016-04-20</td>
+        <td>General</td>
+        <td>Reverted back to classic RFC as default</td>
+      </tr>
+      <tr>
+        <td>2.72.0 [L]</td>
+        <td>2016-04-19</td>
+        <td>General</td>
+        <td>Added Alteryx destination</td>
+      </tr>
+      <tr>
+        <td>2.71.0 [M]</td>
+        <td>2016-04-18</td>
+        <td>General</td>
+        <td>NetWeaver RFC libraries are used by default now instead of classic RFC libraries</td>
+      </tr>
+      <tr>
+        <td>2.70.3 [L]</td>
+        <td>2016-04-18</td>
+        <td>Destinations</td>
+        <td>Fixes and improvements for GoodData</td>
+      </tr>
+      <tr>
+        <td>2.70.2 [L]</td>
+        <td>2016-03-16</td>
+        <td>Destinations</td>
+        <td>File CSV: Fix for 'column separator after last row'</td>
+      </tr>
+      <tr>
+        <td>2.70.1 [L]</td>
+        <td>2016-03-14</td>
+        <td>Destinations</td>
+        <td>Fix for custom variables in row processing statements</td>
+      </tr>
+      <tr>
+        <td>2.70.0 [L]</td>
+        <td>2016-02-19</td>
+        <td>Setup</td>
+        <td>Added Tableau libraries to main setup</td>
+      </tr>
+      <tr>
+        <td>2.69.6 [L]</td>
+        <td>2016-02-15</td>
+        <td>Report</td>
+        <td>Added look up for report variants.</td>
+      </tr>
+      <tr>
+        <td>2.69.5 [L]</td>
+        <td>2016-02-11</td>
+        <td>Destinations</td>
+        <td>Broken extraction files don't break OData $metadata anymore</td>
+      </tr>
+      <tr>
+        <td>2.69.4 [L]</td>
+        <td>2016-02-11</td>
+        <td>Destinations</td>
+        <td>Bug fix in Redshift destination.</td>
+      </tr>
+      <tr>
+        <td>2.69.3 [M]</td>
+        <td>2016-02-09</td>
+        <td>Destinations</td>
+        <td>Fix for OData metadata (was broken since 2.65.0)</td>
+      </tr>
+      <tr>
+        <td>2.69.2 [L]</td>
+        <td>2016-01-27</td>
+        <td>Destinations</td>
+        <td>SharePointDestination: Fixed URL handling and connection test</td>
+      </tr>
+      <tr>
+        <td>2.69.1 [L]</td>
+        <td>2016-01-26</td>
+        <td>Destinations</td>
+        <td>TableauDestination: Added option to delete local files after upload, added remote replace when 'append' is selected, minor UI changes.</td>
+      </tr>
+      <tr>
+        <td>2.69.0 [L]</td>
+        <td>2016-01-26</td>
+        <td>General</td>
+        <td>Removed DateFormat server setting</td>
+      </tr>
+      <tr>
+        <td>2.68.0 [M]</td>
+        <td>2016-01-22</td>
+        <td>Destinations</td>
+        <td>Added date conversion settings to CSV destination</td>
+      </tr>
+      <tr>
+        <td>2.67.0 [L]</td>
+        <td>2016-01-22</td>
+        <td>Destinations</td>
+        <td>Added new settings to Power BI destination</td>
+      </tr>
+      <tr>
+        <td>2.66.0 [M]</td>
+        <td>2016-01-21</td>
+        <td>Destinations</td>
+        <td>Extended TableauDestination to allow uploads to Tableau Server</td>
+      </tr>
+      <tr>
+        <td>2.65.3 [L]</td>
+        <td>2016-01-18</td>
+        <td>Destinations</td>
+        <td>Fix for PowerBI Connection</td>
+      </tr>
+      <tr>
+        <td>2.65.0 [L]</td>
+        <td>2015-12-01</td>
+        <td>Destinations</td>
+        <td>Destinations are stored as JSON files now</td>
+      </tr>
+      <tr>
+        <td>2.64.2 [L]</td>
+        <td>2015-11-24</td>
+        <td>Destinations</td>
+        <td>Fix for Tableau Destination on Server 2008</td>
+      </tr>
+      <tr>
+        <td>2.64.1 [M]</td>
+        <td>2015-11-24</td>
+        <td>Server</td>
+        <td>Undefined execution states are set to "finished with errors" at server startup</td>
+      </tr>
+      <tr>
+        <td>2.64.0 [M]</td>
+        <td>2015-11-24</td>
+        <td>Destinations</td>
+        <td>Migrated from unmanaged to managed ODP.NET driver (Oracle)</td>
+      </tr>
+      <tr>
+        <td>2.63.0 [L]</td>
+        <td>2015-11-11</td>
+        <td>Destinations</td>
+        <td>Added Salesforce destination</td>
+      </tr>
+      <tr>
+        <td>2.62.6 [M]</td>
+        <td>2015-11-10</td>
+        <td>Destinations</td>
+        <td>Updated Oracle reference to ODAC 12.1.0.2.4, ODP.NET 4</td>
+      </tr>
+      <tr>
+        <td>2.62.5 [M]</td>
+        <td>2015-11-10</td>
+        <td>Server</td>
+        <td>Workaround for PowerPivot 2010 bug (no HTTP compression while retrieving service document)</td>
+      </tr>
+      <tr>
+        <td>2.62.4 [L]</td>
+        <td>2015-11-10</td>
+        <td>Table Join</td>
+        <td>Fix for live data preview</td>
+      </tr>
+      <tr>
+        <td>2.62.3 [L]</td>
+        <td>2015-11-10</td>
+        <td>Table</td>
+        <td>Fix for live data preview</td>
+      </tr>
+      <tr>
+        <td>2.62.2 [M]</td>
+        <td>2015-10-30</td>
+        <td>General</td>
+        <td>Added default server and port for xu.exe</td>
+      </tr>
+      <tr>
+        <td>2.62.1 [M]</td>
+        <td>2015-10-28</td>
+        <td>Table</td>
+        <td>Uses better custom functions as default</td>
+      </tr>
+      <tr>
+        <td>2.62.0 [M]</td>
+        <td>2015-10-27</td>
+        <td>Server</td>
+        <td>Added support for Content-Encoding: gzip</td>
+      </tr>
+      <tr>
+        <td>2.61.29 [L]</td>
+        <td>2015-10-21</td>
+        <td>BW Cube</td>
+        <td>Fix for BW Cube dates</td>
+      </tr>
+      <tr>
+        <td>2.61.28 [L]</td>
+        <td>2015-10-20</td>
+        <td>Destinations</td>
+        <td>Fix for "Prepare Merge" (broken since 2.61.24)</td>
+      </tr>
+      <tr>
+        <td>2.61.25 [L]</td>
+        <td>2015-09-29</td>
+        <td>Server</td>
+        <td>Improved logging for errors while loading extractions</td>
+      </tr>
+      <tr>
+        <td>2.61.24 [L]</td>
+        <td>2015-09-22</td>
+        <td>Destinations</td>
+        <td>Fix for create statements (Teradata)</td>
+      </tr>
+      <tr>
+        <td>2.61.23 [L]</td>
+        <td>2015-09-22</td>
+        <td>Destinations</td>
+        <td>Updated Teradata provider to 15.11.00.00</td>
+      </tr>
+      <tr>
+        <td>2.61.22 [L]</td>
+        <td>2015-09-18</td>
+        <td>Table Join</td>
+        <td>Updated XtractKernel (TQB)</td>
+      </tr>
+      <tr>
+        <td>2.61.21 [L]</td>
+        <td>2015-09-15</td>
+        <td>Table Join</td>
+        <td>Updated dialog help links</td>
+      </tr>
+      <tr>
+        <td>2.61.20 [L]</td>
+        <td>2015-09-07</td>
+        <td>DeltaQ</td>
+        <td>Added new setting 'Accept Gaps In Data Package Id' for users who are using OLTP datasources where data is filtered in a way that it leads to gaps between the packet numbers. This setting turns off a certain consistency check. </td>
+      </tr>
+      <tr>
+        <td>2.61.19 [L]</td>
+        <td>2015-09-07</td>
+        <td>Report</td>
+        <td>Fixed bug in the search of reports</td>
+      </tr>
+      <tr>
+        <td>2.61.18 [M]</td>
+        <td>2015-09-03</td>
+        <td>Destinations</td>
+        <td>Release version of Vertica destination finished</td>
+      </tr>
+      <tr>
+        <td>2.61.17 [L]</td>
+        <td>2015-08-11</td>
+        <td>Destinations</td>
+        <td>Bugfix in SharePoint float values</td>
+      </tr>
+      <tr>
+        <td>2.61.16 [L]</td>
+        <td>2015-08-10</td>
+        <td>Destinations</td>
+        <td>Bugfix for merging BW Cube extractions with SharePoint destinations</td>
+      </tr>
+      <tr>
+        <td>2.61.15 [L]</td>
+        <td>2015-08-10</td>
+        <td>Table Join</td>
+        <td>Updated table join designer.</td>
+      </tr>
+      <tr>
+        <td>2.61.14 [L]</td>
+        <td>2015-08-05</td>
+        <td>Destinations</td>
+        <td>Fixes in the converter classes</td>
+      </tr>
+      <tr>
+        <td>2.61.13 [L]</td>
+        <td>2015-08-04</td>
+        <td>General</td>
+        <td>Primary key was not reset if SAP object changed</td>
+      </tr>
+      <tr>
+        <td>2.61.12 [L]</td>
+        <td>2015-08-04</td>
+        <td>Destinations</td>
+        <td>Fix for OData metadata document and Code+Text, Text+Code settings</td>
+      </tr>
+      <tr>
+        <td>2.61.11 [L]</td>
+        <td>2015-08-04</td>
+        <td>BW Cube</td>
+        <td>Fix for error message when using the Show MDX link </td>
+      </tr>
+      <tr>
+        <td>2.61.10 [L]</td>
+        <td>2015-08-04</td>
+        <td>BW Cube</td>
+        <td>Fix for error message when using the Show MDX link </td>
+      </tr>
+      <tr>
+        <td>2.61.9 [L]</td>
+        <td>2015-08-03</td>
+        <td>BAPI</td>
+        <td>All ADO Destinations use the converter classes now</td>
+      </tr>
+      <tr>
+        <td>2.61.8 [L]</td>
+        <td>2015-07-28</td>
+        <td>General</td>
+        <td>Support client shows logo and uses pre-defined password</td>
+      </tr>
+      <tr>
+        <td>2.61.7 [L]</td>
+        <td>2015-07-22</td>
+        <td>Destinations</td>
+        <td>Added name conversion to Power BI destination</td>
+      </tr>
+      <tr>
+        <td>2.61.6 [L]</td>
+        <td>2015-07-22</td>
+        <td>Table</td>
+        <td>Fixed bug in table lookup form</td>
+      </tr>
+      <tr>
+        <td>2.61.5 [L]</td>
+        <td>2015-07-21</td>
+        <td>Destinations</td>
+        <td>Existing extractions were broken, if the type of their assigned destination had changed to HTTP - CSV</td>
+      </tr>
+      <tr>
+        <td>2.61.4 [L]</td>
+        <td>2015-07-21</td>
+        <td>Destinations</td>
+        <td>Fix for error on buffer and preview extractions from BAPI, BW Cube OLAP, DeltaQ non-hierarchy, Hierarchy parent/child, OHS or Query to EXASOL and Tableau destinations</td>
+      </tr>
+      <tr>
+        <td>2.61.3 [L]</td>
+        <td>2015-07-21</td>
+        <td>DeltaQ</td>
+        <td>Fix for the edit selection link. It appeared sometimes even no selection is allowed according to SAP's metadata.</td>
+      </tr>
+      <tr>
+        <td>2.61.2 [L]</td>
+        <td>2015-07-18</td>
+        <td>Table Join</td>
+        <td>Updated TQB for Table Join component.</td>
+      </tr>
+      <tr>
+        <td>2.61.1 [L]</td>
+        <td>2015-07-17</td>
+        <td>General</td>
+        <td>Updated code to run on .NET 4.</td>
+      </tr>
+      <tr>
+        <td>2.61.0 [M]</td>
+        <td>2015-07-17</td>
+        <td>BW Cube</td>
+        <td>Added date format for BW Cube dates</td>
+      </tr>
+      <tr>
+        <td>2.60.7 [L]</td>
+        <td>2015-07-14</td>
+        <td>Destinations</td>
+        <td>Fix for Tableau on 32-bit systems</td>
+      </tr>
+      <tr>
+        <td>2.60.6 [L]</td>
+        <td>2015-07-14</td>
+        <td>Setup</td>
+        <td>Updated support client to 10.0.43879.0</td>
+      </tr>
+      <tr>
+        <td>2.60.5 [L]</td>
+        <td>2015-07-09</td>
+        <td>Destinations</td>
+        <td>Added support for Exasol ADO.NET Driver 5.0</td>
+      </tr>
+      <tr>
+        <td>2.60.4 [L]</td>
+        <td>2015-07-08</td>
+        <td>Destinations</td>
+        <td>Fixed wrong decimal precision error in Exasol destination</td>
+      </tr>
+      <tr>
+        <td>2.60.3 [L]</td>
+        <td>2015-07-01</td>
+        <td>Destinations</td>
+        <td>Fixed wrong field length for table fields containing data with SAP type RAW</td>
+      </tr>
+      <tr>
+        <td>2.60.0 [M]</td>
+        <td>2015-06-30</td>
+        <td>General</td>
+        <td>Purchased license is preferred to demo license now</td>
+      </tr>
+      <tr>
+        <td>2.59.0 [L]</td>
+        <td>2015-06-30</td>
+        <td>Server</td>
+        <td>Removed HttpLocalOnly server setting (please use server security settings instead)</td>
+      </tr>
+      <tr>
+        <td>2.57.1 [L]</td>
+        <td>2015-06-09</td>
+        <td>Designer</td>
+        <td>Improved error message for trying to run an extraction which has no destination</td>
+      </tr>
+      <tr>
+        <td>2.57.0 [M]</td>
+        <td>2015-06-01</td>
+        <td>Designer</td>
+        <td>Moved extraction-specific settings to destination form</td>
+      </tr>
+      <tr>
+        <td>2.56.2 [L]</td>
+        <td>2015-06-01</td>
+        <td>Destinations</td>
+        <td>Fix in Power BI Authentication</td>
+      </tr>
+      <tr>
+        <td>2.56.1 [L]</td>
+        <td>2015-05-28</td>
+        <td>Designer</td>
+        <td>Button for managing destinations is disabled if user does not have admin privileges</td>
+      </tr>
+      <tr>
+        <td>2.56.0 [M]</td>
+        <td>2015-05-26</td>
+        <td>Destinations</td>
+        <td>Added http-csv, http-odata-atom and http-xml as default destinations</td>
+      </tr>
+      <tr>
+        <td>2.55.0 [M]</td>
+        <td>2015-05-26</td>
+        <td>Destinations</td>
+        <td>Removed custom destinations. Legacy custom destinations are read-only.</td>
+      </tr>
+      <tr>
+        <td>2.54.7 [L]</td>
+        <td>2015-05-26</td>
+        <td>Security</td>
+        <td>Fix for Active Directory login (failed always)</td>
+      </tr>
+      <tr>
+        <td>2.54.6 [L]</td>
+        <td>2015-05-22</td>
+        <td>Designer</td>
+        <td>Added "abort" to context menu</td>
+      </tr>
+      <tr>
+        <td>2.54.5 [L]</td>
+        <td>2015-05-21</td>
+        <td>Server</td>
+        <td>Fixed OData service document for /OData.svc/ URLs</td>
+      </tr>
+      <tr>
+        <td>2.54.4 [L]</td>
+        <td>2015-05-21</td>
+        <td>Designer</td>
+        <td>Fixed keyboard shortcut for "run in xu.exe"</td>
+      </tr>
+      <tr>
+        <td>2.54.3 [L]</td>
+        <td>2015-05-21</td>
+        <td>Designer</td>
+        <td>Added menu items Extraction -&gt; Destination and Server -&gt; Manage Destinations</td>
+      </tr>
+      <tr>
+        <td>2.54.2 [L]</td>
+        <td>2015-05-21</td>
+        <td>Designer</td>
+        <td>Delete button &amp; menu item is disabled in GUI if user does not has appropriate privileges</td>
+      </tr>
+      <tr>
+        <td>2.54.1 [M]</td>
+        <td>2015-05-20</td>
+        <td>Designer</td>
+        <td>Fixed extraction name validation</td>
+      </tr>
+      <tr>
+        <td>2.53.3 [L]</td>
+        <td>2015-05-18</td>
+        <td>Destinations</td>
+        <td>Removed workaround for OData consumer timeouts (2.48.0)</td>
+      </tr>
+      <tr>
+        <td>2.53.2 [M]</td>
+        <td>2015-05-12</td>
+        <td>Destinations</td>
+        <td>Optimized merge process for SharePoint destinations</td>
+      </tr>
+      <tr>
+        <td>2.53.0 [M]</td>
+        <td>2015-05-07</td>
+        <td>Destinations</td>
+        <td>Added HP Vertica destination</td>
+      </tr>
+      <tr>
+        <td>2.52.0 [M]</td>
+        <td>2015-05-04</td>
+        <td>Destinations</td>
+        <td>Changed default for table/file name to name of extraction (DB2, EXASOL, MySQL, Oracle, Redshift, SQLServer, Tableau, Teradata)</td>
+      </tr>
+      <tr>
+        <td>2.51.0 [M]</td>
+        <td>2015-04-23</td>
+        <td>Server</td>
+        <td>Extractions are terminated if client closes HTTP connection (non-HTTP destinations)</td>
+      </tr>
+      <tr>
+        <td>2.50.2 [L]</td>
+        <td>2015-04-20</td>
+        <td>General</td>
+        <td>Improved logging of stack traces</td>
+      </tr>
+      <tr>
+        <td>2.50.0 [M]</td>
+        <td>2015-04-20</td>
+        <td>Destinations</td>
+        <td>New implementation of Tableau Destination</td>
+      </tr>
+      <tr>
+        <td>2.49.5 [L]</td>
+        <td>2015-04-20</td>
+        <td>BW Cube</td>
+        <td>Additional feature to add unit columns to each measure when using the OLAP mode</td>
+      </tr>
+      <tr>
+        <td>2.49.4 [L]</td>
+        <td>2015-04-13</td>
+        <td>General</td>
+        <td>SNC plus user name / password is supported in connection dialog to encrypt connection to SAP</td>
+      </tr>
+      <tr>
+        <td>2.49.3 [L]</td>
+        <td>2015-04-13</td>
+        <td>DeltaQ</td>
+        <td>Scripting expressions are evaluated in Selection parameters</td>
+      </tr>
+      <tr>
+        <td>2.49.2 [L]</td>
+        <td>2015-04-01</td>
+        <td>Designer</td>
+        <td>Fix for GUI bugs when the first shared destination is created and selected</td>
+      </tr>
+      <tr>
+        <td>2.49.1 [L]</td>
+        <td>2015-04-01</td>
+        <td>Destinations</td>
+        <td>Workaround for "blocked" Oracle assemblies</td>
+      </tr>
+      <tr>
+        <td>2.49.0 [M]</td>
+        <td>2015-03-31</td>
+        <td>Destinations</td>
+        <td>Added MySQL as a new destination</td>
+      </tr>
+      <tr>
+        <td>2.48.0 [M]</td>
+        <td>2015-03-20</td>
+        <td>Destinations</td>
+        <td>Workaround for OData consumer timeouts (e. g. Power Query)</td>
+      </tr>
+      <tr>
+        <td>2.47.3 [M]</td>
+        <td>2015-03-09</td>
+        <td>Destinations</td>
+        <td>Fix for column/table names which are longer than 30 characters</td>
+      </tr>
+      <tr>
+        <td>2.47.2 [M]</td>
+        <td>2015-03-05</td>
+        <td>General</td>
+        <td>Fix for Hierarchy or OHS extractions with DB2, EXASOL, Oracle, SQLServer or Teradata destinations</td>
+      </tr>
+      <tr>
+        <td>2.47.1 [L]</td>
+        <td>2015-02-24</td>
+        <td>General</td>
+        <td>Fix for xu.exe and .NET CLR 4</td>
+      </tr>
+      <tr>
+        <td>2.47.0 [M]</td>
+        <td>2015-02-18</td>
+        <td>General</td>
+        <td>Removed 'custom connections' and renamed 'connection' to 'source' (legacy 'custom connections' are still supported, but read-only)</td>
+      </tr>
+      <tr>
+        <td>2.46.0 [L]</td>
+        <td>2015-02-12</td>
+        <td>General</td>
+        <td>IPv4 addresses can be passed directly to command line utility</td>
+      </tr>
+      <tr>
+        <td>2.45.4 [L]</td>
+        <td>2015-01-27</td>
+        <td>BW Cube</td>
+        <td>Added new feature for manual slicing/filtering dimensions in an OLAP extraction</td>
+      </tr>
+      <tr>
+        <td>2.45.3 [L]</td>
+        <td>2015-01-26</td>
+        <td>BAPI</td>
+        <td>Custom variables are supported now when using native MDX statements</td>
+      </tr>
+      <tr>
+        <td>2.45.2 [L]</td>
+        <td>2015-01-22</td>
+        <td>BW Cube</td>
+        <td>Added new feature "Automatic Slicing" which can be switched on in Settings dialog.</td>
+      </tr>
+      <tr>
+        <td>2.45.1 [L]</td>
+        <td>2015-01-22</td>
+        <td>BW Cube</td>
+        <td>Setting "Decimal Separator" withdrawn as it's not necessary anymore. The decimal separator is detected automatically.</td>
+      </tr>
+      <tr>
+        <td>2.45.0 [L]</td>
+        <td>2015-01-21</td>
+        <td>General</td>
+        <td>Added command line parameters and more detailed exit codes to Xtract Universal Command Line Utility.</td>
+      </tr>
+      <tr>
+        <td>2.44.0 [M]</td>
+        <td>2015-01-15</td>
+        <td>Table</td>
+        <td>New user interface for extraction settings</td>
+      </tr>
+      <tr>
+        <td>2.43.0 [L]</td>
+        <td>2015-01-12</td>
+        <td>Security</td>
+        <td>Added support for X.509 client certificate file for SNC</td>
+      </tr>
+      <tr>
+        <td>2.42.1 [L]</td>
+        <td>2015-01-07</td>
+        <td>Designer</td>
+        <td>DeltaQ / OHS extractions with shared connection could not be created since version 2.41.0</td>
+      </tr>
+      <tr>
+        <td>2.42.0 [L]</td>
+        <td>2014-12-10</td>
+        <td>Security</td>
+        <td>Added URL parameter "logonTicket" for SAP authentication via logon tickets</td>
+      </tr>
+      <tr>
+        <td>2.41.2 [L]</td>
+        <td>2014-12-10</td>
+        <td>Destinations</td>
+        <td>Updated SharePoint destination: Removed 'Title' field from default view and added primary keys as new required fields in edit forms.</td>
+      </tr>
+      <tr>
+        <td>2.41.1 [L]</td>
+        <td>2014-12-09</td>
+        <td>Security</td>
+        <td>Added support for DNS SRV responses without additional A records (Active Directory authentication)</td>
+      </tr>
+      <tr>
+        <td>2.41.0 [L]</td>
+        <td>2014-12-08</td>
+        <td>General</td>
+        <td>SAP connections are stored in config/sources now, as JSON files</td>
+      </tr>
+      <tr>
+        <td>2.40.2 [L]</td>
+        <td>2014-12-05</td>
+        <td>Destinations</td>
+        <td>Updated SharePoint destination: Added list creation in sub-sites. Optimized key matching. New columns are added to default view in SharePoint.</td>
+      </tr>
+      <tr>
+        <td>2.40.1 [L]</td>
+        <td>2014-12-04</td>
+        <td>Destinations</td>
+        <td>Fixed default time format (CSV, XML)</td>
+      </tr>
+      <tr>
+        <td>2.40.0 [L]</td>
+        <td>2014-12-02</td>
+        <td>General</td>
+        <td>Removed "Force Codepage"</td>
+      </tr>
+      <tr>
+        <td>2.39.13 [L]</td>
+        <td>2014-11-28</td>
+        <td>BW Cube</td>
+        <td>Fixed re-ordering of columns (headers were not re-ordered)</td>
+      </tr>
+      <tr>
+        <td>2.39.12 [L]</td>
+        <td>2014-11-25</td>
+        <td>Destinations</td>
+        <td>Fixed license check for file CSV destination</td>
+      </tr>
+      <tr>
+        <td>2.39.11 [L]</td>
+        <td>2014-11-18</td>
+        <td>Security</td>
+        <td>Fixes and improvements for Active Directory authentication</td>
+      </tr>
+      <tr>
+        <td>2.39.10 [L]</td>
+        <td>2014-11-11</td>
+        <td>Service</td>
+        <td>Set start timeout to 3 minutes (for slow systems)</td>
+      </tr>
+      <tr>
+        <td>2.39.9 [L]</td>
+        <td>2014-11-04</td>
+        <td>Security</td>
+        <td>Fixes and improvements for Active Directory authentication</td>
+      </tr>
+      <tr>
+        <td>2.39.8 [M]</td>
+        <td>2014-10-20</td>
+        <td>Destinations</td>
+        <td>Oracle: Values were inserted into the wrong columns in some cases, if bulk operations had been disabled </td>
+      </tr>
+      <tr>
+        <td>2.39.7 [M]</td>
+        <td>2014-10-20</td>
+        <td>Server</td>
+        <td>Server had to be restarted, if errors occurred while loading an extraction</td>
+      </tr>
+      <tr>
+        <td>2.39.5 [L]</td>
+        <td>2014-10-13</td>
+        <td>Designer</td>
+        <td>Destination of an extraction could not be changed from a non-existing shared destination to a valid one</td>
+      </tr>
+      <tr>
+        <td>2.39.4 [M]</td>
+        <td>2014-10-13</td>
+        <td>Designer</td>
+        <td>Extraction-specific settings were reverted to defaults, if "Manage"-button was clicked</td>
+      </tr>
+      <tr>
+        <td>2.39.3 [L]</td>
+        <td>2014-10-13</td>
+        <td>BW Cube</td>
+        <td>Fix for "Use Real Data for Preview"</td>
+      </tr>
+      <tr>
+        <td>2.39.2 [L]</td>
+        <td>2014-10-10</td>
+        <td>General</td>
+        <td>Fix for custom parameters when using the xu.exe button to execute the extraction</td>
+      </tr>
+      <tr>
+        <td>2.39.1 [M]</td>
+        <td>2014-10-08</td>
+        <td>Server</td>
+        <td>In some cases extractions were run despite load errors</td>
+      </tr>
+      <tr>
+        <td>2.39.0 [M]</td>
+        <td>2014-10-07</td>
+        <td>Designer</td>
+        <td>Replaced "Run"-button with "Run in xu.exe" and added context menu entry</td>
+      </tr>
+      <tr>
+        <td>2.38.8 [L]</td>
+        <td>2014-10-07</td>
+        <td>DeltaQ</td>
+        <td>Correction for missing "Init without data"</td>
+      </tr>
+      <tr>
+        <td>2.38.7 [L]</td>
+        <td>2014-10-01</td>
+        <td>Destinations</td>
+        <td>Correction for "Cannot convert" error message when using Tableau Destination with BEX queries</td>
+      </tr>
+      <tr>
+        <td>2.38.6 [M]</td>
+        <td>2014-09-30</td>
+        <td>Security</td>
+        <td>Fix for friendly domain names / FQDN (Active Directory)</td>
+      </tr>
+      <tr>
+        <td>2.38.5 [L]</td>
+        <td>2014-09-25</td>
+        <td>Destinations</td>
+        <td>Bug fix for time formatting in CSV destinations</td>
+      </tr>
+      <tr>
+        <td>2.38.4 [M]</td>
+        <td>2014-09-16</td>
+        <td>DeltaQ</td>
+        <td>Removed "Key" column from main form (designer)</td>
+      </tr>
+      <tr>
+        <td>2.38.3 [M]</td>
+        <td>2014-09-16</td>
+        <td>Security</td>
+        <td>Users could not see restricted extractions if they had logged on with a name in different character casing than their actual name (e. g. logon as "User01" if actual name was "user01")</td>
+      </tr>
+      <tr>
+        <td>2.38.2 [M]</td>
+        <td>2014-09-16</td>
+        <td>Security</td>
+        <td>Not all administrator privileges were granted, if logon as "admin" was performed with different character casing (e. g. "Admin").</td>
+      </tr>
+      <tr>
+        <td>2.38.1 [L]</td>
+        <td>2014-09-09</td>
+        <td>General</td>
+        <td>Improved logon failure logging (Active Directory)</td>
+      </tr>
+      <tr>
+        <td>2.38.0 [M]</td>
+        <td>2014-09-04</td>
+        <td>Destinations</td>
+        <td>Added SharePoint destination for beta testing</td>
+      </tr>
+      <tr>
+        <td>2.37.0 [M]</td>
+        <td>2014-09-02</td>
+        <td>Designer</td>
+        <td>Added "Primary Key" tab to "General Settings"</td>
+      </tr>
+      <tr>
+        <td>2.36.8 [H]</td>
+        <td>2014-09-02</td>
+        <td>Server</td>
+        <td>Double quotes in data were duplicated, if data was loaded from buffer</td>
+      </tr>
+      <tr>
+        <td>2.36.7 [L]</td>
+        <td>2014-08-28</td>
+        <td>Destinations</td>
+        <td>Bug fix for broken connections in Redshift destination.</td>
+      </tr>
+      <tr>
+        <td>2.36.6 [L]</td>
+        <td>2014-08-26</td>
+        <td>Designer</td>
+        <td>Added functionality to define custom formats for time data in CSV destinations.</td>
+      </tr>
+      <tr>
+        <td>2.36.5 [L]</td>
+        <td>2014-08-21</td>
+        <td>Destinations</td>
+        <td>Default file name is now derived from SAP object name in Tableau destination</td>
+      </tr>
+      <tr>
+        <td>2.36.4 [L]</td>
+        <td>2014-08-21</td>
+        <td>Destinations</td>
+        <td>Fixed: Empty date fields no longer throw an exception in Tableau destination</td>
+      </tr>
+      <tr>
+        <td>2.36.3 [M]</td>
+        <td>2014-08-18</td>
+        <td>Destinations</td>
+        <td>Fixed data duplication when skipping Null values in Tableau destination</td>
+      </tr>
+      <tr>
+        <td>2.36.2 [L]</td>
+        <td>2014-08-08</td>
+        <td>Destinations</td>
+        <td>Bug fix for Null values in Tableau destination</td>
+      </tr>
+      <tr>
+        <td>2.36.1 [L]</td>
+        <td>2014-08-07</td>
+        <td>Destinations</td>
+        <td>Fix for File - CSV (didn't work since version 2.35.0)</td>
+      </tr>
+      <tr>
+        <td>2.36.0 [M]</td>
+        <td>2014-08-05</td>
+        <td>General</td>
+        <td>New name and implementation of command line client: XtractUniversalCmd.exe is xu.exe now</td>
+      </tr>
+      <tr>
+        <td>2.35.3 [L]</td>
+        <td>2014-08-05</td>
+        <td>Server</td>
+        <td>Removed byte-order mark from UTF-8 encoded data</td>
+      </tr>
+      <tr>
+        <td>2.35.2 [M]</td>
+        <td>2014-08-05</td>
+        <td>Server</td>
+        <td>Fix for possible server hang with non-HTTP destinations, if client disconnects at a certain time before extraction is finished</td>
+      </tr>
+      <tr>
+        <td>2.35.1 [L]</td>
+        <td>2014-08-05</td>
+        <td>Designer</td>
+        <td>Updated address in product info</td>
+      </tr>
+      <tr>
+        <td>2.35.0 [L]</td>
+        <td>2014-07-22</td>
+        <td>Destinations</td>
+        <td>New extraction-specific setting for OData Atom: Column names</td>
+      </tr>
+      <tr>
+        <td>2.34.0 [L]</td>
+        <td>2014-07-08</td>
+        <td>Destinations</td>
+        <td>Custom parameters are available in SQL statements as SQL parameters</td>
+      </tr>
+      <tr>
+        <td>2.33.1 [L]</td>
+        <td>2014-06-13</td>
+        <td>BW Cube</td>
+        <td>New mode available for pure MDX extractions</td>
+      </tr>
+      <tr>
+        <td>2.33.0 [L]</td>
+        <td>2014-06-12</td>
+        <td>Destinations</td>
+        <td>Removed custom parameters from scripted expressions for security reasons</td>
+      </tr>
+      <tr>
+        <td>2.32.0 [L]</td>
+        <td>2014-06-10</td>
+        <td>Destinations</td>
+        <td>Custom parameters are available in scripted expressions now (Extraction.CustomParameters)</td>
+      </tr>
+      <tr>
+        <td>2.31.9 [L]</td>
+        <td>2014-05-22</td>
+        <td>Designer</td>
+        <td>'Info' displays licensed servers and destinations</td>
+      </tr>
+      <tr>
+        <td>2.31.8 [L]</td>
+        <td>2014-05-22</td>
+        <td>BW Cube</td>
+        <td>New BWCube look-up</td>
+      </tr>
+      <tr>
+        <td>2.31.7 [L]</td>
+        <td>2014-05-20</td>
+        <td>BAPI</td>
+        <td>New BAPI look-up</td>
+      </tr>
+      <tr>
+        <td>2.31.6 [L]</td>
+        <td>2014-05-20</td>
+        <td>Report</td>
+        <td>New report look-up</td>
+      </tr>
+      <tr>
+        <td>2.31.5 [L]</td>
+        <td>2014-05-19</td>
+        <td>DeltaQ</td>
+        <td>Bug fix for corrupted serialisation info when using DeltaQ in a push destination</td>
+      </tr>
+      <tr>
+        <td>2.31.4 [L]</td>
+        <td>2014-04-17</td>
+        <td>Hierarchy</td>
+        <td>New hierarchy look-up</td>
+      </tr>
+      <tr>
+        <td>2.31.3 [L]</td>
+        <td>2014-04-17</td>
+        <td>Query</td>
+        <td>New Query look-up and metadata retrieval</td>
+      </tr>
+      <tr>
+        <td>2.31.2 [L]</td>
+        <td>2014-04-09</td>
+        <td>Designer</td>
+        <td>Tableau destination: Output directory textbox is now editable</td>
+      </tr>
+      <tr>
+        <td>2.31.1 [L]</td>
+        <td>2014-04-07</td>
+        <td>Designer</td>
+        <td>Optimized order of destinations</td>
+      </tr>
+      <tr>
+        <td>2.31.0 [L]</td>
+        <td>2014-04-03</td>
+        <td>Designer</td>
+        <td>Fixed lookup button for trace directory in the connection manager</td>
+      </tr>
+      <tr>
+        <td>2.30.0 [L]</td>
+        <td>2014-04-02</td>
+        <td>Designer</td>
+        <td>Fixed order of destinations in drop-down-list to be consistent with documentation</td>
+      </tr>
+      <tr>
+        <td>2.29.0 [M]</td>
+        <td>2014-04-01</td>
+        <td>Destinations</td>
+        <td>Added Tableau destination</td>
+      </tr>
+      <tr>
+        <td>2.28.2 [L]</td>
+        <td>2014-03-28</td>
+        <td>Destinations</td>
+        <td>Added backward compatibility for very old extractions with columns which contain special characters (like slashes, dashes, etc.) and use custom HTTP - CSV destinations</td>
+      </tr>
+      <tr>
+        <td>2.28.1 [L]</td>
+        <td>2014-03-04</td>
+        <td>Server</td>
+        <td>Fix for PowerQuery for non-Table extractions</td>
+      </tr>
+      <tr>
+        <td>2.28.0 [L]</td>
+        <td>2014-02-25</td>
+        <td>Server</td>
+        <td>List of parameters for an extraction can be retrieved via HTTP/CSV now</td>
+      </tr>
+      <tr>
+        <td>2.27.7 [L]</td>
+        <td>2014-02-20</td>
+        <td>Designer</td>
+        <td>Fix for "invalid value" error message if value of text parameter is empty (Run dialog)</td>
+      </tr>
+      <tr>
+        <td>2.27.6 [L]</td>
+        <td>2014-02-18</td>
+        <td>Destinations</td>
+        <td>Special characters (like slashes) are no longer replaced with underscores in column names (HTTP - CSV, Flat File - CSV, GoodData)</td>
+      </tr>
+      <tr>
+        <td>2.27.5 [L]</td>
+        <td>2014-02-13</td>
+        <td>Destinations</td>
+        <td>Added $top=n to generate n preview rows (OData)</td>
+      </tr>
+      <tr>
+        <td>2.27.4 [L]</td>
+        <td>2014-02-13</td>
+        <td>Destinations</td>
+        <td>Fix for PowerQuery (OData)</td>
+      </tr>
+      <tr>
+        <td>2.27.2 [L]</td>
+        <td>2014-02-11</td>
+        <td>Server</td>
+        <td>filterDebug=true is also available for live log of non-HTTP destinations now</td>
+      </tr>
+      <tr>
+        <td>2.27.1 [L]</td>
+        <td>2014-02-11</td>
+        <td>Server</td>
+        <td>Fix for Power Pivot Excel 2010 (was broken since 2.24.0)</td>
+      </tr>
+      <tr>
+        <td>2.27.0 [L]</td>
+        <td>2014-02-06</td>
+        <td>Security</td>
+        <td>SAP credentials can be supplied via Basic authentication (HTTPS recommended)</td>
+      </tr>
+      <tr>
+        <td>2.26.3 [L]</td>
+        <td>2014-02-06</td>
+        <td>Security</td>
+        <td>Removed user and passwd run parameters</td>
+      </tr>
+      <tr>
+        <td>2.26.2 [M]</td>
+        <td>2014-02-06</td>
+        <td>Server</td>
+        <td>Buffer was not working with OData URLs (added in 2.22.0)</td>
+      </tr>
+      <tr>
+        <td>2.26.1 [L]</td>
+        <td>2014-02-04</td>
+        <td>Server</td>
+        <td>Added query string option filterDebug=true to exclude debug log entries</td>
+      </tr>
+      <tr>
+        <td>2.26.0 [L]</td>
+        <td>2014-02-04</td>
+        <td>General</td>
+        <td>Buffer directory can be changed in Server Settings now</td>
+      </tr>
+      <tr>
+        <td>2.25.2 [L]</td>
+        <td>2014-02-04</td>
+        <td>Designer</td>
+        <td>Corrected some typos</td>
+      </tr>
+      <tr>
+        <td>2.25.1 [L]</td>
+        <td>2014-01-30</td>
+        <td>Destinations</td>
+        <td>Improved error messages for row processing (DB2, Oracle, SQL Server, Teradata)</td>
+      </tr>
+      <tr>
+        <td>2.25.0 [M]</td>
+        <td>2014-01-30</td>
+        <td>Destinations</td>
+        <td>Bulk operations can be disabled via extractions-specific settings for debugging (Oracle, SQL Server)</td>
+      </tr>
+      <tr>
+        <td>2.24.4 [L]</td>
+        <td>2014-01-30</td>
+        <td>Designer</td>
+        <td>Value of destination column in extraction list was missing after cloning</td>
+      </tr>
+      <tr>
+        <td>2.24.3 [M]</td>
+        <td>2014-01-23</td>
+        <td>Destinations</td>
+        <td>Oracle: Disabled connection pooling to make sure no inactive sessions are left behind</td>
+      </tr>
+      <tr>
+        <td>2.24.2 [M]</td>
+        <td>2014-01-21</td>
+        <td>BAPI</td>
+        <td>Fix for "cannot assign value..."</td>
+      </tr>
+      <tr>
+        <td>2.24.1 [L]</td>
+        <td>2014-01-14</td>
+        <td>Designer</td>
+        <td>For custom destinations, type of destination is shown in extraction list</td>
+      </tr>
+      <tr>
+        <td>2.24.0 [L]</td>
+        <td>2014-01-09</td>
+        <td>Server</td>
+        <td>Added Import Wizard Detection for PowerPivot 2013</td>
+      </tr>
+      <tr>
+        <td>2.23.1 [L]</td>
+        <td>2014-01-09</td>
+        <td>Server</td>
+        <td>Added support for HTTP HEAD requests</td>
+      </tr>
+      <tr>
+        <td>2.23.0 [L]</td>
+        <td>2014-01-09</td>
+        <td>Destinations</td>
+        <td>Added support for Visual Studio LightSwitch (OData)</td>
+      </tr>
+      <tr>
+        <td>2.22.5 [L]</td>
+        <td>2014-01-08</td>
+        <td>BW Cube</td>
+        <td>Bugfix for tree view UI element on the left side. Double clicking lead to strange error message in rare cases</td>
+      </tr>
+      <tr>
+        <td>2.22.4 [L]</td>
+        <td>2014-01-07</td>
+        <td>General</td>
+        <td>Corrected the links to the OnlineHelp</td>
+      </tr>
+      <tr>
+        <td>2.22.3 [L]</td>
+        <td>2014-01-02</td>
+        <td>Designer</td>
+        <td>Fix for generated OData URL (run dialog)</td>
+      </tr>
+      <tr>
+        <td>2.22.2 [L]</td>
+        <td>2013-12-19</td>
+        <td>Server</td>
+        <td>Empty results do not create a dummy line anymore if read from buffer</td>
+      </tr>
+      <tr>
+        <td>2.22.1 [L]</td>
+        <td>2013-12-19</td>
+        <td>Service</td>
+        <td>Fix for Windows Server 2003 and XP</td>
+      </tr>
+      <tr>
+        <td>2.22.0 [L]</td>
+        <td>2013-12-17</td>
+        <td>Destinations</td>
+        <td>HTTP - OData Atom: added new URL-Schema and Metadata Document</td>
+      </tr>
+      <tr>
+        <td>2.21.1 [L]</td>
+        <td>2013-12-15</td>
+        <td>DeltaQ</td>
+        <td>Fix: In rare cases the select options were deleted completely when pressing the cancel button in the Range dialog</td>
+      </tr>
+      <tr>
+        <td>2.21.0 [L]</td>
+        <td>2013-12-12</td>
+        <td>Destinations</td>
+        <td>Added Redshift beta destination</td>
+      </tr>
+      <tr>
+        <td>2.20.5 [L]</td>
+        <td>2013-12-03</td>
+        <td>Server</td>
+        <td>CSV: Values which contain row separator are enclosed in quote symbols now</td>
+      </tr>
+      <tr>
+        <td>2.20.4 [L]</td>
+        <td>2013-11-28</td>
+        <td>Server</td>
+        <td>Added DataServiceVersion HTTP-header</td>
+      </tr>
+      <tr>
+        <td>2.20.3 [M]</td>
+        <td>2013-11-12</td>
+        <td>Destinations</td>
+        <td>Fixed live-log via HTTP</td>
+      </tr>
+      <tr>
+        <td>2.20.2 [L]</td>
+        <td>2013-11-12</td>
+        <td>Destinations</td>
+        <td>Disabled connection pooling in Teradata to make sure all volatile tables are deleted</td>
+      </tr>
+      <tr>
+        <td>2.20.1 [L]</td>
+        <td>2013-11-12</td>
+        <td>Destinations</td>
+        <td>Tables for extractions without primary key are created as MULTISET tables in Teradata now </td>
+      </tr>
+      <tr>
+        <td>2.20.0 [M]</td>
+        <td>2013-11-12</td>
+        <td>Destinations</td>
+        <td>Added primary key constraint to CREATE TABLE SQL</td>
+      </tr>
+      <tr>
+        <td>2.19.0 [L]</td>
+        <td>2013-11-12</td>
+        <td>Destinations</td>
+        <td>Added GoodData destination</td>
+      </tr>
+      <tr>
+        <td>2.18.4 [M]</td>
+        <td>2013-11-08</td>
+        <td>Destinations</td>
+        <td>SQL is generated according to SQL identifier restrictions of destination database</td>
+      </tr>
+      <tr>
+        <td>2.18.3 [L]</td>
+        <td>2013-11-08</td>
+        <td>Report</td>
+        <td>Fix for using Header Pattern with Automatic Column Detection</td>
+      </tr>
+      <tr>
+        <td>2.18.2 [L]</td>
+        <td>2013-10-31</td>
+        <td>General</td>
+        <td>XtractUniversalCmd.exe tool now returns 100 in case of an error</td>
+      </tr>
+      <tr>
+        <td>2.18.1 [L]</td>
+        <td>2013-10-30</td>
+        <td>DeltaQ</td>
+        <td>Extractions crashed if url parameter "programId" was set</td>
+      </tr>
+      <tr>
+        <td>2.18.0 [L]</td>
+        <td>2013-10-22</td>
+        <td>Destinations</td>
+        <td>Added Extraction.TableName and Extraction.RowsCount to Scripted Expressions</td>
+      </tr>
+      <tr>
+        <td>2.17.0 [L]</td>
+        <td>2013-10-22</td>
+        <td>Destinations</td>
+        <td>Changed names of SQL-Parameters for cases in which column names cannot be used (can break existing Custom SQL)</td>
+      </tr>
+      <tr>
+        <td>2.16.3 [L]</td>
+        <td>2013-10-08</td>
+        <td>Server</td>
+        <td>Server will start up even if extraction metadata is corrupted</td>
+      </tr>
+      <tr>
+        <td>2.16.2 [L]</td>
+        <td>2013-10-05</td>
+        <td>BW Cube</td>
+        <td>Fix for variable problems under BEX mode on certain BW release above rel. 7.01</td>
+      </tr>
+      <tr>
+        <td>2.16.1 [L]</td>
+        <td>2013-09-27</td>
+        <td>Destinations</td>
+        <td>Fixed SQL for DB2 (increased length of string types)</td>
+      </tr>
+      <tr>
+        <td>2.16.0 [L]</td>
+        <td>2013-09-26</td>
+        <td>Destinations</td>
+        <td>More settings for Flat File destination</td>
+      </tr>
+      <tr>
+        <td>2.15.4 [L]</td>
+        <td>2013-09-25</td>
+        <td>Server</td>
+        <td>Errors during extraction load do not create empty buffer entries anymore</td>
+      </tr>
+      <tr>
+        <td>2.15.2 [L]</td>
+        <td>2013-08-23</td>
+        <td>Server</td>
+        <td>Moved log entries of run parameters from server log to extraction log</td>
+      </tr>
+      <tr>
+        <td>2.15.0 [L]</td>
+        <td>2013-08-21</td>
+        <td>Destinations</td>
+        <td>SQL Server destination now supports bulk inserts</td>
+      </tr>
+      <tr>
+        <td>2.14.6 [L]</td>
+        <td>2013-08-21</td>
+        <td>Server</td>
+        <td>Fix for extractions which have very short running times (&lt;50ms)  </td>
+      </tr>
+      <tr>
+        <td>2.14.5 [M]</td>
+        <td>2013-08-14</td>
+        <td>Destinations</td>
+        <td>Time values could not be written to database destinations if data was read from buffer</td>
+      </tr>
+      <tr>
+        <td>2.14.4 [L]</td>
+        <td>2013-08-14</td>
+        <td>Destinations</td>
+        <td>Changed data type for ABAP type RAW to SQL type CHARACTER</td>
+      </tr>
+      <tr>
+        <td>2.14.3 [L]</td>
+        <td>2013-08-13</td>
+        <td>Destinations</td>
+        <td>Improved mapping of data types (ABAP / databases)</td>
+      </tr>
+      <tr>
+        <td>2.14.2 [L]</td>
+        <td>2013-08-13</td>
+        <td>Designer</td>
+        <td>Improved GUI for destinations</td>
+      </tr>
+      <tr>
+        <td>2.14.1 [L]</td>
+        <td>2013-08-08</td>
+        <td>Report</td>
+        <td>Correction for timeout issue when previewing a long running report</td>
+      </tr>
+      <tr>
+        <td>2.14.0 [L]</td>
+        <td>2013-08-02</td>
+        <td>Destinations</td>
+        <td>Added scripting for custom SQL preparation statements</td>
+      </tr>
+      <tr>
+        <td>2.13.12 [L]</td>
+        <td>2013-08-02</td>
+        <td>Destinations</td>
+        <td>Fix for "Extraction-Specific Settings" GUI and SQL Editor</td>
+      </tr>
+      <tr>
+        <td>2.13.11 [L]</td>
+        <td>2013-07-31</td>
+        <td>Destinations</td>
+        <td>Improved generated SQL</td>
+      </tr>
+      <tr>
+        <td>2.13.10 [L]</td>
+        <td>2013-07-25</td>
+        <td>Destinations</td>
+        <td>Fix for 'unexpected )' (EXASOL, error introduced in 2.13.7)</td>
+      </tr>
+      <tr>
+        <td>2.13.9 [L]</td>
+        <td>2013-07-25</td>
+        <td>Service</td>
+        <td>Errors which lead to server termination are written to Windows event log</td>
+      </tr>
+      <tr>
+        <td>2.13.8 [M]</td>
+        <td>2013-07-25</td>
+        <td>Server</td>
+        <td>Errors while writing extraction log do not lead to server termination anymore</td>
+      </tr>
+      <tr>
+        <td>2.13.7 [L]</td>
+        <td>2013-07-17</td>
+        <td>Destinations</td>
+        <td>Improved generated SQL</td>
+      </tr>
+      <tr>
+        <td>2.13.5 [L]</td>
+        <td>2013-07-16</td>
+        <td>Table</td>
+        <td>Added scripting for where clause</td>
+      </tr>
+      <tr>
+        <td>2.13.4 [L]</td>
+        <td>2013-07-11</td>
+        <td>Setup</td>
+        <td>Added Visual C++ runtime to setup</td>
+      </tr>
+      <tr>
+        <td>2.13.3 [L]</td>
+        <td>2013-07-11</td>
+        <td>Setup</td>
+        <td>Fix for icon in "Programs and Features"</td>
+      </tr>
+      <tr>
+        <td>2.13.2 [L]</td>
+        <td>2013-07-11</td>
+        <td>Setup</td>
+        <td>Fix for error message during service start on 32-bit OS</td>
+      </tr>
+      <tr>
+        <td>2.13.1 [L]</td>
+        <td>2013-07-10</td>
+        <td>Report</td>
+        <td>Fix for crash on Report dialog when function module is not installed properly</td>
+      </tr>
+      <tr>
+        <td>2.13.0 [L]</td>
+        <td>2013-07-08</td>
+        <td>General</td>
+        <td>Added support for NetWeaver RFC libraries</td>
+      </tr>
+      <tr>
+        <td>2.12.2 [L]</td>
+        <td>2013-06-20</td>
+        <td>Destinations</td>
+        <td>Date values from the SAP source are treated as real date by default for any destination</td>
+      </tr>
+      <tr>
+        <td>2.12.1 [L]</td>
+        <td>2013-06-20</td>
+        <td>Destinations</td>
+        <td>Fix for Date and Decimal values in EXASOL destination</td>
+      </tr>
+      <tr>
+        <td>2.12.0 [L]</td>
+        <td>2013-06-18</td>
+        <td>Destinations</td>
+        <td>Added date conversion for DB2, EXASOL, Oracle and SQLServer</td>
+      </tr>
+      <tr>
+        <td>2.11.17 [L]</td>
+        <td>2013-06-18</td>
+        <td>Report</td>
+        <td>New setting Report Width introduced in case there's more than one report line per data line</td>
+      </tr>
+      <tr>
+        <td>2.11.15 [L]</td>
+        <td>2013-06-11</td>
+        <td>Destinations</td>
+        <td>Fix for Oracle 10g (PL/SQL must not contain carriage-return characters) </td>
+      </tr>
+      <tr>
+        <td>2.11.14 [L]</td>
+        <td>2013-06-09</td>
+        <td>DeltaQ</td>
+        <td>Released 4 additional settings: 'Don't resend..', 'Check IDoc state...', 'Serialization info...' and 'Data conversion...'</td>
+      </tr>
+      <tr>
+        <td>2.11.13 [L]</td>
+        <td>2013-06-05</td>
+        <td>Destinations</td>
+        <td>IBM DB/2 destination available for beta test</td>
+      </tr>
+      <tr>
+        <td>2.11.12 [L]</td>
+        <td>2013-06-04</td>
+        <td>General</td>
+        <td>.NET 4 is used, if available</td>
+      </tr>
+      <tr>
+        <td>2.11.11 [L]</td>
+        <td>2013-05-28</td>
+        <td>General</td>
+        <td>.NET 4 is used, if 3.5 SP1 is not installed</td>
+      </tr>
+      <tr>
+        <td>2.11.10 [L]</td>
+        <td>2013-05-21</td>
+        <td>General</td>
+        <td>Added 'Use SAPGUI' to connection settings</td>
+      </tr>
+      <tr>
+        <td>2.11.9 [L]</td>
+        <td>2013-05-17</td>
+        <td>Destinations</td>
+        <td>Renamed 'Truncate &amp; Create' to 'Truncate Or Create' to clarify the meaning </td>
+      </tr>
+      <tr>
+        <td>2.11.8 [L]</td>
+        <td>2013-05-17</td>
+        <td>Destinations</td>
+        <td>In case of extraction errors, Oracle Destination was sometimes left in a locked state (ORA-00054)</td>
+      </tr>
+      <tr>
+        <td>2.11.7 [L]</td>
+        <td>2013-05-17</td>
+        <td>Destinations</td>
+        <td>Fix for missing backslash at the end of FlatFileDestination directory</td>
+      </tr>
+      <tr>
+        <td>2.11.6 [L]</td>
+        <td>2013-05-14</td>
+        <td>Destinations</td>
+        <td>Correction for extractions to flat files with a backslash in the OLTP source name</td>
+      </tr>
+      <tr>
+        <td>2.11.5 [L]</td>
+        <td>2013-05-03</td>
+        <td>Destinations</td>
+        <td>Several improvements concerning datatypes in EXASOL destination</td>
+      </tr>
+      <tr>
+        <td>2.11.4 [L]</td>
+        <td>2013-05-02</td>
+        <td>DeltaQ</td>
+        <td>It's now possible to define primary key columns for automatic incremental updates in all push destinations</td>
+      </tr>
+      <tr>
+        <td>2.11.3 [L]</td>
+        <td>2013-04-19</td>
+        <td>Report</td>
+        <td>New setting added: Regex Pattern for skipping rows</td>
+      </tr>
+      <tr>
+        <td>2.11.2 [M]</td>
+        <td>2013-04-18</td>
+        <td>Destinations</td>
+        <td>Changing destination from shared to custom without clicking on the settings button left the extraction without destination</td>
+      </tr>
+      <tr>
+        <td>2.11.1 [L]</td>
+        <td>2013-04-05</td>
+        <td>General</td>
+        <td>Added tool to run extractions from command-line</td>
+      </tr>
+      <tr>
+        <td>2.11.0 [L]</td>
+        <td>2013-04-05</td>
+        <td>Destinations</td>
+        <td>Added EXASOL destination</td>
+      </tr>
+      <tr>
+        <td>2.10.1 [M]</td>
+        <td>2013-03-21</td>
+        <td>BW Cube</td>
+        <td>Output transformation did not work sometimes if result was read from buffer</td>
+      </tr>
+      <tr>
+        <td>2.10.0 [L]</td>
+        <td>2013-01-30</td>
+        <td>Security</td>
+        <td>Added access restriction for shared connections</td>
+      </tr>
+      <tr>
+        <td>2.9.2 [M]</td>
+        <td>2013-01-16</td>
+        <td>BAPI</td>
+        <td>Added support for structures/tables which contain alignment gaps caused by includes</td>
+      </tr>
+      <tr>
+        <td>2.9.1 [L]</td>
+        <td>2013-01-08</td>
+        <td>Destinations</td>
+        <td>Flat File destination officially released for beta usage</td>
+      </tr>
+      <tr>
+        <td>2.9.0 [L]</td>
+        <td>2012-12-26</td>
+        <td>Destinations</td>
+        <td>SQL Server Destination Beta Release</td>
+      </tr>
+      <tr>
+        <td>2.8.3 [L]</td>
+        <td>2012-12-18</td>
+        <td>Destinations</td>
+        <td>Fix for merge if primary consists of more than one column (Oracle)</td>
+      </tr>
+      <tr>
+        <td>2.8.2 [L]</td>
+        <td>2012-12-12</td>
+        <td>Destinations</td>
+        <td>Fix for single quotes in description texts (Oracle)</td>
+      </tr>
+      <tr>
+        <td>2.8.1 [L]</td>
+        <td>2012-12-11</td>
+        <td>General</td>
+        <td>Fix: LogDir setting got lost when using a custom connection</td>
+      </tr>
+      <tr>
+        <td>2.8.0 [L]</td>
+        <td>2012-12-07</td>
+        <td>Destinations</td>
+        <td>Added merge statement</td>
+      </tr>
+      <tr>
+        <td>2.7.6 [L]</td>
+        <td>2012-11-29</td>
+        <td>Security</td>
+        <td>Logged on user is automatically added to the list of allowed users/groups if he activates access restriction for an extraction</td>
+      </tr>
+      <tr>
+        <td>2.7.4 [L]</td>
+        <td>2012-11-28</td>
+        <td>Security</td>
+        <td>Access restriction changes performed by non-admin users were not saved correctly in some cases</td>
+      </tr>
+      <tr>
+        <td>2.7.2 [L]</td>
+        <td>2012-11-22</td>
+        <td>DeltaQ</td>
+        <td>Added "Auto Synchronisation" feature to settings</td>
+      </tr>
+      <tr>
+        <td>2.7.1 [L]</td>
+        <td>2012-11-19</td>
+        <td>General</td>
+        <td>New TeamViewer version for remote support</td>
+      </tr>
+      <tr>
+        <td>2.7.0 [L]</td>
+        <td>2012-11-16</td>
+        <td>Destinations</td>
+        <td>Added Teradata destination</td>
+      </tr>
+      <tr>
+        <td>2.6.1 [L]</td>
+        <td>2012-11-15</td>
+        <td>Service</td>
+        <td>Increased start/stop timeouts</td>
+      </tr>
+      <tr>
+        <td>2.4.1 [L]</td>
+        <td>2012-10-26</td>
+        <td>DeltaQ</td>
+        <td>A new dialog for maintaining the Delta requests was added to the settings dialog</td>
+      </tr>
+      <tr>
+        <td>2.4.0 [L]</td>
+        <td>2012-10-24</td>
+        <td>General</td>
+        <td>Added shared destinations</td>
+      </tr>
+      <tr>
+        <td>2.3.11 [L]</td>
+        <td>2012-10-24</td>
+        <td>BAPI</td>
+        <td>Fix for non-unicode systems (version 2.x and later)</td>
+      </tr>
+      <tr>
+        <td>2.3.10 [L]</td>
+        <td>2012-10-17</td>
+        <td>BAPI</td>
+        <td>Structure elements in GUI were missing in some rare cases</td>
+      </tr>
+      <tr>
+        <td>2.3.9 [L]</td>
+        <td>2012-10-17</td>
+        <td>Server</td>
+        <td>More detailed error messages for server startup problems</td>
+      </tr>
+      <tr>
+        <td>2.3.8 [L]</td>
+        <td>2012-10-16</td>
+        <td>Designer</td>
+        <td>Fix for HTTPS port in "Run" dialog</td>
+      </tr>
+      <tr>
+        <td>2.3.4 [L]</td>
+        <td>2012-09-28</td>
+        <td>Table</td>
+        <td>Fix for tables with emtpy column descriptions (since 2.3.3.x)</td>
+      </tr>
+      <tr>
+        <td>2.3.2 [L]</td>
+        <td>2012-09-24</td>
+        <td>Table</td>
+        <td>Correction in function module Z_XTRACT_IS_TABLE_COMPRESSION for timestamp/decimal columns</td>
+      </tr>
+      <tr>
+        <td>2.3.0 [M]</td>
+        <td>2012-09-05</td>
+        <td>General</td>
+        <td>Added Oracle destination</td>
+      </tr>
+      <tr>
+        <td>2.2.8 [L]</td>
+        <td>2012-08-28</td>
+        <td>Server</td>
+        <td>Fix for "DateFormat" server setting (didn't work since 2.x)</td>
+      </tr>
+      <tr>
+        <td>2.2.7 [L]</td>
+        <td>2012-08-27</td>
+        <td>General</td>
+        <td>All column names are now backward-compatible with CSV output before 2.x</td>
+      </tr>
+      <tr>
+        <td>2.2.6 [L]</td>
+        <td>2012-08-08</td>
+        <td>Hierarchy</td>
+        <td>Fix for zero node ids with some hierarchies	</td>
+      </tr>
+      <tr>
+        <td>2.2.5 [L]</td>
+        <td>2012-08-08</td>
+        <td>BW Cube</td>
+        <td>Bugfix in UI when switch from BEX mode to non-BEX mode and back</td>
+      </tr>
+      <tr>
+        <td>2.2.4 [L]</td>
+        <td>2012-08-06</td>
+        <td>BW Cube</td>
+        <td>Fix for output transformation (did not work since version 2.0.0.x)</td>
+      </tr>
+      <tr>
+        <td>2.2.3 [L]</td>
+        <td>2012-08-06</td>
+        <td>General</td>
+        <td>Bug fix for exception when using ADO.NET provider together with Layer2 Sharepoint integration</td>
+      </tr>
+      <tr>
+        <td>2.2.2 [L]</td>
+        <td>2012-08-06</td>
+        <td>Server</td>
+        <td>Sometimes extraction runs were declared 'successful' even though errors occured</td>
+      </tr>
+      <tr>
+        <td>2.2.1 [L]</td>
+        <td>2012-08-03</td>
+        <td>Service</td>
+        <td>Service did not start after reboot sometimes (service dependencies were missing)</td>
+      </tr>
+      <tr>
+        <td>2.2.0 [L]</td>
+        <td>2012-08-02</td>
+        <td>Setup</td>
+        <td>Fixed prerequisites check	</td>
+      </tr>
+      <tr>
+        <td>2.1.0 [L]</td>
+        <td>2012-08-02</td>
+        <td>Service</td>
+        <td>New service implementation 	</td>
+      </tr>
+      <tr>
+        <td>2.0.1 [L]</td>
+        <td>2012-07-18</td>
+        <td>General</td>
+        <td>Re-added decimalSeparator URL-parameter (was missing since version 2.0.0.x)</td>
+      </tr>
+      <tr>
+        <td>2.0.0 [M]</td>
+        <td>2012-05-30</td>
+        <td>General</td>
+        <td>Several fixes and improvements, major internal changes</td>
+      </tr>
+      <tr>
+        <td>1.3.18 [M]</td>
+        <td>2012-04-24</td>
+        <td>DeltaQ</td>
+        <td>Added various additional settings and functions for natural hierarchy representation</td>
+      </tr>
+      <tr>
+        <td>1.3.17 [L]</td>
+        <td>2012-04-23</td>
+        <td>Server</td>
+        <td>CSV: Column headers are written even if extraction result is empty</td>
+      </tr>
+      <tr>
+        <td>1.3.16 [L]</td>
+        <td>2012-04-17</td>
+        <td>Designer</td>
+        <td>Designer was not able to start if configuration file was corrupted</td>
+      </tr>
+      <tr>
+        <td>1.3.15 [L]</td>
+        <td>2012-04-10</td>
+        <td>General</td>
+        <td>Added query string parameter "decimalSeparator"</td>
+      </tr>
+      <tr>
+        <td>1.3.14 [L]</td>
+        <td>2012-04-02</td>
+        <td>General</td>
+        <td>Fix for Designer failing to connect in some environments</td>
+      </tr>
+      <tr>
+        <td>1.3.13 [L]</td>
+        <td>2012-03-22</td>
+        <td>Server</td>
+        <td>Fix for log entries containing mode "Console" if server was running as a service</td>
+      </tr>
+      <tr>
+        <td>1.3.12 [L]</td>
+        <td>2012-03-22</td>
+        <td>Designer</td>
+        <td>More space for licensee in "About" window</td>
+      </tr>
+      <tr>
+        <td>1.3.11 [L]</td>
+        <td>2012-03-21</td>
+        <td>Designer</td>
+        <td>Added some icons to main menu</td>
+      </tr>
+      <tr>
+        <td>1.3.10 [L]</td>
+        <td>2012-03-01</td>
+        <td>Table</td>
+        <td>Field exits can be switched on in the settings dialog when using the compression feature</td>
+      </tr>
+      <tr>
+        <td>1.3.9 [L]</td>
+        <td>2012-02-29</td>
+        <td>Server</td>
+        <td>Some fixes for CSV value formatting</td>
+      </tr>
+      <tr>
+        <td>1.3.8 [L]</td>
+        <td>2012-02-28</td>
+        <td>Table</td>
+        <td>Preview is using real data instead of dummy data</td>
+      </tr>
+      <tr>
+        <td>1.3.7 [L]</td>
+        <td>2012-02-17</td>
+        <td>Table</td>
+        <td>Compression feature for faster data extraction released now for public use</td>
+      </tr>
+      <tr>
+        <td>1.3.6 [L]</td>
+        <td>2012-02-10</td>
+        <td>General</td>
+        <td>Added Preview Mode in General Settings</td>
+      </tr>
+      <tr>
+        <td>1.3.5 [L]</td>
+        <td>2012-02-09</td>
+        <td>General</td>
+        <td>Added padding for log entries in txt files and 'copy to clipboard' feature</td>
+      </tr>
+      <tr>
+        <td>1.3.4 [M]</td>
+        <td>2012-02-09</td>
+        <td>General</td>
+        <td>Fixes &amp; improvements for extraction abort</td>
+      </tr>
+      <tr>
+        <td>1.3.3 [M]</td>
+        <td>2012-02-09</td>
+        <td>Server</td>
+        <td>Fix for buffer BufferLifespanMinutes</td>
+      </tr>
+      <tr>
+        <td>1.3.2 [L]</td>
+        <td>2012-01-26</td>
+        <td>Designer</td>
+        <td>Removed default values of client and language for new connections; changed tab order</td>
+      </tr>
+      <tr>
+        <td>1.3.1 [M]</td>
+        <td>2012-01-26</td>
+        <td>General</td>
+        <td>Change to avoid "Attempt to read or write protected memory" error immediately after start of extraction execution (occurred at arbitrary times)</td>
+      </tr>
+      <tr>
+        <td>1.3.0 [L]</td>
+        <td>2012-01-20</td>
+        <td>Server</td>
+        <td>New extraction abort mechanism</td>
+      </tr>
+      <tr>
+        <td>1.2.7 [M]</td>
+        <td>2012-01-15</td>
+        <td>BW Cube</td>
+        <td>Implemented new BEX mode for extraction</td>
+      </tr>
+      <tr>
+        <td>1.2.6 [L]</td>
+        <td>2012-01-12</td>
+        <td>Designer</td>
+        <td>Fix for extractions with reference to an non-existing shared connection (connection dialog did not open)</td>
+      </tr>
+      <tr>
+        <td>1.2.5 [L]</td>
+        <td>2012-01-05</td>
+        <td>BW Cube</td>
+        <td>Fix for output column reordering when adding dimension property</td>
+      </tr>
+      <tr>
+        <td>1.2.4 [L]</td>
+        <td>2012-01-05</td>
+        <td>BW Cube</td>
+        <td>Fix for output column reordering and metadata refresh</td>
+      </tr>
+      <tr>
+        <td>1.2.3 [L]</td>
+        <td>2012-01-05</td>
+        <td>BW Cube</td>
+        <td>Fix for invalid output column reordering (output window could not be opened)</td>
+      </tr>
+      <tr>
+        <td>1.2.2 [M]</td>
+        <td>2011-12-20</td>
+        <td>General</td>
+        <td>Fix for being unable to connect to server with many extractions (about 100 and above)</td>
+      </tr>
+      <tr>
+        <td>1.2.1 [L]</td>
+        <td>2011-12-13</td>
+        <td>BW Cube</td>
+        <td>Fix for metadata of extractions with output column transformation</td>
+      </tr>
+      <tr>
+        <td>1.2.0 [L]</td>
+        <td>2011-11-30</td>
+        <td>Server</td>
+        <td>Added extraction list via HTTP, name filter for logs via HTTP</td>
+      </tr>
+      <tr>
+        <td>1.1.8 [L]</td>
+        <td>2011-11-29</td>
+        <td>General</td>
+        <td>Fix for connections using Load Balancing</td>
+      </tr>
+      <tr>
+        <td>1.1.7 [L]</td>
+        <td>2011-11-09</td>
+        <td>Server</td>
+        <td>Changed behavior of min/max parameters for log retrieval via HTTP</td>
+      </tr>
+      <tr>
+        <td>1.1.6 [L]</td>
+        <td>2011-11-06</td>
+        <td>Query</td>
+        <td>Fix for using variables in low/high values of the selection table</td>
+      </tr>
+      <tr>
+        <td>1.1.5 [L]</td>
+        <td>2011-10-20</td>
+        <td>Query</td>
+        <td>Correction for the value help for variants (some variants were not displayed correctly)</td>
+      </tr>
+      <tr>
+        <td>1.1.4 [L]</td>
+        <td>2011-10-17</td>
+        <td>BW Cube</td>
+        <td>Support for new OLAP BAPIs (see SAP note 1232751). The feature can be switched on in the settings dialog.</td>
+      </tr>
+      <tr>
+        <td>1.1.3 [L]</td>
+        <td>2011-10-07</td>
+        <td>Service</td>
+        <td>Fix: Service stopped unexpectedly on certain power events</td>
+      </tr>
+      <tr>
+        <td>1.1.1 [L]</td>
+        <td>2011-10-04</td>
+        <td>Server</td>
+        <td>Fix: Sometimes server stopped to handle HTTP request after extractions had been aborted</td>
+      </tr>
+      <tr>
+        <td>1.1.0 [L]</td>
+        <td>2011-09-29</td>
+        <td>Server</td>
+        <td>Added version information retrieval via HTTP</td>
+      </tr>
+      <tr>
+        <td>1.0.3 [L]</td>
+        <td>2011-09-22</td>
+        <td>Server</td>
+        <td>Added 'DistributeSetup' server setting</td>
+      </tr>
+      <tr>
+        <td>1.0.2 [L]</td>
+        <td>2011-09-16</td>
+        <td>BW Cube</td>
+        <td>Added reordering of output columns</td>
+      </tr>
+      <tr>
+        <td>1.0.0 [H]</td>
+        <td>2011-09-05</td>
+        <td>General</td>
+        <td>First official release</td>
+      </tr>
+    </tbody>
+  </table>
+</html>

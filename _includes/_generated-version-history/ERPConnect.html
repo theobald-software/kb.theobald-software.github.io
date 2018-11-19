@@ -1,0 +1,3766 @@
+<html>
+  <table border="1" cellspacing="0" cellpadding="3">
+    <tbody>
+      <tr>
+        <th class="col_ver">Version</th>
+        <th class="col_date">Date</th>
+        <th class="col_comp">Component</th>
+        <th class="col_desc">Description</th>
+      </tr>
+      <tr><td><a class="ReleaseNote" href="https://my.theobald-software.com/ReleaseNotes/ERPConnect/ERPConnect-6.3.0.html">6.3.0 [M]</a></td><td>2018-11-04</td><td>General</td><td>Some collections are implementing generic IList<T> now instead of non-generic interfaces(<a class="ReleaseNote" href="https://my.theobald-software.com/ReleaseNotes/ERPConnect/ERPConnect-6.3.0.html">Release note</a>)</td></tr>
+      <tr>
+        <td>6.2.3 [M]</td>
+        <td>2018-10-29</td>
+        <td>RFC Client</td>
+        <td>Another fix for R3Connection.CreateFunction() on some non-Unicode systems (TABLE_NOT_ACTIVE, bug introduced in 6.2.1).</td>
+      </tr>
+      <tr>
+        <td>6.2.2 [M]</td>
+        <td>2018-10-16</td>
+        <td>RFC Client</td>
+        <td>Fix for R3Connection.CreateFunction() on some non-Unicode systems (TABLE_NOT_ACTIVE, bug introduced in 6.2.1).</td>
+      </tr>
+      <tr>
+        <td>6.2.1 [L]</td>
+        <td>2018-10-09</td>
+        <td>Idoc</td>
+        <td>Fix for sending Idocs via qRFC</td>
+      </tr>
+      <tr>
+        <td>6.2.0 [M]</td>
+        <td>2018-10-01</td>
+        <td>RFC Client</td>
+        <td>Added support for RFC_READ_TABLE2 function modules in ReadTable</td>
+      </tr>
+      <tr>
+        <td>6.1.5 [L]</td>
+        <td>2018-09-19</td>
+        <td>RFC Client</td>
+        <td>Added R3Connection.ReadTableFunctionName</td>
+      </tr>
+      <tr>
+        <td>6.1.4 [L]</td>
+        <td>2018-08-31</td>
+        <td>RFCServer</td>
+        <td>Fix for RFCServer when using NetWeaver 7.50</td>
+      </tr>
+      <tr>
+        <td>6.1.3 [M]</td>
+        <td>2018-08-27</td>
+        <td>General</td>
+        <td>Improved error message for missing/corrupt librfc32.dll</td>
+      </tr>
+      <tr>
+        <td>6.1.2 [L]</td>
+        <td>2018-08-15</td>
+        <td>General</td>
+        <td>Fix for WHERE clause on some SAP releases that don't support splitting of string literals (e. g. 740 SP 4)</td>
+      </tr>
+      <tr>
+        <td>6.1.1 [M]</td>
+        <td>2018-07-31</td>
+        <td>LINQtoERP</td>
+        <td>Fix for Idoc code generator (broken since 5.7.0)</td>
+      </tr>
+      <tr><td><a class="ReleaseNote" href="https://my.theobald-software.com/ReleaseNotes/ERPConnect/ERPConnect-6.1.0.html">6.1.0 [M]</a></td><td>2018-07-24</td><td>General</td><td>New implementation of ReadTable class & support for non-Unicode multibyte codepages(<a class="ReleaseNote" href="https://my.theobald-software.com/ReleaseNotes/ERPConnect/ERPConnect-6.1.0.html">Release note</a>)</td></tr>
+      <tr>
+        <td>6.0.2 [L]</td>
+        <td>2018-06-28</td>
+        <td>General</td>
+        <td>Updated EULA</td>
+      </tr>
+      <tr>
+        <td>6.0.1 [L]</td>
+        <td>2018-06-19</td>
+        <td>General</td>
+        <td>NWRFC: Fix for non-structure line types in imports/exports/changings (e. g. STRINGTAB)</td>
+      </tr>
+      <tr>
+        <td>6.0.0 [M]</td>
+        <td>2018-05-18</td>
+        <td>General</td>
+        <td>Added support for .NET Standard 2.0 (ERPConnectStandard20.dll) and RFC callbacks, fixed SQL Server support</td>
+      </tr>
+      <tr>
+        <td>5.7.6 [L]</td>
+        <td>2018-04-23</td>
+        <td>General</td>
+        <td>Improvements for trimming and error message</td>
+      </tr>
+      <tr>
+        <td>5.7.5 [L]</td>
+        <td>2018-04-17</td>
+        <td>General</td>
+        <td>Updated EULA</td>
+      </tr>
+      <tr>
+        <td>5.7.4 [L]</td>
+        <td>2018-04-17</td>
+        <td>General</td>
+        <td>Improvements for error handling (classic RFC)</td>
+      </tr>
+      <tr>
+        <td>5.7.3 [L]</td>
+        <td>2018-04-03</td>
+        <td>General</td>
+        <td>Adjustments for FIPS compliance</td>
+      </tr>
+      <tr>
+        <td>5.7.2 [M]</td>
+        <td>2018-03-29</td>
+        <td>RFC Client</td>
+        <td>Fixed text encoding of TIDs (NWRFC)</td>
+      </tr>
+      <tr>
+        <td>5.7.1 [L]</td>
+        <td>2018-03-23</td>
+        <td>RFC Client</td>
+        <td>Added support for setting SNCSettings.OwnName on client connections</td>
+      </tr>
+      <tr>
+        <td>5.7.0 [L]</td>
+        <td>2018-03-13</td>
+        <td>RFC Client</td>
+        <td>Added support for qRFC (NetWeaver libraries only)</td>
+      </tr>
+      <tr>
+        <td>5.6.5 [L]</td>
+        <td>2018-02-05</td>
+        <td>NWRFC</td>
+        <td>Updated error message for missing NW libraries (NWSDK 7.50)</td>
+      </tr>
+      <tr>
+        <td>5.6.4 [L]</td>
+        <td>2018-01-30</td>
+        <td>LINQtoERP</td>
+        <td>Fixed a bug where INT1 was being cast to Int32 instead of Byte in generated code</td>
+      </tr>
+      <tr>
+        <td>5.6.3 [L]</td>
+        <td>2018-01-24</td>
+        <td>RFCServer</td>
+        <td>Made the behaviour for when a non-registered function on RFCServer is called consistent across RFC and NW. Improved the corresponding error message for RFC.</td>
+      </tr>
+      <tr>
+        <td>5.6.2 [L]</td>
+        <td>2018-01-24</td>
+        <td>RFC Client</td>
+        <td>Fix for logon properties check</td>
+      </tr>
+      <tr>
+        <td>5.6.1 [L]</td>
+        <td>2017-12-18</td>
+        <td>RFC Client</td>
+        <td>Fix for X509 certificate logon option (SNC is required to be disabled now instead of enabled)</td>
+      </tr>
+      <tr>
+        <td>5.6.0 [L]</td>
+        <td>2017-12-01</td>
+        <td>RFCServer</td>
+        <td>Improved error handling for tRFC. Changed TRFCCommit signature.</td>
+      </tr>
+      <tr>
+        <td>5.5.6 [L]</td>
+        <td>2017-11-09</td>
+        <td>RFC Client</td>
+        <td>NWRFC: Fix for ambigous import/export parameters</td>
+      </tr>
+      <tr>
+        <td>5.5.5 [L]</td>
+        <td>2017-11-09</td>
+        <td>General</td>
+        <td>Classic RFC: Improved error messages</td>
+      </tr>
+      <tr>
+        <td>5.5.4 [M]</td>
+        <td>2017-10-18</td>
+        <td>RFC Client</td>
+        <td>RFCTable.Rows is cleared after call now, if function in SAP clears the table</td>
+      </tr>
+      <tr>
+        <td>5.5.3 [M]</td>
+        <td>2017-10-11</td>
+        <td>LINQtoERP</td>
+        <td>Function: Fix for empty tables - pass (bug introduced in 5.4.9)</td>
+      </tr>
+      <tr>
+        <td>5.5.2 [M]</td>
+        <td>2017-10-09</td>
+        <td>LINQtoERP</td>
+        <td>Function: Fix for empty tables - return (bug introduced in 5.4.9)</td>
+      </tr>
+      <tr>
+        <td>5.5.1 [M]</td>
+        <td>2017-10-05</td>
+        <td>RFCServer</td>
+        <td>Classic: Fix for unsupplied XML parameters</td>
+      </tr>
+      <tr>
+        <td>5.5.0 [M]</td>
+        <td>2017-09-27</td>
+        <td>LINQtoERP</td>
+        <td>Function: Inconsistent metadata of existing structures can be updated now (VS2015, VS2017)</td>
+      </tr>
+      <tr>
+        <td>5.4.9 [M]</td>
+        <td>2017-09-25</td>
+        <td>LINQtoERP</td>
+        <td>Function: Fixes for metadata mismatch in structures/tables</td>
+      </tr>
+      <tr>
+        <td>5.4.8 [L]</td>
+        <td>2017-09-20</td>
+        <td>RFC Client</td>
+        <td>Added R3Connection.CpicConversationId</td>
+      </tr>
+      <tr>
+        <td>5.4.7 [M]</td>
+        <td>2017-09-12</td>
+        <td>General</td>
+        <td>Big Endian: Fix for overflow exceptions when receiving negative values</td>
+      </tr>
+      <tr>
+        <td>5.4.6 [L]</td>
+        <td>2017-08-29</td>
+        <td>RFC Client</td>
+        <td>NWRFC: Added R3Connection.InitialEncoding for special characters in passwords</td>
+      </tr>
+      <tr>
+        <td>5.4.5 [L]</td>
+        <td>2017-08-16</td>
+        <td>RFCServer</td>
+        <td>Fixes &amp; improvements for logging</td>
+      </tr>
+      <tr>
+        <td>5.4.4 [L]</td>
+        <td>2017-08-14</td>
+        <td>RFCServer</td>
+        <td>Classic RFC: Fix for spaces in SNC library path</td>
+      </tr>
+      <tr>
+        <td>5.4.3 [L]</td>
+        <td>2017-08-10</td>
+        <td>RFC Client</td>
+        <td>Added R3Connection.ToConnectionString() and R3Connection.AppendToConnectionString()</td>
+      </tr>
+      <tr>
+        <td>5.4.2 [L]</td>
+        <td>2017-08-08</td>
+        <td>RFC Client</td>
+        <td>Marked ReadTable.AddCriteria() as obsolete</td>
+      </tr>
+      <tr>
+        <td>5.4.1 [L]</td>
+        <td>2017-08-03</td>
+        <td>RFC Client</td>
+        <td>Added R3Connection.ParseConnectionString()</td>
+      </tr>
+      <tr>
+        <td>5.4.0 [M]</td>
+        <td>2017-08-03</td>
+        <td>General</td>
+        <td>Added support for variable default values (e. g. SY-SAPRL). Added property RFCParameter.IsSupplied</td>
+      </tr>
+      <tr>
+        <td>5.3.5 [L]</td>
+        <td>2017-07-24</td>
+        <td>LINQtoERP</td>
+        <td>Fix for BWCube column positions</td>
+      </tr>
+      <tr>
+        <td>5.3.4 [M]</td>
+        <td>2017-07-12</td>
+        <td>RFC Client</td>
+        <td>Classic RFC: Fix for table memory leak (bug introduced in 5.3.3.0).</td>
+      </tr>
+      <tr>
+        <td>5.3.3 [M]</td>
+        <td>2017-07-10</td>
+        <td>General</td>
+        <td>Reduced peak memory consumption while receiving tables</td>
+      </tr>
+      <tr>
+        <td>5.3.2 [M]</td>
+        <td>2017-07-05</td>
+        <td>General</td>
+        <td>Fix for missing table data (bug introduced in 5.3.1)</td>
+      </tr>
+      <tr>
+        <td>5.3.1 [M]</td>
+        <td>2017-07-04</td>
+        <td>General</td>
+        <td>Classic RFC: Fixed memory leak (receiving STRING/XSTRING/XMLDATA)</td>
+      </tr>
+      <tr>
+        <td>5.3.0 [M]</td>
+        <td>2017-06-16</td>
+        <td>RFCServer</td>
+        <td>Added Started/Stopped events</td>
+      </tr>
+      <tr>
+        <td>5.2.3 [M]</td>
+        <td>2017-05-25</td>
+        <td>General</td>
+        <td>Fix for sending certain Unicode characters to big endian systems</td>
+      </tr>
+      <tr>
+        <td>5.2.2 [M]</td>
+        <td>2017-05-17</td>
+        <td>General</td>
+        <td>Fixes for BWCube.RefreshMetaData()</td>
+      </tr>
+      <tr>
+        <td>5.2.1 [M]</td>
+        <td>2017-04-27</td>
+        <td>General</td>
+        <td>Classic RFC: Fixed memory leak</td>
+      </tr>
+      <tr>
+        <td>5.2.0 [L]</td>
+        <td>2017-04-26</td>
+        <td>RFCServer</td>
+        <td>Classic: Removed queueing of tRFC requests/dynamic server registration</td>
+      </tr>
+      <tr>
+        <td>5.1.1 [M]</td>
+        <td>2017-03-31</td>
+        <td>General</td>
+        <td>Fixes &amp; improvements for SaveToXML() and LoadFromXML() </td>
+      </tr>
+      <tr>
+        <td>5.1.0 [M]</td>
+        <td>2017-03-31</td>
+        <td>LINQtoERP</td>
+        <td>Added LINQ to SAP support to Visual Studio 2017</td>
+      </tr>
+      <tr>
+        <td>5.0.13 [L]</td>
+        <td>2017-03-28</td>
+        <td>RFCServer</td>
+        <td>Classic RFC: Minor improvements for registering new servers</td>
+      </tr>
+      <tr>
+        <td>5.0.12 [M]</td>
+        <td>2017-03-23</td>
+        <td>RFCServer</td>
+        <td>Improved exception handling</td>
+      </tr>
+      <tr>
+        <td>5.0.11 [L]</td>
+        <td>2017-03-20</td>
+        <td>General</td>
+        <td>Classic RFC: Fix for missing ABAP exception names with old RFC libraries</td>
+      </tr>
+      <tr>
+        <td>5.0.10 [L]</td>
+        <td>2017-03-16</td>
+        <td>RFCServer</td>
+        <td>RFCServerFunction.SaveToXML(): replacing invalid control characters with space instead of dropping them to preserve lengths &amp; offsets</td>
+      </tr>
+      <tr>
+        <td>5.0.9 [L]</td>
+        <td>2017-03-14</td>
+        <td>RFC Client</td>
+        <td>Classic RFC: Improved error message for failures while waiting for function results</td>
+      </tr>
+      <tr>
+        <td>5.0.8 [M]</td>
+        <td>2017-03-13</td>
+        <td>RFCServer</td>
+        <td>Classic RFC: Fix for TimeoutException when invalid connection parameters are used</td>
+      </tr>
+      <tr>
+        <td>5.0.7 [L]</td>
+        <td>2017-03-09</td>
+        <td>General</td>
+        <td>ERPConnect35.dll and ERPConnnect45.dll are built by MSBuild 15.0 now</td>
+      </tr>
+      <tr>
+        <td>5.0.6 [M]</td>
+        <td>2017-03-02</td>
+        <td>General</td>
+        <td>Fix for sending nested structures</td>
+      </tr>
+      <tr>
+        <td>5.0.5 [M]</td>
+        <td>2017-02-28</td>
+        <td>RFC Client</td>
+        <td>Classic RFC: Fix for changing parameters (string, xstring, table types, deep structures)</td>
+      </tr>
+      <tr>
+        <td>5.0.4 [M]</td>
+        <td>2017-02-28</td>
+        <td>LINQtoERP</td>
+        <td>Fixes for removal of SOAP support</td>
+      </tr>
+      <tr>
+        <td>5.0.3 [L]</td>
+        <td>2017-02-22</td>
+        <td>LINQtoERP</td>
+        <td>Removed references to old ERPConnect versions.</td>
+      </tr>
+      <tr>
+        <td>5.0.2 [L]</td>
+        <td>2017-02-22</td>
+        <td>Query</td>
+        <td>INT2 and INT1 values are converted to int instead of short/byte to match QueryFields before Execute()</td>
+      </tr>
+      <tr>
+        <td>5.0.1 [L]</td>
+        <td>2017-02-10</td>
+        <td>LINQtoERP</td>
+        <td>Set max rows of Query to 200.000</td>
+      </tr>
+      <tr><td><a class="ReleaseNote" href="https://my.theobald-software.com/ReleaseNotes/ERPConnect/ERPConnect-5.0.0.html">5.0.0 [M]</a></td><td>2017-01-27</td><td>General</td><td>Removed ERPConnect20.dll & ERPConnect40.dll, updated ERPConnect45.dll to .NET Framework 4.5.2, removed support for SOAP(<a class="ReleaseNote" href="https://my.theobald-software.com/ReleaseNotes/ERPConnect/ERPConnect-5.0.0.html">Release note</a>)</td></tr>
+      <tr>
+        <td>4.43.7 [L]</td>
+        <td>2017-01-09</td>
+        <td>Setup</td>
+        <td>Removed old example code</td>
+      </tr>
+      <tr>
+        <td>4.43.6 [M]</td>
+        <td>2017-01-09</td>
+        <td>General</td>
+        <td>Improved error messages for nonexistent column names</td>
+      </tr>
+      <tr>
+        <td>4.43.5 [M]</td>
+        <td>2016-12-23</td>
+        <td>General</td>
+        <td>NW: Fix for null-terminators in imports/exports/changings of ABAP type string</td>
+      </tr>
+      <tr>
+        <td>4.43.4 [M]</td>
+        <td>2016-12-22</td>
+        <td>General</td>
+        <td>Introduced NoAuthorityException, improved error messages</td>
+      </tr>
+      <tr>
+        <td>4.43.3 [M]</td>
+        <td>2016-12-20</td>
+        <td>RFC Client</td>
+        <td>Improved error message for missing table authorization</td>
+      </tr>
+      <tr>
+        <td>4.43.2 [L]</td>
+        <td>2016-12-19</td>
+        <td>General</td>
+        <td>Improved exception handling in BWCube for BW dates</td>
+      </tr>
+      <tr>
+        <td>4.43.1 [L]</td>
+        <td>2016-12-14</td>
+        <td>General</td>
+        <td>Added new ERPException - NotAuthorizedException
+Optimized BWCube exception handling for dates</td>
+      </tr>
+      <tr>
+        <td>4.43.0 [M]</td>
+        <td>2016-11-25</td>
+        <td>RFCServer</td>
+        <td>tRFC: Added support for queuing parallel connections</td>
+      </tr>
+      <tr>
+        <td>4.42.5 [M]</td>
+        <td>2016-11-23</td>
+        <td>General</td>
+        <td>Fixed default value of R3Connection.MultithreadingEnvironment (was false)</td>
+      </tr>
+      <tr>
+        <td>4.42.4 [M]</td>
+        <td>2016-11-07</td>
+        <td>General</td>
+        <td>Fix for receiving strings with more than 255 characters inside of deep structures/table types (NW)</td>
+      </tr>
+      <tr>
+        <td>4.42.3 [M]</td>
+        <td>2016-10-31</td>
+        <td>General</td>
+        <td>Fix for transferring empty NUMC/DATS/TIMS parameters to non-Unicode systems</td>
+      </tr>
+      <tr>
+        <td>4.42.2 [L]</td>
+        <td>2016-10-21</td>
+        <td>LINQtoERP</td>
+        <td>Fixed bug in changing parameter handling in VS2013+</td>
+      </tr>
+      <tr>
+        <td>4.42.1 [M]</td>
+        <td>2016-10-17</td>
+        <td>RFCServer</td>
+        <td>Fix for more than one call per LUW (classic, tRFC)</td>
+      </tr>
+      <tr>
+        <td>4.42.0 [L]</td>
+        <td>2016-10-15</td>
+        <td>RFCServer</td>
+        <td>Fixes and improvements for parallel RFC servers (classic)</td>
+      </tr>
+      <tr>
+        <td>4.41.3 [L]</td>
+        <td>2016-10-10</td>
+        <td>RFCServer</td>
+        <td>Added property RFCServer.SAPEncodingInfo</td>
+      </tr>
+      <tr>
+        <td>4.41.2 [L]</td>
+        <td>2016-10-06</td>
+        <td>General</td>
+        <td>Setting R3Connection.Host/R3Connection.SystemNumber  for monitoring of load balancing scenarios</td>
+      </tr>
+      <tr>
+        <td>4.41.1 [L]</td>
+        <td>2016-09-28</td>
+        <td>RFCServer</td>
+        <td>Improved error handling for IDocs</td>
+      </tr>
+      <tr>
+        <td>4.41.0 [L]</td>
+        <td>2016-09-28</td>
+        <td>General</td>
+        <td>BWCube: Added fallback mechanism for undefined decimals</td>
+      </tr>
+      <tr>
+        <td>4.40.9 [L]</td>
+        <td>2016-09-28</td>
+        <td>RFCServer</td>
+        <td>Workaorund for invalid codepage announcement on Unicode RFC destination</td>
+      </tr>
+      <tr>
+        <td>4.40.7 [H]</td>
+        <td>2016-09-09</td>
+        <td>RFC Client</td>
+        <td>Classic: Errors during execution are no longer ignored (bug introduced in 4.40.1.0)</td>
+      </tr>
+      <tr>
+        <td>4.40.6 [L]</td>
+        <td>2016-09-05</td>
+        <td>LINQtoERP</td>
+        <td>Updated LINQtoSAP to support .NET4.5+</td>
+      </tr>
+      <tr>
+        <td>4.40.5 [L]</td>
+        <td>2016-08-29</td>
+        <td>RFC Client</td>
+        <td>Fix for big endian non-Unicode systems</td>
+      </tr>
+      <tr>
+        <td>4.40.4 [L]</td>
+        <td>2016-08-25</td>
+        <td>SNC</td>
+        <td>Fix for incomplete logon data in some rare cases</td>
+      </tr>
+      <tr>
+        <td>4.40.3 [M]</td>
+        <td>2016-08-18</td>
+        <td>General</td>
+        <td>Fix for structures in table columns (NW)</td>
+      </tr>
+      <tr>
+        <td>4.40.2 [M]</td>
+        <td>2016-08-17</td>
+        <td>General</td>
+        <td>Fix for structures in structure elements</td>
+      </tr>
+      <tr>
+        <td>4.40.1 [L]</td>
+        <td>2016-08-01</td>
+        <td>General</td>
+        <td>Fix for tables larger than 2 GB (64-bit only)</td>
+      </tr>
+      <tr>
+        <td>4.40.0 [M]</td>
+        <td>2016-08-01</td>
+        <td>General</td>
+        <td>Performance improvements for tables processing</td>
+      </tr>
+      <tr>
+        <td>4.39.4 [M]</td>
+        <td>2016-07-13</td>
+        <td>RFCServer</td>
+        <td>Classic: Fix for codepage/endianess</td>
+      </tr>
+      <tr>
+        <td>4.39.3 [L]</td>
+        <td>2016-07-08</td>
+        <td>RFC Client</td>
+        <td>Classic: Workaround for opening/closing SNC connections multiple times in a row (missing language etc.)</td>
+      </tr>
+      <tr>
+        <td>4.39.2 [L]</td>
+        <td>2016-07-07</td>
+        <td>RFC Client</td>
+        <td>BWCube: Fixes for metadata retrieval/update</td>
+      </tr>
+      <tr>
+        <td>4.39.1 [L]</td>
+        <td>2016-07-06</td>
+        <td>General</td>
+        <td>Fix for very big tables</td>
+      </tr>
+      <tr>
+        <td>4.39.0 [M]</td>
+        <td>2016-07-05</td>
+        <td>RFC Client</td>
+        <td>Added R3Connection.IsOpen</td>
+      </tr>
+      <tr>
+        <td>4.38.3 [L]</td>
+        <td>2016-06-15</td>
+        <td>General</td>
+        <td>Improved exceptions for logon/communication</td>
+      </tr>
+      <tr>
+        <td>4.38.2 [M]</td>
+        <td>2016-06-14</td>
+        <td>RFC Client</td>
+        <td>NW: Fix for table structures with padding at the end</td>
+      </tr>
+      <tr>
+        <td>4.38.1 [L]</td>
+        <td>2016-06-13</td>
+        <td>RFC Client</td>
+        <td>R3Connection.UserName is set to the actual name of the logged on user</td>
+      </tr>
+      <tr>
+        <td>4.38.0 [L]</td>
+        <td>2016-06-08</td>
+        <td>RFCServer</td>
+        <td>Added support for SNC (NW)</td>
+      </tr>
+      <tr>
+        <td>4.37.0 [L]</td>
+        <td>2016-06-08</td>
+        <td>RFCServer</td>
+        <td>Added support for automatic detection of SNC own name (classic)</td>
+      </tr>
+      <tr>
+        <td>4.36.1 [L]</td>
+        <td>2016-06-06</td>
+        <td>General</td>
+        <td>Fix for Unicode big endian systems</td>
+      </tr>
+      <tr>
+        <td>4.36.0 [M]</td>
+        <td>2016-06-03</td>
+        <td>LINQtoERP</td>
+        <td>Linq to SAP designer supports Netweaver libary now.</td>
+      </tr>
+      <tr>
+        <td>4.35.15 [M]</td>
+        <td>2016-06-01</td>
+        <td>Idoc</td>
+        <td>Idocs with column names like metadata columns now supported.</td>
+      </tr>
+      <tr>
+        <td>4.35.14 [L]</td>
+        <td>2016-05-31</td>
+        <td>RFC Client</td>
+        <td>NW: Workaround for import/export parameters with same name</td>
+      </tr>
+      <tr>
+        <td>4.35.13 [L]</td>
+        <td>2016-05-27</td>
+        <td>General</td>
+        <td>NW: Improved error message for SetABAPDebug()</td>
+      </tr>
+      <tr>
+        <td>4.35.12 [M]</td>
+        <td>2016-05-27</td>
+        <td>General</td>
+        <td>NW: Improvements for dev_rfc.trc handling</td>
+      </tr>
+      <tr>
+        <td>4.35.11 [M]</td>
+        <td>2016-05-19</td>
+        <td>General</td>
+        <td>classic: Fix for XSTRINGs</td>
+      </tr>
+      <tr>
+        <td>4.35.10 [L]</td>
+        <td>2016-05-17</td>
+        <td>General</td>
+        <td>NW: improvements for logging and release of native resources</td>
+      </tr>
+      <tr>
+        <td>4.35.9 [L]</td>
+        <td>2016-05-10</td>
+        <td>General</td>
+        <td>XML dumps are only created if R3Connection.Logging = true</td>
+      </tr>
+      <tr>
+        <td>4.35.8 [M]</td>
+        <td>2016-05-10</td>
+        <td>RFC Client</td>
+        <td>NW: Fix for non-Unicode systems</td>
+      </tr>
+      <tr>
+        <td>4.35.7 [M]</td>
+        <td>2016-05-09</td>
+        <td>RFCServer</td>
+        <td>NW: Fix for RFCServer restarts</td>
+      </tr>
+      <tr>
+        <td>4.35.6 [M]</td>
+        <td>2016-05-07</td>
+        <td>RFC Client</td>
+        <td>NW: Fix for codepage detection</td>
+      </tr>
+      <tr>
+        <td>4.35.5 [M]</td>
+        <td>2016-05-05</td>
+        <td>RFC Client</td>
+        <td>Calling R3Connection.Ping() after ABAP exception: workaround for connection breakdown (NW library bug)</td>
+      </tr>
+      <tr>
+        <td>4.35.4 [L]</td>
+        <td>2016-05-04</td>
+        <td>RFC Client</td>
+        <td>SOAP: Added support for X509 client certificates</td>
+      </tr>
+      <tr>
+        <td>4.35.3 [L]</td>
+        <td>2016-05-03</td>
+        <td>RFCServer</td>
+        <td>NW: Added error message for unsupported non-Unicode destinations </td>
+      </tr>
+      <tr>
+        <td>4.35.2 [L]</td>
+        <td>2016-05-02</td>
+        <td>General</td>
+        <td>NW: Added CPIC tracing</td>
+      </tr>
+      <tr>
+        <td>4.35.1 [L]</td>
+        <td>2016-05-02</td>
+        <td>General</td>
+        <td>NW: improved handling of ABAP messages/exceptions</td>
+      </tr>
+      <tr>
+        <td>4.35.0 [L]</td>
+        <td>2016-04-27</td>
+        <td>RFC Client</td>
+        <td>Query: added support for INT2 and INT1</td>
+      </tr>
+      <tr>
+        <td>4.34.6 [M]</td>
+        <td>2016-04-25</td>
+        <td>General</td>
+        <td>Fixes for tables in Import/Export/Changing parameters, structures with STRING/XSTRING etc.</td>
+      </tr>
+      <tr>
+        <td>4.34.5 [M]</td>
+        <td>2016-04-21</td>
+        <td>General</td>
+        <td>Fix for sending NUMC, DATS, TIMS to non-Unicode systems</td>
+      </tr>
+      <tr>
+        <td>4.34.4 [L]</td>
+        <td>2016-04-20</td>
+        <td>RFCServer</td>
+        <td>Re-added support for iDocs (NW)</td>
+      </tr>
+      <tr>
+        <td>4.34.3 [L]</td>
+        <td>2016-04-20</td>
+        <td>General</td>
+        <td>Fix for deadlock by incoming RFC server calls during tRFC client call (NW)</td>
+      </tr>
+      <tr>
+        <td>4.34.2 [L]</td>
+        <td>2016-04-20</td>
+        <td>RFC Client</td>
+        <td>Fix for manually generated TIDs (NW)</td>
+      </tr>
+      <tr>
+        <td>4.34.1 [M]</td>
+        <td>2016-04-19</td>
+        <td>General</td>
+        <td>Fix for tables in import/export/changing parameters, STRING/XSTRING components in structures, deep structures etc. (NW)</td>
+      </tr>
+      <tr>
+        <td>4.34.0 [M]</td>
+        <td>2016-04-18</td>
+        <td>General</td>
+        <td>Re-added support for tables in import/export/changing parameters, STRING/XSTRING components in structures, deep structures etc. (NW)</td>
+      </tr>
+      <tr>
+        <td>4.33.3 [L]</td>
+        <td>2016-04-08</td>
+        <td>RFC Client</td>
+        <td>Fix for X characters in measures of BW queries</td>
+      </tr>
+      <tr>
+        <td>4.33.2 [L]</td>
+        <td>2016-04-07</td>
+        <td>General</td>
+        <td>Fix for dev_rfc.trc files (NW)</td>
+      </tr>
+      <tr>
+        <td>4.33.1 [L]</td>
+        <td>2016-04-07</td>
+        <td>RFCServer</td>
+        <td>Fix for error handling / ABAP exceptions (NW)</td>
+      </tr>
+      <tr>
+        <td>4.33.0 [L]</td>
+        <td>2016-04-07</td>
+        <td>RFCServer</td>
+        <td>Added support for multiple parallel RFC servers in same process (NW)</td>
+      </tr>
+      <tr>
+        <td>4.32.0 [L]</td>
+        <td>2016-03-24</td>
+        <td>RFCServer</td>
+        <td>Re-added support for non-Unicode RFC server (NW)</td>
+      </tr>
+      <tr>
+        <td>4.31.4 [L]</td>
+        <td>2016-03-23</td>
+        <td>RFCServer</td>
+        <td>Fix for garbage collection of static delegates (NW)</td>
+      </tr>
+      <tr>
+        <td>4.31.3 [L]</td>
+        <td>2016-03-23</td>
+        <td>RFCServer</td>
+        <td>Fix for empty imports/exports/tables (NW)</td>
+      </tr>
+      <tr>
+        <td>4.31.2 [L]</td>
+        <td>2016-03-23</td>
+        <td>RFCServer</td>
+        <td>Fix for imports (NW)</td>
+      </tr>
+      <tr>
+        <td>4.31.1 [L]</td>
+        <td>2016-03-23</td>
+        <td>RFCServer</td>
+        <td>Fix for logging (NW)</td>
+      </tr>
+      <tr>
+        <td>4.31.0 [L]</td>
+        <td>2016-03-21</td>
+        <td>General</td>
+        <td>Client fully supports multi-threading with both Classic and NetWeaver libraries</td>
+      </tr>
+      <tr>
+        <td>4.30.0 [L]</td>
+        <td>2016-03-18</td>
+        <td>General</td>
+        <td>New implementation of RFC library interfaces. ERPConnectNWxy.dll is no longer needed.</td>
+      </tr>
+      <tr>
+        <td>4.29.0 [M]</td>
+        <td>2016-01-07</td>
+        <td>NWRFC</td>
+        <td>NWException now derives from ERPException. Added INWException interface</td>
+      </tr>
+      <tr>
+        <td>4.28.5 [L]</td>
+        <td>2015-10-12</td>
+        <td>General</td>
+        <td>In case of 0 records the IncomingPackage event was fired twice accidently when using the ReadTable class</td>
+      </tr>
+      <tr>
+        <td>4.28.4 [M]</td>
+        <td>2015-09-29</td>
+        <td>General</td>
+        <td>Fix for XSTRING import parameters (NWRFC)</td>
+      </tr>
+      <tr>
+        <td>4.28.3 [L]</td>
+        <td>2015-09-28</td>
+        <td>LINQtoERP</td>
+        <td>Added UnicodeAdjustment flag to VS2015 ERP context file  to support different unicode SAP systems (UC/NonUC) with one auto-generated context class.</td>
+      </tr>
+      <tr>
+        <td>4.28.2 [L]</td>
+        <td>2015-09-28</td>
+        <td>LINQtoERP</td>
+        <td>Added UnicodeAdjustment flag to VS2013 ERP context file  to support different unicode SAP systems (UC/NonUC) with one auto-generated context class.</td>
+      </tr>
+      <tr>
+        <td>4.28.1 [L]</td>
+        <td>2015-09-28</td>
+        <td>LINQtoERP</td>
+        <td>Added UnicodeAdjustment flag to VS2012 ERP context file  to support different unicode SAP systems (UC/NonUC) with one auto-generated context class.</td>
+      </tr>
+      <tr>
+        <td>4.28.0 [M]</td>
+        <td>2015-09-22</td>
+        <td>General</td>
+        <td>Added support for XSTRING import parameters (NWRFC)</td>
+      </tr>
+      <tr>
+        <td>4.27.10 [L]</td>
+        <td>2015-09-16</td>
+        <td>LINQtoERP</td>
+        <td>Updated BWCube code generation to support row indexes instead of names (VS2015).</td>
+      </tr>
+      <tr>
+        <td>4.27.9 [L]</td>
+        <td>2015-09-16</td>
+        <td>LINQtoERP</td>
+        <td>Updated BWCube code generation to support row indexes instead of names (VS2013).</td>
+      </tr>
+      <tr>
+        <td>4.27.8 [L]</td>
+        <td>2015-08-30</td>
+        <td>LINQtoERP</td>
+        <td>Updated LINQtoERP 2015 support.</td>
+      </tr>
+      <tr>
+        <td>4.27.7 [M]</td>
+        <td>2015-08-19</td>
+        <td>General</td>
+        <td>dev_rfc.trc files which contain only messages about changing the global trace directory are not generated any more (NW RFC)</td>
+      </tr>
+      <tr>
+        <td>4.27.6 [L]</td>
+        <td>2015-08-08</td>
+        <td>LINQtoERP</td>
+        <td>Added CommitWork and RollbackWork methods to ERPDataContext for LINQtoERP.</td>
+      </tr>
+      <tr>
+        <td>4.27.5 [L]</td>
+        <td>2015-08-04</td>
+        <td>LINQtoERP</td>
+        <td>Added LINQtoERP support to Visual Studio 2015.</td>
+      </tr>
+      <tr>
+        <td>4.27.4 [L]</td>
+        <td>2015-08-04</td>
+        <td>RFCServer</td>
+        <td>Fixed tracing (NWRFC)</td>
+      </tr>
+      <tr>
+        <td>4.27.3 [L]</td>
+        <td>2015-07-28</td>
+        <td>General</td>
+        <td>Updated support client to 10.0.43879.0 and added shortcut</td>
+      </tr>
+      <tr>
+        <td>4.27.2 [L]</td>
+        <td>2015-07-21</td>
+        <td>RFC Client</td>
+        <td>Fix for cookies (SOAP)</td>
+      </tr>
+      <tr>
+        <td>4.27.1 [L]</td>
+        <td>2015-07-21</td>
+        <td>General</td>
+        <td>Fix for sending integers &amp; floats to big endian systems</td>
+      </tr>
+      <tr>
+        <td>4.27.0 [L]</td>
+        <td>2015-07-14</td>
+        <td>RFCServer</td>
+        <td>Added support for non-Unicode destinations on big endian systems</td>
+      </tr>
+      <tr>
+        <td>4.26.3 [L]</td>
+        <td>2015-07-02</td>
+        <td>General</td>
+        <td>Added flag for BW DATS datatypes</td>
+      </tr>
+      <tr>
+        <td>4.26.2 [L]</td>
+        <td>2015-05-15</td>
+        <td>LINQtoERP</td>
+        <td>Updated property naming in LINQ code generation to suppress names starting with underscore</td>
+      </tr>
+      <tr>
+        <td>4.26.1 [L]</td>
+        <td>2015-05-15</td>
+        <td>Idoc</td>
+        <td>Bug fix for escaping // characters in SavePlainData function</td>
+      </tr>
+      <tr>
+        <td>4.26.0 [L]</td>
+        <td>2015-05-06</td>
+        <td>RFC Client</td>
+        <td>Removed R3Connection.IsBusy (has been marked as obsolete since 27.03.2014)</td>
+      </tr>
+      <tr>
+        <td>4.25.0 [L]</td>
+        <td>2015-05-06</td>
+        <td>RFC Client</td>
+        <td>Marked ClientProtocol.HttpSoap as obsolete</td>
+      </tr>
+      <tr>
+        <td>4.24.6 [L]</td>
+        <td>2015-04-30</td>
+        <td>General</td>
+        <td>Correction for using BWCube.RefreshMetaData() with queries that contain structures</td>
+      </tr>
+      <tr>
+        <td>4.24.5 [M]</td>
+        <td>2015-04-27</td>
+        <td>RFCServer</td>
+        <td>Fix for invalid unicode characters with dispatcher service</td>
+      </tr>
+      <tr>
+        <td>4.24.4 [L]</td>
+        <td>2015-04-17</td>
+        <td>General</td>
+        <td>Fix for sending integers &amp; floats in tables to big endian systems</td>
+      </tr>
+      <tr>
+        <td>4.24.3 [L]</td>
+        <td>2015-04-13</td>
+        <td>General</td>
+        <td>Property ReadTable.RowSkips is not ignored anymore when using packaging</td>
+      </tr>
+      <tr>
+        <td>4.24.2 [L]</td>
+        <td>2015-03-23</td>
+        <td>General</td>
+        <td>Improved release of unmanged resources (NW RFC)</td>
+      </tr>
+      <tr>
+        <td>4.24.1 [L]</td>
+        <td>2015-03-23</td>
+        <td>General</td>
+        <td>Added some internal checks (NW RFC)</td>
+      </tr>
+      <tr>
+        <td>4.24.0 [L]</td>
+        <td>2015-03-19</td>
+        <td>General</td>
+        <td>Concurrent calls from different AppDomains within the same process are no longer supported (classic RFC)</td>
+      </tr>
+      <tr>
+        <td>4.23.11 [L]</td>
+        <td>2015-03-17</td>
+        <td>General</td>
+        <td>Another fix for multiple AppDomains in the same process (classic RFC)</td>
+      </tr>
+      <tr>
+        <td>4.23.10 [M]</td>
+        <td>2015-03-02</td>
+        <td>RFC Client</td>
+        <td>Fix for receiving STRING values</td>
+      </tr>
+      <tr>
+        <td>4.23.9 [L]</td>
+        <td>2015-03-02</td>
+        <td>RFC Client</td>
+        <td>R3Connection.GetSSOTicket() and R3Connection.OpenSSO() are now supported for use with NW RFC library</td>
+      </tr>
+      <tr>
+        <td>4.23.8 [L]</td>
+        <td>2015-03-02</td>
+        <td>RFC Client</td>
+        <td>Improved exception message in case of invalid property values</td>
+      </tr>
+      <tr>
+        <td>4.23.7 [L]</td>
+        <td>2015-03-02</td>
+        <td>RFC Client</td>
+        <td>Fix for R3Connection constructor (SOAP)</td>
+      </tr>
+      <tr>
+        <td>4.23.6 [L]</td>
+        <td>2015-02-26</td>
+        <td>General</td>
+        <td>Improved handling for structures in BW Queries</td>
+      </tr>
+      <tr>
+        <td>4.23.5 [L]</td>
+        <td>2015-02-18</td>
+        <td>General</td>
+        <td>Fix for multiple AppDomains in the same process (classic RFC)</td>
+      </tr>
+      <tr>
+        <td>4.23.4 [L]</td>
+        <td>2015-02-17</td>
+        <td>LINQtoERP</td>
+        <td>Add logic to support OData query options $top, $skip and $count.</td>
+      </tr>
+      <tr>
+        <td>4.23.3 [L]</td>
+        <td>2015-01-26</td>
+        <td>RFC Client</td>
+        <td>Correction for BW.MDXExecuter class. Dataset object was not disposed correctly in BW which lead to increased memory consumption in BW</td>
+      </tr>
+      <tr>
+        <td>4.23.2 [L]</td>
+        <td>2015-01-22</td>
+        <td>General</td>
+        <td>Added UAC manifest to installer</td>
+      </tr>
+      <tr>
+        <td>4.23.1 [L]</td>
+        <td>2015-01-16</td>
+        <td>RFCServer</td>
+        <td>Bug fix for persisting RFCServerFunction objects with INT2 data types</td>
+      </tr>
+      <tr>
+        <td>4.23.0 [L]</td>
+        <td>2014-12-10</td>
+        <td>RFC Client</td>
+        <td>Added support for X.509 client certificates (classic RFC, NW RFC)</td>
+      </tr>
+      <tr>
+        <td>4.22.17 [L]</td>
+        <td>2014-12-09</td>
+        <td>RFC Client</td>
+        <td>Fix for integer/float export parameters and big endian systems (classic RFC)</td>
+      </tr>
+      <tr>
+        <td>4.22.16 [L]</td>
+        <td>2014-12-01</td>
+        <td>General</td>
+        <td>Fix for STRING/XSTRING in export parameters (classic RFC, broken since 4.22.9)</td>
+      </tr>
+      <tr>
+        <td>4.22.15 [L]</td>
+        <td>2014-11-25</td>
+        <td>RFCServer</td>
+        <td>Fix for codepages (classic RFC, partially broken since 4.22.9)</td>
+      </tr>
+      <tr>
+        <td>4.22.14 [L]</td>
+        <td>2014-11-11</td>
+        <td>LINQtoERP</td>
+        <td>Added Web API OData support for simple string comparison filter functions in LINQ provider.</td>
+      </tr>
+      <tr>
+        <td>4.22.13 [L]</td>
+        <td>2014-11-11</td>
+        <td>LINQtoERP</td>
+        <td>Added support for String.Compare method in LINQ provider.</td>
+      </tr>
+      <tr>
+        <td>4.22.12 [L]</td>
+        <td>2014-11-11</td>
+        <td>General</td>
+        <td>Fix for loading INT2 values from XML (broken since 4.22.10)</td>
+      </tr>
+      <tr>
+        <td>4.22.11 [M]</td>
+        <td>2014-11-04</td>
+        <td>RFCServer</td>
+        <td>New lines of tables were appended in reverse order (classic RFC)</td>
+      </tr>
+      <tr>
+        <td>4.22.10 [L]</td>
+        <td>2014-10-28</td>
+        <td>General</td>
+        <td>Changed type mapping for INT2 from int to short</td>
+      </tr>
+      <tr>
+        <td>4.22.9 [L]</td>
+        <td>2014-10-20</td>
+        <td>General</td>
+        <td>All data conversion is performed by ERPConnect now (classic RFC)</td>
+      </tr>
+      <tr>
+        <td>4.22.7 [L]</td>
+        <td>2014-10-13</td>
+        <td>General</td>
+        <td>Correction for line feed symbols in OLAP cells</td>
+      </tr>
+      <tr>
+        <td>4.22.6 [L]</td>
+        <td>2014-10-09</td>
+        <td>Idoc</td>
+        <td>Correction for escaping special characters when saving/loading IDoc data from plain files </td>
+      </tr>
+      <tr>
+        <td>4.22.5 [L]</td>
+        <td>2014-09-25</td>
+        <td>RFC Client</td>
+        <td>Connection is closed properly when receiving an SSO ticket</td>
+      </tr>
+      <tr>
+        <td>4.22.4 [L]</td>
+        <td>2014-09-23</td>
+        <td>General</td>
+        <td>Lowered probability of name collisions for XML trace files</td>
+      </tr>
+      <tr>
+        <td>4.22.3 [L]</td>
+        <td>2014-09-16</td>
+        <td>General</td>
+        <td>Fix for assigning localized strings (e. g. "23,5") to numeric parameters / structure elements (was broken since 4.19.3)</td>
+      </tr>
+      <tr>
+        <td>4.22.2 [M]</td>
+        <td>2014-09-16</td>
+        <td>RFC Client</td>
+        <td>Improved error message for conversion errors before sending values to SAP</td>
+      </tr>
+      <tr>
+        <td>4.22.1 [L]</td>
+        <td>2014-09-16</td>
+        <td>General</td>
+        <td>Fix for range check of BCD values</td>
+      </tr>
+      <tr>
+        <td>4.22.0 [M]</td>
+        <td>2014-09-07</td>
+        <td>RFC Client</td>
+        <td>New algorithm for creating TIDs</td>
+      </tr>
+      <tr>
+        <td>4.21.1 [L]</td>
+        <td>2014-09-07</td>
+        <td>RFC Client</td>
+        <td>Fix for manually created string TIDs with less than 24 characters</td>
+      </tr>
+      <tr>
+        <td>4.21.0 [M]</td>
+        <td>2014-08-26</td>
+        <td>RFC Client</td>
+        <td>R3Connection.CreateFunction() now supports ABAP types decfloat16 and decfloat34 (transferred as byte arrays)</td>
+      </tr>
+      <tr>
+        <td>4.20.4 [L]</td>
+        <td>2014-08-11</td>
+        <td>Idoc</td>
+        <td>Bug fix for using &lt; or &gt; sign in IDoc segment description texts while saving the Schema to an XML file</td>
+      </tr>
+      <tr>
+        <td>4.20.3 [L]</td>
+        <td>2014-07-23</td>
+        <td>General</td>
+        <td>Bug fix for using MEMBER_CAPTION keyword in MDX with MDXExecuter class</td>
+      </tr>
+      <tr>
+        <td>4.20.2 [L]</td>
+        <td>2014-07-18</td>
+        <td>General</td>
+        <td>Bug fix when executing MDX and using two properties of different dimensions with the same name</td>
+      </tr>
+      <tr>
+        <td>4.20.1 [L]</td>
+        <td>2014-07-15</td>
+        <td>RFC Client</td>
+        <td>Fix for deserialization of empty XSTRINGs (RFCFunction.LoadFromXML(), R3Connection.CacheMetadata)</td>
+      </tr>
+      <tr>
+        <td>4.20.0 [L]</td>
+        <td>2014-07-15</td>
+        <td>RFC Client</td>
+        <td>If SNC is enabled and a password is provided, logon via SNC without SSO is performed (NWRFC only)</td>
+      </tr>
+      <tr>
+        <td>4.19.3 [L]</td>
+        <td>2014-07-09</td>
+        <td>General</td>
+        <td>Obsolete method ERPException.GetObjectData() withdrawn</td>
+      </tr>
+      <tr>
+        <td>4.19.2 [L]</td>
+        <td>2014-07-08</td>
+        <td>RFC Client</td>
+        <td>SOAP requests are compressed with gzip if they exceed 8192 bytes, Accept-Encoding: gzip is sent</td>
+      </tr>
+      <tr>
+        <td>4.19.1 [L]</td>
+        <td>2014-07-08</td>
+        <td>RFC Client</td>
+        <td>SOAP request/response logs are written to R3Connection.LogDir now instead of working directory</td>
+      </tr>
+      <tr>
+        <td>4.19.0 [L]</td>
+        <td>2014-06-30</td>
+        <td>RFC Client</td>
+        <td>Added XML tracing for SOAP connections</td>
+      </tr>
+      <tr>
+        <td>4.18.4 [L]</td>
+        <td>2014-06-25</td>
+        <td>General</td>
+        <td>Bug fix for using MDXExecuter class with packaging but without MEMBER_CAPTION addition in MDX</td>
+      </tr>
+      <tr>
+        <td>4.18.3 [L]</td>
+        <td>2014-06-24</td>
+        <td>General</td>
+        <td>Invalid control characters (XML 1.0) are dropped when building XML for SOAP and RfcServerFunction.SaveToXML()</td>
+      </tr>
+      <tr>
+        <td>4.18.1 [L]</td>
+        <td>2014-06-20</td>
+        <td>LINQtoERP</td>
+        <td>Added support for IDoc Send methods with TID parameter in LINQtoSAP; updated escaping logic for IDoc descriptions</td>
+      </tr>
+      <tr>
+        <td>4.18.0 [L]</td>
+        <td>2014-06-03</td>
+        <td>RFC Client</td>
+        <td>Added support for table types in RFCFunction.Imports (SOAP)</td>
+      </tr>
+      <tr>
+        <td>4.17.21 [L]</td>
+        <td>2014-05-20</td>
+        <td>General</td>
+        <td>NWErrorInfo is now marked with SerializableAttribute</td>
+      </tr>
+      <tr>
+        <td>4.17.20 [L]</td>
+        <td>2014-05-19</td>
+        <td>General</td>
+        <td>Correction for query API in case of multiple, internal lists </td>
+      </tr>
+      <tr>
+        <td>4.17.19 [L]</td>
+        <td>2014-05-13</td>
+        <td>General</td>
+        <td>New implementation for passing RFCTYPE.BYTE values as hexadecimal strings</td>
+      </tr>
+      <tr>
+        <td>4.17.18 [M]</td>
+        <td>2014-05-08</td>
+        <td>General</td>
+        <td>Fix for non-unicode systems (NW RFC)</td>
+      </tr>
+      <tr>
+        <td>4.17.17 [M]</td>
+        <td>2014-05-06</td>
+        <td>RFC Client</td>
+        <td>Fix for system numbers 1 to 9 (NW RFC)</td>
+      </tr>
+      <tr>
+        <td>4.17.16 [L]</td>
+        <td>2014-04-24</td>
+        <td>General</td>
+        <td>Added constructor RFCTable(string name, RFCTableColumnCollection columns)</td>
+      </tr>
+      <tr>
+        <td>4.17.15 [L]</td>
+        <td>2014-04-17</td>
+        <td>RFC Client</td>
+        <td>Fix for sending Table parameters to big endian systems</td>
+      </tr>
+      <tr>
+        <td>4.17.14 [L]</td>
+        <td>2014-04-17</td>
+        <td>General</td>
+        <td>Strong name signature for ERPConnectNW40_x86.dll was missing</td>
+      </tr>
+      <tr>
+        <td>4.17.13 [L]</td>
+        <td>2014-04-15</td>
+        <td>General</td>
+        <td>All data conversion/parsing of Table parameters is now performed by ERPConnect instead of the classic RFC SDK.</td>
+      </tr>
+      <tr>
+        <td>4.17.12 [L]</td>
+        <td>2014-04-10</td>
+        <td>General</td>
+        <td>Updated logic to set MaxLength property for result data tables in XtractQL.</td>
+      </tr>
+      <tr>
+        <td>4.17.11 [L]</td>
+        <td>2014-04-08</td>
+        <td>RFC Client</td>
+        <td>Reverted changes from 4.17.10</td>
+      </tr>
+      <tr>
+        <td>4.17.10 [L]</td>
+        <td>2014-04-03</td>
+        <td>RFC Client</td>
+        <td>Fix for receiving INT in table parameters from big endian systems (classic RFC)</td>
+      </tr>
+      <tr>
+        <td>4.17.9 [L]</td>
+        <td>2014-04-03</td>
+        <td>General</td>
+        <td>Disabled code signing for ERPConnect DLLs (signature check leads to high latency in some cases)</td>
+      </tr>
+      <tr>
+        <td>4.17.8 [L]</td>
+        <td>2014-03-27</td>
+        <td>RFC Client</td>
+        <td>Temporarily re-added R3Connection.IsBusy (deprecated, will be removed again)</td>
+      </tr>
+      <tr>
+        <td>4.17.7 [L]</td>
+        <td>2014-03-25</td>
+        <td>RFC Client</td>
+        <td>R3Connection.Close() does not throw exceptions anymore (SOAP)</td>
+      </tr>
+      <tr>
+        <td>4.17.6 [L]</td>
+        <td>2014-03-25</td>
+        <td>General</td>
+        <td>ERPConnect DLLs are signed now</td>
+      </tr>
+      <tr>
+        <td>4.17.5 [L]</td>
+        <td>2014-03-24</td>
+        <td>General</td>
+        <td>Added support for SAP Codepage 6300 (Eurojapan)</td>
+      </tr>
+      <tr>
+        <td>4.17.1 [H]</td>
+        <td>2014-01-16</td>
+        <td>General</td>
+        <td>Fix for negative INT2 values (classic RFC)</td>
+      </tr>
+      <tr>
+        <td>4.17.0 [L]</td>
+        <td>2014-01-07</td>
+        <td>RFC Client</td>
+        <td>Added support for connection strings (NW RFC)</td>
+      </tr>
+      <tr>
+        <td>4.16.0 [L]</td>
+        <td>2014-01-07</td>
+        <td>RFC Client</td>
+        <td>Added XML logging (NW RFC)</td>
+      </tr>
+      <tr>
+        <td>4.15.2 [L]</td>
+        <td>2014-01-07</td>
+        <td>RFC Client</td>
+        <td>Fix for missing BCD values (NW RFC)</td>
+      </tr>
+      <tr>
+        <td>4.15.1 [L]</td>
+        <td>2013-12-16</td>
+        <td>LINQtoERP</td>
+        <td>Fixed bug with manifest file for LINQ to SAP.</td>
+      </tr>
+      <tr>
+        <td>4.15.0 [L]</td>
+        <td>2013-12-16</td>
+        <td>LINQtoERP</td>
+        <td>LINQ to SAP now supports Visual Studio 2013.</td>
+      </tr>
+      <tr>
+        <td>4.14.2 [M]</td>
+        <td>2013-12-10</td>
+        <td>General</td>
+        <td>Fix for include structures (calculated offsets were wrong in some cases)</td>
+      </tr>
+      <tr>
+        <td>4.14.1 [L]</td>
+        <td>2013-12-04</td>
+        <td>General</td>
+        <td>Fix for XML unescaping (error introduced in 4.14.0)</td>
+      </tr>
+      <tr>
+        <td>4.14.0 [L]</td>
+        <td>2013-12-03</td>
+        <td>General</td>
+        <td>New implementation for table types and structures which contain STRING/XSTRING members in Import/Export/Changing parameters (classic SDK)</td>
+      </tr>
+      <tr>
+        <td>4.13.11 [L]</td>
+        <td>2013-11-21</td>
+        <td>General</td>
+        <td>RFCTable.ToString() returns raw XML even if errors occur</td>
+      </tr>
+      <tr>
+        <td>4.13.10 [L]</td>
+        <td>2013-11-18</td>
+        <td>General</td>
+        <td>Control characters are now allowed in lines of table type import/export/changing parameters</td>
+      </tr>
+      <tr>
+        <td>4.13.9 [L]</td>
+        <td>2013-11-12</td>
+        <td>General</td>
+        <td>Added SAP codepage 1610 (ISO 8859-9 Turkish)</td>
+      </tr>
+      <tr>
+        <td>4.13.8 [L]</td>
+        <td>2013-11-12</td>
+        <td>RFC Client</td>
+        <td>Improved error message for unkown SAP codepage</td>
+      </tr>
+      <tr>
+        <td>4.13.7 [L]</td>
+        <td>2013-11-11</td>
+        <td>General</td>
+        <td>LIC is sealed now</td>
+      </tr>
+      <tr>
+        <td>4.13.6 [L]</td>
+        <td>2013-11-11</td>
+        <td>General</td>
+        <td>ReadTableField is sealed now</td>
+      </tr>
+      <tr>
+        <td>4.13.5 [L]</td>
+        <td>2013-11-11</td>
+        <td>General</td>
+        <td>ReadTable is sealed now</td>
+      </tr>
+      <tr>
+        <td>4.13.4 [L]</td>
+        <td>2013-11-11</td>
+        <td>General</td>
+        <td>RFCParameterCollection is sealed now</td>
+      </tr>
+      <tr>
+        <td>4.13.3 [L]</td>
+        <td>2013-11-11</td>
+        <td>General</td>
+        <td>RFCStructureCollection is sealed now</td>
+      </tr>
+      <tr>
+        <td>4.13.2 [L]</td>
+        <td>2013-11-11</td>
+        <td>General</td>
+        <td>RFCStructureCollection no longer implements ITypedList</td>
+      </tr>
+      <tr>
+        <td>4.13.1 [L]</td>
+        <td>2013-11-11</td>
+        <td>General</td>
+        <td>RFCTable no longer implements ITypedList, IBindingList</td>
+      </tr>
+      <tr>
+        <td>4.13.0 [L]</td>
+        <td>2013-11-11</td>
+        <td>General</td>
+        <td>RFCStructure no longer implements ICustomTypeDescriptor, IEditableObject  </td>
+      </tr>
+      <tr>
+        <td>4.12.9 [L]</td>
+        <td>2013-10-31</td>
+        <td>Idoc</td>
+        <td>Fix for using LoadIdocSchema() function with segment suffix of more than 3 characters (e.g. _001)</td>
+      </tr>
+      <tr>
+        <td>4.12.8 [L]</td>
+        <td>2013-10-24</td>
+        <td>RFC Client</td>
+        <td>R3Connection.UseGui works with NW RFC SDK now</td>
+      </tr>
+      <tr>
+        <td>4.12.7 [L]</td>
+        <td>2013-10-18</td>
+        <td>General</td>
+        <td>Correction for ReadTable class when using PrimaryKeyPackaging</td>
+      </tr>
+      <tr>
+        <td>4.12.6 [L]</td>
+        <td>2013-10-15</td>
+        <td>RFC Client</td>
+        <td>R3Connection.UserName and R3Connection.Password are no longer ignored if SNC is used</td>
+      </tr>
+      <tr>
+        <td>4.12.5 [L]</td>
+        <td>2013-10-08</td>
+        <td>RFC Client</td>
+        <td>Improved error message if SetAbapDebug() is called on invalid R3Connection objects</td>
+      </tr>
+      <tr>
+        <td>4.12.2 [L]</td>
+        <td>2013-09-17</td>
+        <td>General</td>
+        <td>Fix for tracing</td>
+      </tr>
+      <tr>
+        <td>4.12.1 [L]</td>
+        <td>2013-09-10</td>
+        <td>RFC Client</td>
+        <td>Fix for EBCDIC systems</td>
+      </tr>
+      <tr>
+        <td>4.12.0 [L]</td>
+        <td>2013-09-06</td>
+        <td>SNC</td>
+        <td>Added SNC support RFC Server (classic RFC SDK)</td>
+      </tr>
+      <tr>
+        <td>4.11.6 [L]</td>
+        <td>2013-09-03</td>
+        <td>NWRFC</td>
+        <td>Fix for ERPConnectNW35 and ERPConnectNW40 assembly version numbers</td>
+      </tr>
+      <tr>
+        <td>4.11.5 [L]</td>
+        <td>2013-07-12</td>
+        <td>General</td>
+        <td>ERPConnectNW can be installed to GAC now</td>
+      </tr>
+      <tr>
+        <td>4.11.4 [L]</td>
+        <td>2013-07-10</td>
+        <td>General</td>
+        <td>Exception message is more informative now if NetWeaver RFC libraries are used </td>
+      </tr>
+      <tr>
+        <td>4.11.3 [L]</td>
+        <td>2013-07-03</td>
+        <td>General</td>
+        <td>Added 32-bit support for NW RFC API</td>
+      </tr>
+      <tr>
+        <td>4.11.2 [L]</td>
+        <td>2013-07-03</td>
+        <td>RFCServer</td>
+        <td>Implemented RFCServer.Ping() over NW RFC API</td>
+      </tr>
+      <tr>
+        <td>4.11.1 [L]</td>
+        <td>2013-07-03</td>
+        <td>RFC Client</td>
+        <td>Implemented R3Connection.Ping() over NW RFC API</td>
+      </tr>
+      <tr>
+        <td>4.11.0 [L]</td>
+        <td>2013-06-28</td>
+        <td>RFCServer</td>
+        <td>Added support for tRFC over NW RFC API</td>
+      </tr>
+      <tr>
+        <td>4.10.15 [L]</td>
+        <td>2013-06-28</td>
+        <td>General</td>
+        <td>Added RFCAPI.RequestWaitTime and RFCAPI.SynchronizationEnabled for classic RFC SDK performance tuning</td>
+      </tr>
+      <tr>
+        <td>4.10.14 [L]</td>
+        <td>2013-06-28</td>
+        <td>General</td>
+        <td>Improved call times for classic RFC SDK</td>
+      </tr>
+      <tr>
+        <td>4.10.13 [L]</td>
+        <td>2013-06-28</td>
+        <td>General</td>
+        <td>Property DecimalSeparator of MDXExecuter class is withdrawn. It's not necessary anymore to set this value.</td>
+      </tr>
+      <tr>
+        <td>4.10.12 [L]</td>
+        <td>2013-06-21</td>
+        <td>RFC Client</td>
+        <td>Added support for tRFC over NW RFC API</td>
+      </tr>
+      <tr>
+        <td>4.10.11 [L]</td>
+        <td>2013-06-21</td>
+        <td>General</td>
+        <td>System.Byte, System.Int16 and System.Int64 can now also be used for integer parameters </td>
+      </tr>
+      <tr>
+        <td>4.10.10 [L]</td>
+        <td>2013-06-21</td>
+        <td>General</td>
+        <td>IDisposable interface was removed from ReadTable class because it's not necessary anymore</td>
+      </tr>
+      <tr>
+        <td>4.10.8 [L]</td>
+        <td>2013-06-20</td>
+        <td>General</td>
+        <td>BCD values in tables are now initialized to 0 for new rows</td>
+      </tr>
+      <tr>
+        <td>4.10.7 [L]</td>
+        <td>2013-06-17</td>
+        <td>RFC Client</td>
+        <td>Fix for default values for DATS parameters that have an invalid date (e.g. L_TO_CREATE_SINGLE)</td>
+      </tr>
+      <tr>
+        <td>4.10.6 [L]</td>
+        <td>2013-06-12</td>
+        <td>Idoc</td>
+        <td>Added support for IDocs over NW RFC API</td>
+      </tr>
+      <tr>
+        <td>4.10.5 [L]</td>
+        <td>2013-06-12</td>
+        <td>General</td>
+        <td>Added support for nested tables and structures for NW RFC API</td>
+      </tr>
+      <tr>
+        <td>4.10.4 [L]</td>
+        <td>2013-06-12</td>
+        <td>General</td>
+        <td>Fix for MDX statements that result in non-unique column names</td>
+      </tr>
+      <tr>
+        <td>4.10.3 [L]</td>
+        <td>2013-06-09</td>
+        <td>RFC Client</td>
+        <td>Added Contains() function to parameter collection to check, if a parameter is available after creating the RFCFunction object with CreateFunction()</td>
+      </tr>
+      <tr>
+        <td>4.10.2 [L]</td>
+        <td>2013-06-05</td>
+        <td>RFC Client</td>
+        <td>Fix for receiving tables over NW RFC API</td>
+      </tr>
+      <tr>
+        <td>4.10.1 [L]</td>
+        <td>2013-06-05</td>
+        <td>RFC Client</td>
+        <td>Added support for sending tables over NW RFC API</td>
+      </tr>
+      <tr>
+        <td>4.10.0 [L]</td>
+        <td>2013-06-04</td>
+        <td>RFCServer</td>
+        <td>Added support for NW RFC API</td>
+      </tr>
+      <tr>
+        <td>4.9.2 [L]</td>
+        <td>2013-06-04</td>
+        <td>General</td>
+        <td>Better Exception in case MDXExecuter or BWCube classes receive an error from SAP</td>
+      </tr>
+      <tr>
+        <td>4.9.1 [L]</td>
+        <td>2013-05-22</td>
+        <td>RFCServer</td>
+        <td>Fix for IDocs</td>
+      </tr>
+      <tr>
+        <td>4.9.0 [L]</td>
+        <td>2013-05-21</td>
+        <td>RFCServer</td>
+        <td>Added full support for parallel RFCServers in the same application domain</td>
+      </tr>
+      <tr>
+        <td>4.8.11 [L]</td>
+        <td>2013-05-15</td>
+        <td>NWRFC</td>
+        <td>Added support for BCD, STRING and XSTRING</td>
+      </tr>
+      <tr>
+        <td>4.8.10 [L]</td>
+        <td>2013-05-14</td>
+        <td>RFCServer</td>
+        <td>Authorization can now be checked via Authorizing event before accepting a function call </td>
+      </tr>
+      <tr>
+        <td>4.8.9 [L]</td>
+        <td>2013-05-13</td>
+        <td>RFCServer</td>
+        <td>Added UnknownIncomingFunction event to RFCServer to enable adding items to RegisteredFunctions collection dynmically.</td>
+      </tr>
+      <tr>
+        <td>4.8.8 [L]</td>
+        <td>2013-05-08</td>
+        <td>General</td>
+        <td>Fix and improvements for encodings and byte order</td>
+      </tr>
+      <tr>
+        <td>4.8.7 [L]</td>
+        <td>2013-05-01</td>
+        <td>RFCServer</td>
+        <td>BCD in tables were not sent correctly in some cases since version 4.7.2</td>
+      </tr>
+      <tr>
+        <td>4.8.6 [L]</td>
+        <td>2013-04-30</td>
+        <td>RFCServer</td>
+        <td>Some fixes for big endian systems</td>
+      </tr>
+      <tr>
+        <td>4.8.5 [L]</td>
+        <td>2013-04-29</td>
+        <td>General</td>
+        <td>Default values of parameters of type BYTE were wrong since 4.7.0</td>
+      </tr>
+      <tr>
+        <td>4.8.4 [L]</td>
+        <td>2013-04-25</td>
+        <td>RFCServer</td>
+        <td>Fix for InternalException event (was not fired in some cases since 4.7.1)</td>
+      </tr>
+      <tr>
+        <td>4.8.3 [L]</td>
+        <td>2013-04-25</td>
+        <td>General</td>
+        <td>Fix for non-existent/inactive includes in structures/tables</td>
+      </tr>
+      <tr>
+        <td>4.8.2 [L]</td>
+        <td>2013-04-24</td>
+        <td>RFCServer</td>
+        <td>Fix for RFCServer with big endian systems (Integers &amp; Float)</td>
+      </tr>
+      <tr>
+        <td>4.8.1 [L]</td>
+        <td>2013-04-22</td>
+        <td>General</td>
+        <td>Libraries for NetWeaver RFC SDK support are loaded dynamically only when needed</td>
+      </tr>
+      <tr>
+        <td>4.8.0 [L]</td>
+        <td>2013-04-22</td>
+        <td>General</td>
+        <td>Changed NetWeaver RFC SDK support from one library to dedicated libraries for each .NET Framework version</td>
+      </tr>
+      <tr>
+        <td>4.7.3 [L]</td>
+        <td>2013-04-21</td>
+        <td>General</td>
+        <td>R3Connection.Ping() was returning inverse value since 4.7.x</td>
+      </tr>
+      <tr>
+        <td>4.7.2 [L]</td>
+        <td>2013-04-12</td>
+        <td>General</td>
+        <td>New implementation for BCD/Decimal conversion</td>
+      </tr>
+      <tr>
+        <td>4.7.1 [L]</td>
+        <td>2013-04-12</td>
+        <td>RFCServer</td>
+        <td>New internal implementation of RFCServer</td>
+      </tr>
+      <tr>
+        <td>4.7.0 [L]</td>
+        <td>2013-04-12</td>
+        <td>General</td>
+        <td>Added synchronization for classic RFC SDK API calls</td>
+      </tr>
+      <tr>
+        <td>4.6.9 [L]</td>
+        <td>2013-04-08</td>
+        <td>Idoc</td>
+        <td>TEST flag was not transmitted correctly when sending IDocs</td>
+      </tr>
+      <tr>
+        <td>4.6.8 [L]</td>
+        <td>2013-04-04</td>
+        <td>General</td>
+        <td>Bugfix in IDisposable implementation (ReadTable class).</td>
+      </tr>
+      <tr>
+        <td>4.6.7 [L]</td>
+        <td>2013-04-03</td>
+        <td>LINQtoERP</td>
+        <td>Updated logic to display additional error information when SAP object structures are created within the LINQ designer.</td>
+      </tr>
+      <tr>
+        <td>4.6.6 [L]</td>
+        <td>2013-03-28</td>
+        <td>General</td>
+        <td>Bug fix for R3Connection.Clone() function used together with SNC</td>
+      </tr>
+      <tr>
+        <td>4.6.5 [L]</td>
+        <td>2013-03-25</td>
+        <td>General</td>
+        <td>Updated IDisposable interface logic in a couple of RFC classes to pass MSOCAF code analysis.</td>
+      </tr>
+      <tr>
+        <td>4.6.4 [L]</td>
+        <td>2013-03-25</td>
+        <td>RFCServer</td>
+        <td>Improved multithreading behaviour when using RFCServer class</td>
+      </tr>
+      <tr>
+        <td>4.6.3 [L]</td>
+        <td>2013-03-19</td>
+        <td>RFCServer</td>
+        <td>Improved logging for general errors in RFCServer class when logging is switched on (RFCServer.LogDir is set to valid path)</td>
+      </tr>
+      <tr>
+        <td>4.6.2 [L]</td>
+        <td>2013-03-14</td>
+        <td>General</td>
+        <td>R3Connection.Close() did not work since 4.6.0 if NetWeaver DLLs were missing even with classic RFC or SOAP </td>
+      </tr>
+      <tr>
+        <td>4.6.1 [L]</td>
+        <td>2013-03-12</td>
+        <td>General</td>
+        <td>New table lines are zero filled now to avoid random data if actual row contains less columns than defined in metadata</td>
+      </tr>
+      <tr>
+        <td>4.6.0 [L]</td>
+        <td>2013-02-28</td>
+        <td>General</td>
+        <td>Added support for NetWeaver RFC SDK</td>
+      </tr>
+      <tr>
+        <td>4.5.33 [L]</td>
+        <td>2013-02-06</td>
+        <td>General</td>
+        <td>Replaced 'obsolete' API calls for table handling with new ones</td>
+      </tr>
+      <tr>
+        <td>4.5.31 [L]</td>
+        <td>2013-01-22</td>
+        <td>General</td>
+        <td>Added support for floating point components in Imports/Exports/Changings structures with big endian systems</td>
+      </tr>
+      <tr>
+        <td>4.5.30 [L]</td>
+        <td>2013-01-18</td>
+        <td>General</td>
+        <td>Added HTML5 web demos to the samples VS2012 folder.</td>
+      </tr>
+      <tr>
+        <td>4.5.29 [L]</td>
+        <td>2013-01-17</td>
+        <td>General</td>
+        <td>Fix for CreateFunction() for older SAP releases (bug accidentally introduced in 4.5.21)</td>
+      </tr>
+      <tr>
+        <td>4.5.28 [L]</td>
+        <td>2013-01-10</td>
+        <td>General</td>
+        <td>Added structure alignment calculation for includes</td>
+      </tr>
+      <tr>
+        <td>4.5.26 [L]</td>
+        <td>2013-01-08</td>
+        <td>General</td>
+        <td>Added support for integer components in export structures with big endian systems</td>
+      </tr>
+      <tr>
+        <td>4.5.25 [L]</td>
+        <td>2013-01-07</td>
+        <td>LINQtoERP</td>
+        <td>Bugfix for LINQToERP when installing for Visual Studio 2010 in French language</td>
+      </tr>
+      <tr>
+        <td>4.5.24 [L]</td>
+        <td>2012-12-27</td>
+        <td>General</td>
+        <td>New property MDXExecuter.MaxRows introduced to be used to limit the number of rows</td>
+      </tr>
+      <tr>
+        <td>4.5.22 [L]</td>
+        <td>2012-12-06</td>
+        <td>General</td>
+        <td>Fix for integer table row members with big endian systems</td>
+      </tr>
+      <tr>
+        <td>4.5.21 [L]</td>
+        <td>2012-12-05</td>
+        <td>General</td>
+        <td>Fix for integer import structure members with big endian systems</td>
+      </tr>
+      <tr>
+        <td>4.5.20 [L]</td>
+        <td>2012-12-05</td>
+        <td>General</td>
+        <td>Bugfix for MDXExecuter class when packaging is turned on and no measure is selected in MDX</td>
+      </tr>
+      <tr>
+        <td>4.5.19 [L]</td>
+        <td>2012-12-05</td>
+        <td>General</td>
+        <td>Bugfix for MDXExecuter class when using MEMBER_UNIQUE_NAME within MDX statement</td>
+      </tr>
+      <tr>
+        <td>4.5.18 [L]</td>
+        <td>2012-12-05</td>
+        <td>General</td>
+        <td>Bugfix for certain MDX statements used with MDXExecuter class</td>
+      </tr>
+      <tr>
+        <td>4.5.17 [L]</td>
+        <td>2012-11-20</td>
+        <td>General</td>
+        <td>Fix for R3Connection.Ping() and ERPDataContext.Dispose()</td>
+      </tr>
+      <tr>
+        <td>4.5.16 [L]</td>
+        <td>2012-10-31</td>
+        <td>General</td>
+        <td>Correction for misleading error message when using BWCube class with packaging while an empty resultset is returned from SAP</td>
+      </tr>
+      <tr>
+        <td>4.5.15 [L]</td>
+        <td>2012-10-25</td>
+        <td>LINQtoERP</td>
+        <td>Updated logic in code generation for SAP queries (MaxRows setting) of the LINQ designers.</td>
+      </tr>
+      <tr>
+        <td>4.5.14 [L]</td>
+        <td>2012-10-16</td>
+        <td>General</td>
+        <td>Performance tweak for character-like values in tables/structures</td>
+      </tr>
+      <tr>
+        <td>4.5.11 [L]</td>
+        <td>2012-10-05</td>
+        <td>General</td>
+        <td>Performance tweaks for tables/structures </td>
+      </tr>
+      <tr>
+        <td>4.5.10 [M]</td>
+        <td>2012-10-04</td>
+        <td>General</td>
+        <td>Fix for memory leaks in R3Connection.ConfirmTID() and RFCFunction.Execute(tid)</td>
+      </tr>
+      <tr>
+        <td>4.5.9 [L]</td>
+        <td>2012-09-19</td>
+        <td>General</td>
+        <td>Fix for parameters which use a projection view as data type</td>
+      </tr>
+      <tr>
+        <td>4.5.8 [L]</td>
+        <td>2012-09-15</td>
+        <td>Idoc</td>
+        <td>Idoc.SendAndWait() returned the wrong value. This is fixed now. In case of succes true is returned.</td>
+      </tr>
+      <tr>
+        <td>4.5.7 [L]</td>
+        <td>2012-09-11</td>
+        <td>General</td>
+        <td>Fix for ERPException.ABAPException with Changing parameters (was always null since 4.5.1.x)</td>
+      </tr>
+      <tr>
+        <td>4.5.6 [L]</td>
+        <td>2012-09-01</td>
+        <td>General</td>
+        <td>Removed Support for UseWrapper function of RFCFunction object</td>
+      </tr>
+      <tr>
+        <td>4.5.5 [L]</td>
+        <td>2012-09-01</td>
+        <td>General</td>
+        <td>Removed Support for AskUserAndOpen() function of R3Connection object</td>
+      </tr>
+      <tr>
+        <td>4.5.4 [L]</td>
+        <td>2012-09-01</td>
+        <td>General</td>
+        <td>Added support for loading and saving RFCServerFunction objects from/to an XML string</td>
+      </tr>
+      <tr>
+        <td>4.5.3 [L]</td>
+        <td>2012-09-01</td>
+        <td>General</td>
+        <td>Added support for unknown dimensions in BWCube (dimension type 0)</td>
+      </tr>
+      <tr>
+        <td>4.5.2 [L]</td>
+        <td>2012-09-01</td>
+        <td>General</td>
+        <td>Added support for non-aggregation dimensions in BWCube (dimension type 4)</td>
+      </tr>
+      <tr>
+        <td>4.5.1 [L]</td>
+        <td>2012-09-01</td>
+        <td>General</td>
+        <td>Improved support for changing parameters</td>
+      </tr>
+      <tr>
+        <td>4.5.0 [L]</td>
+        <td>2012-09-01</td>
+        <td>General</td>
+        <td>First build for Release 4.5 with Support for .NET 4.5 and Visual Studio 2012</td>
+      </tr>
+      <tr>
+        <td>4.2.19 [L]</td>
+        <td>2012-07-04</td>
+        <td>General</td>
+        <td>License reactivation</td>
+      </tr>
+      <tr>
+        <td>4.2.18 [L]</td>
+        <td>2012-06-21</td>
+        <td>General</td>
+        <td>All trace files can be configured via R3Connection.Logging and R3Connection.LogDir now</td>
+      </tr>
+      <tr>
+        <td>4.2.17 [L]</td>
+        <td>2012-05-18</td>
+        <td>RFCServer</td>
+        <td>Fix for parallel RFC function call handling</td>
+      </tr>
+      <tr>
+        <td>4.2.16 [L]</td>
+        <td>2012-05-15</td>
+        <td>General</td>
+        <td>Import params with a default value and data type DATS were not set correctly</td>
+      </tr>
+      <tr>
+        <td>4.2.15 [L]</td>
+        <td>2012-05-08</td>
+        <td>LINQtoERP</td>
+        <td>Fixed bug in IDOC code generation (String data types und double quotes).</td>
+      </tr>
+      <tr>
+        <td>4.2.14 [L]</td>
+        <td>2012-05-06</td>
+        <td>LINQtoERP</td>
+        <td>Fixed bug in IDOC code generation in UpdateChildSegmentList method (ChildSegments) and extended reserved names list for VB.NET.</td>
+      </tr>
+      <tr>
+        <td>4.2.13 [L]</td>
+        <td>2012-04-26</td>
+        <td>LINQtoERP</td>
+        <td>Fixed bug in code generation for skipped properties.</td>
+      </tr>
+      <tr>
+        <td>4.2.12 [L]</td>
+        <td>2012-04-24</td>
+        <td>General</td>
+        <td>Updated Function Template Generator to .NET 2.0</td>
+      </tr>
+      <tr>
+        <td>4.2.11 [L]</td>
+        <td>2012-04-24</td>
+        <td>RFCServer</td>
+        <td>XML traces are now written to log directory if logging is enabled</td>
+      </tr>
+      <tr>
+        <td>4.2.10 [L]</td>
+        <td>2012-04-03</td>
+        <td>RFCServer</td>
+        <td>Calls on multiple RFCServers were not processed in parallel since version 4.2.2.0</td>
+      </tr>
+      <tr>
+        <td>4.2.9 [L]</td>
+        <td>2012-03-13</td>
+        <td>Idoc</td>
+        <td>Fix for missing segment values in some cases if schema and XML data were loaded</td>
+      </tr>
+      <tr>
+        <td>4.2.8 [L]</td>
+        <td>2012-03-07</td>
+        <td>Idoc</td>
+        <td>Saving and loading plain text now supports segment values with new lines</td>
+      </tr>
+      <tr>
+        <td>4.2.7 [M]</td>
+        <td>2012-01-26</td>
+        <td>General</td>
+        <td>Changed R3Connection.Ping() to avoid "Attempt to read or write protected memory" error which occurred at arbitrary times</td>
+      </tr>
+      <tr>
+        <td>4.2.6 [L]</td>
+        <td>2011-12-15</td>
+        <td>General</td>
+        <td>BWCube works with queries without dimensions now....</td>
+      </tr>
+      <tr>
+        <td>4.2.5 [L]</td>
+        <td>2011-11-29</td>
+        <td>General</td>
+        <td>Fix for crash at BWCube.CreateCube() function when using with certain SAP BW patch levels</td>
+      </tr>
+      <tr>
+        <td>4.2.4 [L]</td>
+        <td>2011-11-29</td>
+        <td>General</td>
+        <td>Added property R3Connection.UsesLoadBalancing</td>
+      </tr>
+      <tr>
+        <td>4.2.3 [L]</td>
+        <td>2011-11-24</td>
+        <td>SNC</td>
+        <td>Moved SNC properties to separate class, added QoP property</td>
+      </tr>
+      <tr>
+        <td>4.2.2 [L]</td>
+        <td>2011-11-21</td>
+        <td>RFCServer</td>
+        <td>Fix for multiple RFCServers with multiple threads</td>
+      </tr>
+      <tr>
+        <td>4.2.1 [L]</td>
+        <td>2011-11-21</td>
+        <td>RFCFunction.Tables</td>
+        <td>Workaround for missing data at the end of some very wide table lines (librfc32.dll bug)</td>
+      </tr>
+      <tr>
+        <td>4.2.0 [M]</td>
+        <td>2011-10-17</td>
+        <td>General</td>
+        <td>Added support for new OLAP BAPIs in the classes BWCube and MDXExecuter (see property UseNewOlapBapis for details), see SAP note 1232751</td>
+      </tr>
+      <tr>
+        <td>4.1.59 [L]</td>
+        <td>2011-09-28</td>
+        <td>General</td>
+        <td>Added properties for SNC authentication to R3Connection class</td>
+      </tr>
+      <tr>
+        <td>4.1.58 [L]</td>
+        <td>2011-08-22</td>
+        <td>General</td>
+        <td>Extension for MDXExecuter class to include the measure's units in the resultset</td>
+      </tr>
+      <tr>
+        <td>4.1.57 [L]</td>
+        <td>2011-08-19</td>
+        <td>General</td>
+        <td>Idoc.SaveXMLData() saves values without trailing spaces</td>
+      </tr>
+      <tr>
+        <td>4.1.56 [L]</td>
+        <td>2011-08-17</td>
+        <td>General</td>
+        <td>R3Connection closes connection to SAP when disposed/finalized</td>
+      </tr>
+      <tr>
+        <td>4.1.55 [L]</td>
+        <td>2011-08-12</td>
+        <td>General</td>
+        <td>RFCServer.LogDir is also used for RFC traces now</td>
+      </tr>
+      <tr>
+        <td>4.1.54 [L]</td>
+        <td>2011-08-04</td>
+        <td>General</td>
+        <td>Fix for RFCFunction.LoadFromXML() and characters with enconding value &lt; 0x20</td>
+      </tr>
+      <tr>
+        <td>4.1.53 [L]</td>
+        <td>2011-08-03</td>
+        <td>General</td>
+        <td>Added XML logging for tRFC calls</td>
+      </tr>
+      <tr>
+        <td>4.1.52 [L]</td>
+        <td>2011-08-03</td>
+        <td>General</td>
+        <td>R3Connection.LogDir is also used for RFC traces now</td>
+      </tr>
+      <tr>
+        <td>4.1.51 [L]</td>
+        <td>2011-07-19</td>
+        <td>General</td>
+        <td>Fix for missing Messages resource in ERPConnect40.dll</td>
+      </tr>
+      <tr>
+        <td>4.1.50 [L]</td>
+        <td>2011-07-19</td>
+        <td>General</td>
+        <td>Workaround for librfc32 bug with SAP EBCDIC code page 0700</td>
+      </tr>
+      <tr>
+        <td>4.1.49 [L]</td>
+        <td>2011-07-19</td>
+        <td>General</td>
+        <td>Fix for SAP EBCDIC code page 0700</td>
+      </tr>
+      <tr>
+        <td>4.1.48 [L]</td>
+        <td>2011-07-07</td>
+        <td>General</td>
+        <td>Added support for pooled tables in function modules</td>
+      </tr>
+      <tr>
+        <td>4.1.47 [L]</td>
+        <td>2011-06-29</td>
+        <td>General</td>
+        <td>Fix of small memory leak in R3Connection.Ping()</td>
+      </tr>
+      <tr>
+        <td>4.1.46 [L]</td>
+        <td>2011-06-29</td>
+        <td>General</td>
+        <td>Added connection string for SOAP</td>
+      </tr>
+      <tr>
+        <td>4.1.45 [L]</td>
+        <td>2011-06-22</td>
+        <td>General</td>
+        <td>Bugfix for BCD values in tables</td>
+      </tr>
+      <tr>
+        <td>4.1.44 [L]</td>
+        <td>2011-06-14</td>
+        <td>General</td>
+        <td>Bugfix for BCD values in certain system environments</td>
+      </tr>
+      <tr>
+        <td>4.1.43 [L]</td>
+        <td>2011-05-02</td>
+        <td>General</td>
+        <td>Licence reactivation</td>
+      </tr>
+      <tr>
+        <td>4.1.42 [L]</td>
+        <td>2011-03-22</td>
+        <td>General</td>
+        <td>Fix for names starting with numbers in Table Types</td>
+      </tr>
+      <tr>
+        <td>4.1.41 [L]</td>
+        <td>2011-03-11</td>
+        <td>General</td>
+        <td>Fix for Greek non-Unicode systems (SAP codepage 1700)</td>
+      </tr>
+      <tr>
+        <td>4.1.40 [L]</td>
+        <td>2011-03-02</td>
+        <td>General</td>
+        <td>Idoc.LoadIdocSchema() and Idoc.SaveIdocSchema() now support names/types containing slashes</td>
+      </tr>
+      <tr>
+        <td>4.1.39 [L]</td>
+        <td>2011-03-01</td>
+        <td>General</td>
+        <td>Fix for structures with SOAP connections</td>
+      </tr>
+      <tr>
+        <td>4.1.38 [L]</td>
+        <td>2011-02-24</td>
+        <td>General</td>
+        <td>Added support of table types for changing parameters (limited data volume)</td>
+      </tr>
+      <tr>
+        <td>4.1.37 [L]</td>
+        <td>2011-02-23</td>
+        <td>General</td>
+        <td>Added ITAB support to changing parameters of function modules in LINQ to SAP (only VS2010), but this is currently not supported by ERPConnect</td>
+      </tr>
+      <tr>
+        <td>4.1.36 [L]</td>
+        <td>2011-02-09</td>
+        <td>General</td>
+        <td>Idoc.SaveXMLData() and Idoc.LoadXMLData() now support Message Types and Segment Names containing slashes</td>
+      </tr>
+      <tr>
+        <td>4.1.35 [L]</td>
+        <td>2011-02-06</td>
+        <td>General</td>
+        <td>Fix: MessageType (MEYTYP) was set incorrectly when loading IDoc schemas</td>
+      </tr>
+      <tr>
+        <td>4.1.34 [L]</td>
+        <td>2011-02-01</td>
+        <td>General</td>
+        <td>Added support for Japanese language in LINQToERP setup</td>
+      </tr>
+      <tr>
+        <td>4.1.33 [L]</td>
+        <td>2011-01-25</td>
+        <td>General</td>
+        <td>Added new logic to differentiate the target .NET version while adding a new ERP file in LINQ to SAP (LINQToERPVS project with IWizard interface)</td>
+      </tr>
+      <tr>
+        <td>4.1.32 [L]</td>
+        <td>2011-01-11</td>
+        <td>General</td>
+        <td>Fix for Reuse Classes logic for function modules (with nested structures) in LINQ to SAP</td>
+      </tr>
+      <tr>
+        <td>4.1.31 [L]</td>
+        <td>2011-01-04</td>
+        <td>General</td>
+        <td>Fix for MDX queries with hierarchies to be executed with MDXExecuter class</td>
+      </tr>
+      <tr>
+        <td>4.1.30 [L]</td>
+        <td>2010-12-15</td>
+        <td>General</td>
+        <td>Fix for RFCFunction XML loading with slashes in parameter names </td>
+      </tr>
+      <tr>
+        <td>4.1.29 [L]</td>
+        <td>2010-12-14</td>
+        <td>General</td>
+        <td>Fix for LINQ to SAP in Korean Visual Studio</td>
+      </tr>
+      <tr>
+        <td>4.1.28 [L]</td>
+        <td>2010-12-07</td>
+        <td>General</td>
+        <td>Added new Add(ItemStructure) method in Table object to support serialization (e.g. for WebServices) in LINQ to SAP (only VS2010)</td>
+      </tr>
+      <tr>
+        <td>4.1.27 [L]</td>
+        <td>2010-12-01</td>
+        <td>General</td>
+        <td>Fix for non-ASCII characters in structures with STRING/XSTRING components/table types on non-Unicode systems</td>
+      </tr>
+      <tr>
+        <td>4.1.26 [L]</td>
+        <td>2010-11-23</td>
+        <td>General</td>
+        <td>Added support for table types with key components</td>
+      </tr>
+      <tr>
+        <td>4.1.25 [L]</td>
+        <td>2010-11-18</td>
+        <td>General</td>
+        <td>Improved XML logging of RFC_SYSTEM_INFO, fix for SAP_BASIS 72L</td>
+      </tr>
+      <tr>
+        <td>4.1.24 [L]</td>
+        <td>2010-11-17</td>
+        <td>General</td>
+        <td>Fix for fetching metadata on systems with SAP_BASIS 72L</td>
+      </tr>
+      <tr>
+        <td>4.1.23 [L]</td>
+        <td>2010-11-16</td>
+        <td>General</td>
+        <td>Fix for ReadTable extraction with more than 20 mio rows</td>
+      </tr>
+      <tr>
+        <td>4.1.22 [L]</td>
+        <td>2010-11-08</td>
+        <td>General</td>
+        <td>Increased performance of ConversionUtils.SAPDate2NetDate() for invalid SAP date values</td>
+      </tr>
+      <tr>
+        <td>4.1.21 [L]</td>
+        <td>2010-10-11</td>
+        <td>General</td>
+        <td>Fix for IdocSchemaGenerator for SAP user names that contain a blank</td>
+      </tr>
+      <tr>
+        <td>4.1.20 [L]</td>
+        <td>2010-10-08</td>
+        <td>General</td>
+        <td>Fix for manually created nested parameters if offsets &amp; structure lengths are not set manually</td>
+      </tr>
+      <tr>
+        <td>4.1.19 [L]</td>
+        <td>2010-10-05</td>
+        <td>General</td>
+        <td>All assemblies are signed now</td>
+      </tr>
+      <tr>
+        <td>4.1.18 [L]</td>
+        <td>2010-10-05</td>
+        <td>General</td>
+        <td>Changed modifiers of RFCTableColumn.IsNonStructureLineType and RFCTableColumnCollection.Align() to public for manual creating of some types of structures</td>
+      </tr>
+      <tr>
+        <td>4.1.17 [L]</td>
+        <td>2010-09-30</td>
+        <td>General</td>
+        <td>Added nested structure and table support for LINQ to SAP (only VS2010)</td>
+      </tr>
+      <tr>
+        <td>4.1.16 [L]</td>
+        <td>2010-09-20</td>
+        <td>General</td>
+        <td>Fix for CreateFunction() with SAP 4.7 systems</td>
+      </tr>
+      <tr>
+        <td>4.1.15 [L]</td>
+        <td>2010-09-20</td>
+        <td>General</td>
+        <td>Corrected typo: R3Connection.SetAbabDebug() is now R3Connection.SetAbapDebug()</td>
+      </tr>
+      <tr>
+        <td>4.1.14 [L]</td>
+        <td>2010-09-20</td>
+        <td>General</td>
+        <td>Added Property R3Connection.PartnerRelease</td>
+      </tr>
+      <tr>
+        <td>4.1.13 [L]</td>
+        <td>2010-09-19</td>
+        <td>General</td>
+        <td>Fixed resizing bug in SQP Query dialog for LINQ to SAP (VS2008 and VS2010)</td>
+      </tr>
+      <tr>
+        <td>4.1.12 [L]</td>
+        <td>2010-09-15</td>
+        <td>General</td>
+        <td>Improved error message for metadata parsing failures</td>
+      </tr>
+      <tr>
+        <td>4.1.11 [L]</td>
+        <td>2010-09-13</td>
+        <td>General</td>
+        <td>Fix for CreateFunction() with ECC5.0 and older systems</td>
+      </tr>
+      <tr>
+        <td>4.1.10 [L]</td>
+        <td>2010-09-09</td>
+        <td>General</td>
+        <td>Another fix for structures with includes</td>
+      </tr>
+      <tr>
+        <td>4.1.9 [L]</td>
+        <td>2010-09-02</td>
+        <td>General</td>
+        <td>Fix for structures with includes</td>
+      </tr>
+      <tr>
+        <td>4.1.8 [L]</td>
+        <td>2010-09-02</td>
+        <td>General</td>
+        <td>Fix for IntegerType intial value (RFCServer)</td>
+      </tr>
+      <tr>
+        <td>4.1.7 [L]</td>
+        <td>2010-09-02</td>
+        <td>General</td>
+        <td>Fix for manually created structures with alignment gaps</td>
+      </tr>
+      <tr>
+        <td>4.1.6 [L]</td>
+        <td>2010-09-02</td>
+        <td>General</td>
+        <td>Fixes for SaveToXml (control characters &amp; Tables collection)</td>
+      </tr>
+      <tr>
+        <td>4.1.4 [L]</td>
+        <td>2010-08-26</td>
+        <td>General</td>
+        <td>Fix for manually created tables</td>
+      </tr>
+      <tr>
+        <td>4.1.3 [L]</td>
+        <td>2010-08-25</td>
+        <td>General</td>
+        <td>Bugfix for Thai characters in non-Unicode systems</td>
+      </tr>
+      <tr>
+        <td>4.1.2 [L]</td>
+        <td>2010-08-23</td>
+        <td>General</td>
+        <td>Bugfix for certain Hebrew Characters in non-unicode SAP systems</td>
+      </tr>
+      <tr>
+        <td>4.1.1 [L]</td>
+        <td>2010-08-23</td>
+        <td>General</td>
+        <td>Added RowSkip and RowCount display to LINQ logging (ERPTable)</td>
+      </tr>
+      <tr>
+        <td>4.1.0 [L]</td>
+        <td>2010-08-20</td>
+        <td>General</td>
+        <td>Added API support for nested Structures and Tables, misc. fixes</td>
+      </tr>
+      <tr>
+        <td>4.0.12 [L]</td>
+        <td>2010-08-15</td>
+        <td>General</td>
+        <td>New feature (CreateObjectsOutsideOfContextClass) for LINQtoERP (only VS2010)</td>
+      </tr>
+      <tr>
+        <td>4.0.11 [L]</td>
+        <td>2010-06-01</td>
+        <td>General</td>
+        <td>Fix for RFC Wrapper with BDC columns within a table</td>
+      </tr>
+      <tr>
+        <td>4.0.10 [L]</td>
+        <td>2010-05-12</td>
+        <td>General</td>
+        <td>Fix for XSTRING parameters in RFCServer</td>
+      </tr>
+      <tr>
+        <td>4.0.9 [L]</td>
+        <td>2010-05-12</td>
+        <td>General</td>
+        <td>Option is available for LINQ classes to be partial</td>
+      </tr>
+      <tr>
+        <td>4.0.8 [L]</td>
+        <td>2010-05-08</td>
+        <td>General</td>
+        <td>R3Connection.IsUnicode is writeable for PI systems</td>
+      </tr>
+      <tr>
+        <td>4.0.7 [L]</td>
+        <td>2010-05-07</td>
+        <td>General</td>
+        <td>Fix for ITAB in STRUCTURE.</td>
+      </tr>
+      <tr>
+        <td>4.0.6 [L]</td>
+        <td>2010-05-06</td>
+        <td>General</td>
+        <td>Fix for code generation with LINQ under VS 2010 and VB.net</td>
+      </tr>
+      <tr>
+        <td>4.0.5 [L]</td>
+        <td>2010-05-05</td>
+        <td>General</td>
+        <td>Fix for BW queries with a name that starts with a slash</td>
+      </tr>
+      <tr>
+        <td>4.0.4 [L]</td>
+        <td>2010-04-30</td>
+        <td>General</td>
+        <td>Fix for using WITH statement together with MDXExecuter class</td>
+      </tr>
+      <tr>
+        <td>4.0.3 [L]</td>
+        <td>2010-04-28</td>
+        <td>General</td>
+        <td>Fix for strings with 0-characters in SAP PI</td>
+      </tr>
+      <tr>
+        <td>4.0.2 [L]</td>
+        <td>2010-04-22</td>
+        <td>General</td>
+        <td>Second fix for integer types on Unix servers</td>
+      </tr>
+      <tr>
+        <td>4.0.1 [L]</td>
+        <td>2010-04-19</td>
+        <td>General</td>
+        <td>Fix for OutOfMemory-exception with certain UNIX-based SAP ERP-kernels</td>
+      </tr>
+      <tr>
+        <td>4.0.0 [L]</td>
+        <td>2010-04-15</td>
+        <td>General</td>
+        <td>Switching to .NET 4 and VS2010 and creating of ERPConnectVS2010 folder</td>
+      </tr>
+      <tr>
+        <td>3.0.153 [L]</td>
+        <td>2010-04-15</td>
+        <td>General</td>
+        <td>Fix for an Integer Bug under Unix SAP system with certain patch levels</td>
+      </tr>
+      <tr>
+        <td>3.0.152 [L]</td>
+        <td>2010-04-08</td>
+        <td>General</td>
+        <td>Bugfix for STRING Import parameters in RFCServer</td>
+      </tr>
+      <tr>
+        <td>3.0.151 [L]</td>
+        <td>2010-04-08</td>
+        <td>General</td>
+        <td>Corrected memory deallocation for RFCServer Export parameters</td>
+      </tr>
+      <tr>
+        <td>3.0.150 [L]</td>
+        <td>2010-04-06</td>
+        <td>General</td>
+        <td>Improvement for connecting to external gateway servers (Connection Type E)</td>
+      </tr>
+      <tr>
+        <td>3.0.149 [L]</td>
+        <td>2010-03-10</td>
+        <td>General</td>
+        <td>Improved checking and error message if ERPConnect is used without a proper librfc32.dll</td>
+      </tr>
+      <tr>
+        <td>3.0.148 [L]</td>
+        <td>2010-02-16</td>
+        <td>General</td>
+        <td>Adjustment for Visual Studio 2010 RC (LINQ Designer)</td>
+      </tr>
+      <tr>
+        <td>3.0.147 [L]</td>
+        <td>2010-02-08</td>
+        <td>General</td>
+        <td>Fix für MDX queries that contain NULL values in their measure's cells</td>
+      </tr>
+      <tr>
+        <td>3.0.146 [L]</td>
+        <td>2010-02-06</td>
+        <td>General</td>
+        <td>Preparations for Visual Studio 2010</td>
+      </tr>
+      <tr>
+        <td>3.0.145 [L]</td>
+        <td>2010-02-02</td>
+        <td>General</td>
+        <td>Bugfix for RAW values when using SOAP instead of RFC</td>
+      </tr>
+      <tr>
+        <td>3.0.144 [L]</td>
+        <td>2010-02-01</td>
+        <td>General</td>
+        <td>Small improvement for multi nested export structures (e.g. SXMSADMINRESULT)</td>
+      </tr>
+      <tr>
+        <td>3.0.143 [L]</td>
+        <td>2010-01-28</td>
+        <td>General</td>
+        <td>Bugfix fpr Queries with mixed Chinese and Western characters</td>
+      </tr>
+      <tr>
+        <td>3.0.142 [L]</td>
+        <td>2010-01-20</td>
+        <td>General</td>
+        <td>Bugfix for BCD values in deep structures (e.g. in SXMB_GET_MESSAGE_LIST)</td>
+      </tr>
+      <tr>
+        <td>3.0.141 [L]</td>
+        <td>2010-01-20</td>
+        <td>General</td>
+        <td>Internal code review</td>
+      </tr>
+      <tr>
+        <td>3.0.140 [L]</td>
+        <td>2010-01-12</td>
+        <td>General</td>
+        <td>Bugfix for BWCube class when using properties with special characters in the caption value while persisting the object to XML (SaveToXML method)</td>
+      </tr>
+      <tr>
+        <td>3.0.139 [L]</td>
+        <td>2009-12-29</td>
+        <td>General</td>
+        <td>Byte[] values are handled correctly when converting an RFCTable object to a DataTable object with the usage of ToADOTable()</td>
+      </tr>
+      <tr>
+        <td>3.0.138 [L]</td>
+        <td>2009-12-18</td>
+        <td>General</td>
+        <td>Updated SAPDate2NetDate to handle "00000000" and "99999999" values</td>
+      </tr>
+      <tr>
+        <td>3.0.137 [L]</td>
+        <td>2009-12-16</td>
+        <td>General</td>
+        <td>Fix for special characters in the description texts for table columns under LINQ</td>
+      </tr>
+      <tr>
+        <td>3.0.136 [L]</td>
+        <td>2009-12-16</td>
+        <td>General</td>
+        <td>Reference to System.Web does not longer exist. So it's easier to handle ERPConnect within the SQL Server CLR</td>
+      </tr>
+      <tr>
+        <td>3.0.135 [L]</td>
+        <td>2009-12-16</td>
+        <td>General</td>
+        <td>Improvement / bugfixes for sessions handling when using SOAP instead of RFC</td>
+      </tr>
+      <tr>
+        <td>3.0.134 [L]</td>
+        <td>2009-12-15</td>
+        <td>General</td>
+        <td>Bugfix for multi-nested structures in the Imports collection, that contain only one single element within the structure</td>
+      </tr>
+      <tr>
+        <td>3.0.133 [L]</td>
+        <td>2009-12-15</td>
+        <td>General</td>
+        <td>Fix: R3Connection.CacheMetaData was not working properly in some situations.</td>
+      </tr>
+      <tr>
+        <td>3.0.132 [L]</td>
+        <td>2009-12-14</td>
+        <td>General</td>
+        <td>Fix for apostrophe characters within the column decription of an SAP table used in LINQ dialog</td>
+      </tr>
+      <tr>
+        <td>3.0.131 [L]</td>
+        <td>2009-12-14</td>
+        <td>General</td>
+        <td>Fix: Queries with obligatory parameters caused an exception when the parameter was set through a variant</td>
+      </tr>
+      <tr>
+        <td>3.0.130 [L]</td>
+        <td>2009-12-14</td>
+        <td>General</td>
+        <td>Fix for logon data that contains a ; character in the UserName property</td>
+      </tr>
+      <tr>
+        <td>3.0.129 [L]</td>
+        <td>2009-12-11</td>
+        <td>General</td>
+        <td>Automatic removal of Xml declaration when ParamValue of Table Type parameters is set to a string</td>
+      </tr>
+      <tr>
+        <td>3.0.128 [L]</td>
+        <td>2009-12-08</td>
+        <td>General</td>
+        <td>Fix for multi-nested export parameters under SOAP (no impact on RFC protocol)</td>
+      </tr>
+      <tr>
+        <td>3.0.127 [L]</td>
+        <td>2009-12-02</td>
+        <td>General</td>
+        <td>Fix for ABAP type v within a structure (multiple table types within a structure)</td>
+      </tr>
+      <tr>
+        <td>3.0.126 [L]</td>
+        <td>2009-11-23</td>
+        <td>General</td>
+        <td>Fix for Multiple Single variables in the LINQ dialogs for BW queries</td>
+      </tr>
+      <tr>
+        <td>3.0.125 [L]</td>
+        <td>2009-11-19</td>
+        <td>General</td>
+        <td>Added support for IDoc enhancements in LINQ</td>
+      </tr>
+      <tr>
+        <td>3.0.124 [L]</td>
+        <td>2009-11-13</td>
+        <td>General</td>
+        <td>Added support for all BMP Unicode Characters in Table Type Import/Export Parameters</td>
+      </tr>
+      <tr>
+        <td>3.0.123 [L]</td>
+        <td>2009-11-05</td>
+        <td>General</td>
+        <td>Fix for multi-nested import parameters under SOAP (no impact on RFC protocol)</td>
+      </tr>
+      <tr>
+        <td>3.0.122 [L]</td>
+        <td>2009-11-03</td>
+        <td>General</td>
+        <td>: Correction for XSTRING parameters within ERPConnect Pocket </td>
+      </tr>
+      <tr>
+        <td>3.0.121 [L]</td>
+        <td>2009-10-19</td>
+        <td>General</td>
+        <td>The IDoc receiver now also supports very old 3.X IDoc formats</td>
+      </tr>
+      <tr>
+        <td>3.0.120 [L]</td>
+        <td>2009-10-13</td>
+        <td>General</td>
+        <td>Fix for DATS and TIMS Export parameters with Unicode RFC Servers</td>
+      </tr>
+      <tr>
+        <td>3.0.119 [L]</td>
+        <td>2009-10-08</td>
+        <td>General</td>
+        <td>Fix for memory leak when using multi nested XML based export parameters</td>
+      </tr>
+      <tr>
+        <td>3.0.118 [L]</td>
+        <td>2009-10-08</td>
+        <td>General</td>
+        <td>Data type XSTRING does not lead to exceptions anymore when using the pocket dll (ERPConnectPocket20.dll)</td>
+      </tr>
+      <tr>
+        <td>3.0.117 [L]</td>
+        <td>2009-10-06</td>
+        <td>General</td>
+        <td>Fix: BWCube.RefreshMetaData didn't refresh the variables collection properly</td>
+      </tr>
+      <tr>
+        <td>3.0.116 [L]</td>
+        <td>2009-10-05</td>
+        <td>General</td>
+        <td>New Method Transaction.SetCustomFunctionName(...) for customers who want to implement their own transaction RFCs</td>
+      </tr>
+      <tr>
+        <td>3.0.115 [L]</td>
+        <td>2009-10-05</td>
+        <td>General</td>
+        <td>RFCFunction with SOAP: Fix for import / export values that contain XML escape sequences (e.g. &amp;amp;)</td>
+      </tr>
+      <tr>
+        <td>3.0.114 [L]</td>
+        <td>2009-09-09</td>
+        <td>General</td>
+        <td>BWCube.RefreshMetaData crashed under some BW releases</td>
+      </tr>
+      <tr>
+        <td>3.0.113 [L]</td>
+        <td>2009-08-30</td>
+        <td>General</td>
+        <td>Correction for for AutoCloseConnection property of LINQ context, which did not work properly in some cases</td>
+      </tr>
+      <tr>
+        <td>3.0.112 [L]</td>
+        <td>2009-08-27</td>
+        <td>General</td>
+        <td>Additional properties for Table LINQ object: Description Text in designer item and multibyte / non-unicode support</td>
+      </tr>
+      <tr>
+        <td>3.0.111 [L]</td>
+        <td>2009-08-19</td>
+        <td>General</td>
+        <td>Property AutoCloseConnection added to the LINQ context class, which can be used to avoid automatic closing of the SAP connection</td>
+      </tr>
+      <tr>
+        <td>3.0.110 [L]</td>
+        <td>2009-08-17</td>
+        <td>General</td>
+        <td>Improvement in behaviour for multiple LINQ queries with multiple WHERE statements</td>
+      </tr>
+      <tr>
+        <td>3.0.109 [L]</td>
+        <td>2009-08-13</td>
+        <td>General</td>
+        <td>Fix for SSO tickets in certain CRM systems</td>
+      </tr>
+      <tr>
+        <td>3.0.108 [L]</td>
+        <td>2009-07-23</td>
+        <td>General</td>
+        <td>Added SegmentType and GRP_OCCMAX (as MaxOccur) for class IdocSegment; Changes also to RFCConnection (InternalCreateIdoc)</td>
+      </tr>
+      <tr>
+        <td>3.0.107 [L]</td>
+        <td>2009-07-16</td>
+        <td>General</td>
+        <td>Idoc-MaxOccur flag was not set correctly when saving and loading XML schemas</td>
+      </tr>
+      <tr>
+        <td>3.0.106 [L]</td>
+        <td>2009-07-03</td>
+        <td>General</td>
+        <td>Better encoding for transaction IDs when using SAP XI / PI</td>
+      </tr>
+      <tr>
+        <td>3.0.105 [L]</td>
+        <td>2009-07-02</td>
+        <td>General</td>
+        <td>Transaction ID is better readable (e.g. when sending IDocs)</td>
+      </tr>
+      <tr>
+        <td>3.0.104 [L]</td>
+        <td>2009-06-08</td>
+        <td>General</td>
+        <td>Internal Fix (Detailed debugging for MDX execution)</td>
+      </tr>
+      <tr>
+        <td>3.0.103 [L]</td>
+        <td>2009-06-02</td>
+        <td>General</td>
+        <td>Fix for codepage conversion for "ISO-8859-5" characters (e.g.Croatian)</td>
+      </tr>
+      <tr>
+        <td>3.0.102 [L]</td>
+        <td>2009-05-29</td>
+        <td>General</td>
+        <td>Fix for crash when executing RFCs with internal tables within an export structure</td>
+      </tr>
+      <tr>
+        <td>3.0.101 [L]</td>
+        <td>2009-05-19</td>
+        <td>General</td>
+        <td>Additional function for inverted date value in the ConversionUtils class</td>
+      </tr>
+      <tr>
+        <td>3.0.100 [L]</td>
+        <td>2009-05-04</td>
+        <td>General</td>
+        <td>Workaround for 1 byte data loss resulting from incorrect lengths of table columns (datatype raw) in Unicode environments</td>
+      </tr>
+      <tr>
+        <td>3.0.99 [L]</td>
+        <td>2009-04-17</td>
+        <td>General</td>
+        <td>Fix for LINQ to SAP code generation with complex table elements (IndexOutOfRange exception during execution)</td>
+      </tr>
+      <tr>
+        <td>3.0.98 [L]</td>
+        <td>2009-04-16</td>
+        <td>General</td>
+        <td>Fix for ToTable() function when RFCParameter class is used with nested XML tables</td>
+      </tr>
+      <tr>
+        <td>3.0.97 [L]</td>
+        <td>2009-03-31</td>
+        <td>General</td>
+        <td>Internal Performance Improvement for Data Binding of RFCTable objects</td>
+      </tr>
+      <tr>
+        <td>3.0.96 [L]</td>
+        <td>2009-03-24</td>
+        <td>General</td>
+        <td>SaveToXML(), LoadFromXML() and LoadFromXMLString() now support STRING and XSTRING</td>
+      </tr>
+      <tr>
+        <td>3.0.95 [L]</td>
+        <td>2009-03-15</td>
+        <td>General</td>
+        <td>Fix for LINQ to SAP: Using the LINQ dialogs under XP with Silver Theme caused strange behaviour</td>
+      </tr>
+      <tr>
+        <td>3.0.94 [L]</td>
+        <td>2009-03-12</td>
+        <td>General</td>
+        <td>The property SID of the R3Connection class is filled always, even if a connection string is used for logon</td>
+      </tr>
+      <tr>
+        <td>3.0.93 [L]</td>
+        <td>2009-03-05</td>
+        <td>General</td>
+        <td>Fix: SaveToXML() and LoadFromXML() didn't work properly for function with multi-nested import parameters</td>
+      </tr>
+      <tr>
+        <td>3.0.92 [L]</td>
+        <td>2009-03-05</td>
+        <td>General</td>
+        <td>Fix for BCD values with small length and no decimals on Chinese systems</td>
+      </tr>
+      <tr>
+        <td>3.0.91 [L]</td>
+        <td>2009-03-02</td>
+        <td>General</td>
+        <td>LINQ to SAP: Modifier Public / Internal for context class</td>
+      </tr>
+      <tr>
+        <td>3.0.90 [L]</td>
+        <td>2009-03-02</td>
+        <td>General</td>
+        <td>Fix for LINQ to SAP with RFC function: Offset value is provided during code generation </td>
+      </tr>
+      <tr>
+        <td>3.0.89 [L]</td>
+        <td>2009-02-24</td>
+        <td>General</td>
+        <td>Fix for LINQ to IDoc (crash in designer with certain description texts)</td>
+      </tr>
+      <tr>
+        <td>3.0.88 [L]</td>
+        <td>2009-02-20</td>
+        <td>General</td>
+        <td>Logon crashed with passwords containing ; or , characters </td>
+      </tr>
+      <tr>
+        <td>3.0.87 [L]</td>
+        <td>2009-02-17</td>
+        <td>General</td>
+        <td>Fix for LINQ to IDoc dialog (when a segment's name is a key word of the programming language)</td>
+      </tr>
+      <tr>
+        <td>3.0.86 [L]</td>
+        <td>2009-02-16</td>
+        <td>General</td>
+        <td>Small fix for RFCServer class and tables (crash when defining a table when no table is provided by SAP)</td>
+      </tr>
+      <tr>
+        <td>3.0.85 [L]</td>
+        <td>2009-02-05</td>
+        <td>General</td>
+        <td>Fix for structure elements type decimal with more than 11 decimals digits (index must not be zero length exception)</td>
+      </tr>
+      <tr>
+        <td>3.0.84 [L]</td>
+        <td>2009-02-04</td>
+        <td>General</td>
+        <td>NULL values in IDoc fields are now generating an ERPException </td>
+      </tr>
+      <tr>
+        <td>3.0.83 [L]</td>
+        <td>2009-01-30</td>
+        <td>General</td>
+        <td>Fix for BWCube: method SaveToXML() crashed with hierarchies that contain a &amp; character</td>
+      </tr>
+      <tr>
+        <td>3.0.82 [L]</td>
+        <td>2009-01-29</td>
+        <td>General</td>
+        <td>Fix for LINQ: Code generation produced syntax error with parameters that contain a slash in the name</td>
+      </tr>
+      <tr>
+        <td>3.0.81 [L]</td>
+        <td>2009-01-18</td>
+        <td>General</td>
+        <td>Fix for possible memory leak</td>
+      </tr>
+      <tr>
+        <td>3.0.80 [L]</td>
+        <td>2009-01-09</td>
+        <td>General</td>
+        <td>Fix for queries: Units are sometimes not properly processed</td>
+      </tr>
+      <tr>
+        <td>3.0.79 [L]</td>
+        <td>2009-01-05</td>
+        <td>General</td>
+        <td>ERPConnectPocket will always throw ERPException instead of regular Exceptions</td>
+      </tr>
+      <tr>
+        <td>3.0.78 [L]</td>
+        <td>2008-12-22</td>
+        <td>General</td>
+        <td>Fix for binding LINQ sources to controls: No other columns than the original source columns will appear in control</td>
+      </tr>
+      <tr>
+        <td>3.0.77 [L]</td>
+        <td>2008-12-19</td>
+        <td>General</td>
+        <td>CreateEmptyIdoc() failed on some systems when using a long IDoc name</td>
+      </tr>
+      <tr>
+        <td>3.0.76 [L]</td>
+        <td>2008-12-19</td>
+        <td>General</td>
+        <td>Fix for queries with negative integer columns</td>
+      </tr>
+      <tr>
+        <td>3.0.75 [L]</td>
+        <td>2008-12-12</td>
+        <td>General</td>
+        <td>LINQ to SAP setup now supports Italien version of Visual Studio</td>
+      </tr>
+      <tr>
+        <td>3.0.74 [L]</td>
+        <td>2008-12-07</td>
+        <td>General</td>
+        <td>Improvement for loading hierarchies with BWLoader class</td>
+      </tr>
+      <tr>
+        <td>3.0.73 [L]</td>
+        <td>2008-12-05</td>
+        <td>General</td>
+        <td>Fix for queries with more than one list ID</td>
+      </tr>
+      <tr>
+        <td>3.0.72 [L]</td>
+        <td>2008-12-04</td>
+        <td>General</td>
+        <td>The ISerializable interface is added to the ERPException class (in addition to the Serializable attribute)</td>
+      </tr>
+      <tr>
+        <td>3.0.71 [L]</td>
+        <td>2008-11-25</td>
+        <td>General</td>
+        <td>ReuseClass flag can be set in LINQ context to enable reuse of generated classes (e.g. two functions that have the same table parameter now can share one single structure class)</td>
+      </tr>
+      <tr>
+        <td>3.0.70 [L]</td>
+        <td>2008-11-25</td>
+        <td>General</td>
+        <td>Improvement for error messages when conversion errors occur while executing a query</td>
+      </tr>
+      <tr>
+        <td>3.0.69 [L]</td>
+        <td>2008-11-25</td>
+        <td>General</td>
+        <td>Improvement for RFCServerException handling when throwing an exception during the IncomingIDoc event</td>
+      </tr>
+      <tr>
+        <td>3.0.68 [L]</td>
+        <td>2008-11-24</td>
+        <td>General</td>
+        <td>New method RefreshMetaData() implemented for BWCube class</td>
+      </tr>
+      <tr>
+        <td>3.0.67 [L]</td>
+        <td>2008-11-24</td>
+        <td>General</td>
+        <td>Fix: Double columns in MDX resultset when two dimension are to be extracted with properties of the same name</td>
+      </tr>
+      <tr>
+        <td>3.0.66 [L]</td>
+        <td>2008-11-07</td>
+        <td>General</td>
+        <td>Fix for LINQToERP setup on 64 bit</td>
+      </tr>
+      <tr>
+        <td>3.0.65 [L]</td>
+        <td>2008-10-30</td>
+        <td>General</td>
+        <td>Bugfix for logging function modules that contain slashes in their name</td>
+      </tr>
+      <tr>
+        <td>3.0.64 [L]</td>
+        <td>2008-10-27</td>
+        <td>General</td>
+        <td>Bugfix for BW Loader when using Continuation Flag in wide datasets</td>
+      </tr>
+      <tr>
+        <td>3.0.63 [L]</td>
+        <td>2008-10-24</td>
+        <td>General</td>
+        <td>Automatic name conversion in LINQ when dropping two functions into the same context with structures that are named equally</td>
+      </tr>
+      <tr>
+        <td>3.0.62 [L]</td>
+        <td>2008-10-23</td>
+        <td>General</td>
+        <td>German special characters (Umlaute) are now correctly converted within nested structures</td>
+      </tr>
+      <tr>
+        <td>3.0.61 [L]</td>
+        <td>2008-10-02</td>
+        <td>General</td>
+        <td>Fix for SAP codepage 300 and ReadTable class</td>
+      </tr>
+      <tr>
+        <td>3.0.60 [L]</td>
+        <td>2008-10-02</td>
+        <td>General</td>
+        <td>Fix for structures under LINQ AddOn</td>
+      </tr>
+      <tr>
+        <td>3.0.59 [L]</td>
+        <td>2008-09-23</td>
+        <td>General</td>
+        <td>Correction for BWCube extraction with MultiSingle variables with default values</td>
+      </tr>
+      <tr>
+        <td>3.0.58 [L]</td>
+        <td>2008-09-22</td>
+        <td>General</td>
+        <td>Correct date and time conversion when using SOAP XML in mutlinested parameters</td>
+      </tr>
+      <tr>
+        <td>3.0.57 [L]</td>
+        <td>2008-09-16</td>
+        <td>General</td>
+        <td>Fix: SaveToXML and LoadFromXML crashed with Byte[] parameters</td>
+      </tr>
+      <tr>
+        <td>3.0.56 [L]</td>
+        <td>2008-09-15</td>
+        <td>General</td>
+        <td>BWCube is now supporting multiple single values</td>
+      </tr>
+      <tr>
+        <td>3.0.55 [L]</td>
+        <td>2008-09-11</td>
+        <td>General</td>
+        <td>Fix for very big decimals like 111111111111111.111111111111111</td>
+      </tr>
+      <tr>
+        <td>3.0.54 [L]</td>
+        <td>2008-09-04</td>
+        <td>General</td>
+        <td>LoadBalancing is now supported by the LINQ classes / dialogs</td>
+      </tr>
+      <tr>
+        <td>3.0.53 [L]</td>
+        <td>2008-09-02</td>
+        <td>General</td>
+        <td>Fix for crash of converting decimal data from SAP to .NET on Chinese systems</td>
+      </tr>
+      <tr>
+        <td>3.0.52 [L]</td>
+        <td>2008-08-30</td>
+        <td>General</td>
+        <td>Fix for nested structures (table types) in changing parameters</td>
+      </tr>
+      <tr>
+        <td>3.0.51 [L]</td>
+        <td>2008-08-29</td>
+        <td>General</td>
+        <td>AImproved logging messages for BWLoader class</td>
+      </tr>
+      <tr>
+        <td>3.0.50 [L]</td>
+        <td>2008-08-26</td>
+        <td>General</td>
+        <td>Another fix for Chinese BCD data</td>
+      </tr>
+      <tr>
+        <td>3.0.49 [L]</td>
+        <td>2008-08-26</td>
+        <td>General</td>
+        <td>Fix for crash with BCD data types on windows with chinese language settings</td>
+      </tr>
+      <tr>
+        <td>3.0.48 [L]</td>
+        <td>2008-08-26</td>
+        <td>General</td>
+        <td>Fix for uploading data to more than one single BI InfoPackage at the same time (BWLoader class)</td>
+      </tr>
+      <tr>
+        <td>3.0.47 [L]</td>
+        <td>2008-08-20</td>
+        <td>General</td>
+        <td>Improved handling for rfc function modules default values</td>
+      </tr>
+      <tr>
+        <td>3.0.46 [L]</td>
+        <td>2008-08-20</td>
+        <td>General</td>
+        <td>Fix: Tables that don't have multinested structures but are used as Import / Export parameters stay empty after the call</td>
+      </tr>
+      <tr>
+        <td>3.0.45 [L]</td>
+        <td>2008-08-20</td>
+        <td>General</td>
+        <td>Fix for Crash when reading DEBMAS IDoc shemas together with an IDoc XML data file</td>
+      </tr>
+      <tr>
+        <td>3.0.44 [L]</td>
+        <td>2008-08-19</td>
+        <td>General</td>
+        <td>Fix for receiving AND sending unicode data within the same thread (e.g. when calling a client function within the IncomingIDoc event)</td>
+      </tr>
+      <tr>
+        <td>3.0.43 [L]</td>
+        <td>2008-08-08</td>
+        <td>General</td>
+        <td>LINQ resultsets can be easily bound to DatagGridView object directly; SELECT statements can be executed without a WHERE statement</td>
+      </tr>
+      <tr>
+        <td>3.0.42 [L]</td>
+        <td>2008-07-30</td>
+        <td>General</td>
+        <td>Corrected error message in ERPConnectPocket.dll when trying to log on with a wrong password</td>
+      </tr>
+      <tr>
+        <td>3.0.41 [L]</td>
+        <td>2008-07-28</td>
+        <td>General</td>
+        <td>Visual Studio crashed under Vista when using ERPConnect in a Visual Studio related PlugIn (that is based on VS SDK)</td>
+      </tr>
+      <tr>
+        <td>3.0.40 [L]</td>
+        <td>2008-07-24</td>
+        <td>General</td>
+        <td>R3Connection.SetEncoding() didn't work for Kyrillian codepage 1251</td>
+      </tr>
+      <tr>
+        <td>3.0.39 [L]</td>
+        <td>2008-07-22</td>
+        <td>General</td>
+        <td>RFCServer.Ping() established to force the component to check, if the RFCServer is available</td>
+      </tr>
+      <tr>
+        <td>3.0.38 [L]</td>
+        <td>2008-07-21</td>
+        <td>General</td>
+        <td>Bugfix for using floating point columns in a LINQ table</td>
+      </tr>
+      <tr>
+        <td>3.0.37 [L]</td>
+        <td>2008-07-21</td>
+        <td>General</td>
+        <td>Bugfix: Using RFC server together with an RFC client in the same process on a unicode SAP system may lead to conversion errors</td>
+      </tr>
+      <tr>
+        <td>3.0.36 [L]</td>
+        <td>2008-07-20</td>
+        <td>General</td>
+        <td>Conversion error in LINQ tables fixed for negative decimal numbers</td>
+      </tr>
+      <tr>
+        <td>3.0.35 [L]</td>
+        <td>2008-07-17</td>
+        <td>General</td>
+        <td>New IDoc function SaveIdocSchema() to create IDoc schema files by program, not only by IDoc Schema Generator</td>
+      </tr>
+      <tr>
+        <td>3.0.34 [L]</td>
+        <td>2008-07-15</td>
+        <td>General</td>
+        <td>LINQ fixes: InList() extension method won't crash anymore, LINQ enabled RFC functions won't produce a syntax error under VB.NET anymore</td>
+      </tr>
+      <tr>
+        <td>3.0.31 [L]</td>
+        <td>2008-06-27</td>
+        <td>General</td>
+        <td>LINQ Tables can be used even if there are slahes (namespaces) included in the table element's name</td>
+      </tr>
+      <tr>
+        <td>3.0.30 [L]</td>
+        <td>2008-06-24</td>
+        <td>General</td>
+        <td>Bugfix for non-remote-enabled function with meta data with length = 0 on unicode systems</td>
+      </tr>
+      <tr>
+        <td>3.0.29 [L]</td>
+        <td>2008-06-24</td>
+        <td>General</td>
+        <td>Bugfix for non-remote-enabled function with meta data with length = 0 (e.g. AIPA_READ_VALUES_SINGLE)</td>
+      </tr>
+      <tr>
+        <td>3.0.28 [L]</td>
+        <td>2008-06-24</td>
+        <td>General</td>
+        <td>Bugfix for non-remote-enabled functions that doesn't consist of correct meta data (e.g. AIPA_READ_VALUES_SINGLE). Exception: TABLE_NOT_ACTIVE</td>
+      </tr>
+      <tr>
+        <td>3.0.27 [L]</td>
+        <td>2008-06-23</td>
+        <td>General</td>
+        <td>Introduced R3Connection.AllowStartProgram to enable SAP to start an application via RFC (Required for CAD-Dektop-Integration)</td>
+      </tr>
+      <tr>
+        <td>3.0.26 [L]</td>
+        <td>2008-06-23</td>
+        <td>General</td>
+        <td>Bugfix in SSO process when not using a connection string</td>
+      </tr>
+      <tr>
+        <td>3.0.25 [L]</td>
+        <td>2008-06-23</td>
+        <td>General</td>
+        <td>Bugfix with data type INT in RFC server structures</td>
+      </tr>
+      <tr>
+        <td>3.0.24 [L]</td>
+        <td>2008-06-23</td>
+        <td>General</td>
+        <td>RFCServer.CallbakServer introduced to enable RFCServer callback during a client call</td>
+      </tr>
+      <tr>
+        <td>3.0.18 [L]</td>
+        <td>2008-04-28</td>
+        <td>General</td>
+        <td>Delimeter property for ReadTable class (for UTF7 Japanese extractions)</td>
+      </tr>
+      <tr>
+        <td>3.0.17 [L]</td>
+        <td>2008-04-22</td>
+        <td>General</td>
+        <td>Small improvements for 64-Bit usage</td>
+      </tr>
+      <tr>
+        <td>3.0.16 [L]</td>
+        <td>2008-04-19</td>
+        <td>General</td>
+        <td>On some BI 7.0 systems the BWLoader class crashes because of unicode &lt;-&gt; non-unicode conversion errors in RequestID</td>
+      </tr>
+      <tr>
+        <td>3.0.15 [L]</td>
+        <td>2008-03-27</td>
+        <td>General</td>
+        <td>BugFix: Several Improvements for LINQ-Provider</td>
+      </tr>
+      <tr>
+        <td>3.0.14 [L]</td>
+        <td>2008-03-26</td>
+        <td>General</td>
+        <td>Bugfix: Crash when loading or saving RFCFunction objects to xml that contain elements (Imports, Exports, Tables) with slashes in it</td>
+      </tr>
+      <tr>
+        <td>3.0.13 [L]</td>
+        <td>2008-03-25</td>
+        <td>General</td>
+        <td>Bugfix: System Exception with ReadTable.RetrieveAllFieldsOfTable() function under rel. 4.6c</td>
+      </tr>
+      <tr>
+        <td>3.0.12 [L]</td>
+        <td>2008-03-23</td>
+        <td>General</td>
+        <td>Bugfix: Wrong mapping between query fields and result columns when the query contains a currency field / column</td>
+      </tr>
+      <tr>
+        <td>3.0.11 [L]</td>
+        <td>2008-03-21</td>
+        <td>General</td>
+        <td>Several Improvements and BugFixes for LINQ (ERPConnect35 only)</td>
+      </tr>
+      <tr>
+        <td>3.0.10 [L]</td>
+        <td>2008-03-20</td>
+        <td>General</td>
+        <td>Bug: Sometimes Integers in Rows of tables are not transferred correctly</td>
+      </tr>
+      <tr>
+        <td>3.0.9 [L]</td>
+        <td>2008-03-17</td>
+        <td>General</td>
+        <td>Strange behaviour with very large structures on SAP systems that a run on old Unix hardware</td>
+      </tr>
+      <tr>
+        <td>3.0.8 [L]</td>
+        <td>2008-03-14</td>
+        <td>General</td>
+        <td>Exception when using IDoc segments with fields that contain /</td>
+      </tr>
+      <tr>
+        <td>3.0.7 [L]</td>
+        <td>2008-03-12</td>
+        <td>General</td>
+        <td>Corrections in LINQ Designer</td>
+      </tr>
+      <tr>
+        <td>3.0.6 [L]</td>
+        <td>2008-03-10</td>
+        <td>General</td>
+        <td>Problems with dynamic ABAP code on unicode systems (ECC 6.0)</td>
+      </tr>
+      <tr>
+        <td>3.0.5 [L]</td>
+        <td>2008-02-28</td>
+        <td>General</td>
+        <td>Data type STRING now supported in structures</td>
+      </tr>
+      <tr>
+        <td>3.0.4 [L]</td>
+        <td>2008-02-27</td>
+        <td>General</td>
+        <td>LogDir function in RFCServer</td>
+      </tr>
+      <tr>
+        <td>3.0.3 [L]</td>
+        <td>2008-02-24</td>
+        <td>General</td>
+        <td>Corrections when using STRING and XSTRING parameters in RFC server projects</td>
+      </tr>
+      <tr>
+        <td>3.0.2 [L]</td>
+        <td>2008-02-22</td>
+        <td>General</td>
+        <td>Corrections when using STRING and XSTRING parameters</td>
+      </tr>
+      <tr>
+        <td>3.0.1 [L]</td>
+        <td>2008-02-12</td>
+        <td>General</td>
+        <td>Wrong resultset when call ReadTable class together with Primary Key Packaging and Z-function module</td>
+      </tr>
+      <tr>
+        <td>3.0.0 [L]</td>
+        <td>2008-02-11</td>
+        <td>General</td>
+        <td>New LINQ-class integrated in ERPConnect35.dll</td>
+      </tr>
+      <tr>
+        <td>1.6.57 [L]</td>
+        <td>2008-02-02</td>
+        <td>General</td>
+        <td>Problems with length of FLTP fields in ReadTable class when using a custom function for extraction</td>
+      </tr>
+      <tr>
+        <td>1.6.56 [L]</td>
+        <td>2008-01-31</td>
+        <td>General</td>
+        <td>New constructor for ERPException class (without parameters)</td>
+      </tr>
+      <tr>
+        <td>1.6.55 [L]</td>
+        <td>2008-01-31</td>
+        <td>General</td>
+        <td>ERPException class is now serializable (for customers who use ERPConnect in a remoting environment)</td>
+      </tr>
+      <tr>
+        <td>1.6.54 [L]</td>
+        <td>2008-01-29</td>
+        <td>General</td>
+        <td>Bug Fix: Strange characters when storing IDocs with eastern characters to disk</td>
+      </tr>
+      <tr>
+        <td>1.6.53 [L]</td>
+        <td>2008-01-14</td>
+        <td>General</td>
+        <td>Bug Fix: Crash when template saved to XML with function module parameter contains ?</td>
+      </tr>
+      <tr>
+        <td>1.6.50 [L]</td>
+        <td>2008-01-08</td>
+        <td>General</td>
+        <td>Complete project is now localized</td>
+      </tr>
+      <tr>
+        <td>1.6.49 [L]</td>
+        <td>2007-11-29</td>
+        <td>General</td>
+        <td>Strange IDoc characters in unicode IDocs with SendAndWait()</td>
+      </tr>
+      <tr>
+        <td>1.6.48 [L]</td>
+        <td>2007-11-29</td>
+        <td>General</td>
+        <td>IDOC_NOT_SAVED was thrown when using IDoc.SendAndWait() with ECC 6.0 / Unicode</td>
+      </tr>
+      <tr>
+        <td>1.6.47 [L]</td>
+        <td>2007-11-22</td>
+        <td>General</td>
+        <td>Removed Application.DoEvents() in CreateFunction() method</td>
+      </tr>
+      <tr>
+        <td>1.6.46 [L]</td>
+        <td>2007-11-12</td>
+        <td>General</td>
+        <td>RFCServer connection broke down when connection to other server within the same process could not be established</td>
+      </tr>
+      <tr>
+        <td>1.6.45 [L]</td>
+        <td>2007-11-09</td>
+        <td>General</td>
+        <td>Avoid InternalException call when RFCServer is stopped when using RFCServer.Stop()</td>
+      </tr>
+      <tr>
+        <td>1.6.44 [L]</td>
+        <td>2007-11-09</td>
+        <td>General</td>
+        <td>Avoid HashTable exception when SAP sends inconsistant IDocs</td>
+      </tr>
+      <tr>
+        <td>1.6.43 [L]</td>
+        <td>2007-11-02</td>
+        <td>General</td>
+        <td>Transaction classes converted field values to upper case when it should not do</td>
+      </tr>
+      <tr>
+        <td>1.6.42 [L]</td>
+        <td>2007-10-11</td>
+        <td>General</td>
+        <td>Another fix for MDXExecuter flat data and BI 7.0</td>
+      </tr>
+      <tr>
+        <td>1.6.41 [L]</td>
+        <td>2007-09-25</td>
+        <td>General</td>
+        <td>MDXExecuter fixed BI 7.0 bug (Flat Data)</td>
+      </tr>
+      <tr>
+        <td>1.6.40 [L]</td>
+        <td>2007-09-25</td>
+        <td>General</td>
+        <td>E_HANDLE ComException fixed. Occured when trying to use XML strings as import parameter with Length = 0</td>
+      </tr>
+      <tr>
+        <td>1.6.39 [L]</td>
+        <td>2007-09-10</td>
+        <td>General</td>
+        <td>Memory leaked fixed with scalar parameters</td>
+      </tr>
+      <tr>
+        <td>1.6.38 [L]</td>
+        <td>2007-08-25</td>
+        <td>General</td>
+        <td>ReadTable class fix: Leading space was automatically deleted from table cells. This may cause duplicated primary keys.</td>
+      </tr>
+      <tr>
+        <td>1.6.37 [L]</td>
+        <td>2007-08-25</td>
+        <td>General</td>
+        <td>Packaging for BW Queries is now available (PackageSize &amp; IncomingPackage event)</td>
+      </tr>
+      <tr>
+        <td>1.6.36 [L]</td>
+        <td>2007-08-20</td>
+        <td>General</td>
+        <td>ArgumentOutOfRangeException in case of some RETURN structures (Problem with fixed length)</td>
+      </tr>
+      <tr>
+        <td>1.6.35 [L]</td>
+        <td>2007-08-20</td>
+        <td>General</td>
+        <td>Error in MDXExecuter when using empty values with UseFormattedValues property set to true</td>
+      </tr>
+      <tr>
+        <td>1.6.34 [L]</td>
+        <td>2007-08-19</td>
+        <td>General</td>
+        <td>Bugfix for using RFC Server functions together with import structures (null reference exception, e.g. function module SX_OBJECT_RECEIVE)</td>
+      </tr>
+      <tr>
+        <td>1.6.33 [L]</td>
+        <td>2007-08-16</td>
+        <td>General</td>
+        <td>BWCube and MDXExecuter class now support formatted measures (use property UseFormattedValue to turn this feature on)</td>
+      </tr>
+      <tr>
+        <td>1.6.32 [L]</td>
+        <td>2007-07-26</td>
+        <td>General</td>
+        <td>Fix: Primary Key Packaging crashed when a language key was contained in primary key columns</td>
+      </tr>
+      <tr>
+        <td>1.6.31 [L]</td>
+        <td>2007-07-23</td>
+        <td>General</td>
+        <td>Idoc.SaveToXML and Idoc.LoadFromXML now support TextReader / TextWriter objects not only file names</td>
+      </tr>
+      <tr>
+        <td>1.6.30 [L]</td>
+        <td>2007-07-11</td>
+        <td>General</td>
+        <td>It is now possible to extract BWQueries without (!) key figures in it.</td>
+      </tr>
+      <tr>
+        <td>1.6.29 [L]</td>
+        <td>2007-07-10</td>
+        <td>General</td>
+        <td>PrimaryKeyPackaging in ReadTable class is available for table with more than 6 primary key columns</td>
+      </tr>
+      <tr>
+        <td>1.6.28 [L]</td>
+        <td>2007-07-08</td>
+        <td>General</td>
+        <td>Codepage bug fixed (strange characters in idoc file when having a client connection open at the same time</td>
+      </tr>
+      <tr>
+        <td>1.6.27 [L]</td>
+        <td>2007-07-08</td>
+        <td>General</td>
+        <td>Packaging with primary key available in ReadTable class</td>
+      </tr>
+      <tr>
+        <td>1.6.26 [L]</td>
+        <td>2007-07-06</td>
+        <td>General</td>
+        <td>New Function BWCube.Variables[X].GetMembers() to obtain valid values for a BW variable</td>
+      </tr>
+      <tr>
+        <td>1.6.25 [L]</td>
+        <td>2007-06-26</td>
+        <td>General</td>
+        <td>Very, very large tables (&gt;70.000 rows) caused crash in 64 Bit environment</td>
+      </tr>
+      <tr>
+        <td>1.6.24 [L]</td>
+        <td>2007-06-24</td>
+        <td>General</td>
+        <td>Added looging functions (R3Connection.LogDir and R3Connection.Log())</td>
+      </tr>
+      <tr>
+        <td>1.6.23 [L]</td>
+        <td>2007-06-24</td>
+        <td>General</td>
+        <td>Incorrect format when saving an IDoc to XML that has segments that start with blanks</td>
+      </tr>
+      <tr>
+        <td>1.6.22 [L]</td>
+        <td>2007-05-25</td>
+        <td>General</td>
+        <td>Transaction class was unusable with SAP ECC 600 or higher and unicode</td>
+      </tr>
+      <tr>
+        <td>1.6.21 [L]</td>
+        <td>2007-05-23</td>
+        <td>General</td>
+        <td>Process-Deadlock when trying to load XML idoc files without having loaded a XSD file before</td>
+      </tr>
+      <tr>
+        <td>1.6.20 [L]</td>
+        <td>2007-05-22</td>
+        <td>General</td>
+        <td>InfoPackage triggering failed on unicode systems with NotifyOnly property set to true</td>
+      </tr>
+      <tr>
+        <td>1.6.19 [L]</td>
+        <td>2007-05-16</td>
+        <td>General</td>
+        <td>Bug in decimal digit handling within nested XML structure while calling ToTable() method</td>
+      </tr>
+      <tr>
+        <td>1.6.18 [L]</td>
+        <td>2007-05-16</td>
+        <td>General</td>
+        <td>New Constructor in RFCServer class (Connection string)</td>
+      </tr>
+      <tr>
+        <td>1.6.17 [L]</td>
+        <td>2007-05-11</td>
+        <td>General</td>
+        <td>XML-Handling in nested structures when structures are empty failed with XMLException</td>
+      </tr>
+      <tr>
+        <td>1.6.16 [L]</td>
+        <td>2007-05-11</td>
+        <td>General</td>
+        <td>XML-Handling in nested structures</td>
+      </tr>
+      <tr>
+        <td>1.6.15 [L]</td>
+        <td>2007-04-29</td>
+        <td>General</td>
+        <td>Problems when trying to upload negative decimal data to BW via InfoPackage</td>
+      </tr>
+      <tr>
+        <td>1.6.14 [L]</td>
+        <td>2007-04-24</td>
+        <td>General</td>
+        <td>Fix: StackOverflow-Exception when converting BCDRawBytes to Decimal in very large structures</td>
+      </tr>
+      <tr>
+        <td>1.6.13 [L]</td>
+        <td>2007-04-13</td>
+        <td>General</td>
+        <td>Problems with CreateBAPI method on SAP Release ECC 600 and Unicode (case-sensitive method name spelling)</td>
+      </tr>
+      <tr>
+        <td>1.6.12 [L]</td>
+        <td>2007-04-04</td>
+        <td>General</td>
+        <td>Problem with large internal tables on x64 os</td>
+      </tr>
+      <tr>
+        <td>1.6.11 [L]</td>
+        <td>2007-04-03</td>
+        <td>General</td>
+        <td>"Returns" property of Transaction class  not accessible due to error in obfuscator tool</td>
+      </tr>
+      <tr>
+        <td>1.4.10 [L]</td>
+        <td>2005-10-21</td>
+        <td>General</td>
+        <td>Fix: Idoc.SaveXMLData generated buggy XML-File which could not be processed via LoadXMLData</td>
+      </tr>
+    </tbody>
+  </table>
+</html>
