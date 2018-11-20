@@ -1,0 +1,24 @@
+<html style='font-family: "segoe ui","helvetica neue", arial, helvetica, sans-serif;'><style>h1, h2, h3, h4, h5 {margin:0;padding:0;margin-top:24px;font-weight:600;} p {margin:0;padding:0;margin-top: 4px;opacity:0.9;}</style><body><h1>BOARD Connector 3.0</h1>
+<p>This release includes major changes related to the communication between BOARD Connector Server and BOARD Connector Designer / BOARD. Transport security and access control has been improved. The file format and folder structure for persisting extractions, sources, logs, etc. has undergone major changes as well.
+The server uses multiple proceses now instead of one, which makes it more robust and improves parallelization.</p>
+<h2>Communication with BOARD Connector Designer</h2>
+<ul>
+<li>Transport security has been improved - Kerberos and TLS 1.1/1.2 are supported now</li>
+<li>Active Directory single-sign on is supported</li>
+<li>Active Directory logon uses Kerberos instead of LDAP (breaking change)</li>
+</ul>
+<h2>Communication with BOARD</h2>
+<ul>
+<li>TCP keep-alives avoid connection timeouts with long quiet periods and BOARD cloud instances</li>
+<li>X.509 certificate can be set directly in BOARD Connector</li>
+<li>HTTP access restrictions are no longer available - please use Windows firewall or other firewall solutions to implement these rules</li>
+</ul>
+<h2>Access Control</h2>
+<ul>
+<li>Individual server permission for custom users</li>
+<li>Individual read/write permission for extractions and sources</li>
+<li>Support for Active Directory groups (breaking change: AD users can no longer be member of an custom user group)</li>
+</ul>
+<h2>Files/Folders/Persistence</h2>
+<p>The config directory uses a new structure for files and folders. Existing configurations (extractions, sources, etc.) can be converted to the new format during setup, or manually by running ConfigConverter.exe from the program directory.</p>
+</body></html>
