@@ -1,0 +1,17 @@
+<html style='font-family: "segoe ui","helvetica neue", arial, helvetica, sans-serif;'><style>h1, h2, h3, h4, h5 {margin:0;padding:0;margin-top:24px;font-weight:600;} p {margin:0;padding:0;margin-top: 4px;opacity:0.9;}</style><body><h1>Xtract Universal 3.0</h1>
+<p>This release includes major changes related to the communication between Xtract Universal Server and Xtract Universal Designer. Transport security and access control has been improved. The file format and folder structure for persisting extractions, sources, destinations, logs, etc. has undergone major changes as well.</p>
+<h2>Designer/Server Communication</h2>
+<ul>
+<li>Transport security has been improved - Kerberos and TLS 1.1/1.2 are supported now</li>
+<li>Active Directory single-sign on is supported</li>
+<li>Active Directory logon uses Kerberos instead of LDAP (breaking change)</li>
+</ul>
+<h2>Access Control</h2>
+<ul>
+<li>Individual server permission for custom users</li>
+<li>Individual read/write permission for extractions and sources</li>
+<li>Support for Active Directory groups (breaking change: AD users can no longer be member of an XU user group)</li>
+</ul>
+<h2>Files/Folders/Persistence</h2>
+<p>The config directory uses a new structure for files and folders. Existing configurations (extractions, sources, destinations etc.) can be converted to the new format during setup, or manually by running ConfigConverter.exe from the XU program directory.</p>
+</body></html>
