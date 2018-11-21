@@ -66,7 +66,7 @@ collections_dir: content
 collections:
   board-connector:
     output: true
-    name: 'Board Connector'
+    name: 'BOARD Connector'
   erpconnect-general:
     output: true
     name: 'ERPConnect - General'
