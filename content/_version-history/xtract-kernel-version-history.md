@@ -3,7 +3,7 @@ layout: page
 title: Xtract Kernel Version History
 description: Xtract Kernel Version History
 permalink: /:collection/:path
-weight: 6
+weight: 70
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

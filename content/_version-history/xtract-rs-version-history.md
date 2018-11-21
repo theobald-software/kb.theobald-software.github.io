@@ -3,7 +3,7 @@ layout: page
 title: Xtract RS Version History
 description: Xtract RS Version History
 permalink: /:collection/:path
-weight: 3
+weight: 80
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

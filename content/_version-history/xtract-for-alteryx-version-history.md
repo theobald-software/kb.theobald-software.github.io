@@ -3,7 +3,7 @@ layout: page
 title: Xtract for Alteryx Version History
 description: Xtract for Alteryx Version History
 permalink: /:collection/:path
-weight: 5
+weight: 50
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

@@ -3,7 +3,7 @@ layout: page
 title: ECS Core Version History
 description: ECS Core Version History
 permalink: /:collection/:path
-weight: 10
+weight: 20
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

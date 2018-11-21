@@ -3,7 +3,7 @@ layout: page
 title: ERPConnect Services Version History
 description: ERPConnect Services Version History
 permalink: /:collection/:path
-weight: 9
+weight: 40
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
