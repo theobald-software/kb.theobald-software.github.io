@@ -6,7 +6,7 @@ permalink: /:collection/:path
 weight: 20
 ---
 
-For communication with the SAP system:, ECSCore uses [ERPConnect](./erpconnect-version-history).
+For communication with the SAP system, ECSCore uses [ERPConnect](./erpconnect-version-history).
 
 {% include version-history-header.md %}
 
