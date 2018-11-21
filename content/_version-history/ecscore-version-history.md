@@ -18,6 +18,6 @@ Definition for version numbering: **A.B.C [X]**
 	- M - Medium: It's recommended to install this version as a regular update
 	- H - High: Data loss is likely to occur or a security risk was found and fixed
 
-#### YunIO
+#### ECS Core
 
 {% include _generated-version-history/ECSCore.html %}
