@@ -4,9 +4,9 @@ url: "https://kb.theobald-software.com"
 baseurl: ""
 
 # Name of website
-title: Theobald Knowledgebase
+title: Theobald Software Knowledgebase
 # Short description of site
-description: Theobald's Knowledgebase contains tips, tricks and updates about our products
+description: Theobald Software Knowledgebase contains tips, tricks and updates about our products
 
 # For variables in the head such as for twitter cards
 author:
