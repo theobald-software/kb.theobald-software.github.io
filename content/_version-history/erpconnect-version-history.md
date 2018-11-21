@@ -6,7 +6,7 @@ permalink: /:collection/:path
 weight: 30
 ---
 
-All other Theobald Software products use ERPConnect for communicating with SAP.
+All other Theobald Software products use ERPConnect for communicating with SAP. There is no need to update ERPConnect separately, if used as part of another Theobald Software product.
 
 {% include version-history-header.md %}
 
