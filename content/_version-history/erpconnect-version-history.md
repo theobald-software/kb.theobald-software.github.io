@@ -6,6 +6,8 @@ permalink: /:collection/:path
 weight: 30
 ---
 
+All other Theobald Software products use ERPConnect for communicating with SAP.
+
 {% include version-history-header.md %}
 
 
