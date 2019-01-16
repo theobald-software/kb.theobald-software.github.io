@@ -19,6 +19,10 @@ S_RFC            RFC_TYPE=FUGR ;RFC_NAME=SYST ;ACTVT=16 ;
 S_RFC            RFC_TYPE=FUGR ;RFC_NAME=RFC1 ;ACTVT=16 ; 
 ```
 
+SAP Role for General Authority Objects:
+
+[ZXTGENERAL.SAP (209.76 KB)](/files/ZXTGENERAL.SAP)
+
 #### Table
 
 Look up tables and table meta data:
@@ -49,6 +53,9 @@ S_RFC            RFC_TYPE=FUGR ;RFC_NAME=XXXX ;ACTVT=16 ;
 
 XXXX is here the name of the function group where the custom function module are located. 
 
+SAP Role for General Authority Objects:
+
+[ZXTABLE.SAP (209.76 KB)](/files/ZXTABLE.SAP)
 
 #### BW Query / BW Cube
 
