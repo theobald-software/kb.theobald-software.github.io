@@ -8,7 +8,10 @@ weight: 1
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
 
-To use our products you need a user with the following authority objects. Please redirect this article to your SAP Basis to get the relevant authority objects you need for your user.  
+To use our products you need a user with the following authority objects. 
+You can also use and Upload the corresponding SAP Role File (e.g. ZXTGENERAL.SAP) with the T-Code PFCG in SAP. 
+
+Please redirect this article to your SAP Basis to get the relevant authority objects you need for your user.  
 
 #### General Authority Objects
 
