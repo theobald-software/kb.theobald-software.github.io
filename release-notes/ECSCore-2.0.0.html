@@ -1,0 +1,50 @@
+<html style='font-family: "segoe ui","helvetica neue", arial, helvetica, sans-serif;'><style>h1, h2, h3, h4, h5 {margin:0;padding:0;margin-top:24px;font-weight:600;} p {margin:0;padding:0;margin-top: 4px;opacity:0.9;}</style><body><h1>ECS Core 2.0</h1>
+<h2>Consumer Endpoint</h2>
+<ul>
+<li>Azure Relay Connection is for the Consumer Endpoint only (no management actions are possible through it).</li>
+<li>Functionality to connect or disconnect the Azure Relay manually was removed.</li>
+<li>Non-contract classes/datatypes. Newtonsoft Json (more performant) instead of .NET Framework serializer.</li>
+<li>Windows Logging is only for the IIS-Preloader (Consumer Endpoint, Azure Relay registration), other components are using NLog.</li>
+</ul>
+<h2>Management Endpoint</h2>
+<ul>
+<li>The Management Actions (such as Deploying web services) were moved to the new Management Endpoint. For more information, go the full list on our help portal.</li>
+<li>The Management of the Consumer Endpoint (Clear Caches, Test SAP Connection, Connect Azure Relay via Application Pool reset) was moved to the Management Dashboard.</li>
+<li>Code compilation happens on the server-side now.</li>
+<li>API keys: during requests no more encoding in BASE64 required.</li>
+<li>There is no Azure Relay mapping for the Management Endpoint (please use the direct link).</li>
+</ul>
+<h2>Management Dashboard</h2>
+<ul>
+<li>The UI was revamped.</li>
+<li>Basic Management of Web Services (Add/Compile from definition, remove, get OpenAPI definition).</li>
+<li>2 Types of API keys: <strong>Management</strong> keys (bound to the Portal/Dashboard login) and <strong>Consumer</strong> keys, bound to the Windows User.</li>
+</ul>
+<h2>Web Service Designer</h2>
+<ul>
+<li>The UI was revamped.</li>
+<li>File extension of the Web Service Definition (in JSON-Format) is &quot;wsdef&quot; now (converter provided).</li>
+<li>Sorting of operations and custom data types is supported.</li>
+<li>Importing multiple operations from the Catalog.</li>
+<li>Importing operations from an existing web service on the Server.</li>
+<li>Recognizing all web service definitions in the folder and presenting them in the Catalog.</li>
+<li>Code compilation removed (happens on the server-side now.)</li>
+<li>Testing dialog for web services is only for informational purposed of how a simple request should look like. Please use specialized tools like Postman for executing/testing your web services.</li>
+</ul>
+<h2>Deployment Manager</h2>
+<ul>
+<li>An attempt to install required IIS+Components on a clean machine automatically.</li>
+<li>Express installation with default values (One-Click).</li>
+<li>Uninstallation: uninstalling the Deployment Manager and/or the Web Service Designer DOES NOT removed the deployed Web Sites / Endpoints. (For that please use the Deployment Manager).</li>
+</ul>
+<h2>General</h2>
+<ul>
+<li>For the older changelog / version history (until version 1.7.6) please click <a href="https://kb.theobald-software.com/version-history/erpconnect-services-version-history">HERE.</a></li>
+<li>No more dependencies in the GAC (except of IIS Preloader).</li>
+<li>No more globally installed SQL CE binaries required.</li>
+<li>Deployment Manager\WcsmConverter could be used to upgrade old packages seamlessly.</li>
+<li>The ECSDesigner (for Visual Studio) was removed from the project (low usage).</li>
+<li>The Client Library for manual implementation of Web Services was removed (low usage).</li>
+<li>IIS Management module removed (low usage).</li>
+</ul>
+</body></html>

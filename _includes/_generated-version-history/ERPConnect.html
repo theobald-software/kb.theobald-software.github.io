@@ -8,6 +8,42 @@
         <th class="col_desc">Description</th>
       </tr>
       <tr>
+        <td>6.5.0 [M]</td>
+        <td>2019-01-15</td>
+        <td>RFC Client</td>
+        <td>NWRFC: Added support for RFC callbacks</td>
+      </tr>
+      <tr>
+        <td>6.4.10 [L]</td>
+        <td>2019-01-08</td>
+        <td>RFC Client</td>
+        <td>ReadTable: Fix for Big Endian + NWRFC</td>
+      </tr>
+      <tr>
+        <td>6.4.9 [M]</td>
+        <td>2019-01-07</td>
+        <td>RFC Client</td>
+        <td>NWRFC: Fix for table / deep structure imports (bug introduced in 6.4.5)</td>
+      </tr>
+      <tr>
+        <td>6.4.8 [L]</td>
+        <td>2018-12-18</td>
+        <td>RFC Client</td>
+        <td>Changed the behavior of the new ReadTable implementation to be more consistent with the old implementation in terms of RowState of the resulting DataTable</td>
+      </tr>
+      <tr>
+        <td>6.4.7 [L]</td>
+        <td>2018-12-11</td>
+        <td>RFC Client</td>
+        <td>R3Connection.ParseConnectionString() parses SNC_MYNAME now</td>
+      </tr>
+      <tr>
+        <td>6.4.6 [L]</td>
+        <td>2018-12-11</td>
+        <td>RFC Client</td>
+        <td>R3Connection.Clone() copies SNCSettings.OwnName now</td>
+      </tr>
+      <tr>
         <td>6.4.5 [M]</td>
         <td>2018-11-28</td>
         <td>RFCServer</td>
@@ -43,7 +79,7 @@
         <td>LINQtoERP</td>
         <td>Removed support for VS2008</td>
       </tr>
-      <tr><td><a class="ReleaseNote" href="https://my.theobald-software.com/ReleaseNotes/ERPConnect/ERPConnect-6.3.0.html">6.3.0 [M]</a></td><td>2018-11-04</td><td>General</td><td>Some collections are implementing generic IList&lt;T&gt; now instead of non-generic interfaces(<a class="ReleaseNote" href="https://my.theobald-software.com/ReleaseNotes/ERPConnect/ERPConnect-6.3.0.html">Release note</a>)</td></tr>
+      <tr><td><a class="ReleaseNote" href="https://kb.theobald-software.com/release-notes/ERPConnect-6.3.0.html">6.3.0 [M]</a></td><td>2018-11-04</td><td>General</td><td>Some collections are implementing generic IList&lt;T&gt; now instead of non-generic interfaces(<a class="ReleaseNote" href="https://kb.theobald-software.com/release-notes/ERPConnect-6.3.0.html">Release note</a>)</td></tr>
       <tr>
         <td>6.2.3 [M]</td>
         <td>2018-10-29</td>
@@ -98,7 +134,7 @@
         <td>LINQtoERP</td>
         <td>Fix for Idoc code generator (broken since 5.7.0)</td>
       </tr>
-      <tr><td><a class="ReleaseNote" href="https://my.theobald-software.com/ReleaseNotes/ERPConnect/ERPConnect-6.1.0.html">6.1.0 [M]</a></td><td>2018-07-24</td><td>General</td><td>New implementation of ReadTable class &amp; support for non-Unicode multibyte codepages(<a class="ReleaseNote" href="https://my.theobald-software.com/ReleaseNotes/ERPConnect/ERPConnect-6.1.0.html">Release note</a>)</td></tr>
+      <tr><td><a class="ReleaseNote" href="https://kb.theobald-software.com/release-notes/ERPConnect-6.1.0.html">6.1.0 [M]</a></td><td>2018-07-24</td><td>General</td><td>New implementation of ReadTable class &amp; support for non-Unicode multibyte codepages(<a class="ReleaseNote" href="https://kb.theobald-software.com/release-notes/ERPConnect-6.1.0.html">Release note</a>)</td></tr>
       <tr>
         <td>6.0.2 [L]</td>
         <td>2018-06-28</td>
@@ -447,7 +483,7 @@
         <td>LINQtoERP</td>
         <td>Set max rows of Query to 200.000</td>
       </tr>
-      <tr><td><a class="ReleaseNote" href="https://my.theobald-software.com/ReleaseNotes/ERPConnect/ERPConnect-5.0.0.html">5.0.0 [M]</a></td><td>2017-01-27</td><td>General</td><td>Removed ERPConnect20.dll &amp; ERPConnect40.dll, updated ERPConnect45.dll to .NET Framework 4.5.2, removed support for SOAP(<a class="ReleaseNote" href="https://my.theobald-software.com/ReleaseNotes/ERPConnect/ERPConnect-5.0.0.html">Release note</a>)</td></tr>
+      <tr><td><a class="ReleaseNote" href="https://kb.theobald-software.com/release-notes/ERPConnect-5.0.0.html">5.0.0 [M]</a></td><td>2017-01-27</td><td>General</td><td>Removed ERPConnect20.dll &amp; ERPConnect40.dll, updated ERPConnect45.dll to .NET Framework 4.5.2, removed support for SOAP(<a class="ReleaseNote" href="https://kb.theobald-software.com/release-notes/ERPConnect-5.0.0.html">Release note</a>)</td></tr>
       <tr>
         <td>4.43.7 [L]</td>
         <td>2017-01-09</td>
@@ -3516,7 +3552,7 @@ Optimized BWCube exception handling for dates</td>
         <td>Wrong resultset when call ReadTable class together with Primary Key Packaging and Z-function module</td>
       </tr>
       <tr>
-        <td>3.0.0 [L]</td>
+        <td>3.0.0 [M]</td>
         <td>2008-02-11</td>
         <td>General</td>
         <td>New LINQ-class integrated in ERPConnect35.dll</td>

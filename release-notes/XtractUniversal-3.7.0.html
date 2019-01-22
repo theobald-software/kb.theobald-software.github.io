@@ -1,0 +1,11 @@
+<html style='font-family: "segoe ui","helvetica neue", arial, helvetica, sans-serif;'><style>h1, h2, h3, h4, h5 {margin:0;padding:0;margin-top:24px;font-weight:600;} p {margin:0;padding:0;margin-top: 4px;opacity:0.9;}</style><body><h1>Xtract Universal 3.7.0</h1>
+<p>The <strong>ABAP</strong> subdirectory now contains the following transport requests:</p>
+<h3>Z_THEO_READ_TABLE.zip</h3>
+<p>Transport request for new table custom function module <em>Z_THEO_READ_TABLE</em>. This is the successor to <em>Z_XTRACT_IS_TABLE_COMPRESSION</em>.
+The old table function module <em>Z_XTRACT_IS_TABLE_COMPRESSION</em> will continue to work with our products, but is no longer being maintained. Please consider adjusting your table extractions to use <em>Z_THEO_READ_TABLE</em> instead of <em>Z_XTRACT_IS_TABLE_COMPRESSION</em>.
+This version of the transport request requires SAP Release 7.40 SP05 or later and supports sub-selects in WHERE-clauses.</p>
+<h3>Z_THEO_READ_TABLE-before_740SP05.zip</h3>
+<p>Same as above, but for SAP Releases older than 7.40 SP05. This version does not support sub-selects in WHERE-clauses.</p>
+<h3>thtrans.zip</h3>
+<p>Transport request for Report component custom function <em>Z_XTRACT_IS_REMOTE_REPORT</em> and Table Join component custom function <em>Z_XTRACT_IS_TABLE_JOIN</em>. This transport request no longer contains <em>Z_XTRACT_IS_TABLE_COMPRESSION</em>, since it has been deprecated. Please use <em>Z_THEO_READ_TABLE</em> instead.</p>
+</body></html>

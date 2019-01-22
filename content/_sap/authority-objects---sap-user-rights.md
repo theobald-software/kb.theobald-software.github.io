@@ -8,7 +8,10 @@ weight: 1
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
 
-To use our products you need a user with the following authority objects. Please redirect this article to your SAP Basis to get the relevant authority objects you need for your user.  
+To use our products you need a user with the following authority objects. <br>
+You can also use and upload the corresponding SAP Role File (e.g. ZXTGENERAL.SAP) with the T-Code PFCG in SAP. 
+
+Please redirect this article to your SAP Basis to get the relevant authority objects you need for your user.  
 
 #### General Authority Objects
 
@@ -18,6 +21,10 @@ The following objects are needed at least to establish a connection.
 S_RFC            RFC_TYPE=FUGR ;RFC_NAME=SYST ;ACTVT=16 ;    
 S_RFC            RFC_TYPE=FUGR ;RFC_NAME=RFC1 ;ACTVT=16 ; 
 ```
+
+SAP Role for General Authority Objects:
+
+[ZXTGENERAL.SAP (209.76 KB)](/files/ZXTGENERAL.SAP)
 
 #### Table
 
@@ -49,6 +56,9 @@ S_RFC            RFC_TYPE=FUGR ;RFC_NAME=XXXX ;ACTVT=16 ;
 
 XXXX is here the name of the function group where the custom function module are located. 
 
+SAP Role for Table Objects:
+
+[ZXTABLE.SAP (209.76 KB)](/files/ZXTABLE.SAP)
 
 #### BW Query / BW Cube
 
