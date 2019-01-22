@@ -6,10 +6,7 @@ permalink: /:collection/:path
 weight: 2
 ---
 
-Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
-
-In this HowTo we will import the Transport Request for the custom functions that is included in your product folder.
-You can find the Transport Request in your product folder or as attachement to this article:
+In this HowTo we will import a Transport Request for the custom functions that is included in the ABAP subdirectory of your product installation folder (e. g. C:\Program Files\XtractIS\ABAP).
 
 We first unzip and copy the file R900141.ECC into the data folder and the file K900141.ECC into the cofiles folder of our SAP System. (The last 3 digits of the transport numbers may be different in your most recent version that you downloaded !)
 
@@ -57,7 +54,3 @@ the checkmark ![STMSIcon04](/img/contents/STMSIcon04.png){:class="img-responsive
  shows that the import finished successfully.
 
 ![STMS11](/img/contents/STMS11.png){:class="img-responsive"}
-
-Attachments 	 -----------------------------------------------
-
-[thtrans.zip (209.76 KB)](/files/thtrans.zip)
