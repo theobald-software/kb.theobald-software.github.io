@@ -15,7 +15,7 @@ When doing the DeltaQ Customizing Step 3 (RSAP_BIW_CONNECT_40 ) you get a PORT_C
 **Reason:**
 
 SAP tries to create a port with a portnumber which is already existing in the Table EDIPORT. This is a bug in the SAP process. This behaviour is also described in the SAP Note - 110849 - "Error during insert in port table" (create
-source system). The SAP Note is attached. 
+source system).
 
 **Solution:**
 
@@ -24,6 +24,3 @@ source system). The SAP Note is attached.
 (or click on Interval Editing -> NR Status)
 3. Change the CURRENT NUMBER of the ranges to the next free number you noted from table EDIPORT.
 
-Attachments 	-------------------------------------------
-
-[110849_E_20181219.pdf](/files/110849_E_20181219.pdf)
