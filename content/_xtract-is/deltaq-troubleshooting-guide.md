@@ -46,7 +46,7 @@ If you use selection values, please check if the values are formatted properly. 
 
 Some extractors add additional authority checks within the extractor that are not foreseeable. So the missing authority objects must be added. 
 
-**SSIS *Project Connection Manager* vs. *Package Connection Manager* with parallel DeltaQ extractions
+**SSIS _Project Connection Manager_ vs. _Package Connection Manager_ with parallel DeltaQ extractions
 
 When running DeltaQ extractions within one SSIS package in parallel, we recommend using a package connection manager for each DeltaQ component. A single project connection manager may work, as well, but we've been seeing extraction errors, that could be attributed to the usage of parallel DeltaQ extractions using a project connection manager. 
 
