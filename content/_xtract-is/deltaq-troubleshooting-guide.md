@@ -48,5 +48,6 @@ Some extractors add additional authority checks within the extractor that are no
 
 **SSIS _Project Connection Manager_ vs. _Package Connection Manager_ with parallel DeltaQ extractions**
 
-When running DeltaQ extractions within one SSIS package in parallel, we recommend using a package connection manager for each DeltaQ component. A single project connection manager may work, as well, but we've been seeing extraction errors, that could be attributed to the usage of parallel DeltaQ extractions using a project connection manager. 
+When running DeltaQ extractions within one SSIS package in parallel, we recommend using a package connection manager for each DeltaQ component. A single project connection manager may work, as well. 
+However, with short interval scheduling and heavy paralellism, dedicated package connection managers will add to extraction stability. 
 
