@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Installation of the Function Module Z_THEO_READ_TABLE
+title: Installation of the function module Z_THEO_READ_TABLE
 description: Installation of the Function Module Z_THEO_READ_TABLE
 permalink: /:collection/:path
 weight: 7
@@ -21,7 +21,7 @@ You can simply copy the content of the files *Z_THEO_READ_TABLE - ZTHEOTABLEFIEL
 
 ![Z_THEO_READ_TABLE_01](/img/contents/Z_THEO_READ_TABLE_ZTHEOTABLEFIELDS.png){:class="img-responsive"}
 
-![Z_THEO_READ_TABLE_02](/img/contents/Z_THEO_READ_TABLE_ZTHEOTABLEFIELDS.png){:class="img-responsive"}
+![Z_THEO_READ_TABLE_02](/img/contents/Z_THEO_READ_TABLE_ZTHEOTABLEJOINDEF.png){:class="img-responsive"}
 
 
 #### Step 2 – Create a new function module
