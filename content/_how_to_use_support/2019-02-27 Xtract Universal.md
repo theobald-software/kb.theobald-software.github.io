@@ -1,7 +1,9 @@
 ---
-layout: post
+layout: page
 title: Using Xtract Universal
 description: Using Xtract Universal
+permalink: /:collection/:path
+weight: 1
 ---
 
 In the event of a problem or error in connection with the use of our software, customers, partners and interested <br>
