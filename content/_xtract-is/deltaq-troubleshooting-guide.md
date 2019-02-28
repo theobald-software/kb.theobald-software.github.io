@@ -12,7 +12,7 @@ This document is a collection of possible problems, pitfalls and common problems
 
 <br>
 
-<H2> Errors during DeltaQ extraction
+##Errors during DeltaQ extraction
 **I get entries in the extraction log like *No progress for n seconds, but data is not complete yet. Waiting...* which eventually result in a timeout**
 
 This happens, when the extraction job on the SAP side is finished (SM37) but IDocs and/or tRFC data packages got stuck on the SAP side or were sent to a different RFC destination. Here is a list of possible reasons:
@@ -57,7 +57,7 @@ When running DeltaQ extractions within one SSIS package in parallel, we recommen
 However, with short interval scheduling and heavy paralellism, dedicated package connection managers will add to extraction stability. 
 <br>
 
-<H2> Errors during DeltaQ setup
+##Errors during DeltaQ setup
 **When doing the DeltaQ Customizing Step 3 (RSAP_BIW_CONNECT_40 ) you get a PORT_CREATION_ERROR in transaction SE37.**
 
 Please see this [kb article](https://kb.theobald-software.com/sap/PORT_CREATION_ERROR)
