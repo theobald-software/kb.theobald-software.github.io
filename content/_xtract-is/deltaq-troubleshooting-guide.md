@@ -8,46 +8,64 @@ weight: 23
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
 
-This document is a collection of possible problems, pitfalls and common problems when setting up or running DeltaQ. It is based on lots of support cases and will be extended on a regular basis.
+This document is a collection of possible problems, pitfalls and common problems when setting up or running DeltaQ. It is based on common errors reported to us in support cases and will be extended on a regular basis.
 
- 
+<br>
+
+<H2> Errors during DeltaQ extraction
+**I get entries in the extraction log like *No progress for n seconds, but data is not complete yet. Waiting...* which eventually result in a timeout**
+
+This happens, when the extraction job on the SAP side is finished (SM37) but IDocs and/or tRFC data packages got stuck on the SAP side or were sent to a different RFC destination. Here is a list of possible reasons:
+
+*You are running DeltaQ extractions on the same RFC destination in parallel. Go to transaction SMQS and increase the *Max.Conn.* value to at least 10. With single DeltaQ extractions, that value should be at least 2.
+*If only data packages are coming through but no IDocs, please go to transaction WE20, select your RFC destination (under *Partner Type LS*), double click on *RSINFO* and *RSSEND* and change the output mode to *Transfer IDoc Immed.*.
+*Another reason could be, that you are running DeltaQ extractions on the same RFC destination (e.g. XTRACT01) in parallel from different computers. In this case IDocs and data packages are sent to the wrong computer.
+*The gateway host / gateway service settings in SM59 are not maintained properly. If you have a message server try to insert the message server details there, if not, put in the application server. Check carefully that these settings fit to the entries in the DeltaQ dialog.
+*You are running SAP's auxiliary test program called "rfcexec". This program intercepts outgoing IDocs/tRFC calls. Please stop this program.
+
+<br>
 
 **I have crippled characters in the output, especially non-latin characters (like Chinese, Czech, etc.)**
 
 Go to transaction SM59 and change the unicode flag from non-Unicode to Unicode.
 
- 
+<br>
 
-**The customizing check is showing red indicators that are not related to missing authority objects.**
 
-The steps of customizing a DeltaQ are not done properly in SAP. Start from the beginning and do exactly (!) what is written in the documentation. If an error occurs during a step don't consider the step as done.
 
- 
+**The extraction log is showing a number of *No job found in SAP* entries*
 
-**The customizing check is completely green but during extraction no messages and no data packages are received from SAP. I can find red entries in transaction SM58 OR red IDocs in transaction WE02.**
+Please go to transaction WE20, select your RFC destination (under *Partner Type LS*) and check the *Part. Status* on the *Classification* tab. The status needs to be *Active*. 
 
-The gateway host / gateway service settings in SM59 are not maintained properly. If you have a message server try to insert the message server details there, if not, put in the application server. Check carefully that these settings fit to the entries in the DeltaQ dialog.
 
- 
-
-**I have strange errors in general that happen sometimes for no good reason.**
-
-First step is always to download the latest Xtract version. Maybe SAP changed something and you need a new version. Even if it is only 2 weeks old. The second step is always to exchange the 32- and 64-Bit version of the librfc32.dll on the system which might be unstable. Please check the knowledge base for download options for stable librfc32.dll versions.
-
- 
+<br>
 
 **I get an "Error in Data Selection" from SAP**
 
 If you use selection values, please check if the values are formatted properly. If this error only happens during delta updates, check if your OLTP source is able to handle delta updates (see transaction RSA2 for details). If this doesn't help, check the log output of the job in transaction SM37.
 
- 
+<br>
 
 **During extraction I get an "Not Authorized for XXX" error even though I carefully applied all the authority objects listed in the knowledge base article for authority objects**
 
 Some extractors add additional authority checks within the extractor that are not foreseeable. So the missing authority objects must be added. 
+<br>
 
 **SSIS _Project Connection Manager_ vs. _Package Connection Manager_ with parallel DeltaQ extractions**
 
 When running DeltaQ extractions within one SSIS package in parallel, we recommend using a package connection manager for each DeltaQ component. A single project connection manager may work, as well. 
 However, with short interval scheduling and heavy paralellism, dedicated package connection managers will add to extraction stability. 
+<br>
 
+<H2> Errors during DeltaQ setup
+**When doing the DeltaQ Customizing Step 3 (RSAP_BIW_CONNECT_40 ) you get a PORT_CREATION_ERROR in transaction SE37.**
+
+Please see this [kb article](https://kb.theobald-software.com/sap/PORT_CREATION_ERROR)
+<br>
+
+**The customizing check is showing red indicators that are not related to missing authority objects.**
+
+* The steps of customizing a DeltaQ are not done properly in SAP. Start from the beginning and do exactly (!) what is written in the documentation. If an error occurs during a step don't consider the step as done.
+* Registration of RFC server program is not allowed on the SAP gateway. Plase refer to this [kb article](https://kb.theobald-software.com/sap/registering-rfc-server-in-sap-releases-in-kernel-release-720-and-higher)
+
+<br>
