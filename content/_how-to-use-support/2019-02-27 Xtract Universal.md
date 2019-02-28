@@ -20,16 +20,13 @@ The customer-specific settings can be visualized as screenshots. All of the foll
 
 user of our Xtract products.
 
-
-## Product Xtract Universal / Board Connector:
-
 ### Extraction Log
 
 - Right click on the extraction in the Xtract Universal Designer 
-
 - Save to text file by Copy to Clipboard
 
 ![XU-Log](/img/contents/xu_log_rechtsklick.png){:class="img-responsive"}
+
 ![XU-Log](/img/contents/xu_log_copy.png){:class="img-responsive"}
  
  
