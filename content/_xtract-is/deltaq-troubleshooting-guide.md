@@ -12,7 +12,8 @@ This document is a collection of possible problems, pitfalls and common problems
 
 ## Errors during DeltaQ extraction
 **I get entries in the extraction log like *No progress for n seconds, but data is not complete yet. Waiting...* which eventually result in a timeout**
-* This happens, when the extraction job on the SAP side is finished (SM37) but IDocs and/or tRFC data packages got stuck on the SAP side or were sent to a different RFC destination. Here is a list of possible reasons:
+
+This happens, when the extraction job on the SAP side is finished (SM37) but IDocs and/or tRFC data packages got stuck on the SAP side or were sent to a different RFC destination. Here is a list of possible reasons:
 
 * You are running DeltaQ extractions on the same RFC destination in parallel. Go to transaction SMQS and increase the *Max.Conn.* value to at least 10. With single DeltaQ extractions, that value should be at least 2.
 * If only data packages are coming through but no IDocs, please go to transaction WE20, select your RFC destination (under *Partner Type LS*), double click on *RSINFO* and *RSSEND* and change the output mode to *Transfer IDoc Immed.*.
@@ -23,7 +24,7 @@ This document is a collection of possible problems, pitfalls and common problems
 **I have crippled characters in the output, especially non-latin characters (like Chinese, Czech, etc.)**
 * Go to transaction SM59 and change the unicode flag from non-Unicode to Unicode.
 
-**The extraction log is showing a number of  No job found in SAP entries**
+**The extraction log is showing a number of  _No job found in SAP_ entries**
 * Please go to transaction WE20, select your RFC destination (under *Partner Type LS*) and check the *Part. Status* on the *Classification* tab. The status needs to be *Active*. 
 
 **I get an "Error in Data Selection" from SAP**
@@ -45,4 +46,4 @@ However, with short interval scheduling and heavy paralellism, dedicated package
 
 **The customizing check is showing red indicators that are not related to missing authority objects.**
 * The steps of customizing a DeltaQ are not done properly in SAP. Start from the beginning and do exactly (!) what is written in the documentation. If an error occurs during a step don't consider the step as done.
-* Registration of RFC server program is not allowed on the SAP gateway. Plase refer to this [kb article](https://kb.theobald-software.com/sap/registering-rfc-server-in-sap-releases-in-kernel-release-720-and-higher)
+* Registration of RFC server program is not allowed on the SAP gateway. Please refer to this [kb article](https://kb.theobald-software.com/sap/registering-rfc-server-in-sap-releases-in-kernel-release-720-and-higher)
