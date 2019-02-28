@@ -7,6 +7,7 @@ permalink: /:collection/:path
 weight: 23
 ---
 
+
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
 
 This document is a collection of possible problems, pitfalls and common problems when setting up or running DeltaQ. It is based on common errors reported to us in support cases and will be extended on a regular basis.
