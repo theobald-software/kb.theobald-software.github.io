@@ -6,7 +6,7 @@ permalink: /:collection/:path
 weight: 1
 ---
 
-In the event of a problem or error in connection with the use of our software, customers, partners and interested <br>
+In the event of a problem or error in connection with the use of our software, customers, partners and interested
 
 parties have the opportunity to submit support tickets via our [ticket system]( https://support.theobald-software.com/helpdesk) . 
 
@@ -14,7 +14,7 @@ In order to offer our customers and prospects a competent service, we need the f
 
 architecture used in your system landscape.
 
-The most important information about errors or problems is ensured by the transmission of complete logs in text / excel format. <br>
+The most important information about errors or problems is ensured by the transmission of complete logs in text / excel format.
 
 The customer-specific settings can be visualized as screenshots. All of the following information can be determined independently by the 
 
