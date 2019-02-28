@@ -1,7 +1,7 @@
 ---
 layout: section-page
-title: How to use support
-description: How to use support
+title: Required Support Information
+description: Required support information
 permalink: /:collection
 search-ignore: true
 ---
