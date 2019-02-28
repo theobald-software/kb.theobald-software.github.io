@@ -64,6 +64,9 @@ content:
 ##########  requires more than just adding a language here.
 collections_dir: content
 collections:
+  how-to-use-support:
+    output: true
+    name: 'How to use Support'
   board-connector:
     output: true
     name: 'BOARD Connector'
