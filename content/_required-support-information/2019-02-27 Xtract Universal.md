@@ -47,8 +47,8 @@ Furthermore it can be needful to send more details within extraction log.
 - select *Server* ->  *Settings*
 - selection field *Web Server* -> Enter storage directory to the field *target directory* 
 
-![XU-table_extraction_settings](/img/content/xu/server_settings_xu.png){:class="img-responsive"}
-![XU-table_extraction_settings](/img/content/xu/result-cache-xu.png){:class="img-responsive"}
+![XU-table_extraction_settings](/img/contents/server_settings_xu.png){:class="img-responsive"}
+![XU-table_extraction_settings](/img/contents/result-cache-xu.png){:class="img-responsive"}
 
 
 
