@@ -28,6 +28,21 @@ user of our Xtract products.
 ![XU-Log](/img/contents/xu_log_rechtsklick.png){:class="img-responsive"}
 
 ![XU-Log](/img/contents/xu_log_copy.png){:class="img-responsive"}
+
+### Extraction settings
+
+- mark the extraction
+- select destination and create screenshot
+
+![XU-extraction_settings](/img/contents/xu_destinantion_settings.png){:class="img-responsive"}
+
+- double click on the extraction (1)
+- select *extraction settings* (2)
+- create screenshot of table settings (3)
+
+![XU-table_extraction_settings](/img/contents/xu_extraction_settings.png){:class="img-responsive"}
+
+
  
  
 
