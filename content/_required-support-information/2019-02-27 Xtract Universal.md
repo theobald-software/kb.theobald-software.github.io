@@ -38,9 +38,18 @@ user of our Xtract products.
 
 - double click on the extraction (1)
 - select *extraction settings* (2)
-- create screenshot of table settings (3)
+- create screenshot of settings (3)
 
 ![XU-table_extraction_settings](/img/contents/xu_extraction_settings.png){:class="img-responsive"}
+
+Furthermore it can be needful to send more details within extraction log.
+
+- select *Server* ->  *Settings*
+- selection field *Web Server* -> Enter storage directory to the field *target directory* 
+
+![XU-table_extraction_settings](/img/content/xu/server_settings_xu.png){:class="img-responsive"}
+![XU-table_extraction_settings](/img/content/xu/result-cache-xu.png){:class="img-responsive"}
+
 
 
  
