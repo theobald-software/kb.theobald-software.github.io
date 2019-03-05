@@ -49,21 +49,16 @@ This information is optional and can be requested by the technician. Please alwa
 
 ![XU-table_extraction_settings](/img/contents/xu_extraction_settings.png){:class="img-responsive"}
 
-Furthermore it can be needful to send more details within extraction log.
+### Trace files 
 
-- select *Server* ->  *Settings*
-- selection field *Web Server* -> Enter storage directory to the field *target directory* 
-
-![XU-table_extraction_settings](/img/contents/server_settings_xu.png){:class="img-responsive"}
-![XU-table_extraction_settings](/img/contents/result-cache-xu.png){:class="img-responsive"}
-
-
-
+- activate the trace function , see [knowledge-base article](https://kb.theobald-software.com/general/how-to-activate-tracing-for-xtract-products) 
  
+
  
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjQ4Mzk1Mjg5LC0xNzY1NTk2NjA0XX0=
+eyJoaXN0b3J5IjpbLTEyMjExNTMxMDcsMjQ4Mzk1Mjg5LC0xNz
+Y1NTk2NjA0XX0=
 -->
