@@ -21,6 +21,7 @@ The customer-specific settings can be visualized as screenshots. All of the foll
 user of our Xtract products.
 
 ## Mandatory
+The following information is required to process a support ticket. Transmit entire log and no excerpts.
 
 ### Extraction Log
 
@@ -32,6 +33,8 @@ user of our Xtract products.
 ![XU-Log](/img/contents/xu_log_copy.png){:class="img-responsive"}
 
 ## Optional 
+
+This information is optional and can be requested by the technician. Please always send the complete log and no excerpts.
 
 ### Extraction settings
 
@@ -62,5 +65,5 @@ Furthermore it can be needful to send more details within extraction log.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NjU1OTY2MDRdfQ==
+eyJoaXN0b3J5IjpbMjQ4Mzk1Mjg5LC0xNzY1NTk2NjA0XX0=
 -->
