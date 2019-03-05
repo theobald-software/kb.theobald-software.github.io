@@ -36,6 +36,10 @@ The following information is required to process a support ticket. Transmit enti
 
 This information is optional and can be requested by the technician. Please always send the complete log and no excerpts.
 
+### Trace files 
+
+- activate the trace function , see [knowledge-base article](https://kb.theobald-software.com/general/how-to-activate-tracing-for-xtract-products) 
+ 
 ### Extraction settings
 
 - mark the extraction
@@ -49,16 +53,14 @@ This information is optional and can be requested by the technician. Please alwa
 
 ![XU-table_extraction_settings](/img/contents/xu_extraction_settings.png){:class="img-responsive"}
 
-### Trace files 
 
-- activate the trace function , see [knowledge-base article](https://kb.theobald-software.com/general/how-to-activate-tracing-for-xtract-products) 
- 
+
 
  
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMjExNTMxMDcsMjQ4Mzk1Mjg5LC0xNz
-Y1NTk2NjA0XX0=
+eyJoaXN0b3J5IjpbMTUxNTEyNDE3MywyNDgzOTUyODksLTE3Nj
+U1OTY2MDRdfQ==
 -->
