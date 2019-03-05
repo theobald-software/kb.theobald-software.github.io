@@ -20,6 +20,8 @@ The customer-specific settings can be visualized as screenshots. All of the foll
 
 user of our Xtract products.
 
+## Mandatory
+
 ### Extraction Log
 
 - Right click on the extraction in the Xtract Universal Designer 
@@ -28,6 +30,8 @@ user of our Xtract products.
 ![XU-Log](/img/contents/xu_log_rechtsklick.png){:class="img-responsive"}
 
 ![XU-Log](/img/contents/xu_log_copy.png){:class="img-responsive"}
+
+## Optional 
 
 ### Extraction settings
 
@@ -57,3 +61,6 @@ Furthermore it can be needful to send more details within extraction log.
 
 
 
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTE3NjU1OTY2MDRdfQ==
+-->
