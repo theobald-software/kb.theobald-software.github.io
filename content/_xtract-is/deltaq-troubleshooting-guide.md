@@ -47,3 +47,7 @@ However, with short interval scheduling and heavy paralellism, dedicated package
 **The customizing check is showing red indicators that are not related to missing authority objects.**
 * The steps of customizing a DeltaQ are not done properly in SAP. Start from the beginning and do exactly (!) what is written in the documentation. If an error occurs during a step don't consider the step as done.
 * Registration of RFC server program is not allowed on the SAP gateway. Please refer to this [kb article](https://kb.theobald-software.com/sap/registering-rfc-server-in-sap-releases-in-kernel-release-720-and-higher)
+
+
+**The RFC connection check in SAP transaction SM59 fails** 
+* Please see this [kb article](https://kb.theobald-software.com/troubleshooting/sm59-rfc---connection-test-fails)
