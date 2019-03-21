@@ -66,6 +66,9 @@ Look up and execute a BW Query / BW Cube:
 
 ```
 S_RFC            RFC_TYPE=FUGR;RFC_NAME=RSOB;ACTVT=16;
+S_RFC            RFC_TYPE=FUGR;RFC_NAME=RRX1;ACTVT=16;
+S_TABU_NAM       ACTVT = 03; TABLE = RSRREPDIR;
+S_TABU_NAM       ACTVT = 03; TABLE = RSZGLOBV;
 ```
 
 Optional (needed for Date Conversion): 
@@ -73,6 +76,8 @@ Optional (needed for Date Conversion):
 ```
 S_TABU_NAM       ACTVT = 03; TABLE = DD03L;
 ```
+
+
 
 #### SAP Query
 
