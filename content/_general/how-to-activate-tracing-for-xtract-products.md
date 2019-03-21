@@ -8,10 +8,17 @@ weight: 3
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
 
-To activate the tracing for Xtract Products it is required to fill in a path in the field Log Directory in the Xtract connection Manager as seen in the screenshot below.
+You may be requested by a Theobald Software support technician to send Xtract trace files. 
 
-![XtractConnectionLog](/img/contents/XtractConnectionLog.png){:class="img-responsive"}
+To activate the tracing for Xtract products it is required to fill in a path in the field *TraceLog Directory* in the Xtract Connection Manager/SAP source as seen in the screenshot below.
 
-XML Files are created in the path specified with the tracing information.
+![XtractConnectionLog](/img/contents/XtractConnectionLog.png){:class="img-responsive"} 
+
+
+When pulling extraction meta data or when running an extraction, xml files are created in the path specified in the *Trace Directory* field. 
+
+Please zip the complete trace folder and attach it to the support ticket.
+
+**Attention:** <br> XML Files are created in the path specified with the tracing information.
 
 Please do not forget to delete the entry in the field after the tracing is not needed anymore. 

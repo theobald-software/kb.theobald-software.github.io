@@ -8,12 +8,12 @@ weight: 1
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
 
-To use our products you need a user with the following authority objects. <br>
-You can also use and upload the corresponding SAP Role File (e.g. ZXTGENERAL.SAP) with the T-Code PFCG in SAP. 
+To use our products you need an SAP user with the following authority objects. <br>
+You can also use and upload the corresponding SAP role files (e.g. ZXTGENERAL.SAP) with T-Code *PFCG* in SAP. 
 
-Please redirect this article to your SAP Basis to get the relevant authority objects you need for your user.  
+Please redirect this article to your SAP Basis admins to get the relevant authority objects you need for your user.  
 
-#### General Authority Objects
+#### General authority objects
 
 The following objects are needed at least to establish a connection.
 
@@ -22,7 +22,7 @@ S_RFC            RFC_TYPE=FUGR ;RFC_NAME=SYST ;ACTVT=16 ;
 S_RFC            RFC_TYPE=FUGR ;RFC_NAME=RFC1 ;ACTVT=16 ; 
 ```
 
-SAP Role for General Authority Objects:
+SAP role for general authority objects:
 
 [ZXTGENERAL.SAP (209.76 KB)](/files/ZXTGENERAL.SAP)
 
@@ -48,7 +48,7 @@ S_TABU_NAM       ACTVT = 03; TABLE = DD02V
 XXXX is the Authority Group for the table. To find out, which authority group belongs to which table look at table TDDAT (e.g. with SE16). 
 If the table is not listed there the authority group is &NC&. For authorising specific tables please use authorization object S_TABU_NAM instead of S_TABU_DIS.
 
-If Custom functions like Z_XTRACT_IS_TABLE_COMPRESSION, Z_XTRACT_IS_TABLE or Z_XTRACT_IS_TABLE_JOIN are used
+If our custom function modules like Z_THEO_READ_TABLE, Z_XTRACT_IS_TABLE_JOIN, (Z_XTRACT_IS_TABLE_COMPRESSION, Z_XTRACT_IS_TABLE) are used:
 
 ```
 S_RFC            RFC_TYPE=FUGR ;RFC_NAME=XXXX ;ACTVT=16 ; 
@@ -56,27 +56,32 @@ S_RFC            RFC_TYPE=FUGR ;RFC_NAME=XXXX ;ACTVT=16 ;
 
 XXXX is here the name of the function group where the custom function module are located. 
 
-SAP Role for Table Objects:
+SAP role for table objects:
 
 [ZXTABLE.SAP (209.76 KB)](/files/ZXTABLE.SAP)
 
 #### BW Query / BW Cube
 
-Look up and execute a BW Query / BW Cube:
+Look up and execute a BW Query / BW Cube (OLAP BAPI/MDX and BEx mode):
 
 ```
 S_RFC            RFC_TYPE=FUGR;RFC_NAME=RSOB;ACTVT=16;
+S_RFC            RFC_TYPE=FUGR;RFC_NAME=RRX1;ACTVT=16;
+S_TABU_NAM       ACTVT = 03; TABLE = RSRREPDIR;
+S_TABU_NAM       ACTVT = 03; TABLE = RSZGLOBV;
 ```
 
-Optional (needed for Date Conversion): 
+Optional (needed for date conversion): 
 
 ```
 S_TABU_NAM       ACTVT = 03; TABLE = DD03L;
 ```
 
+
+
 #### SAP Query
 
-Look up and executing a query:
+Look up and execute a query:
 
 ```
 S_RFC            RFC_TYPE=FUGR ;RFC_NAME=AQRC ;ACTVT=16 ;  
@@ -91,9 +96,9 @@ S_RFC            RFC_TYPE=FUGR ;RFC_NAME=XXXXX;ACTVT=16 ;
 S_GUI            ACTVT=61 
 ```
 
-XXXXX is the Function Group to which the Function Module Z_XTRACT_IS_REMOTE_REPORT belongs to.
+XXXXX is the function group to which the function module Z_XTRACT_IS_REMOTE_REPORT belongs to.
 
-Look up report, preview und execute the report in a batch job.
+Look up a report, preview und execute the report in a batch job.
 
 ```
 S_RFC            RFC_TYPE=FUGR ;RFC_NAME=XXXXX;ACTVT=16 ;
@@ -104,7 +109,7 @@ S_BTCH_JOB       JOBGROUP=*;JOBACTION=RELE;
 S_GUI            ACTVT=61;
 ```
 
-XXXXX is the Function Group to which the Function Module Z_XTRACT_IS_REMOTE_REPORT belongs to.
+XXXXX is the function group to which the function module Z_XTRACT_IS_REMOTE_REPORT belongs to.
 
 #### DeltaQ
 
@@ -131,7 +136,7 @@ S_IDOCDEFT       EDI_TCD=WE30 ;ACTVT=01 ;EDI_CIM=*;EDI_DOC=* ;
 S_IDOCDEFT       EDI_TCD=WE30 ;ACTVT=03 ;EDI_CIM=*;EDI_DOC=* ;  
 ```
 
-Re-Activate a DataSource:
+Re-activate a DataSource:
 
 ```
 S_RFC            RFC_TYPE=FUGR ;RFC_NAME=SDIFRUNTIME ;ACTVT=16 ;    
@@ -178,7 +183,7 @@ S_TABU_DIS                     ACTVT = 03; DICBERCLS = &NC&
 
 #### OHS
 
-Look up and OHS Extraction:
+Look up an OHS extraction:
 
 ```
 S_RFC      RFC_TYPE=FUGR;RFC_NAME=RSB3RD;ACTVT=16;
@@ -204,7 +209,7 @@ S_ADMI_FCD S_ADMI_FCD=ST0R;
 
 #### BW Hierarchies
 
-Look up and read Hierarchies:
+Look up and read hierarchies:
 
 ```
 S_RFC          RFC_TYPE=FUGR;RFC_NAME=RSNDI_SHIE;ACTVT=16;
