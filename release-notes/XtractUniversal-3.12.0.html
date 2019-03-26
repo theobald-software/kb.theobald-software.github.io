@@ -1,0 +1,15 @@
+<html style='font-family: "segoe ui","helvetica neue", arial, helvetica, sans-serif;'><style>h1, h2, h3, h4, h5 {margin:0;padding:0;margin-top:24px;font-weight:600;} p {margin:0;padding:0;margin-top: 4px;opacity:0.9;}</style><body><h1>Xtract Universal 3.12</h1>
+<h2>Text Encodings for <em>HTTP - CSV</em>, <em>Flat File - CSV</em> and <em>OData Atom</em> destinations</h2>
+<p>The large list of legacy encodings has been replaced with the following:</p>
+<ul>
+<li>UTF-8</li>
+<li>UTF-16LE</li>
+<li>UTF-16BE</li>
+<li>GB18030</li>
+</ul>
+<p>It seems that these encodings should cover most common use cases. <strong>If you have requirements for special encodings, that are not available anymore, please contact support.</strong></p>
+<h2>Byte Order Marks / Preambles and <em>xu.exe</em> output redirection</h2>
+<p>The encodings listed above are used without preamble / BOM in <em>HTTP - CSV</em> and <em>OData Atom</em>. The <em>Flat File - CSV</em> destination on the other hand, uses preambles / BOMs. When redirecting standard output of <em>xu.exe</em> (e. g. to a file), preambles / BOMs will be used.</p>
+<h2>Updated to .NET Framework 4.6.1</h2>
+<p>The target framework of all components has been updated from 4.5.2 to 4.6.1. <strong>That means, you need .NET Framework 4.6.1 or higher to run Xtract Universal.</strong></p>
+</body></html>
