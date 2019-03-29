@@ -116,7 +116,8 @@ XXXXX is the function group to which the function module Z_XTRACT_IS_REMOTE_REPO
 Authority objects needed for the customizing check:
 
 ```
-S_RFC RFC_TYPE=FUGR ;RFC_NAME=SUSR ;ACTVT=16 ;
+S_RFC RFC_TYPE = FUGR ;RFC_NAME=SUSR ; ACTVT=16 ;
+S_RFC RFC_TYPE = FUNC ; RFC_NAME= RFC_GET_SYSTEM_INFO ; ACTVT= 16
 S_ADMI_FCD S_ADMI_FCD = NADM
 S_TABU_DIS ACTVT = 02; DICBERCLS = SA
 S_TABU_DIS ACTVT = 03; DICBERCLS = SA
