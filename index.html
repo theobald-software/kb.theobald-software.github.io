@@ -45,24 +45,7 @@ common-css:
 </header>
 
 <div class="row row-centered aligned-row" role="main">
-        <div class="col-md-6 col-sm-6">
-            <div class="double-listing double-listing-even">
-                <a href="{{ site.url }}/news"><h2>News</h2></a>
-                <hr class="length">
-                {% for post in site.posts limit:6 %}
-                    {% unless post.relative_path contains '/index' %}
-                        <div class="double-listing-item">
-                            <a class="double-listing-link" href="{{ post.url }}"><i>{{ post.date | date: '%B %d, %Y' }}</i> - {{ post.title }}</a>
-                        </div>
-                    {% endunless %}
-                {% endfor %}
-                <br>
-                {% assign collection_post = site.posts | where_exp:"post", "post.relative_path contains '/index'" %}
-                {% if collection_post != '' %}
-                    <a class="double-listing-link-read-more" href="{{ site.url }}/news">Read more News</a>
-                {% endif %}
-            </div>
-        </div>
+
 
         {% for collection in site.collections %}
             {% unless collection.label == "posts" %}
