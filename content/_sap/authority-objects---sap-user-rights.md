@@ -54,7 +54,7 @@ If our custom function modules like Z_THEO_READ_TABLE, Z_XTRACT_IS_TABLE_JOIN ar
 S_RFC            RFC_TYPE=FUGR ;RFC_NAME=XXXX ;ACTVT=16 ; 
 ```
 
-XXXX is the name of the function group where the custom function module are located. If the function modules were imported using our SAP transports, XXXX equals to *Z_THEO_READ_TABLE* and *ZXTRACTABAP*.  
+XXXX is the name of the function group to which the custom function module belongs. If the function modules were imported using our SAP transports, XXXX equals to *Z_THEO_READ_TABLE* in case of SAP transport *Z_THEO_READ_TABLE.zip* and *ZXTRACTABAP* in case of SAP transport *thtrans.zip*.
 
 SAP role for table objects:
 
@@ -96,7 +96,7 @@ S_RFC            RFC_TYPE=FUGR ;RFC_NAME=XXXX;ACTVT=16 ;
 S_GUI            ACTVT=61 
 ```
 
-XXXX is the function group to which the function module  belongs to. XXXX is the name of the function group where the custom function module Z_XTRACT_IS_REMOTE_REPORT belongs to. If the function modules was imported using our SAP transport, XXXX equals to *ZXTRACTABAP*.
+XXXX is the name of the function group to which the custom function module Z_XTRACT_IS_REMOTE_REPORT belongs. If the function module was imported using our SAP transport, XXXX equals to *ZXTRACTABAP*.
 
 Look up a report, preview und execute the report in a batch job.
 
