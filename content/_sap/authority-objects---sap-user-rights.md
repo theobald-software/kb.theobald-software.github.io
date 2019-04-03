@@ -111,6 +111,8 @@ S_GUI            ACTVT=61;
 
 XXXXX is the function group to which the function module Z_XTRACT_IS_REMOTE_REPORT belongs to.
 
+[ZXREPORT.SAP (5 KB)](/files/ZXREPORT.SAP)
+
 #### DeltaQ
 
 Authority objects needed for the customizing check:
