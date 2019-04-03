@@ -94,7 +94,7 @@ R3Connection con = new ERPConnect.R3Connection("ptmalg", 05, "User", "\"My Passw
 This error comes from a bug in one of the SAP's own function modules. The tables that cause the bug contain at least one column of type F (floating point). There are two ways to avoid this error:
 
 - Create a view in SAP over the table that causes the error. Leave out all columns of type F and use the ReadTable class to run the view instead of the table.
-- Install the function module [Z_XTRACT_IS_TABLE](http://www.theobald-software.com/download/Xtractis/Z_XTRACT_IS_TABLE.txt) into you system. Then call the method ReadTable.SetCustomFunctionModule("Z_XTRACT_IS_TABLE") before running the extraction. Please have a look [here](http://help.theobald-software.com/ERPConnect-EN/default.aspx?pageid=reading-sap-tables-directly-with-readtable) to learn more about the installation of the function module.
+- Install the function module [Z_XTRACT_IS_TABLE](http://www.theobald-software.com/download/Xtractis/Z_XTRACT_IS_TABLE.txt) into you system. Then call the method ReadTable.SetCustomFunctionModule("Z_XTRACT_IS_TABLE") before running the extraction. Please have a look [here](https://help.theobald-software.com/en/erpconnect/special-classes/reading-sap-tables-directly-with-readtable) to learn more about the installation of the function module.
 
 **ERPConnect Exception - DATA_BUFFER_EXCEEDED**
 
@@ -103,7 +103,7 @@ This error comes from a bug in one of the SAP's own function modules. The tables
 This error comes from a bug in one of SAP's own function modules. The tables that cause the bug contain at least one column of type F (floating point). There are two ways to avoid this error:
 
 - Create a view in SAP over the table that causes the error. Leave out all columns of type F and use the ReadTable class to run the view instead of the table.
-- Install the function module [Z_XTRACT_IS_TABLE](https://files.theobald-software.com/download/XtractIS/Z_XTRACT_IS_TABLE.txt) into you system. Then call the method ReadTable.SetCustomFunctionModule("Z_XTRACT_IS_TABLE") before running the extraction. Please have a look [here](http://help.theobald-software.com/ERPConnect-EN/default.aspx?pageid=reading-sap-tables-directly-with-readtable) to learn more about the installation of the function module.
+- Install the function module [Z_XTRACT_IS_TABLE](https://files.theobald-software.com/download/XtractIS/Z_XTRACT_IS_TABLE.txt) into you system. Then call the method ReadTable.SetCustomFunctionModule("Z_XTRACT_IS_TABLE") before running the extraction. Please have a look [here](https://help.theobald-software.com/en/erpconnect/special-classes/reading-sap-tables-directly-with-readtable) to learn more about the installation of the function module.
 
 
 #### Queries

@@ -16,6 +16,6 @@ If done, you can use the SSIS Variables in the DeltaQ component in the correspon
 
 ![SSISVariablesInDeltaQComp](/img/contents/SSISVariablesInDeltaQComp.png){:class="img-responsive"}
 
-How to set SSIS variables in the Configurations, SQL-Jobagent or dtexec is shown in the following article at BIDN.com:
+How to set SSIS variables in the Configurations, SQL-Jobagent or dtexec is shown in the following article:
 
-[http://www.bidn.com/blogs/DevinKnight/ssis/1655/passing-values-into-an-ssis-package-at-runtime-from-outside-the-package](http://www.bidn.com/blogs/DevinKnight/ssis/1655/passing-values-into-an-ssis-package-at-runtime-from-outside-the-package)
+[https://devinknightsql.com/2011/03/14/passing-values-into-an-ssis-package-at-runtime-from-outside-the-package/](https://devinknightsql.com/2011/03/14/passing-values-into-an-ssis-package-at-runtime-from-outside-the-package/)

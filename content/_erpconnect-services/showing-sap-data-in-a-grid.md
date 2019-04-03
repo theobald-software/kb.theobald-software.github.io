@@ -333,11 +333,11 @@ Using external references of bootstrap library and jQuery the tables can be alig
 
 ![CustomerGetSPOnpremiseBootstrapTable](/img/contents/CustomerGetSPOnpremiseBootstrapTable.jpg){:class="img-responsive"}
 
-Download the wsp [here](/files/KE_SP_ECS_JS_CustomerGet.wsp), and aspx page [here](/files/KE_SP_ECS_JS_CustomerGet.aspx).
+Download the wsp [here](/files/KE_SP_ECS_JS_CustomerGet.wsp), and aspx page [here](/files/KE_SP_ECS_JS_CustomerGet.aspx.txt).
 
 Related links:
 
-[1] [http://help.theobald-software.com/TheobaldSoftwareGmbH/default.aspx?pageid=erpconnect_services_and_ajax_(jquery)&skin=ECS_EN](http://help.theobald-software.com/TheobaldSoftwareGmbH/default.aspx?pageid=erpconnect_services_and_ajax_(jquery)&skin=ECS_EN)
+[1] [https://help.theobald-software.com/en/erpconnect-services/ecs/erpconnect-services-runtime/web-services](https://help.theobald-software.com/en/erpconnect-services/ecs/erpconnect-services-runtime/web-services)
 
 Links in article:
 

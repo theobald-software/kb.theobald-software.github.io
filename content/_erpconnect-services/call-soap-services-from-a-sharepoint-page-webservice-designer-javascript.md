@@ -74,7 +74,7 @@ b. Consume this Service from a SharePoint Wiki page with ScriptEditor using clie
 
 We are going to deploy a simple WSD-Service called “SAPCustomerWebService” in SharePoint (WSD Template could be found in the download section at the bottom in the archive, extension wcsm). To find instructions for writing (designing) a service, using the WebService Designer please check our documentation:
 
-[http://help.theobald-software.com/ERPConnect-Services-EN/default.aspx?pageid=overview1](http://help.theobald-software.com/ERPConnect-Services-EN/default.aspx?pageid=overview1)
+[https://help.theobald-software.com/en/erpconnect-services/ecs/webservice-designer](https://help.theobald-software.com/en/erpconnect-services/ecs/webservice-designer)
 
 To open a project in the WebService Designer click on "Open From File" (1), select a Service name (2) and please set your SAP (3) and SharePoint (4) connections:
 

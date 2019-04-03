@@ -26,4 +26,4 @@ Please use the conversion preparer before loading the package into the newer ver
 
 You can find details in our Onlinehelp following this link:
 
-[http://help.theobald-software.com/Xtract-IS-EN/default.aspx?pageid=vs-2005-2008-migration](http://help.theobald-software.com/Xtract-IS-EN/default.aspx?pageid=vs-2005-2008-migration)
+[https://help.theobald-software.com/en/xtract-is/requirements-and-installation/ssis-migration](https://help.theobald-software.com/en/xtract-is/requirements-and-installation/ssis-migration)

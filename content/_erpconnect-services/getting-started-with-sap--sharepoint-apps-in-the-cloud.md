@@ -76,7 +76,7 @@ You should understand that there are at least two integral parts to bring such a
 
 Our proposed implementation architecture:
 
-![Company_Presentation_EN.pptx](/img/contents/Company_Presentation_EN.pptx.jpg){:class="img-responsive"}
+![Company_Presentation_EN.pptx](/img/Company_Presentation_EN.pptx.jpg){:class="img-responsive"}
 
 ### 2. Objective
 
@@ -91,7 +91,7 @@ We are going to write a NAPA-App, in the context of SharepointOnline (Office365)
 
 Let us write a simple App which loads some Customers from SAP, using Functional Module SD_RFC_CUSTOMER_GET, and shows them in a simple table.
 
-![wireframe](/img/contents/_wireframe.png){:class="img-responsive"}
+![wireframe](/img/_wireframe.png){:class="img-responsive"}
 
 #### 2.3 Prerequisites
 
@@ -105,13 +105,13 @@ We will need SharePoint Online access administration rights to install the NAPA-
 
 Login to https://sharepoint.com as ADMINISTRATOR of SharePoint (so you can create a Site Collection, not just a subsite) and go to “SharePoint” (2) in the “Admin-Menu” (1):
 
-![Manage site collections](/img/contents/Manage-site-collections.jpg){:class="img-responsive"}
+![Manage site collections](/img/Manage-site-collections.jpg){:class="img-responsive"}
 
 #### 3.2 Site-Collection Type
 
 Then Create a DEVELOPMENT (important) Website, clicking “New” (3) and then Private Site:
 
-![2014-10-20-09_52_56-Manage-site-collections](/img/contents/2014-10-20-09_52_56-Manage-site-collections.png){:class="img-responsive"}
+![2014-10-20-09_52_56-Manage-site-collections](/img/2014-10-20-09_52_56-Manage-site-collections.jpg){:class="img-responsive"}
 
 After roughly 5 minutes the website will be active.
 
@@ -123,23 +123,23 @@ Install NAPA-App (Online App-Programming environment). Note, you have to be SITE
 
 The following screenshots will guide you through the installation.
 
-![TheosDevSiteCollection-DevHome](/img/contents/TheosDevSiteCollection-DevHome.jpg){:class="img-responsive"}
+![TheosDevSiteCollection-DevHome](/img/TheosDevSiteCollection-DevHome.jpg){:class="img-responsive"}
 
-![Your-Apps](/img/contents/Your-Apps.jpg){:class="img-responsive"}
+![Your-Apps](/img/Your-Apps.jpg){:class="img-responsive"}
 
-![SharePoint-Store](/img/contents/SharePoint-Store.jpg){:class="img-responsive"}
+![SharePoint-Store](/img/SharePoint-Store.jpg){:class="img-responsive"}
 
-![2014-10-20-10_13_14-SharePoint-Store](/img/contents/2014-10-20-10_13_14-SharePoint-Store.jpg){:class="img-responsive"}
+![2014-10-20-10_13_14-SharePoint-Store](/img/2014-10-20-10_13_14-SharePoint-Store.jpg){:class="img-responsive"}
 
-![2014-10-20-10_12_39-Your-Apps](/img/contents/2014-10-20-10_12_39-Your-Apps.jpg){:class="img-responsive"}
+![2014-10-20-10_12_39-Your-Apps](/img/2014-10-20-10_12_39-Your-Apps.jpg){:class="img-responsive"}
 
 #### 3.4 NAPA Project
 
 Start NAPA by going to “Site Contents” and clicking the NAPA-App and create a new Sharepoint-App Project:
 
-![Site-Contents](/img/contents/Site-Contents.jpg){:class="img-responsive"}
+![Site-Contents](/img/Site-Contents.jpg){:class="img-responsive"}
 
-![Microsoft _Napa_ Office-365-Development-Tools](/img/contents/Microsoft_Napa_Office-365-Development-Tools.jpg){:class="img-responsive"}
+![Microsoft _Napa_ Office-365-Development-Tools](/img/Microsoft_Napa_Office-365-Development-Tools.jpg){:class="img-responsive"}
 
 That’s all. We are redirected to the Project-Code and can write the logic of our App.
 
@@ -154,16 +154,16 @@ Login to Azure Management Portal and create a new Azure ServiceBus entity (Servi
 
 [https://manage.windowsazure.com](https://manage.windowsazure.com)
 
-![Service-Bus-Windows-Azure](/img/contents/Service-Bus-Windows-Azure.jpg){:class="img-responsive"}
+![Service-Bus-Windows-Azure](/img/Service-Bus-Windows-Azure.jpg){:class="img-responsive"}
 
 #### 4.2 Retrieve connection details
 
 Copy connection string, we will need it later: 
 
-![15_24_21-Service Bus-Windows-Azure](/img/contents/15_24_21-Service-Bus-Windows-Azure.png){:class="img-responsive"}
+![15_24_21-Service Bus-Windows-Azure](/img/15_24_21-Service-Bus-Windows-Azure.png){:class="img-responsive"}
 
 
-![15_25_38-Service-Bus-Windows-Azure](/img/contents/15_25_38-Service-Bus-Windows-Azure.jpg){:class="img-responsive"}
+![15_25_38-Service-Bus-Windows-Azure](/img/15_25_38-Service-Bus-Windows-Azure.jpg){:class="img-responsive"}
 
 ### 5. ECSCore component
 
@@ -189,17 +189,17 @@ http://localhost:8085 (it is port 8085, provided that you have selected the defa
 
 Select “Services” > “Add” to Add SAP connection.
 
-![ECS-Core-Management-Add](/img/contents/ECS-Core-Management-Add.jpg){:class="img-responsive"}
+![ECS-Core-Management-Add](/img/ECS-Core-Management-Add.jpg){:class="img-responsive"}
 
 After the Service is created, specify, which users are allowed to use it:
 
-![ECS-Core-Management-Edit-Users](/img/contents/ECS-Core-Management-Edit-Users.jpg){:class="img-responsive"}
+![ECS-Core-Management-Edit-Users](/img/ECS-Core-Management-Edit-Users.jpg){:class="img-responsive"}
 
 #### 5.4 API-Key
 
 Now we need to generate an API-Key, so queries can authenticate the source (it supports more secure models with signatures, which can be used as well).
 
-![ECS-Core-Management-API-Keys](/img/contents/ECS-Core-Management-API-Keys.jpg){:class="img-responsive"}
+![ECS-Core-Management-API-Keys](/img/ECS-Core-Management-API-Keys.jpg){:class="img-responsive"}
 
 Copy this key (!), we will need it later from tEcs Client Library (connection.ecs.coreApiKey).
 
@@ -209,9 +209,9 @@ Add Azure ServiceBus registration details.
 
 Settings > Azure Service Bus > Add Service Bus Registration and paste the Connection String from paragraph 4.
 
-![ECS-Core-Management-Service-Bus-Registrations](/img/contents/ECS-Core-Management-Service-Bus-Registrations.jpg){:class="img-responsive"}
+![ECS-Core-Management-Service-Bus-Registrations](/img/ECS-Core-Management-Service-Bus-Registrations.jpg){:class="img-responsive"}
 
-![ECS-Core-Management-Service-Bus-Registrations-01](/img/contents/ECS-Core-Management-Service-Bus-Registrations-01.jpg){:class="img-responsive"}
+![ECS-Core-Management-Service-Bus-Registrations-01](/img/ECS-Core-Management-Service-Bus-Registrations-01.jpg){:class="img-responsive"}
 
 #### 5.6 Checking consistency
 
@@ -219,11 +219,11 @@ Test SAP connection and Azure Service Bus registration at the default page of EC
 
 http://localhost:8080
 
-![ECS-Core-Tasks](/img/contents/ECS-Core-Tasks.jpg){:class="img-responsive"}
+![ECS-Core-Tasks](/img/ECS-Core-Tasks.jpg){:class="img-responsive"}
 
-![ECS-Core-Azure-Service-Bus-Registration](/img/contents/ECS-Core-Azure-Service-Bus-Registration.jpg){:class="img-responsive"}
+![ECS-Core-Azure-Service-Bus-Registration](/img/ECS-Core-Azure-Service-Bus-Registration.jpg){:class="img-responsive"}
 
-![15_40_40-ECS-Core-Service-Tests](/img/contents/15_40_40-ECS-Core-Service-Tests.jpg){:class="img-responsive"}
+![15_40_40-ECS-Core-Service-Tests](/img/15_40_40-ECS-Core-Service-Tests.jpg){:class="img-responsive"}
 
 ### 6. Realization and putting it all together
 
@@ -248,7 +248,7 @@ Please visit: [http://static.theobald-software.com/tEcs/](http://static.theobald
 <script src="//static.theobald-software.com/tEcs/4.6.0/theobald.ecs.min.js"></script>
 ```
 
-![Theobald_TECS_App-Napa](/img/contents/Theobald_TECS_App-Napa.png){:class="img-responsive"}
+![Theobald_TECS_App-Napa](/img/Theobald_TECS_App-Napa.jpg){:class="img-responsive"}
 
 iii. Give this div an ID, so we can put our content there:
 ```
@@ -359,13 +359,13 @@ We need to supply the function name and connection parameters such as Url to Ecs
 
 Click the deploy button on the left of the project and the App should go live in a minute. That’s all:
 
-![Theobald_TECS_App-Napa01](/img/contents/Theobald_TECS_App-Napa01.jpg){:class="img-responsive"}
+![Theobald_TECS_App-Napa01](/img/Theobald_TECS_App-Napa01.jpg){:class="img-responsive"}
 
 ### 7. Result
 
 As planned we get pretty fast response, as the table gets filled with SAP data:
 
-![Theobald_TECS_App](/img/contents/Theobald_TECS_App.jpg){:class="img-responsive"}
+![Theobald_TECS_App](/img/Theobald_TECS_App.jpg){:class="img-responsive"}
 
 ### 8. Notes
 
