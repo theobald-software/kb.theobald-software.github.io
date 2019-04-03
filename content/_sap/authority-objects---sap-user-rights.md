@@ -48,13 +48,13 @@ S_TABU_NAM       ACTVT = 03; TABLE = DD02V
 XXXX is the Authority Group for the table. To find out, which authority group belongs to which table look at table TDDAT (e.g. with SE16). 
 If the table is not listed there the authority group is &NC&. For authorising specific tables please use authorization object S_TABU_NAM instead of S_TABU_DIS.
 
-If our custom function modules like Z_THEO_READ_TABLE, Z_XTRACT_IS_TABLE_JOIN, (Z_XTRACT_IS_TABLE_COMPRESSION, Z_XTRACT_IS_TABLE) are used:
+If our custom function modules like Z_THEO_READ_TABLE, Z_XTRACT_IS_TABLE_JOIN are used:
 
 ```
 S_RFC            RFC_TYPE=FUGR ;RFC_NAME=XXXX ;ACTVT=16 ; 
 ```
 
-XXXX is here the name of the function group where the custom function module are located. 
+XXXX is the name of the function group where the custom function module are located. If the function modules were imported using our SAP transports, XXXX equals to *Z_THEO_READ_TABLE* and *ZXTRACTABAP*.  
 
 SAP role for table objects:
 
@@ -92,11 +92,11 @@ S_RFC            RFC_TYPE=FUGR ;RFC_NAME=AQRC ;ACTVT=16 ;
 Look up report, preview und execute:
 
 ```
-S_RFC            RFC_TYPE=FUGR ;RFC_NAME=XXXXX;ACTVT=16 ;
+S_RFC            RFC_TYPE=FUGR ;RFC_NAME=XXXX;ACTVT=16 ;
 S_GUI            ACTVT=61 
 ```
 
-XXXXX is the function group to which the function module Z_XTRACT_IS_REMOTE_REPORT belongs to.
+XXXX is the function group to which the function module  belongs to. XXXX is the name of the function group where the custom function module Z_XTRACT_IS_REMOTE_REPORT belongs to. If the function modules was imported using our SAP transport, XXXX equals to *ZXTRACTABAP*.
 
 Look up a report, preview und execute the report in a batch job.
 
@@ -116,13 +116,13 @@ XXXXX is the function group to which the function module Z_XTRACT_IS_REMOTE_REPO
 Authority objects needed for the customizing check:
 
 ```
-S_RFC RFC_TYPE = FUGR ;RFC_NAME=SUSR ; ACTVT=16 ;
-S_RFC RFC_TYPE = FUNC ; RFC_NAME= RFC_GET_SYSTEM_INFO ; ACTVT= 16
-S_ADMI_FCD S_ADMI_FCD = NADM
-S_TABU_DIS ACTVT = 02; DICBERCLS = SA
-S_TABU_DIS ACTVT = 03; DICBERCLS = SA
-S_TABU_NAM ACTVT = 02; TABLE = EDIPOA
-S_TABU_NAM ACTVT = 03; TABLE = EDIPOA
+S_RFC            RFC_TYPE=FUGR ;RFC_NAME=SUSR ;ACTVT=16 ;  
+S_RFC            RFC_TYPE=FUNC ;RFC_NAME=RFC_GET_SYSTEM_INFO ; ACTVT= 16; 
+S_ADMI_FCD       S_ADMI_FCD = NADM
+S_TABU_DIS       ACTVT = 02; DICBERCLS = SA
+S_TABU_DIS       ACTVT = 03; DICBERCLS = SA
+S_TABU_NAM       ACTVT = 02; TABLE = EDIPOA
+S_TABU_NAM       ACTVT = 03; TABLE = EDIPOA
 ```
 
 Activate a DataSource for the first time:
