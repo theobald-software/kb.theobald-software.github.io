@@ -1,7 +1,7 @@
-DATE                                              20190403                                          160834
+DATE                                              20190404                                          081333
 RELEASE                                           740
 LOADED_AGRS                                       ZXTABLE
-AGR_DEFINE                                        800ZXTABLE                                                     BABI        20170824083026000000000000000WEINREICH   20190403160814000000000000000
+AGR_DEFINE                                        800ZXTABLE                                                     BABI        20170824083026000000000000000WEINREICH   20190404081317000000000000000
 AGR_1250                                          800ZXTABLE                       000001S_RFC     ZXTABLE___00    U  O000004Berechtigungsprüfung beim RFC-Zugriff
 AGR_1250                                          800ZXTABLE                       000002S_TABU_DISZXTABLE___00    U  O000010Tabellenpflege (über Standardtools wie zB SM30)
 AGR_1250                                          800ZXTABLE                       000003S_TABU_NAMZXTABLE___00    U  O000014Tabellenzugriff über generische Standardtools
@@ -16,6 +16,7 @@ AGR_1251                                          800ZXTABLE                    
 AGR_1251                                          800ZXTABLE                       000009S_TABU_DISZXTABLE___00    DICBERCLS &NC&                                                                            U  O000012
 AGR_1251                                          800ZXTABLE                       000010S_TABU_NAMZXTABLE___00    ACTVT     03                                                                              U  O000015
 AGR_1251                                          800ZXTABLE                       000011S_TABU_NAMZXTABLE___00    TABLE     *                                                                               U  O000016
+AGR_1251                                          800ZXTABLE                       000012S_RFC     ZXTABLE___00    RFC_NAME  Z_THEO_LEGACY                                                                   U  O000006
 AGR_TEXTS                                         800ZXTABLE                       D00000Authority Role for Theobald Products
 AGR_FLAGS                                         800ZXTABLE                       COLL_AGR  BABI        20170824083026BABI        20170824083040
 AGR_FLAGS                                         800ZXTABLE                       DEVCLASS  BABI        20170824083026BABI        20170824083026
@@ -24,8 +25,8 @@ AGR_FLAGS                                         800ZXTABLE                    
 AGR_FLAGS                                         800ZXTABLE                       EXTSAP_F03BABI        20170824083026BABI        20170824083026
 AGR_FLAGS                                         800ZXTABLE                       EXTSAP_F04BABI        20170824083026BABI        20170824083026
 AGR_FLAGS                                         800ZXTABLE                       EXTSAP_F05BABI        20170824083026BABI        20170824083026
-AGR_FLAGS                                         800ZXTABLE                       FORCE_MIX BABI        20170824083258WEINREICH   20190403160813
+AGR_FLAGS                                         800ZXTABLE                       FORCE_MIX BABI        20170824083258WEINREICH   20190404081314
 AGR_FLAGS                                         800ZXTABLE                       MASTER_LANBABI        20170824083026BABI        20170824083026D
 AGR_FLAGS                                         800ZXTABLE                       RESP_USER             20170824083026BABI        20170824083026
-AGR_TIME                                          800ZXTABLE                       PROFILE   BABI        20170824083258000000000000000WEINREICH   20190403160813000000000000000
+AGR_TIME                                          800ZXTABLE                       PROFILE   BABI        20170824083258000000000000000WEINREICH   20190404081314000000000000000
 AGR_LSD                                           800ZXTABLE                                                     D
