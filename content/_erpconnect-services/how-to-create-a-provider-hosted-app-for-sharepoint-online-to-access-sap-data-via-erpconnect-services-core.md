@@ -395,11 +395,11 @@ Related articles
 
 Sign up for an Office 365 Developer Subscription, set up your tools and environment, and start deploying apps
 
-[http://msdn.microsoft.com/en-us/library/office/fp179924(v=office.15).aspx](http://msdn.microsoft.com/en-us/library/office/fp179924(v=office.15).aspx)
+[https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/set-up-a-development-environment-for-sharepoint-add-ins-on-office-365](https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/set-up-a-development-environment-for-sharepoint-add-ins-on-office-365)
 
 How to: Create a Developer Site within your existing Office 365 subscription
 
-[http://msdn.microsoft.com/en-us/library/office/jj692554(v=office.15).aspx](http://msdn.microsoft.com/en-us/library/office/jj692554(v=office.15).aspx)
+[https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/create-a-developer-site-on-an-existing-office-365-subscription](https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/create-a-developer-site-on-an-existing-office-365-subscription)
 
 Getting started with Azure AD
 
