@@ -35,3 +35,10 @@ You only need to run the following line with the name of the extraction as an ar
 ```
 xubatch.bat http://localhost:8065/?name=MAKT
 ```
+
+![XU_batch](/img/contents/xu_batch_bat_screenshot.png}
+
+You can see the following event in the Event Viewer:
+
+![event_viewer](/img/contents/event_viewer_result.png}
+![error_event_viewer](/img/contents/error_event_viewer.png}
