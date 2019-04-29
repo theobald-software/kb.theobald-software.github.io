@@ -15,7 +15,7 @@ The Target Principal Name must correspond either to the UPN of the user under wh
 
 By default, the XU Service is executed under the Local System Account. 
 
-![XU3_Default Log on](/img/content/xu/log_on_local_system_account.png){:class="img-responsive"}
+![XU3_Default Log on](/img/contents/log_on_local_system_account.png){:class="img-responsive"}
 
 In the AD, this user acts as a computer account. By default, the SPN is assigned to the computer account in the following form:
 ```
@@ -29,7 +29,7 @@ Example:
 |Target Principal| HOST/TODD.theobald.local@THEOBALD.LOCAL|
 
 
-![XU3_Designer_Authentication](/img/content/XU3_Designer_Authentication.png){:class="img-responsive"}
+![XU3_Designer_Authentication](/img/contents/XU3_Designer_Authentication.png){:class="img-responsive"}
 
 Therefore, the Target Principal Name only needs to be changed in the login window if the service account of the XU Windows Service has been changed.
 
@@ -37,7 +37,8 @@ Therefore, the Target Principal Name only needs to be changed in the login windo
 Deviating from the standard, the service can also be executed under a different account. 
 For this the setting *This account* is selected.
 
-![XU Log On UPN](/img/content/xu/log_on_diesen_account.png){:class="img-responsive"}
+![XU Log On UPN](/img/contents/log_on_diesen_account.png){:class="img-responsive"}
+
 
 An UPN is assigned in the following form:
 ```
@@ -51,7 +52,7 @@ Example:
 |Target Principal |`steffan@theobald.local`|
 
 
-![XU TPN UPN](/img/content/xu/xu_UPN_steffan@.png){:class="img-responsive"}
+![XU TPN UPN](/img/contents/xu_UPN_steffan@.png){:class="img-responsive"}
 
 For further information please refer to the official [Windows Library](https://msdn.microsoft.com/en-us/library/windows/desktop/aa380525(v=vs.85).aspx)
 
@@ -68,7 +69,7 @@ The service class and host name are at least required for authenticating a servi
 
 For further information please refer to the official [Windows Library](https://msdn.microsoft.com/en-us/library/ms677949(VS.85).aspx)
 
-![AD User and computers - SPN](/img/content/xu/xu_ad_spn.png){:class="img-responsive"}
+![AD User and computers - SPN](/img/contents/xu_ad_spn.png){:class="img-responsive"}
 
 When dialing into a remote server where the service is not used in the local environment, both an UPN and an SPN can be used in the following form:
 
