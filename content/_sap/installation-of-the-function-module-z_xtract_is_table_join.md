@@ -12,10 +12,7 @@ This article describes how to install the function Z_XTRACT_IS_TABLE_JOIN.
 
 ### Step-by-step Guide - How to install Z_XTRACT_IS_TABLE_JOIN
 
-#### Step 1 - DDIC Object**
-
-First we need 5 structures (SE11-> DataType -> Create -> Structure). Please have a look at the screenshot below.
-
+**Step 1 - DDIC Object**<br>
 First we need 5 structures (SE11-> DataType -> Create -> Structure). Please have a look at the screenshot below.
 
 ![Z_XTRACT_TABLE_JOIN_01](/img/contents/Z_XTRACT_TABLE_JOIN_01.png){:class="img-responsive"}
@@ -28,7 +25,7 @@ First we need 5 structures (SE11-> DataType -> Create -> Structure). Please have
 
 ![Z_XTRACT_TABLE_JOIN_03_03](/img/contents/Z_XTRACT_TABLE_JOIN_03_03.png){:class="img-responsive"}
 
-#### Step 2 – Create a new function module
+**Step 2 – Create a new function module**
 
 Call transaction SE37 and create a new function module named Z_XTRACT_IS_TABLE_JOIN. 
 You can use an existing function group or create a new one. 
@@ -38,7 +35,7 @@ This is also valid for the development class (Package).
 
 ![Z_XTRACT_TABLE_JOIN_04](/img/contents/Z_XTRACT_TABLE_JOIN_04.png){:class="img-responsive"}
 
-#### Step 3 – Parameters
+**Step 3 – Parameters**
 
 Define the import parameters: 
 
@@ -52,7 +49,7 @@ Define the tables:
 
 ![Z_XTRACT_TABLE_JOIN_07](/img/contents/Z_XTRACT_TABLE_JOIN_07.png){:class="img-responsive"}
 
-#### Step 4 - Code
+**Step 4 - Code**
 
 1. You need to fill in the code attached (Z_XTRACT_IS_TABLE_JOIN_GLOBALDATA) into the Global Data of the function module (menu Goto -> Global Data).
 2. The ABAP sourcecode is placed in the attached file Z_XTRACT_IS_TABLE_JOIN.txt. Use Ctrl + C and Ctrl + V to paste the code in the source code editor. Save the function module and activate it.
