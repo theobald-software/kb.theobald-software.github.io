@@ -1,6 +1,6 @@
 ---
 layout: page
-title: How-to-use-target-principal-field(TPN)
+title: How to use target principal field (TPN)
 description: How-to-use-target-principal-field(TPN)
 permalink: /:collection/:path
 weight: 4
@@ -77,7 +77,7 @@ When dialing into a remote server where the service is not used in the local env
 |field | value|
 |:---|:----|
 |XU Server|		 theosoftw2012r2.theobald.local:8064|
-|Target Principal as UPN |`svc_xusrv@THEOBALD.LOCAL`|
+|Target Principal as UPN |`DomainAdminUser@THEOBALD.LOCAL`|
 
 |field | value|
 |:---|:----|
