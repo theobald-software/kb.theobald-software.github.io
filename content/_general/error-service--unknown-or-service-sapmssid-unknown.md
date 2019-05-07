@@ -27,11 +27,11 @@ sapmsECC  3600/tcp
 nn is the instance number of the SAP system (e.g. 00 or 99). For System ID (SID) ECC and instance number 12 please set:  
 sapmsECC 3612/tcp
 
-IMPORTANT:
-**********
+**IMPORTANT**<br>
 When inserting this into this file, please ensure that the last entry is always terminated with a `return`. For some platforms, this may cause problems, as the last entry may not be recognized. 
 
-Warning: the services file should not get any extension. The name should stay services and should not become e.g. services.txt 
+**WARNING**<br>
+The services file should not get any extension. The name should stay services and should not become e.g. services.txt 
 
 After editing the file you may need to restart the Xtract service or the machine.   
 
