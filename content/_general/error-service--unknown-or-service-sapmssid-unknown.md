@@ -29,10 +29,10 @@ sapmsECC 3612/tcp
 
 IMPORTANT:
 **********
-When inserting this into this file, pleas ensure that the last entry is always terminated with a <return>. For some platforms, this may cause problems, as the last entry may not be recognized. 
+When inserting this into this file, please ensure that the last entry is always terminated with a `return`. For some platforms, this may cause problems, as the last entry may not be recognized. 
 
 Warning: the services file should not get any extension. The name should stay services and should not become e.g. services.txt 
 
 After editing the file you may need to restart the Xtract service or the machine.   
 
-SAP Note: https://launchpad.support.sap.com/#/notes/52959 
+[SAP Note 52959](https://launchpad.support.sap.com/#/notes/52959) 
