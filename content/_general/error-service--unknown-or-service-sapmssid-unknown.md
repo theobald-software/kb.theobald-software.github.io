@@ -9,24 +9,29 @@ weight: 7
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
 
 It could be that you get the following error while connecting to SAP:
+```
+ERROR service ‚?‘ unknown
+```
+The problem is that there are sapdp* (eg. sapdp00  3200/tcp) entries missing in the file services in the folder "\Windows\System32\drivers\etc".
 
-      ERROR service ‚?‘ unknown
+Please append the entries in the file *services* you can find at the bottom of this article to your services file.
 
-The problem is that there are sapdp* (eg. sapdp00  3200/tcp) entries missing in the file services  in the folder "\Windows\System32\drivers\etc".
-
-Please append the entries in the file services.txt you can find at the bottom of this article to your services file.
-
-If you get the error service sapms<SID> unknown, you have to append the following line to the file services:
-
-sapms<SID>  3600/tcp  
-
+If you get the 
+```
+ERROR service sapms<SID> unknown 
+```
+you have to append the following line to the file *services*. nn is the instance number of the SAP system (e.g. 00 or 99).
+```
+sapms<SID>  36<nn>/tcp  
+```
 For exapmle, if your SID is ECC for example, the line looks like the following one:
-
+```
 sapmsECC  3600/tcp  
-
-nn is the instance number of the SAP system (e.g. 00 or 99). For System ID (SID) ECC and instance number 12 please set:  
+```
+For System ID (SID) ECC and instance number 12 please set:  
+```
 sapmsECC 3612/tcp
-
+```
 **IMPORTANT**<br>
 When inserting this into this file, please ensure that the last entry is always terminated with a `return`. For some platforms, this may cause problems, as the last entry may not be recognized. 
 
