@@ -51,3 +51,8 @@ However, with short interval scheduling and heavy paralellism, dedicated package
 
 **The RFC connection check in SAP transaction SM59 fails** 
 * Please see this [kb article](https://kb.theobald-software.com/troubleshooting/sm59-rfc---connection-test-fails)
+
+
+**Error after SAP system upgrade**
+* You can an error message similar to this: *Error while trying to obtain information about source and destination in table RSBASIDOC..Object ERPCLN800 / XTRACT01 inactive*
+* Please see our online help on *Customizing for DeltaQ* and perform step 5 (execute RSAS_RBWBCRL_STORE)
