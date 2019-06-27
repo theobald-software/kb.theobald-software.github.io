@@ -24,7 +24,7 @@ S_RFC            RFC_TYPE=FUGR ;RFC_NAME=RFC1 ;ACTVT=16 ;
 
 SAP role for general authority objects:
 
-[ZXTGENERAL.SAP (209.76 KB)](/files/ZXTGENERAL.SAP)
+[ZXTGENERAL.SAP (4 KB)](/files/ZXTGENERAL.SAP)
 
 #### Table
 
@@ -58,7 +58,7 @@ XXXX is the name of the function group to which the custom function module belon
 
 SAP role for table objects:
 
-[ZXTABLE.SAP (209.76 KB)](/files/ZXTABLE.SAP)
+[ZXTABLE.SAP (6 KB)](/files/ZXTABLE.SAP)
 
 #### BW Query / BW Cube
 
@@ -188,7 +188,7 @@ S_TABU_DIS                     ACTVT = 03; DICBERCLS = &NC&
 
 SAP role for passing customizing check DeltaQ:
 
-[DELTAQ_CUSTOMIZING_CHECK.SAP (16.7 KB)](/files/DELTAQ_CUSTOMIZING_CHECK.SAP)
+[DELTAQ_CUSTOMIZING_CHECK.SAP (17 KB)](/files/DELTAQ_CUSTOMIZING_CHECK.SAP)
 
 #### OHS
 
