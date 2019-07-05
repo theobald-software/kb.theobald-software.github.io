@@ -22,10 +22,6 @@ S_RFC            RFC_TYPE=FUGR ;RFC_NAME=SYST ;ACTVT=16 ;
 S_RFC            RFC_TYPE=FUGR ;RFC_NAME=RFC1 ;ACTVT=16 ; 
 ```
 
-SAP role for general authority objects:
-
-[ZXTGENERAL.SAP (4 KB)](/files/ZXTGENERAL.SAP)
-
 #### Table
 
 Look up tables and table meta data:
@@ -55,10 +51,6 @@ S_RFC            RFC_TYPE=FUGR ;RFC_NAME=XXXX ;ACTVT=16 ;
 ```
 
 XXXX is the name of the function group to which the custom function module belongs. If the function modules were imported using our SAP transports, XXXX equals to *Z_THEO_READ_TABLE* in case of SAP transport *Z_THEO_READ_TABLE.zip* and *ZXTRACTABAP* in case of SAP transport *thtrans.zip*.
-
-SAP role for table objects:
-
-[ZXTABLE.SAP (6 KB)](/files/ZXTABLE.SAP)
 
 #### BW Query / BW Cube
 
@@ -111,9 +103,18 @@ S_GUI            ACTVT=61;
 
 XXXXX is the function group to which the function module Z_XTRACT_IS_REMOTE_REPORT belongs to.
 
-SAP role for ABAP Reports:
 
-[ZXREPORT.SAP (5 KB)](/files/ZXREPORT.SAP)
+#### ODP
+
+Authority objects needed for the Operational Data Provisioning (ODP):
+
+```
+S_RFC            RFC_TYPE=FUGR, FUNC ; RFC_NAME=RODPS_REPL ; ACTVT=16;                  
+S_TCODE          TCD=BSANL_ACWB, ODQMON, RODPS_ODP_IMG, RSO2, RSOR, RSRTS_ODP_DIS;            
+S_ADMI_FCD       Value=NADM; 
+S_APPL_LOG       ALG_OBJECT=ODQ; ALG_SUBOBJ=*; ACTVT=03, 06;
+S_RO_OSOA        OLTPSOURCE=*; OSOAAPCO=*; OSOAPART=DATA, DEFINITION; ACTVT=03;
+```
 
 #### DeltaQ
 
@@ -185,10 +186,6 @@ S_RFC           ACTVT = 16;  RFC_NAME = RSA1_OLTPSOURCE_GET_ALL; RFC_TYPE = FUNC
 S_RFC           ACTVT = 16;  RFC_NAME = RSA1_OLTPSOURCE_GET_SELECTIONS; RFC_TYPE = FUNC
 S_TABU_DIS                     ACTVT = 03; DICBERCLS = &NC&
 ```
-
-SAP role for passing customizing check DeltaQ:
-
-[DELTAQ_CUSTOMIZING_CHECK.SAP (17 KB)](/files/DELTAQ_CUSTOMIZING_CHECK.SAP)
 
 #### OHS
 
