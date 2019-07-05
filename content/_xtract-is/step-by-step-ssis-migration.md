@@ -13,7 +13,7 @@ The following instructions should be followed carefully to ensure the executabil
 
 Necessary prerequisite for the migration to a new SQL Server version is the installation of the latest XTRACT IS version on the new server environment or the execution of the existing XtractISSetup.exe. 
 
-This can be downloaded via the access to our [customer portal}(https://portal.theobald-software.com/Auth/Login).
+This can be downloaded via the access to our [customer portal](https://portal.theobald-software.com/Auth/Login).
 
 #### The functionality of the SSIS packages and SSIS projects could be ensured by the following order:
 
