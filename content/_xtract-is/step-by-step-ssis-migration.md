@@ -22,7 +22,7 @@ This can be downloaded via the access to our [customer portal}(https://portal.th
 3. Right click on the project and open the project properties
 4. Change the Target Deployment Model to SQL Server 2016  
 5. Then open the SSIS packages in the project 
-6. The packages should open and display without error, <could not aquire Xtract connection> 
+6. The packages should open and display without error, `could not aquire Xtract connection` 
 7. Save the project in VS 2017 or SSDT 2017
 8. Right click on the project and open the project properties
 9. Renewed conversion to Target Deployment version SQL Server 2017 
