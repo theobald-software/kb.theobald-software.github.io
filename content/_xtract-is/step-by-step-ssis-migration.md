@@ -5,7 +5,6 @@ description: Step-by-step instructions for migrating SSIS 2008/2012 packages to 
 permalink: /:collection/:path
 weight: 99
 ---
-Step-by-step instructions for migrating SSIS 2008/2012 packages to SSIS 2017
 
 To upgrade to the current SQL Server version, existing SSIS packages must be converted and integrated into the new SQL Server 2017 environment in a specific order. 
 
