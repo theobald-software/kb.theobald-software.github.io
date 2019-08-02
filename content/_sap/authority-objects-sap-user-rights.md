@@ -86,7 +86,9 @@ S_RFC            RFC_TYPE=FUGR; RFC_NAME=XXXX; ACTVT=16
 S_GUI            ACTVT=61 
 ```
 
-XXXX (stands for a placeholder) is the name of the function group to which the custom function module Z_XTRACT_IS_REMOTE_REPORT belongs. 
+XXXX (stands for a placeholder) is the name of the function group to which the custom function module Z_XTRACT_IS_REMOTE_REPORT belongs.
+
+
 Look up a report, preview und execute the report in a batch job.
 
 ```
