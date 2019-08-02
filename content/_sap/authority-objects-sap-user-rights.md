@@ -9,7 +9,6 @@ weight: 1
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
 
 To use our products you need an SAP user with the following authority objects. <br>
-You can also use and upload the corresponding SAP role files (e.g. ZXTGENERAL.SAP) with T-Code *PFCG* in SAP. 
 
 Please redirect this article to your SAP Basis admins to get the relevant authority objects you need for your user.  
 
@@ -52,7 +51,7 @@ If our custom function modules like Z_THEO_READ_TABLE, Z_XTRACT_IS_TABLE_JOIN ar
 S_RFC            RFC_TYPE=FUGR; RFC_NAME=XXXX; ACTVT=16 
 ```
 
-XXXX (stands for a placeholder) is the name of the function group to which the custom function module belongs. If the function modules were imported using our SAP transports, XXXX equals to *Z_THEO_READ_TABLE* in case of SAP transport *Z_THEO_READ_TABLE.zip* and *ZXTRACTABAP* in case of SAP transport *thtrans.zip*.
+XXXX (stands for a placeholder) is the name of the function group to which the custom function module belongs. 
 
 #### BW Query / BW Cube
 
@@ -70,9 +69,6 @@ Optional (needed for date conversion):
 ```
 S_TABU_NAM       ACTVT=03; TABLE=DD03L
 ```
-
-
-
 #### SAP Query
 
 Look up and execute a query:
@@ -90,8 +86,7 @@ S_RFC            RFC_TYPE=FUGR; RFC_NAME=XXXX; ACTVT=16
 S_GUI            ACTVT=61 
 ```
 
-XXXX (stands for a placeholder) is the name of the function group to which the custom function module Z_XTRACT_IS_REMOTE_REPORT belongs. If the function module was imported using our SAP transport, XXXX equals to *ZXTRACTABAP*.
-
+XXXX (stands for a placeholder) is the name of the function group to which the custom function module Z_XTRACT_IS_REMOTE_REPORT belongs. 
 Look up a report, preview und execute the report in a batch job.
 
 ```
