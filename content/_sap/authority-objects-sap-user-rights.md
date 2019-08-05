@@ -48,7 +48,14 @@ If the table is not listed there the authority group is &NC&. For authorising sp
 If our custom function modules like Z_THEO_READ_TABLE, Z_XTRACT_IS_TABLE_JOIN are used:
 
 ```
-S_RFC            RFC_TYPE=FUGR; RFC_NAME=XXXX; ACTVT=16 
+S_RFC            RFC_TYPE=FUGR; RFC_NAME=XXXX; ACTVT=16  
+```
+
+When executing our custom function module Z_THEO_READ_TABLE in background:
+
+```
+S_BTCH_ADM       BTCADMIN=Y
+S_BTCH_JOB       JOBGROUP=*; JOBACTION=RELE
 ```
 
 XXXX (stands for a placeholder) is the name of the function group to which the custom function module belongs. 
