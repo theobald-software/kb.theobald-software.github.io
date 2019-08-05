@@ -57,8 +57,8 @@ However, with short interval scheduling and heavy paralellism, dedicated package
 * You get an error message similar to this: *Error while trying to obtain information about source and destination in table RSBASIDOC..Object ERPCLN800 / XTRACT01 inactive*
 * Please see our online help on *Customizing for DeltaQ* and perform step 5 (execute RSAS_RBWBCRL_STORE)
 
-**RFC server test failed:  Error when opening an RFC connection (CPIC-CALL: 'ThSAPOCMINIT', communication rc: CM_ALLOCATE_FAILURE_RETRY (cmRc=2))
+**RFC server test failed:  Error when opening an RFC connection (CPIC-CALL: 'ThSAPOCMINIT', communication rc: CM_ALLOCATE_FAILURE_RETRY (cmRc=2))**
 * Please make sure, the RFC server program, e.g. XTRACT01, is allowed to [register on the SAP gateway](https://kb.theobald-software.com/sap/registering-rfc-server-in-sap-releases-in-kernel-release-720-and-higher).
 
-**Error ISOURCE_NOT_EXIST or GENERATION_ERROR when activating a DataSource
+**Error ISOURCE_NOT_EXIST or GENERATION_ERROR when activating a DataSource**
 * Please re-run function module RSAS_RBWBCRL_STORE as described in the DeltaQ customizing guide.
