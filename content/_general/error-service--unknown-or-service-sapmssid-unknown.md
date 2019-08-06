@@ -12,7 +12,7 @@ It could be that you get the following error while connecting to SAP:
 ```
 ERROR service ‚?‘ unknown
 ```
-The problem is that there are sapdp* (eg. sapdp00  3200/tcp) entries missing in the file services in the folder "\Windows\System32\drivers\etc".
+The problem is that there are sapdp* (eg. sapdp00  3200/tcp) entries missing in the file services in the folder `C:\Windows\System32\drivers\etc\services`
 
 Please append the entries in the file *services* you can find at the bottom of this article to your services file.
 
