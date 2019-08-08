@@ -1,0 +1,21 @@
+<html style='font-family: "segoe ui","helvetica neue", arial, helvetica, sans-serif;'><style>h1, h2, h3, h4, h5 {margin:0;padding:0;margin-top:24px;font-weight:600;} p {margin:0;padding:0;margin-top: 4px;opacity:0.9;}</style><body><h1>Xtract Universal 4.0</h1>
+<h2>General</h2>
+<ul>
+<li>New table component. <strong>Table Join component is now obsolete</strong>. Please use the new Table component for joins.</li>
+<li>New ODP component</li>
+<li>Introduced new column name style <code>PrefixedCode</code>. Column names will be in the format <code>SAPObject~ColumnName</code> (or adjusted to valid destination name).</li>
+<li>Improvements for UI and UX</li>
+<li>Minor bug fixes</li>
+</ul>
+<h2>Compatibility</h2>
+<p>The setup will automatically (unless started in silent mode or manually changed during installation) start the conversion of legacy configuration files. You can also manually run the <code>ConfigConverter.exe</code> after installation.</p>
+<h2>Other features</h2>
+<ul>
+<li>Changing the destination of multiple extractions at once now asks if settings should be copied or left as-is</li>
+</ul>
+<h2>Bug fixes</h2>
+<ul>
+<li>Fixed a bug that prevented the Designer from clearing the result cache and aborting extractions when Active Directory Access Control was activated on the web server</li>
+<li>Fixed a bug where the mass-update of destination settings used the last selected extraction as template instead of the extraction which was selected first</li>
+</ul>
+</body></html>
