@@ -8,9 +8,27 @@ weight: 1
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
 
-If you want to use the current date in a where clause, you have to convert the date into a format SAP understands. This is possible by using a Script Task.
+If you want to use the current date in a where clause, you have to convert the date into a format SAP understands. You can use the following two options to use user-defined variables for date values. 
 
-First we need to create an SSIS Variable called "TDatum" (data type String, scope Package).
+#### Variant 1 Using SSIS Expressions
+
+First we need to create an SSIS Variable called "TDatum" (data type [String], scope [PackageName]).
+
+![ssis_expression_Tdatum](/img/contents/ssis_expression_Tdatum.png){:class="img-responsive"}
+
+Then we open the expression builder via the [...] at the right margin.
+
+![evaluate_ssis_expression](/img/contents/evaluate_ssis_expression.png){:class="img-responsive"}
+
+In the expression builder, predefined functions can be used by SSIS. In our case we drag and drop Date/Time functions to the expression field. Since we have to convert the date format into a format readable by SAP, type casts are necessary and must be placed before the date function. Finally, the evaluate expression button can be used to check the syntax of the expression and the defined value is displayed in the Evaluate Value field.
+
+![ssis_expression_value](/img/contents/ssis_expression_value.png){:class="img-responsive"}
+
+If you confirm the expression builder with the ok key, the generated value is displayed in the user variable.
+
+#### Variant 2 using a script task in the control flow
+
+First we need to create an SSIS Variable called "TDatum" (data type [String], scope [PackageName]).
 
 ![ScriptTaskVariables](/img/contents/ScriptTaskVariables.jpg){:class="img-responsive"}
 
