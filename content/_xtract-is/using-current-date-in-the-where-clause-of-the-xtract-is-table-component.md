@@ -22,8 +22,7 @@ Then we open the expression builder via the [...] at the right margin.
 
 In the expression builder, predefined functions can be used by SSIS. In our case we drag and drop Date/Time functions to the expression field. Since we have to convert the date format into a format readable by SAP, type casts are necessary and must be placed before the date function. 
 ```
-(DT_STR, 4, 1252) DATEPART("yy" , GETDATE()) + RIGHT("0" + (DT_STR, 2, 1252) DATEPART("mm" , GETDATE()), 2) 
-+RIGHT("0" + (DT_STR, 2, 1252) DATEPART("dd" , GETDATE()), 2)
+(DT_STR, 4, 1252) DATEPART("yy" , GETDATE()) + RIGHT("0" + (DT_STR, 2, 1252) DATEPART("mm" , GETDATE()), 2) +RIGHT("0" + (DT_STR, 2, 1252) DATEPART("dd" , GETDATE()), 2)
 ```
 Finally, the evaluate expression button can be used to check the syntax of the expression and the defined value is displayed in the Evaluate Value field.
 
