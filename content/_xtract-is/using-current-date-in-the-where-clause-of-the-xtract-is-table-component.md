@@ -25,6 +25,7 @@ In the expression builder, predefined functions can be used by SSIS. In our case
 ![ssis_expression_value](/img/contents/ssis_expression_value.png){:class="img-responsive"}
 
 If you confirm the expression builder with the ok key, the generated value is displayed in the user variable.
+The user variable TDatum can now be used in the where clause of the table component, e.g. `LAEDA = @TDatum`
 
 #### Variant 2 using a script task in the control flow
 
