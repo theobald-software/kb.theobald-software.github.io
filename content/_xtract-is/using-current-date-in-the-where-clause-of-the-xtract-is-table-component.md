@@ -10,7 +10,7 @@ Please also have a look in our [OnlineHelp](https://help.theobald-software.com/e
 
 If you want to use the current date in a where clause, you have to convert the date into a format SAP understands. You can use the following two options to use user-defined variables for date values. 
 
-#### Variant 1 Using SSIS Expressions
+### Variant 1: Using SSIS Expressions
 
 First we need to create an SSIS Variable called "TDatum" (data type [String], scope [PackageName]).
 
@@ -26,7 +26,7 @@ In the expression builder, predefined functions can be used by SSIS. In our case
 
 If you confirm the expression builder with the ok key, the generated value is displayed in the user variable.
 
-#### Variant 2 using a script task in the control flow
+### Variant 2: Using a script task in the control flow
 
 First we need to create an SSIS Variable called "TDatum" (data type [String], scope [PackageName]).
 
