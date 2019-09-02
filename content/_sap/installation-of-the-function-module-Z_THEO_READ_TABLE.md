@@ -8,7 +8,11 @@ weight: 7
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/xtract-is/sap-customizing/custom-function-module-for-table-extraction) for further information.
 
-This article describes how to manually install the custom function module Z_THEO_READ_TABLE.
+This article describes how to manually install the custom function module Z_THEO_READ_TABLE. <br>
+
+<span style="color:red; font-weight: bold;">**ATTENTION**:</span>
+ This guide is valid up to version 1.12 of Z_THEO_READ_TABLE. It **does not** apply to version 2.0 or higher.
+
 
 ### Step-by-step Guide - How to install Z_THEO_READ_TABLE
 
