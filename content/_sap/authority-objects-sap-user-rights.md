@@ -45,7 +45,7 @@ S_TABU_NAM       ACTVT=03; TABLE=ENLFDIR
 XXXX (stands for a placeholder) is the Authority Group for the table. To find out, which authority group belongs to which table look at table TDDAT (e.g. with SE16). 
 If the table is not listed there the authority group is &NC&. For authorising specific tables please use authorization object S_TABU_NAM instead of S_TABU_DIS.
 
-If our custom function modules like Z_THEO_READ_TABLE, Z_XTRACT_IS_TABLE_JOIN are used:
+If our custom function modules like Z_THEO_READ_TABLE, Z_XTRACT_IS_TABLE_JOIN are used (XXXX (stands for a placeholder) is the name of the function group to which the custom function module belongs):
 
 ```
 S_RFC            RFC_TYPE=FUGR; RFC_NAME=XXXX; ACTVT=16  
@@ -58,7 +58,18 @@ S_BTCH_ADM       BTCADMIN=Y
 S_BTCH_JOB       JOBGROUP=*; JOBACTION=RELE
 ```
 
-XXXX (stands for a placeholder) is the name of the function group to which the custom function module belongs. 
+When using the *count rows* button (if not using Z_THEO_READ_TABLE): 
+
+```
+S_RFC            RFC_TYPE=FUNC; RFC_NAME=EM_GET_NUMBER_OF_ENTRIES; ACTVT=16  
+```
+
+For indicating indexed table fields in the the table component:
+
+```
+S_TABU_NAM       ACTVT=03; TABLE=DD17S
+``` 
+
 
 #### BW Query / BW Cube
 
