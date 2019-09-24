@@ -130,4 +130,4 @@ Please restart your server where SSIS is installed to solve this problem.
 
 Please make sure, that the change pointer is activated in your R/3 system: 
 
-Transaction SALE -> Modelling and Implementing Business Processes -> Master Data Distribution -> Replication of Modified Data -> Activate Change Pointers - Generally
+Transaction SALE -> Modeling and Implementing Business Processes -> Master Data Distribution -> Replication of Modified Data -> Activate Change Pointers - Generally

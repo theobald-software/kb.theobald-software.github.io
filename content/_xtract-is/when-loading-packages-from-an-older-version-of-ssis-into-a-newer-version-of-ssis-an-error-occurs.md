@@ -24,6 +24,6 @@ Please use the conversion preparer before loading the package into the newer ver
 
 
 
-You can find details in our Onlinehelp following this link:
+You can find details in our Online-Help following this link:
 
 [https://help.theobald-software.com/en/xtract-is/requirements-and-installation/ssis-migration](https://help.theobald-software.com/en/xtract-is/requirements-and-installation/ssis-migration)

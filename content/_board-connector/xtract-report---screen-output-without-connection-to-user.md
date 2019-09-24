@@ -20,7 +20,7 @@ The Report tries to show a Screen Output. This could be another Dynpro for examp
 
 **Solution:**
 
-Running the report in the background suppresses screen outputs and redirects the output from the Report to the spool. Xtract Report fetches the data from the spool of SAP wihout any additional settings to be done, except the option "Use Batch" in the settings of the Xtract product you are using, like shown in the following screenshot:
+Running the report in the background suppresses screen outputs and redirects the output from the Report to the spool. Xtract Report fetches the data from the spool of SAP without any additional settings to be done, except the option "Use Batch" in the settings of the Xtract product you are using, like shown in the following screenshot:
 
 ![UseBatch](/img/contents/UseBatch.png){:class="img-responsive"}
 

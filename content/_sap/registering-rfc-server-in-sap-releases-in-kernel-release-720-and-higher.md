@@ -14,7 +14,7 @@ If so, you have 2 possibilities:
 
 1: You can change the Profile Parameter in the TA RZ10 to 0 (gw/acl_mode = 1). And all the Destinations with different Program IDs can register, and you have no issues regarding the launch of RFC Servers.
 
-2: You can define a Whitelist of Programs that can register at the SAP Gateway. To do so, you have to create 2 files : secinfo and reginfo. Both files are not existing per default.
+2: You can define a White-list of Programs that can register at the SAP Gateway. To do so, you have to create 2 files : secinfo and reginfo. Both files are not existing per default.
 
 The first file secinfo has to contain the following lines:<br>
 **VERSION=2**<br>

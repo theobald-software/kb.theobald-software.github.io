@@ -8,7 +8,7 @@ weight: 9
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
 
-If a datasource offers a selection, there is a link "Edit" shown in the field selection of the DeltaQ Component. If you click on this link, the Edit Range dialog opens, and you can define a condition/selection for this datasource.
+If a data source offers a selection, there is a link "Edit" shown in the field selection of the DeltaQ Component. If you click on this link, the Edit Range dialog opens, and you can define a condition/selection for this data source.
 
 The field Sign hast 2 Options: Include - Exclude. This selection determines for every row whether the result of the condition is included or excluded in the entire resulting set for all rows.
 

@@ -241,7 +241,7 @@ EXPORTING
 ENDFUNCTION.
 
 
-If you fill in the Import Parameter "ACTIONID" with P1 , then you need the Personnel No. In the field PERNR. No additional parameters are needed. You get the result in the Table Parameter ST. If you need the payroll results of the Cluster Table PCL2, you need to fill in the ACTIONID "P2" and have to fill in a Start- and Enddate to the Parameters STARTDATE and ENDDATE. Then you get the Payroll results of the Table PCL2 in the Table parameter CRT.
+If you fill in the Import Parameter "ACTIONID" with P1 , then you need the Personnel No. In the field PERNR. No additional parameters are needed. You get the result in the Table Parameter ST. If you need the payroll results of the Cluster Table PCL2, you need to fill in the ACTIONID "P2" and have to fill in a Start- and End date to the Parameters STARTDATE and ENDDATE. Then you get the Payroll results of the Table PCL2 in the Table parameter CRT.
 
 This is a sample for our Product Xtract IS:
 

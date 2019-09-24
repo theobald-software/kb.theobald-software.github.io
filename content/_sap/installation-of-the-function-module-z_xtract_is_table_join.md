@@ -52,7 +52,7 @@ Define the tables:
 **Step 4 - Code**
 
 1. You need to fill in the code attached (Z_XTRACT_IS_TABLE_JOIN_GLOBALDATA) into the Global Data of the function module (menu Goto -> Global Data).
-2. The ABAP sourcecode is placed in the attached file Z_XTRACT_IS_TABLE_JOIN.txt. Use Ctrl + C and Ctrl + V to paste the code in the source code editor. Save the function module and activate it.
+2. The ABAP source code is placed in the attached file Z_XTRACT_IS_TABLE_JOIN.txt. Use Ctrl + C and Ctrl + V to paste the code in the source code editor. Save the function module and activate it.
 
 Attachments 	-------------------------------------------
 

@@ -10,7 +10,7 @@ Please also have a look in our [OnlineHelp](https://help.theobald-software.com/e
 
 **Error:**
 
-I try to extract a table from SAP using the ReadTable class and get the DATA_BUFFER_EXCEEDED execption. But only some tables cause this problem.
+I try to extract a table from SAP using the ReadTable class and get the DATA_BUFFER_EXCEEDED exception. But only some tables cause this problem.
 
 **Reason:**
 

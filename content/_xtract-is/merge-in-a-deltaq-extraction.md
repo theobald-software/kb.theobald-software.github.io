@@ -8,7 +8,7 @@ weight: 6
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
 
-In a Delta Extraction with the Xtract IS DeltaQ Componenct it is possible to download records that are earlier transfered with a full-update. Since the release of SQL Server 2008 you can use the command called Merge at this point to perform Insert and Update commands easily in one step. In our next example we want to update an updated Customer (TA VD02), which is present in our Database, with the Merge command. We can also use this package to insert a new customer in our table in our Database.
+In a Delta Extraction with the Xtract IS DeltaQ Component it is possible to download records that are earlier transfered with a full-update. Since the release of SQL Server 2008 you can use the command called Merge at this point to perform Insert and Update commands easily in one step. In our next example we want to update an updated Customer (TA VD02), which is present in our Database, with the Merge command. We can also use this package to insert a new customer in our table in our Database.
 
 In this sample we work with 2 tables. The first one (Raw) is going to be used to store the values coming from SAP, either to update them later in the next table (Staging) with the merge command, or, if the record is not present, to insert them.
 

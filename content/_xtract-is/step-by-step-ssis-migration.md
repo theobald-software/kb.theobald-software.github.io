@@ -15,7 +15,7 @@ Necessary prerequisite for the migration to a new SQL Server version is the inst
 #### The functionality of the SSIS packages and SSIS projects could be ensured by the following order:
 
 1. Use the XtractISConversionPreparer.exe, located in the Xtract IS installation routine, to convert the SSIS packages to the SQL Server 2016 version.
-2. Open the Solution and project in VS/SSDT. The packages should open and might display the following error `could not aquire Xtract connection`
+2. Open the Solution and project in VS/SSDT. The packages should open and might display the following error `could not acquire Xtract connection`
 3. Right click on the project and open the project properties.
 4. Change the Deployment Target Version to SQL Server 2016.  
 5. Save the SSIS project.

@@ -17,7 +17,7 @@ When calling a Function Module (FM) or BAPI no error, or no value is returned.
 
 This could have many reasons. Here are some of the them:
 
-- No leading zeroes in FM Import Params
+- No leading zero's in FM Import Params
 
 - Date Format is wrong
 
@@ -25,11 +25,11 @@ This could have many reasons. Here are some of the them:
 
 - BAPI needs Commit
 
-- No authoritiy to run FM
+- No authority to run FM
 
 **Solution:**
 
-- Please fill in the values with leading zeroes. E.g. MATNR (18 Chars).
+- Please fill in the values with leading zero's. E.g. MATNR (18 Chars).
 
   wrong:    424642456
 
@@ -45,7 +45,7 @@ This could have many reasons. Here are some of the them:
 
   You can find an example here.
 
-- Please check if you have the authority to run this FM. Some FM in SAP return no errormessage after an not successful authority Check.
+- Please check if you have the authority to run this FM. Some FM in SAP return no error message after an not successful authority Check.
 
 
-We recommend also first to run the FM/BAPI in SAP in the T-CODE SE37 to check the needed parameters with the same user as in the .NET Code. But leading zeroes and other formats are not considered in the SE37.
+We recommend also first to run the FM/BAPI in SAP in the T-CODE SE37 to check the needed parameters with the same user as in the .NET Code. But leading zero's and other formats are not considered in the SE37.

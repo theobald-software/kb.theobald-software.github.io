@@ -20,4 +20,4 @@ This Exception occurs when the DataSource XXX has to be replicated again. This c
 
 1. Clicking the button "Activate" in the DeltaQ component dialog.
 
-2. Turning on the Option "Automatic Synchronisation" in the Settings of the Xtract DeltaQ component to activate the package automatically at runtime.
+2. Turning on the Option "Automatic Synchronization" in the Settings of the Xtract DeltaQ component to activate the package automatically at runtime.

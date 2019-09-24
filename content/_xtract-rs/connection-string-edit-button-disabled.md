@@ -14,7 +14,7 @@ Microsoft Visual Studio 2012 needs Update 2, otherwise you can't edit the connec
 
 You can find information on the Visual Studio Update 2 [here](https://support.microsoft.com/en-us/help/2927432/description-of-visual-studio-2013-update-2).
 
-After succesfully updating Visual Studio 2012 and restarting your machine the edit button for the DataSource works well.
+After successfully updating Visual Studio 2012 and restarting your machine the edit button for the DataSource works well.
 
 ![VS2012-Update-OK](/img/contents/VS2012-Update-OK.png){:class="img-responsive"}
 

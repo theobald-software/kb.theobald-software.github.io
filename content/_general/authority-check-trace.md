@@ -11,10 +11,10 @@ Please also have a look in our [OnlineHelp](https://help.theobald-software.com/e
 Often it is difficult to say, which authority objects are needed for certain processes in SAP. To avoid too many authorities for technical users in a productive system, the following steps should help to assign only the authority objects that are really needed:
 
 - Create an authority check trace in your test system
-- Create a profile that conatins only the needed objects
+- Create a profile that contains only the needed objects
 - Assign the profile to the CPIC user
 
-Attention! The steps described below whould only be done together with your system administrator.
+Attention! The steps described below would only be done together with your system administrator.
 
 **Step 1**
 
@@ -32,6 +32,6 @@ Attention! The steps described below whould only be done together with your syst
 **Step 3**
 
 - Click on Analysis
-- Set the filter to the user you used for the rfc processes and set the filter for time and date. Press F8
-- The list conatins all used authority objects (green lines)
+- Set the filter to the user you used for the RFC processes and set the filter for time and date. Press F8
+- The list contains all used authority objects (green lines)
 

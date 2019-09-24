@@ -8,9 +8,9 @@ weight: 6
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
 
-Sometimes it is neccessary to determine the row count of a table remotely. In this sample we are getting the row count with the help of an SAP standard function module called EM_GET_NUMBER_OF_ENTRIES.
+Sometimes it is necessary to determine the row count of a table remotely. In this sample we are getting the row count with the help of an SAP standard function module called EM_GET_NUMBER_OF_ENTRIES.
 
-This function module is remote enabled, so we can use it either with ERPConnect for pure programming or with the Xtract product line for pure plug'n play.
+This function module is remote enabled, so we can use it either with ERPConnect for pure programming or with the Xtract product line for pure plug & play.
 
 Let us first take a look at the programming method with ERPConnect. The following code sample illustrates how easy it is getting the row count of the table MARA with just a few lines of code.
 

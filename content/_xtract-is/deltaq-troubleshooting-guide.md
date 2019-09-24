@@ -36,7 +36,7 @@ This happens, when the extraction job on the SAP side is finished (SM37) but IDo
 
 **SSIS _Project Connection Manager_ vs. _Package Connection Manager_ with parallel DeltaQ extractions**
 * When running DeltaQ extractions within one SSIS package in parallel, we recommend using a package connection manager for each DeltaQ component. A single project connection manager may work, as well. 
-However, with short interval scheduling and heavy paralellism, dedicated package connection managers will add to extraction stability. 
+However, with short interval scheduling and heavy parallelism, dedicated package connection managers will add to extraction stability. 
 <br>
 
 ## Errors during DeltaQ setup
@@ -55,7 +55,7 @@ However, with short interval scheduling and heavy paralellism, dedicated package
 
 **Error after SAP system upgrade**
 * You get an error message similar to this: *Error while trying to obtain information about source and destination in table RSBASIDOC..Object ERPCLN800 / XTRACT01 inactive*
-* Please see our online help on *Customizing for DeltaQ* and perform step 5 (execute RSAS_RBWBCRL_STORE)
+* Please see our online-help on *Customizing for DeltaQ* and perform step 5 (execute RSAS_RBWBCRL_STORE)
 
 **RFC server test failed:  Error when opening an RFC connection (CPIC-CALL: 'ThSAPOCMINIT', communication rc: CM_ALLOCATE_FAILURE_RETRY (cmRc=2))**
 * Please make sure, the RFC server program, e.g. XTRACT01, is allowed to [register on the SAP gateway](https://kb.theobald-software.com/sap/registering-rfc-server-in-sap-releases-in-kernel-release-720-and-higher).

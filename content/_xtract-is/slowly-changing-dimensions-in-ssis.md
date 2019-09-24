@@ -12,9 +12,9 @@ One of the main problems extracting SAP Tables is, that the incoming data is alr
 
 The KNA1 is the customer table in SAP and going to be extracted into the destination table. An initial load of the destination table is needed to start this sample to have the SAP System and the SQL Server at the same level. Later on some data of a customer in SAP is changed and one is added, to have different incoming data as the existing ones.
 
-A new created package with the needed Connection Manager and a Dataflow Task is the base for this sample to build up a "*Slowly Changing Dimension*". The Xtract IS Table Component is set up in the Dataflow Task to extract the Table KNA1. The Output of the Xtract IS Table Component is connected with the input of the *Slowly Changing Dimension* Transformation.
+A new created package with the needed Connection Manager and a Data Flow Task is the base for this sample to build up a "*Slowly Changing Dimension*". The Xtract IS Table Component is set up in the Data Flow Task to extract the Table KNA1. The Output of the Xtract IS Table Component is connected with the input of the *Slowly Changing Dimension* Transformation.
 
-A Double Click on the "*Slowly Changing Dimension*" starts the Wizard. The first screen is not so neccessary and skipped with the next button.
+A Double Click on the "*Slowly Changing Dimension*" starts the Wizard. The first screen is not so necessary and skipped with the next button.
 
 The next screen of the Wizard is to select the destination table and to map the fields of the incoming table with the corresponding fields of the destination table. The definition of the Key Columns is also made here.
 
@@ -36,7 +36,7 @@ The next screens can be skipped, let them at the default values and finish the w
 
 To see the effect of the "*Slowly Changing Dimension*" Transformation in this sample, a customer needs to be changed and one new customer is needed to be created in SAP.
 
-After this is made and the package is started, 2 rows are the result. One is the Changing Attributes Update Output, the Recordset updated in SAP. The other recordset is the new created customer on SAP as a New Row.
+After this is made and the package is started, 2 rows are the result. One is the Changing Attributes Update Output, the Record set updated in SAP. The other record set is the new created customer on SAP as a New Row.
 
 ![Scd4](/img/contents/Scd4.jpg){:class="img-responsive"}
 

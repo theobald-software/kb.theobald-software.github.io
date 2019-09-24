@@ -12,12 +12,12 @@ Sometimes the firewall is blocking the traffic to the SAP System. This could be 
 
 You can use the tool [paping.exe](https://code.google.com/archive/p/paping) to ping the port and to check if the Firewall is open.
 
-The synthax to use paping.exe is:
+The syntax to use paping.exe is:
 
 *paping.exe SAPServer -p port -c 3*
 
 SAPServer is your SAPsystem you want to ping.
-If a SAP-Router is used, the ports are 3299 and 3399. If not, the ports are 32XX and 33XX. XX is usually the Systemnumber (like 00, or 05).
+If a SAP-Router is used, the ports are 3299 and 3399. If not, the ports are 32XX and 33XX. XX is usually the system number (like 00, or 05).
 
 e.g.
 
