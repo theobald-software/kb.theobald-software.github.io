@@ -1,0 +1,13 @@
+<html style='font-family: "segoe ui","helvetica neue", arial, helvetica, sans-serif;'><style>h1, h2, h3, h4, h5 {margin:0;padding:0;margin-top:24px;font-weight:600;} p {margin:0;padding:0;margin-top: 4px;opacity:0.9;}</style><body><h3>ODP/Table GUI Preview</h3>
+<ul>
+<li>Correctly displays records again</li>
+<li>Column names now match the selected column name style</li>
+</ul>
+<h3>Table</h3>
+<ul>
+<li>The Alias for table fields was removed as it was not working correctly. To prevent naming conflicts when joining tables please use the <em>PrefixedCode</em> column name style.</li>
+<li>Aggregated fields now have a generated column name with the aggregate function name preceeding the column name (e.g. <em>Minimum_MARA~BRGEW</em>). <strong>This could break existing workflows that use aggregate functions.</strong></li>
+<li>Fixed a bug that caused components with conversion routines enabled to fail due to conversion errors</li>
+<li>Fixed a bug where the output metadata was not refreshed when the selection for joined tables changed</li>
+</ul>
+</body></html>
