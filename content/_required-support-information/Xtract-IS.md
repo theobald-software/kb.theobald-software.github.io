@@ -58,7 +58,6 @@ The following information is optional and can be requested by the support consul
 ![Installation-log](/img/contents/installXISexe.png){:class="img-responsive"}
 
 :information_source:
-> Achtung, das ist ein wichtiger Hinweis
 
 ### Version of Xtract IS without log
 
