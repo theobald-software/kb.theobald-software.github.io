@@ -24,7 +24,7 @@ When executing an SSIS package in Visual Studio/SSDT, please copy the content of
 
 ![XIS-Support](/img/contents/xis_output.png){:class="img-responsive"}
 
-### SSIS Log/Report in SSIS
+### SSIS Log/Report in SSIS<a name="SSIS-log"></a>
 
 - Open *Integration Services Catalog* (1)
 - Right click on the package (2)
