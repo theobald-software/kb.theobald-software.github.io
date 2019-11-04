@@ -47,7 +47,7 @@ The following information is optional and can be requested by the support consul
 
 - Activate the trace function , see [knowledge-base article](https://kb.theobald-software.com/general/how-to-activate-tracing-for-xtract-products) 
  
-### Installation Log
+### <a name="installation-log"></a>Installation Log
 
 - Run *installXtractIS.exe* in the Xtract IS installation directory
 - Got to *Edit* - *Select All*
