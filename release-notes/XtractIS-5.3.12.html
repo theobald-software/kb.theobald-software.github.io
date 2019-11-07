@@ -1,0 +1,12 @@
+<html style='font-family: "segoe ui","helvetica neue", arial, helvetica, sans-serif;'><style>h1, h2, h3, h4, h5 {margin:0;padding:0;margin-top:24px;font-weight:600;} p {margin:0;padding:0;margin-top: 4px;opacity:0.9;}</style><body><h1>XIS 5.3.12</h1>
+<p>This release fixes several issues with date conversion and legacy behavior</p>
+<h2>Bugs</h2>
+<ul>
+<li>Fixed a bug that caused the <code>ConvertsDates</code> property to not take effect</li>
+</ul>
+<h2>Legacy behavior</h2>
+<ul>
+<li>Fixed a bug where the date conversion was not enabled, although the checkbox was checked in version 4.x</li>
+<li>Previous to version 5.0 extractions would fail if a date value could not be converted and no invalid date replacement was supplied. This behavior is now implemented for converted components, but cannot be activated for new components.</li>
+</ul>
+</body></html>
