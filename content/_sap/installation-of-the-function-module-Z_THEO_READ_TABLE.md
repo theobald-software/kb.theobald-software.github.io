@@ -14,7 +14,7 @@ This article describes how to manually install the custom function module Z_THEO
   <i class="fas fa-info-circle"></i> <strong>Note:</strong> We recommend that you import the function module into the SAP system using the transport requests provided in the ABAP subfolder.
 </div>
 
-## Step-by-step Guide - How to install Z_THEO_READ_TABLE up to version 1.12
+## How to install Z_THEO_READ_TABLE up to version 1.12
 
 ### Step 1 - Create DDIC Objects
 
@@ -59,7 +59,7 @@ The ABAP source code can be found in the ABAP folder inside the installation dir
 
 Use Ctrl + C and Ctrl + V to paste the code in the source code editor. Save the function module and activate it.
 
-## Step-by-step Guide - How to install Z_THEO_READ_TABLE version 2.X
+## How to install Z_THEO_READ_TABLE from version 2.X
 
 ### Step 1 - Shared Objects
 
@@ -69,7 +69,7 @@ First, the class `zcl_theo_shm_area` must be created using SAP transaction `SHMA
 
 ### Step 2 - Class Builder
 
-In following subfolder *ABAP* within your Xtract installation routine, you will find following named *Z_THEO_READ_TABLE-source.zip* folder:
+The subfolder *ABAP* in the installation directory, you will find following named *Z_THEO_READ_TABLE-source.zip* folder:
 
 - Z_THEO_READ_TABLE - ZCL_THEO_EXCEPTION.txt
 - Z_THEO_READ_TABLE - ZCL_THEO_READ_TABLE_ENGINE.txt
@@ -82,7 +82,8 @@ In following subfolder *ABAP* within your Xtract installation routine, you will 
 - Z_THEO_READ_TABLE.txt
 - Z_THEO_READ_TABLE_JOB.txt
 
-By using SAP transaction `SE24` following objects types, named list above, has to be created manually. Plase make sure to activate these classes.
+By using SAP transaction `SE24`,  named list above, SAP classes has to be created manually. 
+Please make sure to activate these classes.
 
 ### Step 3 - Repository Browser
 
