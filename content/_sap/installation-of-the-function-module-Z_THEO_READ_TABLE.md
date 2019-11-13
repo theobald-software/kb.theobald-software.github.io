@@ -14,7 +14,7 @@ This article describes how to manually install the custom function module Z_THEO
   <i class="fas fa-info-circle"></i> <strong>Note:</strong> We recommend that you import the function module into the SAP system using the transport requests provided in the ABAP subfolder.
 </div>
 
-## Step-by-step Guide - How to install Z_THEO_READ_TABLE up to version 1.12
+## Step-by-step Guide - Z_THEO_READ_TABLE up to version 1.12
 
 ### Step 1 - Create DDIC Objects
 
@@ -59,7 +59,7 @@ The ABAP source code can be found in the ABAP folder inside the installation dir
 
 Use Ctrl + C and Ctrl + V to paste the code in the source code editor. Save the function module and activate it.
 
-## Step-by-step Guide - How to install Z_THEO_READ_TABLE version 2.X
+## Step-by-step Guide - Z_THEO_READ_TABLE version 2.X
 
 ### Step 1 - Shared Objects
 
