@@ -14,11 +14,8 @@ This article describes how to manually install the custom function module Z_THEO
   <i class="fas fa-info-circle"></i> <strong>Note:</strong> We recommend that you import the function module into the SAP system using the transport requests provided in the ABAP subfolder.
 </div>
 
-<<<<<<< HEAD
+
 ## Step-by-step Guide - Z_THEO_READ_TABLE up to version 1.12
-=======
-## How to install Z_THEO_READ_TABLE up to version 1.12
->>>>>>> f2aef7840857eee4a2a6654946be2995dba1d3c5
 
 ### Step 1 - Create DDIC Objects
 
@@ -63,41 +60,6 @@ The ABAP source code can be found in the ABAP folder inside the installation dir
 
 Use Ctrl + C and Ctrl + V to paste the code in the source code editor. Save the function module and activate it.
 
-<<<<<<< HEAD
-## Step-by-step Guide - Z_THEO_READ_TABLE version 2.X
-=======
-## How to install Z_THEO_READ_TABLE from version 2.X
->>>>>>> f2aef7840857eee4a2a6654946be2995dba1d3c5
 
-### Step 1 - Shared Objects
 
-First, the class `zcl_theo_shm_area` must be created using SAP transaction `SHMA` with the settings from the screenshot.
-
-![TA_SHMA](/img/contents/shma.png){:class="img-responsive"}
-
-### Step 2 - Class Builder
-
-The subfolder *ABAP* in the installation directory, you will find following named *Z_THEO_READ_TABLE-source.zip* folder:
-
-- Z_THEO_READ_TABLE - ZCL_THEO_EXCEPTION.txt
-- Z_THEO_READ_TABLE - ZCL_THEO_READ_TABLE_ENGINE.txt
-- Z_THEO_READ_TABLE - ZCL_THEO_READ_TABLE_SHM_ROOT.txt
-- Z_THEO_READ_TABLE - ZCL_THEO_SHM_MANAGER.txt
-- Z_THEO_READ_TABLE - ZIF_THEO_STATUS.txt
-- Z_THEO_READ_TABLE - ZTHEOJOBS.txt
-- Z_THEO_READ_TABLE - ZTHEOTABLEFIELDS.txt
-- Z_THEO_READ_TABLE - ZTHEOTABLEJOINDEF.txt
-- Z_THEO_READ_TABLE.txt
-- Z_THEO_READ_TABLE_JOB.txt
-
-By using SAP transaction `SE24`,  named list above, SAP classes has to be created manually. 
-Please make sure to activate these classes.
-
-### Step 3 - Repository Browser
-
-Please select the category package and enter the following package name: Z_THEO_READ_TABLE.
-
-The interface `ZIF_THEO_STATUS` can then be included in SAP transaction `SE80`, please rely to the following sample screenshot.
-
-![Interface](/img/contents/Interface.png){:class="img-responsive"}
 
