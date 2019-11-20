@@ -16,7 +16,7 @@ First we need to create an SSIS Variable called "TDatum" (data type [String], sc
 
 ![ssis_expression_Tdatum](/img/contents/ssis_expression_Tdatum.png){:class="img-responsive"}
 
-Then we open the expression builder via the [...] at the right margin.
+Then we open the expression builder via the **[...]** at the right margin.
 
 ![evaluate_ssis_expression](/img/contents/evaluate_ssis_expression.png){:class="img-responsive"}
 
