@@ -17,8 +17,9 @@ Please redirect this article to your SAP Basis admins to get the relevant author
 The following objects are needed at least to establish a connection.
 
 ```
-S_RFC            RFC_TYPE=FUGR; RFC_NAME=SYST; ACTVT=16    
-S_RFC            RFC_TYPE=FUGR; RFC_NAME=RFC1; ACTVT=16 
+S_RFC            RFC_TYPE=FUGR; RFC_NAME=SYST; ACTVT=16
+S_RFC            RFC_TYPE=FUGR; RFC_NAME=SRFC; ACTVT=16
+S_RFC            RFC_TYPE=FUGR; RFC_NAME=RFC1; ACTVT=16
 ```
 
 #### Table
