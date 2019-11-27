@@ -44,37 +44,37 @@ CRT        LIKE=PC208
 
 Below you can find the ABAP source code of the function module. Please copy and paste this code in the source code area of the function module.
 
-```FUNCTION Z_HR_CLUSTER_READ.
+     ```FUNCTION Z_HR_CLUSTER_READ.
 
-*"----------------------------------------------------------------------
+     *"----------------------------------------------------------------------
 
-*"*"Local Interface:
-*"  IMPORTING
-*"     VALUE(PERNR) TYPE  PC2B0-PERNR OPTIONAL
-*"     VALUE(ACTIONID) TYPE  CHAR2 DEFAULT 'P1'
-*"     VALUE(STARTDATE) TYPE  DATS OPTIONAL
-*"     VALUE(ENDDATE) TYPE  DATS OPTIONAL
-*"  TABLES
-*"      ERT STRUCTURE  PC2B8 OPTIONAL
-*"      ST STRUCTURE  PC2B5 OPTIONAL
-*"      CRT STRUCTURE  PC208 OPTIONAL
-*"----------------------------------------------------------------------
-  DATA : BEGIN OF it_pcl1 OCCURS 0,
-  srtfd TYPE pcl1-srtfd,
-  END OF it_pcl1.
+     *"*"Local Interface:
+     *"  IMPORTING
+     "     VALUE(PERNR) TYPE  PC2B0-PERNR OPTIONAL
+     *"     VALUE(ACTIONID) TYPE  CHAR2 DEFAULT 'P1'
+     *"     VALUE(STARTDATE) TYPE  DATS OPTIONAL
+     *"     VALUE(ENDDATE) TYPE  DATS OPTIONAL
+     *"  TABLES
+     *"      ERT STRUCTURE  PC2B8 OPTIONAL
+     *"      ST STRUCTURE  PC2B5 OPTIONAL
+     *"      CRT STRUCTURE  PC208 OPTIONAL
+     *"----------------------------------------------------------------------
+     DATA : BEGIN OF it_pcl1 OCCURS 0,
+     srtfd TYPE pcl1-srtfd,
+     END OF it_pcl1.
 
-  DATA BEGIN OF b1_key.
+     DATA BEGIN OF b1_key.
           INCLUDE STRUCTURE pdc10.
-  DATA END OF b1_key.
+     DATA END OF b1_key.
 
-  IF actionid = 'P1'.
+     IF actionid = 'P1'.
 
-    SELECT srtfd
-    FROM pcl1
-    INTO TABLE it_pcl1
-    WHERE relid EQ 'B1'
-    AND srtfd EQ pernr
-    AND srtf2 EQ 0.
+     SELECT srtfd
+     FROM pcl1
+     INTO TABLE it_pcl1
+     WHERE relid EQ 'B1'
+     AND srtfd EQ pernr
+     AND srtf2 EQ 0.
 
     LOOP AT it_pcl1.
       MOVE it_pcl1-srtfd TO b1_key.
@@ -83,10 +83,10 @@ Below you can find the ABAP source code of the function module. Please copy and 
       ENDIF.
     ENDLOOP.
 
-  ENDIF.
+     ENDIF.
 
-  IF actionid = 'P2'.
-    DATA : it_rgdir TYPE TABLE OF pc261 INITIAL SIZE 0,
+     IF actionid = 'P2'.
+     DATA : it_rgdir TYPE TABLE OF pc261 INITIAL SIZE 0,
            wa_rgdir LIKE LINE OF it_rgdir,
            it_crt TYPE pay99_result-inter-crt,
            wa_crt LIKE LINE OF it_crt,
@@ -100,22 +100,22 @@ Below you can find the ABAP source code of the function module. Please copy and 
            END OF wa_out,
            it_outtab LIKE TABLE OF wa_out.
 
-   wa_out-pernr = PERNR.
-    CALL FUNCTION 'CU_READ_RGDIR'
-EXPORTING
-        persnr          = PERNR
-      IMPORTING
-       molga           = v_molga
-      TABLES
-        in_rgdir        = it_rgdir
-      EXCEPTIONS
-        no_record_found = 1
-        OTHERS          = 2.
-    IF sy-subrc = 0.
+     wa_out-pernr = PERNR.
+     CALL FUNCTION 'CU_READ_RGDIR'
+     EXPORTING
+     persnr          = PERNR
+     IMPORTING
+     molga           = v_molga
+     TABLES
+     in_rgdir        = it_rgdir
+     EXCEPTIONS
+     no_record_found = 1
+     OTHERS          = 2.
+     IF sy-subrc = 0.
 
 
 
-      LOOP AT it_rgdir INTO wa_rgdir
+    LOOP AT it_rgdir INTO wa_rgdir
                        WHERE fpbeg GE startdate AND
                              fpend LE enddate AND
                              srtza EQ 'A'.  "Current result
