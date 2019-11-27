@@ -18,25 +18,29 @@ This function module is then used in the Xtract BAPI component.
 
 The function module requires the followin *Import Parameters*:
 
-Field name | data type | default
+```
+PERNR            TYPE=PC2B0-PERNR;
+ACTIONID         TYPE=CHAR2; DEFAULT = 'P1'
+STARTDATE        TYPE=DATS;
+ENDDATE          TYPE=DATS;
+```
 
-```PERNR|PC2B0-PERNR
-
-ACTIONID|CHAR2|P1
-STARTDATE|DATS
-ENDDATE|DATS```
 
 ![payroll02](/img/contents/payroll02.png){:class="img-responsive"}
 
+
 Next we need the following *Table Parameters*:
 
-Field name | data type 
+```
+ERT        LIKE=PC2B8
+ST         LIKE=PC2B5
+CRT        LIKE=PC208
+```
 
-```ERT|PC2B8
-ST|PC2B5
-CRT|PC208```
+
 
 ![payroll03](/img/contents/payroll03.png){:class="img-responsive"}
+
 
 Below you can find the ABAP source code of the function module. Please copy and paste this code in the source code area of the function module.
 
@@ -158,4 +162,4 @@ This is a sample for our Product Xtract IS:
 
 ![payroll04](/img/contents/payroll04.png){:class="img-responsive"}
 
-**Please note**: The personnel number has to be send with leading zeroes. The date fields have the formatt yyyymmdd.
+**Please note**: The personnel number has to be entered with leading zeroes. The date fields have the format yyyymmdd.
