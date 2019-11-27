@@ -9,14 +9,15 @@ weight: 8
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
 
 Data from SAP HCM tables PCL1 and PCL2 can only be extracted using the Xtract BAPI component. Data extraction via Xtract Table component is not supported.
-First you need to create a remote enabled custom function module in SAP transaction SE37. Please see belows.
+
+First you need to create a remote enabled custom function module in SAP transaction SE37. Please see below.
 
 This function module is then used in the Xtract BAPI component.
 
 
 ![payroll01](/img/contents/payroll01.png){:class="img-responsive"}
 
-The function module requires the followin *Import Parameters*:
+The function module requires the following *Import Parameters*:
 
 ```
 PERNR            TYPE=PC2B0-PERNR;
