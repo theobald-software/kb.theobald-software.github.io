@@ -20,13 +20,11 @@ The function module requires the followin *Import Parameters*:
 
 Field name | data type | default
 
-```PERNR|PC2B0-PERNR```
+```PERNR|PC2B0-PERNR
 
-```ACTIONID|CHAR2|‘P1’```
-
-```STARTDATE|DATS```
-
-```ENDDATE|DATS```
+ACTIONID|CHAR2|P1
+STARTDATE|DATS
+ENDDATE|DATS```
 
 ![payroll02](/img/contents/payroll02.png){:class="img-responsive"}
 
@@ -34,11 +32,9 @@ Next we need the following *Table Parameters*:
 
 Field name | data type 
 
-```ERT|PC2B8```
-
-```ST|PC2B5```
-
-```CRT|PC208```
+```ERT|PC2B8
+ST|PC2B5
+CRT|PC208```
 
 ![payroll03](/img/contents/payroll03.png){:class="img-responsive"}
 
