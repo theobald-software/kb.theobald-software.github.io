@@ -14,10 +14,6 @@ Please make sure to provide as much information as possible in order for the The
 
 ## Mandatory
 
-{: .box-warning} This is a warning box.
-
-{: .box-note} This is a notification box, we can put anything, including markup in here.
-
 The following information is required to process a support ticket. Please do always provide the **complete** SSIS log. An excerpt will not do.
 
 ### SSIS Log within Visual Studio/SSDT
