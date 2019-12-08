@@ -10,8 +10,8 @@ Please also have a look in our [OnlineHelp](https://help.theobald-software.com/e
 
 If the MDX execution terminates with an error message on the SAP BW system and if a connection test over the transaction SM59 not possible, then have a look at the
 
-- [SAP Note 1032461](https://my.theobald-software.com/files/1032461EN.pdf) (English version) 
-- [SAP Note 1032461](https://my.theobald-software.com/files/1032461.pdf) (German version)
+- [SAP Note 1032461](https://cdn-files.theobald-software.com/help/1032461EN.pdf) (English version) 
+- [SAP Note 1032461](https://cdn-files.theobald-software.com/help/1032461.pdf) (German version)
 
 Carry out the following steps:
 
