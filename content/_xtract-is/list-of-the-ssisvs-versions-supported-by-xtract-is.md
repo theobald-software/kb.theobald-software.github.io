@@ -2,7 +2,8 @@
 layout: page
 title: List of the SSIS/VS Versions Supported by Xtract IS
 description: List of the SSIS/VS Versions Supported by Xtract IS
-permalink: OBSOLET(/:collection/:path)
+parent: obsolet
+permalink: /:collection/:path
 weight: 25
 ---
 
