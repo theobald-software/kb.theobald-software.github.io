@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: obsolet(page)
 title: List of the SSIS/VS Versions Supported by Xtract IS
 description: List of the SSIS/VS Versions Supported by Xtract IS
 permalink: /:collection/:path
