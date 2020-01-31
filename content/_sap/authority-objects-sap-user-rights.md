@@ -31,6 +31,7 @@ S_RFC            RFC_TYPE=FUGR; RFC_NAME=SDTX; ACTVT=16
 S_RFC            RFC_TYPE=FUGR; RFC_NAME=SDIFRUNTIME; ACTVT=16           
 S_TABU_DIS       ACTVT=03; DICBERCLS=&NC&
 S_TABU_DIS       ACTVT=03; DICBERCLS=SS
+S_TABU_NAM       ACTVT=03; TABLE=ENLFDIR
 ```
 
 or use the following separate authority check for each table to read: 
