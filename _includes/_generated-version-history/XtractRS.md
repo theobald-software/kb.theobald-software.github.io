@@ -1,6 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
-|9.4.0 [M]|2020-02-04|General|Updated to .NET Framework 4.7.2|
+|9.4.0 [M]|2020-02-04|General|Updated to .NET Framework 4.7.2..|
 |9.3.2 [M]|2020-02-04|Setup|Fix for Report Server & VS 2017 / VS2015 on the same machine|
 |9.3.1 [M]|2020-02-04|Setup|Fix for machines without .NET Framework 3.5|
 |9.3.0 [M]|2020-01-20|General|VS2017/2019: Updated to MS Reporting Services Projects 2.6.3|
