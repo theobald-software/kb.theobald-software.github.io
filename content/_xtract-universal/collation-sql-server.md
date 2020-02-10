@@ -31,7 +31,7 @@ In the following example, we will explain the possibility to use the column coll
 
 ### SQL Server Management Studio (SSMS)
 
-Take a closer look into the database settings 'xu_fas', following collation statement appears: 'Latin1_General_100_CI_AI'. 
+Take a closer look into the database settings *xu_fas*, following collation statement appears: *Latin1_General_100_CI_AI*. 
 
 **option** | **description**
 ------------ | -------------
@@ -42,18 +42,18 @@ _AI | accent-insensitive
 
 ### Xtract Universal
 
-We want to extract the SAP table 'MAKT' from ECC:
+We want to extract the SAP table *MAKT* from ECC:
 
 1. Create an table extraction as discribed in our [Online Help](https://help.theobald-software.com/en/xtract-universal/table)
-2. The look-up process dispend the corresponding metadata from our SAP object 'MAKT'. 
+2. The look-up process dispend the corresponding metadata from our SAP object *MAKT*. 
 ![default_collation_statement](/img/contents/makt_metadata.png){:class="img-responsive"}
-3. Composite primary key of the table fields: 'MANDT', 'MATNR', 'SPRAS'
-4. SAP field 'SPRAS' is of data type 'LANG' with a length '1'
+3. Composite primary key of the table fields: *MANDT*, *MATNR*, *SPRAS* with unique constraint
+4. SAP field *SPRAS* is of data type *LANG* with a length *1*
 5. Creating a simple Where clause statement like 
 ```sql
 MATNR = '000000000000000038' AND ( SPRAS  = 'd' OR SPRAS = 'D' )
 ```
-6. **[Load live preview]** results in two data entries - only difference upper- lower case for the field 'SPRAS'
+6. **[Load live preview]** results in two data entries - only difference upper-lower case for the SAP field *SPRAS*
 7. Select a MSSQL server destination for this extraction and press the **[Run]** button
 8. Following error during extraction occurs from the destination
 ```
@@ -62,11 +62,11 @@ System.Data.SqlClient.SqlException (0x80131904): Violation of PRIMARY KEY constr
 
 ### Workaround
 
-As explained in detail above Xtract Universal isn't able to push the entire data of 'MAKT' into MSSQL server due to used collation statement of the database. In this case, the user has to adjust the SQL statement *Preparation* of the MSSQL destination settings.
+As explained in detail above Xtract Universal isn't able to push the entire data of 'MAKT' into MSSQL server due to used collation statement of the database. In this case, the user has to customize the SQL statement *Preparation* of the MSSQL destination settings.
 
 1. Change the default value *Drop & Create* to *Custom SQL*
-2. Create the *Drop & Create* statement for table 'MAKT'
-3. Customize column collation for table field 'SPRAS'
+2. Create the *Drop & Create* statement for table *MAKT*
+3. Customize column collation for table field *SPRAS*
 ```sql
 IF (object_id('MAKT') IS NOT NULL)
 BEGIN
