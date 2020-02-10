@@ -88,7 +88,6 @@ CREATE TABLE [MAKT]
    )
 ```
 4. Finally the extraction to MSSQL server ends with following statement
-
 ```
 Extraction finished successfully
 ```
