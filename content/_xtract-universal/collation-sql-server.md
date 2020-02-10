@@ -64,9 +64,9 @@ System.Data.SqlClient.SqlException (0x80131904): Violation of PRIMARY KEY constr
 
 As explained in detail above Xtract Universal isn't able to push the entire data of 'MAKT' into MSSQL server due to used collation statement of the database. In this case, the user has to customize the SQL statement *Preparation* of the MSSQL destination settings.
 
-1. Change the default value *Drop & Create* to *Custom SQL*
-2. Create the *Drop & Create* statement for table *MAKT*
-3. Customize column collation for table field *SPRAS*
+1. Change the default value *Drop & Create* to *Custom SQL* and click **[Edit SQL]**
+2. Select the *Drop & Create* entry from the drop-down menu and click on **[Generate Statement]** for table *MAKT*
+3. Customize column collation for field *SPRAS* as shown below
 ```sql
 IF (object_id('MAKT') IS NOT NULL)
 BEGIN
@@ -86,10 +86,10 @@ CREATE TABLE [MAKT]
       [MATNR], 
       [SPRAS]
    )
+
+);
 ```
 4. Finally the extraction to MSSQL server ends with following statement
 ```
 Extraction finished successfully
 ```
-
-
