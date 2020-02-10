@@ -38,26 +38,24 @@ Take a closer look into the database settings 'xu_fas', following collation stat
 _CI | case-insensitive
 _AI | accent-insensitive
 
-![default_collation_statement](/img/content/collation_example_CI_AI_xu_fas_DB.png){:class="img-responsive"}
+![default_collation_statement](/img/contents/collation_example_CI_AI_xu_fas_DB.png){:class="img-responsive"}
 
 ### Xtract Universal
 
 We want to extract the SAP table 'MAKT' from ECC:
 
 1. Create an table extraction as discribed in our [Online Help](https://help.theobald-software.com/en/xtract-universal/table)
-2. The look-up process dispend the corresponding metadata from our SAP object 'MAKT'. ![default_collation_statement](/img/content/makt_metadata.png){:class="img-responsive"}
+2. The look-up process dispend the corresponding metadata from our SAP object 'MAKT'. 
+![default_collation_statement](/img/contents/makt_metadata.png){:class="img-responsive"}
 3. Composite primary key of the table fields: 'MANDT', 'MATNR', 'SPRAS'
 4. SAP field 'SPRAS' is of data type 'LANG' with a length '1'
 5. Creating a simple Where clause statement like 
-
 ```sql
 MATNR = '000000000000000038' AND ( SPRAS  = 'd' OR SPRAS = 'D' )
 ```
-
 6. **[Load live preview]** results in two data entries - only difference upper- lower case for the field 'SPRAS'
 7. Select a MSSQL server destination for this extraction and press the **[Run]** button
 8. Following error during extraction occurs from the destination
-
 ```
 System.Data.SqlClient.SqlException (0x80131904): Violation of PRIMARY KEY constraint 'PK__makt__3483F06C110B42CD'. Cannot insert duplicate key in object 'dbo.makt'. The duplicate key value is (800, 000000000000000038, d)
 ```
@@ -69,7 +67,6 @@ As explained in detail above Xtract Universal isn't able to push the entire data
 1. Change the default value *Drop & Create* to *Custom SQL*
 2. Create the *Drop & Create* statement for table 'MAKT'
 3. Customize column collation for table field 'SPRAS'
-
 ```sql
 IF (object_id('MAKT') IS NOT NULL)
 BEGIN
