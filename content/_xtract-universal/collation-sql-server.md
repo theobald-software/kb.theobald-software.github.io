@@ -26,7 +26,7 @@ Accent-sensitive (_AS) | Distinguishes between accented and unaccented character
 
 A complete list of usable collation can be found [here](https://docs.microsoft.com/en-us/sql/relational-databases/collations/collation-and-unicode-support?redirectedfrom=MSDN&view=sql-server-ver15#Collation_Defn)
 
-For more detailed information, please rely on the following official [Microsoft side](https://docs.microsoft.com/en-us/sql/relational-databases/collations/collation-and-unicode-support?redirectedfrom=MSDN&view=sql-server-ver15). 
+For more detailed information, please rely on the following official [Microsoft site](https://docs.microsoft.com/en-us/sql/relational-databases/collations/collation-and-unicode-support?redirectedfrom=MSDN&view=sql-server-ver15). 
 In the following example, we will explain the possibility to use the column collation within Xtract Universal by using [Custom SQL](https://help.theobald-software.com/en/xtract-universal/xu-destinations/microsoft-sql-server/sql-server-custom-sql) statement.
 
 ### SQL Server Management Studio (SSMS)
@@ -49,12 +49,15 @@ We want to extract the SAP table 'MAKT' from ECC:
 3. Composite primary key of the table fields: 'MANDT', 'MATNR', 'SPRAS'
 4. SAP field 'SPRAS' is of data type 'LANG' with a length '1'
 5. Creating a simple Where clause statement like 
+
 ```sql
 MATNR = '000000000000000038' AND ( SPRAS  = 'd' OR SPRAS = 'D' )
 ```
+
 6. **[Load live preview]** results in two data entries - only difference upper- lower case for the field 'SPRAS'
 7. Select a MSSQL server destination for this extraction and press the **[Run]** button
 8. Following error during extraction occurs from the destination
+
 ```
 System.Data.SqlClient.SqlException (0x80131904): Violation of PRIMARY KEY constraint 'PK__makt__3483F06C110B42CD'. Cannot insert duplicate key in object 'dbo.makt'. The duplicate key value is (800, 000000000000000038, d)
 ```
@@ -66,6 +69,7 @@ As explained in detail above Xtract Universal isn't able to push the entire data
 1. Change the default value *Drop & Create* to *Custom SQL*
 2. Create the *Drop & Create* statement for table 'MAKT'
 3. Customize column collation for table field 'SPRAS'
+
 ```sql
 IF (object_id('MAKT') IS NOT NULL)
 BEGIN
@@ -87,6 +91,7 @@ CREATE TABLE [MAKT]
    )
 ```
 4. Finally the extraction to MSSQL server ends with following statement
+
 ```
 Extraction finished successfully
 ```
