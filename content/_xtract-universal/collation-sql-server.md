@@ -67,6 +67,9 @@ As explained in detail above Xtract Universal isn't able to push the entire data
 1. Change the default value *Drop & Create* to *Custom SQL* and click **[Edit SQL]**
 2. Select the *Drop & Create* entry from the drop-down menu and click on **[Generate Statement]** for table *MAKT*
 3. Customize column collation for field *SPRAS* as shown below
+4. Finally the extraction to MSSQL server ends with following statement 'Extraction finished successfully'
+
+
 ```sql
 IF (object_id('MAKT') IS NOT NULL)
 BEGIN
@@ -89,7 +92,5 @@ CREATE TABLE [MAKT]
 
 );
 ```
-4. Finally the extraction to MSSQL server ends with following statement
-```
-Extraction finished successfully
-```
+
+
