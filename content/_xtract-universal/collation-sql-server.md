@@ -51,16 +51,13 @@ We want to extract the SAP table *MAKT* from ECC:
    - Composite primary key consists of the table fields: *MANDT*, *MATNR*, *SPRAS* with a unique constraint.
    - SAP field *SPRAS* is of data type *LANG* with a length *1*.
    ![DD_SPRAS](/img/contents/dataDictionary_SPRAS.png){:class="img-responsive"}
-2. Creating a simple Where clause statement like 
-```sql
-MATNR = '000000000000000038' AND ( SPRAS  = 'd' OR SPRAS = 'D' )
-```
-3. Results in two data entries when clicking **[Load live preview]** - The SAP database interprets the data records with upper-case 'D' and lower-case 'd' in the field *SPRAS* as different data records.
-4. Select an MSSQL server destination for the previously edited extraction and click **[Run]**.
-   - The destination following error occurs during the extration.
-```
-System.Data.SqlClient.SqlException (0x80131904): Violation of PRIMARY KEY constraint 'PK__makt__3483F06C110B42CD'. Cannot insert duplicate key in object 'dbo.makt'. The duplicate key value is (800, 000000000000000038, d)
-```
+2. Create a simple Where clause statement like: *MATNR = '000000000000000038' AND ( SPRAS  = 'd' OR SPRAS = 'D' )*
+3.  Click **[Load live preview]**. The result is the following: two data entries - the SAP database interprets the data records with upper-case 'D' and lower-case 'd' in the field *SPRAS* as different data records.
+4. Select an MSSQL server destination for the previously edited extraction and click **[Run]**.<br>
+The destination following error occurs during the extration.
+
+`System.Data.SqlClient.SqlException (0x80131904): Violation of PRIMARY KEY constraint 'PK__makt__3483F06C110B42CD'. Cannot insert duplicate key in object 'dbo.makt'. The duplicate key value is (800, 000000000000000038, d)`
+
 
 ### Workaround
 
