@@ -56,8 +56,8 @@ We want to extract the SAP table *MAKT* from ECC:
 4. Select an MSSQL server destination for the previously edited extraction and click **[Run]**.<br>
 The destination following error occurs during the extration.
 
-`System.Data.SqlClient.SqlException (0x80131904): Violation of PRIMARY KEY constraint 'PK__makt__3483F06C110B42CD'. Cannot insert duplicate key in object 'dbo.makt'.`
-`The duplicate key value is (800, 000000000000000038, d)`
+> System.Data.SqlClient.SqlException (0x80131904): Violation of PRIMARY KEY constraint 'PK__makt__3483F06C110B42CD'. 
+> Cannot insert  duplicate key in object 'dbo.makt'.The duplicate key value is (800, 000000000000000038, d)
 
 
 ### Workaround
