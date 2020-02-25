@@ -8,4 +8,4 @@ weight: 50
 
 {% include version-history-header.md %}
 
-{% include _generated-version-history/XtractForAlteryx.html %}
+{% include _generated-version-history/XtractForAlteryx.md %}

@@ -10,4 +10,4 @@ For communication with the SAP system, ECSCore uses [ERPConnect](./erpconnect-ve
 
 {% include version-history-header.md %}
 
-{% include _generated-version-history/ECSCore.html %}
+{% include _generated-version-history/ECSCore.md %}

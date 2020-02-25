@@ -10,4 +10,4 @@ For communication with the SAP system, ERPConnect Services uses [ERPConnect](./e
 
 {% include version-history-header.md %}
 
-{% include _generated-version-history/ERPConnectServices.html %}                                                                                                                                                                                                                                            |
+{% include _generated-version-history/ERPConnectServices.md %}                                                                                                                                                                                                                                            |

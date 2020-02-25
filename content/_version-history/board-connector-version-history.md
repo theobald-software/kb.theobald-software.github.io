@@ -11,4 +11,4 @@ See the [Xtract Kernel Version History](./xtract-kernel-version-history) for cha
 {% include version-history-header.md %}
 
 
-{% include _generated-version-history/BOARDConnector.html %}
+{% include _generated-version-history/BOARDConnector.md %}

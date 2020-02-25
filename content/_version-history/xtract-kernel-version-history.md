@@ -16,4 +16,4 @@ For communication with the SAP system, the Xtract Kernel uses [ERPConnect](./erp
 
 {% include version-history-header.md %}
 
-{% include _generated-version-history/XtractKernel.html %}
+{% include _generated-version-history/XtractKernel.md %}

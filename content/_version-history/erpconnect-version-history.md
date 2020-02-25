@@ -11,4 +11,4 @@ All other Theobald Software products use ERPConnect for communicating with SAP. 
 {% include version-history-header.md %}
 
 
-{% include _generated-version-history/ERPConnect.html %}
+{% include _generated-version-history/ERPConnect.md %}
