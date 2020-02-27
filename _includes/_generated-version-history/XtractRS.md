@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|9.5.1 [M]|2020-02-27|General|Fix for Cube and Report|
 |9.5.0 [M]|2020-02-20|Setup|Added support for Preview in VS2017 & VS2019|
 |9.4.0 [M]|2020-02-04|General|Updated to .NET Framework 4.7.2|
 |9.3.2 [M]|2020-02-04|Setup|Fix for Report Server & VS 2017 / VS2015 on the same machine|
