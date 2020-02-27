@@ -1,5 +1,8 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.3.2 [M]|2020-02-26|BAPI|Fix for STRING/XSTRING|
+|4.3.1 [L]|2020-02-26|Server|Improved web server logging|
+|4.3.0 [M]|2020-02-26|Security|Disabled TLS 1.1, enabled TLS 1.3|
 |4.2.1 [M]|2020-02-18|Server|Fixed a bug that caused extractions to get stuck on "running"|
 |4.2.0 [M]|2020-02-07|Server|Fixes & improvements for result cache.|
 |4.1.0 [M]|2020-02-04|General|Updated to .NET Framework 4.7.2|

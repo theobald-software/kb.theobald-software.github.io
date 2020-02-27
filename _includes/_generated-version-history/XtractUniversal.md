@@ -1,5 +1,10 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.8.1 [M]|2020-02-27|Destinations|Added default destination 'http-json'|
+|4.8.0 [M]|2020-02-26|Destinations|Added HTTP - JSON and Flat File - JSON destinations|
+|4.7.2 [M]|2020-02-26|BAPI|Fix for STRING/XSTRING|
+|4.7.1 [L]|2020-02-26|Server|Improved web server logging|
+|4.7.0 [M]|2020-02-26|Security|Disabled TLS 1.1, enabled TLS 1.3|
 |4.6.3 [L]|2020-02-24|Designer|Fix for editing empty extractions|
 |4.6.2 [M]|2020-02-24|Destinations|Fix for editing/adding OData Atom destinations|
 |4.6.1 [M]|2020-02-18|Server|Fixed a bug that caused extractions to get stuck on "running"|
