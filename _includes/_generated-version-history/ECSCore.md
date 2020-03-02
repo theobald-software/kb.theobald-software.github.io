@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.4.2 [L]|2020-03-02|General|Improved azure relay integration|
 |2.4.1 [L]|2020-02-12|Designer|Minor update in WebService Designer|
 |2.4.0 [L]|2020-02-03|Deployment Manager|Improved web services availability after deployment.|
 |2.3.2 [L]|2019-11-26|Management|Bugfix: user management in connections.|
