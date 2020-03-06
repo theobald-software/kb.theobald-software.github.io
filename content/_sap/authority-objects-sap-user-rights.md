@@ -12,7 +12,7 @@ To use our products you need an SAP user with the following authority objects. <
 
 Please redirect this article to your SAP Basis admins to get the relevant authority objects you need for your user.  
 
-#### General authority objects
+### General authority objects
 
 The following objects are needed at least to establish a connection.
 
@@ -22,7 +22,7 @@ S_RFC            RFC_TYPE=FUGR; RFC_NAME=SRFC; ACTVT=16
 S_RFC            RFC_TYPE=FUGR; RFC_NAME=RFC1; ACTVT=16
 ```
 
-#### Table
+### Table
 
 Look up tables and table meta data:
 
@@ -73,7 +73,7 @@ S_TABU_NAM       ACTVT=03; TABLE=DD17S
 ``` 
 
 
-#### BW Query / BW Cube
+### BW Query / BW Cube
 
 Look up and execute a BW Query / BW Cube (OLAP BAPI/MDX and BEx mode):
 
@@ -89,7 +89,7 @@ Optional (needed for date conversion):
 ```
 S_TABU_NAM       ACTVT=03; TABLE=DD03L
 ```
-#### SAP Query
+### SAP Query
 
 Look up and execute a query:
 
@@ -97,7 +97,7 @@ Look up and execute a query:
 S_RFC            RFC_TYPE=FUGR; RFC_NAME=AQRC; ACTVT=16 
 ```
 
-#### Report
+### Report
 
 Look up report, preview und execute:
 
@@ -123,7 +123,7 @@ S_GUI            ACTVT=61
 XXXXX (stands for a placeholder) is the function group to which the function module Z_XTRACT_IS_REMOTE_REPORT belongs to.
 
 
-#### ODP
+### ODP
 
 Authority objects needed for the Operational Data Provisioning (ODP):
 
@@ -135,7 +135,7 @@ S_APPL_LOG       ALG_OBJECT=ODQ; ALG_SUBOBJ=*; ACTVT=03, 06
 S_RO_OSOA        OLTPSOURCE=*; OSOAAPCO=*; OSOAPART=DATA, DEFINITION; ACTVT=03
 ```
 
-#### DeltaQ
+### DeltaQ
 
 Authority objects needed for the customizing check:
 
@@ -205,7 +205,7 @@ S_SPO_DEV        SPODEVICE=*
 S_RO_OSOA        OLTPSOURCE=*; OSOAAPCO=*; OSOAPART=DATA; ACTVT=03;  | Only in SAP Releases  7.0 and higher
 ```
 
-#### OHS
+### OHS
 
 Look up an OHS extraction:
 
@@ -227,7 +227,7 @@ S_RS_AUTH  BIAUTH=0BI_ALL
 S_ADMI_FCD S_ADMI_FCD=ST0R
 ```
 
-#### BW Hierarchies
+### BW Hierarchies
 
 Look up and read hierarchies:
 ```
