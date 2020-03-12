@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.8.3 [M]|2020-03-12|ODP|Added support for runtime parameters|
 |4.8.2 [L]|2020-03-11|Server|Added 'KEY' column to /metadata API |
 |4.8.1 [M]|2020-02-27|Destinations|Added default destination 'http-json'|
 |4.8.0 [M]|2020-02-26|Destinations|Added HTTP - JSON and Flat File - JSON destinations|
