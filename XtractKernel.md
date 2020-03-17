@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.1.1 [L]|2020-03-17|BW Cube|Fix for auto slicing MDX syntax on older SAP BW systems.|
 |5.1.0 [M]|2020-02-04|General|Updated to .NET Framework 4.7.2|
 |5.0.7 [L]|2019-12-19|Table Join|Fix for some ABAP types|
 |5.0.6 [L]|2019-09-24|Theobald.Extractors|Updated to 1.10.6|
