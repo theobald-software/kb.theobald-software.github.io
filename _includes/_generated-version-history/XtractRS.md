@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|9.5.2 [L]|2020-03-17|BW Cube|Fix for auto slicing MDX syntax on older SAP BW systems.|
 |9.5.1 [M]|2020-02-27|General|Fix for Cube and Report|
 |9.5.0 [M]|2020-02-20|Setup|Added support for Preview in VS2017 & VS2019|
 |9.4.0 [M]|2020-02-04|General|Updated to .NET Framework 4.7.2|
