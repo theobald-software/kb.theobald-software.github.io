@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.3.3 [L]|2020-03-17|BW Cube|Fix for auto slicing MDX syntax on older SAP BW systems.|
 |6.3.2 [L]|2020-02-21|Report|Increased max. top/bottom row skip to 9999|
 |6.3.1 [M]|2020-02-05|General|Fixes for showing error messages while retrieving available Table function modules (e. g. missing authorizations for ENLFDIR)|
 |6.3.0 [M]|2020-02-04|General|Updated to .NET Framework 4.7.2|
