@@ -10,6 +10,9 @@ Please also have a look in our [OnlineHelp](https://help.theobald-software.com/e
 
 To use our products you need an SAP user with the following authority objects. <br>
 
+The authorizations in the first section General authority objects are required to establish an SAP connection with the SAP server. 
+The remaining sections show the authorizations required for the respective components. Depending on the components that you want to use, the corresponding authorizations are required. 
+
 Please redirect this article to your SAP Basis admins to get the relevant authority objects you need for your user.  
 
 ### General authority objects
