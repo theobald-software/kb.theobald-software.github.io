@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.8.5 [L]|2020-03-30|Destinations|Snowflake driver SnowSql upgrade to version 1.2.5|
 |4.8.4 [L]|2020-03-17|BW Cube|Fix for auto slicing MDX syntax on older SAP BW systems.|
 |4.8.3 [M]|2020-03-12|ODP|Added support for runtime parameters|
 |4.8.2 [L]|2020-03-11|Server|Added 'KEY' column to /metadata API |
