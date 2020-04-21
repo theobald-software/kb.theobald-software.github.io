@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.9.1 [L]|2020-04-21|Designer|Extraction filter window migration to WPF|
 |4.9.0 [L]|2020-04-20|Designer|Main window migration to WPF|
 |4.8.5 [L]|2020-03-30|Destinations|Snowflake driver SnowSql upgrade to version 1.2.5|
 |4.8.4 [L]|2020-03-17|BW Cube|Fix for auto slicing MDX syntax on older SAP BW systems.|
