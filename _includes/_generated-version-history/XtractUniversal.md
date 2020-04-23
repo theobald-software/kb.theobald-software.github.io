@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.9.4 [L]|2020-04-23|General|Increased RFC network timeouts to 5 seconds|
 |4.9.3 [L]|2020-04-23|Destinations|Azure Storage destination now support authentication with Azure Active Directory|
 |4.9.2 [L]|2020-04-22|Designer|Fix for quit button in connect window|
 |4.9.1 [L]|2020-04-21|Designer|Extraction filter window migration to WPF|
