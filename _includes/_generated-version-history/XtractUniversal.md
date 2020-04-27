@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.10.0 [L]|2020-04-27|Destinations|Added Parquet destination|
 |4.9.5 [L]|2020-04-27|Designer|Fix for disconnect designer|
 |4.9.4 [L]|2020-04-23|General|Increased RFC network timeouts to 5 seconds|
 |4.9.3 [L]|2020-04-23|Destinations|Azure Storage destination now support authentication with Azure Active Directory|
