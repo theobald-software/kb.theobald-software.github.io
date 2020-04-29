@@ -138,6 +138,9 @@ S_APPL_LOG       ALG_OBJECT=ODQ; ALG_SUBOBJ=*; ACTVT=03, 06
 S_RO_OSOA        OLTPSOURCE=*; OSOAAPCO=*; OSOAPART=DATA, DEFINITION; ACTVT=03
 ```
 
+For a complete and detailed list of authorization objects refer to **SAP Note 2855052 - Authorizations required for ODP Data Replication API 2.0**.
+
+
 ### DeltaQ
 
 Authority objects needed for the customizing check:
