@@ -130,6 +130,8 @@ XXXXX (stands for a placeholder) is the function group to which the function mod
 
 Authority objects needed for the Operational Data Provisioning (ODP):
 
+A complete and detailed list of authorization objects refer to [SAP Note 2855052](https://launchpad.support.sap.com/#/notes/2855052) - Authorizations required for ODP Data Replication API 2.0. 
+<!---
 ```
 S_RFC            RFC_TYPE=FUGR,FUNC; RFC_NAME=RODPS_REPL; ACTVT=16                  
 S_TCODE          TCD=BSANL_ACWB, ODQMON, RODPS_ODP_IMG, RSO2, RSOR, RSRTS_ODP_DIS            
@@ -137,10 +139,7 @@ S_ADMI_FCD       Value=NADM
 S_APPL_LOG       ALG_OBJECT=ODQ; ALG_SUBOBJ=*; ACTVT=03, 06
 S_RO_OSOA        OLTPSOURCE=*; OSOAAPCO=*; OSOAPART=DATA, DEFINITION; ACTVT=03
 ```
-
-For a complete and detailed list of authorization objects refer to **SAP Note 2855052 - Authorizations required for ODP Data Replication API 2.0**.
-
-
+--->
 ### DeltaQ
 
 Authority objects needed for the customizing check:
