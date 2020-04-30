@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.4.3 [L]|2020-04-30|Designer|Fix for context menu item in main window|
 |4.4.2 [L]|2020-04-29|General|Optimized internal dependencies.|
 |4.4.1 [L]|2020-04-23|General|Increased RFC network timeouts to 5 seconds|
 |4.4.0 [L]|2020-04-23|Designer|Main window migration to WPF|
