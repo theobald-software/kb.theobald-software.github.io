@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.11.1 [M]|2020-05-04|Designer|GUI fixes for partially invisible destination settings (e. g. File CSV)|
 |4.11.0 [L]|2020-04-29|General|Optimized internal dependencies.|
 |4.10.0 [L]|2020-04-27|Destinations|Added Parquet destination|
 |4.9.5 [L]|2020-04-27|Designer|Fix for disconnect designer|
