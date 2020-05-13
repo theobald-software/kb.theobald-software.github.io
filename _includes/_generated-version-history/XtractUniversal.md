@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.11.4 [L]|2020-05-13|Designer|General designer bug fixes and improvements|
 |4.11.3 [L]|2020-05-08|Destinations|Fix for Snowflake row counting |
 |4.11.2 [L]|2020-05-05|Designer|New WPF log window|
 |4.11.1 [M]|2020-05-04|Designer|GUI fixes for partially invisible destination settings (e. g. File CSV)|
