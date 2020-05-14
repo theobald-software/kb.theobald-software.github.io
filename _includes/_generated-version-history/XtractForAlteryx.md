@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.9.2 [L]|2020-05-14|General|Fix for name validation in edit connection window.|
 |1.9.1 [M]|2020-02-05|Designer|Fixes for showing error messages while retrieving available Table function modules (e. g. missing authorizations for ENLFDIR)|
 |1.9.0 [M]|2020-02-04|General|Updated to .NET Framework 4.7.2|
 |[1.8.0 [M]](https://kb.theobald-software.com/release-notes/XtractForAlteryx-1.8.0.html)|2020-01-28|BAPI|Input and output improvements([Release note](https://kb.theobald-software.com/release-notes/XtractForAlteryx-1.8.0.html))|
