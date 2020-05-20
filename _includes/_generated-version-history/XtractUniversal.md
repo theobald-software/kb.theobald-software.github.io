@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.11.6 [L]|2020-05-20|Designer|License forward compatibility improvement for supported destinations.|
 |4.11.5 [L]|2020-05-18|Designer|Fix for server name typing in connect window|
 |4.11.4 [L]|2020-05-13|Designer|General designer bug fixes and improvements|
 |4.11.3 [L]|2020-05-08|Destinations|Fix for Snowflake row counting |
