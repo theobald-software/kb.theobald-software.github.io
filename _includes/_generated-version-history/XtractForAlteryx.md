@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.9.3 [L]|2020-05-20|General|License forward compatibility improvement for supported components.|
 |1.9.2 [L]|2020-05-14|General|Fix for name validation in edit connection window.|
 |1.9.1 [M]|2020-02-05|Designer|Fixes for showing error messages while retrieving available Table function modules (e. g. missing authorizations for ENLFDIR)|
 |1.9.0 [M]|2020-02-04|General|Updated to .NET Framework 4.7.2|
