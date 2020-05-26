@@ -1,5 +1,7 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.11.8 [L]|2020-05-26|Server|ConfigConverter now fixes invalid 3.x Table extractions using Z_THEO_READ_TABLE and conversion routines|
+|4.11.7 [L]|2020-05-26|Designer|Fix in log window to show datetime using the 24 hours format|
 |4.11.6 [L]|2020-05-20|Designer|License forward compatibility improvement for supported destinations.|
 |4.11.5 [L]|2020-05-18|Designer|Fix for server name typing in connect window|
 |4.11.4 [L]|2020-05-13|Designer|General designer bug fixes and improvements|
