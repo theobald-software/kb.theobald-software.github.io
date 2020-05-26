@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.11.9 [L]|2020-05-26|Server|ConfigConverter: Fix for Console buffers wider than 120|
 |4.11.8 [L]|2020-05-26|Server|ConfigConverter now fixes invalid 3.x Table extractions using Z_THEO_READ_TABLE and conversion routines|
 |4.11.7 [L]|2020-05-26|Designer|Fix in log window to show datetime using the 24 hours format|
 |4.11.6 [L]|2020-05-20|Designer|License forward compatibility improvement for supported destinations.|
