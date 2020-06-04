@@ -1,6 +1,6 @@
 ---
 layout: section-page
-title: Xtract IS
+title: Xtract IS / Xtract IS for Azure
 description: Xtract IS
 permalink: /:collection
 search-ignore: true
