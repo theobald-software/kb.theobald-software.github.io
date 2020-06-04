@@ -1,5 +1,14 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.11.9 [L]|2020-05-26|Server|ConfigConverter: Fix for Console buffers wider than 120|
+|4.11.8 [L]|2020-05-26|Server|ConfigConverter now fixes invalid 3.x Table extractions using Z_THEO_READ_TABLE and conversion routines|
+|4.11.7 [L]|2020-05-26|Designer|Fix in log window to show datetime using the 24 hours format|
+|4.11.6 [L]|2020-05-20|Designer|License forward compatibility improvement for supported destinations.|
+|4.11.5 [L]|2020-05-18|Designer|Fix for server name typing in connect window|
+|4.11.4 [L]|2020-05-13|Designer|General designer bug fixes and improvements|
+|4.11.3 [L]|2020-05-08|Destinations|Fix for Snowflake row counting |
+|4.11.2 [L]|2020-05-05|Designer|New WPF log window|
+|4.11.1 [M]|2020-05-04|Designer|GUI fixes for partially invisible destination settings (e. g. File CSV)|
 |4.11.0 [L]|2020-04-29|General|Optimized internal dependencies.|
 |4.10.0 [L]|2020-04-27|Destinations|Added Parquet destination|
 |4.9.5 [L]|2020-04-27|Designer|Fix for disconnect designer|

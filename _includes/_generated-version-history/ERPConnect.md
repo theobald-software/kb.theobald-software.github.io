@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.9.0 [L]|2020-05-26|Setup|New setup|
 |6.8.9 [M]|2020-01-16|RFCServer|Fix for parallel RFC servers using NWRFC|
 |6.8.8 [M]|2020-01-14|RFCServer|Fix for "Cannot execute NwFunction more than once" (NWRFC)|
 |6.8.7 [M]|2019-12-06|RFC Client|Classic RFC: Fixed memory leak in tRFC (e. g. Idoc.Send())|

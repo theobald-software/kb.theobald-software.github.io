@@ -1,5 +1,8 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.4.2 [L]|2020-05-20|General|License forward compatibility improvement for supported components.|
+|6.4.1 [L]|2020-05-14|OHS|Main window is resizable now.|
+|6.4.0 [L]|2020-05-14|OHS|Removed preview button|
 |6.3.4 [L]|2020-04-17|Table|Backward compatibilty fix: Compression function module was ignored in old packages, that had only "Use Compression" enabled, but not "Use custom function"|
 |6.3.3 [L]|2020-03-17|BW Cube|Fix for auto slicing MDX syntax on older SAP BW systems.|
 |6.3.2 [L]|2020-02-21|Report|Increased max. top/bottom row skip to 9999|
