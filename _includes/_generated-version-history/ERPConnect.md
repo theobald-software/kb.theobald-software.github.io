@@ -115,8 +115,7 @@
 |4.43.4 [M]|2016-12-22|General|Introduced NoAuthorityException, improved error messages|
 |4.43.3 [M]|2016-12-20|RFC Client|Improved error message for missing table authorization|
 |4.43.2 [L]|2016-12-19|General|Improved exception handling in BWCube for BW dates|
-|4.43.1 [L]|2016-12-14|General|Added new ERPException - NotAuthorizedException
-Optimized BWCube exception handling for dates|
+|4.43.1 [L]|2016-12-14|General|Added new ERPException - NotAuthorizedException Optimized BWCube exception handling for dates|
 |4.43.0 [M]|2016-11-25|RFCServer|tRFC: Added support for queuing parallel connections|
 |4.42.5 [M]|2016-11-23|General|Fixed default value of R3Connection.MultithreadingEnvironment (was false)|
 |4.42.4 [M]|2016-11-07|General|Fix for receiving strings with more than 255 characters inside of deep structures/table types (NW)|

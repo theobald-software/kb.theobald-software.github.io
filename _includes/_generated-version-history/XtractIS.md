@@ -53,8 +53,7 @@
 |5.0.7 [M]|2019-07-23|General|Updated NW RFC to 7.50 PL 4|
 |[5.0.6 [M]](https://kb.theobald-software.com/release-notes/XtractIS-5.0.6.html)|2019-07-23|Table|Fixed issues related to legacy table extraction function modules when editing table components([Release note](https://kb.theobald-software.com/release-notes/XtractIS-5.0.6.html))|
 |5.0.5 [L]|2019-07-22|Table|Fixed a bug that caused the preview to fail when SSIS parameters were used in the where clause|
-|5.0.4 [M]|2019-07-16|Table|Added property to choose from various column name styles
-|
+|5.0.4 [M]|2019-07-16|Table|Added property to choose from various column name styles|
 |5.0.3 [L]|2019-07-15|Setup|Removed .NET version check from InstallXtractIS.exe (already checked by setup)|
 |5.0.2 [M]|2019-07-15|General|Fixed app.config files|
 |5.0.1 [H]|2019-07-05|ODP|Fixed a bug that caused extractions to fail and possible data loss in the SSIS pipeline (only affects the ODP component)|
@@ -153,8 +152,7 @@
 |4.1.4 [L]|2017-11-03|OHS|Fix for preview (connection closed)|
 |4.1.3 [L]|2017-11-03|BW Cube|Fix for preview (connection closed)|
 |4.1.2 [M]|2017-11-03|Hierarchy|Fix for preview|
-|4.1.1 [M]|2017-11-03|DeltaQ|Added default replacement for invalid dates
-|
+|4.1.1 [M]|2017-11-03|DeltaQ|Added default replacement for invalid dates|
 |4.1.0 [M]|2017-11-03|General|Adjustments for Xtract Kernel 3.0|
 |4.0.16 [L]|2017-10-30|DeltaQ|Fixes & improvements for truncating values & warnings|
 |4.0.15 [L]|2017-10-19|DeltaQ|Replaced more error messages with warnings for truncated values|

@@ -95,8 +95,7 @@
 |3.14.22 [L]|2019-08-07|Setup|Fixes for portable Designer zip|
 |[3.14.21 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-3.14.21.html)|2019-07-29|Destinations|Power BI Connector: General Availibility (end of beta)([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-3.14.21.html))|
 |3.14.20 [M]|2019-07-23|General|Updated NW RFC to 7.50 PL 4|
-|3.14.19 [L]|2019-07-18|Destinations|Friendly message for failed destinations that require extra components and PostgreSQL full server version.
-|
+|3.14.19 [L]|2019-07-18|Destinations|Friendly message for failed destinations that require extra components and PostgreSQL full server version.|
 |3.14.18 [L]|2019-07-15|General|Alteryx Plugin: Fixed app.config for plugin setup|
 |3.14.17 [L]|2019-07-11|Destinations|Fixed a bug where CSV settings in S3 destination were not displayed correctly.|
 |3.14.16 [L]|2019-07-09|Destinations|S3 destination now allows to save the files to folders and subfolders inside buckets.|
@@ -213,8 +212,7 @@
 |3.1.3 [M]|2018-06-21|Designer|GUI fixes (buttons not visible at some screen resolutions etc.)|
 |3.1.2 [L]|2018-06-14|Destinations|Fixed a bug in the MicroStrategy destination, that caused cubes to be unintentionally replaced in some situations.|
 |3.1.1 [L]|2018-06-08|Destinations|Added definition of MicroStrategy attributes and metrics.|
-|3.1.0 [M]|2018-05-30|Security|Added "Require SAP credentials" to source, removed X.509 certificate path
-(please configure via SNC solution)|
+|3.1.0 [M]|2018-05-30|Security|Added "Require SAP credentials" to source, removed X.509 certificate path (please configure via SNC solution)|
 |3.0.8 [M]|2018-05-30|BW Cube|Set package size to 20.000 for new extractions|
 |3.0.7 [L]|2018-05-30|Destinations|SQLServer/AzureDWH: Increased timeouts to 60 minutes|
 |3.0.6 [M]|2018-05-24|General|Fixes & improvements for Designer/Server communication|
