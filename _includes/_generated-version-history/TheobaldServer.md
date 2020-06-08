@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.0.8 [M]|2020-06-08|General|Fixed a bug that allowed dots in names|
 |1.0.7 [L]|2020-05-19|General|TheoAuth implementation is async now|
 |1.0.6 [M]|2020-05-18|General|Fix for AggregateException in StreamExtensions|
 |1.0.5 [L]|2020-05-08|General|HttpWebServer basic support for http POST |
