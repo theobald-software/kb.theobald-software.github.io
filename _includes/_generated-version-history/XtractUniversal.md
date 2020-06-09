@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.11.11 [L]|2020-06-09|Destinations|Fixes for Salesforce destination|
 |4.11.10 [M]|2020-06-08|Designer|New rules for names of extractions, sources and destinations: Letters a-z, numbers 0-9, minus (-) or underscore (_). Names no longer have to start with a letter.|
 |4.11.9 [L]|2020-05-26|Server|ConfigConverter: Fix for Console buffers wider than 120|
 |4.11.8 [L]|2020-05-26|Server|ConfigConverter now fixes invalid 3.x Table extractions using Z_THEO_READ_TABLE and conversion routines|
