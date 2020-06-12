@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.14.12 [L]|2020-06-12|General|Function module for internal table reads (metadata) can be specified now|
 |[1.14.11 [L]](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.14.11.html)|2020-05-27|ODP|Improved monitoring for subscriptions and requests([Release note](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.14.11.html))|
 |1.14.10 [L]|2020-05-14|Table|Global conversion checkbox is now tri-state and allows to enable conversion on all the fields that have a conversion exit in SAP, all at once. Fixed a bug where the 1.x versions of Z_THEO_READ_TABLE would continue running after an exception in extractor occurred.|
 |1.14.9 [L]|2020-05-07|Table|Improved the error message for when Z_THEO_READ_TABLE is used and conversion is enabled on a field that does not have a conversion exit defined in SAP.|
@@ -103,7 +104,7 @@
 |0.2.11 [M]|2019-02-18|Table|Fixed a bug where structure for the callback could not be generated if a field had no ROLLNAME set|
 |0.2.10 [M]|2019-02-13|Table|Reverted back to Z_THEO_READ_TABLE 1.9|
 |0.2.9 [M]|2019-02-13|Table|Fixed a bug where structure for the callback could not be generated if a field had no ROLLNAME set|
-|0.2.8 [M]|2019-02-08|Table|Fixed a bug where certain ABAP versions were wrongly recognized as pre 7.40 SP05 versions.Fix for client-specific tables in JOINs.|
+|0.2.8 [M]|2019-02-08|Table|Fixed a bug where certain ABAP versions were wrongly recognized as pre 7.40 SP05 versions. Fix for client-specific tables in JOINs.|
 |0.2.7 [M]|2019-02-07|Table|Fixed string concatenation for older ABAP versions where && operator is not supported|
 |0.2.6 [L]|2019-01-28|Table|Fixed a bug where certain fields could not be extracted due to having too long names.|
 |0.2.5 [L]|2019-01-25|Table|Fixed a bug where WHERE clause wasn't being generated correctly in certain situations. Improved client handling.|
