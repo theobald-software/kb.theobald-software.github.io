@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.11.13 [L]|2020-06-12|Destinations|Salesforce: Added support for sandbox systems|
 |4.11.12 [H]|2020-06-10|Destinations|Fix for Snowflake PUT command execution and increase of log verbosity for the same destination|
 |4.11.11 [L]|2020-06-09|Destinations|Fixes for Salesforce destination|
 |4.11.10 [M]|2020-06-08|Designer|New rules for names of extractions, sources and destinations: Letters a-z, numbers 0-9, minus (-) or underscore (_). Names no longer have to start with a letter.|
