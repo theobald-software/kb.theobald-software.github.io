@@ -21,17 +21,19 @@ Regarding this faulty behaviour, following alternative settings can be establise
 
 - You can define a White-list of Programs that can register at the SAP Gateway. To do so, you have to create two files named *secinfo* and *reginfo*. Both files don't existing per default.
 
-The first file secinfo has to contain the following lines:<br>
+The first file secinfo has to contain the following lines:
 ```
-**VERSION=2**<br>
-P TP=XTRACT01 USER=* USER-HOST=* HOST=*<br>
+#VERSION=2
+P TP=* HOST=internal,local CANCEL=internal,local ACCESS=internal,local
+# the following line should be the LAST line in the secinfo file
 P TP=XTRACT01 USER=* USER-HOST=* HOST=* 
 ```
 This means, the RFC-Server *XTRACT01* is allowed to register. 
 
 The second one reginfo has to contain the following lines:
 ```
-**VERSION=2**<br>
+#VERSION=2
+# the following line should be the LAST line in the reginfo file
 P TP=XTRACT01
 ```
 Same here, this means, the RFC-Server *XTRACT01* is allowed to register.
