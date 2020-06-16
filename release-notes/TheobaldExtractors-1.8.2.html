@@ -1,0 +1,17 @@
+<html style='font-family: "segoe ui","helvetica neue", arial, helvetica, sans-serif;'><style>h1, h2, h3, h4, h5 {margin:0;padding:0;margin-top:24px;font-weight:600;} p {margin:0;padding:0;margin-top: 4px;opacity:0.9;}</style><body><h1>Theobald.Extractors 1.8.2</h1>
+<h3>Indexed table fields</h3>
+<ul>
+<li>This function displays an icon indicating whether the field is indexed and the sort direction (ascending/descending).</li>
+</ul>
+<h3>Counting / Estimating number of rows</h3>
+<ul>
+<li>When using <b>Z_THEO_READ_TABLE</b> the result rows will be counted using a real query. This means, the resulting row count respects current <i>joins</i> and the <i>where clause</i>.</li>
+<li>Other function modules will use the function module <b>EM_GET_NUMBER_OF_ENTRIES</b> to get the maximum number of available rows.</li>
+</ul>
+<h3>Required persmissions</h3>
+<p>Those two new features require following permissions on the SAP system</p>
+<ul>
+<li><b>Indexed fields</b>: Read from table <b>DD17S</b></li>
+<li><b>Estimate row count (other than <i>Z_THEO_READ_TABLE</i>)</b>: Execute function module <b>EM_GET_NUMBER_OF_ENTRIES</b></li>
+</ul>
+</body></html>
