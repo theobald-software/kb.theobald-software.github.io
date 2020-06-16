@@ -52,5 +52,6 @@ After the external security file(s) reread, the Customizing Check will execute w
 
 ****
 See also: 
-- official SAP [Note 1850230](https://launchpad.support.sap.com/#/notes/0001850230) (ONE Support Launchpad account required)
+- [SAP Help: Gateway Security Files secinfo and reginfo](https://help.sap.com/viewer/62b4de4187cb43668d15dac48fc00732/7.3.20/en-US/e216d0427a2440fc8bfc25e786b8e11c.html)
+- official [SAP Note 1850230](https://launchpad.support.sap.com/#/notes/0001850230) (ONE Support Launchpad account required)
 - [http://scn.sap.com/docs/DOC-42463](http://scn.sap.com/docs/DOC-42463)
