@@ -11,15 +11,18 @@ Please also have a look in our [OnlineHelp](https://help.theobald-software.com/e
 As of Kernel Release 720, you can use the parameter *gw/acl_mode* to set an initial security environment with regard to starting and registering external programs e.g., RFC Server required for DeltaQ processing / customizing check. If this value is set to *1*, the DeltaQ component cannot register the RFC Server and the Customizing Check quits with following exception: 
 *RFC server is not working, please check gateway info..*
 
-Regarding this faulty behaviour, following alternative settings can be establised in the corresponding SAP source system:
+Regarding this faulty behaviour, following alternative settings can be establised in the corresponding SAP source system.
 
-- You can change the Profile Parameter *gw/acl_mode* in the SAP transaction *RZ10* to 0 (default value of the parameter is 1). All RFC-Destinations/ RFC-Server with different Program IDs e.g., XTRACT01 can register.
+#### Alternative 1
+You can change the Profile Parameter *gw/acl_mode* in the SAP transaction *RZ10* to 0 (default value of the parameter is 1). All RFC-Destinations/ RFC-Server with different Program IDs e.g., XTRACT01 can register.
+
 1. Open 'Edit Profile' using SAP transaction *RZ10*
 2. Select the profile name *Default* and select *Extended Maintenance*
 3. Click *Change* and change the parameter value to *0*
 ![SAP_parameter](/img/contents/parameter_gw_acl_mode.png){:class="img-responsive"}
 
-- You can define a White-list of Programs that can register at the SAP Gateway. To do so, you have to create two files named *secinfo* and *reginfo*. Both files don't existing per default.
+#### Alternative 2
+You can define a White-list of Programs that can register at the SAP Gateway. To do so, you have to create two files named *secinfo* and *reginfo*. Both files don't existing per default.
 
 The first file secinfo has to contain the following lines:
 ```
