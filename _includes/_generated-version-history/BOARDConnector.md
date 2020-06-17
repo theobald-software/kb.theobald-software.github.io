@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.4.6 [M]|2020-06-17|General|Fixed a bug that could cause extractions to get stuck in a running state while not actually running anymore|
 |4.4.5 [L]|2020-05-13|Designer|General designer bug fixes and improvements|
 |4.4.4 [L]|2020-05-05|Designer|New WPF filter and log windows|
 |4.4.3 [L]|2020-04-30|Designer|Fix for context menu item in main window|
