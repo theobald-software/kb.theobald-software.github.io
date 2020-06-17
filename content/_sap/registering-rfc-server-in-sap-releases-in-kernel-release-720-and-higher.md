@@ -11,17 +11,17 @@ Please also have a look in our [OnlineHelp](https://help.theobald-software.com/e
 As of Kernel Release 720, you can use the parameter *gw/acl_mode* to set an initial security environment with regard to starting and registering external programs e.g., RFC Server required for DeltaQ processing / customizing check. If this value is set to *1*, the DeltaQ component cannot register the RFC Server and the Customizing Check quits with following exception: 
 *RFC server is not working, please check gateway info..*
 
-Regarding this faulty behaviour, following alternative settings can be establised in the corresponding SAP source system.
+Regarding this faulty behaviour, following alternative settings can be adjusted in the corresponding SAP source system.
 
-#### Alternative 1
+#### Alternative I
 You can change the Profile Parameter *gw/acl_mode* in the SAP transaction *RZ10* to 0 (default value of the parameter is 1). All RFC-Destinations/ RFC-Server with different Program IDs e.g., XTRACT01 can register.
 
 1. Open 'Edit Profile' using SAP transaction *RZ10*
 2. Select the profile name *Default* and select *Extended Maintenance*
-3. Click *Change* and change the parameter value to *0*
+3. Click *Change* and edit the parameter value to *0*
 ![SAP_parameter](/img/contents/parameter_gw_acl_mode.png){:class="img-responsive"}
 
-#### Alternative 2
+#### Alternative II
 You can define a White-list of Programs that can register at the SAP Gateway. To do so, you have to create two files named *secinfo* and *reginfo*. Both files don't existing per default.
 
 The first file secinfo has to contain the following lines:
@@ -56,5 +56,5 @@ After the external security file(s) reread, the Customizing Check will execute w
 ****
 See also: 
 - [SAP Help: Gateway Security Files secinfo and reginfo](https://help.sap.com/viewer/62b4de4187cb43668d15dac48fc00732/7.3.20/en-US/e216d0427a2440fc8bfc25e786b8e11c.html)
-- official [SAP Note 1850230](https://launchpad.support.sap.com/#/notes/0001850230) (ONE Support Launchpad account required)
-- [http://scn.sap.com/docs/DOC-42463](http://scn.sap.com/docs/DOC-42463)
+- Official [SAP Note 1850230](https://launchpad.support.sap.com/#/notes/0001850230) (ONE Support Launchpad account required)
+- [SAP Community blog](http://scn.sap.com/docs/DOC-42463)
