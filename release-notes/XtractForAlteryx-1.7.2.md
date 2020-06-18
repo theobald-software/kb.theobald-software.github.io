@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: releaseNotes
 ---
 
 # Xtract for Alteryx 1.7.2

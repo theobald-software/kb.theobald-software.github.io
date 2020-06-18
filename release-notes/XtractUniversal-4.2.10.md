@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: releaseNotes
 ---
 
 - Remove SnowSql and related files uninstallation

@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: releaseNotes
 ---
 
 # Xtract Universal 4.2.23

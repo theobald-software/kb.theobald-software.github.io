@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: releaseNotes
 ---
 
 * Added support for the HANA data provider version 2.3.130.

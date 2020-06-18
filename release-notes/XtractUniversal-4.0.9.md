@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: releaseNotes
 ---
 
 - Description for style `CodeAndText` and `TextAndCode` is no longer appended twice

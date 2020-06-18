@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: releaseNotes
 ---
 
 - Z_THEO_READ_TABLE now supports conversion exits

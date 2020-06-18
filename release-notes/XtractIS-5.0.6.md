@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: releaseNotes
 ---
 
 Legacy function modules (Z_XTRACT_IS_TABLE_COMPRESSION, Z_XTRACT_IS_TABLE) are now
