@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.1.2 [L]|2020-03-23|DeltaQ|Fix for "timeout while trying to lock server list"|
 |5.1.1 [L]|2020-03-17|BW Cube|Fix for auto slicing MDX syntax on older SAP BW systems.|
 |5.1.0 [M]|2020-02-04|General|Updated to .NET Framework 4.7.2|
 |5.0.7 [L]|2019-12-19|Table Join|Fix for some ABAP types|

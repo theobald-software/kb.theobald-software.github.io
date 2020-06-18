@@ -1,5 +1,28 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|[4.11.14 [M]](https://kb.theobald-software.com/release-notes/XtractUniversal-4.11.14.html)|2020-06-17|General|Fixes for timeouts and connection issues([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-4.11.14.html))|
+|4.11.13 [L]|2020-06-12|Destinations|Salesforce: Added support for sandbox systems|
+|4.11.12 [H]|2020-06-10|Destinations|Fix for Snowflake PUT command execution and increase of log verbosity for the same destination|
+|4.11.11 [L]|2020-06-09|Destinations|Fixes for Salesforce destination|
+|4.11.10 [M]|2020-06-08|Designer|New rules for names of extractions, sources and destinations: Letters a-z, numbers 0-9, minus (-) or underscore (_). Names no longer have to start with a letter.|
+|4.11.9 [L]|2020-05-26|Server|ConfigConverter: Fix for Console buffers wider than 120|
+|4.11.8 [L]|2020-05-26|Server|ConfigConverter now fixes invalid 3.x Table extractions using Z_THEO_READ_TABLE and conversion routines|
+|4.11.7 [L]|2020-05-26|Designer|Fix in log window to show datetime using the 24 hours format|
+|4.11.6 [L]|2020-05-20|Designer|License forward compatibility improvement for supported destinations.|
+|4.11.5 [L]|2020-05-18|Designer|Fix for server name typing in connect window|
+|4.11.4 [L]|2020-05-13|Designer|General designer bug fixes and improvements|
+|4.11.3 [L]|2020-05-08|Destinations|Fix for Snowflake row counting |
+|4.11.2 [L]|2020-05-05|Designer|New WPF log window|
+|4.11.1 [M]|2020-05-04|Designer|GUI fixes for partially invisible destination settings (e. g. File CSV)|
+|4.11.0 [L]|2020-04-29|General|Optimized internal dependencies.|
+|4.10.0 [L]|2020-04-27|Destinations|Added Parquet destination|
+|4.9.5 [L]|2020-04-27|Designer|Fix for disconnect designer|
+|4.9.4 [L]|2020-04-23|General|Increased RFC network timeouts to 5 seconds|
+|4.9.3 [L]|2020-04-23|Destinations|Azure Storage destination now support authentication with Azure Active Directory|
+|4.9.2 [L]|2020-04-22|Designer|Fix for quit button in connect window|
+|4.9.1 [L]|2020-04-21|Designer|Extraction filter window migration to WPF|
+|4.9.0 [L]|2020-04-20|Designer|Main window migration to WPF|
+|4.8.5 [L]|2020-03-30|Destinations|Snowflake driver SnowSql upgrade to version 1.2.5|
 |4.8.4 [L]|2020-03-17|BW Cube|Fix for auto slicing MDX syntax on older SAP BW systems.|
 |4.8.3 [M]|2020-03-12|ODP|Added support for runtime parameters|
 |4.8.2 [L]|2020-03-11|Server|Added 'KEY' column to /metadata API |
@@ -77,8 +100,7 @@
 |3.14.22 [L]|2019-08-07|Setup|Fixes for portable Designer zip|
 |[3.14.21 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-3.14.21.html)|2019-07-29|Destinations|Power BI Connector: General Availibility (end of beta)([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-3.14.21.html))|
 |3.14.20 [M]|2019-07-23|General|Updated NW RFC to 7.50 PL 4|
-|3.14.19 [L]|2019-07-18|Destinations|Friendly message for failed destinations that require extra components and PostgreSQL full server version.
-|
+|3.14.19 [L]|2019-07-18|Destinations|Friendly message for failed destinations that require extra components and PostgreSQL full server version. |
 |3.14.18 [L]|2019-07-15|General|Alteryx Plugin: Fixed app.config for plugin setup|
 |3.14.17 [L]|2019-07-11|Destinations|Fixed a bug where CSV settings in S3 destination were not displayed correctly.|
 |3.14.16 [L]|2019-07-09|Destinations|S3 destination now allows to save the files to folders and subfolders inside buckets.|
@@ -195,8 +217,7 @@
 |3.1.3 [M]|2018-06-21|Designer|GUI fixes (buttons not visible at some screen resolutions etc.)|
 |3.1.2 [L]|2018-06-14|Destinations|Fixed a bug in the MicroStrategy destination, that caused cubes to be unintentionally replaced in some situations.|
 |3.1.1 [L]|2018-06-08|Destinations|Added definition of MicroStrategy attributes and metrics.|
-|3.1.0 [M]|2018-05-30|Security|Added "Require SAP credentials" to source, removed X.509 certificate path
-(please configure via SNC solution)|
+|3.1.0 [M]|2018-05-30|Security|Added "Require SAP credentials" to source, removed X.509 certificate path (please configure via SNC solution)|
 |3.0.8 [M]|2018-05-30|BW Cube|Set package size to 20.000 for new extractions|
 |3.0.7 [L]|2018-05-30|Destinations|SQLServer/AzureDWH: Increased timeouts to 60 minutes|
 |3.0.6 [M]|2018-05-24|General|Fixes & improvements for Designer/Server communication|

@@ -1,5 +1,12 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.4.6 [M]|2020-06-17|General|Fixed a bug that could cause extractions to get stuck in a running state while not actually running anymore|
+|4.4.5 [L]|2020-05-13|Designer|General designer bug fixes and improvements|
+|4.4.4 [L]|2020-05-05|Designer|New WPF filter and log windows|
+|4.4.3 [L]|2020-04-30|Designer|Fix for context menu item in main window|
+|4.4.2 [L]|2020-04-29|General|Optimized internal dependencies.|
+|4.4.1 [L]|2020-04-23|General|Increased RFC network timeouts to 5 seconds|
+|4.4.0 [L]|2020-04-23|Designer|Main window migration to WPF|
 |4.3.4 [L]|2020-03-17|BW Cube|Fix for auto slicing MDX syntax on older SAP BW systems.|
 |4.3.3 [M]|2020-03-12|ODP|Added support for runtime parameters|
 |4.3.2 [M]|2020-02-26|BAPI|Fix for STRING/XSTRING|
