@@ -1,14 +1,9 @@
 ---
-ref: talend-integration-http
 layout: page
 title: Talend Integration via HTTP
 description: Talend Integration HTTP
-product: xtract-universal
-parent: 
 permalink: /:collection/:path
 weight: 20
-lang: en_EN
-
 ---
 
 In the following we demonstrate the Talend integration via a REST web service call.
