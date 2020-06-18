@@ -2,7 +2,6 @@
 layout: page
 title: Common Version History
 description: Common Version History
-permalink: /:collection/:path
 weight: 10
 ---
 
