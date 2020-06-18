@@ -1,3 +1,7 @@
+---
+layout: page
+---
+
 # Xtract Universal 4.2.23
 
 - Fix for hierarchies in **merged** mode where caching could possibly cause data loss

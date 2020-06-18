@@ -1,3 +1,7 @@
+---
+layout: page
+---
+
 # Xtract Universal 3.6
 
 The server uses multiple processes now instead of one, which makes it more robust and improves parallelization.

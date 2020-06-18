@@ -1,3 +1,7 @@
+---
+layout: page
+---
+
 # Theobald.Extractors 1.14.11
 
 Improved monitoring for subscriptions and requests

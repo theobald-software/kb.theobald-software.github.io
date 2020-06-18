@@ -1,3 +1,7 @@
+---
+layout: page
+---
+
 # BOARD Connector 3.5
 
 Access to the web server can now be restricted to Active Directory users with Designer read access.

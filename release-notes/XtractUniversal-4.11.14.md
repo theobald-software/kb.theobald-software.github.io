@@ -1,3 +1,7 @@
+---
+layout: page
+---
+
 # Xtract Universal 4.11.14
 
 Fixes for timeouts and connection issues

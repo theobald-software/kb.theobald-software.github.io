@@ -1,3 +1,7 @@
+---
+layout: page
+---
+
 # Xtract IS 5.0
 
 This release contains general changes, changes to the existing Table component as well as a new ODP component.

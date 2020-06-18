@@ -1,3 +1,7 @@
+---
+layout: page
+---
+
 The changes contained in this release only affect the GUI and do not change behavior of extractions.
 
 ### Join detection

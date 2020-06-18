@@ -1,3 +1,7 @@
+---
+layout: page
+---
+
 # Xtract IS 4.12.0
 
 The **ABAP** subdirectory now contains the following transport requests:

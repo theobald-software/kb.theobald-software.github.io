@@ -1,3 +1,7 @@
+---
+layout: page
+---
+
 # Xtract Universal 4.1.6
 
 ## Table Destinations

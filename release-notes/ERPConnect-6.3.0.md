@@ -1,3 +1,7 @@
+---
+layout: page
+---
+
 # ERPConnect 6.3
 
 The base class / collection interface of following classes have changed:

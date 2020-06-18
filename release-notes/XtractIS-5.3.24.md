@@ -1,3 +1,7 @@
+---
+layout: page
+---
+
 #Xtract IS 5.3.24
 
 - Fix for *"XML format  currently not supported"* error when result was empty

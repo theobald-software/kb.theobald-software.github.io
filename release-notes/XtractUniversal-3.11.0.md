@@ -1,3 +1,7 @@
+---
+layout: page
+---
+
 # Xtract Universal 3.11
 
 Access to the web server can now be restricted to Active Directory users with Designer read access.

@@ -1,3 +1,7 @@
+---
+layout: page
+---
+
 # Xtract for Alteryx 1.7.2
 
 ## BW Cube 

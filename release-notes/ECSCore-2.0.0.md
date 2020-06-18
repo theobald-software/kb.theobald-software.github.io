@@ -1,3 +1,7 @@
+---
+layout: page
+---
+
 # ECS Core 2.0
 
 ## Consumer Endpoint

@@ -1,3 +1,7 @@
+---
+layout: page
+---
+
 ### Indexed table fields
 - This function displays an icon indicating whether the field is indexed and the sort direction (ascending/descending).
 

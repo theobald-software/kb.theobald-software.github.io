@@ -1,3 +1,7 @@
+---
+layout: page
+---
+
 ### GUI Preview
 - Correctly displays records again
 - Column names now match the selected column name style

@@ -1,3 +1,7 @@
+---
+layout: page
+---
+
 # BOARD Connector 4.0
 
 ## General 

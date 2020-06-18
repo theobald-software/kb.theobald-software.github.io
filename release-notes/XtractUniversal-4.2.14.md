@@ -1,3 +1,7 @@
+---
+layout: page
+---
+
 # Xtract Universal 4.2.14
 
 This version fixes two issues related to primary keys

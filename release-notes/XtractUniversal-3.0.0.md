@@ -1,3 +1,7 @@
+---
+layout: page
+---
+
 # Xtract Universal 3.0
 
 This release includes major changes related to the communication between Xtract Universal Server and Xtract Universal Designer. Transport security and access control has been improved. The file format and folder structure for persisting extractions, sources, destinations, logs, etc. has undergone major changes as well.
