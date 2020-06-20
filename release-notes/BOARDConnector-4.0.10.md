@@ -1,3 +1,7 @@
+---
+layout: releaseNotes
+---
+
 # BOARD Connector 4.0.10
 
 - Fix for hierarchies in **merged** mode where caching could possibly cause data loss

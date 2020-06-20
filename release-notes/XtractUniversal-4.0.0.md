@@ -1,3 +1,7 @@
+---
+layout: releaseNotes
+---
+
 # Xtract Universal 4.0
 
 ## General 

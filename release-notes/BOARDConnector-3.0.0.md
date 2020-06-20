@@ -1,3 +1,7 @@
+---
+layout: releaseNotes
+---
+
 # BOARD Connector 3.0
 
 This release includes major changes related to the communication between BOARD Connector Server and BOARD Connector Designer / BOARD. Transport security and access control has been improved. The file format and folder structure for persisting extractions, sources, logs, etc. has undergone major changes as well.

@@ -1,3 +1,7 @@
+---
+layout: releaseNotes
+---
+
 # BOARD Connector 4.0
 
 ## General 

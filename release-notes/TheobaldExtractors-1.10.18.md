@@ -1,3 +1,7 @@
+---
+layout: releaseNotes
+---
+
 # Theobald.Extractors 1.10.18
 
 - Fix for *"XML format  currently not supported"* error when result was empty

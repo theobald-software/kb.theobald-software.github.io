@@ -1,3 +1,7 @@
+---
+layout: releaseNotes
+---
+
 # Xtract for Alteryx 1.7.8
 
 - Fix for *"XML format  currently not supported"* error when result was empty

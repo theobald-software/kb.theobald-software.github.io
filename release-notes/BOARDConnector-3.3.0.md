@@ -1,3 +1,7 @@
+---
+layout: releaseNotes
+---
+
 # BOARD Connector 3.3.0
 
 The **ABAP** subdirectory now contains the following transport requests:

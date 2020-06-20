@@ -1,3 +1,7 @@
+---
+layout: releaseNotes
+---
+
 # ERPConnect 6.1
 
 This release adds support for multibyte codepages on non-Unicode SAP systems.

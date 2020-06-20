@@ -1,3 +1,7 @@
+---
+layout: releaseNotes
+---
+
 # ERPConnect 5.0.0 Release Note
 
 ## ERPConnect20.dll
