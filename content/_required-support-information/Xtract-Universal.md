@@ -38,7 +38,7 @@ This information is optional and can be requested by the technician. Please alwa
 
 ### Trace files 
 
-- activate the trace function , see [knowledge-base article](https://kb.theobald-software.com/general/how-to-activate-tracing-for-xtract-products) .
+- activate the trace function , see [debug logging](https://help.theobald-software.com/en/xtract-universal/logging/logging-debug#activating-tracing) .
  
 ### Extraction settings
 
