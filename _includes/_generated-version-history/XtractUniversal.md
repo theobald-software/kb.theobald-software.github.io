@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.11.15 [H]|2020-06-22|Destinations|Enhancements in the communication between XtractUniversal and Snowflake's driver, SnowSql|
 |[4.11.14 [M]](https://kb.theobald-software.com/release-notes/XtractUniversal-4.11.14.html)|2020-06-17|General|Fixes for timeouts and connection issues([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-4.11.14.html))|
 |4.11.13 [L]|2020-06-12|Destinations|Salesforce: Added support for sandbox systems|
 |4.11.12 [H]|2020-06-10|Destinations|Fix for Snowflake PUT command execution and increase of log verbosity for the same destination|
