@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.11.17 [M]|2020-06-22|Destinations|PowerBI & Alteryx plugins: Fixes & improvements for data type mapping|
 |4.11.16 [L]|2020-06-22|Server|HTTP metadata API: Fixed letter case of ABAP type IDs|
 |4.11.15 [H]|2020-06-22|Destinations|Enhancements in the communication between XtractUniversal and Snowflake's driver, SnowSql|
 |[4.11.14 [M]](https://kb.theobald-software.com/release-notes/XtractUniversal-4.11.14.html)|2020-06-17|General|Fixes for timeouts and connection issues([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-4.11.14.html))|
