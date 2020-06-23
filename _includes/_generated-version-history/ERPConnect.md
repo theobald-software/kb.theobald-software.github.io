@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.10.1 [L]|2020-06-23|NWRFC|Fix for nested structures in export parameters when using NWRFC|
 |[6.10.0 [M]](https://kb.theobald-software.com/release-notes/ERPConnect-6.10.0.html)|2020-06-17|General|IsSupplied Property is now also persisted when serializing RFCParameter.([Release note](https://kb.theobald-software.com/release-notes/ERPConnect-6.10.0.html))|
 |6.9.0 [L]|2020-05-26|Setup|New setup|
 |6.8.9 [M]|2020-01-16|RFCServer|Fix for parallel RFC servers using NWRFC|
@@ -116,7 +117,7 @@
 |4.43.4 [M]|2016-12-22|General|Introduced NoAuthorityException, improved error messages|
 |4.43.3 [M]|2016-12-20|RFC Client|Improved error message for missing table authorization|
 |4.43.2 [L]|2016-12-19|General|Improved exception handling in BWCube for BW dates|
-|4.43.1 [L]|2016-12-14|General|Added new ERPException - NotAuthorizedException Optimized BWCube exception handling for dates|
+|4.43.1 [L]|2016-12-14|General|Added new ERPException - NotAuthorizedException  Optimized BWCube exception handling for dates|
 |4.43.0 [M]|2016-11-25|RFCServer|tRFC: Added support for queuing parallel connections|
 |4.42.5 [M]|2016-11-23|General|Fixed default value of R3Connection.MultithreadingEnvironment (was false)|
 |4.42.4 [M]|2016-11-07|General|Fix for receiving strings with more than 255 characters inside of deep structures/table types (NW)|
