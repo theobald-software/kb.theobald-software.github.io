@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.11.20 [M]|2020-06-26|Destinations|Remove line breaks from Snowflake's statements|
 |4.11.19 [H]|2020-06-24|Destinations|Snowflake's driver auto upgrade disabled|
 |4.11.18 [L]|2020-06-23|Destinations|Snowflake's regions list update|
 |4.11.17 [M]|2020-06-22|Destinations|PowerBI & Alteryx plugins: Fixes & improvements for data type mapping|
