@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.4.9 [L]|2020-06-29|Designer|Fix for horizontal scrolling in log window|
 |4.4.8 [L]|2020-06-26|Designer|Main window's title fix|
 |4.4.7 [L]|2020-06-25|Designer|Remove of destination menu options|
 |4.4.6 [M]|2020-06-17|General|Fixed a bug that could cause extractions to get stuck in a running state while not actually running anymore|
