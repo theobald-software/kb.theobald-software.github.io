@@ -8,9 +8,9 @@ weight: 20
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
 
-Azure Cluster ID is needed to create a customer bound license.  
+Azure SSIS-IR Cluster ID is needed to create a customer bound license.  
 
-### Cluster ID in the Azure Portal
+### Azure SSIS-IR Cluster ID in the Azure Portal
 
 -  Within Azure Data Factory (ADF) navigate to "Let's get started" and select **Configure SSIS Integration**.
 
@@ -22,7 +22,7 @@ Azure Cluster ID is needed to create a customer bound license.
 
 -  Within the tab **Connections** select *Integration Runtimes* -> *[integration runtime name]* (in the given example: *ADF-IR-XIS2*).
 
-The Azure Cluster ID is composed of the name of the Data Factory and the name of the Integration Runtime.<br>
+The Azure SSIS-IR Cluster ID is composed of the name of the Data Factory and the name of the Integration Runtime.<br>
 Syntax example: `Microsoft.DataFactory/factories/[data factory name]/integrationruntimes/[integration runtime name]`.<br>
 Syntax in the given example: `Microsoft.DataFactory/factories/ADF-XIS-YW/integrationruntimes/ADF-IR-XIS2`
 
