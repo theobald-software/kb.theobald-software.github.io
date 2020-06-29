@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Determining the Azure Cluster ID
-description: Determining the Azure Cluster ID
+title: Determining the Azure SSIS-IR Cluster ID
+description: Determining the Azure SSIS-IR Cluster ID
 permalink: /:collection/:path
 weight: 20
 ---
