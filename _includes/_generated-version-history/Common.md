@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.7.6 [L]|2020-07-03|WPF|Fix for cut off version numbers in the version history window.|
 |2.7.5 [L]|2020-05-20|Licensing|License forward compatibility improvement for supported components and destinations.|
 |2.7.4 [M]|2020-05-04|General|Added ReadDecimal, ReadDouble, ReadInt64 to JsonReader. Fixed double in JsonWriter|
 |2.7.3 [M]|2020-04-28|Licensing|Added Parquet destination to XU default destinations|
