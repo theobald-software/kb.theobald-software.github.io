@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.4.10 [L]|2020-07-03|Server|Fixed a bug where web requests with invalid URLs did not get a proper response|
 |4.4.9 [L]|2020-06-29|Designer|Fix for horizontal scrolling in log window|
 |4.4.8 [L]|2020-06-26|Designer|Main window's title fix|
 |4.4.7 [L]|2020-06-25|Designer|Remove of destination menu options|

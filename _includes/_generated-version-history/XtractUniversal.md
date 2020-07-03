@@ -1,5 +1,7 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.11.23 [L]|2020-07-03|Designer|Qlik Sense script generation is now supported for the Qlik destination.|
+|4.11.22 [L]|2020-07-03|Server|Fix for result caching on "Int8" data type.|
 |4.11.21 [L]|2020-06-29|Designer|Fix for horizontal scrolling in log window|
 |4.11.20 [M]|2020-06-26|Destinations|Remove line breaks from Snowflake's statements|
 |4.11.19 [H]|2020-06-24|Destinations|Snowflake's driver auto upgrade disabled|
