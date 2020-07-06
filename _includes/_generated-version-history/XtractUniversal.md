@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.11.24 [L]|2020-07-06|Destinations|Salesforce: Floating point values are now supported (they will be of type Text in Salesforce due to Number limitations)|
 |4.11.23 [L]|2020-07-03|Designer|Qlik Sense script generation is now supported for the Qlik destination.|
 |4.11.22 [L]|2020-07-03|Server|Fix for result caching on "Int8" data type.|
 |4.11.21 [L]|2020-06-29|Designer|Fix for horizontal scrolling in log window|
