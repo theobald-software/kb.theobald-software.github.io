@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.11.26 [L]|2020-07-08|Destinations|http-odata-atom destination is no longer created by default|
 |4.11.25 [L]|2020-07-08|Destinations|Several improvements and fixes for the Snowflake destination|
 |4.11.24 [L]|2020-07-06|Destinations|Salesforce: Floating point values are now supported (they will be of type Text in Salesforce due to Number limitations)|
 |4.11.23 [L]|2020-07-03|Designer|Qlik Sense script generation is now supported for the Qlik destination.|
