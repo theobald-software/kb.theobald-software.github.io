@@ -24,14 +24,14 @@ Both tables have the following identical column descriptions: 'MANDT', 'EBELN'. 
 
 ### Adjust Standard Separator using Custom SQL
 
-Proceed as follows to circumvent to change SAP standard separator from '~' to '_':
+Proceed as follows to adjust SAP standard separator from '~' to '_':
 1. Adjust the Column Name Style e.g. 'PrefixedCode' (1).
 ![column_name_style](/img/contents/xu/destination_settings.png){:class="img-responsive"} 
-2. Insert the generic SQL Code below into the 'Finalization'(3) step using 'Custom SQL'(2).
+2. Insert the generic SQL Code below into the 'Finalization'(2) step using **[Edit SQL]**(3).
 ![Custom_sql](/img/contents/xu/custom_sql_finalization_step.png){:class="img-responsive"} 
-3. Confirm the entries with 'OK' (4).
+3. Confirm the entries with **[OK]** (4).
 4. Execute the selected extraction. 
-5. Check the Column Name Style changes in SSMS.
+5. Check the Column Name Style changes and results in SQL Server Management Studio (SSMS).
 ![SSMS_view](/img/contents/xu/ssms_result_column_name_style.png){:class="img-responsive"} 
 
 ```sql
@@ -65,16 +65,17 @@ deallocate cur
 Create a stored procedure that contains above mentioned T-SQL code for renaming column names style and call this stored procedure in the finalization step. 
 This approach allows you to easily change the renaming logic within the DB or SQL server instance - you would only have to adapt the stored procedure instead of e.g., hundreds of finalization steps.
 
-Proceed as follows to circumvent to change SAP standard separator from '~' to '_':
-1. Create a T-SQL Stored Procedure by using SQL Server Management Studio. Detailed information can be foung in the official [Microsoft Documentation](https://docs.microsoft.com/en-us/sql/relational-databases/stored-procedures/create-a-stored-procedure?view=sql-server-ver15) .
-2. Assign a name for the stored procedure e.g., ColumnNameStyle.
-3. Insert the SQL Code below and **[Execute]** this stored procedure for saving purpose.
+Proceed as follows to adjust SAP standard separator from '~' to '_':
+1. Create T-SQL Stored Procedure by using SQL Server Management Studio. Detailed information can be found in the official [Microsoft Documentation](https://docs.microsoft.com/en-us/sql/relational-databases/stored-procedures/create-a-stored-procedure?view=sql-server-ver15) .
+2. Assign a name for the Stored Procedure e.g., ColumnNameStyle.
+3. Insert the SQL-Code below and **[Execute]** the statement to save the process.
 ![custom Stored Procedure](/img/contents/xu/ssms_object_explorer_custom_stored_procedure.png){:class="img-responsive"}
-4. Adjust the Column Name Style e.g. 'PrefixedCode' (1).
+4. Select the Column Name Style e.g. 'PrefixedCode' (1).
 ![column_name_style](/img/contents/xu/destination_settings.png){:class="img-responsive"}
-5. Insert following SQL Code `EXEC ColumnNameStyle '#{ Extraction.TableName }#'` into the 'Finalization'(3) step using 'Custom SQL'(2).
+5. Insert following SQL Code `EXEC ColumnNameStyle '#{ Extraction.TableName }#'` into the 'Finalization'(2) step using **[Edit SQL]**.
 ![execute stored procedure](/img/contents/xu/exec_sp_column_name_style.png){:class="img-responsive"}
-6. Execute the selected extraction and check the Column Name Style changes in SSMS.
+6. Confirm changes with **[OK]**.
+6. Execute the selected extraction and check the Column Name Style changes and results in SSMS.
 
 ```sql
 CREATE PROCEDURE ColumnNameStyle 
@@ -113,13 +114,3 @@ deallocate cur
 
 END
 ``` 
-
-
-
-
-
-
-
-
-
-
