@@ -78,7 +78,7 @@ Proceed as follows to circumvent this behavior and change SAP standard separator
 ```sql
 CREATE PROCEDURE ColumnNameStyle 
 	-- Add the parameters for the stored procedure here
-		@table_name nvarchar(128)
+	@table_name nvarchar(128)
 AS 
 
 BEGIN
@@ -88,30 +88,29 @@ BEGIN
 	declare @old_name nvarchar(128),
 		@new_name nvarchar(128)
 
-    -- Insert statements for procedure here	
+	-- Insert statements for procedure here	
 	SELECT @table_name, @old_name, @new_name
 	declare cur CURSOR LOCAL for
-    select COLUMN_NAME
-    from INFORMATION_SCHEMA.COLUMNS
-    where TABLE_NAME = @table_name
+	select COLUMN_NAME
+	from INFORMATION_SCHEMA.COLUMNS
+	where TABLE_NAME = @table_name
 
 open cur
 
 while (1 = 1)
 begin
-    fetch next from cur into @old_name
-    IF @@FETCH_STATUS != 0 BREAK
+	fetch next from cur into @old_name
+	IF @@FETCH_STATUS != 0 BREAK
 
-    SET @new_name = REPLACE(@old_name, '~', '_')
-    SET @old_name = '[' + @table_name + '].[' + @old_name + ']'
-    EXEC sp_rename @old_name, @new_name, 'COLUMN'
+	SET @new_name = REPLACE(@old_name, '~', '_')
+	SET @old_name = '[' + @table_name + '].[' + @old_name + ']'
+	EXEC sp_rename @old_name, @new_name, 'COLUMN'
 end
 
 close cur
 deallocate cur
 
 END
-GO
 ``` 
 
 
