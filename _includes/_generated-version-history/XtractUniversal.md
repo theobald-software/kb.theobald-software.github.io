@@ -1,5 +1,11 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.13.0 [M]|2020-07-14|Setup|Removed SnowSQL installer|
+|4.12.1 [M]|2020-07-10|Destinations|Salesforce: Fixes for merge row processing and column name style CodeAndText with multiple primary keys|
+|4.12.0 [L]|2020-07-09|Destinations|Removed Alteryx Connect destination|
+|4.11.26 [L]|2020-07-08|Destinations|http-odata-atom destination is no longer created by default|
+|4.11.25 [L]|2020-07-08|Destinations|Several improvements and fixes for the Snowflake destination|
+|4.11.24 [L]|2020-07-06|Destinations|Salesforce: Floating point values are now supported (they will be of type Text in Salesforce due to Number limitations)|
 |4.11.23 [L]|2020-07-03|Designer|Qlik Sense script generation is now supported for the Qlik destination.|
 |4.11.22 [L]|2020-07-03|Server|Fix for result caching on "Int8" data type.|
 |4.11.21 [L]|2020-06-29|Designer|Fix for horizontal scrolling in log window|
