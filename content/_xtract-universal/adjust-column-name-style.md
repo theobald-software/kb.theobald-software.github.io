@@ -78,7 +78,7 @@ Proceed as follows to circumvent this behavior and change SAP standard separator
 ```sql
 CREATE PROCEDURE ColumnNameStyle 
 	-- Add the parameters for the stored procedure here
-	@table_name nvarchar(128)
+		@table_name nvarchar(128)
 AS 
 
 BEGIN
@@ -86,7 +86,7 @@ BEGIN
 	-- interfering with SELECT statements.
 	SET NOCOUNT ON;
 	declare @old_name nvarchar(128),
-			@new_name nvarchar(128)
+		@new_name nvarchar(128)
 
     -- Insert statements for procedure here	
 	SELECT @table_name, @old_name, @new_name
