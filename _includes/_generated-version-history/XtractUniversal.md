@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.13.0 [M]|2020-07-14|Setup|Removed SnowSQL installer|
 |4.12.1 [M]|2020-07-10|Destinations|Salesforce: Fixes for merge row processing and column name style CodeAndText with multiple primary keys|
 |4.12.0 [L]|2020-07-09|Destinations|Removed Alteryx Connect destination|
 |4.11.26 [L]|2020-07-08|Destinations|http-odata-atom destination is no longer created by default|
