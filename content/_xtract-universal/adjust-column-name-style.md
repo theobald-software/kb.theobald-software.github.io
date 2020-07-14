@@ -67,7 +67,14 @@ This approach allows you to easily change the renaming logic within the DB or SQ
 Proceed as follows to circumvent this behavior and change SAP standard separator from '~' to '_':
 1. Create a T-SQL Stored Procedure by using SQL Server Management Studio. Detailed information can be foung in the official [Microsoft Documentation](https://docs.microsoft.com/en-us/sql/relational-databases/stored-procedures/create-a-stored-procedure?view=sql-server-ver15) .
 2. Assign a name for the stored procedure e.g., ColumnNameStyle.
-3. Paste in the following T-SQL code and **[Execute]** this stored procedure for saving purpose.
+3. Insert the SQL Code below and **[Execute]** this stored procedure for saving purpose.
+![custom Stored Procedure](/img/contents/xu/ssms_object_explorer_custom_stored_procedure.png){:class="img-responsive"}
+4. Adjust the Column Name Style e.g. 'PrefixedCode' (1).
+![column_name_style](/img/contents/xu/destination_settings.png){:class="img-responsive"}
+5. Insert following SQL Code `EXEC ColumnNameStyle '#{ Extraction.TableName }#'` into the 'Finalization'(3) step using 'Custom SQL'(2).
+![execute stored procedure](/img/contents/xu/exec_sp_column_name_style.png){:class="img-responsive"}
+6. Execute the selected extraction and check the Column Name Style changes in SSMS.
+
 ```sql
 CREATE PROCEDURE ColumnNameStyle 
 	-- Add the parameters for the stored procedure here
@@ -106,12 +113,6 @@ deallocate cur
 END
 GO
 ``` 
-![custom Stored Procedure](/img/contents/xu/ssms_object_explorer_custom_stored_procedure.png){:class="img-responsive"}
-4. Adjust the Column Name Style e.g. 'PrefixedCode' (1).
-![column_name_style](/img/contents/xu/destination_settings.png){:class="img-responsive"}
-5. Insert following SQL Code `EXEC ColumnNameStyle '#{ Extraction.TableName }#'` into the 'Finalization'(3) step using 'Custom SQL'(2).
-![execute stored procedure](/img/contents/xu/exec_sp_column_name_style.png){:class="img-responsive"}
-6. Execute the selected extraction and check the Column Name Style changes in SSMS.
 
 
 
