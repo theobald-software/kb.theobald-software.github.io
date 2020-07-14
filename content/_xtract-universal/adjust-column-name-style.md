@@ -6,7 +6,7 @@ permalink: /:collection/:path
 weight: 9
 ---
 
-The following section describes a common business scenario to rename column name style within SQL server environment.
+The following section describes a common business scenario to rename column name style within Microsoft SQL-Server environment.
 The given example shows how to use Custom SQL in the Finalization step of the database transaction within Xtract Universal destination settings.
 
 Xtract Universal offers 4 different [Column Name Styles](https://help.theobald-software.com/en/xtract-universal/xu-destinations/microsoft-sql-server/sql-server-settings#column-name-style) for naming the SAP table columns in databases:
@@ -15,7 +15,6 @@ Xtract Universal offers 4 different [Column Name Styles](https://help.theobald-s
 - CodeAndText
 - TextAndCode
 
-### Adjust Standard Separator using Custom SQL 
 The metadata of the SAP objects is fetched from the SAP source object. 
 In the following example, the Column Name Style 'Prefixed Code' is used, which connects each existing table field in the form [TabName][ColumnName] with the SAP standard separator '~'. 
 This naming of table columns is mainly used for table joins, since identical column identifiers exist in the different tables. A typical example is the table join of 'EKKO', table Purchasing Document Header and 'EKPO', table Purchasing Document Item. 
@@ -23,7 +22,9 @@ Both tables have the following identical column descriptions: 'MANDT', 'EBELN'. 
 
 > System.Data.SqlClient.SqlException (0x80131904): Column names in each table must be unique. Column name 'MANDT' in table 'EKKO_JOIN' is specified more than once.
 
-Proceed as follows to circumvent this behavior and change SAP standard separator from '~' to '_':
+### Adjust Standard Separator using Custom SQL
+
+Proceed as follows to circumvent to change SAP standard separator from '~' to '_':
 1. Adjust the Column Name Style e.g. 'PrefixedCode' (1).
 ![column_name_style](/img/contents/xu/destination_settings.png){:class="img-responsive"} 
 2. Insert the generic SQL Code below into the 'Finalization'(3) step using 'Custom SQL'(2).
@@ -64,7 +65,7 @@ deallocate cur
 Create a stored procedure that contains above mentioned T-SQL code for renaming column names style and call this stored procedure in the finalization step. 
 This approach allows you to easily change the renaming logic within the DB or SQL server instance - you would only have to adapt the stored procedure instead of e.g., hundreds of finalization steps.
 
-Proceed as follows to circumvent this behavior and change SAP standard separator from '~' to '_':
+Proceed as follows to circumvent to change SAP standard separator from '~' to '_':
 1. Create a T-SQL Stored Procedure by using SQL Server Management Studio. Detailed information can be foung in the official [Microsoft Documentation](https://docs.microsoft.com/en-us/sql/relational-databases/stored-procedures/create-a-stored-procedure?view=sql-server-ver15) .
 2. Assign a name for the stored procedure e.g., ColumnNameStyle.
 3. Insert the SQL Code below and **[Execute]** this stored procedure for saving purpose.
