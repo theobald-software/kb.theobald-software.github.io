@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.12.0 [M]|2020-07-15|General|Added support for new ABAP type utclong|
 |6.11.0 [L]|2020-07-09|LINQtoERP|Removed LINQ to ERP support for Visual Studio 2010|
 |6.10.1 [L]|2020-06-23|NWRFC|Fix for nested structures in export parameters when using NWRFC|
 |[6.10.0 [M]](https://kb.theobald-software.com/release-notes/ERPConnect-6.10.0.html)|2020-06-17|General|IsSupplied Property is now also persisted when serializing RFCParameter.([Release note](https://kb.theobald-software.com/release-notes/ERPConnect-6.10.0.html))|
