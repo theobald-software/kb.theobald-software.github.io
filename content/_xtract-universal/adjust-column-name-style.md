@@ -79,36 +79,30 @@ Proceed as follows to adjust SAP standard separator from '~' to '_':
 
 ```sql
 CREATE PROCEDURE ColumnNameStyle 
-	-- Add the parameters for the stored procedure here
 	@table_name nvarchar(128)
 AS 
 
 BEGIN
-	-- SET NOCOUNT ON added to prevent extra result sets from
-	-- interfering with SELECT statements.
-	SET NOCOUNT ON;
-	declare @old_name nvarchar(128),
-		@new_name nvarchar(128)
 
-	-- Insert statements for procedure here	
-	SELECT @table_name, @old_name, @new_name
-	declare cur CURSOR LOCAL for
+declare @old_name nvarchar(128)
+declare @new_name nvarchar(128)
+declare cur CURSOR LOCAL for
+    
 	select COLUMN_NAME
-	from INFORMATION_SCHEMA.COLUMNS
-	where TABLE_NAME = @table_name
+    	from INFORMATION_SCHEMA.COLUMNS
+    	where TABLE_NAME = @table_name
 
 open cur
-
 while (1 = 1)
 begin
-	fetch next from cur into @old_name
-	IF @@FETCH_STATUS != 0 BREAK
 
-	SET @new_name = REPLACE(@old_name, '~', '_')
-	SET @old_name = '[' + @table_name + '].[' + @old_name + ']'
-	EXEC sp_rename @old_name, @new_name, 'COLUMN'
+    fetch next from cur into @old_name
+    IF @@FETCH_STATUS != 0 BREAK
+    SET @new_name = REPLACE(@old_name, '~', '_')
+    SET @old_name = '[' + @table_name + '].[' + @old_name + ']'
+    EXEC sp_rename @old_name, @new_name, 'COLUMN'
+
 end
-
 close cur
 deallocate cur
 
