@@ -15,3 +15,4 @@ Several improvements related to Parquet
 
 ## Bugs
 - Fixed a bug where empty results created invalid Parquet files
+- Fixed a bug where packed numbers had an incorrect total length
