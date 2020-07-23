@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|[4.14.0 [M]](https://kb.theobald-software.com/release-notes/XtractUniversal-4.14.0.html)|2020-07-23|Destinations|Several improvements related to Parquet([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-4.14.0.html))|
 |[4.13.1 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-4.13.1.html)|2020-07-16|Destinations|Azure Storage now has folder path setting in both destination definition settings and in extraction specific destination settings. Fixed a bug where using special characters in folder paths would cause an error during upload to Azure Storage.([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-4.13.1.html))|
 |4.13.0 [M]|2020-07-14|Setup|Removed SnowSQL installer|
 |4.12.1 [M]|2020-07-10|Destinations|Salesforce: Fixes for merge row processing and column name style CodeAndText with multiple primary keys|
