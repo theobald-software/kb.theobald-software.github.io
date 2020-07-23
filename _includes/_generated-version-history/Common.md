@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.9.0 [M]|2020-07-23|General|Added basic support for bulky async data processing|
 |2.8.0 [M]|2020-07-15|General|Added TimeStamp data type (utclong)|
 |2.7.6 [L]|2020-07-03|WPF|Fix for cut off version numbers in the version history window.|
 |2.7.5 [L]|2020-05-20|Licensing|License forward compatibility improvement for supported components and destinations.|
