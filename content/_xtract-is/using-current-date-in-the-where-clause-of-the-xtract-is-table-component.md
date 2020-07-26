@@ -12,7 +12,7 @@ The dynamization of Xtract IS Table components increases the maintainability of 
 
 
 |Property Name|Description|
-|:----:|:----:|
+|:----|:----|
 | `[Xtract Table].[WhereClause]`| Restricts the number of rows included in the results set by the statement SELECT of a query, by using a logical expression.|
 | `[Xtract Table].[ConvertsDates]`|Converts the character-type SAP date to a special date format.|
 | `[Xtract Table].[CustomFunctionName]`| Specifies the name of the function module used for data extraction.|
