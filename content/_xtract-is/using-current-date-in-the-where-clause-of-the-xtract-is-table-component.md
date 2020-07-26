@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Using Current Date in the Where Clause of the Xtract IS Table Component
-description: Using Current Date in the Where Clause of the Xtract IS Table Component
+title: Dynamization of WHERE conditions of the XIS table components
+description: Dynamization of WHERE conditions of the XIS table components
 permalink: /:collection/:path
 weight: 1
 ---
@@ -12,7 +12,7 @@ The dynamization of Xtract IS Table components increases the maintainability of 
 
 
 |Property Name|Description|
-|:----:|:----:|
+|:----|:----|
 | `[Xtract Table].[WhereClause]`| Restricts the number of rows included in the results set by the statement SELECT of a query, by using a logical expression.|
 | `[Xtract Table].[ConvertsDates]`|Converts the character-type SAP date to a special date format.|
 | `[Xtract Table].[CustomFunctionName]`| Specifies the name of the function module used for data extraction.|
@@ -22,7 +22,7 @@ The dynamization of Xtract IS Table components increases the maintainability of 
 | `[Xtract Table].[PackageSize]`| Specifies the number of records retrieved per data package.|
 
 
-### Step-by-Step Anleitung zur Verwendung von [Xtract Table].[WhereClause]
+### Step-by-step instructions for the use of [Xtract Table].[WhereClause]
 
 In the following example, only results till 01.01 of the current fiscal year are to be extracted. The SAP standard table *BKPF - Accounting Document Header* and the table field *BUDAT - Posting Date in the Document* are used. 
 
