@@ -22,7 +22,7 @@ The dynamization of Xtract IS Table components increases the maintainability of 
 | `[Xtract Table].[PackageSize]`| Specifies the number of records retrieved per data package.|
 
 
-### Step-by-Step Anleitung zur Verwendung von [Xtract Table].[WhereClause]
+### Step-by-step instructions for the use of [Xtract Table].[WhereClause]
 
 In the following example, only results till 01.01 of the current fiscal year are to be extracted. The SAP standard table *BKPF - Accounting Document Header* and the table field *BUDAT - Posting Date in the Document* are used. 
 
