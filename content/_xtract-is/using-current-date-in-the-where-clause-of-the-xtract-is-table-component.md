@@ -38,6 +38,6 @@ In the following example, only results till 01.01 of the current fiscal year are
 7. **[Evaluate Expression]** to check correct syntax
 8. Confirm entry with clicking on **[OK]**
 9. Confirm entry with clicking on **[OK]** within Property Expression Editor
-10. Check WHERE-Bedingung der Tabellenextraktion im Tab *WHERE Clause*
+10. Check WHERE condition of the table extraction in the tab *WHERE Clause*
 ![xis-where-condition](/img/contents/xis/xis_where_clause_tab.png){:class="img-responsive"}
 11. Run the SSIS Package / Project
