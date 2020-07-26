@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Using Current Date in the Where Clause of the Xtract IS Table Component
-description: Using Current Date in the Where Clause of the Xtract IS Table Component
+title: Dynamization of WHERE conditions of the XIS table components
+description: Dynamization of WHERE conditions of the XIS table components
 permalink: /:collection/:path
 weight: 1
 ---
