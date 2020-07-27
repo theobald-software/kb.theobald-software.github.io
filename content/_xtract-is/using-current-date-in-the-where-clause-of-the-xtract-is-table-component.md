@@ -18,7 +18,7 @@ The dynamization of Xtract IS Table components increases the maintainability of 
 | `[Xtract Table].[CustomFunctionName]`| Specifies the name of the function module used for data extraction.|
 | `[Xtract Table].[MaxRows]`|Specifies the maximum number of extracted records.|
 | `[Xtract Table].[MinDateReplacement]`|Date conversions are applied in case of invalid data in SAP date fields.|
-| `[Xtract Table].[MinDateReplacement]`|Date conversions are applied in case of invalid data in SAP date fields.|
+| `[Xtract Table].[MaxDateReplacement]`|Date conversions are applied in case of invalid data in SAP date fields.|
 | `[Xtract Table].[PackageSize]`| Specifies the number of records retrieved per data package.|
 
 
