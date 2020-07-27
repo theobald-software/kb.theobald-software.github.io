@@ -36,8 +36,19 @@ In the following example, only results till 01.01 of the current fiscal year are
 6. Copy & paste following expression `"BUDAT <= " + "'" +  (DT_STR, 4, 1252) DATEPART("yy" , GETDATE())  + "0101'"`
 ![expression_builder](/img/contents/xis/expression_builder.png){:class="img-responsive"}
 7. **[Evaluate Expression]** to check correct syntax
-8. Confirm entry with clicking on **[OK]**
-9. Confirm entry with clicking on **[OK]** within Property Expression Editor
-10. Check WHERE-Bedingung der Tabellenextraktion im Tab *WHERE Clause*
+8. Confirm entry by clicking **[OK]**
+9. Confirm entry by clicking **[OK]** within Property Expression Editor
+10. Check WHERE-Clause of the table extraction in tab *WHERE Clause*
 ![xis-where-condition](/img/contents/xis/xis_where_clause_tab.png){:class="img-responsive"}
 11. Run the SSIS Package / Project
+
+
+### Examples of dynamic WHERE clauses
+
+|SSIS Expression|	Output	| Description |
+|:----|:----|:----|
+|"BUDAT >= " + "'" + (DT_STR, 4, 1252) DATEPART( "yy", DATEADD( "yy", -1, GETDATE() ) ) + "%'"|	BUDAT >= ‘2019%’	|All values of the last 2 years. |
+|"BUDAT = " + "'" +(DT_STR, 4, 1252) DATEPART("yy" , GETDATE()) + RIGHT("0" + (DT_STR, 2, 1252) DATEPART("mm" , GETDATE()), 2) +RIGHT("0" + (DT_STR, 2, 1252) DATEPART("dd" , GETDATE()), 2) + "'"|	BUDAT = ‘20200726’|	All values of the current day.|
+|"BUDAT >= " + "'" + (DT_STR, 4, 1252) DATEPART( "yy", GETDATE() ) + "01%'" + " AND BUDAT < " + "'" + (DT_STR, 4, 1252) DATEPART( "yy", GETDATE() ) + "04%'"|	BUDAT >= ‘202001%’ AND BUDAT < ‘202004%’|	All values in Q1 of the current year.|
+|"BUDAT LIKE " + "'" + (DT_STR, 4, 1252) DATEPART("yy" , GETDATE()) + RIGHT("0" + (DT_STR, 2, 1252) DATEPART("mm" , GETDATE()), 2) + "%'"| BUDAT LIKE ‘202007%’	| All values of the current month. |
+|"BUDAT LIKE " + "'" + (DT_STR, 4, 1252) DATEPART("yy" , GETDATE()) + "%'"|	BUDAT LIKE ‘2020%’	|All values of the current year. |
