@@ -18,7 +18,7 @@ The dynamization of Xtract IS Table components increases the maintainability of 
 | `[Xtract Table].[CustomFunctionName]`| Specifies the name of the function module used for data extraction.|
 | `[Xtract Table].[MaxRows]`|Specifies the maximum number of extracted records.|
 | `[Xtract Table].[MinDateReplacement]`|Date conversions are applied in case of invalid data in SAP date fields.|
-| `[Xtract Table].[MinDateReplacement]`|Date conversions are applied in case of invalid data in SAP date fields.|
+| `[Xtract Table].[MaxDateReplacement]`|Date conversions are applied in case of invalid data in SAP date fields.|
 | `[Xtract Table].[PackageSize]`| Specifies the number of records retrieved per data package.|
 
 
@@ -47,8 +47,8 @@ In the following example, only results till 01.01 of the current fiscal year are
 
 |SSIS Expression|	Output	| Description |
 |:----|:----|:----|
-|"BUDAT >= " + "'" + (DT_STR, 4, 1252) DATEPART( "yy", DATEADD( "yy", -1, GETDATE() ) ) + "%'"|	BUDAT >= ‘2019%’	|All values of the last 2 years. |
-|"BUDAT = " + "'" +(DT_STR, 4, 1252) DATEPART("yy" , GETDATE()) + RIGHT("0" + (DT_STR, 2, 1252) DATEPART("mm" , GETDATE()), 2) +RIGHT("0" + (DT_STR, 2, 1252) DATEPART("dd" , GETDATE()), 2) + "'"|	BUDAT = ‘20200726’|	All values of the current day.|
-|"BUDAT >= " + "'" + (DT_STR, 4, 1252) DATEPART( "yy", GETDATE() ) + "01%'" + " AND BUDAT < " + "'" + (DT_STR, 4, 1252) DATEPART( "yy", GETDATE() ) + "04%'"|	BUDAT >= ‘202001%’ AND BUDAT < ‘202004%’|	All values in Q1 of the current year.|
-|"BUDAT LIKE " + "'" + (DT_STR, 4, 1252) DATEPART("yy" , GETDATE()) + RIGHT("0" + (DT_STR, 2, 1252) DATEPART("mm" , GETDATE()), 2) + "%'"| BUDAT LIKE ‘202007%’	| All values of the current month. |
-|"BUDAT LIKE " + "'" + (DT_STR, 4, 1252) DATEPART("yy" , GETDATE()) + "%'"|	BUDAT LIKE ‘2020%’	|All values of the current year. |
+|`"BUDAT >= " + "'" + (DT_STR, 4, 1252) DATEPART( "yy", DATEADD( "yy", -1, GETDATE() ) ) + "%'"`|	BUDAT >= ‘2019%’	|All values of the last 2 years. |
+|`"BUDAT = " + "'" +(DT_STR, 4, 1252) DATEPART("yy" , GETDATE()) + RIGHT("0" + (DT_STR, 2, 1252) DATEPART("mm" , GETDATE()), 2) +RIGHT("0" + (DT_STR, 2, 1252) DATEPART("dd" , GETDATE()), 2) + "'"`|	BUDAT = ‘20200726’|	All values of the current day.|
+|`"BUDAT >= " + "'" + (DT_STR, 4, 1252) DATEPART( "yy", GETDATE() ) + "01%'" + " AND BUDAT < " + "'" + (DT_STR, 4, 1252) DATEPART( "yy", GETDATE() ) + "04%'"`|	BUDAT >= ‘202001%’ AND BUDAT < ‘202004%’|	All values in Q1 of the current year.|
+|`"BUDAT LIKE " + "'" + (DT_STR, 4, 1252) DATEPART("yy" , GETDATE()) + RIGHT("0" + (DT_STR, 2, 1252) DATEPART("mm" , GETDATE()), 2) + "%'"`| BUDAT LIKE ‘202007%’	| All values of the current month. |
+|`"BUDAT LIKE " + "'" + (DT_STR, 4, 1252) DATEPART("yy" , GETDATE()) + "%'"`|	BUDAT LIKE ‘2020%’	|All values of the current year. |
