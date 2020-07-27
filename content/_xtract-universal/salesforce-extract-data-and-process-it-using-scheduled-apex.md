@@ -10,7 +10,7 @@ Please also have a look in our [OnlineHelp](https://help.theobald-software.com/e
 
 This article will describe how to extract data from SAP to Salesforce using Xtract Universal and then Process it using scheduled Apex jobs. We will here extract annual revenue values from SAP to a staging object in Salesforce and then transfer them to the annual revenue field of the standard Salesforce Accounts object.
 
-#### Define extraction 
+### Define extraction 
 
 We define an extraction based on the SAP table KNA1 for general customer information.
 
@@ -18,14 +18,13 @@ We define an extraction based on the SAP table KNA1 for general customer informa
 
 The two columns needed for this example are **KUNNR** and **UMSA1**. The **Where Clause** will be used to get only those entries which match our criteria.
 
-#### Set destination
- 
+### Set destination 
 
 To use the Salesforce destination we have to set our Salesforce login data.
 
 ![definition](/img/contents/definition.PNG){:class="img-responsive"}
 
-#### Define destination settings 
+### Define destination settings 
 
 These settings are set by default and required for this example.
 
@@ -33,7 +32,7 @@ These settings are set by default and required for this example.
 
 The **Preparation** option *Create if not exists* will only create a new Salesforce object if no object with the same name already exists. With **Row processing** set to Insert all new entries will be inserted into the specified object and merging won’t be possible.
 
-#### Run extraction 
+### Run extraction 
 
 Click the **Run** button in the extraction definition window. In the dialog click either **Run in xu.exe** or **Run in Browser**.
 
@@ -52,7 +51,7 @@ The entries in our Sales__c object look as following:
 
 ![salesforce_entries_view](/img/contents/salesforce_entries_view.PNG){:class="img-responsive"}
 
-#### Create Apex class
+### Create Apex class
  
 To create the Apex class for our scheduled APEX job we navigate to the **Developer Console**. Under **File > New > Apex Class** create a new Apex class and name it **ScheduledSalesJob**.
 

@@ -16,50 +16,50 @@ The data will then be extracted from SAP and loaded into the SQL Server database
 
 This scenario assumes that Pentaho runs on a Windows operating system or can call a Windows Command Tool.
 In the case of other operating systems, the call can alternatively be made via HTTP. 
-<br>
-**Extraction in Xtract Universal**<br>
+
+### Extraction in Xtract Universal
+
 Here we see the definition of the extraction in Xtract Universal with SQL Server Destination: 
 ![pdi-cmd-xu](/img/contents/xu/best-practices/pdi-cmd/pdi-cmd-xu.png){:class="img-responsive"}
 
-<br>
-**Transformation in PDI**<br>
+### Transformation in PDI
+
 The overview of the transformation in Kettle shows the steps used: 
 ![pdi-cmd-transf-overview](/img/contents/xu/best-practices/pdi-cmd/pdi-cmd-transf-overview.png){:class="img-responsive"}
 
-<br>
-**Initial Parameters**<br>
+### Initial Parameters
+
 Let's look at the settings of the important steps.
 In the first step we define 2 parameters: 
 - The field XUCmd contains the path to the command time: "C:\Program Files\XtractUniversal\xu.exe".	
 - The XUArg field contains the URL of the extraction in Xtract Universal: http://KETSWIN16DC02:8065/?name=SAPCustomersToSQL
 
- 
 ![pdi-cmd-transf-generate-rows-settings](/img/contents/xu/best-practices/pdi-cmd/pdi-cmd-transf-generate-rows-settings.png){:class="img-responsive"}
 
-<br>
-**Call Command Line**<br>
+### Call Command Line
+
 In the second step we call the command line with the following settings. As you can see, we have also implemented error handling.  
 ![pdi-cmd-transf-exe-settings01](/img/contents/xu/best-practices/pdi-cmd/pdi-cmd-transf-exe-settings01.png){:class="img-responsive"}
  
 ![pdi-cmd-transf-exe-settings02](/img/contents/xu/best-practices/pdi-cmd/pdi-cmd-transf-exe-settings02.png){:class="img-responsive"}
 
-<br>
-**Database Connection**<br>
+### Database Connection
+
 Here we see  the connection to the SQL Server that we use to read the data from the table: 
 ![pdi-cmd-transf-sql-server-connection](/img/contents/xu/best-practices/pdi-cmd/pdi-cmd-transf-sql-server-connection.png){:class="img-responsive"}
 
-<br>
-**Table Input**<br>
+### Table Input
+
 We use the following settings in the Table Input step: 
 ![pdi-cmd-transf-table-input-settings](/img/contents/xu/best-practices/pdi-cmd/pdi-cmd-transf-table-input-settings.png){:class="img-responsive"}
 
-<br>
-**Execute the Transformation in PDI**<br>
+### Execute the Transformation in PDI
+
 After successful execution we would find the following metrics in PDI. 
 ![pdi-cmd-transf-metrics](/img/contents/xu/best-practices/pdi-cmd/pdi-cmd-transf-metrics.png){:class="img-responsive"}
 
-<br>
-**Preview in PDI**<br>
+### Preview in PDI
+
 It is also possible to preview the individual steps.<br> 
 Preview of the input fields:  
 ![pdi-cmd-transf-generate-rows-preview](/img/contents/xu/best-practices/pdi-cmd/pdi-cmd-transf-generate-rows-preview.png){:class="img-responsive"}
@@ -68,12 +68,12 @@ Preview of the input fields:
 Data Preview of the Table Input step: 
 ![pdi-cmd-transf-table-input-preview](/img/contents/xu/best-practices/pdi-cmd/pdi-cmd-transf-table-input-preview.png){:class="img-responsive"}
 
-<br>
-**Data in SQL Server**<br>
+### Data in SQL Server
+
 Here you find a preview of the data in the SQL Server: 
 ![pdi-cmd-sql](/img/contents/xu/best-practices/pdi-cmd/pdi-cmd-sql.png){:class="img-responsive"}
 
-<br>
-**Download of the transformation file for PDI**<br>
+### Download of the transformation file for PDI
+
 You can download the transformation template for Pentaho Data Integration (PDI) aka Kettle here:
 [Call SAP Extraction from Xract Universal via CMD.ktr](/img/contents/xu/best-practices/pdi-cmd/Call SAP Extraction from Xract Universal via CMD.ktr)

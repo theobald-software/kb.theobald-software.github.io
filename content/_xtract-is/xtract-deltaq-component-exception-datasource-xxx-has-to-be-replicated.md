@@ -8,15 +8,15 @@ weight: 15
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
 
-**Error:**
+### Error
 
 When running a DeltaQ extraction the following exception occurs: DataSource XXX has to be replicated . 
 
-**Reason:**
+### Reason
 
 This Exception occurs when the DataSource XXX has to be replicated again. This could happen by former changes done on the SAP side.
 
-**Solution:**
+### Solution
 
 1. Clicking the button "Activate" in the DeltaQ component dialog.
 

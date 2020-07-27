@@ -18,6 +18,7 @@ We can subsequently process the data in Talend, e.g., write the extracted data i
 
 <br>
 ### Job Overview in Talend
+
 The job overview in Talend shows the used steps.  There are five steps that are described in detail: 
 
 ![talend-00-job-overview](/img/contents/xu/best-practices/talend-http/talend-00-job-overview.png){:class="img-responsive"}
@@ -35,6 +36,7 @@ The destination settings for HTTP-CSV offer options to deliver data without a co
 <br>
 
 ### SQL Server
+
 We created a target table on the SQL server with the following SQL command. The created table is used to load the data later on.  
 
 ```sql
