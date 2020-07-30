@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.14.2 [L]|2020-07-30|Designer|Qlik Sense Script: Single quotes in where statements are now escaped; Run parameters now only appear in the script if they are selected in the Run-Dialogue.|
 |4.14.1 [L]|2020-07-27|Designer|Qlik Sense script now formats fields of type decimal and minds date conversion checkbox when formatting dates.|
 |[4.14.0 [M]](https://kb.theobald-software.com/release-notes/XtractUniversal-4.14.0.html)|2020-07-23|Destinations|Several improvements related to Parquet([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-4.14.0.html))|
 |[4.13.1 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-4.13.1.html)|2020-07-16|Destinations|Azure Storage now has folder path setting in both destination definition settings and in extraction specific destination settings. Fixed a bug where using special characters in folder paths would cause an error during upload to Azure Storage.([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-4.13.1.html))|
