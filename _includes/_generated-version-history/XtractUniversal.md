@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|[4.14.3 [H]](https://kb.theobald-software.com/release-notes/XtractUniversal-4.14.3.html)|2020-07-31|Security|Enforcement of access restriction for the web server([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-4.14.3.html))|
 |4.14.2 [L]|2020-07-30|Designer|Qlik Sense Script: Single quotes in where statements are now escaped; Run parameters now only appear in the script if they are selected in the Run-Dialogue.|
 |4.14.1 [L]|2020-07-27|Designer|Qlik Sense script now formats fields of type decimal and minds date conversion checkbox when formatting dates.|
 |[4.14.0 [M]](https://kb.theobald-software.com/release-notes/XtractUniversal-4.14.0.html)|2020-07-23|Destinations|Several improvements related to Parquet([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-4.14.0.html))|
