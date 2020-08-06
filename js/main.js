@@ -1,14 +1,38 @@
 var main = {
 
   init : function() {
+    // Initial calculation for the sideMenu offset
+    adjustSideMenu(107); // outer height of full nav
+
+    let sideMenuOffset = 0;
+    // shorten navbar when the url is an anchor link
+    if(window.location.hash) {
+      $(".navbar").addClass("top-nav-short");
+      $(".side-menu").addClass("nav-shortened");
+      $(".right-side-menu").addClass("nav-shortened");
+
+      sideMenuOffset = 70; // outer height of shortened nav
+    }
+
     // Shorten the navbar after scrolling a little bit down
     $(window).scroll(function() {
         if ($(".navbar").offset().top > 50) {
             $(".navbar").addClass("top-nav-short");
             $(".header-section").addClass("nav-shortened");
+            $(".right-side-menu").addClass("nav-shortened");
+
+            sideMenuOffset = 70; // outer height of shortened nav
         } else {
             $(".navbar").removeClass("top-nav-short");
             $(".header-section").removeClass("nav-shortened");
+            $(".right-side-menu").removeClass("nav-shortened");
+
+            sideMenuOffset = 107; // outer height of full nav
+        }
+
+        // if the screen is not small, adjust the margin at the bottom of the sidebar to the height of the footer
+        if( !main.isBreakpoint('xs') ) {
+            $(document).on('scroll', adjustSideMenu(sideMenuOffset));
         }
     });
 
@@ -61,41 +85,35 @@ var main = {
 
     // activate tooltips in the footer
     $('[data-toggle="tooltip"]').tooltip();
-
-    // if the screen is small, the side-menu becomes a top menu and shouldn't be absolute
-    if( main.isBreakpoint('xs') ) {
-      $('#side-menu-col').removeClass('affix');
-      $('#side-menu-col').css('padding-right','0');
-    }
-
-    // if the user came from the search page, add a side-menu option
-    if(main.getUrlParameter('fromSearch') === 'true') {
-        if($('#side-menu-list-item-search').length > 0) {
-            // add "back to search" link
-            $('#side-menu-list-item-search').html('<li class="side-menu-list-item"><a href="javascript:history.back()" class="side-menu-list-item-link">Back to <strong>Search</strong></a></li>')
-        }
-    }
   },
 
   isBreakpoint : function(alias) {
       return $('.device-' + alias).is(':visible');
-  },
-
-  getUrlParameter : function(sParam) {
-        var sPageURL = decodeURIComponent(window.location.search.substring(1)),
-            sURLVariables = sPageURL.split('&'),
-            sParameterName,
-            i;
-
-        for (i = 0; i < sURLVariables.length; i++) {
-            sParameterName = sURLVariables[i].split('=');
-
-            if (sParameterName[0] === sParam) {
-                return sParameterName[1] === undefined ? true : sParameterName[1];
-            }
-        }
-    }
-
+  }
 };
 
 document.addEventListener('DOMContentLoaded', main.init);
+
+function adjustSideMenu(navOffset) {
+    let footerHeight = $('footer').outerHeight();
+    let distanceFromBottom = Math.floor($(document).height() - $(document).scrollTop() - $(window).height());
+    let deductPixels;
+
+    if(distanceFromBottom < footerHeight) {
+        // deduct the distance to the bottom from the footer height.
+        // Now we know how much pixels of the footer is visible
+        // also deduct the height from the visible header
+        deductPixels = (footerHeight - distanceFromBottom) + navOffset;
+    } else {
+        // deduct just the height of the nav using the parameter given
+        deductPixels = navOffset;
+    }
+
+    let displayStyle = [
+        'height: calc(100% - ' + deductPixels + 'px)',
+        'height: -moz-calc(100% - ' + deductPixels + 'px)',
+        'height: -webkit-calc(100% - ' + deductPixels + 'px)'
+    ].join(';');
+
+    $('.right-side-menu-wrapper').attr('style', displayStyle);
+}

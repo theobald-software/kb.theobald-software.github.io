@@ -3,17 +3,20 @@ layout: base
 ---
 
 <div class="row row-page-padding">
-    <div class="col-xl-11 col-lg-11 col-md-11 col-sm-11 col-xl-offset-1 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
+    <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9 col-xl-offset-1 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
         {% include _tech/header.html %}
 
         <div class="container-content" role="main">
             <div class="row">
                 <div class="col-lg-10 col-md-10">
                     <article>
-                        {{ content }}
+                        {% include /_tech/anchor_headings.html html=content h_min=2 h_max=3 anchorBody='#' anchorClass='anchor' %}
                     </article>
                 </div>
             </div>
         </div>
+    </div>
+    <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 affix right-side-menu-wrapper" id="right-side-menu-col">
+        {% include _tech/right-side-menu.html %}
     </div>
 </div>

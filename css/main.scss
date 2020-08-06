@@ -382,6 +382,108 @@ img {
   margin-left: 0 !important;
 }
 
+/* --- Right Side menu --- */
+.right-side-menu {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .right-side-menu-wrapper {
+    height: calc(100% - 107px);
+    height: -moz-calc(100% - 107px);
+    height: -webkit-calc(100% - 107px);
+    right: 0;
+  }
+
+  .right-side-menu {
+    margin: 107px 0 20px 0;
+    -webkit-transition: margin .58s ease-in-out;
+    -moz-transition: margin .58s ease-in-out;
+    transition: margin .58s ease-in-out;
+    border-bottom: 0 solid transparent;
+    position: relative;
+    overflow: auto;
+    height: 100%;
+    display: block;
+  }
+  .nav-shortened {
+    margin: 70px 0 20px 0;
+    -webkit-transition: margin .45s ease-in-out;
+    -moz-transition: margin .45s ease-in-out;
+    transition: margin .45s ease-in-out;
+  }
+}
+
+#right-side-menu-toc {
+  padding: 0 10px 10px;
+  list-style: none;
+  padding-inline-start: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  #right-side-menu-toc {
+    padding: 0 0 10px;
+    z-index: -100000;
+  }
+}
+
+.right-side-menu-toc-item {
+  font-size: 12px;
+  padding: 3px 3px 3px 1em;
+  overflow-wrap: break-word;
+}
+
+.right-side-menu-toc-item:before {
+  content: '\203A';
+  padding-right: 10px;
+  position: absolute;
+}
+
+.right-side-menu-toc-item a {
+  font-weight: 400;
+  padding-left: 10px;
+  color: $color-text-primary;
+  text-decoration: none;
+  display: block;
+}
+
+.right-side-menu-toc-item > a:hover,
+.right-side-menu-toc-item > a:focus {
+  background-color: $color-background-secondary;
+}
+
+.right-side-menu-toc-item > ul {
+  list-style: none;
+  padding-inline-start: 5px;
+}
+
+.right-side-menu-toc-item > ul > li:before {
+  content: '\00BB';
+}
+
+.right-side-menu-title {
+  font-weight: 600;
+  padding-left: 12px;
+  line-height: 50px;
+  margin-top: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-bottom: 0;
+}
+
+/* --- Anchors --- */
+
+.anchor {
+  color: $color-background-primary;
+  padding-top: 70px;
+  margin-top: -70px;
+}
+
+.anchor:hover {
+  color: $color-highlight;
+}
+
 /* --- Homepage --- */
 
 .container-homepage {

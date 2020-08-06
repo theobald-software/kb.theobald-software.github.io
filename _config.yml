@@ -51,6 +51,7 @@ content:
   homepage-search-title: "How can we help?"
   sidemenu-return-to-home: "Back to <strong>Homepage</strong> of Knowledgebase"
   sidemenu-return-to-section: "Back to overview for "
+  sidebar-right-title: "On this page"
   search-no-results: "We didn't find any results for the search: "
   search-title: "Search the Knowledgebase"
   search-results: "Results"
