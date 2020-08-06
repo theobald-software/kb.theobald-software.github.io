@@ -1,5 +1,12 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|[4.4.11 [H]](https://kb.theobald-software.com/release-notes/BOARDConnector-4.4.11.html)|2020-07-31|Security|Enforcement of access restriction for the web server([Release note](https://kb.theobald-software.com/release-notes/BOARDConnector-4.4.11.html))|
+|4.4.10 [L]|2020-07-03|Server|Fixed a bug where web requests with invalid URLs did not get a proper response|
+|4.4.9 [L]|2020-06-29|Designer|Fix for horizontal scrolling in log window|
+|4.4.8 [L]|2020-06-26|Designer|Main window's title fix|
+|4.4.7 [L]|2020-06-25|Designer|Remove of destination menu options|
+|4.4.6 [M]|2020-06-17|General|Fixed a bug that could cause extractions to get stuck in a running state while not actually running anymore|
+|4.4.5 [L]|2020-05-13|Designer|General designer bug fixes and improvements|
 |4.4.4 [L]|2020-05-05|Designer|New WPF filter and log windows|
 |4.4.3 [L]|2020-04-30|Designer|Fix for context menu item in main window|
 |4.4.2 [L]|2020-04-29|General|Optimized internal dependencies.|

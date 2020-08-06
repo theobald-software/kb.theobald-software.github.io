@@ -1,5 +1,9 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.5.3 [L]|2020-08-04|Management|Improved host name and IP in SAP connection|
+|2.5.2 [L]|2020-06-22|Designer|Minor UI improvements.|
+|2.5.1 [L]|2020-06-15|Management|API keys can be edited.|
+|2.5.0 [M]|2020-06-04|Designer|Improved service availability using Azure Relay after deployment of web services. Updated internal dependencies.|
 |2.4.3 [L]|2020-04-20|General|Added support of SAP XSTRING (HEX String).|
 |2.4.2 [L]|2020-03-02|General|Improved azure relay integration|
 |2.4.1 [L]|2020-02-12|Designer|Minor update in WebService Designer|

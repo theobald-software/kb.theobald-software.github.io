@@ -1,5 +1,38 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.15.0 [L]|2020-08-04|Destinations|OData destination is deprecated now. Creating/modifying destinations of type OData Atom is no longer possible. Running existing extractions is still supported until 2020-12-31.|
+|[4.14.3 [H]](https://kb.theobald-software.com/release-notes/XtractUniversal-4.14.3.html)|2020-07-31|Security|Enforcement of access restriction for the web server([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-4.14.3.html))|
+|4.14.2 [L]|2020-07-30|Designer|Qlik Sense Script: Single quotes in where statements are now escaped; Run parameters now only appear in the script if they are selected in the Run-Dialogue.|
+|4.14.1 [L]|2020-07-27|Designer|Qlik Sense script now formats fields of type decimal and minds date conversion checkbox when formatting dates.|
+|[4.14.0 [M]](https://kb.theobald-software.com/release-notes/XtractUniversal-4.14.0.html)|2020-07-23|Destinations|Several improvements related to Parquet([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-4.14.0.html))|
+|[4.13.1 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-4.13.1.html)|2020-07-16|Destinations|Azure Storage now has folder path setting in both destination definition settings and in extraction specific destination settings. Fixed a bug where using special characters in folder paths would cause an error during upload to Azure Storage.([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-4.13.1.html))|
+|4.13.0 [M]|2020-07-14|Setup|Removed SnowSQL installer|
+|4.12.1 [M]|2020-07-10|Destinations|Salesforce: Fixes for merge row processing and column name style CodeAndText with multiple primary keys|
+|4.12.0 [L]|2020-07-09|Destinations|Removed Alteryx Connect destination|
+|4.11.26 [L]|2020-07-08|Destinations|http-odata-atom destination is no longer created by default|
+|4.11.25 [L]|2020-07-08|Destinations|Several improvements and fixes for the Snowflake destination|
+|4.11.24 [L]|2020-07-06|Destinations|Salesforce: Floating point values are now supported (they will be of type Text in Salesforce due to Number limitations)|
+|4.11.23 [L]|2020-07-03|Designer|Qlik Sense script generation is now supported for the Qlik destination.|
+|4.11.22 [L]|2020-07-03|Server|Fix for result caching on "Int8" data type.|
+|4.11.21 [L]|2020-06-29|Designer|Fix for horizontal scrolling in log window|
+|4.11.20 [M]|2020-06-26|Destinations|Remove line breaks from Snowflake's statements|
+|4.11.19 [H]|2020-06-24|Destinations|Snowflake's driver auto upgrade disabled|
+|4.11.18 [L]|2020-06-23|Destinations|Snowflake's regions list update|
+|4.11.17 [M]|2020-06-22|Destinations|PowerBI & Alteryx plugins: Fixes & improvements for data type mapping|
+|4.11.16 [L]|2020-06-22|Server|HTTP metadata API: Fixed letter case of ABAP type IDs|
+|4.11.15 [H]|2020-06-22|Destinations|Enhancements in the communication between XtractUniversal and Snowflake's driver, SnowSql|
+|[4.11.14 [M]](https://kb.theobald-software.com/release-notes/XtractUniversal-4.11.14.html)|2020-06-17|General|Fixes for timeouts and connection issues([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-4.11.14.html))|
+|4.11.13 [L]|2020-06-12|Destinations|Salesforce: Added support for sandbox systems|
+|4.11.12 [H]|2020-06-10|Destinations|Fix for Snowflake PUT command execution and increase of log verbosity for the same destination|
+|4.11.11 [L]|2020-06-09|Destinations|Fixes for Salesforce destination|
+|4.11.10 [M]|2020-06-08|Designer|New rules for names of extractions, sources and destinations: Letters a-z, numbers 0-9, minus (-) or underscore (_). Names no longer have to start with a letter.|
+|4.11.9 [L]|2020-05-26|Server|ConfigConverter: Fix for Console buffers wider than 120|
+|4.11.8 [L]|2020-05-26|Server|ConfigConverter now fixes invalid 3.x Table extractions using Z_THEO_READ_TABLE and conversion routines|
+|4.11.7 [L]|2020-05-26|Designer|Fix in log window to show datetime using the 24 hours format|
+|4.11.6 [L]|2020-05-20|Designer|License forward compatibility improvement for supported destinations.|
+|4.11.5 [L]|2020-05-18|Designer|Fix for server name typing in connect window|
+|4.11.4 [L]|2020-05-13|Designer|General designer bug fixes and improvements|
+|4.11.3 [L]|2020-05-08|Destinations|Fix for Snowflake row counting |
 |4.11.2 [L]|2020-05-05|Designer|New WPF log window|
 |4.11.1 [M]|2020-05-04|Designer|GUI fixes for partially invisible destination settings (e. g. File CSV)|
 |4.11.0 [L]|2020-04-29|General|Optimized internal dependencies.|
@@ -88,8 +121,7 @@
 |3.14.22 [L]|2019-08-07|Setup|Fixes for portable Designer zip|
 |[3.14.21 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-3.14.21.html)|2019-07-29|Destinations|Power BI Connector: General Availibility (end of beta)([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-3.14.21.html))|
 |3.14.20 [M]|2019-07-23|General|Updated NW RFC to 7.50 PL 4|
-|3.14.19 [L]|2019-07-18|Destinations|Friendly message for failed destinations that require extra components and PostgreSQL full server version.
-|
+|3.14.19 [L]|2019-07-18|Destinations|Friendly message for failed destinations that require extra components and PostgreSQL full server version. |
 |3.14.18 [L]|2019-07-15|General|Alteryx Plugin: Fixed app.config for plugin setup|
 |3.14.17 [L]|2019-07-11|Destinations|Fixed a bug where CSV settings in S3 destination were not displayed correctly.|
 |3.14.16 [L]|2019-07-09|Destinations|S3 destination now allows to save the files to folders and subfolders inside buckets.|
@@ -206,8 +238,7 @@
 |3.1.3 [M]|2018-06-21|Designer|GUI fixes (buttons not visible at some screen resolutions etc.)|
 |3.1.2 [L]|2018-06-14|Destinations|Fixed a bug in the MicroStrategy destination, that caused cubes to be unintentionally replaced in some situations.|
 |3.1.1 [L]|2018-06-08|Destinations|Added definition of MicroStrategy attributes and metrics.|
-|3.1.0 [M]|2018-05-30|Security|Added "Require SAP credentials" to source, removed X.509 certificate path
-(please configure via SNC solution)|
+|3.1.0 [M]|2018-05-30|Security|Added "Require SAP credentials" to source, removed X.509 certificate path (please configure via SNC solution)|
 |3.0.8 [M]|2018-05-30|BW Cube|Set package size to 20.000 for new extractions|
 |3.0.7 [L]|2018-05-30|Destinations|SQLServer/AzureDWH: Increased timeouts to 60 minutes|
 |3.0.6 [M]|2018-05-24|General|Fixes & improvements for Designer/Server communication|

@@ -12,7 +12,7 @@ The following instructions should be followed carefully to ensure the executabil
 
 Necessary prerequisite for the migration to a new SQL Server version is the installation of the latest XTRACT IS version on the new server environment or the execution of the existing XtractISSetup.exe. SQL Server 2019 is supported since Xtract IS version 4.0.0. 
 
-#### The functionality of the SSIS packages and SSIS projects could be ensured by the following order:
+### The functionality of the SSIS packages and SSIS projects could be ensured by the following order:
 
 1. Use the XtractISConversionPreparer.exe, located in the Xtract IS installation routine, to convert the SSIS packages to the SQL Server 2016 version.
 2. Open the Solution and project in VS/SSDT. The packages should open and might display the following error `could not acquire Xtract connection`

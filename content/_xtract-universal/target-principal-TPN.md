@@ -8,7 +8,8 @@ weight: 4
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/xtract-universal/security-xu3/user-management) for further information.
 
-### Target principal<br>
+### Target principal
+
 To use Kerberos transport encryption or authenticate an Active Directory user, a Kerberos Target Principal Name (TPN) is required. This can be either a User Principal Name (UPN) or a Service Principal Name (SPN).<br>
 
 The Target Principal Name must correspond either to the UPN of the user under which the XU Windows Service is running, or to an SPN assigned to this user.
@@ -33,7 +34,8 @@ Example:
 
 Therefore, the Target Principal Name only needs to be changed in the login window if the service account of the XU Windows Service has been changed.
 
-### If the service runs under another account<br>
+### If the service runs under another account
+
 Deviating from the standard, the service can also be executed under a different account. 
 For this the setting *This account* is selected.
 
@@ -56,7 +58,8 @@ Example:
 
 For further information please refer to the official [Windows Library](https://msdn.microsoft.com/en-us/library/windows/desktop/aa380525(v=vs.85).aspx)
 
-### Service Principal Name - SPN<br>
+### Service Principal Name - SPN
+
 An SPN is assigned in the following form:
 ```
 <service class>/<host>

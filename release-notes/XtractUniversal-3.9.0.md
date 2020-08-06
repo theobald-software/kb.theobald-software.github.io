@@ -1,3 +1,7 @@
+---
+layout: releaseNotes
+---
+
 # Xtract Universal 3.9
 
 The server can now impersonate Active Directory users using Kerberos. This allows SSO on SAP systems and SQL server destinations from various clients including the *Alteryx Plugin* and *xu.exe*. 

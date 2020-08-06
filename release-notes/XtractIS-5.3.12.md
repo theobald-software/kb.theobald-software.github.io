@@ -1,3 +1,7 @@
+---
+layout: releaseNotes
+---
+
 # XIS 5.3.12
 This release fixes several issues with date conversion and legacy behavior
 

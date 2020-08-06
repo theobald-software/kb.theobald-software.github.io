@@ -1,3 +1,7 @@
+---
+layout: releaseNotes
+---
+
 #### Installation
 Move the **.pqx** file to **%userprofile%\Documents\Power BI Desktop\Custom Connectors**. You can remove the **.mez** file if it exists.
 

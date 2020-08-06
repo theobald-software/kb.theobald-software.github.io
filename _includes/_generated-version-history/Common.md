@@ -1,0 +1,25 @@
+|Version|Date    |Component   |Description|
+|:-----:|:------:|:----------:|:----------|
+|2.9.1 [M]|2020-07-29|General|Updated NW RFC libraries to 750 patch level 6|
+|2.9.0 [M]|2020-07-23|General|Added basic support for bulky async data processing|
+|2.8.0 [M]|2020-07-15|General|Added TimeStamp data type (utclong)|
+|2.7.6 [L]|2020-07-03|WPF|Fix for cut off version numbers in the version history window.|
+|2.7.5 [L]|2020-05-20|Licensing|License forward compatibility improvement for supported components and destinations.|
+|2.7.4 [M]|2020-05-04|General|Added ReadDecimal, ReadDouble, ReadInt64 to JsonReader. Fixed double in JsonWriter|
+|2.7.3 [M]|2020-04-28|Licensing|Added Parquet destination to XU default destinations|
+|2.7.2 [M]|2020-04-27|Licensing|Added Parquet destination|
+|2.7.1 [L]|2020-03-23|Licensing|Fixed forward compatibility of licensed components.|
+|2.7.0 [M]|2020-02-26|Licensing|All XU licenses implicitly contain the default destinations now|
+|2.6.0 [M]|2020-02-26|Licensing|Added JSON destination to XU default licenses|
+|2.5.0 [M]|2020-02-20|General|Added retry logic for accessing files in use|
+|2.4.1 [L]|2020-02-06|General|Extended JSON Writer|
+|2.4.0 [M]|2020-02-04|WPF|Updated to .NET Framework 4.7.2|
+|2.3.1 [H]|2020-01-16|General|RemoveControlCharacters() accidentally removed everything except ASCII since version 2.2.1|
+|2.3.0 [M]|2019-12-18|General|Moved log splitting to LoggerMulti to properly support XU config / web server logs|
+|[2.2.4 [L]](https://kb.theobald-software.com/release-notes/Common-2.2.4.html)|2019-11-26|General|New DeleteFile method in IOHelper([Release note](https://kb.theobald-software.com/release-notes/Common-2.2.4.html))|
+|2.2.3 [M]|2019-11-15|General|Updated gacutil to 4.7.2558.0|
+|2.2.2 [M]|2019-11-15|General|Updated Installer for XIS/XRS|
+|2.2.1 [L]|2019-11-15|General|RemoveControlCharacters now also removes chars from the C1 range|
+|2.2.0 [M]|2019-11-13|General|Logger throws InvalidOperationException if used without calling Start()|
+|2.1.0 [L]|2019-11-13|General|Logging now supports 24h and more in one log (but still restricted to < 100h)|
+|2.0.0 [M]|2019-09-23|General|Updated to .NET Standard 2.0|

@@ -13,7 +13,7 @@ If the MDX execution terminates with an error message on the SAP BW system and i
 - [**SAP Note 1032461**](/files/1032461EN.pdf) (English version) 
 - [**SAP Note 1032461**](/files/1032461.pdf) (German version)
 
-Carry out the following steps:
+### Step by Step instructions
 
 - Read SAP Note 581509. This SAP Note contains general information about the "timeout during allocate" error message.
 
@@ -35,7 +35,9 @@ Carry out the following steps:
 - Install "Microsoft Visual C++ 2005 Service Pack 1 Redistributable Package ATL Security Update" (KB973544) [vcredist_x64.exe]
 [http://www.microsoft.com/en-us/download/details.aspx?id=14431](http://www.microsoft.com/en-us/download/details.aspx?id=14431)
 
-If these steps are not successful, try to start the MDX parser as a local RFC server. Carry out the following steps for the Windows platform:
+If these steps are not successful, try to start the MDX parser as a local RFC server. 
+
+### Step by Step instructions for the Windows platform:
 
 - Use the command CMD to open a command line.
 
@@ -47,4 +49,4 @@ If the program can be started successfully, the functions should not be impaired
 
 If a test of the RFC destination still results in an error, enter the complete path for the file mdxsvr.exe in the "Program" field (for example, j:\usr\sap\BWP\SYS\exe\run\mdxsvr). Then check whether the test still results in an error. If the test is successful this time, it indicates that a PATH variable is incomplete.
 
-Important: If there should be error messages with regard to the MDX parser from BW 7.30 on (for example, in the system log), even though the statement can be parsed successfully, refer to the SAP Notes 1572695 and 1666816.
+**Important:** If there should be error messages with regard to the MDX parser from BW 7.30 on (for example, in the system log), even though the statement can be parsed successfully, refer to the SAP Notes 1572695 and 1666816.

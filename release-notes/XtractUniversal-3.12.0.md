@@ -1,3 +1,7 @@
+---
+layout: releaseNotes
+---
+
 # Xtract Universal 3.12
 
 ## Text Encodings for *HTTP - CSV*, *Flat File - CSV* and *OData Atom* destinations

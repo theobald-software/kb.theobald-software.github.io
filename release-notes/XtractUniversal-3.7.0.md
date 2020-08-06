@@ -1,3 +1,7 @@
+---
+layout: releaseNotes
+---
+
 # Xtract Universal 3.7.0
 
 The **ABAP** subdirectory now contains the following transport requests:
