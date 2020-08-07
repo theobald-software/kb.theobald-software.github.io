@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.5.0 [L]|2020-08-07|Designer|General WPF migration for BoardConnectorDesigner and other small UI improvements|
 |[4.4.11 [H]](https://kb.theobald-software.com/release-notes/BOARDConnector-4.4.11.html)|2020-07-31|Security|Enforcement of access restriction for the web server([Release note](https://kb.theobald-software.com/release-notes/BOARDConnector-4.4.11.html))|
 |4.4.10 [L]|2020-07-03|Server|Fixed a bug where web requests with invalid URLs did not get a proper response|
 |4.4.9 [L]|2020-06-29|Designer|Fix for horizontal scrolling in log window|
