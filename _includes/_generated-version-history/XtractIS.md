@@ -1,7 +1,7 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
 |6.5.1 [L]|2020-08-10|General|Windows' titles standardization|
-|6.5.0 [L]|2020-07-09|Setup|New Setup|
+|[6.5.0 [L]](https://kb.theobald-software.com/release-notes/XtractIS-6.5.0.html)|2020-07-09|Setup|New Setup([Release note](https://kb.theobald-software.com/release-notes/XtractIS-6.5.0.html))|
 |6.4.2 [L]|2020-05-20|General|License forward compatibility improvement for supported components.|
 |6.4.1 [L]|2020-05-14|OHS|Main window is resizable now.|
 |6.4.0 [L]|2020-05-14|OHS|Removed preview button|
