@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.5.2 [M]|2020-08-13|Setup|Fixed the installation for 64 bit SQL Server versions (Bug introduced in 6.5.0)|
 |6.5.1 [L]|2020-08-10|General|Windows' titles standardization|
 |[6.5.0 [L]](https://kb.theobald-software.com/release-notes/XtractIS-6.5.0.html)|2020-07-09|Setup|New Setup([Release note](https://kb.theobald-software.com/release-notes/XtractIS-6.5.0.html))|
 |6.4.2 [L]|2020-05-20|General|License forward compatibility improvement for supported components.|
