@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|[4.16.2 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-4.16.2.html)|2020-08-17|Destinations|Qlike(Sense): Fixed a bug where QlikSense timed out after 5 minutes on the initial request ([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-4.16.2.html))|
 |[4.16.1 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-4.16.1.html)|2020-08-13|Destinations|S3 destination now logs the requests to AWS S3 API.([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-4.16.1.html))|
 |4.16.0 [L]|2020-08-07|Designer|General WPF migration for XtractDesigner and other small UI improvements|
 |4.15.0 [L]|2020-08-04|Destinations|OData destination is deprecated now. Creating/modifying destinations of type OData Atom is no longer possible. Running existing extractions is still supported until 2020-12-31.|
