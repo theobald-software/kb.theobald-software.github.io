@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.16.4 [M]|2020-08-21|Designer|Fix for bug on saving bucket in S3 definition window when using IAM role authentication mode|
 |4.16.3 [L]|2020-08-17|Designer|General UI improvements and fixes|
 |[4.16.2 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-4.16.2.html)|2020-08-17|Destinations|Qlike(Sense): Fixed a bug where QlikSense timed out after 5 minutes on the initial request ([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-4.16.2.html))|
 |[4.16.1 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-4.16.1.html)|2020-08-13|Destinations|S3 destination now logs the requests to AWS S3 API.([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-4.16.1.html))|
