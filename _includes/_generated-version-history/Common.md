@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.11.0 [L]|2020-08-26|General|Added generic read buffer|
 |2.10.0 [L]|2020-08-13|General|Added helper for processes|
 |2.9.2 [L]|2020-08-13|General|IoHelper.DeleteFileRetry no longer retries on DirectoryNotFoundExceptions|
 |2.9.1 [M]|2020-07-29|General|Updated NW RFC libraries to 750 patch level 6|
