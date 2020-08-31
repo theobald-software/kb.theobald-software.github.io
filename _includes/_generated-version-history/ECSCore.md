@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.6.0 [M]|2020-08-27|General|OpenAPI export supports a structure with references.|
 |2.5.3 [L]|2020-08-04|Management|Improved host name and IP in SAP connection|
 |2.5.2 [L]|2020-06-22|Designer|Minor UI improvements.|
 |2.5.1 [L]|2020-06-15|Management|API keys can be edited.|
