@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|[1.15.1 [L]](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.15.1.html)|2020-09-07|ODP|Added subscription suffix ([Release note](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.15.1.html))|
 |1.15.0 [M]|2020-07-15|General|Support for new data types DATN, D34N, D16N, TIMN, UTCLONG. Corrected typing for decimal floating point values (now string) for ODP.|
 |1.14.12 [L]|2020-06-12|General|Function module for internal table reads (metadata) can be specified now|
 |[1.14.11 [L]](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.14.11.html)|2020-05-27|ODP|Improved monitoring for subscriptions and requests([Release note](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.14.11.html))|
