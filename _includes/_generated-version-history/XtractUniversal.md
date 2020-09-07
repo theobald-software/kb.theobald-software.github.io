@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.16.7 [L]|2020-09-07|ODP|Added 'subscription suffix' and 'update mode' run parameters|
 |4.16.6 [L]|2020-09-03|Destinations|UI fix for escape character parameter in CSV destination|
 |[4.16.5 [M]](https://kb.theobald-software.com/release-notes/XtractUniversal-4.16.5.html)|2020-08-26|Destinations|SnowSql driver version 1.2.9 is now recommended for the Snowflake destination([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-4.16.5.html))|
 |4.16.4 [M]|2020-08-21|Designer|Fix for bug on saving bucket in S3 definition window when using IAM role authentication mode|
