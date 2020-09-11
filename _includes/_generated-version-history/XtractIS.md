@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.5.4 [L]|2020-09-11|General|New about window|
 |6.5.3 [L]|2020-09-07|ODP|Added 'subscription suffix' property|
 |6.5.2 [M]|2020-08-13|Setup|Fixed the installation for 64 bit SQL Server versions (Bug introduced in 6.5.0)|
 |6.5.1 [L]|2020-08-10|General|Windows' titles standardization|
