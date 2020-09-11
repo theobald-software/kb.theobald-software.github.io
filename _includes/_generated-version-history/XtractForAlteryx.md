@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.9.6 [L]|2020-09-11|Designer|New about window|
 |1.9.5 [L]|2020-09-07|ODP|Added 'update mode' run parameter|
 |1.9.4 [L]|2020-08-10|Designer|Windows' titles standardization|
 |1.9.3 [L]|2020-05-20|General|License forward compatibility improvement for supported components.|
