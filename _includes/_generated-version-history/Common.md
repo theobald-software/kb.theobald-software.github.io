@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.12.0 [L]|2020-09-11|WPF|Generic about window created|
 |2.11.0 [L]|2020-08-26|General|Added generic read buffer|
 |2.10.0 [L]|2020-08-13|General|Added helper for processes|
 |2.9.2 [L]|2020-08-13|General|IoHelper.DeleteFileRetry no longer retries on DirectoryNotFoundExceptions|
