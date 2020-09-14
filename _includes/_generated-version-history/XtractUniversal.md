@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.18.0 [M]|2020-09-14|Destinations|Added Google-Cloud-Storage destination.|
 |4.17.1 [L]|2020-09-11|Designer|New about window|
 |[4.17.0 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-4.17.0.html)|2020-09-10|Destinations|The Parquet destination now offers a compatibility mode for Apache Spark([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-4.17.0.html))|
 |4.16.7 [L]|2020-09-07|ODP|Added 'subscription suffix' and 'update mode' run parameters|
