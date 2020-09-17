@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.18.5 [L]|2020-09-17|Designer|Fix for custom sql window to accept new line and tab space creation|
 |[4.18.4 [M]](https://kb.theobald-software.com/release-notes/XtractUniversal-4.18.4.html)|2020-09-16|Destinations|Various fixes and improvements for Tableau([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-4.18.4.html))|
 |4.18.3 [L]|2020-09-16|Designer|Fix for access restriction grid control, which was requiring a double click to change its combo boxes check state|
 |[4.18.2 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-4.18.2.html)|2020-09-15|Destinations|Included Google Cloud Platform regions for Snowflake destination ([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-4.18.2.html))|
