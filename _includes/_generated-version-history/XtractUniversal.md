@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.18.7 [L]|2020-09-18|Designer|Qlik Sense: script generator now considers all possible parameters when creating the script.|
 |4.18.6 [M]|2020-09-18|Server|Fix for cleaning Tableau temporary files|
 |4.18.5 [L]|2020-09-17|Designer|Fix for custom sql window to accept new line and tab space creation|
 |[4.18.4 [M]](https://kb.theobald-software.com/release-notes/XtractUniversal-4.18.4.html)|2020-09-16|Destinations|Various fixes and improvements for Tableau([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-4.18.4.html))|
