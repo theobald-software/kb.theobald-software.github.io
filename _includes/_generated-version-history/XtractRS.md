@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|9.6.0 [M]|2020-09-23|General|VS2017/2019: Updated to MS Reporting Services Projects 2.6.7|
 |9.5.3 [L]|2020-09-14|General|New about window|
 |9.5.2 [L]|2020-03-17|BW Cube|Fix for auto slicing MDX syntax on older SAP BW systems.|
 |9.5.1 [M]|2020-02-27|General|Fix for Cube and Report|
