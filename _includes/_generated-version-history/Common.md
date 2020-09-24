@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.13.2 [L]|2020-09-24|WPF|Fix for a bug where the new progress dialog would pop up as the top most window instead of a modal dialog.|
 |2.13.1 [L]|2020-09-24|WPF|Added new ProgressDialog class for running tasks with a progress dialog.|
 |2.13.0 [M]|2020-09-14|Licensing|Added Google Cloud Storage to Licensing Enum|
 |2.12.0 [L]|2020-09-11|WPF|Generic about window created|
