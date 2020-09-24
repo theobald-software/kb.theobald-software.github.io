@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.13.1 [L]|2020-09-24|WPF|Added new ProgressDialog class for running tasks with a progress dialog.|
 |2.13.0 [M]|2020-09-14|Licensing|Added Google Cloud Storage to Licensing Enum|
 |2.12.0 [L]|2020-09-11|WPF|Generic about window created|
 |2.11.0 [L]|2020-08-26|General|Added generic read buffer|
