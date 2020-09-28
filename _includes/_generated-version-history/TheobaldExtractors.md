@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.15.4 [L]|2020-09-28|Table|Workaround for length problems when extracting integers with conversion routines and Z_XTRACT_IS_TABLE_COMPRESSION|
 |1.15.3 [L]|2020-09-24|Table|Workaround for length problems when extracting floating point with conversion routines and Z_XTRACT_IS_TABLE_COMPRESSION|
 |1.15.2 [L]|2020-09-23|Table|Workaround for length problems when extracting packed numbers with conversion routines and Z_XTRACT_IS_TABLE_COMPRESSION|
 |[1.15.1 [L]](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.15.1.html)|2020-09-07|ODP|Added subscription suffix ([Release note](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.15.1.html))|
