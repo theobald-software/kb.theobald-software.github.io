@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|[4.5.3 [L]](https://kb.theobald-software.com/release-notes/BOARDConnector-4.5.3.html)|2020-09-29|Designer|New status bar([Release note](https://kb.theobald-software.com/release-notes/BOARDConnector-4.5.3.html))|
 |4.5.2 [L]|2020-09-11|Designer|New about window|
 |4.5.1 [L]|2020-09-07|ODP|Added 'subscription suffix' and 'update mode' run parameters|
 |4.5.0 [L]|2020-08-07|Designer|General WPF migration for BoardConnectorDesigner and other small UI improvements|
