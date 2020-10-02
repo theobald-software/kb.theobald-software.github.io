@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.18.11 [L]|2020-10-02|Destinations|Google Cloud Storage: A progress dialog is now shown during the communication with Google auth servers while going through the OAuth procedure.|
 |4.18.10 [L]|2020-09-30|Destinations|Fix for Snowflake row delimiter constant in the default file format creation statement|
 |4.18.9 [M]|2020-09-28|Destinations|Qlik, PowerBI: Fixed a bug where extractions would fail when no data arrives.|
 |[4.18.8 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-4.18.8.html)|2020-09-22|Designer|New status bar and other UI improvements([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-4.18.8.html))|
