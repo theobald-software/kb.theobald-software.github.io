@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.15.5 [M]|2020-10-06|ODP|Improved logging on delta updates|
 |1.15.4 [L]|2020-09-28|Table|Workaround for length problems when extracting integers with conversion routines and Z_XTRACT_IS_TABLE_COMPRESSION|
 |1.15.3 [L]|2020-09-24|Table|Workaround for length problems when extracting floating point with conversion routines and Z_XTRACT_IS_TABLE_COMPRESSION|
 |1.15.2 [L]|2020-09-23|Table|Workaround for length problems when extracting packed numbers with conversion routines and Z_XTRACT_IS_TABLE_COMPRESSION|
