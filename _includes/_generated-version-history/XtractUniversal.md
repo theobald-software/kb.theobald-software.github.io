@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.19.2 [M]|2020-10-06|ODP|Added 'extractDataOnDeltaInit' run parameter|
 |4.19.1 [L]|2020-10-06|Destinations|Fixed a bug where Azure Storage destination didn't properly react to extractions failing.|
 |4.19.0 [L]|2020-10-05|General|Added xu-config (experimental)|
 |4.18.11 [L]|2020-10-02|Destinations|Google Cloud Storage: A progress dialog is now shown during the communication with Google auth servers while going through the OAuth procedure.|
