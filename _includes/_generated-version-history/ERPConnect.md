@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.14.1 [L]|2020-10-08|General|Added RFCTable.IsSupplied and RFCStructure.SetValueInternal()|
 |6.14.0 [L]|2020-08-19|General|Added support for Linux and macOS (ERPConnectStandard20.dll with NWRFC only)|
 |6.13.1 [L]|2020-08-11|General|Only update R3Connection.SID after connection has been established, if no SID was set|
 |[6.13.0 [L]](https://kb.theobald-software.com/release-notes/ERPConnect-6.13.0.html)|2020-07-23|General|Various small API changes (see release notes for details)([Release note](https://kb.theobald-software.com/release-notes/ERPConnect-6.13.0.html))|
