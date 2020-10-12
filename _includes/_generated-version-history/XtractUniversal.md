@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.19.3 [M]|2020-10-12|Table|New/removed/renamed columns are now properly updated in GUI during metadata refresh|
 |4.19.2 [M]|2020-10-06|ODP|Added 'extractDataOnDeltaInit' run parameter|
 |4.19.1 [L]|2020-10-06|Destinations|Fixed a bug where Azure Storage destination didn't properly react to extractions failing.|
 |4.19.0 [L]|2020-10-05|General|Added xu-config (experimental)|
