@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.5.5 [M]|2020-10-12|Table|New/removed/renamed columns are now properly updated in GUI during metadata refresh|
 |4.5.4 [M]|2020-10-06|ODP|Added 'extractDataOnDeltaInit' run parameter|
 |[4.5.3 [L]](https://kb.theobald-software.com/release-notes/BOARDConnector-4.5.3.html)|2020-09-29|Designer|New status bar([Release note](https://kb.theobald-software.com/release-notes/BOARDConnector-4.5.3.html))|
 |4.5.2 [L]|2020-09-11|Designer|New about window|
