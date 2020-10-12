@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.5.8 [M]|2020-10-12|Table|New/removed/renamed columns are now properly updated in GUI during metadata refresh|
 |6.5.7 [M]|2020-10-06|ODP|Added 'ExtractDataOnDeltaInit' property|
 |6.5.6 [L]|2020-09-24|General|Fix for Theobald.Extractors tab displaying wrong entries in Version History window|
 |6.5.5 [L]|2020-09-22|Setup|Removed --silent argument; Renamed --no-gui argument to --unattended|
