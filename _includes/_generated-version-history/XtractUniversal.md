@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.19.5 [M]|2020-10-14|Destinations|Azure Storage destination: fixed connectivity issues to Azure Storage. Fixed a bug where if connection issues occurred during the upload of the last package, the data would not get sent again during retry.|
 |4.19.4 [L]|2020-10-13|General|xu-config can create sources now|
 |4.19.3 [M]|2020-10-12|Table|New/removed/renamed columns are now properly updated in GUI during metadata refresh|
 |4.19.2 [M]|2020-10-06|ODP|Added 'extractDataOnDeltaInit' run parameter|
