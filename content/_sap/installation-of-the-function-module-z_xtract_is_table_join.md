@@ -25,7 +25,7 @@ First we need 5 structures (SE11-> DataType -> Create -> Structure). Please have
 
 ![Z_XTRACT_TABLE_JOIN_03_03](/img/contents/Z_XTRACT_TABLE_JOIN_03_03.png){:class="img-responsive"}
 
-### Step 2 – Create a new function module
+### Step 2 - Create a new function module
 
 Call transaction SE37 and create a new function module named Z_XTRACT_IS_TABLE_JOIN. 
 You can use an existing function group or create a new one. 
@@ -35,7 +35,7 @@ This is also valid for the development class (Package).
 
 ![Z_XTRACT_TABLE_JOIN_04](/img/contents/Z_XTRACT_TABLE_JOIN_04.png){:class="img-responsive"}
 
-### Step 3 – Parameters
+### Step 3 - Parameters
 
 Define the import parameters: 
 
