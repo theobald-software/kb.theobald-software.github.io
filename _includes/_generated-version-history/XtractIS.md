@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.5.11 [L]|2020-10-24|General|Connection Manager: Various GUI fixes for legacy storage mode|
 |6.5.10 [L]|2020-10-13|Setup|Components are now defined in a custom file (XtractExtensions.xml) instead of the default file (Extensions.xml)|
 |6.5.9 [L]|2020-10-12|License Manager|Various GUI fixes|
 |6.5.8 [M]|2020-10-12|Table|New/removed/renamed columns are now properly updated in GUI during metadata refresh|
