@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.14.2 [L]|2020-10-24|RFC Client|Fix for parsing escaped backslash in connection string|
 |6.14.1 [L]|2020-10-08|General|Added RFCTable.IsSupplied and RFCStructure.SetValueInternal()|
 |6.14.0 [L]|2020-08-19|General|Added support for Linux and macOS (ERPConnectStandard20.dll with NWRFC only)|
 |6.13.1 [L]|2020-08-11|General|Only update R3Connection.SID after connection has been established, if no SID was set|
