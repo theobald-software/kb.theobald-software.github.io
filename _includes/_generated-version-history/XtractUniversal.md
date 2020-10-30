@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.19.8 [L]|2020-10-30|Destinations|S3 destination now supports splitting for Parquet files.|
 |4.19.7 [L]|2020-10-24|Designer|Renamed Server->Logs to Server->Log (Run)|
 |4.19.6 [L]|2020-10-22|Designer|Fix for setting Tableau Server configurations in definition window |
 |4.19.5 [M]|2020-10-14|Destinations|Azure Storage destination: fixed connectivity issues to Azure Storage. Fixed a bug where if connection issues occurred during the upload of the last package, the data would not get sent again during retry.|
