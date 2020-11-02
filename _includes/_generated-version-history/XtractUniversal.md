@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.19.9 [M]|2020-11-02|Destinations|Fix for connecting to Tableau Online|
 |4.19.8 [L]|2020-10-30|Destinations|S3 destination now supports splitting for Parquet and CSV files.|
 |4.19.7 [L]|2020-10-24|Designer|Renamed Server->Logs to Server->Log (Run)|
 |4.19.6 [L]|2020-10-22|Designer|Fix for setting Tableau Server configurations in definition window |
