@@ -29,16 +29,16 @@ This limitation mainly affects very large or growing SAP tables.
 
 The following options are available to avoid the above mentioned error. The following alternatives are to be understood as either or approaches.
 
+- Instead of executing the extraction in a dialog mode, the extraction can be executed as a background job with the help of the custom function module Z_THEO_READ_TABLE in version 2.10. Import the function module into the SAP source system and activate the background function in the extraction settings. 
+The transport request for the custom function module Z_THEO_READ_TABLE can be found in the following installation path: `C:\Program Files\[Xtract Product]\ABAP\Z_THEO_READ_TABLE-transport.zip`.
+![Table-Extraction-Settings](/img/contents/Table-Extraction-Settings.png){:class="img-responsive"}
+
 -  Manual increase of the SAP parameter by the SAP Basis team. 
 
 {: .box-note }
 **Note:** This is a system-wide adaptation of the RFC runtime parameter `rdisp/max_wprun_time`.
 
-- Instead of executing the extraction in a dialog mode, the extraction can be executed as a background job with the help of the custom function module Z_THEO_READ_TABLE in version 2.10. 
-Import the function module into the SAP source system and activate the background function in the extraction settings. 
-The transport request for the custom function module Z_THEO_READ_TABLE can be found in the following installation path: `C:\Program Files\[Xtract Product]\ABAP\Z_THEO_READ_TABLE-transport.zip`
 
-![Table-Extraction-Settings](/img/contents/Table-Extraction-Settings.png){:class="img-responsive"}
 
 ***********
 #### Related Links
