@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.14.3 [L]|2020-11-06|General|Added RFCTable.NewRows()|
 |6.14.2 [L]|2020-10-24|RFC Client|Fix for parsing escaped backslash in connection string|
 |6.14.1 [L]|2020-10-08|General|Added RFCTable.IsSupplied and RFCStructure.SetValueInternal()|
 |6.14.0 [L]|2020-08-19|General|Added support for Linux and macOS (ERPConnectStandard20.dll with NWRFC only)|
