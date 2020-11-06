@@ -16,7 +16,7 @@ The extraction of an SAP table is aborted and terminated with the following erro
 
 #### Reason
 
-The system-wide SAP parameter `rdisp/max_wprun_time` for the maximum duration of RFC connections is exceeded. This termination is basically controlled by the SAP source system. 
+The system-wide SAP parameter `rdisp/max_wprun_time` for the maximum duration of RFC connections is exceeded. This termination is basically controlled by the SAP source system. <br>
 The following extract from the SAP documentation and example screenshot from transaction RZ11.
 
 ![excerp_sap_parameter_documentation](/img/contents/excerp_sap_parameter_documentation.png){:class="img-responsive"}
@@ -29,12 +29,12 @@ This limitation mainly affects very large or growing SAP tables.
 
 The following options are available to avoid the above mentioned error. The following alternatives are to be understood as either or approaches.
 
-1. Manual increase of the SAP parameter by the SAP Basis team. 
+-  Manual increase of the SAP parameter by the SAP Basis team. 
 
 {: .box-note }
 **Note:** This is a system-wide adaptation of the RFC runtime parameter `rdisp/max_wprun_time`.
 
-2. Instead of executing the extraction in a dialog mode, the extraction can be executed as a background job with the help of the custom function module Z_THEO_READ_TABLE in version 2.10. 
+- Instead of executing the extraction in a dialog mode, the extraction can be executed as a background job with the help of the custom function module Z_THEO_READ_TABLE in version 2.10. 
 Import the function module into the SAP source system and activate the background function in the extraction settings. 
 The transport request for the custom function module Z_THEO_READ_TABLE can be found in the following installation path: `C:\Program Files\[Xtract Product]\ABAP\Z_THEO_READ_TABLE-transport.zip`
 
