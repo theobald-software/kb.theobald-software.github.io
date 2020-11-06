@@ -23,7 +23,8 @@ The following extract from the SAP documentation and example screenshot from tra
 
 ![rdisp_max_wprun_time](/img/contents/rdisp_max_wprun_time.png){:class="img-responsive"}
 
-This limitation mainly affects very large or growing SAP tables.
+{: .box-tip }
+**Recommendation::** This limitation mainly affects very large or continuously growing SAP tables.
 
 ### Solution
 
