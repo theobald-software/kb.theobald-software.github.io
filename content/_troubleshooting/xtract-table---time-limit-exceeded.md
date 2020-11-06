@@ -8,13 +8,13 @@ weight: 9
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
 
-#### Error
+### Error
 
 The extraction of an SAP table is aborted and terminated with the following error:
 
 >RfcReceiveEx failed(RFC_SYS_EXCEPTION) RFC_ERROR_SYSTEM_FAILURE - Time limit exceeded
 
-#### Reason
+### Reason
 
 The system-wide SAP parameter `rdisp/max_wprun_time` for the maximum duration of RFC connections is exceeded. This termination is basically controlled by the SAP source system. <br>
 The following extract from the SAP documentation and example screenshot from transaction RZ11.
@@ -25,7 +25,7 @@ The following extract from the SAP documentation and example screenshot from tra
 
 This limitation mainly affects very large or growing SAP tables.
 
-#### Solution
+### Solution
 
 The following options are available to avoid the above mentioned error. The following alternatives are to be understood as either or approaches.
 
