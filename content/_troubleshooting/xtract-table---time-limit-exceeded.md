@@ -34,12 +34,15 @@ The following options are available to avoid the above mentioned error. The foll
 {: .box-note }
 **Note:** This is a system-wide adaptation of the RFC runtime parameter `rdisp/max_wprun_time`.
 
-2. Instead of executing the extraction in a dialog mode, the extraction can be executed as a background job with the help of the function module Z_THEO_READ_TABLE in version 2.10. 
-Import the function module into the SAP source system and activate the background function in the extraction settings.
+2. Instead of executing the extraction in a dialog mode, the extraction can be executed as a background job with the help of the custom function module Z_THEO_READ_TABLE in version 2.10. 
+Import the function module into the SAP source system and activate the background function in the extraction settings. 
+The transport request for the custom function module Z_THEO_READ_TABLE can be found in the following installation path: `C:\Program Files\[Xtract Product]\ABAP\Z_THEO_READ_TABLE-transport.zip`
+
+![Table-Extraction-Settings](/img/contents/Table-Extraction-Settings.png){:class="img-responsive"}
 
 ***********
 #### Related Links
 
+- [Customer portal](https://my.theobald-software.com)
 - [Installing the ABAP Framework Z_THEO_READ_TABLE](https://help.theobald-software.com/en/xtract-universal/sap-customizing/custom-function-module-for-table-extraction#installing-the-abap-framework-z_theo_read_table)
-- [Xtract Universal Extraction Settings](https://help.theobald-software.com/en/xtract-universal/table/extraction-settings#function-module)
-- [Xtract IS Extraction Settings](https://help.theobald-software.com/en/xtract-is/table/extraction-settings#function-module)
+- [How to import an SAP transport request](https://kb.theobald-software.com/sap/how-to-import-an-sap-transport-request-with-the-transport-management-system-stms)
