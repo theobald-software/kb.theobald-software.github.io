@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.13.7 [L]|2020-11-09|Licensing|Added sources limit to license|
 |2.13.6 [L]|2020-11-06|General|Updated NW RFC libraries to 750 patch level 7|
 |2.13.5 [L]|2020-11-03|WPF|Added new icon.|
 |2.13.4 [L]|2020-11-02|General|IoHelper.OpenFileRetryWrite() now has FileMode parameter instead of bool|
