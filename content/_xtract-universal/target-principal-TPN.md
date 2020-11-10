@@ -32,8 +32,7 @@ The Target Principal Name must correspond either to the UPN of the user under wh
 
 ### If the service runs under another account
 
-Deviating from the standard, the service can also be executed under a different account e.g. User Principal Name (UPN) or Service Principal Name (SPN). 
-The UPN or SPN of the Xtract Universal Windows service executes the write processes for the target environments in this context. <br> Accordingly, this user must have necessary write permissions for the database.
+Deviating from the standard, the service can also be executed under a different account e.g. User Principal Name (UPN) or Service Principal Name (SPN).<br> The UPN or SPN of the Xtract Universal Windows service executes the write processes for the target environments in this context. <br> Accordingly, this user must have necessary write permissions for the database.
 
 ![Search UPN](/img/contents/select_user_or_service_account.png){:class="img-responsive"}
 
