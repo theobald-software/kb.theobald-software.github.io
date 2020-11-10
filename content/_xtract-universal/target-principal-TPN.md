@@ -34,6 +34,8 @@ The Target Principal Name must correspond either to the UPN of the user under wh
 
 Deviating from the standard, the service can also be executed under a different account e.g. User Principal Name (UPN) or Service Principal Name (SPN).<br> The UPN or SPN of the Xtract Universal Windows service executes the write processes for the target environments in this context. <br> Accordingly, this user must have necessary write permissions for the database.
 
+#### User Principal Name - UPN
+
 ![Search UPN](/img/contents/select_user_or_service_account.png){:class="img-responsive"}
 
 ![XU Log On UPN](/img/contents/log_on_diesen_account.png){:class="img-responsive"}
@@ -52,9 +54,7 @@ An UPN is assigned in the following form:
 
 #### Service Principal Name - SPN
 
-An SPN is assigned in the following form:
-
-The service class and host name are at least required for authenticating a service instance to a logon account. In general, Domain Admin rights are required for processing Manage Service Accounts. 
+The service class and host name are at least required for authenticating a service instance to a logon account. In general, <br> Domain Admin rights are required for processing Manage Service Accounts. 
 
 ![AD User and computers - SPN](/img/contents/xu_ad_spn.png){:class="img-responsive"}
 
