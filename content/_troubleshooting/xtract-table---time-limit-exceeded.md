@@ -19,17 +19,21 @@ The extraction of an SAP table is aborted and terminated with the following erro
 The system-wide SAP parameter `rdisp/max_wprun_time` for the maximum duration of RFC connections is exceeded. This termination is basically controlled by the SAP source system. <br>
 The following extract from the SAP documentation and example screenshot from transaction RZ11.
 
+{: .box-note }
+**Note:** As of Release 7.40, a more precise setting is possible using SAP parameter `rdisp/scheduler/prio_normal/max_runtime`. Please check the following official [SAP Note 25528](https://launchpad.support.sap.com/#/notes/25528/EN).
+
 ![excerp_sap_parameter_documentation](/img/contents/excerp_sap_parameter_documentation.png){:class="img-responsive"}
 
 ![rdisp_max_wprun_time](/img/contents/rdisp_max_wprun_time.png){:class="img-responsive"}
 
-This limitation mainly affects very large or growing SAP tables.
+{: .box-note }
+**Note:** This limitation mainly affects very large or continuously growing SAP tables.
 
 ### Solution
 
 The following options are available to avoid the above mentioned error. The following alternatives are to be understood as either or approaches.
 
-- Instead of executing the extraction in a dialog mode, the extraction can be executed as a background job with the help of the custom function module Z_THEO_READ_TABLE in version 2.10. Import the function module into the SAP source system and activate the background function in the extraction settings. 
+- Instead of executing the extraction in a dialog mode, the extraction can be executed as a background job using the custom function module Z_THEO_READ_TABLE in version **2.10 or higher**. Import the function module into the SAP source system and activate the background function in the extraction settings. 
 The transport request for the custom function module Z_THEO_READ_TABLE can be found in the following installation path: `C:\Program Files\[Xtract Product]\ABAP\Z_THEO_READ_TABLE-transport.zip`.
 ![Table-Extraction-Settings](/img/contents/Table-Extraction-Settings.png){:class="img-responsive"}
 
