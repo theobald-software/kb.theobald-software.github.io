@@ -32,7 +32,7 @@ If you are using a different folder for your XU installation than the default fo
  ```
 You only need to run the following line with the name of the extraction as an argument in the windows command line:
 ```
-xubatch.bat http://localhost:8065/?name=MAKT
+xubatch.bat -n MAKT
 ```
 
 ![XU_batch](/img/contents/xu_batch_bat_screenshot.png){:class="img-responsive"}
@@ -41,3 +41,8 @@ You can see the following event in the Event Viewer:
 
 ![event_viewer](/img/contents/event_viewer_result.png){:class="img-responsive"}
 ![error_event_viewer](/img/contents/error_event_viewer.png){:class="img-responsive"}
+
+***********
+#### Related Links
+
+- [Schedule Extractions using xu.exe command line](https://help.theobald-software.com/en/xtract-universal/advanced-techniques/scheduling_extraction)
