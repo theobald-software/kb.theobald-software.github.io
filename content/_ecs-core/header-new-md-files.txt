@@ -1,0 +1,7 @@
+---
+layout: page
+title: [article name]
+description: [article descripion]
+weight: [article order]
+permalink: /:collection/:path
+---
