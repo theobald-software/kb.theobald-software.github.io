@@ -65,6 +65,9 @@ content:
 ##########  requires more than just adding a language here.
 collections_dir: content
 collections:
+  ecs-core:
+    output: true
+    name: 'ECS Core'
   required-support-information:
     output: true
     name: 'Required Support Information'
