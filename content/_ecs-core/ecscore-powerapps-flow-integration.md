@@ -8,7 +8,10 @@ weight: 1
 
 SAP integration with Microsoft Power Apps and Power Automate is enabled with cloud connector [ECS Core](https://theobald-software.com/en/ecs-core/).
 
-In the following video an SAP integration scenario with PowerApps and Power Automate is demonstrated: https://www.youtube.com/watch?v=Jq2HVK4CJy8&#038;t=3s
+In the following video an SAP integration scenario with PowerApps and Power Automate is demonstrated: 
+
+[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](https://www.youtube.com/watch?v=Jq2HVK4CJy8&#038;t=3s)
+
 
 In this business scenario material master data can be maintained and created from a PowerApp callable from a desktop computer or a mobile device. <br>
 All changings are posted to the SAP system via Power Automate. The connectivity with SAP is realized with cloud connector **ECS Core**.
