@@ -12,9 +12,7 @@ In the following video an SAP integration scenario with Power Apps and Power Aut
 
 [![SAP Integration scenario with Power Apps and Power Automate](http://img.youtube.com/vi/Jq2HVK4CJy8/0.jpg)](http://www.youtube.com/watch?v=Jq2HVK4CJy8 "SAP Integration with Power Apps and Power Automate")
 
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=Jq2HVK4CJy8
-" target="_blank"><img src="http://img.youtube.com/vi/Jq2HVK4CJy8/0.jpg" 
-alt="SAP Integration scenario with Power Apps and Power Automate" width="240" height="180" border="10" /></a>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Jq2HVK4CJy8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 In this business scenario material master data can be maintained and created from a PowerApp callable from a desktop computer or a mobile device. <br>
 All changings are posted to the SAP system via Power Automate. The connectivity with SAP is realized with cloud connector **ECS Core**.
