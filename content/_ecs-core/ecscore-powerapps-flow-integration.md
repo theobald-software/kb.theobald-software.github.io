@@ -10,7 +10,7 @@ SAP integration with Microsoft Power Apps and Power Automate is enabled with clo
 
 In the following video an SAP integration scenario with PowerApps and Power Automate is demonstrated: 
 
-[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](https://www.youtube.com/watch?v=Jq2HVK4CJy8&#038;t=3s)
+[![SAP PowerApps Integration Scenario](/img/contents/ecscore/ecscore_powerautomate_integration.png)](https://www.youtube.com/watch?v=Jq2HVK4CJy8&#038;t=3s)
 
 
 In this business scenario material master data can be maintained and created from a PowerApp callable from a desktop computer or a mobile device. <br>
@@ -23,12 +23,12 @@ Platforms such as SharePoint or Office365 are much better suited for handling 
 Furthermore users should be only involved where it matters here, the rest is all automated, that's the basic idea. If implemented properly, development and training costs, 
 as well as maintenance and support tasks are much lower there than in SAP. In the end you save time, nerves and money.
 
-**Why integrate with PowerApps?** <br>
+**Why integrate with Power Automate and Power Apps?** <br>
 SAP is not the right platform for business process modeling (BPM). Even simple, predefined workflows such as leave or travel requests can only be adapted through complicated coding. 
-That's why BPM and workflow solutions such as Power Automate, Nintex or K2 - to name just a few- are an interesting alternative here. 
-These tools were specially invented for this topic and are very powerful and flexible when it comes to building a process. 
-A huge amount of connectors are available in Microsoft Automate for example which allows countless use cases such as the example shown in the video and many more. 
-All this is possible with a low or no code approach and, once created, the apps can easily proliferated to as many users as required.
+That's why BPM and workflow solutions such as Power Automate, Nintex or K2 are an interesting alternative here. 
+These tools were specially invented for this topic and are very powerful and flexible when it comes to process modeling and automation. 
+A huge amount of connectors are available in Microsoft Power Automate for example which allows a wide range of possible use cases. 
+All this is made possible through a no-code approach. Once created, the workflows and apps can easily proliferated to as many users as required.
 
 **Advantages of SAP integration with Theobald Software** <br>
 In general our SAP connectors have a straight-forward integration, the tools are easy to install and to configure. 
