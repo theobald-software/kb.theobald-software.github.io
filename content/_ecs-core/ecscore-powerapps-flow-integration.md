@@ -10,7 +10,7 @@ SAP integration with Microsoft Power Apps and Power Automate is enabled with clo
 
 In the following video an SAP integration scenario with PowerApps and Power Automate is demonstrated: 
 
-[![SAP PowerApps Integration Scenario](/img/contents/ecscore/ecscore_powerautomate_integration.png)](https://www.youtube.com/watch?v=Jq2HVK4CJy8&#038;t=3s)
+[![SAP PowerApps Integration Scenario](http://img.youtube.com/vi/Jq2HVK4CJy8&t/0.jpg)](https://www.youtube.com/watch?v=Jq2HVK4CJy8&#038;t=3s)
 
 
 In this business scenario material master data can be maintained and created from a PowerApp callable from a desktop computer or a mobile device. <br>
