@@ -12,7 +12,7 @@ In the following video an SAP integration scenario with Power Apps and Power Aut
 
 [![SAP Integration scenario with Power Apps and Power Automate](http://img.youtube.com/vi/Jq2HVK4CJy8/0.jpg)](http://www.youtube.com/watch?v=Jq2HVK4CJy8 "SAP Integration with Power Apps and Power Automate")
 
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=YOUTUBE_VIDEO_ID_HERE
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=Jq2HVK4CJy8
 " target="_blank"><img src="http://img.youtube.com/vi/Jq2HVK4CJy8/0.jpg" 
 alt="SAP Integration scenario with Power Apps and Power Automate" width="240" height="180" border="10" /></a>
 
