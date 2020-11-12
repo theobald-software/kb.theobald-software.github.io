@@ -10,8 +10,6 @@ SAP integration with Microsoft Power Apps and Power Automate is enabled with clo
 
 In the following video an SAP integration scenario with Power Apps and Power Automate is demonstrated: 
 
-[![SAP Integration scenario with Power Apps and Power Automate](http://img.youtube.com/vi/Jq2HVK4CJy8/0.jpg)](http://www.youtube.com/watch?v=Jq2HVK4CJy8 "SAP Integration with Power Apps and Power Automate")
-
   <iframe width="560" height="315" 
 src="https://www.youtube.com/embed/Jq2HVK4CJy8" 
 frameborder="0" 
