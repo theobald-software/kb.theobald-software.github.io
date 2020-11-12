@@ -10,7 +10,7 @@ SAP integration with Microsoft Power Apps and Power Automate is enabled with clo
 
 In the following video an SAP integration scenario with PowerApps and Power Automate is demonstrated: 
 
-[![SAP integration with Microsoft PowerApps & Flow](http://img.youtube.com/vi/Jq2HVK4CJy8/0.jpg)](http://www.youtube.com/watch?v=Jq2HVK4CJy8 "")
+[![SAP integration with Microsoft PowerApps & Flow](http://img.youtube.com/vi/Jq2HVK4CJy8/0.jpg)](http://www.youtube.com/watch?v=Jq2HVK4CJy8)
 
 In this business scenario material master data can be maintained and created from a PowerApp callable from a desktop computer or a mobile device. <br>
 All changings are posted to the SAP system via Power Automate. The connectivity with SAP is realized with cloud connector **ECS Core**.
