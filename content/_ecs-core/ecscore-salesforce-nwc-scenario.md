@@ -6,7 +6,9 @@ permalink: /:collection/:path
 weight: 3
 ---
 
-In this article, a scenario is described, where a Salesforce account is synchronized in near-real time to SAP, where an SAP customer is created and his number is written back to Salesforce using the following tools:
+In this article, a scenario is described, where a Salesforce account is synchronized in near-real time to SAP, an SAP customer is created and the customer mumber is written back to Salesforce. 
+
+The following tools are used in this scenario:
 
 - SAP ECC system on Premise
 - ECS Core for SAP Integration in cloud scenarios
