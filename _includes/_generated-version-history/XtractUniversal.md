@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.21.1 [L]|2020-11-13|Designer|Fix for displaying extraction's primary key settings correctly |
 |4.21.0 [L]|2020-11-11|Setup|New Setup|
 |[4.20.0 [M]](https://kb.theobald-software.com/release-notes/XtractUniversal-4.20.0.html)|2020-11-06|Server|Web server access can now be restricted to custom users([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-4.20.0.html))|
 |4.19.10 [L]|2020-11-05|Designer|Fixed an issue where certain UI elements in some windows looked blurry.|
