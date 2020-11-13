@@ -30,10 +30,10 @@ WebService Designer. There the recorded transaction can be configured and mapped
 
 See how easy this is:
 
-  <iframe width="560" height="315" 
-src="https://youtu.be/A5sELnaxnD8" 
-frameborder="0" 
-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+ <iframe width="560" height="315"
+src="https://www.youtube.com/embed/A5sELnaxnD8"
+frameborder="0" allow="accelerometer; autoplay;
+clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 allowfullscreen></iframe>
 
 **Practical example**
@@ -45,8 +45,8 @@ Such petty cash postings and journal entries in general are handled in SAP throu
 
 In our example we record these transactions and embed the resulting web service in Microsoft Power Automate as a custom connector. The workflow is triggered through a SharePoint Online list, where the journal entries are created as list items and then routed for approval. Have a look at the following video where the scenario is demonstrated and explained:
 
-  <iframe width="560" height="315" 
-src="https://youtu.be/vXjYmYgiazI" 
-frameborder="0" 
-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+ <iframe width="560" height="315"
+src="https://www.youtube.com/embed/vXjYmYgiazI"
+frameborder="0" allow="accelerometer; autoplay;
+clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 allowfullscreen></iframe>
