@@ -40,20 +40,23 @@ I performed **steps 2 and 3** following above mentioned Microsoft documentation.
 
 Now, continuing where we left off with step 1. we need to install Xtract IS for Azure on our self-hosted IR. 
 
-Remember when I said, you just need a plain vanilla Windows server, w/o SSIS, SQL Server or SSDT pre-installed? Well, this still holds true..although, if you want, you *can* have these tools installed.
+Remember when I said, you just need a plain vanilla Windows server, w/o SSIS, SQL Server or SSDT pre-installed? Well, this still holds true..although, if you want, you *can* have these tools installed. But, let's pretend they are not.
 
-But, let's pretend they are not.
 The Xtract IS for Azure setup routine expects certain SSIS/DTS folders to be in place on the server, because that is where the Xtract DLLs are placed during setup. These SSIS/DTS folders usually come with an installaion of SSIS/SSDT.
 
-*Question*: But what happens, when no SSIS/DTS folders are available on that server? </br>
-*Answer*: Well, we need to pretend, they are.</br>
-*Question*: And how do we do that?</br>
+*Question*: But what happens, when no SSIS/DTS folders are available on that server?
+
+*Answer*: Well, we need to pretend, they are. 
+
+*Question*: And how do we do that?
+
+
 *Answer*: Enter *Regedit* or the *Registry Editor*. This tool allows entering Registry Keys which make Xtract IS for Azure believe, SSIS/DTS is installed on the server. This is what the Microsoft documentation describes [here](https://docs.microsoft.com/en-us/azure/data-factory/self-hosted-integration-runtime-proxy-ssis#enable-custom3rd-party-components)
 
 >Create the following DTSPath registry keys on self-hosted IR if they don’t exist already: Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\140\SSIS\Setup\DTSPath and Computer\HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Microsoft SQL Server\140\SSIS\Setup\DTSPath.
 
-I shall add, that the DTSPath key needs to be assigned these values:
-*C:\Program Files\Microsoft SQL Server\140\DTS\* and *C:\Program Files (x86)\Microsoft SQL Server\140\DTS\*
+I shall add, that the DTSPath key needs to have assigned these values:
+C:\Program Files\Microsoft SQL Server\140\DTS\ and C:\Program Files (x86)\Microsoft SQL Server\140\DTS\ 
 
 
 ![Regedit](/img/contents/XISforAzure_SHIR_regedit.png){:class="img-responsive"}
