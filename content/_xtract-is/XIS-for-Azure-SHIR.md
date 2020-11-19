@@ -12,7 +12,7 @@ When running SSIS packages on an Azure SSIS-Integration Runtime (IR), it is very
 
 To overcome the challenge of connecting to on-premises resources from a cloud environment, SSIS-IR offers two different solutions.
 
-1. Configure a VPN tunnel (VNet) from Azure to your on-premises resource [Join an Azure-SSIS integration runtime to a virtual networt](https://docs.microsoft.com/en-us/azure/data-factory/join-azure-ssis-integration-runtime-virtual-network)
+1. Configure a VPN tunnel (VNet) from Azure to your on-premises resource [Join an Azure-SSIS integration runtime to a virtual network](https://docs.microsoft.com/en-us/azure/data-factory/join-azure-ssis-integration-runtime-virtual-network)
 2. Set up a self-hosted IR to act as a proxy for your Azure SSIS-IR. [Configure a self-hosted IR as a proxy for an Azure-SSIS IR in Azure Data Factory](https://docs.microsoft.com/en-us/azure/data-factory/self-hosted-integration-runtime-proxy-ssis)
 
 Xtract IS for Azure supports both options. Actually, it supports those options pretty much out of the box. So, that's good news for you.
@@ -40,8 +40,15 @@ I performed **steps 2 and 3** following above mentioned Microsoft documentation.
 
 Now, continuing where we left off with step 1. we need to install Xtract IS for Azure on our self-hosted IR. 
 
-Now, remember when I said, you just need a plain vanilla Windows server, w/o SSIS, SQL Server or SSDT pre-installed? Well, this still holds true...actually, regarding the setup of the self-hosted IR, it doesn't hurt to have these tools installed. But, let's pretend they are not.
-One of the peculiarities of the Xtract IS for Azure setup is, that the installer looks for SSIS/DTS artefacts on the server, it's being installed on. Just to place the Xtract.dlls in the respective DTS folders. But what happens, when no SSIS/DTS arefacts are installed on that server? Well, we need to pretend, they are. And how do we do that? Enter *Regedit* or the *Registry Editor*. This tool allows entering Registry Keys which make Xtract IS for Azure believe, SSIS/DTS is installed on the server. This is what the Microsoft documentation describes [here](https://docs.microsoft.com/en-us/azure/data-factory/self-hosted-integration-runtime-proxy-ssis#enable-custom3rd-party-components)
+Remember when I said, you just need a plain vanilla Windows server, w/o SSIS, SQL Server or SSDT pre-installed? Well, this still holds true..although, if you want, you *can* have these tools installed.
+
+But, let's pretend they are not.
+The Xtract IS for Azure setup routine expects certain SSIS/DTS folders to be in place on the server, because that is where the Xtract DLLs are placed during setup. These SSIS/DTS folders usually come with an installaion of SSIS/SSDT.
+
+*Question*: But what happens, when no SSIS/DTS folders are available on that server? </br>
+*Answer*: Well, we need to pretend, they are.</br>
+*Question*: And how do we do that?</br>
+*Answer*: Enter *Regedit* or the *Registry Editor*. This tool allows entering Registry Keys which make Xtract IS for Azure believe, SSIS/DTS is installed on the server. This is what the Microsoft documentation describes [here](https://docs.microsoft.com/en-us/azure/data-factory/self-hosted-integration-runtime-proxy-ssis#enable-custom3rd-party-components)
 
 >Create the following DTSPath registry keys on self-hosted IR if they don’t exist already: Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\140\SSIS\Setup\DTSPath and Computer\HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Microsoft SQL Server\140\SSIS\Setup\DTSPath.
 
@@ -55,7 +62,7 @@ I shall add, that the DTSPath key needs to be assigned these values:
 After you have entered these registry keys, you can install Xtract IS for Azure. And that's all you need to do. Xtract IS for Azure takes care of the rest.
 
 ## Deploy and run SSIS packages
-If you (correctly) performed all the steps mentioned above, you can then deploy your SSIS packages that point to an on-premises SAP system and connection to that system will be established from Azure SSIS-IR. Make sure your Azure SSIS-IR *and* Self-Hosted IR are both running.
+If you (correctly) performed all the steps mentioned above, you can then deploy your SSIS packages to the Azure SSIS-IR. Even if your XTRACT connection manager points to an on-premises SAP system connection to that system will be established from the SSIS-IR. Make sure your Azure SSIS-IR *and* Self-Hosted IR are both running.
 
 ![Azure_IRs](/img/contents/XISforAzure_SHIR_2.png){:class="img-responsive"}
 
