@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.1.4 [L]|2020-11-23|OHS|Re-enabled NWRFC for OHS|
 |5.1.3 [M]|2020-11-09|DeltaQ|Incoming Info IDocs reset timeout now|
 |5.1.2 [L]|2020-03-23|DeltaQ|Fix for "timeout while trying to lock server list"|
 |5.1.1 [L]|2020-03-17|BW Cube|Fix for auto slicing MDX syntax on older SAP BW systems.|
