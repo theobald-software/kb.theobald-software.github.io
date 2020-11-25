@@ -36,7 +36,6 @@ If you want to download it from the ECS Core management dashboard, navigate to t
 With this approach the Azure Relay endpoint is automatically used in the definition, if you have integrated an Azure relay inctance. 
 
 ![ECSCore_K2_04](/img/contents/ecscore/ecscore_k2_04.png){:class="img-responsive"}
-
 3. Create a Service Instance in K2. 
 
 The mandatory fields are marked red.
@@ -57,8 +56,9 @@ For the *Default HTTPS Request Headers* box the following template can be used.
 [Your API Key]"}]}
 {% endhighlight %}
 
+For the *Descriptor location* you need to upload the file in some kind of data storage, in this example Amazon S3 is used therfore.  
+
 ![ECSCore_K2_08](/img/contents/ecscore/ecscore_k2_08.png){:class="img-responsive"} 
- 
  
 If *Generate SmartObjects for this Service instance* is checked, a SmartObject with the same name of the service instance is created directly with all objects. 
 
