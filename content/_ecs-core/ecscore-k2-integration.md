@@ -6,29 +6,29 @@ permalink: /:collection/:path
 weight: 1
 ---
 
-SAP integration with the K2 cloud platform and Power Automate is enabled with cloud connector [ECS Core](https://theobald-software.com/en/ecs-core/).
+SAP integration with the **K2 cloud platform ("K2 Nexus")** is enabled with cloud connector [ECS Core](https://theobald-software.com/en/ecs-core/).
 
-With ECS Core it is possible to create REST services for SAP read write access and import these services as a so-called K2 SmartObjekt.
-SmartObjects are business entities for data integration across different applications. Building a SmartObject is completely no-code and, once created, a SmartObject can be used for different purposes.
+With ECS Core it is possible to create REST services for SAP read write access and import these services as a so-called K2 **SmartObject**.
+SmartObjects are business entities for data integration across different applications. Building a SmartObject is completely no-code and, once created, a SmartObject can be used for different purposes, e.g. for data integration in a workflow.
 
 Here's a step-by-step guide how SAP integration with ECS Core and K2 SmartObjects works.
 
 1. Create and deploy a web service for SAP read or write access in the ECS Core WebService Designer. 
 
 ![ECSCore_K2_01](/img/contents/ecscore/ecscore_k2_01.png){:class="img-responsive"}
-
-
 2. Export the web service into an OpenAPI definition.
 
 This export can be done through the WebService designer or the ECS Core administration dashboard. 
 
 If it's done via the WebService Designer checkbox *Use definition section (references)* must be activated in the *Options* section for OpenAPI. 
-Also be sure to enter the Azure Relay endpoint in the Server Settings under "Connections" if you have integrated an Azure Relay instance.If you do not do this, 
-the default local address "hpttp://localhost..." will be taken and used in the definition.
+Also be sure to enter the Azure Relay endpoint in the Server Settings under *Connections* if you have integrated an Azure Relay instance.If you do not do this, 
+the default local address "http://localhost..." will be taken and used in the definition.
 
 ![ECSCore_K2_02](/img/contents/ecscore/ecscore_k2_02.png){:class="img-responsive"}
 
+
 ![ECSCore_K2_03](/img/contents/ecscore/ecscore_k2_03.png){:class="img-responsive"}
+
 
 ![ECSCore_K2_03_1](/img/contents/ecscore/ecscore_k2_03_1.png){:class="img-responsive"}
 
@@ -42,10 +42,13 @@ With this approach the Azure Relay endpoint is automatically used in the definit
 The mandatory fields are marked red.
 
 ![ECSCore_K2_05](/img/contents/ecscore/ecscore_k2_05.png){:class="img-responsive"}
+
  
 ![ECSCore_K2_06](/img/contents/ecscore/ecscore_k2_06.png){:class="img-responsive"}
+
  
 ![ECSCore_K2_07](/img/contents/ecscore/ecscore_k2_07.png){:class="img-responsive"} 
+
  
 For the *Default HTTPS Request Headers* box the following template can be used.  
 
@@ -93,5 +96,5 @@ Return values are displayed under RESULTS.
 The SmartObject can then be used (e.g. in a K2 workflow).
 
 {: .box-note }
-**Note:** This was an example for a simple object without structured parameters. For SmartObjects with complex paramaters additional configuration steps are necessary.  
+**Note:** This was an example for a simple object without structured parameters. For SmartObjects with complex parameters, additional configuration steps are necessary.  
 
