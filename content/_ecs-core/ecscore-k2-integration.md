@@ -1,7 +1,7 @@
 ---
 layout: page
-title: SAP integration with K2 cloud
-description: SAP integration with K2 cloud
+title: SAP integration with the K2 Cloud
+description: SAP integration with the K2 Cloud
 permalink: /:collection/:path
 weight: 1
 ---
@@ -14,27 +14,17 @@ SmartObjects are business entities for data integration across different applica
 Here's a step-by-step guide how SAP integration with ECS Core and K2 SmartObjects works.
 
 1. Create and deploy a web service for SAP read or write access in the ECS Core WebService Designer. 
-
 ![ECSCore_K2_01](/img/contents/ecscore/ecscore_k2_01.png){:class="img-responsive"}
 2. Export the web service into an OpenAPI definition.
-
-This export can be done through the WebService designer or the ECS Core administration dashboard. 
-
+This export can be done through the WebService designer or the ECS Core administration dashboard. <br>
 If it's done via the WebService Designer checkbox *Use definition section (references)* must be activated in the *Options* section for OpenAPI. 
 Also be sure to enter the Azure Relay endpoint in the Server Settings under *Connections* if you have integrated an Azure Relay instance.If you do not do this, 
 the default local address "http://localhost..." will be taken and used in the definition.
-
 ![ECSCore_K2_02](/img/contents/ecscore/ecscore_k2_02.png){:class="img-responsive"}
-
-
 ![ECSCore_K2_03](/img/contents/ecscore/ecscore_k2_03.png){:class="img-responsive"}
-
-
 ![ECSCore_K2_03_1](/img/contents/ecscore/ecscore_k2_03_1.png){:class="img-responsive"}
-
 If you want to download it from the ECS Core management dashboard, navigate to the *Web Services* section, select the required web service and click on *Download OpenAPI Definition (with references)*
 With this approach the Azure Relay endpoint is automatically used in the definition, if you have integrated an Azure relay inctance. 
-
 ![ECSCore_K2_04](/img/contents/ecscore/ecscore_k2_04.png){:class="img-responsive"}
 3. Create a Service Instance in K2. 
 
