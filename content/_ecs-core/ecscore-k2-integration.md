@@ -41,10 +41,10 @@ The mandatory fields are marked red.
  
 For the *Default HTTPS Request Headers* box the following template can be used.  
 
-{% highlight javascript %}
+``` c#
 {"$type":"SourceCode.SmartObjects.Services.Endpoints.Common.HttpHeader[], SourceCode.SmartObjects.Services.Endpoints.Common, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null","$values":[{"$type":"SourceCode.SmartObjects.Services.Endpoints.Common.HttpHeader, SourceCode.SmartObjects.Services.Endpoints.Common, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null","Name":"Authorization","Value":"Apikey 
 [Your API Key]"}]}
-{% endhighlight %}
+```
 
 For the *Descriptor location* you need to upload the file in some kind of data storage, in this example Amazon S3 is used therfore.  
 
@@ -87,4 +87,3 @@ The SmartObject can then be used (e.g. in a K2 workflow).
 
 {: .box-note }
 **Note:** This was an example for a simple object without structured parameters. For SmartObjects with complex parameters, additional configuration steps are necessary.  
-
