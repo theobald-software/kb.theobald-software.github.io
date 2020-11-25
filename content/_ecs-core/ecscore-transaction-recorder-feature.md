@@ -3,7 +3,7 @@ layout: page
 title: Transaction Record & Execute feature 
 description: Transaction Record & Execute feature 
 permalink: /:collection/:path
-weight: 2
+weight: 3
 ---
 
 A new feature for transaction recording has recently been released for our cloud connector ECS Core.

@@ -3,7 +3,7 @@ layout: page
 title: Sync Salesforce to SAP with Nintex Workflow Cloud and ECS Core
 description: Sync Salesforce to SAP with Nintex Workflow Cloud and ECS Core
 permalink: /:collection/:path
-weight: 3
+weight: 4
 ---
 
 In this article, a scenario is described, where a Salesforce account is synchronized in near-real time to SAP, an SAP customer is created and the customer mumber is written back to Salesforce. 
