@@ -42,11 +42,11 @@ For the *Default HTTPS Request Headers* box the following template can be used.
 ```
 Under *Descriptor Location* enter the path where the OpenAPI file is stored. In this example Amazon S3 is used as a file storage.  
 ![ECSCore_K2_08](/img/contents/ecscore/ecscore_k2_08.png){:class="img-responsive"}
-If *Generate SmartObjects for this Service instance* is checked, a SmartObject with the same name of the service instance is created directly with all objects. 
+If *Generate SmartObjects for this Service instance* is checked, a SmartObject with the same name of the service instance is created directly with all objects. <br> 
 **4. Create a SmartObject** <br>
 For a more precise control of the process the SmartObject should be created separately. 
 The easiest way to directly test the functionality of a SmartObject is also via the Management Dashboard.
-To do this, select the created service instance and click on "Generate SmartObjects".
+To do this, select the created service instance and click on "Generate SmartObjects". <br>
 Only the "Object Types" must be selected in the following mask and not the "System Types".
 ![ECSCore_K2_10](/img/contents/ecscore/ecscore_k2_10.png){:class="img-responsive"} 
  A new SmartObject for SAP integration can also be created in the K2 Designer. 
