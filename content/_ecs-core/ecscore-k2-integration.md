@@ -6,10 +6,14 @@ permalink: /:collection/:path
 weight: 1
 ---
 
+### SAP K2 integration
+
 SAP integration with the **K2 cloud platform ("K2 Nexus")** is enabled with cloud connector [ECS Core](https://theobald-software.com/en/ecs-core/).
 
 With ECS Core it is possible to create REST services for SAP read write access and import these services as a so-called K2 **SmartObject**.
 SmartObjects are business entities for data integration across different applications. Building a SmartObject is completely no-code and, once created, a SmartObject can be used for different purposes, e.g. for data integration in a workflow.
+
+### Step-by-step guide
 
 Here's a step-by-step guide how SAP integration with ECS Core and K2 SmartObjects works.
 
@@ -27,18 +31,10 @@ If you want to download it from the ECS Core management dashboard, navigate to t
 With this approach the Azure Relay endpoint is automatically used in the definition, if you have integrated an Azure relay inctance. 
 ![ECSCore_K2_04](/img/contents/ecscore/ecscore_k2_04.png){:class="img-responsive"}
 3. Create a Service Instance in K2. 
-
 The mandatory fields are marked red.
-
 ![ECSCore_K2_05](/img/contents/ecscore/ecscore_k2_05.png){:class="img-responsive"}
-
- 
 ![ECSCore_K2_06](/img/contents/ecscore/ecscore_k2_06.png){:class="img-responsive"}
-
- 
 ![ECSCore_K2_07](/img/contents/ecscore/ecscore_k2_07.png){:class="img-responsive"} 
-
- 
 For the *Default HTTPS Request Headers* box the following template can be used.  
 
 ``` c#
@@ -51,7 +47,6 @@ For the *Descriptor location* you need to upload the file in some kind of data s
 ![ECSCore_K2_08](/img/contents/ecscore/ecscore_k2_08.png){:class="img-responsive"} 
  
 If *Generate SmartObjects for this Service instance* is checked, a SmartObject with the same name of the service instance is created directly with all objects. 
-
 4. Create a SmartObject
 
 For a more precise control of the process the SmartObject should be created separately. 
@@ -66,8 +61,6 @@ A new SmartObject for SAP integration can also be created in the K2 Designer.
 ![ECSCore_K2_11](/img/contents/ecscore/ecscore_k2_11.png){:class="img-responsive"} 
  
 ![ECSCore_K2_12](/img/contents/ecscore/ecscore_k2_12.png){:class="img-responsive"} 
-
-
 5. Test the SmartObject functionality
  
 A newly created simple SmartObject without complex objects and (de-)serialisation steps can be executed and tested directly in the management dashboard.
@@ -87,3 +80,8 @@ The SmartObject can then be used (e.g. in a K2 workflow).
 
 {: .box-note }
 **Note:** This was an example for a simple object without structured parameters. For SmartObjects with complex parameters, additional configuration steps are necessary.  
+
+***********
+#### Related Links
+
+[ECS Core Online Help](https://help.theobald-software.com/en/ecs-core/)
