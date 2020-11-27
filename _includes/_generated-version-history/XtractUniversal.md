@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.21.4 [L]|2020-11-27|Designer|Included vertical scroll bar in source definition window|
 |[4.21.3 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-4.21.3.html)|2020-11-20|Designer|UI fixes and improvements([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-4.21.3.html))|
 |4.21.2 [L]|2020-11-13|Destinations|Added new AWS regions to S3 destination.|
 |4.21.1 [L]|2020-11-13|Designer|Fix for displaying extraction's primary key settings correctly |
