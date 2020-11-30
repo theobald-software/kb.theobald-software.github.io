@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.13.9 [L]|2020-11-30|WPF|Added "refresh" icon.|
 |2.13.8 [L]|2020-11-26|General|Fix for creating lines from chars in specific condition where some lines could have their content overwritten by others'|
 |2.13.7 [L]|2020-11-09|Licensing|Added sources limit to license|
 |2.13.6 [L]|2020-11-06|General|Updated NW RFC libraries to 750 patch level 7|
