@@ -10,7 +10,7 @@ weight: 1
 
 SAP integration with the **K2 Cloud ("K2 Nexus")** is enabled with cloud connector [ECS Core](https://theobald-software.com/en/ecs-core/).
 
-With ECS Core it is possible to create REST services for SAP read write access and import these services as a so-called K2 **SmartObject**.
+With ECS Core it is possible to create REST services for SAP read write access and import these services as a so-called K2 **SmartObject**. <br>
 SmartObjects are business entities for data integration across different applications. Building a SmartObject is completely no-code and, once created, a SmartObject can be used for different purposes, e.g. for data integration in a workflow.
 
 ### Step-by-step guide
