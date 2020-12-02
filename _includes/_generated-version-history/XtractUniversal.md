@@ -1,5 +1,7 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.21.8 [L]|2020-12-02|Destinations|Performance improvements in HANA destination.|
+|4.21.7 [L]|2020-12-02|Destinations|Added support for SAP Data Warehouse Cloud.|
 |[4.21.6 [M]](https://kb.theobald-software.com/release-notes/XtractUniversal-4.21.6.html)|2020-12-01|Destinations|Snowflake destination driver change: SnowSql was replaced with ODBC([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-4.21.6.html))|
 |4.21.5 [M]|2020-11-30|Destinations|Fix for Alteryx Plugin to support authentication with custom and windows AD users|
 |4.21.4 [L]|2020-11-27|Designer|Included vertical scroll bar in source definition window|
