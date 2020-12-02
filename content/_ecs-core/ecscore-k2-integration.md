@@ -63,7 +63,7 @@ Under *Descriptor Location* enter the path where the OpenAPI file is stored. In 
 If *Generate SmartObjects for this Service instance* is checked, a SmartObject with the same name of the service instance is created directly. <br>
 However by using this checkbox all default object types besided the objects coming from the OpenAPI definition are created for that SmartObject as well. This is not necessary.   
 
-** Step 4: Create a SmartObject** <br>
+**Step 4: Create a SmartObject** <br>
 
 For a more precise control of the SmartObject creation, it should be created separately. 
 The easiest way to directly test the functionality of a SmartObject is also via the Management Dashboard.
