@@ -8,7 +8,7 @@ weight: 1
 
 ### SAP K2 integration
 
-SAP integration with the **K2 Cloud ("K2 Nexus")** is enabled with cloud connector [ECS Core](https://theobald-software.com/en/ecs-core/).
+SAP integration with the **K2 Cloud** is enabled with cloud connector [ECS Core](https://theobald-software.com/en/ecs-core/).
 
 With ECS Core it is possible to create REST services for SAP read write access and import these services as a so-called K2 **SmartObject**. <br>
 SmartObjects are business entities for data integration across different applications. Building a SmartObject is completely no-code and, once created, a SmartObject can be used for different purposes, e.g. for data integration in a workflow.
@@ -18,6 +18,8 @@ SmartObjects are business entities for data integration across different applica
 Here's a step-by-step guide how SAP integration with ECS Core and K2 SmartObjects works.
 
 **Step 1: Create and deploy a web service for SAP read or write access in the ECS Core WebService Designer.** <br>
+
+In this example web service to create purchase requisitions with one material item in SAP is used. 
 
 ![ECSCore_K2_01](/img/contents/ecscore/ecscore_k2_01.png){:class="img-responsive"}
 
@@ -51,17 +53,18 @@ The mandatory fields are marked red.
 
 For the *Default HTTPS Request Headers* box the following template can be used.  
 
-``` c#
+``` json
 {"$type":"SourceCode.SmartObjects.Services.Endpoints.Common.HttpHeader[], SourceCode.SmartObjects.Services.Endpoints.Common, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null","$values":[{"$type":"SourceCode.SmartObjects.Services.Endpoints.Common.HttpHeader, SourceCode.SmartObjects.Services.Endpoints.Common, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null","Name":"Authorization","Value":"Apikey 
 [Your API Key]"}]}
 ```
 
-Under *Descriptor Location* enter the path where the OpenAPI file is stored. In this example Amazon S3 is used as a file storage.  
-
-![ECSCore_K2_08](/img/contents/ecscore/ecscore_k2_08.png){:class="img-responsive"}
+Under *Descriptor Location* enter the path where the OpenAPI file is stored. In this example Amazon S3 is used as a file storage. <br>
+Click *OK* to create the SmartObject. <br>
 
 If *Generate SmartObjects for this Service instance* is checked, a SmartObject with the same name of the service instance is created directly. <br>
 However by using this checkbox all default object types besided the objects coming from the OpenAPI definition are created for that SmartObject as well. This is not necessary.   
+
+![ECSCore_K2_08](/img/contents/ecscore/ecscore_k2_08.png){:class="img-responsive"}
 
 **Step 4: Create a SmartObject** <br>
 
