@@ -17,11 +17,11 @@ SmartObjects are business entities for data integration across different applica
 
 Here's a step-by-step guide how SAP integration with ECS Core and K2 SmartObjects works.
 
-** Step 1: Create and deploy a web service for SAP read or write access in the ECS Core WebService Designer.** <br>
+**Step 1: Create and deploy a web service for SAP read or write access in the ECS Core WebService Designer.** <br>
 
 ![ECSCore_K2_01](/img/contents/ecscore/ecscore_k2_01.png){:class="img-responsive"}
 
-** Step 2: Export the web service into an OpenAPI definition.** <br>
+**Step 2: Export the web service into an OpenAPI definition.** <br>
 
 This export can be done through the WebService designer or the ECS Core administration dashboard. <br>
 If it's done via the WebService Designer checkbox *Use definition section (references)* must be activated in the *Options* section for OpenAPI. 
@@ -39,7 +39,7 @@ With this approach the Azure Relay endpoint is automatically used in the definit
 
 ![ECSCore_K2_04](/img/contents/ecscore/ecscore_k2_04.png){:class="img-responsive"}
 
-** Step 3: Create a Service Instance in K2.** <br>
+**Step 3: Create a Service Instance in K2.** <br>
 
 The mandatory fields are marked red. 
 
@@ -55,26 +55,45 @@ For the *Default HTTPS Request Headers* box the following template can be used.
 {"$type":"SourceCode.SmartObjects.Services.Endpoints.Common.HttpHeader[], SourceCode.SmartObjects.Services.Endpoints.Common, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null","$values":[{"$type":"SourceCode.SmartObjects.Services.Endpoints.Common.HttpHeader, SourceCode.SmartObjects.Services.Endpoints.Common, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null","Name":"Authorization","Value":"Apikey 
 [Your API Key]"}]}
 ```
+
 Under *Descriptor Location* enter the path where the OpenAPI file is stored. In this example Amazon S3 is used as a file storage.  
+
 ![ECSCore_K2_08](/img/contents/ecscore/ecscore_k2_08.png){:class="img-responsive"}
-If *Generate SmartObjects for this Service instance* is checked, a SmartObject with the same name of the service instance is created directly with all objects. <br> 
-**4. Create a SmartObject** <br>
-For a more precise control of the process the SmartObject should be created separately. 
+
+If *Generate SmartObjects for this Service instance* is checked, a SmartObject with the same name of the service instance is created directly. <br>
+However by using this checkbox all default object types besided the objects coming from the OpenAPI definition are created for that SmartObject as well. This is not necessary.   
+
+** Step 4: Create a SmartObject** <br>
+
+For a more precise control of the SmartObject creation, it should be created separately. 
 The easiest way to directly test the functionality of a SmartObject is also via the Management Dashboard.
 To do this, select the created service instance and click on "Generate SmartObjects". <br>
 Only the "Object Types" must be selected in the following mask and not the "System Types".
+
 ![ECSCore_K2_10](/img/contents/ecscore/ecscore_k2_10.png){:class="img-responsive"} 
- A new SmartObject for SAP integration can also be created in the K2 Designer. 
+
+A new SmartObject for SAP integration can also be created in the K2 Designer. <br>
+Use *Advanced SmartObjekt*, only this type brings the functionality for third-party data integration.  
+
  ![ECSCore_K2_11](/img/contents/ecscore/ecscore_k2_11.png){:class="img-responsive"} 
+
  ![ECSCore_K2_12](/img/contents/ecscore/ecscore_k2_12.png){:class="img-responsive"} 
-**5. Test the SmartObject functionality** <br>
+
+**Step 5: Test the SmartObject functionality** <br>
+
 A newly created simple SmartObject without complex objects and (de-)serialisation steps can be executed and tested directly in the K2 Management Dashboard. <br>
 To do so, select the newly created object under the category "REST" (refresh it if necessary), select the desired method in the bottom right corner (name from the web service) and click "Execute".
+
 ![ECSCore_K2_13](/img/contents/ecscore/ecscore_k2_13.png){:class="img-responsive"} 
+
 In the following screen, input parameters can be entered and the service executed.
+
 ![ECSCore_K2_14](/img/contents/ecscore/ecscore_k2_14.png){:class="img-responsive"}
+
 Return values are displayed under RESULTS. 
+
 ![ECSCore_K2_15](/img/contents/ecscore/ecscore_k2_15.png){:class="img-responsive"}
+
 The SmartObject can then be used (e.g. in a K2 workflow).
 
 {: .box-note }
