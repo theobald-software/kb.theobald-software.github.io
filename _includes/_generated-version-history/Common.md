@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.13.10 [L]|2020-12-03|General|Fix for CrLf handling in CharsToLines, including UnitTests; LineToCells for splitting CSV lines into the cells.|
 |2.13.9 [L]|2020-11-30|WPF|Added "refresh" icon.|
 |2.13.8 [L]|2020-11-26|General|Fix for creating lines from chars in specific condition where some lines could have their content overwritten by others'|
 |2.13.7 [L]|2020-11-09|Licensing|Added sources limit to license|
