@@ -8,25 +8,25 @@ weight: 31
 
 **[Xtract Universal](https://www.theobald-software.com/en/xtract-universa)** supports integration of your SAP data in the most different target systems. <br>
 
-After creating an extraction (Refer to [OnlineHelp](https://help.theobald-software.com/en/xtract-universal/index)), you can run an extraction by just calling the command tool with the right parameters. <br>
+After creating an extraction (Refer to [OnlineHelp](https://help.theobald-software.com/en/xtract-universal/index)), you can run an extraction by just calling the command line tool with the right parameters. <br>
 
 As an alternative you can just call the correspondent URL that can be found in the Run Dialog (e.g. http://nbelzein:8065/?name=plants). We recommend to use the command line.
 
 ![XU schedule 01](/img/contents/xu/xu-schedule-01.jpg){:class="img-responsive"}
 
-In this blog I will show you how to schedule an Xtract Universal extraction that is as easy as calling the command line with the right parameters.
+This article describes how to schedule Xtract Universal extractions with the command line tool using dynamic parameters.
 
-Xtract Universal delivers the command tool **xu.exe** (to be found in the installation folder, e.g. **C:\Program Files\XtractUniversal\xu.exe** to run an extraction using the command line. <br>
-We will use this approach to schedule an extraction with the windows Task Scheduler and the SQL Server Agent.
+Xtract Universal delivers the command line tool **xu.exe** (to be found in the installation folder, e.g. **C:\Program Files\XtractUniversal\xu.exe** to run an extraction using the command line. <br>
+We will use this approach to schedule an extraction with the "Windows Task Scheduler" and the "SQL Server Agent".
 
 **Step 1** <br>
 
-To open the Task Scheduler on Windows 7, Click **Start Button > Control Panel > System Security > Administrative Tools > Task Scheduler**.
-Alternatively you can Run the Task Scheduler from the Command Line by Typing Taskschd.msc.
+To open the Task Scheduler on Windows 7, click **Start Button > Control Panel > System Security > Administrative Tools > Task Scheduler**.
+Alternatively you can run the task scheduler from the command line by typing "Taskschd.msc".
 
 **Step 2** <br> 
 
-Click the Action menu and then click Create Basic Task
+Click the "Action" menu and then click **[Create Basic Task]**.
 
 ![XU schedule 02](/img/contents/xu/xu-schedule-02.jpg){:class="img-responsive"}
 
@@ -44,7 +44,7 @@ Select the option **daily** and then click **[Next]**.
 
 **Step 5** <br>
 
-Set start date and time and then click **[Next]**.
+Set "start date and time" and then click **[Next]**.
 
 ![XU schedule 05](/img/contents/xu/xu-schedule-05.jpg){:class="img-responsive"}
 
@@ -56,9 +56,9 @@ Select the option **Start a program**
 
 **Step 7** <br>
 
-As **Program/script** set the path to the Xtract Universal Command tool **C:\Program Files\XtractUniversal\xu.exe**. <br> 
+As "Program/script" set the path to the Xtract Universal command line tool **C:\Program Files\XtractUniversal\xu.exe**. <br> 
 
-Set the field **Add arguments (optional)** to **-s localhost -p 8065 -n SAPPlants** <br>
+Set the field "Add arguments (optional)" to **-s localhost -p 8065 -n SAPPlants** <br>
 
 Click **[Next]**.
 
@@ -66,17 +66,17 @@ Click **[Next]**.
 
 **Step 8** <br>
 
-Check the Summary and Click **[Finish]**.
+Check the summary and click **[Finish]**.
 
 ![XU schedule 08](/img/contents/xu/xu-schedule-08.jpg){:class="img-responsive"}
 
-Now the Task is planned. You can right-click the task and select **[run]** to start it immediately. <br>
+Now the task is planned. You can right-click the task and select **[run]** to start it immediately. <br>
 
 ![XU schedule 09](/img/contents/xu/xu-schedule-09.jpg){:class="img-responsive"}
 
-If you want the task to run more than one extraction, open edit and go to the tab Actions and create new actions as described in **Step 7**. <br>
+If you want the task to run more than one extraction, open **[edit]** and go to the tab "Actions" and create new actions as described in **Step 7**. <br>
 
-This was just a demonstration. The Task Scheduler offers more options. For more options check [Microsoft technet](http://technet.microsoft.com/en-us/library/cc721931.aspx)
+This was just a brief demonstration. The "Task Scheduler" offers more options, please check [Microsoft technet](http://technet.microsoft.com/en-us/library/cc721931.aspx)
 
 **SQL Server Agent** <br>
 
