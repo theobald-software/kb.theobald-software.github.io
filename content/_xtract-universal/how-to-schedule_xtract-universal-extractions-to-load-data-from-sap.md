@@ -38,19 +38,19 @@ Type a name for the task and an optional description, and then click **[Next]**.
 
 **Step 4** <br>
 
-Select the option **daily** and then click **[Next]**.
+Select the option  "Daily" and then click **[Next]**.
 
 ![XU schedule 04](/img/contents/xu/xu-schedule-04.jpg){:class="img-responsive"}
 
 **Step 5** <br>
 
-Set "start date and time" and then click **[Next]**.
+Set a start date and time and then click **[Next]**.
 
 ![XU schedule 05](/img/contents/xu/xu-schedule-05.jpg){:class="img-responsive"}
 
 **Step 6** <br>
 
-Select the option **Start a program**
+Select the option "Start a program".
 
 ![XU schedule 06](/img/contents/xu/xu-schedule-06.jpg){:class="img-responsive"}
 
@@ -58,23 +58,23 @@ Select the option **Start a program**
 
 As "Program/script" set the path to the Xtract Universal command line tool **C:\Program Files\XtractUniversal\xu.exe**. <br> 
 
-Set the field "Add arguments (optional)" to **-s localhost -p 8065 -n SAPPlants** <br>
+Set the field "Add arguments (optional)" to "-s localhost -p 8065 -n SAPPlants" <br>
 
 Click **[Next]**.
 
-![XU schedule 07](/img/contents/xu/xu-schedule-07.jpg){:class="img-responsive"}
+![XU schedule 07](/img/contents/xu/xu-schedule-07.png){:class="img-responsive"}
 
 **Step 8** <br>
 
 Check the summary and click **[Finish]**.
 
-![XU schedule 08](/img/contents/xu/xu-schedule-08.jpg){:class="img-responsive"}
+![XU schedule 08](/img/contents/xu/xu-schedule-08.png){:class="img-responsive"}
 
 Now the task is planned. You can right-click the task and select **[run]** to start it immediately. <br>
 
 ![XU schedule 09](/img/contents/xu/xu-schedule-09.jpg){:class="img-responsive"}
 
-If you want the task to run more than one extraction, open **[edit]** and go to the tab "Actions" and create new actions as described in **Step 7**. <br>
+If you want the task to run more than one extraction, open **[edit]** and go to the tab "Actions" and create new actions as described in *Step 7*. <br>
 
 This was just a brief demonstration. The "Task Scheduler" offers more options, please check [Microsoft technet](http://technet.microsoft.com/en-us/library/cc721931.aspx)
 
@@ -82,6 +82,6 @@ This was just a brief demonstration. The "Task Scheduler" offers more options, p
 
 You can also use the SQL Server Agent to schedule the job. <br>
 
-Create a step of Type **Operating System (CmdExec)** and set the command to
+Create a step of type "Operating System (CmdExec)" and set the command to 
 
-**"C:\Program Files\XtractUniversal\xu.exe" -s localhost -p 8065 -n SAPPlants**
+"C:\Program Files\XtractUniversal\xu.exe" -s localhost -p 8065 -n SAPPlants".
