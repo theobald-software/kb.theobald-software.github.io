@@ -38,7 +38,7 @@ Type a name for the task and an optional description, and then click **[Next]**.
 
 **Step 4** <br>
 
-Select the option  "Daily" and then click **[Next]**.
+Select the option "Daily" and then click **[Next]**.
 
 ![XU schedule 04](/img/contents/xu/xu-schedule-04.jpg){:class="img-responsive"}
 
@@ -76,12 +76,10 @@ Now the task is planned. You can right-click the task and select **[run]** to st
 
 If you want the task to run more than one extraction, open **[edit]** and go to the tab "Actions" and create new actions as described in *Step 7*. <br>
 
-This was just a brief demonstration. The "Task Scheduler" offers more options, please check [Microsoft technet](http://technet.microsoft.com/en-us/library/cc721931.aspx)
+This was just a brief demonstration. The "Task Scheduler" offers more options, please check [Microsoft technet](http://technet.microsoft.com/en-us/library/cc721931.aspx) for more detailed information.
 
 **SQL Server Agent** <br>
 
 You can also use the SQL Server Agent to schedule the job. <br>
 
-Create a step of type "Operating System (CmdExec)" and set the command to 
-
-"C:\Program Files\XtractUniversal\xu.exe" -s localhost -p 8065 -n SAPPlants".
+Create a step of type "Operating System (CmdExec)" and set the command to "C:\Program Files\XtractUniversal\xu.exe" -s localhost -p 8065 -n SAPPlants".
