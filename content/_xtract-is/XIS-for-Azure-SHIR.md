@@ -7,8 +7,6 @@ weight: 25
 ---
 
 
-
-
 ## Motivation
 When running SSIS packages on an Azure SSIS-Integration Runtime (IR), it is very likely that you are using Connection Managers that connect to on-premises data sources or targets. For example, with Xtract IS for Azure this could be an SAP system hosted on-premises in your company network.
 
