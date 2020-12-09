@@ -67,6 +67,9 @@ collections:
   ecs-core:
     output: true
     name: 'ECS Core'
+  a-delete-me:
+    output: true
+    name: 'DELETE ME!'
   required-support-information:
     output: true
     name: 'Required Support Information'
