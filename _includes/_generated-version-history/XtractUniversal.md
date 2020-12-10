@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.22.0 [M]|2020-12-10|Destinations|Qlik: It is now possible to select "Column Name Styles" in the settings of the destination to avoid duplicate column names in Qlik. The "use description text for column names" option was removed.|
 |4.21.8 [L]|2020-12-02|Destinations|Performance improvements in HANA destination.|
 |4.21.7 [L]|2020-12-02|Destinations|Added support for SAP Data Warehouse Cloud.|
 |[4.21.6 [M]](https://kb.theobald-software.com/release-notes/XtractUniversal-4.21.6.html)|2020-12-01|Destinations|Snowflake destination driver change: SnowSql was replaced with ODBC([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-4.21.6.html))|
