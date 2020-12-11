@@ -57,7 +57,7 @@ Use the context menu to choose **Additional Functions > Generate Export DataSour
 
 The Export DataSource **80D_COPA** will be generated.
 
-### Extract Export DataSource with the Xtract IS DeltaQ component ###
+### How to extract Export DataSources ###
 
 Drag an Xtract DeltaQ component to the data flow task and link it to an Xtract Connection. Search for your Export DataSource.
 
