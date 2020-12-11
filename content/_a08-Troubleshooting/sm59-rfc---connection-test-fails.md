@@ -1,7 +1,7 @@
 ---
 layout: page
-title: SM59 RFC - Connection Test fails
-description: SM59 RFC - Connection Test fails
+title: BOARD Connector - SM59 RFC - Connection Test fails
+description: BOARD Connector - SM59 RFC - Connection Test fails
 permalink: /:collection/:path
 weight: 7
 ---

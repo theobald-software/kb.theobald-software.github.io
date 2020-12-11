@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Integrating SAP real-time data into BOARD user interface
-description: Integrating SAP real-time data into BOARD user interface
+title: BOARD Connector - Integrating SAP real-time data into BOARD user interface
+description: BOARD Connector - Integrating SAP real-time data into BOARD user interface
 permalink: /:collection/:path
 weight: 1
 ---

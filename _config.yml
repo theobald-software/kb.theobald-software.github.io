@@ -67,10 +67,25 @@ collections:
   ecs-core:
     output: true
     name: 'ECS Core'
-  a-delete-me:
+  a01-delete-me:
     output: true
-    name: 'DELETE ME!'
-  required-support-information:
+    name: '!!DELETE ME!!'
+  a02-review-me:
+    output: true
+    name: '!!REVIEW ME!!'
+  a03-How-To-Xtract-IS:
+    output: true
+    name: '!!How to.. Xtract IS!!'
+  a04-How-To-Xtract-Universal:
+    output: true
+    name: '!!How to.. Xtract Universal!!'    
+  a05-How-To-Xtract-General:
+    output: true
+    name: '!!How to..General!!'    
+  a06-Troubleshooting:
+    output: true
+    name: '!!Troubleshooting!!'    
+  a07-required-support-information:
     output: true
     name: 'Required Support Information'
   board-connector:

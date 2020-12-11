@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Xtract Report - Screen output without connection to user
-description: Xtract Report - Screen output without connection to user
+title: BOARD Connector - Xtract Report - Screen output without connection to user
+description: BOARD Connector - Xtract Report - Screen output without connection to user
 permalink: /:collection/:path
 weight: 6
 ---

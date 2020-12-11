@@ -1,7 +1,7 @@
 ---
 layout: page
-title: How to Edit Ranges in the DeltaQ Field Selections
-description: How to Edit Ranges in the DeltaQ Field Selections
+title: BOARD Connector - How to Edit Ranges in the DeltaQ Field Selections
+description: BOARD Connector - How to Edit Ranges in the DeltaQ Field Selections
 permalink: /:collection/:path
 weight: 3
 ---

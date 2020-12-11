@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Open SAP GUI from a BOARD DataView
-description: Open SAP GUI from a BOARD DataView
+title: BOARD Connector - Open SAP GUI from a BOARD DataView
+description: BOARD Connector - Open SAP GUI from a BOARD DataView
 permalink: /:collection/:path
 weight: 2
 ---
