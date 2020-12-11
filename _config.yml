@@ -67,30 +67,33 @@ collections:
   ecs-core:
     output: true
     name: 'ECS Core'
-  a01-delete-me:
+  z01-delete-me:
     output: true
     name: '!!DELETE ME!!'
-  a02-review-me:
+  z02-review-me:
     output: true
     name: '!!REVIEW ME!!'
   a03-How-To-Xtract-IS:
     output: true
-    name: '!!How to.. Xtract IS!!'
+    name: 'How to.. Xtract IS'
   a04-How-To-Xtract-Universal:
     output: true
-    name: '!!How to.. Xtract Universal!!'    
+    name: 'How to.. Xtract Universal'    
   a05-How-To-Xtract-General:
     output: true
-    name: '!!How to..General!!'    
-  a06-Troubleshooting:
+    name: 'How to..'    
+  a06-SAP:
     output: true
-    name: '!!Troubleshooting!!'    
+    name: 'SAP'
   a07-required-support-information:
     output: true
     name: 'Required Support Information'
-  board-connector:
+  a08-Troubleshooting:
     output: true
-    name: 'BOARD Connector'
+    name: 'Troubleshooting'   
+
+
+
   erpconnect-general:
     output: true
     name: 'ERPConnect - General'
@@ -100,27 +103,16 @@ collections:
   erpconnect-services:
     output: true
     name: 'ERPConnect Services'
-  general:
-    output: true
-    name: 'General'
-  sap:
-    output: true
-    name: 'SAP'
-  troubleshooting:
-    output: true
-    name: 'Troubleshooting'
+
+
+
   version-history:
     output: true
     name: 'Version History'
   xtract-is:
     output: true
     name: 'Xtract IS'
-  xtract-rs:
-    output: true
-    name: 'Xtract RS'
-  xtract-universal:
-    output: true
-    name: 'Xtract Universal'
+
   posts:
     output: true
 
