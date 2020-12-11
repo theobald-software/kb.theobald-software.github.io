@@ -73,46 +73,39 @@ collections:
   z02-review-me:
     output: true
     name: '!!REVIEW ME!!'
-  a03-How-To-Xtract-IS:
+  How-To-Xtract-IS:
     output: true
     name: 'How to.. Xtract IS'
-  a04-How-To-Xtract-Universal:
+  How-To-Xtract-Universal:
     output: true
     name: 'How to.. Xtract Universal'    
-  a05-How-To-Xtract-General:
+  How-To-Xtract-General:
     output: true
-    name: 'How to..'    
-  a06-SAP:
+    name: 'How to..' 
+  SAP:
     output: true
     name: 'SAP'
-  a07-required-support-information:
+  Required-support-information:
     output: true
     name: 'Required Support Information'
-  a08-Troubleshooting:
+  Troubleshooting:
     output: true
-    name: 'Troubleshooting'   
-
-
-
-  erpconnect-general:
+    name: 'Troubleshooting'
+  erpConnect-general:
     output: true
     name: 'ERPConnect - General'
-  erpconnect-samples:
+  erpConnect-samples:
     output: true
     name: 'ERPConnect - Samples'
   erpconnect-services:
     output: true
     name: 'ERPConnect Services'
-
-
-
   version-history:
     output: true
     name: 'Version History'
   xtract-is:
     output: true
     name: 'Xtract IS'
-
   posts:
     output: true
 
