@@ -22,7 +22,7 @@ The **Xtract IS OHS** component supports the Open Hub Services that allow you to
 An **Export DataSource** enables the extraction of the following InfoProviders: InfoCubes, DataStores and InfoObjects. <br>
 In contrast to Export DataSources, **DataSources** are provided to transfer data from SAP ERP or an external System to BI. The **Xtract IS DeltaQ** component supports both DataSources. <br>
 
-In this article the focus is on **Export DataSources**. It is described how to generate these DataSources in SAP BW/BI and how to use them with **Xtract IS DeltaQ**.
+In this article the focus is on Export DataSources. It is described how to generate these DataSources in SAP BW/BI and how to use them with Xtract IS DeltaQ.
 
 
 #### InfoCubes and DataStores ####
