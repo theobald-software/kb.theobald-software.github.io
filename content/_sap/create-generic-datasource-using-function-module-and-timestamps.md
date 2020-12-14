@@ -1,10 +1,12 @@
 ---
 layout: page
-title: Create Generic DataSources using Function Module and Timestamps
+title: Create Generic DataSources using a Function Module and Timestamps
 description: create-generic-datasources-using-function-module-and-timestamps
 permalink: /:collection/:path
 weight: 11
 ---
+
+### Delta fields ###
 
 For delta functionality you need a delta field. Some tables like **VBAK** (Sales Document: Header Data) don't have a timestamp field for creation/change that we can use as a unique delta field but have separate fields for creation date (<strong>ERDAT</strong>), creation time (<strong>ERZET</strong>) and change date (<strong>AEDAT</strong>). To get the data of the VBAK table by using delta functionality we will create a generic datasource using a custom function module which implements the necessary logic.
 
@@ -16,7 +18,7 @@ There are two template function modules that can be copied and used:
 
 - RSAX_BIW_GET_DATA: : A function module with complete interface that supports Delta Load. We will use this FM.
 
-**Step 1** <br>
+### **Step 1** ###
 
 Create an Extract Structure. <br>
 
@@ -38,7 +40,7 @@ Add a field **ZTMSTMP**(Data element: **TZNTSTMPS**, it is of datatype DEC with 
 
 Save and activate the structure. This structure will be our extract structure for the datasource.
 
-**Step 2** <br>
+### **Step 2** ###
 
 Create the function module. <br>
 
@@ -55,7 +57,7 @@ Go to **SE37** and open your FM **Z_RSAX_BIW_GET_DATA_VBAK** to edit. In TABLES 
 Go to the source code tab. Copy the ABAP Code and paste it.
 
 ``` ABAP
-{FUNCTION Z_RSAX_BIW_GET_DATA_VBAK.
+FUNCTION Z_RSAX_BIW_GET_DATA_VBAK.
 *"----------------------------------------------------------------------
 *"*"Local Interface:
 *"  IMPORTING
@@ -263,12 +265,12 @@ Go to the source code tab. Copy the ABAP Code and paste it.
 
   ENDIF.              "INITIALIZATION MODE OR DATA EXTRACTION ?
 
-ENDFUNCTION.}
+ENDFUNCTION.
 ```
 
 Save and activate the function module.
 
-**Step 3** <br>
+### **Step 3** ### 
 
 Create the DataSource. <br> 
 
@@ -288,22 +290,23 @@ Click on **[Generic Delta]**. Select the timestamp field **ZTMSTMP** and set the
 
 ![XU create generic datasource 12](/img/contents/xu/xu-create-generic-12.jpg){:class="img-responsive"}
 
-Optionally set the Safety Interval Lower Limit. For more Information refer to [SAP HELP](http://help.sap.com/saphelp_nw04/helpdata/en/37/4f3ca8b672a34082ab3085d3c22145/frameset.htm)
+Optionally set the Safety Interval Lower Limit. For more Information refer to [SAP HELP](http://help.sap.com/saphelp_nw04/helpdata/en/37/4f3ca8b672a34082ab3085d3c22145/frameset.htm).
 
 Click **[Save]** twice. In the following screen you can set the selection fields. The timestamp field is disabled because it will be automatically populated as part of the delta process.
 
 ![XU create generic datasource 13](/img/contents/xu/xu-create-generic-13.jpg){:class="img-responsive"}
 
 Now go to transaction **RSA2** to see the details of our DataSource **ZDSVBAK**. The extraction method is set to **F2** (Simple Interface). To change it to **F1** (Complete Interface) 
-execute the following ABAP code. (You can go to **SE38** and create new report with this ABAP code). 
+execute the following ABAP code. You can go to **SE38** and create a new report with this ABAP code. Unfortunately this is not possible in the GUI. 
 
-REPORT **ZABAPDEMO**
-
+``` ABAP
+REPORT ZABAPDEMO
 UPDATE roosource
 SET delta = 'E'
 exmethod = 'F1'
 genflag = 'X'
 WHERE oltpsource = 'ZDSVBAK'
+```
 
 Go to **RSA2** and display the status of the DataSource **ZDSVBAK** (to confirm, that it is set to F1).
 
@@ -328,7 +331,7 @@ This was the initialization call. The second call is for getting the data:
 
 Be sure that the table **E_T_DATA** contains the data.
 
-**Step 4**
+### **Step 4** ###
 
 Go to transaction **RSA3** to test the datasource.
 
