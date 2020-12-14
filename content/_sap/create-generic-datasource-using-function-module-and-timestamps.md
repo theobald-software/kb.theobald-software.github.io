@@ -18,7 +18,7 @@ There are two template function modules that can be copied and used:
 
 - RSAX_BIW_GET_DATA: : A function module with complete interface that supports Delta Load. We will use this FM.
 
-### **Step 1** ###
+### Step 1 ###
 
 Create an Extract Structure. <br>
 
@@ -40,7 +40,7 @@ Add a field **ZTMSTMP**(Data element: **TZNTSTMPS**, it is of datatype DEC with 
 
 Save and activate the structure. This structure will be our extract structure for the datasource.
 
-### **Step 2** ###
+### Step 2 ###
 
 Create the function module. <br>
 
@@ -270,7 +270,7 @@ ENDFUNCTION.
 
 Save and activate the function module.
 
-### **Step 3** ### 
+### Step 3 ### 
 
 Create the DataSource. <br> 
 
@@ -331,7 +331,7 @@ This was the initialization call. The second call is for getting the data:
 
 Be sure that the table **E_T_DATA** contains the data.
 
-### **Step 4** ###
+### Step 4 ###
 
 Go to transaction **RSA3** to test the datasource.
 
