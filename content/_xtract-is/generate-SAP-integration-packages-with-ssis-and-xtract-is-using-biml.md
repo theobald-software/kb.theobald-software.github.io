@@ -6,26 +6,28 @@ permalink: /:collection/:path
 weight: 100
 ---
 
-Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
+SQL Server Integration Services (SSIS) is a component of the Microsoft SQL Server database that can be used to perform a broad range of data integration and data extraction, transformation, and loading (ETL) tasks.
 
-### Error
+Xtract IS is an SAP Integration solution for SSIS that provides all kinds of integration with SAP ERP and SAP BW in a secure and type-safe way with a graphical editor.
 
-When trying to run the preview in the Xtract Report component, the following Exception occurs - Screen output without connection to user:
+Business Intelligence Markup Language (Biml) is a domain-specific XML dialect for defining business intelligence (BI) assets. Biml authored BI assets can currently be used by the BIDS Helper add-on for Microsoft SQL Server Business Intelligence Development Studio (BIDS) and the Varigence Mist integrated development environment; both tools translate Biml metadata into SQL Server Integration Services (SSIS) and SQL Server Analysis Services (SSAS) assets for the Microsoft SQL Server platform. However, emitters can be created to compile Biml for any desired BI platform, see [Wikipedia](https://en.wikipedia.org/wiki/Business_Intelligence_Markup_Language).
 
+In this article I will show you how to use a BIML script to generate an SSIS package that extracts SAP table data using Xtract IS and loads it to an SQL Server.
 
-![ScreenOutputWithoutConnectioToUser](/img/contents/ScreenOutputWithoutConnectioToUser.png){:class="img-responsive"}
+In the BIML script I will define an SSIS Package (SSIS version 2014) with two connection managers and two tasks:
+- An OLE DB connection manager to an existing SQL Database BIMLTest and an Xtract Connection manager to an SAP ERP system.
+- An SQL Task to truncate the SQL table and a data flow task.
 
-### Reason
+In the data flow task I will define two components:
 
-The Report tries to show a Screen Output. This could be another Dynpro for example. This is not possible when running reports in RFC because no SAPGui is involved. 
+- An Xtract Table component to extract three columns from the SAP customer table KNA1 .
+- An OLE DB Destination to load the extracted SAP data into the SQL Server table. The table should exist before, refer to the comments in the BIML script.
 
-### Solution
+**Step 1.** Add a new Biml File
+![xis-ssis-biml_01](/img/contents/xis/xis-ssis-biml_01.jpg){:class="img-responsive"}
 
-Running the report in the background suppresses screen outputs and redirects the output from the Report to the spool. Xtract Report fetches the data from the spool of SAP wihout any additional settings to be done, except the option "Use Batch" in the settings of the Xtract product you are using, like shown in the following screenshot:
+**Step 2.** Write the BIML Script code
+![xis-ssis-biml_02](/img/contents/xis/xis-ssis-biml_02.jpg){:class="img-responsive"}
 
-
-![UseBatch](/img/contents/UseBatch.png){:class="img-responsive"} 
-
-(This is the screenshot of the Xtract IS Table component, the Settings in the other products could vary)
-
-Please consider, that this is only a solution if the pop up Dynpro is only for information purposes. If the Dynpro is awaiting any input, this report is not compatible with our product and cannot be executed. 
+Here you can find the BIML Script Code.
+Check the requirements and the comments for more details.
