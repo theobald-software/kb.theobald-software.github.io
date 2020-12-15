@@ -25,20 +25,20 @@ The workflow operates as follows:
 A user requests the creation of a new SAP user account with a web form created in NWC. Information such as company name, email address, reason for creation, desired creation date, etc. have to be entered in the form.
 The requester can also choose whether the user account is to be created for the SAP ERP or BW system, or both.
 
-![ecscore_SAP-User-Creation_01](/img/contents/ecscore/ecscore_SAP-User-Creation_01){:class="img-responsive"}
+![ecscore_SAP-User-Creation_01](/img/contents/ecscore/ecscore_SAP-User-Creation_01.png){:class="img-responsive"}
 
 Once the web form is sent, an approval process starts that automatically sends an email task notification to an assigned administrator.
 
-![ecscore_SAP-User-Creation_02](/img/contents/ecscore/ecscore_SAP-User-Creation_02){:class="img-responsive"}
+![ecscore_SAP-User-Creation_02](/img/contents/ecscore/ecscore_SAP-User-Creation_02.png){:class="img-responsive"}
 
 The administrator has to check if it's a reasonable and valid request. Before the actual approval a task form with additional information must be completed. This data is necessary for the user account creation in SAP and includes the SAP user name, the initial logon password and a valid-from and valid-to date for the time limitation of the account.
 
-![ecscore_SAP-User-Creation_03](/img/contents/ecscore/ecscore_SAP-User-Creation_03){:class="img-responsive"}
+![ecscore_SAP-User-Creation_03](/img/contents/ecscore/ecscore_SAP-User-Creation_03.png){:class="img-responsive"}
 
 After submitting this information, SAP integration takes place and the SAP user account is automatically created in the requested system. If the account was created successfully, both the administrator and the applicant will receive email notifications.
 
-![ecscore_SAP-User-Creation_04](/img/contents/ecscore/ecscore_SAP-User-Creation_04){:class="img-responsive"}
-![ecscore_SAP-User-Creation_05](/img/contents/ecscore/ecscore_SAP-User-Creation_05){:class="img-responsive"}
+![ecscore_SAP-User-Creation_04](/img/contents/ecscore/ecscore_SAP-User-Creation_04.png){:class="img-responsive"}
+![ecscore_SAP-User-Creation_05](/img/contents/ecscore/ecscore_SAP-User-Creation_05.png){:class="img-responsive"}
 
 How was the scenario realized?
 
