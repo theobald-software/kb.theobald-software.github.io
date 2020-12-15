@@ -3,7 +3,7 @@ layout: section-page
 title: Cloud scenario for SAP user account creation
 description: cloud-scenario-for-sap-user-account-creation
 permalink: /:collection
-weight: 7
+weight: 10
 ---
 
 This article is about how to create SAP user accounts from the cloud.
