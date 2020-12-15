@@ -2,7 +2,7 @@
 layout: page
 title: Cloud scenario for SAP user account creation
 description: cloud-scenario-for-sap-user-account-creation
-permalink: /:collection
+permalink: /:collection/:path
 weight: 10
 ---
 
