@@ -3,64 +3,96 @@ layout: page
 title: How to: Load data into a BW Infoobject with Xtract BW Loader
 description: how-to-load-data-into-a-bw-infoobject-with-xtract-bw-loader
 permalink: /:collection/:path
-weight: 101
+weight: 120
 ---
 
-Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
+Xtract BW Loader is one out of the nine components of Xtract IS,  the SAP Connector for the SQL Server Integration Services (SSIS) by Theobald Software.
 
-In a Delta Extraction with the Xtract IS DeltaQ Component it is possible to download records that are earlier transfered with a full-update. Since the release of SQL Server 2008 you can use the command called Merge at this point to perform Insert and Update commands easily in one step. In our next example we want to update an updated Customer (TA VD02), which is present in our Database, with the Merge command. We can also use this package to insert a new customer in our table in our Database.
+BW Loader allows to load data to SAP BW objects using an InfoPackage (refer to [SAP help](http://help.sap.com/saphelp_nw04/helpdata/en/2e/20d704d45be7458582cdfcc5487090/frameset.htm) to know more about InfoPackages).
 
-In this sample we work with 2 tables. The first one (Raw) is going to be used to store the values coming from SAP, either to update them later in the next table (Staging) with the merge command, or, if the record is not present, to insert them.
+In this article I will show you how to use BW Loader in conjunction with an Infopackage to load data into  InfoObject Texts. <br> You can use BW Loader in conjunction with other Infopackages too, to load data to other BW objects, like InfoObject attributes, hierarchies or InfoCubes.
 
-In the first Screenshot we see the whole Control Flow. First we need a "Execute SQL Task". We rename the task to "Empty Raw Table"
+In this scenario I have created the InfoObject ZCUSTOMER with the following settings. If you have already an InfoObject you can skip to **STEP 1.**
 
-![MergeControlFlow](/img/contents/MergeControlFlow.jpg){:class="img-responsive"}
+Create an InfoObject (using transaction code RSA1).
+![data-into-a-bw_01](/img/contents/xis/data-into-a-bw_01.jpg){:class="img-responsive"}
 
-Delete the records in the Raw-Table to be ready for the incoming Data.
+Set a name (e.g. ZCUSTOMER).
+![data-into-a-bw_02](/img/contents/xis/data-into-a-bw_02.jpg){:class="img-responsive"}
 
-![MergeControlFlow2](/img/contents/MergeControlFlow2.jpg){:class="img-responsive"}
+Set data type and length.
+![data-into-a-bw_03](/img/contents/xis/data-into-a-bw_03.jpg){:class="img-responsive"}
 
-The first step is to get the Data out of SAP. Insert a Data-Flow-Task in the Control Flow, as you can see in the Screenshot, and rename it in "Get Delta from Customer". In this task the extraction from SAP is handled by Xtract IS DeltaQ. The changed or new records are inserted in the Raw-Table.
 
-![MergeControlFlow3](/img/contents/MergeControlFlow3.jpg){:class="img-responsive"}
+On the Master data/texts tab select the following options.
+![data-into-a-bw_04](/img/contents/xis/data-into-a-bw_04.jpg){:class="img-responsive"}
 
-The third and last "Execute SQL Task" contains the merge command. We insert the Data for the connection.
+**Step 1:** Create an RFC Destination
 
-![MergeControlFlow4](/img/contents/MergeControlFlow4.jpg){:class="img-responsive"}
+Create an RFC Destination XTRACT 01 using the transaction code SM59 (for more information refer to [SAP help](http://help.sap.com/saphelp_nw04/helpdata/en/2e/20d704d45be7458582cdfcc5487090/frameset.htm)).
+![data-into-a-bw_05](/img/contents/xis/data-into-a-bw_05.jpg){:class="img-responsive"}
 
-and then the following Merge command in the field SQLStatement.
+**Step 2:** Create an InfoSource 3.x
+<br>
+Create an IfoSource 3.x (for more information refer to [SAP help](http://help.sap.com/saphelp_nw04/helpdata/en/2e/20d704d45be7458582cdfcc5487090/frameset.htm)).
+![data-into-a-bw_06](/img/contents/xis/data-into-a-bw_06.jpg){:class="img-responsive"}
 
-![MergeControlFlow5](/img/contents/MergeControlFlow5.jpg){:class="img-responsive"}
+Set the option "Direct Update of Master Data" und select the InfoObject ZCUSTOMER.
+![data-into-a-bw_07](/img/contents/xis/data-into-a-bw_07.jpg){:class="img-responsive"}
 
-```
-Merge Staging
-using  Raw on Staging.KundenNo = Raw.KUNNR
+Confirm the message.
+![data-into-a-bw_08](/img/contents/xis/data-into-a-bw_08.jpg){:class="img-responsive"}
 
-when matched then update
-set Staging.Name =  Raw.Name1,    
-Staging.City =  Raw.ORT01
+**Step 3:** Create Transfer Rules
 
-when not matched then insert 
-(KundenNo,Name,City) 
-values(KUNNR,NAME1,ORT01);
-```
+Now create the transfer rules (for more information refer to [SAP help](http://help.sap.com/saphelp_nw04/helpdata/en/2e/20d704d45be7458582cdfcc5487090/frameset.htm)).
+![data-into-a-bw_09](/img/contents/xis/data-into-a-bw_09.jpg){:class="img-responsive"}
 
-In SAP we change a record in the transaction VD02. As we can see on the Image, we append two X and save the customer.
+Select the Source System XTRACT01.
+![data-into-a-bw_10](/img/contents/xis/data-into-a-bw_10.jpg){:class="img-responsive"}
 
-![MergeControlFlow6](/img/contents/MergeControlFlow6.jpg){:class="img-responsive"}
+Confirm the message.
+![data-into-a-bw_11](/img/contents/xis/data-into-a-bw_11.jpg){:class="img-responsive"}
 
-In our Staging-Table we have exactly 7706 Records and our customer with the number 0000001172 has no X in this name.
+Click on the save button.
+![data-into-a-bw_12](/img/contents/xis/data-into-a-bw_12.jpg){:class="img-responsive"}
 
-![MergeControlFlow7](/img/contents/MergeControlFlow7.jpg){:class="img-responsive" style="display: inline"}
-![MergeControlFlow8](/img/contents/MergeControlFlow8.jpg){:class="img-responsive" style="display: inline"}
+**Step 4:**Create an InfoPackage
 
-We execute the package and see the changed record in the DataViewer.
+Create an InfoPackage.
+![data-into-a-bw_13](/img/contents/xis/data-into-a-bw_13.jpg){:class="img-responsive"}
 
-![MergeControlFlow9](/img/contents/MergeControlFlow9.jpg){:class="img-responsive"}
+Set the description, select the Destination and click on Save.
+![data-into-a-bw_14](/img/contents/xis/data-into-a-bw_14.jpg){:class="img-responsive"}
 
-As we can see in our Staging-Table the count of records has not been changed, only the name is changed.
+On the tab Schedule, select "Start later in Background", click on Scheduling options, then on immediate and on the save button.
+![data-into-a-bw_15](/img/contents/xis/data-into-a-bw_15.jpg){:class="img-responsive"}
 
-![MergeControlFlow10](/img/contents/MergeControlFlow10.jpg){:class="img-responsive"}
-![MergeControlFlow11](/img/contents/MergeControlFlow11.jpg){:class="img-responsive"}
+Save the InfoPackage.
+![data-into-a-bw_16](/img/contents/xis/data-into-a-bw_16.jpg){:class="img-responsive"}
 
-See also : [http://msdn.microsoft.com/library/cc280522.aspx](http://msdn.microsoft.com/library/cc280522.aspx)
+**Step 5:** Use Xtract BW Loader component
+<br>
+As a source I will use an SQL table with 2 columns definied as following:
+![data-into-a-bw_17](/img/contents/xis/data-into-a-bw_17.jpg){:class="img-responsive"}
+![data-into-a-bw_18](/img/contents/xis/data-into-a-bw_18.jpg){:class="img-responsive"}
+
+In SSIS create a data flow task, define the connections to the SQL database and to SAP, and add two components: an OLE DB Source for the SQL table and Xtract BW Loader.
+![data-into-a-bw_19](/img/contents/xis/data-into-a-bw_19.jpg){:class="img-responsive"}
+
+Define the BW Loader component and map pipeline elements to the InfoObject fields.
+![data-into-a-bw_20](/img/contents/xis/data-into-a-bw_20.jpg){:class="img-responsive"}
+![data-into-a-bw_21](/img/contents/xis/data-into-a-bw_21.jpg){:class="img-responsive"}
+
+Execute the data flow in SSIS.
+![data-into-a-bw_22](/img/contents/xis/data-into-a-bw_22.jpg){:class="img-responsive"}
+
+Check the log in SAP.
+![data-into-a-bw_23](/img/contents/xis/data-into-a-bw_23.jpg){:class="img-responsive"}
+
+Check the content of the InfoObject ZCUSTOMER.
+![data-into-a-bw_24](/img/contents/xis/data-into-a-bw_24.jpg){:class="img-responsive"}
+
+In this article I showed how to use Xtract BW Loader to load data from an SQL table into SAP BW InfoObject Texts. SSIS allows to use other Sources (e.g. FlatFiles). <br> BWLoader can load data to Infopackages that can be forwarded to other SAP BW objects like InfoObject attributes, hierarchies or InfoCubes.
+
+
