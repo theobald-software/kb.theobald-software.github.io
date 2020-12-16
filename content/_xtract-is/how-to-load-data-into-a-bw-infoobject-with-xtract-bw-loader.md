@@ -1,9 +1,9 @@
 ---
 layout: page
-title: How to: Load data into a BW Infoobject with Xtract BW Loader
+title: How to load data into a BW Infoobject with Xtract BW Loader
 description: how-to-load-data-into-a-bw-infoobject-with-xtract-bw-loader
 permalink: /:collection/:path
-weight: 120
+weight: 50
 ---
 
 Xtract BW Loader is one out of the nine components of Xtract IS,  the SAP Connector for the SQL Server Integration Services (SSIS) by Theobald Software.
