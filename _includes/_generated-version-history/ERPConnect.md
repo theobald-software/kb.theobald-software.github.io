@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.14.4 [M]|2020-12-16|RFCFunction.Tables|Fixed a bug where setting IsSupplied to false for at least one table in a function module with multiple tables caused errors when using classic RFC|
 |6.14.3 [L]|2020-11-06|General|Added RFCTable.NewRows()|
 |6.14.2 [L]|2020-10-24|RFC Client|Fix for parsing escaped backslash in connection string|
 |6.14.1 [L]|2020-10-08|General|Added RFCTable.IsSupplied and RFCStructure.SetValueInternal()|
