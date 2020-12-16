@@ -32,7 +32,7 @@ In the data flow task I will define two components:
 Here you can find the BIML Script Code.
 Check the requirements and the comments for more details.
 
-``` BIML
+``` XML
 Biml xmlns=&quot;http://schemas.varigence.com/biml.xsd&quot;&gt;
   &lt;!--   Requirements
   1. Create SQL-Database [BIMLTest]
