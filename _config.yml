@@ -67,42 +67,55 @@ collections:
   ecs-core:
     output: true
     name: 'ECS Core'
+    weight: 7
   delete-me:
     output: true
     name: '!!DELETE ME!!'
+    weight: 100
   review-me:
     output: true
     name: '!!REVIEW ME!!'
+    weight: 101    
   How-To-Xtract-IS:
     output: true
     name: 'How to.. Xtract IS'
+    weight: 1    
   How-To-Xtract-Universal:
     output: true
-    name: 'How to.. Xtract Universal'    
+    name: 'How to.. Xtract Universal'
+    weight: 2    
   How-To-Xtract-General:
     output: true
-    name: 'How to..' 
+    name: 'Misc. topics'
+    weight: 4    
   SAP:
     output: true
     name: 'SAP'
+    weight: 3    
   Required-support-information:
     output: true
     name: 'Required Support Information'
+    weight: 6    
   Troubleshooting:
     output: true
     name: 'Troubleshooting'
+    weight: 5    
   erpConnect-general:
     output: true
     name: 'ERPConnect - General'
+    weight: 9    
   erpConnect-samples:
     output: true
     name: 'ERPConnect - Samples'
+    weight: 10    
   erpconnect-services:
     output: true
     name: 'ERPConnect Services'
+    weight: 8    
   version-history:
     output: true
     name: 'Version History'
+    weight: 11    
   posts:
     output: true
 
