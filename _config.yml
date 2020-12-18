@@ -68,10 +68,10 @@ collections:
     output: true
     name: 'ECS Core'
   delete-me:
-    output: false
+    output: true
     name: '!!DELETE ME!!'
   review-me:
-    output: false
+    output: true
     name: '!!REVIEW ME!!'
   How-To-Xtract-IS:
     output: true
