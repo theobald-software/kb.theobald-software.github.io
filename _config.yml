@@ -67,11 +67,11 @@ collections:
   ecs-core:
     output: true
     name: 'ECS Core'
-  z01-delete-me:
-    output: true
+  delete-me:
+    output: false
     name: '!!DELETE ME!!'
-  z02-review-me:
-    output: true
+  review-me:
+    output: false
     name: '!!REVIEW ME!!'
   How-To-Xtract-IS:
     output: true
@@ -103,9 +103,6 @@ collections:
   version-history:
     output: true
     name: 'Version History'
-  xtract-is:
-    output: true
-    name: 'Xtract IS'
   posts:
     output: true
 
