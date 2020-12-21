@@ -6,7 +6,7 @@ permalink: /:collection/:path
 weight: 50
 ---
 
-Xtract BW Loader is one out of the nine components of Xtract IS,  the SAP Connector for the SQL Server Integration Services (SSIS) by Theobald Software.
+Xtract BW Loader is one out of the nine components of [Xtract IS](https://theobald-software.com/en/xtract-is/),  the SAP Connector for the SQL Server Integration Services (SSIS) by Theobald Software.
 
 BW Loader allows to load data to SAP BW objects using an InfoPackage (refer to [SAP help](http://help.sap.com/saphelp_nw04/helpdata/en/2e/20d704d45be7458582cdfcc5487090/frameset.htm) to know more about InfoPackages).
 
