@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Integrating SAP data into a Snowflake data Warehouse
+title: Integrating SAP data into a Snowflake data warehouse
 description: integrating-sap-data-into-a-snowflake-data-warehouse
 permalink: /:collection/:path
 weight: 45
@@ -27,4 +27,4 @@ Once the data is extracted from SAP, it can be directly stored in one of current
 
 The SAP data extracts and the load process in Snowflake can be fully automated, using utilities like the Windows Task Scheduler or Cron, or your scheduling tool of choice. This can also work in conjunction with an existing ETL tool for centralized monitoring and management of all data movement processes.
 
-Feel free to email us at [info@us.theobald-software.com](https://theobald-software.com/kontakt/) if you are interested in more details of this solution or send us your questions and comments.
+Feel free to email us at [info@theobald-software.com](https://theobald-software.com/kontakt/) if you are interested in more details of this solution or send us your questions and comments.
