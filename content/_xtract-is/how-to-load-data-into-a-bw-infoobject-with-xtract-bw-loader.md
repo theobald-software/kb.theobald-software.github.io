@@ -12,7 +12,7 @@ BW Loader allows to load data to SAP BW objects using an InfoPackage (refer to [
 
 In this article I will show you how to use BW Loader in conjunction with an Infopackage to load data into  InfoObject Texts. <br> You can use BW Loader in conjunction with other Infopackages too, to load data to other BW objects, like InfoObject attributes, hierarchies or InfoCubes.
 
-In this scenario I have created the InfoObject ZCUSTOMER with the following settings. If you have already an InfoObject you can skip to **STEP 1.**
+In this scenario I have created the InfoObject ZCUSTOMER with the following settings. If you have already an InfoObject you can skip to **[STEP 1](https://kb.theobald-software.com/xtract-is/how-to-load-data-into-a-bw-infoobject-with-xtract-bw-loader#step-1-create-an-rfc-destination)**.
 
 Create an InfoObject (using transaction code RSA1).
 ![data-into-a-bw_01](/img/contents/xis/data-into-a-bw_01.jpg){:class="img-responsive"}
