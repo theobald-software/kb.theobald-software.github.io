@@ -12,7 +12,7 @@ This article describes how Azure Data Factory can be used to trigger and automat
 ### Prerequisites and assumptions ###
 
 - Xtract Universal is installed on a cloud VM and is accessible remotely over HTTP/S
-- Customer has AAzure Data Factory
+- Customer uses Azure Data Factory
 
 ### Step 1: Create your SAP data extract in XU <br>
 
