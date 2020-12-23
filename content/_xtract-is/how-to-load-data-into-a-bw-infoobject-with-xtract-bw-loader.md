@@ -6,13 +6,13 @@ permalink: /:collection/:path
 weight: 50
 ---
 
-Xtract BW Loader is one out of the nine components of Xtract IS,  the SAP Connector for the SQL Server Integration Services (SSIS) by Theobald Software.
+**Xtract BW Loader** is one out of the ten components of [Xtract IS](https://theobald-software.com/en/xtract-is/),  the SAP Connector for the SQL Server Integration Services (SSIS) by Theobald Software.
 
 BW Loader allows to load data to SAP BW objects using an InfoPackage (refer to [SAP help](http://help.sap.com/saphelp_nw04/helpdata/en/2e/20d704d45be7458582cdfcc5487090/frameset.htm) to know more about InfoPackages).
 
 In this article I will show you how to use BW Loader in conjunction with an Infopackage to load data into  InfoObject Texts. <br> You can use BW Loader in conjunction with other Infopackages too, to load data to other BW objects, like InfoObject attributes, hierarchies or InfoCubes.
 
-In this scenario I have created the InfoObject ZCUSTOMER with the following settings. If you have already an InfoObject you can skip to **STEP 1.**
+In this scenario I have created the InfoObject ZCUSTOMER with the following settings. If you have already an InfoObject you can skip to **[STEP 1](https://kb.theobald-software.com/xtract-is/how-to-load-data-into-a-bw-infoobject-with-xtract-bw-loader#step-1-create-an-rfc-destination)**.
 
 Create an InfoObject (using transaction code RSA1).
 ![data-into-a-bw_01](/img/contents/xis/data-into-a-bw_01.jpg){:class="img-responsive"}
@@ -27,12 +27,12 @@ Set data type and length.
 On the Master data/texts tab select the following options.
 ![data-into-a-bw_04](/img/contents/xis/data-into-a-bw_04.jpg){:class="img-responsive"}
 
-**Step 1:** Create an RFC Destination
+### **Step 1:** Create an RFC Destination ###
 
 Create an RFC Destination XTRACT 01 using the transaction code SM59 (for more information refer to [SAP help](http://help.sap.com/saphelp_nw04/helpdata/en/2e/20d704d45be7458582cdfcc5487090/frameset.htm)).
 ![data-into-a-bw_05](/img/contents/xis/data-into-a-bw_05.jpg){:class="img-responsive"}
 
-**Step 2:** Create an InfoSource 3.x
+### **Step 2:** Create an InfoSource 3.x ###
 <br>
 Create an IfoSource 3.x (for more information refer to [SAP help](http://help.sap.com/saphelp_nw04/helpdata/en/2e/20d704d45be7458582cdfcc5487090/frameset.htm)).
 ![data-into-a-bw_06](/img/contents/xis/data-into-a-bw_06.jpg){:class="img-responsive"}
@@ -43,7 +43,7 @@ Set the option "Direct Update of Master Data" und select the InfoObject ZCUSTOME
 Confirm the message.
 ![data-into-a-bw_08](/img/contents/xis/data-into-a-bw_08.jpg){:class="img-responsive"}
 
-**Step 3:** Create Transfer Rules
+### **Step 3:** Create Transfer Rules ###
 
 Now create the transfer rules (for more information refer to [SAP help](http://help.sap.com/saphelp_nw04/helpdata/en/2e/20d704d45be7458582cdfcc5487090/frameset.htm)).
 ![data-into-a-bw_09](/img/contents/xis/data-into-a-bw_09.jpg){:class="img-responsive"}
@@ -57,7 +57,7 @@ Confirm the message.
 Click on the save button.
 ![data-into-a-bw_12](/img/contents/xis/data-into-a-bw_12.jpg){:class="img-responsive"}
 
-**Step 4:**Create an InfoPackage
+### **Step 4:** Create an InfoPackage ###
 
 Create an InfoPackage.
 ![data-into-a-bw_13](/img/contents/xis/data-into-a-bw_13.jpg){:class="img-responsive"}
@@ -71,7 +71,7 @@ On the tab Schedule, select "Start later in Background", click on Scheduling opt
 Save the InfoPackage.
 ![data-into-a-bw_16](/img/contents/xis/data-into-a-bw_16.jpg){:class="img-responsive"}
 
-**Step 5:** Use Xtract BW Loader component
+### **Step 5:** Use Xtract BW Loader component ###
 <br>
 As a source I will use an SQL table with 2 columns definied as following:
 ![data-into-a-bw_17](/img/contents/xis/data-into-a-bw_17.jpg){:class="img-responsive"}
