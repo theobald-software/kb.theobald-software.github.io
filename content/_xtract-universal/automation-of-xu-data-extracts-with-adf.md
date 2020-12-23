@@ -9,7 +9,7 @@ Target audience: Customers who utilize Azure Data Factory as a platform orchestr
 
 This article describes how Azure Data Factory can be used to trigger and automate SAP data movements with [Xtract Universal](https://theobald-software.com/en/xtract-universal/) from Theobald Software.
 
-**Prerequisites and assumptions:** <br>
+### Prerequisites and assumptions ###
 
 - Xtract Universal is installed on a cloud VM and is accessible remotely over HTTP/S
 - Customer has AAzure Data Factory
@@ -19,7 +19,7 @@ This article describes how Azure Data Factory can be used to trigger and automat
 In the XU Designer, configure your data extract with SAP connection, source object and destination. <br> In the example below, data from SAP table KNA1 is extracted and stored in an Azure blob destination. 
 ![XU data extracts with adf 01](/img/contents/xu/xu-data-extracts-with-adf_01.jpg){:class="img-responsive"}
 
-### Step 2 Test your SAP data extract from a remote machine <br>
+### Step 2: Test your SAP data extract from a remote machine <br>
 
 On a remote machine, i.e. a machine other than your XU server, run the SAP data extract with the xu.exe command line utility. You can copy xu.exe and xu.exe.config from the XU server to a folder on the remote machine. <br> This is to ensure that the XU server is reachable. The example below executes a data extract named “KNA1” on the IP address of the XU server on port 8065. You can configure an HTTPS connection to secure the connection.
 ![XU data extracts with adf 02](/img/contents/xu/xu-data-extracts-with-adf_02.jpg){:class="img-responsive"}
