@@ -14,7 +14,9 @@ This might be useful in web portals with employee self services.
 {% highlight csharp %}
 // open connection
 ERPConnect.R3Connection con = new R3Connection("SAPServer",00,"SAPUser","Password","EN","800");
-con.Open();
+ERPConnect.LIC.SetLic("xxxxxxxxxxxxx"); //Set your ERPConnect License. #
+
+con.Open();  //Open the connection to SAP.
   
 // Create function object
 RFCFunction func = con.CreateFunction("BAPI_USER_CHANGE");
