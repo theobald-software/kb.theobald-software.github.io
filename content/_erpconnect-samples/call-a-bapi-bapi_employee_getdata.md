@@ -6,8 +6,6 @@ permalink: /:collection/:path
 weight: 15
 ---
 
-Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
-
 BAPI_EMPLOYEE_GETDATA is an RFC-enabled function module that should be present in every SAP system. As an import parameter, the last name of an employee should be transferred to the module and the employee's detail data is sent back to the calling program contained in an table parameter.
 
 The code below shows how to log on to the SAP system. An RFCFunction object is created by the method CreateFunction(). The import parameter LASTNAME_M is filled with the string given by the user. Execut e() executes the function module. After the call, the program gets the table parameter PERSONAL_DATA and writes the table field PERNO to the console. Additionally the last name and the name are written to the console
@@ -19,8 +17,10 @@ The code below shows how to log on to the SAP system. An RFCFunction object is c
 {% highlight csharp %}
 static void Main(string[] args)
         {
-            R3Connection con = new R3Connection("Host", 05, "User", "Password", "DE", "800");
-            con.Open(false);
+            ERPConnect.R3Connection con = new R3Connection("SAPServer",00,"SAPUser","Password","EN","800");
+            ERPConnect.LIC.SetLic("xxxxxxxxxxxxx"); //Set your ERPConnect License.
+
+            con.Open();  //Open the connection to SAP.
   
             // Create a function object
             RFCFunction func = con.CreateFunction("BAPI_EMPLOYEE_GETDATA");
