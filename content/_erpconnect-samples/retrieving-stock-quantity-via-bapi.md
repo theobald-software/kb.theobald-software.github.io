@@ -25,7 +25,7 @@ private void btnGetQuantity_Click(object sender, System.EventArgs e)
         
                 ERPConnect.LIC.SetLic("xxxxxxxxxxxxx"); //Set your ERPConnect License. 
   
-                R3Connection con = new R3Connection("SAPServer",00,"SAPUser","Password","DE","800");  //Set Connection Properties
+                R3Connection con = new R3Connection("SAPServer",00,"SAPUser","Password","EN","800");  //Set Connection Properties
   
                 con.Open(); //Open the SAP Connection 
                 
@@ -51,6 +51,6 @@ private void btnGetQuantity_Click(object sender, System.EventArgs e)
 
 The figures below show the example program in action. On the first try, the user types a non-existing material number so an error message is given by the BAPI. The right hand figure shows a correct quantity indication.
 
-![ScreenshotBeispielBapi1](/img/contents/ScreenshotBeispielBapi1.jpg){:class="img-responsive"}
+![ScreenshotBeispielBapi1](/img/contents/ScreenshotBeispielBapi01.jpg){:class="img-responsive"}
 
-![ScreenshotBeispielBapi2](/img/contents/ScreenshotBeispielBapi2.jpg){:class="img-responsive"}
+![ScreenshotBeispielBapi2](/img/contents/ScreenshotBeispielBapi02.jpg){:class="img-responsive"}
