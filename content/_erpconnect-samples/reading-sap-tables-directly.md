@@ -21,7 +21,7 @@ class Class1
 {
     static void Main(string[] args)
     {
-        R3Connection con = new R3Connection("SAPServer",00,"SAPUser","Password","DE","800");
+        R3Connection con = new R3Connection("SAPServer",00,"SAPUser","Password","EN","800");
         con.Open(false);
   
         ERPConnect.Utils.ReadTable table = new ERPConnect.Utils.ReadTable(con);
