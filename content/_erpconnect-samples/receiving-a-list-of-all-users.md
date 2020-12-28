@@ -17,11 +17,10 @@ This function module provides the use of selection parameters, because it contai
 static ArrayList getUserList(string sign, string option, string low, string high)
         { 
   
-            ERPConnect.LIC.SetLic("xxxxxxxxxxxxx"); //Set your ERPConnect License. 
-  
-            R3Connection con = new R3Connection("SAPServer",00,"SAPUser","Password","EN","800");  //Set Connection Properties
-  
-            con.Open(); //Open the SAP Connection       
+            ERPConnect.R3Connection con = new R3Connection("SAPServer",00,"SAPUser","Password","EN","800");
+            ERPConnect.LIC.SetLic("xxxxxxxxxxxxx"); //Set your ERPConnect License.
+
+            con.Open();  //Open the connection to SAP.       
   
             RFCFunction func = con.CreateFunction("BAPI_HELPVALUES_GET");
   
@@ -40,7 +39,7 @@ static ArrayList getUserList(string sign, string option, string low, string high
             sfh["LOW"] = low;
             sfh["HIGH"] = high;
   
-            func.Execut e();
+            func.Execute();
   
             con.Close();
   
