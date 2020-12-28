@@ -19,7 +19,7 @@ static ArrayList getUserList(string sign, string option, string low, string high
   
             ERPConnect.LIC.SetLic("xxxxxxxxxxxxx"); //Set your ERPConnect License. 
   
-            R3Connection con = new R3Connection("SAPServer",00,"SAPUser","Password","DE","800");  //Set Connection Properties
+            R3Connection con = new R3Connection("SAPServer",00,"SAPUser","Password","EN","800");  //Set Connection Properties
   
             con.Open(); //Open the SAP Connection       
   
