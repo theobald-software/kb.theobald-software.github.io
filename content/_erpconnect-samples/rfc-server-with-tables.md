@@ -6,8 +6,6 @@ permalink: /:collection/:path
 weight: 5
 ---
 
-Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
-
 The first sample ([RFC Server]()) only showed the exchange of scalar parameters. The following sample shows how to exchange tables between SAP and .NET using a RFC server.
 
 A table with name NUMBERS is added to the Z_ADD function and the function is renamed to Z_ADD_2. All entries in table NUMBERS in column NUMB should be added by the .NET program.
@@ -21,9 +19,9 @@ static RFCServer s = new RFCServer();
   
 static void Main(string[] args)
 {
-    s.GatewayHost = "hamlet";
-    s.GatewayService = "sapgw11";
-    s.ProgramID = "ERPTEST";
+    s.GatewayHost = "SAPServer";
+    s.GatewayService = "sapgw00";
+    s.ProgramID = "ERPConnectTEST";
   
     s.IncomingCall += new RFCServer.OnIncomingCall(s_IncomingCall);
   
@@ -78,7 +76,7 @@ APPEND numbs.
 numbs-numb = '3'.
 APPEND numbs.
 
-CALL FUNCTION 'Z_ADD_2' DESTINATION 'ERPTEST'
+CALL FUNCTION 'Z_ADD_2' DESTINATION 'ERPConnectTEST'
   IMPORTING
     res     = res
   TABLES
