@@ -280,7 +280,7 @@ Click on **[Extraction by FM]**. Enter the name of the function module Z_RSAX_BI
 
 ![XU create generic datasource 11](/img/contents/xu/xu-create-generic-11.jpg){:class="img-responsive"}
 
-Click on **[Generic Delta]**. Select the timestamp field ZTMSTMP and set the option **[Timestamp]**.
+Click on **[Generic Delta]**. Select the timestamp field ZTMSTMP and set the option **[Time stamp]**.
 
 ![XU create generic datasource 12](/img/contents/xu/xu-create-generic-12.jpg){:class="img-responsive"}
 
