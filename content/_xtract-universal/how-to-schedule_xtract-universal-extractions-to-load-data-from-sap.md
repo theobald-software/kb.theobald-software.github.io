@@ -82,6 +82,8 @@ If you want the task to run more than one extraction, open **[edit]** and go to 
 
 This was just a brief demonstration. The "Task Scheduler" offers more options, please check [Microsoft technet](http://technet.microsoft.com/en-us/library/cc721931.aspx) for more detailed information.
 
+### Alternative tools ###
+
 **SQL Server Agent** <br>
 
 You can also use the SQL Server Agent to schedule the job. <br>
@@ -92,6 +94,6 @@ Create a step of type "Operating System (CmdExec)" and set the command to "C:\Pr
 
 #### References ####
 
-[Xtract Universal](https://theobald-software.com/en/xtract-universal/) - product information
-[Xtract Universal](https://help.theobald-software.com/en/xtract-universal/advanced-techniques/scheduling_extraction) - Scheduling an extraction help section
+[Xtract Universal](https://theobald-software.com/en/xtract-universal/) - product information <br>
+[Xtract Universal](https://help.theobald-software.com/en/xtract-universal/advanced-techniques/scheduling_extraction) - Scheduling an extraction help section <br>
 
