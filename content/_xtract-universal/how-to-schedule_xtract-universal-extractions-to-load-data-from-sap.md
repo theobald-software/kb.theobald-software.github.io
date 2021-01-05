@@ -6,6 +6,8 @@ permalink: /:collection/:path
 weight: 31
 ---
 
+### Content ###
+
 **[Xtract Universal](https://www.theobald-software.com/en/xtract-universa)** supports integration of your SAP data in the most different target systems. <br>
 
 After creating an extraction (Refer to [OnlineHelp](https://help.theobald-software.com/en/xtract-universal/index)), you can run an extraction by just calling the command line tool with the right parameters. <br>
@@ -18,6 +20,8 @@ This article describes how to schedule Xtract Universal extractions with the com
 
 Xtract Universal delivers the command line tool **xu.exe** (to be found in the installation folder, e.g. **C:\Program Files\XtractUniversal\xu.exe** to run an extraction using the command line. <br>
 We will use this approach to schedule an extraction with the "Windows Task Scheduler" and the "SQL Server Agent".
+
+### Step-by-step explanation ###
 
 **Step 1** <br>
 
@@ -83,3 +87,11 @@ This was just a brief demonstration. The "Task Scheduler" offers more options, p
 You can also use the SQL Server Agent to schedule the job. <br>
 
 Create a step of type "Operating System (CmdExec)" and set the command to "C:\Program Files\XtractUniversal\xu.exe" -s localhost -p 8065 -n SAPPlants".
+
+***********
+
+#### References ####
+
+[Xtract Universal](https://theobald-software.com/en/xtract-universal/) - product information
+[Xtract Universal](https://help.theobald-software.com/en/xtract-universal/advanced-techniques/scheduling_extraction) - Scheduling an extraction help section
+
