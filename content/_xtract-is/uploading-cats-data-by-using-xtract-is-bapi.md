@@ -16,8 +16,7 @@ For creating Time Sheet entries in SAP, we use BAPI_CATIMESHEETMGR_INSERT. The i
 The RETURN table contains different types of messages, for example warning, information, error etc. If the input records do not have any errors, then the table CATSRECORDS_OUT will be populated with the same number of input records, otherwise it will not contain any entries. <br>
 
 {: .box-note }
-When we post records using this BAPI, it is to be noted that only records that do not contain errors are posted. If an error occurs during posting, none of the data – including records that do not contain errors – is posted.  
-Therefeore it is advisable to include only a small number of records in each posting.
+**Note:** When we post records using this BAPI, it is to be noted that only records that do not contain errors are posted. If an error occurs during posting, none of the data – including records that do not contain errors – is posted. Therefeore it is advisable to include only a small number of records in each posting.
 
 For example, let us populate 10 entries to CATSRECORDS_IN and execute the BAPI.
 
@@ -53,7 +52,7 @@ After this, create an OLE DB Source and map it with the already created BAPICATS
 
 Then create the BAPI component and assign the BAPI BAPI_CATIMESHEETMGR_INSERT .
 
-For example, let us provide the PROFILE **TEST** and TESTRUN **SPACE** as import parameters. We should map the input type of CATSRECORD_IN as **pipeline** and also the output type of CATSRECORD_OUT and RETURN as **pipeline**.
+For example, let us provide the PROFILE "TEST" and TESTRUN "SPACE"" as import parameters. We should map the input type of CATSRECORD_IN as "Pipeline" and also the output type of CATSRECORD_OUT and RETURN as "Pipeline".
 ![CATS-Bapi_04](/img/contents/xis/CATS-Bapi_04.jpg){:class="img-responsive"}
 ![CATS-Bapi_05](/img/contents/xis/CATS-Bapi_05.jpg){:class="img-responsive"}
 
@@ -81,7 +80,7 @@ BAPICATSOUTPUT:
 
 **Step 4: Execute the application**
 
-Now, the design is finished and lets us execute the application.
+Now that the design is finished let us execute the application.
 
 The output will be as follows.
 ![CATS-Bapi_13](/img/contents/xis/CATS-Bapi_13.jpg){:class="img-responsive"}
@@ -122,6 +121,8 @@ Let us query the table RETURN to identify the error.
 
 By checking the ROW numbers we can easily identify the erroneous records. From the message, it is clear that the attendance/absence type (0005) is not maintained.
 ![CATS-Bapi_23](/img/contents/xis/CATS-Bapi_23.jpg){:class="img-responsive"}
+
+***********
 
 #### References ####
 
