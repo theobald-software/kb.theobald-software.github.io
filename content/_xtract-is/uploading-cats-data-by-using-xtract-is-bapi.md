@@ -62,7 +62,7 @@ Then map corresponding fields of CATSRECORD_IN with the fields of SQL table BAPI
 ![CATS-Bapi_07](/img/contents/xis/CATS-Bapi_07.jpg){:class="img-responsive"}
 ![CATS-Bapi_08](/img/contents/xis/CATS-Bapi_08.jpg){:class="img-responsive"}
 
-**Step3: Prepare the output tables in the SQL Database:**
+**Step3: Prepare the output tables in the SQL Database**
 
 Create two OLE DB destinations for CATSRECORDS_OUT and RETURN tables of the BAPI.
 
