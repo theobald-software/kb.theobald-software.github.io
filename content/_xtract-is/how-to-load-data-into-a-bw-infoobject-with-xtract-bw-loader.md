@@ -38,7 +38,7 @@ Create an RFC Destination XTRACT 01 using the transaction code SM59 (for more in
 
 **Step 2: Create an InfoSource 3.x**
 <br>
-Create an IfoSource 3.x (for more information refer to [SAP help](http://help.sap.com/saphelp_nw04/helpdata/en/2e/20d704d45be7458582cdfcc5487090/frameset.htm)).
+Create an InfoSource 3.x (for more information refer to [SAP help](http://help.sap.com/saphelp_nw04/helpdata/en/2e/20d704d45be7458582cdfcc5487090/frameset.htm)).
 ![data-into-a-bw_06](/img/contents/xis/data-into-a-bw_06.jpg){:class="img-responsive"}
 
 Set the option **[Direct Update of Master Data]** und select the InfoObject ZCUSTOMER.
