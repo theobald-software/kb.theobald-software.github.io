@@ -16,9 +16,9 @@ To realize this business scenario the following platforms and tools were used:
 - ECS Core as SAP integration platform
 - Nintex Workflow Cloud as workflow solution
 
-With **[ECS Core](https://theobald-software.com/ecs-core/)**, Theobald Software provides a connector which enables code and no-code SAP integration for cloud environments and solutions such as Office 365, Nintex Workflow Cloud, Microsoft Flow and many more.
+With **[ECS Core](https://theobald-software.com/ecs-core/)**, Theobald Software provides a connector which enables code and no-code SAP integration for cloud environments and solutions such as Office 365, Nintex Workflow Cloud, Microsoft Power Automate and many more.
 
-For this scenario, ECS Core in combination with **Nintex Workflow Cloud** (NWC) was used. NWC is a very sophisticated workflow solution for process automation in the cloud. Connectors to numerous other cloud applications are provided in NWC.
+For this scenario, ECS Core in combination with **Nintex Workflow Cloud** (NWC) was used. NWC is a workflow solution for process automation in the cloud. Connectors to numerous other cloud applications are provided in NWC.
 
 ### How does it work? ###
 
@@ -55,7 +55,7 @@ The following steps were carried out to realize the project:
 <br>
 Additional information:
 - SAP user roles and authorization profiles are automatically assigned in this example. It would also be possible to delegate this task to the approver and have him enter this information in the approval task form.
-- A key feature of the Nintex Workflow Cloud for realizing this scenario is the ability to use and design task forms. This feature was released for NWC in July 2018. In addition, the scenario should also be feasible with Microsoft Flow as a workflow solution.
+- A key feature of the Nintex Workflow Cloud for realizing this scenario is the ability to use and design task forms. The scenario could lso be realized in combination with Microsoft Power Automate or K2 cloud as workflow solutions.
 
 *****
 Related Links <br>
