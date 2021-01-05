@@ -103,7 +103,7 @@ BWLoader can load data to Infopackages that can be forwarded to other SAP BW obj
 *****
 Related Links <br>
 
-[Xtract IS](https://theobald-software.com/en/xtract-is/) - product information
-[Xtract IS](https://help.theobald-software.com/en/xtract-is/) - OnlineHelp
-[Xtract IS](https://help.theobald-software.com/en/xtract-is/bw-loader) - BOW loader help section
+[Xtract IS](https://theobald-software.com/en/xtract-is/) - product information <br>
+[Xtract IS](https://help.theobald-software.com/en/xtract-is/) - OnlineHelp <br>
+[Xtract IS](https://help.theobald-software.com/en/xtract-is/bw-loader) - BW loader help section <br>
 

@@ -60,9 +60,9 @@ Additional information:
 *****
 Related Links <br>
 
-For technical details on the configuration and on how to use ECS Core in combination with Nintex Workflow Cloud and other solutions please take a look on our **[OnlineHelp](https://help.theobald-software.com/en/ecs-core/)** or contact us.
+For technical details on the configuration and on how to use ECS Core in combination with Nintex Workflow Cloud and other solutions please check our **[OnlineHelp](https://help.theobald-software.com/en/ecs-core/)** or contact us. <br>
 
-You can directly test the workflow by calling up this **[web form](https://theobald.workflowcloud.com/forms/9e48cec6-cc88-49a2-9840-61c3e6de705c)**. All notifications and the approval task are sent to the e-mail address entered in the form. It is only a simulation, no SAP user account is created.
+You can directly test the workflow by calling up this **[web form](https://theobald.workflowcloud.com/forms/9e48cec6-cc88-49a2-9840-61c3e6de705c)**. All notifications and the approval task are sent to the e-mail address entered in the form. It is only a simulation, no SAP user account is created. <br>
 
 We also have a **[Demo Portal](https://theobald-software.com/en/erpconnect-services/demo-portal/)**, where numerous SAP integration cloud scenarios can be viewed and tested.
 
