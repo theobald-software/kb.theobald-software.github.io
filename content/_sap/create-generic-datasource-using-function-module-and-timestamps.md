@@ -46,7 +46,7 @@ Create the function module. <br>
 
 Go to transaction code **SE80** and copy the function group **RSAX** to the new function group **Z_RSAX** and copy the function module **RSAX_BIW_GET_DATA** to **Z_RSAX_BIW_GET_DATA_VBAK**. Be sure to copy and activate all the related objects (interfaces, datatypes etc.).
 
-![XU create generic datasource 06](/img/contents/xu/xu-create-generic-06.jpg){:class="img-responsive"}
+![XU create generic datasource 06](/img/contents/xu/xu-create-generic-06.png){:class="img-responsive"}
 
 ![XU create generic datasource 07](/img/contents/xu/xu-create-generic-07.jpg){:class="img-responsive"}
 
