@@ -6,7 +6,7 @@ permalink: /:collection/:path
 weight: 102
 ---
 
-### Error Desxcription ###
+### Error Description ###
 
 When trying to run the preview in the Xtract Report component, the following Exception occurs - Screen output without connection to user:
 
