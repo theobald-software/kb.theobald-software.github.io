@@ -8,7 +8,7 @@ weight: 11
 
 ### Delta fields ###
 
-For delta functionality you need a delta field. Some tables like **VBAK** (Sales Document: Header Data) don't have a timestamp field for creation/change that we can use as a unique delta field but have separate fields for creation date (<strong>ERDAT</strong>), creation time (<strong>ERZET</strong>) and change date (<strong>AEDAT</strong>). To get the data of the VBAK table by using delta functionality we will create a generic datasource using a custom function module which implements the necessary logic.
+For delta functionality you need a delta field. Some tables like VBAK (Sales Document: Header Data) don't have a timestamp field for creation/change that we can use as a unique delta field but have separate fields for creation date (<strong>ERDAT</strong>), creation time (<strong>ERZET</strong>) and change date (<strong>AEDAT</strong>). To get the data of the VBAK table by using delta functionality we will create a generic datasource using a custom function module which implements the necessary logic.
 
 We will create an extraction structure that has a timestamp field and we will use this field to implement the delta functionality. In this article this concept is explained.
 
@@ -18,11 +18,9 @@ There are two template function modules that can be copied and used:
 
 - RSAX_BIW_GET_DATA: : A function module with complete interface that supports Delta Load. We will use this FM.
 
-### Step 1 ###
+### Step 1: Create an Extract Structure.  ###
 
-Create an Extract Structure. <br>
-
-Go to transaction **SE11** and create a new structure **ZZVBAK**.
+Go to transaction SE11 and create a new structure ZZVBAK.
 
 ![XU create generic datasource 01](/img/contents/xu/xu-create-generic-01.jpg){:class="img-responsive"}
 
@@ -34,23 +32,21 @@ Insert the table VBAK as an include into the structure.
 
 ![XU create generic datasource 04](/img/contents/xu/xu-create-generic-04.jpg){:class="img-responsive"}
 
-Add a field **ZTMSTMP**(Data element: **TZNTSTMPS**, it is of datatype DEC with Length 15). This field will hold the timestamp and allow us to use the extraction for delta purposes.
+Add a field ZTMSTMP(Data element: TZNTSTMPS, it is of datatype DEC with Length 15). This field will hold the timestamp and allow us to use the extraction for delta purposes.
 
 ![XU create generic datasource 05](/img/contents/xu/xu-create-generic-05.jpg){:class="img-responsive"}
 
 Save and activate the structure. This structure will be our extract structure for the datasource.
 
-### Step 2 ###
+### Step 2: Create the function module. ###
 
-Create the function module. <br>
-
-Go to transaction code **SE80** and copy the function group **RSAX** to the new function group **Z_RSAX** and copy the function module **RSAX_BIW_GET_DATA** to **Z_RSAX_BIW_GET_DATA_VBAK**. Be sure to copy and activate all the related objects (interfaces, datatypes etc.).
+Go to transaction code SE80 and copy the function group RSAX to the new function group Z_RSAX and copy the function module RSAX_BIW_GET_DATA to Z_RSAX_BIW_GET_DATA_VBAK. Be sure to copy and activate all the related objects (interfaces, datatypes etc.).
 
 ![XU create generic datasource 06](/img/contents/xu/xu-create-generic-06.png){:class="img-responsive"}
 
 ![XU create generic datasource 07](/img/contents/xu/xu-create-generic-07.jpg){:class="img-responsive"}
 
-Go to **SE37** and open your FM **Z_RSAX_BIW_GET_DATA_VBAK** to edit. In TABLES tab set the parameter **E_T_DATA** to associated type **ZZVBAK**.
+Go to SE37 and open your FM Z_RSAX_BIW_GET_DATA_VBAK to edit. In TABLES tab set the parameter E_T_DATA to associated type ZZVBAK.
 
 ![XU create generic datasource 08](/img/contents/xu/xu-create-generic-08.jpg){:class="img-responsive"}
 
@@ -270,11 +266,9 @@ ENDFUNCTION.
 
 Save and activate the function module.
 
-### Step 3 ### 
+### Step 3: Create the DataSource. ### 
 
-Create the DataSource. <br> 
-
-Go to transaction **RSO2** and create a new DataSource for transaction data and name it to **ZDSVBAK**.
+Go to transaction RSO2 and create a new DataSource for transaction data and name it to ZDSVBAK.
 
 ![XU create generic datasource 09](/img/contents/xu/xu-create-generic-09.jpg){:class="img-responsive"}
 
@@ -282,11 +276,11 @@ Set the Application component and the description texts.
 
 ![XU create generic datasource 10](/img/contents/xu/xu-create-generic-10.jpg){:class="img-responsive"}
 
-Click on **[Extraction by FM]**. Enter the name of the function module **Z_RSAX_BIW_GET_DATA_VBAK** and the extract structure **ZZVBAK**.
+Click on **[Extraction by FM]**. Enter the name of the function module Z_RSAX_BIW_GET_DATA_VBAK and the extract structure ZZVBAK.
 
 ![XU create generic datasource 11](/img/contents/xu/xu-create-generic-11.jpg){:class="img-responsive"}
 
-Click on **[Generic Delta]**. Select the timestamp field **ZTMSTMP** and set the option **Timestamp**.
+Click on **[Generic Delta]**. Select the timestamp field ZTMSTMP and set the option **[Timestamp]**.
 
 ![XU create generic datasource 12](/img/contents/xu/xu-create-generic-12.jpg){:class="img-responsive"}
 
@@ -296,8 +290,8 @@ Click **[Save]** twice. In the following screen you can set the selection fields
 
 ![XU create generic datasource 13](/img/contents/xu/xu-create-generic-13.jpg){:class="img-responsive"}
 
-Now go to transaction **RSA2** to see the details of our DataSource **ZDSVBAK**. The extraction method is set to **F2** (Simple Interface). To change it to **F1** (Complete Interface) 
-execute the following ABAP code. You can go to **SE38** and create a new report with this ABAP code. Unfortunately this is not possible in the GUI. 
+Now go to transaction RSA2 to see the details of our DataSource ZDSVBAK. The extraction method is set to F2 (Simple Interface). To change it to F1 (Complete Interface) 
+execute the following ABAP code. You can go to SE38 and create a new report with this ABAP code. Unfortunately this is not possible in the GUI. 
 
 ``` ABAP
 REPORT ZABAPDEMO
@@ -308,7 +302,7 @@ genflag = 'X'
 WHERE oltpsource = 'ZDSVBAK'
 ```
 
-Go to **RSA2** and display the status of the DataSource **ZDSVBAK** (to confirm, that it is set to F1).
+Go to RSA2 and display the status of the DataSource ZDSVBAK (to confirm, that it is set to F1).
 
 ![XU create generic datasource 14](/img/contents/xu/xu-create-generic-14.jpg){:class="img-responsive"}
 
@@ -316,7 +310,7 @@ Check for errors.
 
 ![XU create generic datasource 15](/img/contents/xu/xu-create-generic-15.jpg){:class="img-responsive"}
 
-This is an optional step: To test the function module go to **SE37** and call it twice - one call for initialization and the second to read data. 
+This is an optional step: To test the function module go to SE37 and call it twice - one call for initialization and the second to read data. 
 This can be used to check whether the FM is functioning correctly.
 
 ![XU create generic datasource 16](/img/contents/xu/xu-create-generic-16.jpg){:class="img-responsive"}
@@ -329,11 +323,11 @@ This was the initialization call. The second call is for getting the data:
 
 ![XU create generic datasource 19](/img/contents/xu/xu-create-generic-19.jpg){:class="img-responsive"}
 
-Be sure that the table **E_T_DATA** contains the data.
+Be sure that the table E_T_DATA contains the data.
 
-### Step 4 ###
+### Step 4: Test the DataSource. ###
 
-Go to transaction **RSA3** to test the datasource.
+Go to transaction RSA3 to test the datasource.
 
 ![XU create generic datasource 20](/img/contents/xu/xu-create-generic-20.jpg){:class="img-responsive"}
 
@@ -341,8 +335,8 @@ Go to transaction **RSA3** to test the datasource.
 
 Now the DataSource is created and you can use the Xtract DeltaQ component to read it. Be sure to activate it via the activate button.
 
-The DataSource supports the **Full** and **Update Delta** mode. To use the Update Delta mode the first call must have the update type **C** (Delta Initialization). 
-All following calls must have the update type **D** (Delta Update). The delta process of the datasource can be monitored and maintained in **RSA7** (Delta Queue).
+The DataSource supports the Full and Update Delta mode. To use the Update Delta mode the first call must have the update type C (Delta Initialization). 
+All following calls must have the update type D (Delta Update). The delta process of the datasource can be monitored and maintained in RSA7 (Delta Queue).
 
 ![XU create generic datasource 22](/img/contents/xu/xu-create-generic-22.jpg){:class="img-responsive"}
 
