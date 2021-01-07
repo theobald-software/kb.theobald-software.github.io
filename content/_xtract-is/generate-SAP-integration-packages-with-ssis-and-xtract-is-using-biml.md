@@ -12,7 +12,8 @@ SQL Server Integration Services (SSIS) is a component of the Microsoft SQL Serve
 
 Xtract IS is an SAP Integration solution for SSIS that provides all kinds of integration with SAP ERP and SAP BW in a secure and type-safe way with a graphical editor.
 
-Business Intelligence Markup Language (Biml) is a domain-specific XML dialect for defining business intelligence (BI) assets. BIML authored BI assets can currently be used by the BIDS Helper add-on for Microsoft SQL Server Business Intelligence Development Studio (BIDS) and the Varigence Mist integrated development environment; both tools translate Biml metadata into SQL Server Integration Services (SSIS) and SQL Server Analysis Services (SSAS) assets for the Microsoft SQL Server platform. However, emitters can be created to compile Biml for any desired BI platform, see [Wikipedia](https://en.wikipedia.org/wiki/Business_Intelligence_Markup_Language).
+Business Intelligence Markup Language (Biml) is a domain-specific XML dialect for defining business intelligence (BI) assets. BIML authored BI assets can currently be used by the BIDS Helper add-on for Microsoft SQL Server Business Intelligence Development Studio (BIDS) and the Varigence Mist integrated development environment; both tools translate Biml metadata into SQL Server Integration Services (SSIS) and SQL Server Analysis Services (SSAS) assets for the Microsoft SQL Server platform. <br> 
+However, emitters can be created to compile BIML for any desired BI platform, see [Wikipedia](https://en.wikipedia.org/wiki/Business_Intelligence_Markup_Language).
 
 In this article it is demonstrated how to use a BIML script to generate an SSIS package that extracts SAP table data using Xtract IS and loads it to an SQL Server.
 
