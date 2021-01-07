@@ -5,17 +5,8 @@ description: Obtain details to a given personal number
 permalink: /:collection/:path
 weight: 17
 ---
-
-
-This code shows how to get detail data to a given personal number.
-
-![HRDemo01](/img/contents/HRDemoCon01.jpg){:class="img-responsive"}
-
-<details>
-<summary>[C#]</summary>
-{% highlight csharp %}
-// Connect to SAP
-  
+### Code Example
+``` c#  
     static void Main(string[] args)
         {
             ERPConnect.R3Connection con = new R3Connection("SAPServer",00,"SAPUser","Password","EN","800");
@@ -64,5 +55,10 @@ This code shows how to get detail data to a given personal number.
             Console.ReadKey();
             
          }
-{% endhighlight %}
-</details>
+```
+
+### Sample Output Screenshot
+
+This code shows how to get detail data to a given personal number.
+
+![HRDemo01](/img/contents/HRDemoCon01.jpg){:class="img-responsive"}
