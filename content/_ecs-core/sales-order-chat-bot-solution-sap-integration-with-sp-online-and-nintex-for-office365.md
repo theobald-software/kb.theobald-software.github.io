@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Cloud scenario for SAP user account creation
-description: cloud-scenario-for-sap-user-account-creation
+title: Sales Order Chat bot solution
+description: sales-order-chat-bot-solution
 permalink: /:collection/:path
 weight: 15
 ---
@@ -19,7 +19,7 @@ To realize this scenario the following platforms and tools were used:
 
 - SAP ERP system on-premise
 - ECS Core as SAP integration platform
-- Nintex Workflow Cloud as workflow solution
+- Nintex Workflow Cloud (or Nintex for Office 365) as workflow solution
 - Microsoft Bot Framework for the chat bot
 
 ### Software Architecture ###
@@ -30,7 +30,7 @@ The architecture of this bot scenario looks as follows:
 On the left hand side we have the user who wants to create a new sales order and enters the preferences in a chat application or in an email. <br>
 The Theobald Software Bot, which is located in the cloud (Microsoft Azure platform), communicates with the user and in the end creates an entry in a custom list in SharePoint Online. <br>
 In this list, all the necessary information to create a sales order in the SAP system is stored (e.g. material number, plant, quantity, delivery date). <br>
-As soon as the new item is created in the SharePoint list, a  Nintex for Office365 workflow is triggered in the background which will first activate an approval process. Only when the assigned person (e.g. manager, coworker) has approved the request, the sales order is submitted to the on-premise SAP system and is posted there.
+As soon as the new item is created in the SharePoint list, a  Nintex Workflos Cloud workflow is triggered in the background which will first activate an approval process. Only when the assigned person (e.g. manager, coworker) has approved the request, the sales order is submitted to the on-premise SAP system and is posted there.
 
 Please take look on the following video where the scenario is presented and described in detail: [Theobald Software Chat Bot Scenario video](https://kb.theobald-software.github.io/img/contents/ecscore).
 
