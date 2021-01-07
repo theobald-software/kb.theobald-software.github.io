@@ -10,7 +10,7 @@ weight: 45
 
 Theobald Software has recently partnered with Snowflake to build a showcase for integrating SAP ERP data into a Snowflake cloud data warehouse. The solution was based on an actual customer case and is described in this article.
 
-### Customer Ned ###
+### Customer Need ###
 
 The customer was looking to replace an existing on-premises data warehouse and analytics toolset with primarily cloud-based services. Critical business data would have to be sourced from SAP ECC (on-premise), in addition to data stored in various databases or flat files.
 
@@ -34,6 +34,6 @@ The SAP data extracts and the load process in Snowflake can be fully automated, 
 #### References ####
 
 [Xtract Universal](https://theobald-software.com/en/xtract-universal/) - product information <br>
-[Xtract Universal](https://help.theobald-software.com/en/xtract-universal/advanced-techniques/scheduling_extraction) - "Snowflake destination OnlineHelp section <br>
+[Xtract Universal](https://help.theobald-software.com/en/xtract-universal/advanced-techniques/scheduling_extraction) - "Snowflake destination" OnlineHelp section <br>
 
 Feel free to email us at [info@theobald-software.com](https://theobald-software.com/kontakt/) if you are interested in more details of this solution or send us your questions and comments.
