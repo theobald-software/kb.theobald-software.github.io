@@ -25,7 +25,7 @@ To realize this scenario the following platforms and tools were used:
 ### Software Architecture ###
 
 The architecture of this bot scenario looks as follows:
-![ecscore_bot_scenario](/img/contents/ecscore/ecscore_bot_scenario.jpg){:class="img-responsive"}
+![ecscore_bot_scenario](/img/contents/ecscore/ecscore_bot_scenario.png){:class="img-responsive"}
 
 On the left hand side we have the user who wants to create a new sales order and enters the preferences in a chat application or in an email. <br>
 The Theobald Software Bot, which is located in the cloud (Microsoft Azure platform), communicates with the user and in the end creates an entry in a custom list in SharePoint Online. <br>
@@ -38,6 +38,8 @@ This video is an excerpt of a demo session held at the Nintex InspireX conferenc
 
 ***********
 
-#### References ####
+#### Related Links ####
 
-If you are interested in the solution or in the topic of SAP process integration with SharePoint or Nintex don’t hesitate to contact us: [info@theobald-software.com](mailto:info@theobald-software.com).
+- [ECS Core](https://theobald-software.com/en/ecs-core/) - product information <br>
+- [ECS Core](https://help.theobald-software.com/en/ecs-core/) - OnlineHelp <br>
+- [ECS Core](https://theobald-software.com/en/ecs-core/demo-portal/) - demo portal <br>
