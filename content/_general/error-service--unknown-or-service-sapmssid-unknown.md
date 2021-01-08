@@ -17,7 +17,7 @@ The problem is that there are sapdp* (eg. sapdp00  3200/tcp) entries missing in 
 Please append the entries in the file *services* you can find at the bottom of this article to your services file.
 
 {: .box-warning }
-**Warning! Service not executable**<br> 
+**Warning! Service not executable**<br>
 The *services* file should not get any extension e.g. *services.txt*. The name should stay *services*.
 
 If you get the 
@@ -38,7 +38,7 @@ sapmsECC 3612/tcp
 ```
 
 {: .box-note }
-**Note:** When inserting this into this file, please ensure that the last entry is always terminated with a `return`. For some platforms, this may cause problems, as the last entry may not be recognized. 
+**Note** When inserting this into this file, please ensure that the last entry is always terminated with a `return`. For some platforms, this may cause problems, as the last entry may not be recognized. 
 
 After editing the file you may need to restart the Xtract service or the machine.   
 
