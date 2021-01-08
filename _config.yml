@@ -57,6 +57,10 @@ content:
   search-box-text: "Search..."
   section-page-default-explanation: "The following knowledge articles are in this section."
   news-overview-page-default-explanation: "All news articles can be found here."
+   info-box-type-warning: "Warning!"
+   info-box-type-note: "Note:"
+   info-box-type-tip: "Tip:"
+   info-box-type-recommendation: "Recommendation:"
 
 ########## SECTION 3 - COLLECTION CONFIGURATIONS ##########
 ########## Languages can easily be added this way.
