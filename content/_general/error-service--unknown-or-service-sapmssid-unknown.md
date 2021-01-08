@@ -16,6 +16,10 @@ The problem is that there are sapdp* (eg. sapdp00  3200/tcp) entries missing in 
 
 Please append the entries in the file *services* you can find at the bottom of this article to your services file.
 
+{: .box-warning }
+**Warning! Service not executable**<br> 
+The *services* file should not get any extension e.g. *services.txt*. The name should stay *services*.
+
 If you get the 
 ```
 ERROR service sapms<SID> unknown 
@@ -32,12 +36,13 @@ For System ID (SID) ECC and instance number 12 please set:
 ```
 sapmsECC 3612/tcp
 ```
-**IMPORTANT**<br>
-When inserting this into this file, please ensure that the last entry is always terminated with a `return`. For some platforms, this may cause problems, as the last entry may not be recognized. 
 
-**WARNING**<br>
-The services file should not get any extension. The name should stay services and should not become e.g. services.txt 
+{: .box-note }
+**Note:** When inserting this into this file, please ensure that the last entry is always terminated with a `return`. For some platforms, this may cause problems, as the last entry may not be recognized. 
 
 After editing the file you may need to restart the Xtract service or the machine.   
 
-[SAP Note 52959](https://launchpad.support.sap.com/#/notes/52959) 
+***********
+#### Related Links
+- [TCP/IP Ports of All SAP Products](https://help.sap.com/viewer/ports)
+- [SAP Note 52959](https://launchpad.support.sap.com/#/notes/52959) 
