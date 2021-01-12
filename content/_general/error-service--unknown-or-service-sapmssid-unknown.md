@@ -16,10 +16,11 @@ The problem is that there are sapdp* (eg. sapdp00  3200/tcp) entries missing in 
 
 Please append the entries in the file *services* you can find at the bottom of this article to your services file.
 
-If you get the 
-```
-ERROR service sapms<SID> unknown 
-```
+If you get the
+
+{: .box-warning }
+ERROR service sapms<SID> unknown
+
 you have to append the following line to the file *services*. nn is the instance number of the SAP system (e.g. 00 or 99).
 ```
 sapms<SID>  36<nn>/tcp  
