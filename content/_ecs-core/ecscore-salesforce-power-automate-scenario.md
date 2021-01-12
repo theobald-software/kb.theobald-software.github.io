@@ -21,9 +21,9 @@ In ECS Core define the connection to your SAP ECC system. This connection will b
 
 ![ecscore_salesforce_Flow_ERPconnect_01](/img/contents/ecscore/ecscore_salesforce_Flow_ERPconnect_01.png){:class="img-responsive"}
 
-**Step 2: Use ECS Core to provide REST Service to create SAP customers.** <br>
+**Step 2: Use ECS Core to provide a REST Service for SAP customer master data creation.** <br>
 
-The WebService Designer tool provided with ECS Core is used to create a REST Service "CreateSAPCustomer" based on a default SAP function module to create customer master data. The REST service has different input parameters about the customers and returns the number of the created SAP customer.
+The WebService Designer tool provided with ECS Core is used to create a REST Service "CreateSAPCustomer" based on a default SAP function module to create customer master data. The REST service has different input parameters covering customer information and returns the number of the created SAP customer.
 
 ![ecscore_salesforce_Flow_ERPconnect_02](/img/contents/ecscore/ecscore_salesforce_Flow_ERPconnect_02.png){:class="img-responsive"}
 
@@ -33,13 +33,13 @@ Deploy the REST service then it can be consumed in the cloud.
 
 ![ecscore_salesforce_Flow_ERPconnect_04](/img/contents/ecscore/ecscore_salesforce_Flow_ERPconnect_04.png){:class="img-responsive"}
 
-**Step 3: Customize your Salesforce Account to provide related fields such as SAP Customer Number.** <br>
+**Step 3: Customize your Salesforce account to provide related fields such as SAP Customer Number.** <br>
 
-In the Salesforce accounts you need to creat some new fields to store the SAP customer number and further details required to create the SAP customer, e.g. SAP Company Code or related sales data like sales organization.
+In the Salesforce account you need to creat some addtional fields to store the SAP customer number and further details required to create the SAP customer, e.g. SAP Company Code or related sales data such as the sales organization.
 
 ![ecscore_salesforce_Flow_ERPconnect_05](/img/contents/ecscore/ecscore_salesforce_Flow_ERPconnect_05.png){:class="img-responsive"}
 
-**Step 4: Use Microsoft Flow to define a workflow to trigger Salesforce Account Changes** <br>
+**Step 4: Use Microsoft Power Automate to define a workflow to trigger Salesforce account Changes** <br>
 
 As a workflow solution Microsoft Power Automate is used to trigger any account changes in Salesforce, where the account type is changed from prospect to customer and no related SAP customer exists. In this case the SAP customer will be created using the Salesforce account data. When the operation is successful, the Salesforce account is updated with the SAP customer number.
 
@@ -47,11 +47,11 @@ As a workflow solution Microsoft Power Automate is used to trigger any account c
 
 **Optional steps** <br> 
 
-In your workflow, you can use further optional steps. In this sample a SharePoint Online list is used to log all synchronized Salesforce accounts to SAP. An additional step can be used to send notifications when a customer has been created.
+In your workflow, you can use further optional steps. In this sample a SharePoint Online list is used to log all synchronized Salesforce accounts to SAP. An additional step could be the sending of notifications when a customer has been created.
 
 ![ecscore_salesforce_Flow_ERPconnect_07](/img/contents/ecscore/ecscore_salesforce_Flow_ERPconnect_07.png){:class="img-responsive"}
 
-Now let's have a closer look and go through the process. 
+Let's have a closer look and go through the process. 
 
 Let us change the account type to customer. As you can see the field SAP ID is empty.
 
@@ -76,3 +76,12 @@ src="https://www.youtube.com/embed/ZCoTA1G5NJQ"
 frameborder="0"
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 allowfullscreen></iframe>
+
+*****
+Related Links <br>
+
+- [ECS Core](https://theobald-software.com/en/ecs-core/) - product information <br>
+- [ECS Core](https://help.theobald-software.com/en/ecs-core/) - OnlineHelp <br>
+- [ECS Core](https://theobald-software.com/en/ecs-core/demo-portal/) - demo portal <br>
+
+

@@ -1,0 +1,13 @@
+current directory: /mnt/c/source/git/kb.theobald-software.github.io/vendor/cache/ruby/2.5.0/gems/json-2.3.0/ext/json
+/usr/bin/ruby2.5 -I /usr/local/lib/site_ruby/2.5.0 -r ./siteconf20201227-56-x6t6d4.rb extconf.rb
+creating Makefile
+
+current directory: /mnt/c/source/git/kb.theobald-software.github.io/vendor/cache/ruby/2.5.0/gems/json-2.3.0/ext/json
+make "DESTDIR=" clean
+
+current directory: /mnt/c/source/git/kb.theobald-software.github.io/vendor/cache/ruby/2.5.0/gems/json-2.3.0/ext/json
+make "DESTDIR="
+make: Nothing to be done for 'all'.
+
+current directory: /mnt/c/source/git/kb.theobald-software.github.io/vendor/cache/ruby/2.5.0/gems/json-2.3.0/ext/json
+make "DESTDIR=" install

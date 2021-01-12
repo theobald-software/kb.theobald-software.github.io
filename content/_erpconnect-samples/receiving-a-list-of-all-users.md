@@ -6,8 +6,6 @@ permalink: /:collection/:path
 weight: 9
 ---
 
-Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
-
 This example acquires the user names and the address data of all users in the SAP system.
 
 Basis for this example is the function module BAPI_HELPVALUES_GET.
@@ -19,16 +17,10 @@ This function module provides the use of selection parameters, because it contai
 static ArrayList getUserList(string sign, string option, string low, string high)
         { 
   
-            ERPConnect.LIC.SetLic("xxxxxxxxxxxxx");
-  
-            R3Connection con = new R3Connection("SAPServer",
-                                                11,
-                                                "SAPUser",
-                                                "Password",
-                                                "en",
-                                                "800");            
-  
-            con.Open();            
+            ERPConnect.R3Connection con = new R3Connection("SAPServer",00,"SAPUser","Password","EN","800");
+            ERPConnect.LIC.SetLic("xxxxxxxxxxxxx"); //Set your ERPConnect License.
+
+            con.Open();  //Open the connection to SAP.       
   
             RFCFunction func = con.CreateFunction("BAPI_HELPVALUES_GET");
   
@@ -47,7 +39,7 @@ static ArrayList getUserList(string sign, string option, string low, string high
             sfh["LOW"] = low;
             sfh["HIGH"] = high;
   
-            func.Execut e();
+            func.Execute();
   
             con.Close();
   

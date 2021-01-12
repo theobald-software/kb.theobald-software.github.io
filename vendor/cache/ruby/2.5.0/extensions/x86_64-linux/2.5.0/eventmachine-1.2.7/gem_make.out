@@ -1,0 +1,16 @@
+current directory: /mnt/c/source/git/kb.theobald-software.github.io/vendor/cache/ruby/2.5.0/gems/eventmachine-1.2.7/ext/fastfilereader
+/usr/bin/ruby2.5 -I /usr/local/lib/site_ruby/2.5.0 -r ./siteconf20201227-56-ch9uoe.rb extconf.rb
+creating Makefile
+
+current directory: /mnt/c/source/git/kb.theobald-software.github.io/vendor/cache/ruby/2.5.0/gems/eventmachine-1.2.7/ext/fastfilereader
+make "DESTDIR=" clean
+
+current directory: /mnt/c/source/git/kb.theobald-software.github.io/vendor/cache/ruby/2.5.0/gems/eventmachine-1.2.7/ext/fastfilereader
+make "DESTDIR="
+compiling mapper.cpp
+compiling rubymain.cpp
+linking shared-object fastfilereaderext.so
+
+current directory: /mnt/c/source/git/kb.theobald-software.github.io/vendor/cache/ruby/2.5.0/gems/eventmachine-1.2.7/ext/fastfilereader
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 fastfilereaderext.so ./.gem.20201227-56-1viphvp

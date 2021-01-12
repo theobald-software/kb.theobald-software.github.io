@@ -6,6 +6,8 @@ permalink: /:collection/:path
 weight: 10
 ---
 
+### Content ###
+
 This article is about how to create SAP user accounts from the cloud.
 
 To realize this business scenario the following platforms and tools were used:
@@ -14,11 +16,11 @@ To realize this business scenario the following platforms and tools were used:
 - ECS Core as SAP integration platform
 - Nintex Workflow Cloud as workflow solution
 
-With **ECS Core**, Theobald Software provides a connector which enables code and no-code SAP integration for cloud environments and solutions such as Office 365, Nintex Workflow Cloud, Microsoft Flow and many more.
+With **[ECS Core](https://theobald-software.com/ecs-core/)**, Theobald Software provides a connector which enables code and no-code SAP integration for cloud environments and solutions such as Office 365, Nintex Workflow Cloud, Microsoft Power Automate and many more.
 
-For this scenario, ECS Core in combination with **Nintex Workflow Cloud** (NWC) was used. NWC is a very sophisticated workflow solution for process automation in the cloud. Connectors to numerous other cloud applications are provided in NWC.
+For this scenario, ECS Core in combination with **Nintex Workflow Cloud** (NWC) was used. NWC is a workflow solution for process automation in the cloud. Connectors to numerous other cloud applications are provided in NWC.
 
-How does it work?
+### How does it work? ###
 
 The workflow operates as follows:
 
@@ -40,7 +42,7 @@ After submitting this information, SAP integration takes place and the SAP user 
 ![ecscore_SAP-User-Creation_04](/img/contents/ecscore/ecscore_SAP-User-Creation_04.png){:class="img-responsive"}
 ![ecscore_SAP-User-Creation_05](/img/contents/ecscore/ecscore_SAP-User-Creation_05.png){:class="img-responsive"}
 
-How was the scenario realized?
+### How was the scenario realized? ###
 
 The following steps were carried out to realize the project:
 <br>
@@ -53,11 +55,14 @@ The following steps were carried out to realize the project:
 <br>
 Additional information:
 - SAP user roles and authorization profiles are automatically assigned in this example. It would also be possible to delegate this task to the approver and have him enter this information in the approval task form.
-- A key feature of the Nintex Workflow Cloud for realizing this scenario is the ability to use and design task forms. This feature was released for NWC in July 2018. In addition, the scenario should also be feasible with Microsoft Flow as a workflow solution.
+- A key feature of the Nintex Workflow Cloud for realizing this scenario is the ability to use and design task forms. The scenario could lso be realized in combination with Microsoft Power Automate or K2 cloud as workflow solutions.
 
-For technical details on the configuration and on how to use ECS Core in combination with Nintex Workflow Cloud and other solutions please take a look on our [OnlineHelp](https://help.theobald-software.com/en/ecs-core/) or contact us.
+*****
+Related Links <br>
 
-You can directly test the workflow by calling up this [webform](https://theobald.workflowcloud.com/forms/9e48cec6-cc88-49a2-9840-61c3e6de705c). All notifications and the approval task are sent to the e-mail address entered in the form. It is only a simulation, no SAP user account is created.
+For technical details on the configuration and on how to use ECS Core in combination with Nintex Workflow Cloud and other solutions please check our **[OnlineHelp](https://help.theobald-software.com/en/ecs-core/)** or contact us. <br>
 
-We also have a [demo portal](https://theobald-software.com/en/erpconnect-services/demo-portal/), where numerous SAP integration cloud scenarios can be viewed and tested.
+You can directly test the workflow by calling up this **[web form](https://theobald.workflowcloud.com/forms/9e48cec6-cc88-49a2-9840-61c3e6de705c)**. All notifications and the approval task are sent to the e-mail address entered in the form. It is only a simulation, no SAP user account is created. <br>
+
+We also have a **[Demo Portal](https://theobald-software.com/en/erpconnect-services/demo-portal/)**, where numerous SAP integration cloud scenarios can be viewed and tested.
 

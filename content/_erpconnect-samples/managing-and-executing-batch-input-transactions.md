@@ -6,7 +6,7 @@ permalink: /:collection/:path
 weight: 3
 ---
 
-Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
+Working up to SAP GUI 7.50
 
 The class Transaction offers the possibility of executing SAP transactions in the foreground as well as in a background process. This technique is called Batch Input. By executing in a background process, you will be able to process mass data and transfer it to the SAP system. This technique is often used if no BAPI exists.
 
@@ -38,7 +38,7 @@ private void button1_Click(object sender, System.EventArgs e)
    R3Connection r3Connection1= new R3Connection("SAPServer",00,"SAPUser","Password","EN","800");
      r3Connection1.Open(false);
      // Run
-     transaction1.Execut e();
+     transaction1.Execute();
   
 }
 {% endhighlight %}
@@ -67,7 +67,7 @@ Private Sub button1_Click(ByVal sender As System.Object, _
   
         Dim r3Connection1 As New R3Connection("SAPServer",00,"SAPUser","Password","EN","800")
         con.Open(False)
-            transaction1.Execut e()
+            transaction1.Execute()
          
   
     End Sub

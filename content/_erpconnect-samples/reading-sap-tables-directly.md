@@ -6,11 +6,9 @@ permalink: /:collection/:path
 weight: 1
 ---
 
-Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
-
 A recurrent task in daily work with SAP and .NET applications is to read directly from tables of the SAP system. You can use the ReadTable class to manage this demand. The sample below shows how to select data from the table. The result is passed back via an easy-to-use ADO.net table object.
 
-In this sample we want to read material description texts which are located in the table MAKT. So we need the two columns MATNR (material number) and MAKTX (material description). Furthermore we want only the German texts so we have to add the WHERE statement SPRAS='DE'. SPRAS is the column which contains the language keys. The method Run executes the query and passes back the ADO.net table.
+In this sample we want to read material description texts which are located in the table MAKT. So we need the two columns MATNR (material number) and MAKTX (material description). Furthermore we want only the English texts so we have to add the WHERE statement SPRAS='EN'. SPRAS is the column which contains the language keys. The method Run executes the query and passes back the ADO.net table.
 
 <details>
 <summary>[C#]</summary>
@@ -23,13 +21,15 @@ class Class1
 {
     static void Main(string[] args)
     {
-        R3Connection con = new R3Connection("hamlet",11,"theobald","pw","DE","800");
-        con.Open(false);
+        ERPConnect.R3Connection con = new R3Connection("SAPServer",00,"SAPUser","Password","EN","800");
+        ERPConnect.LIC.SetLic("xxxxxxxxxxxxx"); //Set your ERPConnect License.
+
+        con.Open();  //Open the connection to SAP.
   
         ERPConnect.Utils.ReadTable table = new ERPConnect.Utils.ReadTable(con);
         table.AddField("MATNR");
         table.AddField("MAKTX");
-        table.AddCriteria("SPRAS = 'DE'");    
+        table.WhereClause = "SPRAS = 'EN'";    
         table.TableName = "MAKT";
         table.RowCount = 10;
   
@@ -61,12 +61,12 @@ Module Module1
   
     Sub Main()
         Dim con As New R3Connection
-        con.Host = "Hamlet"
-        con.SystemNumber = 11
-        con.UserName = "Theobald"
-        con.Password = "pw"
-        con.Client = "800"
-        con.Language = "DE"
+        con.Host = "SAPServer"
+        con.SystemNumber = 00
+        con.UserName = "SAPUSer"
+        con.Password = "Password"
+        con.Client = "100"
+        con.Language = "EN"
   
         con.Open(False)
   
@@ -75,7 +75,7 @@ Module Module1
         table.AddField("MATNR")
         table.AddField("MAKTX")
   
-        table.AddCriteria("SPRAS = 'DE'")
+        table.WhereClause = "SPRAS = 'DE'"
   
         table.TableName = "MAKT"
         table.RowCount = 10
