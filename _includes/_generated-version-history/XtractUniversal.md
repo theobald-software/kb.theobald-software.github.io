@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.24.1 [M]|2021-01-13|Server|Fix for ambiguous local timestamps during daylight saving time transition|
 |4.24.0 [L]|2021-01-08|Destinations|Removed OData destination|
 |[4.23.0 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-4.23.0.html)|2021-01-07|Destinations|Removed support for Tableau TDE([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-4.23.0.html))|
 |4.22.1 [L]|2020-12-18|Destinations|Updated Exasol data provider to version 7.0.4 and improved write performance to support larger packages.|
