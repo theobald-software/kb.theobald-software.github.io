@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.7.1 [M]|2021-01-13|Server|Fix for ambiguous local timestamps during daylight saving time transition|
 |4.7.0 [L]|2020-11-11|Setup|New Setup|
 |[4.6.0 [M]](https://kb.theobald-software.com/release-notes/BOARDConnector-4.6.0.html)|2020-11-06|Server|Web server access can now be restricted to custom users([Release note](https://kb.theobald-software.com/release-notes/BOARDConnector-4.6.0.html))|
 |4.5.5 [M]|2020-10-12|Table|New/removed/renamed columns are now properly updated in GUI during metadata refresh|
