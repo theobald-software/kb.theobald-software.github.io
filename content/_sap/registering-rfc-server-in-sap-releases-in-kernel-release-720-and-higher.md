@@ -22,7 +22,12 @@ You can change the Profile Parameter *gw/acl_mode* in the SAP transaction *RZ10*
 ![SAP_parameter](/img/contents/parameter_gw_acl_mode.png){:class="img-responsive"}
 
 ### Alternative II
-You can define a White-list of Programs that can register at the SAP Gateway. To do so, you have to create two files named *secinfo* and *reginfo*. Both files don't existing per default.
+You can define a whitelist of programs that can register at the SAP Gateway. To do so, you have to create two files named *secinfo* and *reginfo*. Both files don't exist per default.
+
+{: .box-warning }
+**Warning! Registration of the RFC-server fails!**<br>
+The content of both files *secinfo* and *reginfo* overrides the parameter *gw/acl_mode*. <br>
+Make sure that both files *secinfo* and *reginfo* allows the registration of the RFC-server. See the example below. 
 
 The first file secinfo has to contain the following lines:
 ```
@@ -54,7 +59,7 @@ After restarting the Gateway or rereading the security parameters by using SAP t
 After the external security file(s) reread, the Customizing Check will execute without error messages.
 
 ****
-See also: 
+#### Related Links 
 - [SAP Help: Gateway Security Files secinfo and reginfo](https://help.sap.com/viewer/62b4de4187cb43668d15dac48fc00732/7.3.20/en-US/e216d0427a2440fc8bfc25e786b8e11c.html)
 - Official [SAP Note 1850230](https://launchpad.support.sap.com/#/notes/0001850230) (ONE Support Launchpad account required)
 - [SAP Community blog](http://scn.sap.com/docs/DOC-42463)
