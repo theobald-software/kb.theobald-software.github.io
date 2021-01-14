@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.0.9 [L]|2021-01-14|General|Fix for default console encoding with preambles|
 |1.0.8 [M]|2020-06-08|General|Fixed a bug that allowed dots in names|
 |1.0.7 [L]|2020-05-19|General|TheoAuth implementation is async now|
 |1.0.6 [M]|2020-05-18|General|Fix for AggregateException in StreamExtensions|
