@@ -13,7 +13,7 @@ As of Kernel Release 720, you can use the parameter *gw/acl_mode* to set an init
 
 Regarding this faulty behaviour, following alternative settings can be adjusted in the corresponding SAP source system.
 
-#### Alternative I
+### Alternative I
 You can change the Profile Parameter *gw/acl_mode* in the SAP transaction *RZ10* to 0 (default value of the parameter is 1). All RFC-Destinations/ RFC-Server with different Program IDs e.g., XTRACT01 can register.
 
 1. Open 'Edit Profile' using SAP transaction *RZ10*
@@ -21,7 +21,7 @@ You can change the Profile Parameter *gw/acl_mode* in the SAP transaction *RZ10*
 3. Click *Change* and edit the parameter value to *0*
 ![SAP_parameter](/img/contents/parameter_gw_acl_mode.png){:class="img-responsive"}
 
-#### Alternative II
+### Alternative II
 You can define a White-list of Programs that can register at the SAP Gateway. To do so, you have to create two files named *secinfo* and *reginfo*. Both files don't existing per default.
 
 The first file secinfo has to contain the following lines:
