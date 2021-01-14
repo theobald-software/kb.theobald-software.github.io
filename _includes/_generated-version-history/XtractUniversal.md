@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.24.2 [L]|2021-01-14|Designer|General improvements for the certificate select window|
 |4.24.1 [M]|2021-01-13|Server|Fix for ambiguous local timestamps during daylight saving time transition|
 |4.24.0 [L]|2021-01-08|Destinations|Removed OData destination|
 |[4.23.0 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-4.23.0.html)|2021-01-07|Destinations|Removed support for Tableau TDE([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-4.23.0.html))|
