@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.14.0 [L]|2021-01-15|General|CsvReader class which implements reading CSV data as specified in RFC4180. (Beta)|
 |2.13.12 [M]|2021-01-13|General|Fix for ambiguous timestamps during daylight saving time transition|
 |2.13.11 [L]|2021-01-07|General|JsonReader ReadBooleans() and ReadDoubles() added for arrays|
 |2.13.10 [L]|2020-12-03|General|Fix for CrLf handling in CharsToLines, including UnitTests; LineToCells for splitting CSV lines into the cells.|
