@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.15.10 [L]|2021-01-18|Hierarchy|Fixed version numbers of Theobald.Extractors.Hierarchy.dll and Theobald.Extractors.Hierarchy.Gui.dll|
 |1.15.9 [M]|2020-12-17|ODP|Fixed an issue where init simulations (delta initializations without extracting data) could cause subsequent delta requests to not load any data|
 |1.15.8 [M]|2020-11-06|Table|Fix for empty packages when using NWRFC + Z_THEO_READ_TABLE|
 |1.15.7 [L]|2020-10-29|General|Table and ODP: Reference fields (and tables) for currencies and quantities are now saved|
