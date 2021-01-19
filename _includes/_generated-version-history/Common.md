@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|[2.14.1 [L]](https://kb.theobald-software.com/release-notes/Common-2.14.1.html)|2021-01-19|General|Fix for writing TimeSpan on JsonWriter class([Release note](https://kb.theobald-software.com/release-notes/Common-2.14.1.html))|
 |2.14.0 [L]|2021-01-15|General|CsvReader class which implements reading CSV data as specified in RFC4180. (Beta)|
 |2.13.12 [M]|2021-01-13|General|Fix for ambiguous timestamps during daylight saving time transition|
 |2.13.11 [L]|2021-01-07|General|JsonReader ReadBooleans() and ReadDoubles() added for arrays|
