@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.14.7 [L]|2021-01-20|RFCServer|Improvements for NWRFC multithreading|
 |6.14.6 [L]|2021-01-04|LINQtoERP|BWCube: Fix for SingleRange.Option|
 |6.14.5 [L]|2020-12-17|General|Workaround for Tables containing empty lines, when using NWRFC libraries with big endian systems|
 |6.14.4 [M]|2020-12-16|RFCFunction.Tables|Fixed a bug where setting IsSupplied to false for at least one table in a function module with multiple tables caused errors when using classic RFC|
