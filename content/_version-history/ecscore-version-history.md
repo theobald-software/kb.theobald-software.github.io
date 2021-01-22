@@ -3,7 +3,7 @@ layout: page
 title: ECS Core Version History
 description: ECS Core Version History
 permalink: /:collection/:path
-weight: 20
+weight: 60
 ---
 
 For communication with the SAP system, ECSCore uses [ERPConnect](./erpconnect-version-history).

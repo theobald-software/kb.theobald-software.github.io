@@ -3,7 +3,7 @@ layout: page
 title: Xtract Kernel Version History
 description: Xtract Kernel Version History
 permalink: /:collection/:path
-weight: 70
+weight: 110
 ---
 
 The Xtract Kernel contains core extraction logic and is used by the following products:
