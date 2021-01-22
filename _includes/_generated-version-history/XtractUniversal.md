@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.25.0 [L]|2021-01-22|Security|Column level encryption for the Destinations File-CSV, AWS S3 (CSV) and Azure Storage (CSV)|
 |4.24.3 [L]|2021-01-22|Designer|Column filter and several other improvements and fixes for the main window|
 |4.24.2 [L]|2021-01-14|Designer|General improvements for the certificate select window|
 |4.24.1 [M]|2021-01-13|Server|Fix for ambiguous local timestamps during daylight saving time transition|
