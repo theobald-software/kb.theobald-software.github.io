@@ -41,7 +41,7 @@ However, with short interval scheduling and heavy parallelism, dedicated package
 
 ### Errors during DeltaQ setup
 - **When doing the DeltaQ Customizing Step 3 (RSAP_BIW_CONNECT_40 ) you get a PORT_CREATION_ERROR in transaction SE37.**
-* Please see this [kb article](https://kb.theobald-software.com/sap/PORT_CREATION_ERROR)
+* Please see this [kb article](https://kb.theobald-software.com/troubleshooting/port_creation_error)
 
 
 #### The customizing check is showing red indicators that are not related to missing authority objects.
