@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.14.3 [L]|2021-01-22|General|7Bit encoding stream extensions for i32 and BigInteger|
 |2.14.2 [L]|2021-01-20|General|Fixed a bug where the CSVReader would not correctly signal a new line, Fixed a bug where the CSVReader would ignore a line break after a quoted cell|
 |[2.14.1 [L]](https://kb.theobald-software.com/release-notes/Common-2.14.1.html)|2021-01-19|General|Fix for writing TimeSpan on JsonWriter class([Release note](https://kb.theobald-software.com/release-notes/Common-2.14.1.html))|
 |2.14.0 [L]|2021-01-15|General|CsvReader class which implements reading CSV data as specified in RFC4180. (Beta)|

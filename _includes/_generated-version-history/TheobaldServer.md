@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.0.11 [L]|2021-01-22|General|Rpc commands for column level encryption configuration|
 |1.0.10 [L]|2021-01-19|General|Fix for bug introduced in 1.0.9 when running as Windows Application|
 |1.0.9 [L]|2021-01-14|General|Fix for default console encoding with preambles|
 |1.0.8 [M]|2020-06-08|General|Fixed a bug that allowed dots in names|
