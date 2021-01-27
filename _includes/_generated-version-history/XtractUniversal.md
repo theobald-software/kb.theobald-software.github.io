@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.25.3 [L]|2021-01-27|General|Fixed a bug where the an unsupported file type was selectable in S3 and Azure Storage destinations. Fixed an issue in the Destination-Details window, where the resizing did not work properly. Fixed the logging when running extractions with column encryption enabled.|
 |4.25.2 [M]|2021-01-27|Server|Fixed a bug where the /metadata HTTP API did not work when date conversion was enabled in the destination settings. This affected our external plugins (i.e. Alteryx & Power BI Connector/Script) (Bug introduced in 4.25.0)|
 |4.25.1 [L]|2021-01-27|Designer|Fix for Designer disconnection handling|
 |4.25.0 [L]|2021-01-22|Security|Column level encryption for the Destinations File-CSV, AWS S3 (CSV) and Azure Storage (CSV)|
