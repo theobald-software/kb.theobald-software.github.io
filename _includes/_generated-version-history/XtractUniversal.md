@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.25.2 [M]|2021-01-27|Server|Fixed a bug where the /metadata HTTP API did not work when date conversion was enabled in the destination settings. This affected our external plugins (i.e. Alteryx & Power BI Connector/Script) (Bug introduced in 4.25.0)|
 |4.25.1 [L]|2021-01-27|Designer|Fix for Designer disconnection handling|
 |4.25.0 [L]|2021-01-22|Security|Column level encryption for the Destinations File-CSV, AWS S3 (CSV) and Azure Storage (CSV)|
 |4.24.3 [L]|2021-01-22|Designer|Column filter and several other improvements and fixes for the main window|
