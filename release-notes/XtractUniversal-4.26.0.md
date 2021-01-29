@@ -13,5 +13,5 @@ layout: releaseNotes
 
 # Additional changes
 
-* File splitting uses the JEDEC defintion of MB now, i. e. it counts powers of two instead of ten (all destinations)
+* File splitting uses the JEDEC definition of MB now, i. e. it counts powers of two instead of ten (all destinations)
 * Folder name for Azure Storage is written to extraciton log
