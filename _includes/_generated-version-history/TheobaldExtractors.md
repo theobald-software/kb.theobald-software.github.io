@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.16.1 [L]|2021-02-01|ODP|Fixed an issue where extractions would fail for big-endian SAP systems when NetWeaver libraries were used|
 |1.16.0 [L]|2021-01-22|General|Column level encryption support|
 |1.15.10 [L]|2021-01-18|Hierarchy|Fixed version numbers of Theobald.Extractors.Hierarchy.dll and Theobald.Extractors.Hierarchy.Gui.dll|
 |1.15.9 [M]|2020-12-17|ODP|Fixed an issue where init simulations (delta initializations without extracting data) could cause subsequent delta requests to not load any data|
