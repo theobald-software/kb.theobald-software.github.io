@@ -109,12 +109,10 @@ S_RFC            RFC_TYPE=FUGR; RFC_NAME=ZXTRACTABAP; ACTVT=16
 S_GUI            ACTVT=61 
 ```
 
-The needed transport request is located in the following path: ```C:\Program Files\[XtractProduct]\ABAP\thtrans.zip``` of the default installation.
-
 Look up a report, preview and execute the report in a batch job.
 
 ```
-S_RFC            RFC_TYPE=FUGR; RFC_NAME=XXXXX; ACTVT=16
+S_RFC            RFC_TYPE=FUGR; RFC_NAME=ZXTRACTABAP; ACTVT=16
 S_TABU_DIS       ACTVT=03; DICBERCLS=&NC& 
 S_TABU_DIS       ACTVT=03; DICBERCLS=SS
 S_BTCH_ADM       BTCADMIN=Y
@@ -122,7 +120,8 @@ S_BTCH_JOB       JOBGROUP=*; JOBACTION=RELE
 S_GUI            ACTVT=61
 ```
 
-XXXXX (stands for a placeholder) is the function group to which the function module Z_XTRACT_IS_REMOTE_REPORT belongs to.
+{: .box-note }
+**Note** The needed transport request for function group *ZXTRACTABAP* is located in the following path: ```C:\Program Files\[XtractProduct]\ABAP\thtrans.zip``` of the default installation.
 
 
 ### ODP
