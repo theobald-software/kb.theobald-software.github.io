@@ -52,10 +52,6 @@ If the table is not listed there the authority group is &NC&. For authorizing sp
 {: .box-note }
 **Note** The needed transport request for function group *Z_THEO_READ_TABLE* is located in the following path: ```C:\Program Files\[XtractProduct]\ABAP``` of the default installation.
 
-```
-S_RFC            RFC_TYPE=FUGR; RFC_NAME=XXXX; ACTVT=16  
-```
-
 When executing our custom function module Z_THEO_READ_TABLE in background:
 
 ```
