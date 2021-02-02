@@ -40,8 +40,7 @@ S_TABU_NAM       ACTVT=03; TABLE=ENLFDIR
 or use the following separate authority check for each table to read: 
 
 ```
-S_RFC            RFC_TYPE=FUGR; RFC_NAME=SDTX; ACTVT=16                  
-S_RFC            RFC_TYPE=FUGR; RFC_NAME=SDIFRUNTIME; ACTVT=16
+S_RFC            RFC_TYPE=FUGR; RFC_NAME=SDTX, SDIFRUNTIME, Z_THEO_READ_TABLE; ACTVT=16                  
 S_TABU_DIS       ACTVT=03; DICBERCLS=XXXX
 S_TABU_NAM       ACTVT=03; TABLE=DD02V
 S_TABU_NAM       ACTVT=03; TABLE=ENLFDIR
@@ -50,7 +49,8 @@ S_TABU_NAM       ACTVT=03; TABLE=ENLFDIR
 XXXX (stands for a placeholder) is the Authority Group for the table. To find out, which authority group belongs to which table look at table TDDAT (e.g. with SE16). 
 If the table is not listed there the authority group is &NC&. For authorizing specific tables please use authorization object S_TABU_NAM instead of S_TABU_DIS.
 
-If our custom function modules like Z_THEO_READ_TABLE, Z_XTRACT_IS_TABLE_JOIN are used (XXXX (stands for a placeholder) is the name of the function group to which the custom function module belongs):
+{: .box-note }
+**Note** The needed transport request for function group *Z_THEO_READ_TABLE* is located in the following path: ```C:\Program Files\[XtractProduct]\ABAP``` of the default installation.
 
 ```
 S_RFC            RFC_TYPE=FUGR; RFC_NAME=XXXX; ACTVT=16  
