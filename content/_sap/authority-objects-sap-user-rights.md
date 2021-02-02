@@ -105,12 +105,11 @@ S_RFC            RFC_TYPE=FUGR; RFC_NAME=AQRC; ACTVT=16
 Look up report, preview und execute:
 
 ```
-S_RFC            RFC_TYPE=FUGR; RFC_NAME=XXXX; ACTVT=16
+S_RFC            RFC_TYPE=FUGR; RFC_NAME=ZXTRACTABAP; ACTVT=16
 S_GUI            ACTVT=61 
 ```
 
-XXXX (stands for a placeholder) is the name of the function group to which the custom function module Z_XTRACT_IS_REMOTE_REPORT belongs.
-
+The needed transport request is located in the following path: `C:\Program Files\[XtractProduct]\ABAP\thtrans.zip` of the default installation.
 
 Look up a report, preview and execute the report in a batch job.
 
