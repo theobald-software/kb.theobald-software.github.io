@@ -109,7 +109,7 @@ S_RFC            RFC_TYPE=FUGR; RFC_NAME=ZXTRACTABAP; ACTVT=16
 S_GUI            ACTVT=61 
 ```
 
-The needed transport request is located in the following path: `C:\Program Files\[XtractProduct]\ABAP\thtrans.zip` of the default installation.
+The needed transport request is located in the following path: ```C:\Program Files\[XtractProduct]\ABAP\thtrans.zip``` of the default installation.
 
 Look up a report, preview and execute the report in a batch job.
 
