@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.16.3 [M]|2021-02-05|Table|Fixed a bug where fetching the field metadata for views would not work if multiple fields of the view referenced the same table fields.|
 |1.16.2 [L]|2021-02-05|Table|Fixed a bug where field descriptions of views would not be fetched on newer SAP BW systems.|
 |1.16.1 [L]|2021-02-01|ODP|Fixed an issue where extractions would fail for big-endian SAP systems when NetWeaver libraries were used|
 |1.16.0 [L]|2021-01-22|General|Column level encryption support|
