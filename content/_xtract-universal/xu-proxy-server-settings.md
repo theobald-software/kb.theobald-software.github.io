@@ -19,8 +19,19 @@ When connecting to a destination in Xtract Universal the connection will always 
 
 ### XU application specific ###
 This can be achieved following the [Microsoft guidelines](https://docs.microsoft.com/en-us/dotnet/framework/network-programming/proxy-configuration).
-Modify the *XtractRun.exe.config'*and the *XtractDesigner.exe.config* files, that can be found in the Xtract Universal installation folder.
-For *proxyaddress* set the IP address of your proxy server: 
+Modify the *XtractRun.exe.config'*and the *XtractDesigner.exe.config* files, that can be found in the Xtract Universal installation folder. <br>
+Enter the following section in both files: 
+``` XML
+<system.net>
+    <defaultProxy>
+        <proxy  proxyaddress="http://[My_Proxyserver]:3128"
+                bypassonlocal="True"
+        />
+    </defaultProxy>
+</system.net>
+```
+
+For *My_Proxyserver* set the IP address of your proxy server: 
 ![XU-proxy-settings-02](/img/contents/xu/xu-proxy-settings-02.png){:class="img-responsive"}
 ![XU-proxy-settings-03](/img/contents/xu/xu-proxy-settings-03.png){:class="img-responsive"}
 
