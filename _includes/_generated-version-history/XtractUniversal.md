@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.26.2 [H]|2021-02-08|Destinations|Parquet: Fixed a bug where NULL values could cause invalid files|
 |4.26.1 [L]|2021-01-29|Server|xu-config (experimental): Fix for "License has expired" error|
 |[4.26.0 [M]](https://kb.theobald-software.com/release-notes/XtractUniversal-4.26.0.html)|2021-01-29|Destinations|Azure Storage: Added support for script expressions in folder names([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-4.26.0.html))|
 |4.25.3 [L]|2021-01-27|General|Fixed a bug where an unsupported file type was selectable in S3 and Azure Storage destinations. Fixed an issue in the Destination-Details window, where the resizing did not work properly. Fixed the logging when running extractions with column encryption enabled.|
