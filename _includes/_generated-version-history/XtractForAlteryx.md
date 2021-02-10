@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.11.0 [M]|2021-02-10|BAPI|The tool now supports EXPORT parameters that will be merged and output into the E pipeline. Table EXPORT parameters will be mapped to connections 1-5.|
 |1.10.0 [L]|2020-11-03|Setup|New Setup|
 |1.9.6 [L]|2020-09-11|Designer|New about window|
 |1.9.5 [L]|2020-09-07|ODP|Added 'update mode' run parameter|
