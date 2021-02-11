@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.27.0 [L]|2021-02-11|Designer|New run extraction window|
 |4.26.2 [H]|2021-02-08|Destinations|Parquet: Fixed a bug where NULL values could cause invalid files|
 |4.26.1 [L]|2021-01-29|Server|xu-config (experimental): Fix for "License has expired" error|
 |[4.26.0 [M]](https://kb.theobald-software.com/release-notes/XtractUniversal-4.26.0.html)|2021-01-29|Destinations|Azure Storage: Added support for script expressions in folder names([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-4.26.0.html))|
