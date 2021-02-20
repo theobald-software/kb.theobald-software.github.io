@@ -27,23 +27,20 @@ S_RFC            RFC_TYPE=FUGR; RFC_NAME=RFC1; ACTVT=16
 
 ### Table
 
-Look up tables and table meta data:
+Look up tables and table metadata e.g., primary keys & indexed table fields:
 
 ```
-S_RFC            RFC_TYPE=FUGR; RFC_NAME=SDTX; ACTVT=16                  
-S_RFC            RFC_TYPE=FUGR; RFC_NAME=SDIFRUNTIME; ACTVT=16           
-S_TABU_DIS       ACTVT=03; DICBERCLS=&NC&
-S_TABU_DIS       ACTVT=03; DICBERCLS=SS
+S_RFC            ACTVT=16; RFC_TYPE=FUGR; RFC_NAME=SDTX, SDIFRUNTIME                
+S_TABU_DIS       ACTVT=03; DICBERCLS=&NC&, SS
 S_TABU_NAM       ACTVT=03; TABLE=ENLFDIR
 ```
 
-or use the following separate authority check for each table to read: 
+**or** use the following separate authority check for each table to read: 
 
 ```
-S_RFC            RFC_TYPE=FUGR; RFC_NAME=SDTX, SDIFRUNTIME, Z_THEO_READ_TABLE; ACTVT=16                  
+S_RFC            ACTVT=16; RFC_TYPE=FUGR; RFC_NAME=RFC_READ_TABLE, DDIF_FIELDINFO_GET, SDTX, SDIFRUNTIME, Z_THEO_READ_TABLE                   
 S_TABU_DIS       ACTVT=03; DICBERCLS=XXXX
-S_TABU_NAM       ACTVT=03; TABLE=DD02V
-S_TABU_NAM       ACTVT=03; TABLE=ENLFDIR
+S_TABU_NAM       ACTVT=03; TABLE=DD02V, DD17S, DD27S,ENLFDIR
 ```
 
 XXXX (stands for a placeholder) is the Authority Group for the table. To find out, which authority group belongs to which table look at table TDDAT (e.g. with SE16). 
