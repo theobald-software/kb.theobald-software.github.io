@@ -62,13 +62,6 @@ When using the *count rows* button (if not using Z_THEO_READ_TABLE):
 S_RFC            RFC_TYPE=FUNC; RFC_NAME=EM_GET_NUMBER_OF_ENTRIES; ACTVT=16  
 ```
 
-For indicating indexed table fields in the the table component:
-
-```
-S_TABU_NAM       ACTVT=03; TABLE=DD17S
-``` 
-
-
 ### BW Query / BW Cube
 
 Look up and execute a BW Query / BW Cube (OLAP BAPI/MDX and BEx mode):
