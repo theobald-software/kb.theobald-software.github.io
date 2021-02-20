@@ -40,7 +40,7 @@ S_TABU_NAM       ACTVT=03; TABLE=ENLFDIR
 ```
 S_RFC            ACTVT=16; RFC_TYPE=FUGR; RFC_NAME=RFC_READ_TABLE, DDIF_FIELDINFO_GET, SDTX, SDIFRUNTIME, Z_THEO_READ_TABLE                   
 S_TABU_DIS       ACTVT=03; DICBERCLS=XXXX
-S_TABU_NAM       ACTVT=03; TABLE=DD02V, DD17S, DD27S,ENLFDIR
+S_TABU_NAM       ACTVT=03; TABLE=DD02V, DD17S, DD27S, ENLFDIR
 ```
 
 XXXX (stands for a placeholder) is the Authority Group for the table. To find out, which authority group belongs to which table look at table TDDAT (e.g. with SE16). 
