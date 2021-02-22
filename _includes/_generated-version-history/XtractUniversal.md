@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.27.2 [M]|2021-02-22|Server|Fixed a bug where the parameter HTTP-API failed for BAPI, BW Cube and TableJoin extractions. This also affected the Power BI connector and Alteryx plugin (Bug introduced in 4.27.1)|
 |[4.27.1 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-4.27.1.html)|2021-02-17|Server|Added JSON HTTP API for extractions([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-4.27.1.html))|
 |4.27.0 [L]|2021-02-11|Designer|New run extraction window|
 |4.26.2 [H]|2021-02-08|Destinations|Parquet: Fixed a bug where NULL values could cause invalid files|
