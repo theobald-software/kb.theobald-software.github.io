@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.19.1 [L]|2021-02-23|Table|Fix for using Z_THEO_READ_TABLE (bug introduced in 1.18)|
 |1.19.0 [M]|2021-02-23|OHS|Added OHS|
 |1.18.0 [M]|2021-02-23|Report|Added report component|
 |[1.17.0 [L]](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.17.0.html)|2021-02-10|BAPI|Several improvements and new features([Release note](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.17.0.html))|
