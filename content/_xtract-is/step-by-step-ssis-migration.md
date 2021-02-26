@@ -17,7 +17,7 @@ SQL Server 2019 and Visual Studio 2019 are supported since Xtract IS version **6
 ### The functionality of the SSIS packages and SSIS projects could be ensured by the following order:
 
 {: .box-note }
-**Note:** The password encryption of the SSIS packages by means of the [ProtectionLevel property]((https://docs.microsoft.com/en-us/sql/integration-services/security/access-control-for-sensitive-data-in-packages?view=sql-server-ver15#set_protection)) must be deactivated or changed for the conversion of the SSIS packages.
+**Note:** The password encryption of the SSIS packages by means of the [ProtectionLevel property](https://docs.microsoft.com/en-us/sql/integration-services/security/access-control-for-sensitive-data-in-packages?view=sql-server-ver15#set_protection) must be deactivated or changed for the conversion of the SSIS packages.
 
 1. Use the XtractISConversionPreparer.exe, located in the Xtract IS installation routine, to convert the SSIS packages to the SQL Server 2016 version.
 2. Open the Solution and project in VS/SSDT. The packages should open and might display the following error `could not acquire Xtract connection`
