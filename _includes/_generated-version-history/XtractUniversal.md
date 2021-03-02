@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|[4.27.6 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-4.27.6.html)|2021-03-02|Setup|Fixed an Alteryx plugin installation issue and added service start conditions([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-4.27.6.html))|
 |4.27.5 [L]|2021-03-01|Destinations|Exasol: fix for invalid character error when writing DATE fields.|
 |4.27.4 [L]|2021-02-25|Server|Added referenceTable field to result columns JSON HTTP API|
 |4.27.3 [M]|2021-02-23|Destinations|Salesforce: Fixed two issues that caused extractions to fail when description texts of fields were empty or when date conversion was enabled.|
