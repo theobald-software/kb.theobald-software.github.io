@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.27.8 [L]|2021-03-02|Server|Fix for handling date type in deprecated CSV metadata API (please use JSON API instead)|
 |4.27.7 [M]|2021-03-02|Destinations|Fix for HTTP - JSON destination|
 |[4.27.6 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-4.27.6.html)|2021-03-02|Setup|Fixed an Alteryx plugin installation issue and added service start conditions([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-4.27.6.html))|
 |4.27.5 [L]|2021-03-01|Destinations|Exasol: fix for invalid character error when writing DATE fields.|
