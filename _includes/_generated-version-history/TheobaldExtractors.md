@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|[1.19.4 [L]](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.19.4.html)|2021-03-04|Report|Multiple bug fixes and improvements([Release note](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.19.4.html))|
 |1.19.3 [L]|2021-03-02|Report|Added support for runtime parameters.|
 |1.19.2 [M]|2021-03-02|General|Fixed two issues with runtime parameters where assigning selection parameters would not be saved and the default type was set to an invalid value|
 |1.19.1 [L]|2021-02-23|Table|Fix for using Z_THEO_READ_TABLE (bug introduced in 1.18)|
