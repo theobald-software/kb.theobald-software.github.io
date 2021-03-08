@@ -35,7 +35,7 @@ This information is optional and can be requested by the technician.
 
 #### Trace files 
 
-- Activate the trace function , see [acticate tracing](https://help.theobald-software.com/en/xtract-universal/logging/logging-debug#activating-tracing) .
+- Activate the trace function , see [activate tracing](https://help.theobald-software.com/en/xtract-universal/logging/logging-debug#activating-tracing) .
  
 #### Extraction settings
 
