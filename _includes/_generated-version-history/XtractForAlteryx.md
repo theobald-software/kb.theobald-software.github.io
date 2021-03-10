@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.12.1 [M]|2021-03-04|General|Fixed a bug where message dialogs would not show properly.|
 |1.12.0 [M]|2021-02-23|Report|Added report tool (beta)|
 |1.11.0 [M]|2021-02-10|BAPI|The tool now supports EXPORT parameters that will be merged and output into the E pipeline. Table EXPORT parameters will be mapped to connections 1-5.|
 |1.10.0 [L]|2020-11-03|Setup|New Setup|

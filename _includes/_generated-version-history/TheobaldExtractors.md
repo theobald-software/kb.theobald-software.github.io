@@ -1,5 +1,10 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.19.6 [L]|2021-03-05|Table|Fixed a bug where in certain cases not all fields of views would be shown in the extraction definition UI.|
+|1.19.5 [L]|2021-03-04|General|Added possibility to signal success/failure of result processing after run|
+|[1.19.4 [L]](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.19.4.html)|2021-03-04|Report|Multiple bug fixes and improvements([Release note](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.19.4.html))|
+|1.19.3 [L]|2021-03-02|Report|Added support for runtime parameters.|
+|1.19.2 [M]|2021-03-02|General|Fixed two issues with runtime parameters where assigning selection parameters would not be saved and the default type was set to an invalid value|
 |1.19.1 [L]|2021-02-23|Table|Fix for using Z_THEO_READ_TABLE (bug introduced in 1.18)|
 |1.19.0 [M]|2021-02-23|OHS|Added OHS|
 |1.18.0 [M]|2021-02-23|Report|Added report component|

@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.8.1 [L]|2021-03-02|Designer|Fix for General Settings dialog, which had a checkbox for a feature, unavailable in BOARD Connector (column encryption)|
 |[4.8.0 [L]](https://kb.theobald-software.com/release-notes/BOARDConnector-4.8.0.html)|2021-01-28|General|Added support for column name styling and date converting([Release note](https://kb.theobald-software.com/release-notes/BOARDConnector-4.8.0.html))|
 |4.7.3 [L]|2021-01-27|Designer|Fix for Designer disconnection handling|
 |4.7.2 [L]|2021-01-25|Designer|Column filter and several other improvements and fixes for the main window|

@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.12.3 [L]|2021-03-04|WebServiceDesigner|Correction in a web services' administration web page|
 |1.12.2 [L]|2020-01-16|General|Not provisioning to SearchServers by default.|
 |1.12.1 [L]|2019-07-01|General|Updated to MSBuild 16|
 |1.12.0 [L]|2019-05-10|General|Nintex Actions: improved user context for service applications with secure store.|
