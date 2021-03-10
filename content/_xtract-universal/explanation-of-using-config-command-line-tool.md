@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Creating extractions without using the Xtract universal designer GUI
-description: Creating extractions without using the Xtract universal designer GUI
+title: Creating extractions without using the Xtract Universal designer GUI
+description: Creating extractions without using the Xtract Universal designer GUI
 permalink: /:collection/:path
 weight: 16
 ---
