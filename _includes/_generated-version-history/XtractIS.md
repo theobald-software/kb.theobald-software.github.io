@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.6.0 [M]|2021-03-10|OHS|New OHS component (with Table extraction mode and support for BW/4HANA 2.0)|
 |6.5.13 [L]|2021-01-28|General|Fix for instance number check on connection manager window, which was not allowing the value 98 for this property|
 |6.5.12 [L]|2020-11-09|Table|WHERE clause property of legacy extractions can be modified now|
 |6.5.11 [L]|2020-10-24|General|Connection Manager: Various GUI fixes for legacy storage mode|
