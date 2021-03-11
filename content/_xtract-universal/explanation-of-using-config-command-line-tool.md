@@ -28,7 +28,7 @@ As of Xtract Universal Version 4.26.1, the command line tool *xu-config.exe* is 
 ### Creating multiple Table extractions using PowerShell-Script
 Using suitable scripts, a large number of extractions can be generated almost automatically and consequently contribute for the generation of an SAP data warehouse.
 
-```powershell
+```shell
 # read table list
 $tableList = "KNA1","LFA1","MARA","CSKT","SKA1"
 # set the path to the installation folder
