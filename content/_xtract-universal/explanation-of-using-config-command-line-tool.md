@@ -7,13 +7,10 @@ weight: 16
 ---
 As of Xtract Universal Version 4.26.1, the command line tool *xu-config.exe* is available to customers for creating extractions outside of the Xtract Universal Designer: `C:\Program Files\XtractUniversal\xu-config.exe`.
 
-Using suitable scripts, a large number of extractions can be generated almost automatically and consequently contribute for the generation of an SAP data warehouse.
-
 {: .box-note }
 **Note:** This tool is **EXPERIMENTAL** and still in development. Beware of bugs and breaking changes! It's currently limited to the extraction types [Table](https://help.theobald-software.com/en/xtract-universal/table) and [DeltaQ](https://help.theobald-software.com/en/xtract-universal/datasource-deltaq).
 
-### The functionality of the xu-config.exe could be ensured by the following order:
-
+### Creating a single Table extraction using Command Prompt
 1. Start the Command Prompt application (1) with admin-user rights (2).
 ![cmd-prompt](/img/contents/cmd_prompt.png){:class="img-responsive"}
 2. Navigation and selection of the *xu-config.exe* command line tool.
@@ -27,6 +24,43 @@ Using suitable scripts, a large number of extractions can be generated almost au
 
 {: .box-note }
 **Note:** The following table settings are set by default after creation: **Package Size (50000)**, **Extract data in background job (enabled)**, **Selecting all related fields**.
+
+### Creating multiple Table extractions using PowerShell-Script
+Using suitable scripts, a large number of extractions can be generated almost automatically and consequently contribute for the generation of an SAP data warehouse.
+
+```powershell
+# read table list
+$tableList = "KNA1","LFA1","MARA","CSKT","SKA1"
+# set the path to the installation folder
+$XUConfig = 'C:\Program Files\XtractUniversal\xu-config.exe'
+# source sytem
+$source = "ec5"
+# destination
+$destination = "sqlserver2019"
+
+# loop the tables
+foreach ($tableName in $tableList) {
+    # create the extraction e.g.
+    # xu-config.exe --extraction ec5 sqlserver2019 --table KNA1 
+	Try {	    	        
+		write-host -f Green "$tableName : Creation of Extraction is starting "  (Get-Date)            			
+	    &$XUConfig --extraction $source $destination --table $tableName    
+	    
+	    # check the last exit code
+	    # 0: successful
+	    # else unsuccessful
+	    if($LASTEXITCODE -eq 0) {                           
+			write-host -f Green "$tableName : Creation of Extraction  is successful"  (Get-Date)            
+	    } else {           
+	        write-host -f Red "$tableName : Creation of Extraction failed with error code $LASTEXITCODE!"  (Get-Date)
+	        #Write-Host $errorMessage
+	    }                
+	}
+	Catch {
+		write-host -f Red "$tableName : Creation of Extraction failed with Exception ! " + (Get-Date)  $_.Exception.Message
+	}    	  
+}
+```
 
 *****
 #### Related links
