@@ -80,9 +80,3 @@ Integration of Xtract Universal and SAP DWC would happen through the respective 
 1. Xtract Universal loads SAP data to the cloud storage.
 2. SAP DWC reads that data from the cloud storage.
 
-
-
-
-### Comparing Xtract Universal with SAP DWC native SAP Connectors
-
-stay tuned, to be updated soon..
