@@ -47,7 +47,8 @@ common-css:
 <div class="row row-centered aligned-row" role="main">
 
 
-        {% for collection in site.collections %}
+{% assign collections = site.collections | sort: 'weight' %}
+        {% for collection in collections %}
             {% unless collection.label == "posts" %}
                 <div class="col-md-6 col-sm-6">
                     <div class="double-listing {% cycle 'double-listing-uneven', 'double-listing-even' %}">
