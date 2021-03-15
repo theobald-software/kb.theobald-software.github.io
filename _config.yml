@@ -103,7 +103,7 @@ collections:
   version-history:
     output: true
     name: 'Version History'
-    weight: 10
+    weight: 14
   xtract-is:
     output: true
     name: 'Xtract IS'
