@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.20.2 [L]|2021-03-15|General|New conversion behaviour for SAP time|
 |1.20.1 [L]|2021-03-15|Report|Fixed a bug where editing an existing report extraction would reset the "report rows per data row" setting back to 1.|
 |1.20.0 [L]|2021-03-15|General|Added SAP time converter|
 |1.19.7 [L]|2021-03-15|Report|Fixed a bug where performing automatic column detection after running a preview would enable dynamic column widths and offsets.|
