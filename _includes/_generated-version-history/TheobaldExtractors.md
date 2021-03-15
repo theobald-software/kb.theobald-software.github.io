@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.19.7 [L]|2021-03-15|Report|Fixed a bug where performing automatic column detection after running a preview would enable dynamic column widths and offsets.|
 |1.19.6 [L]|2021-03-05|Table|Fixed a bug where in certain cases not all fields of views would be shown in the extraction definition UI.|
 |1.19.5 [L]|2021-03-04|General|Added possibility to signal success/failure of result processing after run|
 |[1.19.4 [L]](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.19.4.html)|2021-03-04|Report|Multiple bug fixes and improvements([Release note](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.19.4.html))|
