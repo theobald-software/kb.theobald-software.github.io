@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.20.4 [L]|2021-03-15|OHS|Added book icon|
 |1.20.3 [L]|2021-03-15|OHS|Set minimum width/height for tab control in settings window|
 |1.20.2 [L]|2021-03-15|General|New conversion behaviour for SAP time|
 |1.20.1 [L]|2021-03-15|Report|Fixed a bug where editing an existing report extraction would reset the "report rows per data row" setting back to 1.|
