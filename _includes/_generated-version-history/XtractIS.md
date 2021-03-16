@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.7.0 [M]|2021-03-16|OHS|Added conversion for date and time|
 |6.6.1 [L]|2021-03-15|OHS|Adjustments for window size|
 |6.6.0 [M]|2021-03-10|OHS|New OHS component (with Table extraction mode and support for BW/4HANA 2.0)|
 |6.5.13 [L]|2021-01-28|General|Fix for instance number check on connection manager window, which was not allowing the value 98 for this property|
