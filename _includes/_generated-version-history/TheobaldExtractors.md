@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.20.5 [L]|2021-03-22|Report|Report variant combobox is not editable anymore. Instead, the selected variant can be cleared with a button.|
 |1.20.4 [L]|2021-03-15|OHS|Added book icon|
 |1.20.3 [L]|2021-03-15|OHS|Set minimum width/height for tab control in settings window|
 |1.20.2 [L]|2021-03-15|General|New conversion behaviour for SAP time|
