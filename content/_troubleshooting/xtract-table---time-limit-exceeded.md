@@ -36,7 +36,6 @@ The following options are available to avoid the above mentioned error. The foll
 - Instead of executing the extraction in a dialog mode, the extraction can be executed as a background job using the custom function module Z_THEO_READ_TABLE in version **2.10 or higher**. Import the function module into the SAP source system and activate the background function in the extraction settings. 
 The transport request for the custom function module Z_THEO_READ_TABLE can be found in the following installation path:<br>
 `C:\Program Files\[Xtract Product]\ABAP\Z_THEO_READ_TABLE-transport.zip`.
-
 ![Table-Extraction-Settings](/img/contents/Table-Extraction-Settings.png){:class="img-responsive"}
 
 -  Manual increase of the SAP parameter by the SAP Basis team. 
