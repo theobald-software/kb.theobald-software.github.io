@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.14.8 [L]|2021-03-23|General|Some additions for reading/writing JSON and file I/O|
 |2.14.7 [L]|2021-03-02|General|CsvReader overhaul|
 |[2.14.6 [L]](https://kb.theobald-software.com/release-notes/Common-2.14.6.html)|2021-02-22|WPF|Introduced new messaging system([Release note](https://kb.theobald-software.com/release-notes/Common-2.14.6.html))|
 |2.14.5 [L]|2021-02-10|General|Added custom Number struct and ReadNumber method to JsonReader|
