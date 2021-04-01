@@ -1,5 +1,8 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.27.14 [L]|2021-03-31|General|Update license check.|
+|4.27.13 [M]|2021-03-30|Destinations|Alteryx Plugin: Fixed a bug where enabling date conversion would result in errors during extraction|
+|4.27.12 [L]|2021-03-29|Destinations|Private endpoint support for PostgreSQL destination|
 |4.27.11 [M]|2021-03-24|General|Fixed an issue where the custom primary key selections were ignored |
 |4.27.10 [L]|2021-03-19|Destinations|Upgrade of PostgreSql driver, Npgsql, to version 4.1.8|
 |4.27.9 [L]|2021-03-16|Designer|Improvements for the run window and fix for displaying not handled errors|
