@@ -10,7 +10,7 @@ Please also have a look in our [OnlineHelp](https://help.theobald-software.com/e
 
 ### Target principal
 
-To use Kerberos transport encryption or authenticate an Active Directory user, a Kerberos Target Principal Name (TPN) is required. <br> This can be either a User Principal Name (UPN) or a Service Principal Name (SPN).
+To use Kerberos transport encryption or authenticate an Active Directory user, a Kerberos Target Principal Name (TPN) is required. This can be either a User Principal Name (UPN) or a Service Principal Name (SPN).
 
 By default, the XU Service is executed under the Local System Account. 
 
@@ -20,7 +20,7 @@ In the AD, this user acts as a computer account. By default, the SPN is assigned
 
 |field | syntax | example value |
 |:---|:---|:---|
-|XU Server | `[XU server name].[domain]:[port]` | TODD.theobald.local:8064 (or localhost:8064)|
+|XU Server | `[host].[domain]:[port]` | TODD.theobald.local:8064 (or localhost:8064)|
 |Target Principal| `HOST/[hostname]@[domain]` | HOST/TODD.theobald.local@THEOBALD.LOCAL|
 
 The Target Principal Name must correspond either to the UPN of the user under which the XU Windows Service is running, or to an SPN assigned to this user.
@@ -34,7 +34,7 @@ The Target Principal Name must correspond either to the UPN of the user under wh
 
 Deviating from the standard, the service can also be executed under a different account e.g. User Principal Name (UPN) or Service Principal Name (SPN).<br> The UPN or SPN of the Xtract Universal Windows service executes the write processes for the target environments in this context. <br> Accordingly, this user must have necessary write permissions for the database.
 
-#### User Principal Name - UPN
+### User Principal Name (UPN)
 
 ![Search UPN](/img/contents/select_user_or_service_account.png){:class="img-responsive"}
 
@@ -44,7 +44,7 @@ An UPN is assigned in the following form:
 
 |field | syntax | example value |
 |:---|:---|:---|
-|XU Server| `[XU server name].[domain]:[port]` | TODD.theobald.local:8064 (or localhost:8064)|
+|XU Server| `[host].[domain]:[port]` | TODD.theobald.local:8064 (or localhost:8064)|
 |Target Principal | `[AD-user]@[domain]`| steffan@theobald.local |
 
 ![XU TPN UPN](/img/contents/xu_UPN_steffan@.png){:class="img-responsive"}
@@ -52,7 +52,7 @@ An UPN is assigned in the following form:
 {: .box-note }
 **Note:** After changing the user context of the Windows service, the UPN or SPN for logging in to the Xtract Universal Server must also be adjusted.
 
-#### Service Principal Name - SPN
+### Service Principal Name (SPN)
 
 The service class and host name are at least required for authenticating a service instance to a logon account. In general, <br> Domain Admin rights are required for processing Manage Service Accounts. 
 
@@ -62,7 +62,7 @@ When dialing into a remote server where the service is not used in the local env
 
 |field | syntax | example value |
 |:---|:---|:---|
-|XU Server| `[XU Server Name].[domain]:[port]` | theosoftw2012r2.theobald.local:8064 |
+|XU Server| `[host].[domain]:[port]` | theosoftw2012r2.theobald.local:8064 |
 |Target Principal as **UPN** | `[AD-user]@[domain]`| svc_xusrv@theobald.local |
 |Target Principal as **SPN** | `[service class]/[host]@[domain]` | HTTP/theosoftw2012r2.theobald.local@THEOBALD.LOCAL|
 
