@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.0.12 [L]|2021-04-06|General|Catch SocketException during shutdown|
 |1.0.11 [L]|2021-01-22|General|Rpc commands for column level encryption configuration|
 |1.0.10 [L]|2021-01-19|General|Fix for bug introduced in 1.0.9 when running as Windows Application|
 |1.0.9 [L]|2021-01-14|General|Fix for default console encoding with preambles|
