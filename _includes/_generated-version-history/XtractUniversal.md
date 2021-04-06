@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.27.15 [L]|2021-04-06|ODP|Added hierarchyName run parameter|
 |4.27.14 [L]|2021-03-31|General|Update license check.|
 |4.27.13 [M]|2021-03-30|Destinations|Alteryx Plugin: Fixed a bug where enabling date conversion would result in errors during extraction|
 |4.27.12 [L]|2021-03-29|Destinations|Private endpoint support for PostgreSQL destination|
