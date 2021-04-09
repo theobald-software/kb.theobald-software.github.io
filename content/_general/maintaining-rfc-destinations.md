@@ -14,8 +14,10 @@ To create a new destination, please use transaction SM59 and click the Create bu
 - Connection Type = T (forTCP/IP)
 - Description
 - ProgramID: A unique name that the server program uses to register itself on the SAP gateway (can be the same as the destination name).
-- Choose option 'Registered Server Program'
+- Choose option *Registered Server Program*
 
 You have to save the destination first before the connection can be tested.
 
-Click the button Test Connection while the program is running. If everything works well, you should see a screen as the one below.
+Click the button **[Test Connection]** while the program is running. If everything works well, you should see a screen as the one below.
+
+![rfc-destination](/img/content/Maintain-RFC-Destination-002.png){:class="img-responsive"}
