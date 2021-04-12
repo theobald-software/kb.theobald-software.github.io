@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.20.8 [L]|2021-04-12|ODP|Added setting to adjust package size |
 |1.20.7 [L]|2021-04-09|Table|Fixed a bug where metadata refresh did not work.|
 |1.20.6 [M]|2021-03-25|OHS|Fix for third party mode when columns are spread across table buffer rows|
 |1.20.5 [L]|2021-03-22|Report|Report variant combobox is not editable anymore. Instead, the selected variant can be cleared with a button.|
