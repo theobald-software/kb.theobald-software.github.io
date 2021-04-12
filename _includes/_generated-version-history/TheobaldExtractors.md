@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.20.9 [L]|2021-04-12|General|Fixed a bug on method SapTimeConverter.ConvertToTimeSpan(string), which would not allow values greater than "235959" to be converted to TimeSpan. Unit tests were introduced.|
 |1.20.8 [L]|2021-04-12|ODP|Added setting to adjust package size |
 |1.20.7 [L]|2021-04-09|Table|Fixed a bug where metadata refresh did not work.|
 |1.20.6 [M]|2021-03-25|OHS|Fix for third party mode when columns are spread across table buffer rows|
