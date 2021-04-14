@@ -20,4 +20,4 @@ You have to save the destination first before the connection can be tested.
 
 Click the button **[Test Connection]** while the program is running. If everything works well, you should see a screen as the one below.
 
-![rfc-destination](/img/content/Maintain-RFC-Destination-002.png){:class="img-responsive"}
+![rfc-destination](/img/contents/Maintain-RFC-Destination-002.png){:class="img-responsive"}
