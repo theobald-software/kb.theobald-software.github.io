@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.7.3 [L]|2021-04-14|ODP|Fixed a bug that caused the selected hierarchy to be reset (Bug introduced in 6.7.2)|
 |6.7.2 [L]|2021-04-06|ODP|Added HierarchyName property to allow parameterization|
 |6.7.1 [L]|2021-03-31|General|Update license check.|
 |6.7.0 [M]|2021-03-16|OHS|Added conversion for date and time|
