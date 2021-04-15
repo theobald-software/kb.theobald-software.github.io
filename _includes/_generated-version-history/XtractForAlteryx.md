@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.12.3 [L]|2021-04-06|ODP|Added HierarchyName property to allow parameterization|
 |1.12.2 [L]|2021-04-01|Setup|Fix for message displaying when no Alteryx installation is found during setup|
 |1.12.1 [M]|2021-03-04|General|Fixed a bug where message dialogs would not show properly.|
 |1.12.0 [M]|2021-02-23|Report|Added report tool (beta)|
