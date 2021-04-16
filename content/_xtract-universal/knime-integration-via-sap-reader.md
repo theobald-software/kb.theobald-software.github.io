@@ -17,12 +17,12 @@ The following software applications must be installed for integration into KNIME
 {: .box-note }
 **Note:** Basic knowledge of creating extraction in Xtract Universal is necessary for the following integration scenario, see [Defining a Table Extraction](https://help.theobald-software.com/en/xtract-universal/getting-started/define-a-table-extraction).
 
-1. Create an extraction in Xtract Universal and make sure that the ['Web Service - http-csv'](https://help.theobald-software.com/en/xtract-universal/xu-destinations/csv-via-http) (1) Destination is selected for the extraction.
+1. Create an extraction in Xtract Universal and make sure that the [Web Service - HTTP-CSV](https://help.theobald-software.com/en/xtract-universal/xu-destinations/csv-via-http) (1) Destination is selected for the extraction.
 ![XU Extraction Webservice HTTP](/img/contents/xu/xu_extraction_webservice_http.png){:class="img-responsive"}
 2. Start the KNIME Analytics Platform. 
 3. Install the extension [SAP Reader (Theobald Software)](https://hub.knime.com/knime/extensions/org.knime.features.sap.theobald/latest/org.knime.sap.theobald.node.SAPTheobaldReaderNodeFactory).
 ![Install KNIME Extension](/img/contents/xu/install_sap_reader.png){:class="img-responsive"}
-4. Drag & Drop the Node / Source 'SAP Reader (Theobals Software)' (2) onto the KNIME Canvas.
+4. Drag & Drop the Node / Source 'SAP Reader (Theobald Software)' (2) onto the KNIME Canvas.
 ![KNIME Extension](/img/contents/xu/sap_reader_knime_extension.png){:class="img-responsive"}
 5. Open the SAP Reader Task 'Settings' and enter the URL address of the Xtract Universal Server, e.g. `http://localhost:8065/` (3).
 ![SAP Reader Settings](/img/contents/xu/sap_reader_settings.png){:class="img-responsive"}
