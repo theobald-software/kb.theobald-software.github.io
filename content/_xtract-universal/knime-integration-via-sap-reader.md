@@ -35,7 +35,7 @@ The following software applications must be installed for integration into KNIME
 
 ****
 #### Related Links
-- [Xtract UNiversal Web Server Settings](https://help.theobald-software.com/en/xtract-universal/server/server-settings#web-server)
-- [Xtract UNiversal Web Server Port](https://help.theobald-software.com/en/xtract-universal/server/ports)
+- [Xtract Universal Web Server Settings](https://help.theobald-software.com/en/xtract-universal/server/server-settings#web-server)
+- [Xtract Universal Web Server Port](https://help.theobald-software.com/en/xtract-universal/server/ports)
 - [Connecting Xtract Universal Server](https://help.theobald-software.com/en/xtract-universal/getting-started/connect-designer-with-server#connecting-to-a-server)
 
