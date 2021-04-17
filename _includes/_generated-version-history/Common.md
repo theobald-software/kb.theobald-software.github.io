@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.14.10 [L]|2021-04-16|WPF|Fixed a bug which would cause the whole About Window to stretch together with the destinations list|
 |2.14.9 [L]|2021-03-31|Licensing|Added sources limit.|
 |2.14.8 [L]|2021-03-23|General|Some additions for reading/writing JSON and file I/O|
 |2.14.7 [L]|2021-03-02|General|CsvReader overhaul|
