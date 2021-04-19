@@ -33,6 +33,15 @@ The following software applications must be installed for integration into KNIME
 9. Check the extracted SAP data via **[SAP Query Result]**.
 ![SAP Reader Results](/img/contents/xu/sap_query_results.png){:class="img-responsive"}
 
+
+### Webinar "SAP Data to Insights with KNIME"
+
+<iframe width="560" height="315" 
+src="https://www.youtube.com/embed/KQLLoDUoOEg" 
+frameborder="0" allow="accelerometer; autoplay; 
+clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen></iframe>
+
 ****
 #### Related Links
 - [Xtract Universal Web Server Settings](https://help.theobald-software.com/en/xtract-universal/server/server-settings#web-server)
