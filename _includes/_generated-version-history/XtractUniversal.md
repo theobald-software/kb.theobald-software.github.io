@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.28.1 [L]|2021-04-22|Destinations|Column encryption - dynamic metadata file names|
 |[4.28.0 [M]](https://kb.theobald-software.com/release-notes/XtractUniversal-4.28.0.html)|2021-04-21|Destinations|Extended script expressions in folder paths (Amazon S3 & Azure Storage)([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-4.28.0.html))|
 |4.27.18 [L]|2021-04-19|Designer|Fix for SharePoint on Premise connection test|
 |4.27.17 [M]|2021-04-08|Destinations|Fixed bug for handling invalid TIME value on PostgreSql destination|
