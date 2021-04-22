@@ -32,10 +32,10 @@ The following system settings are a prerequisite for using this SNC solution:
 - The SNC standard library *sapcryptolib* is used as the SNC solution.
 - The following SNC parameters are configured as mentioned.
 
-SNC parameter | Example value
------------- | -------------
-snc/gssapi_lib | *$(DIR_EXECUTABLE)\sapcrypto.dll*
-snc/identity/as | *p:CN=saperp.theobald.local*
+SNC parameter | Value | Example
+------------ | ------------- | ----------
+snc/gssapi_lib | Path and file name where the SAP Cryptographic Library is located. | *$(DIR_EXECUTABLE)\sapcrypto.dll*
+snc/identity/as | Application server's SNC name Syntax: p:\<Distinguished_Name\> The Distinguished Name part must match the Distinguished Name that you specify when creating the SNC PSE| *p:CN=saperp.theobald.local*
 
 ### Step-by-Step Guide
 
