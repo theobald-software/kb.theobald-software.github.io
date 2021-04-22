@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.20.12 [L]|2021-04-22|Security|Update of BouncyCastle library to 1.8.10|
 |1.20.11 [M]|2021-04-20|Table|Fixed a bug where fetching metadata for extended view did not work.|
 |1.20.10 [L]|2021-04-16|Report|Improved error handling for automatic column detection. Fixed a bug where running if the report returned no rows during automatic column detection, the UI would crash.|
 |1.20.9 [L]|2021-04-12|General|Fixed a bug on method SapTimeConverter.ConvertToTimeSpan(string), which would not allow values greater than "235959" to be converted to TimeSpan. Unit tests were introduced.|
