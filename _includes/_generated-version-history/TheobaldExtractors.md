@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.20.14 [L]|2021-04-26|Table|Fixed ORDER BY special option for Z_XTRACT_IS_TABLE|
 |1.20.13 [L]|2021-04-23|Table|Fixed a bug where metadata refresh would not work when more than one table was selected for extraction.|
 |1.20.12 [L]|2021-04-22|Security|Update of BouncyCastle library to 1.8.10|
 |1.20.11 [M]|2021-04-20|Table|Fixed a bug where fetching metadata for extended view did not work.|
