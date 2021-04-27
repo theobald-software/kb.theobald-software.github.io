@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.28.7 [L]|2021-04-27|ODP|Added package size setting as run parameter|
 |4.28.6 [M]|2021-04-26|General|Various fixes for date conversion|
 |4.28.5 [L]|2021-04-26|Designer|Fix for General Settings window, in order to display cache configuration correctly|
 |4.28.4 [M]|2021-04-23|General|Fixed bug that prevented cache creation when datetime conversion was enabled|
