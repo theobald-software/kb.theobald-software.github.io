@@ -5,7 +5,7 @@ description: Call Extraction via Script
 permalink: /:collection/:path
 weight: 29
 ---
-This section shows how to call an extraction from a [Windows script (.bat)](./call-extraction-via-script#call-via-windows-script-bat) or [PowerShell script](./call-extraction-via-extraction#write-extraction-logs-into-windows-logs).
+This section shows how to call an extraction from a [Windows script (.bat)](./call-extraction-via-script#call-via-windows-script-bat) or [PowerShell script](./call-extractio-via-script#call-via-powerShell-script).
 
 ### Call via Windows script (.bat)
 
