@@ -60,6 +60,7 @@ However, with short interval scheduling and heavy parallelism, dedicated package
 #### RFC server test failed:  Error when opening an RFC connection (CPIC-CALL: 'ThSAPOCMINIT', communication rc: CM_ALLOCATE_FAILURE_RETRY (cmRc=2))
 * Please make sure, the RFC server program, e.g. XTRACT01, is allowed to [register on the SAP gateway](https://kb.theobald-software.com/sap/registering-rfc-server-in-sap-releases-in-kernel-release-720-and-higher).
 
+{: .box-note }
 **Note:** In some SAP Releases asynchronous communication between external partner e.g., Xtract Universal and/or Xtract IS and RFC-Destination can lead to above mentioned error message, although all customizing steps have done properly. Please make sure to **either** use the full-qualified-name (FQN) **or** IP address of the SAP Gateway Host in all involved systems.
 
 ![SM59-RFC Server](/img/contents/rfc_host.png){:class="img-responsive"}

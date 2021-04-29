@@ -35,7 +35,7 @@ The following system settings are a prerequisite for using this SNC solution:
 SNC parameter | Value | Example
 ------------ | ------------- | ----------
 snc/gssapi_lib | Path and file name where the SAP Cryptographic Library is located. | *$(DIR_EXECUTABLE)\sapcrypto.dll*
-snc/identity/as | Application server's SNC name Syntax: p:\<Distinguished_Name\> The Distinguished Name part must match the Distinguished Name that you specify when creating the SNC PSE| *p:CN=saperp.theobald.local*
+snc/identity/as | Application server's SNC name Syntax: p:\<Distinguished_Name\> <br> The Distinguished Name part must match the Distinguished Name that you specify when creating the SNC PSE.| *p:CN=saperp.theobald.local*
 
 ### Step-by-Step Guide
 
@@ -47,7 +47,7 @@ snc/identity/as | Application server's SNC name Syntax: p:\<Distinguished_Name\>
 
 - Convert pfx file to SAP PSE format e.g., `sapgenpse.exe import_p12 -p cert.pse cert.pfx`.
 - Import the created PSE file via **TA STRUST > Edit mode > PSE Import > PSE Save as SNC Libcrypto**
-- Edit the SNC configuration of the corresponding SAP user via transaction **SU01** (1), **SNC** (2), **SNC Name** (3) = p:\<full distinguished name\> <br> e.g., `p:EMAIL="RandomUser@domain",CN="Random User",OU="Users",OU="TheobaldSoftware",DC="theobald",DC="local"`
+- Edit the SNC configuration of the corresponding SAP user via transaction **SU01** (1), **SNC** (2), **SNC Name** (3) = p:\<Full Distinguished_Name\> <br> e.g., `p:EMAIL="RandomUser@domain",CN="Random User",OU="Users",OU="TheobaldSoftware",DC="theobald",DC="local"`
 ![SNC User Settings](/img/contents/snc_user_settings.png){:class="img-responsive"}
 - Set up SNC authentication in the SAP sources e.g., [Xtract Universal](https://help.theobald-software.com/en/xtract-universal/introduction/sap-connection#authentication), [Xtract IS](https://help.theobald-software.com/en/xtract-is/sap-connection/sap-connection-with-snc), [BOARD Connector](https://help.theobald-software.com/en/board-connector/introduction/sap-connection#authentication)
 

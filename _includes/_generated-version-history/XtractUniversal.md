@@ -1,5 +1,12 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.28.7 [L]|2021-04-27|ODP|Added package size setting as run parameter|
+|4.28.6 [M]|2021-04-26|General|Various fixes for date conversion|
+|4.28.5 [L]|2021-04-26|Designer|Fix for General Settings window, in order to display cache configuration correctly|
+|4.28.4 [M]|2021-04-23|General|Fixed bug that prevented cache creation when datetime conversion was enabled|
+|4.28.3 [M]|2021-04-23|General|Fixed bug that prevented extraction's result to be cached when column level encryption was disabled|
+|4.28.2 [L]|2021-04-22|Destinations|MicroStrategy: Fixed an error in JSON creation|
+|4.28.1 [L]|2021-04-22|Destinations|Column encryption - dynamic metadata file names|
 |[4.28.0 [M]](https://kb.theobald-software.com/release-notes/XtractUniversal-4.28.0.html)|2021-04-21|Destinations|Extended script expressions in folder paths (Amazon S3 & Azure Storage)([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-4.28.0.html))|
 |4.27.18 [L]|2021-04-19|Designer|Fix for SharePoint on Premise connection test|
 |4.27.17 [M]|2021-04-08|Destinations|Fixed bug for handling invalid TIME value on PostgreSql destination|
