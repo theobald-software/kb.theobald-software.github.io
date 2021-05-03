@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.14.12 [L]|2021-05-03|WPF|Added WarningConfirmation dialog to TheoMessageHelper|
 |2.14.11 [L]|2021-05-03|WPF|Added colored icons for custom message boxes|
 |2.14.10 [L]|2021-04-16|WPF|Fixed a bug which would cause the whole About Window to stretch together with the destinations list|
 |2.14.9 [L]|2021-03-31|Licensing|Added sources limit.|
