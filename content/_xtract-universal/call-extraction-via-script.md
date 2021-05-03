@@ -7,6 +7,7 @@ weight: 29
 ---
 This section shows how to call an extraction from a [Windows script (.bat)](./call-extraction-via-script#call-via-windows-script-bat) or [PowerShell script](./call-extraction-via-script#call-via-powershell-script).
 
+
 ### Call via Windows script (.bat)
 
 The following example shows how to run an extraction using a Windows script.
@@ -190,5 +191,5 @@ write-host $errorMessage
 #### Related Links:
 - [Creating extractions without using the Xtract Universal designer GUI](https://kb.theobald-software.com/xtract-universal/explanation-of-using-config-command-line-tool)
 - [How to insert Xtract Universal Extraction Events into the windows logs](https://kb.theobald-software.com/xtract-universal/how-to-insert-xtract-universal-extraction-events-into-the-windows-logs-and-show-them-in-the-event-viewer)
-<!--- - [Mastering SAP Access with Xtract Universal](https://blog.theobald-software.com/2018/04/26/mastering-sap-access-with-xtract-universal-and-powershell/)--->
+- [Mastering SAP Access with Xtract Universal](https://kb.theobald-software.com/xtract-universal/mastering-sap-access-with-xtract-universal-and-powershell)
 
