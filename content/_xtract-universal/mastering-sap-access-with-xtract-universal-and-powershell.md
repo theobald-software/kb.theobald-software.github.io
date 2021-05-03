@@ -119,7 +119,7 @@ HTTP Statuscodes (e.g. 404 when the extraction does not exist)
 $XUParameters = "clearBuffer=True -o CalendarMonth=$myCalendarMonth"
 $XUResult = XURun -XUCmd $XUCmd -XUServer $XUServer -XUPort $XUPort -XUExtraction $XUExtraction -XUParameters $XUParameters
 ```
-![XU-run](img/contents/xu/xurun.png){:class="img-responsive"}
+
 
 ### How to loop an array with different parameter values
 
@@ -149,7 +149,6 @@ XURun -XUCmd $XUCmd -XUServer $XUServer -XUPort $XUPort -XUExtraction $XUExtract
 $XUResult = XURUN-Multi -XUCmd $XUCmd -XUServer $XUServer -XUPort $XUPort -XUExtractions $XUExtractions
 ```
 
-![XU-powershell-multiple](img/contents/xu/xupowershell-multiple.png){:class="img-responsive"}
 
 ### How to run multiple extractions parallely
 
