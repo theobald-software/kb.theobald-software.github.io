@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.7.0 [M]|2021-05-05|Consumer|Improved logic for custom SAP connections.|
 |2.6.1 [L]|2021-04-27|Management|Dependencies updated (stability).|
 |2.6.0 [M]|2020-08-27|General|OpenAPI export supports a structure with references.|
 |2.5.3 [L]|2020-08-04|Management|Improved host name and IP in SAP connection|
