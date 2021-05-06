@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.20.15 [L]|2021-05-05|Report|Fixed a bug where ABAP exceptions that occur when running preview would crash the UI.|
 |1.20.14 [L]|2021-04-26|Table|Fixed ORDER BY special option for Z_XTRACT_IS_TABLE|
 |1.20.13 [L]|2021-04-23|Table|Fixed a bug where metadata refresh would not work when more than one table was selected for extraction.|
 |1.20.12 [L]|2021-04-22|Security|Update of BouncyCastle library to 1.8.10|
