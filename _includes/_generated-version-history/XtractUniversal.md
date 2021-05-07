@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|[4.29.0 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-4.29.0.html)|2021-05-07|Destinations|Added new Destination "Sql Server Reporting Services" and corresponding Data Extension Plug-ins for Visual Studio and Power BI Report Server.([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-4.29.0.html))|
 |4.28.8 [L]|2021-05-06|Security|Better TLS error messages for cloud destinations, Xu.exe/ Xu.elf and the ConnectWindow CertificatePinning for the ConnectWindow (ConfigServer) Several behavior fixes for the ConnectWindow|
 |4.28.7 [L]|2021-04-27|ODP|Added package size setting as run parameter|
 |4.28.6 [M]|2021-04-26|General|Various fixes for date conversion|
