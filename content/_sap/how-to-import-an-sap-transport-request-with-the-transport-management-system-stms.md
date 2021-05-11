@@ -6,11 +6,11 @@ permalink: /:collection/:path
 weight: 2
 ---
 
-In this HowTo we will import a Transport Request for the custom functions that is included in the ABAP subdirectory of your product installation folder (e. g. C:\Program Files\XtractIS\ABAP).
+In this HowTo we will import a Transport Request for the custom functions that is included in the ABAP subdirectory of your product installation folder (e.g. `C:\Program Files\[XtractProduct]\ABAP`).
 
 We first unzip and copy the file R900141.ECC into the data folder and the file K900141.ECC into the co-files folder of our SAP System. (The last 3 digits of the transport numbers may be different in your most recent version that you downloaded !)
 
-In our Test system this folders are located under >>  \\SAPServer\c$\usr\sap\trans\
+In our Test system this folders are located under `\\SAPServer\c$\usr\sap\trans\`.
 
 Then we start the transaction STMS and click on ![STMSIcon03](/img/contents/STMSIcon03.png){:class="img-responsive" style="display:inline"}:
 
