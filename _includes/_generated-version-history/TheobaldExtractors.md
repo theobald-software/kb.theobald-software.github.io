@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.20.17 [L]|2021-05-11|Table|Fix for *RFC_READ_TABLE2 variants with custom names|
 |1.20.16 [M]|2021-05-06|OHS|Fix for variable length buffer (third party mode)|
 |1.20.15 [L]|2021-05-05|Report|Fixed a bug where ABAP exceptions that occur when running preview would crash the UI.|
 |1.20.14 [L]|2021-04-26|Table|Fixed ORDER BY special option for Z_XTRACT_IS_TABLE|
