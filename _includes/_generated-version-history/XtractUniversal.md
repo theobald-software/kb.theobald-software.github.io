@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|[4.29.2 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-4.29.2.html)|2021-05-18|Destinations|S3, Azure Storage & Google Cloud Storage destination now prepend an 'x' to object names if they don't begin with a letter. This change is breaking.([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-4.29.2.html))|
 |4.29.1 [L]|2021-05-07|Destinations|S3 destination: fixed an issue where after creating a new S3 destination or editing an existing one, the destination could not be saved.|
 |[4.29.0 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-4.29.0.html)|2021-05-07|Destinations|Added new Destination "Sql Server Reporting Services" and corresponding Data Extension Plug-ins for Visual Studio and Power BI Report Server.([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-4.29.0.html))|
 |4.28.8 [L]|2021-05-06|Security|Better TLS error messages for cloud destinations, Xu.exe/ Xu.elf and the ConnectWindow CertificatePinning for the ConnectWindow (ConfigServer) Several behavior fixes for the ConnectWindow|
