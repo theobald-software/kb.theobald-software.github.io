@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.8.6 [L]|2021-05-19|Server|New web listener implementation|
 |4.8.5 [L]|2021-04-26|Designer|Fix for General Settings window, in order to display cache configuration correctly|
 |4.8.4 [M]|2021-04-23|General|Fixed bug that prevented cache creation when datetime conversion was enabled|
 |4.8.3 [M]|2021-04-23|General|Fixed bug that prevented extraction's result to be cached when column level encryption was disabled|
