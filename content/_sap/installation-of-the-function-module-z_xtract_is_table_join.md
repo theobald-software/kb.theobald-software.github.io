@@ -29,8 +29,7 @@ Create the following 5 structures (SE11-> DataType -> Create -> Structure):
 ### Step 2 - Create a new function module
 
 Call transaction SE37 and create a new function module named Z_XTRACT_IS_TABLE_JOIN. <br>
-You can use an existing function group or create a new one. <br>
-This is also valid for the development class (Package). <br>
+You can use an existing function group or create a new one. This is also valid for the development class (Package). <br>
 
 **IMPORTANT: In tab *Attributes* check *Remote Enabled*.**
 
@@ -47,8 +46,8 @@ This is also valid for the development class (Package). <br>
 
 ### Step 4 - Code
 
-Use Ctrl + C and Ctrl + V to paste the attached code ([Z_XTRACT_IS_TABLE_JOIN_GLOBALDATA](/files/z_xtract_is_table_join_globaldata.txt)) into the Global Data of the function module (menu Goto -> Global Data). <br>
-Use Ctrl + C and Ctrl + V to paste the attached ABAP source code ([Z_XTRACT_IS_TABLE_JOIN](/files/z_xtract_is_table_join.txt)) into the source code editor. into the Global Data of the function module (menu Goto -> Global Data).
+Use **[Ctrl + C]** and **[Ctrl + V]**to paste the attached code ([Z_XTRACT_IS_TABLE_JOIN_GLOBALDATA](/files/z_xtract_is_table_join_globaldata.txt)) into the Global Data of the function module (menu Goto -> Global Data). <br>
+Use **[Ctrl + C]** and **[Ctrl + V]** to paste the attached ABAP source code ([Z_XTRACT_IS_TABLE_JOIN](/files/z_xtract_is_table_join.txt)) into the source code editor.
 
 Save the function module and activate it.
 
