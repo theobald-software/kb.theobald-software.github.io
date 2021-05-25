@@ -107,7 +107,7 @@ S_GUI            ACTVT=61
 ```
 
 {: .box-note }
-**Note** The needed transport request for function group *ZXTRACTABAP* is located in the following path: ```C:\Program Files\[XtractProduct]\\ABAP\Report\Z_XTRACT_IS_REMOTE_REPORT-transport.zip``` of the default installation.
+**Note** The needed transport request for function group *ZXTRACTABAP* is located in the following path: ```C:\Program Files\[XtractProduct]\ABAP\Report\Z_XTRACT_IS_REMOTE_REPORT-transport.zip``` of the default installation.
 
 
 ### ODP
