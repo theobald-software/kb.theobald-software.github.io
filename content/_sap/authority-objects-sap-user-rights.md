@@ -47,7 +47,7 @@ XXXX (stands for a placeholder) is the Authority Group for the table. To find ou
 If the table is not listed there the authority group is &NC&. For authorizing specific tables please use authorization object S_TABU_NAM instead of S_TABU_DIS.
 
 {: .box-note }
-**Note** The needed transport request for function group *Z_THEO_READ_TABLE* is located in the following path: ```C:\Program Files\[XtractProduct]\ABAP``` of the default installation.
+**Note** The needed transport request for function group *Z_THEO_READ_TABLE* is located in the following path: ```C:\Program Files\[XtractProduct]\ABAP\Table``` of the default installation. 
 
 When executing our custom function module Z_THEO_READ_TABLE in background:
 
@@ -107,7 +107,7 @@ S_GUI            ACTVT=61
 ```
 
 {: .box-note }
-**Note** The needed transport request for function group *ZXTRACTABAP* is located in the following path: ```C:\Program Files\[XtractProduct]\ABAP\thtrans.zip``` of the default installation.
+**Note** The needed transport request for function group *ZXTRACTABAP* is located in the following path: ```C:\Program Files\[XtractProduct]\ABAP\Report\Z_XTRACT_IS_REMOTE_REPORT-transport.zip``` of the default installation.
 
 
 ### ODP
