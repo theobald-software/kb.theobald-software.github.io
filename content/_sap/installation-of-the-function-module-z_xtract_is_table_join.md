@@ -3,56 +3,51 @@ layout: page
 title: Installation of the Function Module Z_XTRACT_IS_TABLE_JOIN
 description: Installation of the Function Module Z_XTRACT_IS_TABLE_JOIN
 permalink: /:collection/:path
-weight: 7
+weight: 15
 ---
 
 This article shows how to manually install the function Z_XTRACT_IS_TABLE_JOIN. 
 
 {: .box-note }
-**Note:** A transport request for the Table Join component is available on request.
+**Note:** The Table Join component has been marked as *deprecated*. Use the Table component with custom function module Z_THEO_READ_TABLE for joining SAP tables.
 
+### Installation with an SAP transport
+Installation of the function module using the transport request *thtrans.zip* supplied. <br> 
+The transport request is located in the following installation directory `C:\Program Files\[XtractProduct]\ABAP\thtrans.zip`.
 
-### Step 1 - DDIC Object
-Create the following 5 structures (SE11-> DataType -> Create -> Structure):
+### Manual installation of function module Z_XTRACT_IS_TABLE_JOIN
 
-1. ZXTRACTTABLEFIELDS
-![Z_XTRACT_TABLE_JOIN_01](/img/contents/Z_XTRACT_TABLE_JOIN_01.png){:class="img-responsive"}
-2. ZXTRACTTABLEJOINDEF
-![Z_XTRACT_TABLE_JOIN_02](/img/contents/Z_XTRACT_TABLE_JOIN_02.png){:class="img-responsive"}
-3. ZXTRACTTABLECODELINE
-![Z_XTRACT_TABLE_JOIN_03](/img/contents/Z_XTRACT_TABLE_JOIN_03.png){:class="img-responsive"}
-4. ZXTRACTRANGE
-![Z_XTRACT_TABLE_JOIN_03_02](/img/contents/Z_XTRACT_TABLE_JOIN_03_02.png){:class="img-responsive"}
-5. ZXTRACTSELFIELDS
-![Z_XTRACT_TABLE_JOIN_03_03](/img/contents/Z_XTRACT_TABLE_JOIN_03_03.png){:class="img-responsive"}
+The Table Join component is used for joining several tables or views on the SAP side before data extraction.
 
-### Step 2 - Create a new function module
+Prerequisite for using the Table Join component is the installation of a custom function module on the SAP side
 
-Call transaction SE37 and create a new function module named Z_XTRACT_IS_TABLE_JOIN. <br>
-You can use an existing function group or create a new one. This is also valid for the development class (Package). <br>
+### Create DDIC structures
 
-**IMPORTANT: In tab *Attributes* check *Remote Enabled*.**
+In this step, five structures must be created via transaction *SE11*, see the following screenshots. <br>
+The required text files are marked as paths.
 
-![Z_XTRACT_TABLE_JOIN_04](/img/contents/Z_XTRACT_TABLE_JOIN_04.png){:class="img-responsive"}
+`"C:\Program Files\[Xtract Product]\ABAP\Z_XTRACT_IS_TABLE_JOIN - ZXTRACTTABLEFIELDS.txt"`
+![Z_XTRACT_TABLE_JOIN_01](/img/content/table_join_structure1.png){:class="img-responsive"}
+`"C:\Program Files\[Xtract Product]\ABAP\Z_XTRACT_IS_TABLE_JOIN - ZXTRACTTABLEJOINDEF.txt"`
+![Z_XTRACT_TABLE_JOIN_02](/img/content/table_join_structure2.png){:class="img-responsive"}
+`"C:\Program Files\[Xtract Product]\ABAP\Z_XTRACT_IS_TABLE_JOIN - ZXTRACTTABLECODELINE.txt"`
+![Z_XTRACT_TABLE_JOIN_03](/img/content/table_join_structure3.png){:class="img-responsive"}
+`"C:\Program Files\[Xtract Product]\ABAP\Z_XTRACT_IS_TABLE_JOIN - ZXTRACTRANGE.txt"`
+![Z_XTRACT_TABLE_JOIN_04](/img/content/table_join_structure4.png){:class="img-responsive"}
+![Z_XTRACT_TABLE_JOIN_05](/img/content/table_join_structure5.png){:class="img-responsive"}
 
-### Step 3 - Parameters
+### Create function module
 
-1. Define the following import parameters: 
-![Z_XTRACT_TABLE_JOIN_05](/img/contents/Z_XTRACT_TABLE_JOIN_05.png){:class="img-responsive"}
-2. Define the following export parameters:
-![Z_XTRACT_TABLE_JOIN_06](/img/contents/Z_XTRACT_TABLE_JOIN_06.png){:class="img-responsive"}
-3. Define the following tables:
-![Z_XTRACT_TABLE_JOIN_07](/img/contents/Z_XTRACT_TABLE_JOIN_07.png){:class="img-responsive"}
-
-### Step 4 - Code
-
-Use **[Ctrl + C]** and **[Ctrl + V]**to paste the attached code ([Z_XTRACT_IS_TABLE_JOIN_GLOBALDATA](/files/z_xtract_is_table_join_globaldata.txt)) into the Global Data of the function module (menu Goto -> Global Data). <br>
-Use **[Ctrl + C]** and **[Ctrl + V]** to paste the attached ABAP source code ([Z_XTRACT_IS_TABLE_JOIN](/files/z_xtract_is_table_join.txt)) into the source code editor.
-
-Save the function module and activate it.
-
-****
-#### Attachments
-
-- [Z_XTRACT_IS_TABLE_JOIN_GLOBALDATA.txt (7.25 KB)](/files/z_xtract_is_table_join_globaldata.txt)
-- [Z_XTRACT_IS_TABLE_JOIN.txt (115.89 KB)](/files/z_xtract_is_table_join.txt)
+1. Call transaction *SE80 - Object Navigator* to create a new function group, e.g. ZXTRACT.
+![Create_new_function_group](/img/content/create_function_group.png){:class="img-responsive"}
+2. Call transaction *SE37* to create a new function module. The name should be *Z_XTRACT_IS_TABLE_JOIN*, but can be changed if necessary.  
+3. Set the processing type of the module to *Remote-Enabled Module* (remote-enabled). 
+![Table-Join_function_attributes](/img/content/table-join_attributes.png){:class="img-responsive"}
+4. Create the module signature according to the following screenshots.
+![Table-Join_function_import](/img/content/table-join_import.png){:class="img-responsive"}
+![Table-Join_function_export](/img/content/table-join_export.png){:class="img-responsive"}
+![Table-Join_function_tables](/img/content/table-join_tables.png){:class="img-responsive"}
+5. Copy the source code with **[Ctrl+C]** and **[Ctrl+V]** from the file `Z_XTRACT_IS_TABLE_JOIN.txt` into the code editor - tab *Source Code*.
+![Table-Join_function_source](/img/content/table-join_source.png){:class="img-responsive"}
+6. Copy the source code with **[Ctrl+C]** and **[Ctrl+V]** from the file `Z_XTRACT_IS_TABLE_JOIN - Global Data.txt` into the code editor **Goto > Global Data**. 
+7. Save and activate the module.
