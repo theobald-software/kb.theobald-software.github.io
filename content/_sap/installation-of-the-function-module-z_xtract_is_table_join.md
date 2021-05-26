@@ -12,8 +12,7 @@ This article shows how to manually install the function Z_XTRACT_IS_TABLE_JOIN.
 **Note:** The Table Join component has been marked as *deprecated*. Use the Table component with custom function module Z_THEO_READ_TABLE for joining SAP tables.
 
 ### Installation with an SAP transport
-Installation of the function module using the transport request *thtrans.zip* supplied. <br> 
-The transport request is located in the following installation directory `C:\Program Files\[XtractProduct]\ABAP\thtrans.zip`.
+Installation of the function module using the transport request *Z_XTRACT_IS_TABLE_JOIN-transport.zip* supplied. <br> 
 
 ### Manual installation of function module Z_XTRACT_IS_TABLE_JOIN
 
@@ -26,13 +25,13 @@ Prerequisite for using the Table Join component is the installation of a custom 
 In this step, five structures must be created via transaction *SE11*, see the following screenshots. <br>
 The required text files are marked as paths.
 
-`"C:\Program Files\[Xtract Product]\ABAP\Z_XTRACT_IS_TABLE_JOIN - ZXTRACTTABLEFIELDS.txt"`
+File: *Z_XTRACT_IS_TABLE_JOIN - ZXTRACTTABLEFIELDS.txt*
 ![Z_XTRACT_TABLE_JOIN_01](/img/contents/table_join_structure1.png){:class="img-responsive"}
-`"C:\Program Files\[Xtract Product]\ABAP\Z_XTRACT_IS_TABLE_JOIN - ZXTRACTTABLEJOINDEF.txt"`
+File: *Z_XTRACT_IS_TABLE_JOIN - ZXTRACTTABLEJOINDEF.txt*
 ![Z_XTRACT_TABLE_JOIN_02](/img/contents/table_join_structure2.png){:class="img-responsive"}
-`"C:\Program Files\[Xtract Product]\ABAP\Z_XTRACT_IS_TABLE_JOIN - ZXTRACTTABLECODELINE.txt"`
+File: *Z_XTRACT_IS_TABLE_JOIN - ZXTRACTTABLECODELINE.txt*
 ![Z_XTRACT_TABLE_JOIN_03](/img/contents/table_join_structure3.png){:class="img-responsive"}
-`"C:\Program Files\[Xtract Product]\ABAP\Z_XTRACT_IS_TABLE_JOIN - ZXTRACTRANGE.txt"`
+File: *Z_XTRACT_IS_TABLE_JOIN - ZXTRACTRANGE.txt*
 ![Z_XTRACT_TABLE_JOIN_04](/img/contents/table_join_structure4.png){:class="img-responsive"}
 ![Z_XTRACT_TABLE_JOIN_05](/img/contents/table_join_structure5.png){:class="img-responsive"}
 
@@ -47,7 +46,7 @@ The required text files are marked as paths.
 ![Table-Join_function_import](/img/contents/table-join_import.png){:class="img-responsive"}
 ![Table-Join_function_export](/img/contents/table-join_export.png){:class="img-responsive"}
 ![Table-Join_function_tables](/img/contents/table-join_tables.png){:class="img-responsive"}
-5. Copy the source code with **[Ctrl+C]** and **[Ctrl+V]** from the file `Z_XTRACT_IS_TABLE_JOIN.txt` into the code editor - tab *Source Code*.
+5. Copy the source code with **[Ctrl+C]** and **[Ctrl+V]** from the file *Z_XTRACT_IS_TABLE_JOIN.txt* into the code editor - tab *Source Code*.
 ![Table-Join_function_source](/img/contents/table-join_source.png){:class="img-responsive"}
-6. Copy the source code with **[Ctrl+C]** and **[Ctrl+V]** from the file `Z_XTRACT_IS_TABLE_JOIN - Global Data.txt` into the code editor **Goto > Global Data**. 
+6. Copy the source code with **[Ctrl+C]** and **[Ctrl+V]** from the file *Z_XTRACT_IS_TABLE_JOIN - Global Data.txt* into the code editor **Goto > Global Data**. 
 7. Save and activate the module.
