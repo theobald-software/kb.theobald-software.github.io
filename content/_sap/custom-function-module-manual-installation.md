@@ -1,17 +1,17 @@
 ---
 layout: page
-title: Manual Installation of Custom Funtion Modules
-description: Instructions on how to manually install Custom Funtion Modules
+title: Manual Installation of Custom Function Modules
+description: Instructions on how to manually install Custom Function Modules
 permalink: /:collection/:path
 weight: 14
 ---
 
-This article shows how to manually install the function modules Z_XTRACT_IS_READ_TABLE (version 2.0 and newer) and Z_XTRACT_IS_REMOTE_REPORT in your SAP system. 
+This article shows how to manually install the function modules Z_THEO_READ_TABLE (version 2.0 and newer) and Z_XTRACT_IS_REMOTE_REPORT in your SAP system. 
 
 {: .box-note }
 **Note:** For more information on custom function modules and transport requests, refer to the [Online Help](https://help.theobald-software.com/en/xtract-universal/sap-customizing).
 
-### Installation of the Function Module Z_XTRACT_IS_READ_TABLE
+### Installation of the Function Module Z_THEO_READ_TABLE
 
 Z_THEO_READ_TABLE (version 2.0 and newer) consists in total of 13 development objects: <br>
 - **Package (1):** 
