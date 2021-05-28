@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|[4.29.6 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-4.29.6.html)|2021-05-28|Destinations|MicroStrategy folders are now entered by their ID instead of their name. This change is breaking.([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-4.29.6.html))|
 |4.29.5 [L]|2021-05-20|Designer|Fix for setting the target principal automatically on the connect window|
 |4.29.4 [L]|2021-05-19|Server|New web listener implementation|
 |4.29.3 [L]|2021-05-19|Destinations|S3 destination: when using file splitting, the uploaded part files will now be deleted when an error occurs during extraction.|
