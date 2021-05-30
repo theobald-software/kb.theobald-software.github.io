@@ -6,8 +6,6 @@ permalink: /:collection/:path
 weight: 19
 ---
 
-Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
-
 The example below shows a sample console program that sends a STATUS IDoc. This message type (STATUS) is designed for manipulating a status of another outbound IDoc. If an external application received an IDoc, it can use the STATUS IDoc to confirm the successful processing. STATUS is a very simple IDoc (which contains only one data record). We have kept the example simple here.
 
 To begin, we open a client connection to the R/3 system with the help of R3Connection class. Then we use the CreateIdoc method to instance a valid IDoc object. SYSTAT01 is the IDoc type for the appropriate message type STATUS.
@@ -17,11 +15,11 @@ To begin, we open a client connection to the R/3 system with the help of R3Conne
 {% highlight csharp %}
 static void Main(string[] args)
         {
-            R3Connection con = new R3Connection("hamlet",11,"Theobald","pw","DE","800");
+            R3Connection con = new R3Connection("SAPServer",00,"SAPUser","Password","EN","800");
             con.Open(false);
   
-            Console.WriteLine("Which Idocnumber would you like to manipulate?");
-            string IdocNo = Console.ReadLine();
+            Console.WriteLine("Which IDoc number would you like to manipulate?");
+            string IDocNo = Console.ReadLine();
   
             Idoc i = con.CreateIdoc("SYSTAT01","");
 {% endhighlight %}
@@ -31,11 +29,11 @@ static void Main(string[] args)
 <summary>[VB]</summary>
 {% highlight visualbasic %}
 Sub Main(ByVal args() As String)
-        Dim con As R3Connection = New R3Connection("hamlet", 11, "Theobald", "pw", "DE", "800")
+        Dim con As R3Connection = New R3Connection("SAPServer", 00, "SAPUser", "Password", "EN", "800")
         con.Open(False)
   
-        Console.WriteLine("Which Idocnumber would you like to manipulate?")
-        Dim IdocNo As String = Console.ReadLine()
+        Console.WriteLine("Which IDoc number would you like to manipulate?")
+        Dim IDocNo As String = Console.ReadLine()
   
         Dim i As Idoc = con.CreateIdoc("SYSTAT01", "")
 {% endhighlight %}
@@ -49,11 +47,11 @@ The next step is to provide various administrative information. Have a look at t
 // Fill Message Type
             i.MESTYP = "STATUS";
   
-            // Fill Information about Idoc Reciever
+            // Fill Information about IDoc Reciever
             i.RCVPRN = "PT4_800"; // Partner number
             i.RCVPRT = "LS"; // Partner type
   
-            // Fill information about idoc sender
+            // Fill information about IDoc sender
             i.SNDPOR = "ERPCONNECT"; // Partner port
             i.SNDPRN = "ERPCONNECT"; // Partner number
             i.SNDPRT = "LS"; // Partner type
@@ -66,11 +64,11 @@ The next step is to provide various administrative information. Have a look at t
 ' Fill Message Type
         i.MESTYP = "STATUS"
   
-        ' Fill Information about Idoc Reciever
+        ' Fill Information about IDoc Reciever
         i.RCVPRN = "PT4_800" ' Partner number
         i.RCVPRT = "LS" ' Partner type
   
-        ' Fill information about idoc sender
+        ' Fill information about IDoc sender
         i.SNDPOR = "ERPCONNECT" ' Partner port
         i.SNDPRN = "ERPCONNECT" ' Partner number
         i.SNDPRT = "LS" ' Partner type
@@ -86,11 +84,11 @@ Now we have to fill in some fields in segment E1STATS: the new status code (STAT
             i.Segments["E1STATS",0].Fields["LOGDAT"].FieldValue = "20060101";
             i.Segments["E1STATS",0].Fields["LOGTIM"].FieldValue = "152301";
             i.Segments["E1STATS",0].Fields["STATUS"].FieldValue = "12";
-            i.Segments["E1STATS",0].Fields["DOCNUM"].FieldValue = IdocNo;
+            i.Segments["E1STATS",0].Fields["DOCNUM"].FieldValue = IDocNo;
   
             i.Send();
   
-            Console.WriteLine("Idoc sent");
+            Console.WriteLine("IDoc sent");
             Console.ReadLine();
 {% endhighlight %}
 </details>
@@ -106,7 +104,7 @@ Now we have to fill in some fields in segment E1STATS: the new status code (STAT
   
         i.Send()
   
-        Console.WriteLine("Idoc sent")
+        Console.WriteLine("IDoc sent")
         Console.ReadLine()
 {% endhighlight %}
 </details>
