@@ -18,9 +18,10 @@ con.Open(false);
 ERPConnect.Idocs.Idoc id = con.CreateEmptyIdoc("MATMAS01","");
   
 // Fill header data
-id.SNDPRN = "ERPConnect";
+id.SNDPRN = "ERPCONNECT";
+id.SNDPOR = "ERPCONNECT";
 id.SNDPRT = "LS";
-id.SNDPOR = "ERPConnect";
+
 id.RCVPRN = "ECW_00_800";
 id.RCVPRT = "LS";
 id.MESTYP = "MATMAS";
