@@ -6,8 +6,6 @@ permalink: /:collection/:path
 weight: 21
 ---
 
-Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
-
 This sample code shows, how to create and send a MATMAS IDoc.
 Please note, that the code only creates the basic data. If you want to add more sophisticated data, have a look at the IDoc documentation transaction WE60 to find out more about the segments.
 
@@ -20,10 +18,10 @@ con.Open(false);
 ERPConnect.Idocs.Idoc id = con.CreateEmptyIdoc("MATMAS01","");
   
 // Fill header data
-id.SNDPRN = "SMP_ERPC";
+id.SNDPRN = "ERPConnect";
 id.SNDPRT = "LS";
-id.SNDPOR = "TRFC";
-id.RCVPRN = "T90CLNT090";
+id.SNDPOR = "ERPConnect";
+id.RCVPRN = "ECW_00_800";
 id.RCVPRT = "LS";
 id.MESTYP = "MATMAS";
   
