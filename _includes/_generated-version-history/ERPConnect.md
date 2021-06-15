@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.14.9 [M]|2021-06-15|RFCServer|Fix for receiving empty tables via NWRFC (previous non-empty result was returned)|
 |6.14.8 [L]|2021-04-13|RFC Client|Classic: Fix for reading structures in response with less members than defined in local function object|
 |6.14.7 [L]|2021-01-20|RFCServer|Improvements for NWRFC multithreading|
 |6.14.6 [L]|2021-01-04|LINQtoERP|BWCube: Fix for SingleRange.Option|
