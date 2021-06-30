@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Automation of XU data extracts with ADF - part2
-description: automation-of-xu-data-extracts-with-adf-part2
+title: Automation of XU data extracts with ADF - Part 2
+description: automation-of-xu-data-extracts-with-adf-Part 2
 permalink: /:collection/:path
 weight: 51
 ---
