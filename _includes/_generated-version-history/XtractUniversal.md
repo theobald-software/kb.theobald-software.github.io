@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|[4.32.1 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-4.32.1.html)|2021-07-01|Designer|Several UI/UX changes([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-4.32.1.html))|
 |4.32.0 [L]|2021-06-25|General|xu.exe/xu.elf: Added support for HTTP Basic authentication|
 |4.31.1 [L]|2021-06-23|Server|Multi-process architecture for configuration server|
 |4.31.0 [M]|2021-06-16|Report|Report component has been reworked.|
