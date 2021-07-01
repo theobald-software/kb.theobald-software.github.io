@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.14.16 [L]|2021-07-01|WPF|Introduction of ShowConfirmation4All message box|
 |2.14.15 [L]|2021-06-10|General|Byte token support for line reader Performance optimization for line reader|
 |2.14.14 [M]|2021-05-20|WPF|Fix for displaying messages when no possible window owner is found for the message dialog|
 |2.14.13 [L]|2021-05-06|General|Message box for showing certificates Webrequest wrapper for better tls error messages certificate pinning and tls error handling infrastructure|
