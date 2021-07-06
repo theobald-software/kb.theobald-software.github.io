@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.1.2 [M]|2021-07-06|General|Fixed serialization of X.509 certificate info|
 |1.1.1 [L]|2021-06-23|General|Improved logging for graceful shutdown|
 |1.1.0 [L]|2021-05-19|General|Added new async servers|
 |1.0.13 [L]|2021-05-06|General|CertificatePinning support and better TLS error message support for AuthClient|
