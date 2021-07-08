@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.20.20 [L]|2021-07-08|Report|Fixed report transport request.|
 |1.20.19 [L]|2021-06-11|Report|Fixed a bug where the report ruler would stop scrolling horizontally with wider reports.|
 |1.20.18 [L]|2021-05-26|Report|Fixed an issue with extracting reports that contain multiple tables.|
 |1.20.17 [L]|2021-05-11|Table|Fix for *RFC_READ_TABLE2 variants with custom names|
