@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.15.0 [M]|2021-07-08|General|Start processes using P/Invoke instead of System.Diagnostics.Process|
 |2.14.16 [L]|2021-07-01|WPF|Introduction of ShowConfirmation4All message box|
 |2.14.15 [L]|2021-06-10|General|Byte token support for line reader Performance optimization for line reader|
 |2.14.14 [M]|2021-05-20|WPF|Fix for displaying messages when no possible window owner is found for the message dialog|
