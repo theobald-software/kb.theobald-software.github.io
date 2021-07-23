@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.32.5 [L]|2021-07-23|Designer|Designer startup logic refactored to WPF standards|
 |4.32.4 [L]|2021-07-07|Destinations|Fixed a bug in MicroStrategy Attributes and Metrics generator.|
 |4.32.3 [L]|2021-07-02|Destinations|Fixed CSV Parsing Bug in SSRS Data Extension|
 |4.32.2 [L]|2021-07-02|Destinations|Fix for displaying the modes for Parquet files in Google Cloud Storage destination definition window|
