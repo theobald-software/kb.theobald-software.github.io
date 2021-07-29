@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.32.6 [L]|2021-07-29|General|xu.exe/xu.elf: Improved error message when directory is provided instead of file for option -f|
 |4.32.5 [L]|2021-07-23|Designer|Designer startup logic refactored to WPF standards|
 |4.32.4 [L]|2021-07-07|Destinations|Fixed a bug in MicroStrategy Attributes and Metrics generator.|
 |4.32.3 [L]|2021-07-02|Destinations|Fixed CSV Parsing Bug in SSRS Data Extension|
