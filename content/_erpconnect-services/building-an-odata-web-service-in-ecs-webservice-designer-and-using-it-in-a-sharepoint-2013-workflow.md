@@ -60,7 +60,7 @@ For building OData web services with WebService Designer an ERPConnect Services 
 
 Please follow this link to demand an ECS 30 day free trial version:
 
-[http://theobald-software.com/en/trial-version.html](http://theobald-software.com/en/trial-version.html)
+[https://theobald-software.com/en/trial-version.html](https://theobald-software.com/en/trial-version.html)
 
 You also have to ensure that a SharePoint 2013 on-premise installation is available on your server. For designing workflows with the SharePoint 2013 workflow platform you will also need SharePoint Designer 2013.
 
@@ -68,7 +68,7 @@ Furthermore you have to ensure that the SharePoint 2013 workflow management plat
  
 For technical details about the complete installation process of workflow for SharePoint Server 2013 see:
 
-[https://technet.microsoft.com/en-us/library/jj658588.aspx](http://theobald-software.com/en/trial-version.html)
+[https://technet.microsoft.com/en-us/library/jj658588.aspx](https://theobald-software.com/en/trial-version.html)
 
 
 After the successful installation SharePoint 2013 Workflow will be selectable as Platform Type in SharePoint designer 2013:

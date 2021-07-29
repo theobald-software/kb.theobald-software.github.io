@@ -431,5 +431,5 @@ Azure AD: Adding, Updating, and Removing an Application
 
 ERPConnect Services
 
-[http://theobald-software.com/en/erpconnect-services-productinfo.html](http://theobald-software.com/en/erpconnect-services-productinfo.html)
+[https://theobald-software.com/en/erpconnect-services-productinfo.html](https://theobald-software.com/en/erpconnect-services-productinfo.html)
 

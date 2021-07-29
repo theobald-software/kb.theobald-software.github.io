@@ -171,7 +171,7 @@ Copy connection string, we will need it later:
 
 Get the package of ERPConnectServices and Install it on the machine, which has access to an SAP system:
 
-[http://theobald-software.com/de/erpconnectservices-downloads.htm](http://theobald-software.com/de/erpconnectservices-downloads.htm)
+[https://theobald-software.com/de/erpconnectservices-downloads.htm](https://theobald-software.com/de/erpconnectservices-downloads.htm)
 
 #### 5.2 Configuration
 
@@ -389,7 +389,7 @@ Enjoy experimenting with ECSCore! Our team is always there for you.
 
 References:
 
-ErpConnectServices:[http://theobald-software.com/de/erpconnectservices-downloads.htm](http://theobald-software.com/de/erpconnectservices-downloads.htm)
+ErpConnectServices:[https://theobald-software.com/de/erpconnectservices-downloads.htm](https://theobald-software.com/de/erpconnectservices-downloads.htm)
 
 tEcs: [https://static.theobald-software.com/tEcs/4.1](https://static.theobald-software.com/tEcs/4.1)
 

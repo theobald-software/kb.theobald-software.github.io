@@ -8,7 +8,7 @@ weight: 31
 
 ### Content ###
 
-**[Xtract Universal](https://www.theobald-software.com/en/xtract-universa)** supports integration of your SAP data in the most different target systems. <br>
+**[Xtract Universal](https://www.theobald-software.com/en/xtract-universal)** supports integration of your SAP data in the most different target systems. <br>
 
 After creating an extraction (Refer to [OnlineHelp](https://help.theobald-software.com/en/xtract-universal/index)), you can run an extraction by just calling the command line tool with the right parameters. <br>
 

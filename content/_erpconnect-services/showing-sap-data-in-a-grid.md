@@ -65,11 +65,11 @@ SharePointProjectItem.spdata has some information (Namespaces and Class Names), 
 
 Now get the ERPConnect Services package (ECS).
 
-[http://theobald-software.com/en/erpconnect-services-productinfo.html](http://theobald-software.com/en/erpconnect-services-productinfo.html)
+[https://theobald-software.com/en/erpconnect-services-productinfo.html](https://theobald-software.com/en/erpconnect-services-productinfo.html)
 
 After having ERPConnect Services installed from
 
-[http://theobald-software.com/en/erpconnect-services-downloads.html?prod=ERPConnectServices](http://theobald-software.com/en/erpconnect-services-downloads.html?prod=ERPConnectServices)
+[https://theobald-software.com/en/erpconnect-services-downloads.html?prod=ERPConnectServices](https://theobald-software.com/en/erpconnect-services-downloads.html?prod=ERPConnectServices)
 
 please ensure, that the ECS Service is running and passes the proxy test. You may need to restart the server in order for all components to get initialized.
 
@@ -345,7 +345,7 @@ Links in article:
 
 [2] [http://cksdev.codeplex.com/](http://cksdev.codeplex.com/)
 
-[3] [http://theobald-software.com/en/erpconnect-services-productinfo.html](http://theobald-software.com/en/erpconnect-services-productinfo.html)
+[3] [https://theobald-software.com/en/erpconnect-services-productinfo.html](https://theobald-software.com/en/erpconnect-services-productinfo.html)
 
 [4] [http://jquery.com](http://jquery.com)
 

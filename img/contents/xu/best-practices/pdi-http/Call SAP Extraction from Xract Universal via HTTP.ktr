@@ -450,7 +450,7 @@
 - Text file output: write the output to a text file
 - Table output: write the output to a database table (in this case MS SQL Server)
 
-For more Information check: http://www.theobald-software.com</note>
+For more Information check: https://www.theobald-software.com</note>
       <xloc>16</xloc>
       <yloc>16</yloc>
       <width>633</width>
