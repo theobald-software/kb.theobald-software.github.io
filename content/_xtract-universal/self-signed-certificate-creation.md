@@ -5,10 +5,10 @@ description: Self-signed certificate creation
 permalink: /:collection/:path
 weight: 51
 ---
-### Target audience ### <br>
+### Target audience ###
 Customers who want to use certificates with Xtract Universal. <br>
 
-### About ### <br>
+### About ###
 This article presents two approaches to easily create a self-signed certificate. Please note that the procedure for certificate creation in your company could differ from this guide.  
 
 For transport encryption and authentication in Xtract Universal it is required to [install an X.509 certificate](https://help.theobald-software.com/en/xtract-universal/security/install-x.509-Certificate).
@@ -18,7 +18,7 @@ There are two ways for creating an X.509 certificate:
 - Certificate released by an (internal) certification authority (CA)
 - Self-signed certificate
 
-### Approaches ### <br>
+### Approaches ###
 We focus on **self-signed certificates** here. There are several ways to create such certificates, two of which are briefly presented here.
 
 1. **Creation via PowerShell** <br>
