@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.20.23 [L]|2021-07-30|OHS|Improved error handling for unsupported destination types|
 |1.20.22 [L]|2021-07-27|ODP|Reverted default package size, this fixes an issue where the package size doubles leading to an error|
 |1.20.21 [L]|2021-07-13|Table|Fixed a bug where fetching the metadata of certain views would run into an error.|
 |1.20.20 [L]|2021-07-08|Report|Fixed report transport request.|
