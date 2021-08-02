@@ -5,7 +5,6 @@ description: Xtract Report - Screen output without connection to user
 permalink: /:collection/:path
 weight: 3
 ---
-
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
 
 **Error:**
@@ -24,6 +23,6 @@ Running the report in the background suppresses screen outputs and redirects the
 
 ![UseBatch](/img/contents/UseBatch.png){:class="img-responsive"}
 
-(This is the screenshot of the Xtract IS Table component, the Settings in the other products could vary)
+(This is the screenshot of the Xtract IS Report component, the Settings in the other products could vary)
 
 Please consider, that this is only a solution if the pop up Dynpro is only for information purposes. If the Dynpro is awaiting any input, this report is not compatible with our product and cannot be executed. 
