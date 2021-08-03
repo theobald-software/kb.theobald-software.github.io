@@ -67,55 +67,51 @@ collections:
   ecs-core:
     output: true
     name: 'ECS Core'
-    weight: 2
+    weight: 3
   required-support-information:
     output: true
     name: 'Required Support Information'
-    weight: 7
+    weight: 11
   board-connector:
     output: true
     name: 'BOARD Connector'
-    weight: 1
+    weight: 9
   erpconnect-general:
     output: true
     name: 'ERPConnect - General'
-    weight: 3
+    weight: 1
   erpconnect-samples:
     output: true
     name: 'ERPConnect - Samples'
-    weight: 4
+    weight: 2
   erpconnect-services:
     output: true
     name: 'ERPConnect Services'
-    weight: 5
+    weight: 4
   general:
     output: true
     name: 'General'
-    weight: 6
+    weight: 5
   sap:
     output: true
     name: 'SAP'
-    weight: 8
+    weight: 6
   troubleshooting:
     output: true
     name: 'Troubleshooting'
-    weight: 9
+    weight: 10
   version-history:
     output: true
     name: 'Version History'
-    weight: 14
+    weight: 12
   xtract-is:
     output: true
     name: 'Xtract IS'
-    weight: 11
-  xtract-rs:
-    output: true
-    name: 'Xtract RS'
-    weight: 12
+    weight: 7
   xtract-universal:
     output: true
     name: 'Xtract Universal'
-    weight: 13
+    weight: 8
   posts:
     output: true
 
