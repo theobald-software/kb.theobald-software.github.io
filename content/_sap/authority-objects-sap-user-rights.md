@@ -8,16 +8,20 @@ weight: 1
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
 
-To use our products you need an SAP user with the following authority objects. <br>
+### About
+To use our products you need an SAP connection user with sufficient authorization in SAP. Authorizations are assigned via authorization objects in SAP. <br>
 
-The authorizations in the first section General authority objects are required to establish an SAP connection with the SAP server. 
+The authorizations in the first section "General authorization objects" are required to establish an SAP connection with the SAP application server. 
 The remaining sections show the authorizations required for the respective components. Depending on the components that you want to use, the corresponding authorizations are required. 
 
-Please redirect this article to your SAP Basis admins to get the relevant authority objects you need for your user.  
+Please redirect this article to your SAP Basis admins to get the relevant authorization objects you require for your SAP connection user.  
 
-### General authority objects
+{: .box-note }
+**Note** Should you still get an authorization error in or software, ask SAP Basis to record an ST01-/ or SU53-authorization trace in SAP. This trace tells you, which authorizations objects are missing.
 
-The following objects are needed at least to establish a connection.
+### General authorization objects
+
+The following objects are needed at least to establish a connection to SAP.
 
 ```
 S_RFC            RFC_TYPE=FUGR; RFC_NAME=SYST; ACTVT=16
@@ -64,7 +68,10 @@ S_RFC            RFC_TYPE=FUNC; RFC_NAME=EM_GET_NUMBER_OF_ENTRIES; ACTVT=16
 
 ### BW Query / BW Cube
 
-Look up and execute a BW Query / BW Cube (OLAP BAPI/MDX and BEx mode):
+Authorizations for the underlying Queries, Cubes and InfoAreas need to be assigned via ```S_RS_COMP```and ```S_RS_COMP1```. <br>
+Analysis authorizations are assigned via ```S_RS_AUTH```.
+
+#### Look up and execute a BW Query / BW Cube (OLAP BAPI/MDX and BEx mode):
 
 ```
 S_RFC            RFC_TYPE=FUGR; RFC_NAME=RSOB; ACTVT=16
@@ -78,6 +85,21 @@ Optional (needed for date conversion):
 ```
 S_TABU_NAM       ACTVT=03; TABLE=DD03L
 ```
+
+#### Look up and execute a BW Query / BW Cube (BICS mode ):
+
+```
+S_RFC            RFC_TYPE=FUGR;RFC_NAME=SYST;ACTVT=16;type=RF;name=RFCPING;
+S_RFC            RFC_TYPE=FUGR; RFC_NAME=RSOBJS_RFC_INTERFACE; ACTVT=16; type=RF;name=RSOBJS_GET_NODES;
+S_RFC            RFC_TYPE=FUGR;RFC_NAME=RSAO_CORE;ACTVT=16;type=RF;name=RSAO_BICS_SESSION_INITIALIZE
+S_RFC            RFC_TYPE=FUGR;RFC_NAME=RSBOLAP_BICS_CONSUMER;ACTVT=16;type=RF;name=BICS_CONS_CREATE
+S_RFC            RFC_TYPE=FUGR;RFC_NAME=RSBOLAP_BICS_PROVIDER;ACTVT=16;type=RF;name=BICS_PROV_OPEN;
+S_RFC            RFC_TYPE=FUGR;RFC_NAME=RSBOLAP_BICS_PROVIDER_VAR;ACTVT=16;type=RF;name=BICS_PROV_VA
+S_ADMI_FCD       S_ADMI_FCD=PADM;
+```
+
+Alternatively, you can assign pfcg template *S_RS_RREPU - BW Role: Reporting User*. This template contains above authorizations except for S_ADMI_FCD.
+
 ### SAP Query
 
 Look up and execute a query:
