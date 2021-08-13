@@ -1,5 +1,7 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.15.2 [L]|2021-08-12|Licensing|Backward-compatibility for default destinations (new licenses on old XU versions)|
+|2.15.1 [L]|2021-08-12|General|Client handles of StdIn, StdOut and StdErr in the Process-Wrapper are now closed correctly on the server side after sending them to the client.|
 |2.15.0 [M]|2021-07-08|General|Start processes using P/Invoke instead of System.Diagnostics.Process|
 |2.14.16 [L]|2021-07-01|WPF|Introduction of ShowConfirmation4All message box|
 |2.14.15 [L]|2021-06-10|General|Byte token support for line reader Performance optimization for line reader|
