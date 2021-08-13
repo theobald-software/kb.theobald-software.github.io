@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.20.24 [M]|2021-08-05|OHS|Third-party mode: Fix for empty packets|
 |1.20.23 [L]|2021-07-30|OHS|Improved error handling for unsupported destination types|
 |1.20.22 [L]|2021-07-27|ODP|Reverted default package size, this fixes an issue where the package size doubles leading to an error|
 |1.20.21 [L]|2021-07-13|Table|Fixed a bug where fetching the metadata of certain views would run into an error.|
