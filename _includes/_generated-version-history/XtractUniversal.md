@@ -1,5 +1,7 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.32.8 [M]|2021-08-12|Server|Increased timeouts for starting worker processes|
+|4.32.7 [L]|2021-08-07|Designer|Option to set the bucket owner as object owner in S3 destination. (Beta) If listing S3 buckets failed, the name can now be set directly.|
 |4.32.6 [L]|2021-07-29|General|xu.exe/xu.elf: Improved error message when directory is provided instead of file for option -f|
 |4.32.5 [L]|2021-07-23|Designer|Designer startup logic refactored to WPF standards|
 |4.32.4 [L]|2021-07-07|Destinations|Fixed a bug in MicroStrategy Attributes and Metrics generator.|
