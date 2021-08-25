@@ -24,7 +24,17 @@ We focus on **self-signed certificates** here. There are several ways to create 
 1. **Creation via PowerShell** <br>
 Please have a look at the following Microsoft Article about [certificate creation via PowerShell](https://docs.microsoft.com/en-us/powershell/module/pki/new-selfsignedcertificate?view=windowsserver2019-ps).
 2. **Creation via Windows Management Concole** <br>
-Have look at the [following video](https://cloud.theobald-software.com/s/LnnfbBDos9dDDKr), demonstrating how a self-signed certficate can be created via the Windows Management Console.
+Have look at the following video:
+
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/dvR_85WfQ_E"
+title="YouTube video player"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen></iframe>
+
+{: .box-note }
+**Note:** The approach via Windows Management Console only works when the AD user has the respective permissions to undertake these actions.  
 
 
 
