@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.14.12 [M]|2021-08-26|General|Fix for tables in tables|
 |6.14.11 [L]|2021-08-02|Idoc|Added TemplateSegments property to access IDoc schema information|
 |6.14.10 [M]|2021-06-15|Idoc|Fix for LoadPlainData(): RCVLAD and following fields|
 |6.14.9 [M]|2021-06-15|RFCServer|Fix for receiving empty tables via NWRFC (previous non-empty result was returned)|
