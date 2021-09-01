@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.7.6 [L]|2021-09-01|General|Updated license check.|
 |6.7.5 [L]|2021-04-27|ODP|Added package size setting as component property|
 |6.7.4 [L]|2021-04-27|General|Fixed an issue that caused failed license checks in some Azure IR environments.|
 |6.7.3 [L]|2021-04-14|ODP|Fixed a bug that caused the selected hierarchy to be reset (Bug introduced in 6.7.2)|
