@@ -1,5 +1,7 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.9.2 [L]|2021-07-23|Designer|Designer startup logic refactored to WPF standards|
+|4.9.1 [L]|2021-07-02|Server|Multi-process architecture for configuration server|
 |4.9.0 [M]|2021-06-17|Report|Reworked the report component.|
 |4.8.6 [L]|2021-05-19|Server|New web listener implementation|
 |4.8.5 [L]|2021-04-26|Designer|Fix for General Settings window, in order to display cache configuration correctly|
