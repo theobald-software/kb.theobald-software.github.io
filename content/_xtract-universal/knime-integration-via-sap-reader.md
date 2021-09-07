@@ -40,4 +40,5 @@ The following software applications must be installed for integration into KNIME
 - [Xtract Universal Web Server Port](https://help.theobald-software.com/en/xtract-universal/server/ports)
 - [Connecting Xtract Universal Server](https://help.theobald-software.com/en/xtract-universal/getting-started/connect-designer-with-server#connecting-to-a-server)
 - [Webinar "SAP Data to Insights with KNIME"](https://www.youtube.com/watch?v=KQLLoDUoOEg)
+- [Dynamic Runtime Parameter within KNIME Workflow](https://kb.theobald-software.com/xtract-universal/dynamic-runtime-paramater%20within-KNIME-workflow)
 

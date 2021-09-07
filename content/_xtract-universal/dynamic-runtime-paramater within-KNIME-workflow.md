@@ -13,7 +13,7 @@ The background is the reduction of transaction costs as well as the use of a del
 
 In this example, the following field *AEDAT - Changed On* of the standard table *EKKO - Purchasing Document Header* is used. 
 
-Through this procedure, only changed entries from the SAP table EKKO are extracted from the SAP source system and processed into the existing SQL Server database. 
+Through this procedure, only changed entries from the SAP table EKKO are extracted from the SAP source system and processed into the existing SQL Server database table. 
 
 {: .box-note }
 **Note:** Basic knowledge of T-SQL, KNIME Analytics Platform and the creation of table extractions in Xtract Universal is required.
@@ -59,6 +59,7 @@ SELECT MAX(REPLACE(AEDAT, '-', '')) AS maxAEDAT FROM #table#
 
 ****
 #### Releated Link
+- [KNIME Integration via SAP Reader (Theobald Software)](https://kb.theobald-software.com/xtract-universal/knime-integration-via-sap-reader)
 - [Read or download documentation for KNIME Software](https://docs.knime.com/)
 - [KNIME Flow Control Guide](https://docs.knime.com/2021-06/analytics_platform_flow_control_guide/index.html#introduction)
 - [KNIME Getting Started Guide](https://www.knime.com/getting-started-guide)
