@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.8.0 [M]|2021-09-07|Report|Reworked the report component.|
 |6.7.6 [L]|2021-09-01|General|Updated license check.|
 |6.7.5 [L]|2021-04-27|ODP|Added package size setting as component property|
 |6.7.4 [L]|2021-04-27|General|Fixed an issue that caused failed license checks in some Azure IR environments.|
