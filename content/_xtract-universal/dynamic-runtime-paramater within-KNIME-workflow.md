@@ -15,6 +15,8 @@ In this example, the following field *AEDAT - Changed On* of the standard table 
 
 Through this procedure, only changed entries from the SAP table EKKO are extracted from the SAP source system and processed into the existing SQL Server database table. 
 
+![KMIME-dynamic-runtime-parameter-workflow](/img/contents/xu/KMIME-dynamic-runtime-parameter-workflow.png){:class="img-responsive"}
+
 {: .box-note }
 **Note:** Basic knowledge of T-SQL, KNIME Analytics Platform and the creation of table extractions in Xtract Universal is required.
 
@@ -24,7 +26,7 @@ The following BI architecture must be available and configured:
 
 - Latest version of the [KNIME Analytics Platform](https://www.knime.com/downloads).
 - Installed KNIME extension [SAP Reader (Theobald Software)](https://hub.knime.com/knime/extensions/org.knime.features.sap.theobald/latest/org.knime.sap.theobald.node.SAPTheobaldReaderNodeFactory).
-- Existing table object in a Microsoft database (SQl Server).
+- Existing table object in a Microsoft database (SQL-Server).
 - Latest version of Xtract Universal, obtained from the [Theobald Software website](https://theobald-software.com/en/download-trial).
 - Existing table extraction of table *EKKO - Purchasing Document Header* in Xtract Universal, see [Defining a Table Extraction](https://help.theobald-software.com/en/xtract-universal/getting-started/define-a-table-extraction).
 - Use of a WHERE condition with [user-defined variables](https://help.theobald-software.com/en/xtract-universal/advanced-techniques/user-defined-variables) of the table extraction in Xtract Universal e.g.: `EKKO~AEDAT > @maxAEDAT`.
@@ -51,7 +53,6 @@ SELECT MAX(REPLACE(AEDAT, '-', '')) AS maxAEDAT FROM #table#
 9. In the **Flow Variables** tab, select the variable `maxAEDAT` in the **Custom Parameters** section using the drop-down menu (7).
 ![KNIME-SAP-Reader-Flow-Variables](/img/contents/xu/KNIME-SAP-Reader-Flow-Variables.png){:class="img-responsive"}
 10. Finally, pass the results of the extraction in the workflow to the KNIME node **DB Writer** and execute the workflow.
-![KMIME-dynamic-runtime-parameter-workflow](/img/contents/xu/KMIME-dynamic-runtime-parameter-workflow.png){:class="img-responsive"}
 
 {: .box-tip }
 **Tip:** Check the correct execution of the extraction with user-defined runtime parameters in the [Extraction Log](https://help.theobald-software.com/en/xtract-universal/logging#reading-logs---extraction-log) of Xtract Universal.
