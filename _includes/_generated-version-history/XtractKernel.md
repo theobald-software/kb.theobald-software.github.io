@@ -1,5 +1,7 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.1.7 [M]|2021-09-10|DeltaQ|Log RFC server registration errors to extraction log|
+|5.1.6 [M]|2021-09-10|DeltaQ|Aborting extraction if errors occur while sending request IDoc|
 |5.1.5 [L]|2021-05-04|Hierarchy|Fixed an issue where hierarchies in natural representation had no object name specified|
 |5.1.4 [L]|2020-11-23|OHS|Re-enabled NWRFC for OHS|
 |5.1.3 [M]|2020-11-09|DeltaQ|Incoming Info IDocs reset timeout now|
