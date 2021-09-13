@@ -1,6 +1,7 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
-|[1.20.26 [L]](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.20.26.html)|2021-09-08|Report|Fixed function module recognition based on signature.([Release note](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.20.26.html))|
+|[1.20.27 [L]](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.20.27.html)|2021-09-13|Report|Fixed function module recognition based on signature([Release note](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.20.27.html))|
+|1.20.26 [L]|2021-09-08|Report|Fixed a bug where automatic column detection would not work with reports where rows don't begin with pipes.|
 |1.20.25 [L]|2021-09-06|Report|Output columns now have length of 255 characters when dynamic column widths and offsets is turned on. |
 |1.20.24 [M]|2021-08-05|OHS|Third-party mode: Fix for empty packets|
 |1.20.23 [L]|2021-07-30|OHS|Improved error handling for unsupported destination types|
