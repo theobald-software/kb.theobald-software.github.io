@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.15.4 [L]|2021-09-20|WPF|Added removeable drive icon.|
 |2.15.3 [L]|2021-09-20|WPF|Added drive icon, network drive icon, folder icon, red folder icon and open folder icon.|
 |2.15.2 [L]|2021-08-12|Licensing|Backward-compatibility for default destinations (new licenses on old XU versions)|
 |2.15.1 [L]|2021-08-12|General|Client handles of StdIn, StdOut and StdErr in the Process-Wrapper are now closed correctly on the server side after sending them to the client.|
