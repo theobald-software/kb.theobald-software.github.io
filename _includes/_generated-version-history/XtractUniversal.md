@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|[4.32.10 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-4.32.10.html)|2021-09-15|Destinations|S3 destination: fixed a bug in the rollback logic. Multiple internal changes.([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-4.32.10.html))|
 |4.32.9 [L]|2021-08-18|Destinations|Snowflake can read runtime parameters on custom sql statements|
 |4.32.8 [M]|2021-08-12|Server|Increased timeouts for starting worker processes|
 |4.32.7 [L]|2021-08-07|Designer|Option to set the bucket owner as object owner in S3 destination. (Beta) If listing S3 buckets failed, the name can now be set directly.|
