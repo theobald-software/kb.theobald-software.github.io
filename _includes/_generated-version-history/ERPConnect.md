@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.14.13 [M]|2021-09-21|RFCServer|Fixed an issue where an RFCServer would not update its code page when using NWRFC|
 |6.14.12 [M]|2021-08-26|General|Fix for tables in tables|
 |6.14.11 [L]|2021-08-02|Idoc|Added TemplateSegments property to access IDoc schema information|
 |6.14.10 [M]|2021-06-15|Idoc|Fix for LoadPlainData(): RCVLAD and following fields|
