@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.32.12 [L]|2021-09-22|Destinations|Alteryx: Fixed a bug where RAW types changed from String to Blob and caused extractions to fail (introduced in 4.27.1). Updated the Alteryx SDK dependency version|
 |4.32.11 [L]|2021-09-22|Destinations|MySQL destination allows entering custom server ports and was updated to use the latest data provider for MySQL (8.0.26.0) |
 |[4.32.10 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-4.32.10.html)|2021-09-15|Destinations|S3 destination: fixed a bug in the rollback logic. Multiple internal changes.([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-4.32.10.html))|
 |4.32.9 [L]|2021-08-18|Destinations|Snowflake can read runtime parameters on custom sql statements|
