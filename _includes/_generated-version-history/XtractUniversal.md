@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.32.14 [L]|2021-09-23|Destinations|Power BI Destination: Fixed a bug where an error would occur in Power BI when an extraction returns 0 rows|
 |4.32.13 [L]|2021-09-22|Server|Fix for log file collision when running many extractions at once. Fix for timeout when starting more extractions than cores in the machine at once.|
 |4.32.12 [L]|2021-09-22|Destinations|Alteryx: Fixed a bug where RAW types changed from String to Blob and caused extractions to fail (introduced in 4.27.1). Updated the Alteryx SDK dependency version|
 |4.32.11 [L]|2021-09-22|Destinations|MySQL destination allows entering custom server ports and was updated to use the latest data provider for MySQL (8.0.26.0) |
