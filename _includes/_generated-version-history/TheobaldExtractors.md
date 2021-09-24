@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|[1.21.0 [L]](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.21.0.html)|2021-09-24|BW Cube|Updated cube component with new BICS mode (beta).([Release note](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.21.0.html))|
 |1.20.27 [L]|2021-09-13|Report|Fixed a bug where automatic column detection didn't work for reports where rows don't begin with a pipe.|
 |[1.20.26 [L]](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.20.26.html)|2021-09-08|Report|Fixed function module recognition based on signature.([Release note](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.20.26.html))|
 |1.20.25 [L]|2021-09-06|Report|Output columns now have length of 255 characters when dynamic column widths and offsets is turned on. |
