@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.15.6 [L]|2021-09-28|General|ProcessAsync added support for arguments|
 |2.15.5 [L]|2021-09-22|General|Fix for starving the threadpool while waiting for spawned thread|
 |2.15.4 [L]|2021-09-20|WPF|Added removeable drive icon.|
 |2.15.3 [L]|2021-09-20|WPF|Added drive icon, network drive icon, folder icon, red folder icon and open folder icon.|
