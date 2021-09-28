@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.2.2 [M]|2021-09-28|General|Fix for timeout while stopping servers|
 |1.2.1 [L]|2021-09-22|General|Performance improvement for ForkingWaitHandleServer on machines with few cores.|
 |1.2.0 [L]|2021-09-09|General|Rpc server rust port|
 |1.1.2 [M]|2021-07-06|General|Fixed serialization of X.509 certificate info|
