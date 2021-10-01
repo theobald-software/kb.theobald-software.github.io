@@ -21,7 +21,7 @@ When connecting to a destination in Xtract Universal the connection will always 
 This can be achieved following the [Microsoft guidelines](https://docs.microsoft.com/en-us/dotnet/framework/network-programming/proxy-configuration).
 Modify the **XtractRun.exe.config** and the **XtractDesigner.exe.config** files, that can be found in the Xtract Universal installation folder. <br>
 Enter the following section in both files: 
-``` XML
+```xml
 <system.net>
     <defaultProxy>
         <proxy  proxyaddress="http://[My_Proxyserver]:3128"
@@ -32,7 +32,7 @@ Enter the following section in both files:
 ```
 
 **XtractRun.exe.config:**
-``` XML
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <configuration>
     <system.net>
@@ -49,7 +49,7 @@ Enter the following section in both files:
 </configuration>
 ```
 **XtractDesigner.exe.config:**
-``` XML
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <configuration>
 ​
