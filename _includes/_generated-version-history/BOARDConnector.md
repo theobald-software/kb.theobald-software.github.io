@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.9.3 [M]|2021-09-30|Report|Fixed a bug (introduced in 4.9.0) where fetching metadata of report extractions did not work.|
 |4.9.2 [L]|2021-07-23|Designer|Designer startup logic refactored to WPF standards|
 |4.9.1 [L]|2021-07-02|Server|Multi-process architecture for configuration server|
 |4.9.0 [M]|2021-06-17|Report|Reworked the report component.|
