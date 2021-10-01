@@ -72,7 +72,7 @@ Enter the following section in both files:
 
 *****
 Related Links
-- [Microsoft Help: <defaultProxy> Element (Network Settings)](https://docs.microsoft.com/en-us/dotnet/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings)
+- [Microsoft Help: < defaultProxy > Element (Network Settings)](https://docs.microsoft.com/en-us/dotnet/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings)
 - [Xtract Universal - Online Help](https://help.theobald-software.com/en/xtract-universal/)
 
 
