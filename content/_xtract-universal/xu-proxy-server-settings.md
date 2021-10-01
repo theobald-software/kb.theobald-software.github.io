@@ -32,14 +32,49 @@ Enter the following section in both files:
 ```
 
 For *My_Proxyserver* set the IP address of your proxy server: 
-![XU-proxy-settings-02](/img/contents/xu/xu-proxy-settings-02.png){:class="img-responsive"}
-![XU-proxy-settings-03](/img/contents/xu/xu-proxy-settings-03.png){:class="img-responsive"}
+``` XML
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <system.net>
+        <defaultProxy>
+            <proxy proxyaddress="http://***.***.0.1:3128" bypassonlocal="true" />
+        </defaultProxy>
+    </system.net>
+    <startup>
+        <!-- ... -->
+    </startup>
+    <runtime>
+        <!-- ... -->
+    </runtime>
+</configuration>
+```
+
+``` XML
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+​
+	<configSections>
+		<sectionGroup name="userSettings" type="System.Configuration.UserSettingsGroup, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+			<section name="Xtract.Client.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" allowExeDefinition="MachineToLocalUser" requirePermission="false" />
+		</sectionGroup>
+	</configSections>
+​
+	<system.net>  
+		<defaultProxy>  
+			<proxy  proxyaddress="http://***.***.0.1:3128"
+                bypassonlocal="true"  
+        />  
+		</defaultProxy>  
+	</system.net>
+	
+```
 
 {: .box-note}
 **Note:** Proxy server settings are generic settings that apply to all XU destinations.  
 
 *****
 Related Links
+- [Microsoft Help: <defaultProxy> Element (Network Settings)](https://docs.microsoft.com/en-us/dotnet/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings)
 - [Xtract Universal - Online Help](https://help.theobald-software.com/en/xtract-universal/)
 
 
