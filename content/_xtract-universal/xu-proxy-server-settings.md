@@ -31,13 +31,13 @@ Enter the following section in both files:
 </system.net>
 ```
 
-For *My_Proxyserver* set the IP address of your proxy server: 
+**XtractRun.exe.config:**
 ``` XML
 <?xml version="1.0" encoding="utf-8"?>
 <configuration>
     <system.net>
         <defaultProxy>
-            <proxy proxyaddress="http://***.***.0.1:3128" bypassonlocal="true" />
+            <proxy proxyaddress="http://[My_Proxyserver]:3128" bypassonlocal="true" />
         </defaultProxy>
     </system.net>
     <startup>
@@ -48,20 +48,18 @@ For *My_Proxyserver* set the IP address of your proxy server:
     </runtime>
 </configuration>
 ```
-
+**XtractDesigner.exe.config:**
 ``` XML
 <?xml version="1.0" encoding="utf-8"?>
 <configuration>
 ​
 	<configSections>
-		<sectionGroup name="userSettings" type="System.Configuration.UserSettingsGroup, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-			<section name="Xtract.Client.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" allowExeDefinition="MachineToLocalUser" requirePermission="false" />
-		</sectionGroup>
+		<!-- ... -->
 	</configSections>
 ​
 	<system.net>  
 		<defaultProxy>  
-			<proxy  proxyaddress="http://***.***.0.1:3128"
+			<proxy  proxyaddress="http://[My_Proxyserver]:3128"
                 bypassonlocal="true"  
         />  
 		</defaultProxy>  
