@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.16.2 [L]|2021-10-01|General|Delimiter for rows can now be set in CsvReader |
 |2.16.1 [L]|2021-09-30|General|Add constructor to initialize NamedList from IEnumerable|
 |2.16.0 [L]|2021-09-28|General|Added WaitRegistration class |
 |2.15.7 [L]|2021-09-28|General|ProcessAsync flags set to create no console window|
