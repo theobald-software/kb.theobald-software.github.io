@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.16.3 [L]|2021-10-04|Licensing|Added PersistedCounter to library to centralize all relevant code around License Creation into Theobald.Licensing.|
 |2.16.2 [L]|2021-10-01|General|Delimiter for rows can now be set in CsvReader |
 |2.16.1 [L]|2021-09-30|General|Add constructor to initialize NamedList from IEnumerable|
 |2.16.0 [L]|2021-09-28|General|Added WaitRegistration class |
