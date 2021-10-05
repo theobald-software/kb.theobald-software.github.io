@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.16.4 [L]|2021-10-05|Licensing|Added LicenseSerialNumber and tests to Theobald.Licensing. Contains all business rules to create a LicenseSerialNumber as it is used in CRM. For automation of the License File creation, this code should be centrally available.|
 |2.16.3 [L]|2021-10-04|Licensing|Added PersistedCounter to library to centralize all relevant code around License Creation into Theobald.Licensing.|
 |2.16.2 [L]|2021-10-01|General|Delimiter for rows can now be set in CsvReader |
 |2.16.1 [L]|2021-09-30|General|Add constructor to initialize NamedList from IEnumerable|
