@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|[4.32.17 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-4.32.17.html)|2021-10-11|Destinations|Fixed a Bug in the PowerBI Report Server (SSRS) Destination. All pending HttpRequests were cancelled everytime the DataExtension finished generating a Report. This caused intermittent failures when multiple reports were rendered at the same time by the Report Server.([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-4.32.17.html))|
 |4.32.16 [L]|2021-10-06|General|Fixed the preview mode setting, which was incorrectly disabled|
 |4.32.15 [L]|2021-09-28|Destinations|Fixed a Bug in the SSRS Plugins for the Power BI Report Server (and VS). When the connection was configured to use the identity of the user viewing the report, the credentials of the Report Server (or VS) process were used instead. This caused the HTTPS/Kerberos authentication against XU to fail.|
 |4.32.14 [L]|2021-09-23|Destinations|Power BI Destination: Fixed a bug where an error would occur in Power BI when an extraction returns 0 rows|
