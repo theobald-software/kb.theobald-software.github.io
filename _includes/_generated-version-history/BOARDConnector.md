@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|[5.0.0 [M]](https://kb.theobald-software.com/release-notes/BOARDConnector-5.0.0.html)|2021-10-18|General|SAP passwords are encrypted in context of BC Service Account (breaking)([Release note](https://kb.theobald-software.com/release-notes/BOARDConnector-5.0.0.html))|
 |4.9.4 [L]|2021-10-06|General|Fixed the preview mode setting, which was incorrectly disabled|
 |4.9.3 [M]|2021-09-30|Report|Fixed a bug (introduced in 4.9.0) where fetching metadata of report extractions did not work.|
 |4.9.2 [L]|2021-07-23|Designer|Designer startup logic refactored to WPF standards|
