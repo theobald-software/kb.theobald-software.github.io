@@ -3,6 +3,8 @@ layout: releaseNotes
 ---
 
 # BOARD Connector 5.0
+Config files need to be [converted when upgrading.](
+https://help.theobald-software.com/en/board-connector/introduction/installation-and-update#upgrading-major-releases---configconverter)
 
 ## SAP passwords are encrypted in context of BC Service Account (breaking)
 When creating new sources or editing existing ones, the SAP passwords
