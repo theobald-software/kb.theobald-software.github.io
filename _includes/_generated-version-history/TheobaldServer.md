@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.0.2 [M]|2021-10-20|General|Fix for retrieving latest runs|
 |2.0.1 [M]|2021-10-20|General|Fixes & improvements for configuration version check|
 |2.0.0 [M]|2021-10-18|General|New RPC Server implementation|
 |1.2.2 [M]|2021-09-28|General|Fix for timeout while stopping servers|
