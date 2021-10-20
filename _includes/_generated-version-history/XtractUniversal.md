@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.0.1 [M]|2021-10-20|Server|Fixes & improvements for configuration version check|
 |[5.0.0 [M]](https://kb.theobald-software.com/release-notes/XtractUniversal-5.0.0.html)|2021-10-18|General|SAP passwords are encrypted in context of XU service account (breaking)([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-5.0.0.html))|
 |4.32.19 [L]|2021-10-13|General|Added timestamp to the metadata API. Each extraction now shows when the last run was started, too.|
 |4.32.18 [L]|2021-10-13|Destinations|Fix for handling correctly stage name's case sensitiveness on Snowflake destination|
