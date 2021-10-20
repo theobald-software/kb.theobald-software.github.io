@@ -13,8 +13,8 @@ when restoring a backup or moving the files to a different machine.
 If the service account changes, passwords need to be re-entered manually.
 
 ## SAP passwords are stored seperately
-Passwords are no longer part of sources\\<name>\\general.json.
-They are stored in sources\\<name>\\password.json now.
+Passwords are no longer part of sources\[name]\general.json.
+They are stored in sources\[name]\password.json now.
 
 ## Various changes
 * Using new TheoRPC implementation for Designer/Server communication
