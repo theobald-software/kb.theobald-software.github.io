@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.0.3 [M]|2021-10-20|General|Names are checked after converting from paths, and logged/filtered when enumerating|
 |2.0.2 [M]|2021-10-20|General|Fix for retrieving latest runs|
 |2.0.1 [M]|2021-10-20|General|Fixes & improvements for configuration version check|
 |2.0.0 [M]|2021-10-18|General|New RPC Server implementation|
