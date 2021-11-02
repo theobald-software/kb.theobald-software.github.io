@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|3.0.2 [L]|2021-11-02|General|RPC: Requesting non-existent extraction logs is no longer an error|
 |3.0.1 [M]|2021-10-28|General|Fix for reading unit errors in legacy RPC|
 |3.0.0 [L]|2021-10-21|General|Added new web server implementation|
 |2.0.3 [M]|2021-10-20|General|Names are checked after converting from paths, and logged/filtered when enumerating|
