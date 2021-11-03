@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.22.0 [L]|2021-11-03|General|Table and ODP: Added setting to automatically adjust currency decimals based on reference field|
 |1.21.1 [L]|2021-10-05|Report|Fixed a bug where fetching report selection parameters would not use the custom function module defined in extraction settings and would override that setting with the default value of Z_XTRACT_IS_REMOTE_REPORT.|
 |[1.21.0 [L]](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.21.0.html)|2021-09-24|BW Cube|Updated cube component with new BICS mode (beta).([Release note](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.21.0.html))|
 |1.20.27 [L]|2021-09-13|Report|Fixed a bug where automatic column detection didn't work for reports where rows don't begin with a pipe.|
