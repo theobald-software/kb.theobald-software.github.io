@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.1.0 [L]|2021-11-04|Destinations|Introduced the Hadoop destination|
 |5.0.3 [L]|2021-11-04|Setup|Fixed missing library issue (Theobald.Persistence) for Designer-only installation|
 |5.0.2 [H]|2021-10-28|Designer|Fixed a bug that caused seemingly arbitrary error messages and erroneous dialog output after viewing extraction logs |
 |5.0.1 [M]|2021-10-20|Server|Fixes & improvements for configuration version check|
