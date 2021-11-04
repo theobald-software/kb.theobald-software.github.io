@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.16.6 [L]|2021-11-04|General|16-Bit character code points are now correctly displayed in JSON strings|
 |2.16.5 [L]|2021-10-26|WPF|Added folder browser.|
 |2.16.4 [L]|2021-10-05|Licensing|Added LicenseSerialNumber and tests to Theobald.Licensing. Contains all business rules to create a LicenseSerialNumber as it is used in CRM. For automation of the License File creation, this code should be centrally available.|
 |2.16.3 [L]|2021-10-04|Licensing|Added PersistedCounter to library to centralize all relevant code around License Creation into Theobald.Licensing.|
