@@ -66,6 +66,12 @@ When using the *count rows* button (if not using Z_THEO_READ_TABLE):
 S_RFC            RFC_TYPE=FUNC; RFC_NAME=EM_GET_NUMBER_OF_ENTRIES; ACTVT=16  
 ```
 
+When using "Adjust currency decimals" setting:
+```
+S_TABU_NAM       ACTVT=03; TABLE=TCURX
+```
+
+
 ### BW Query / BW Cube
 
 Authorizations for the underlying Queries, Cubes and InfoAreas need to be assigned via ```S_RS_COMP```and ```S_RS_COMP1```. <br>
@@ -135,6 +141,11 @@ S_GUI            ACTVT=61
 ### ODP
 
 A complete and detailed list of authorization objects refer to [SAP Note 2855052](https://launchpad.support.sap.com/#/notes/2855052) - Authorizations required for ODP Data Replication API 2.0. 
+
+When using "Adjust currency decimals" setting:
+```
+S_TABU_NAM       ACTVT=03; TABLE=TCURX
+```
 
 <!---
 Authority objects needed for the Operational Data Provisioning (ODP):
