@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.1.1 [L]|2021-11-05|Destinations|Fixed intermittent Deadlocks/Timeouts in the SSRS/PBIRS Data Extension in Visual Studio.|
 |5.1.0 [L]|2021-11-04|Destinations|Introduced the Hadoop destination|
 |5.0.3 [L]|2021-11-04|Setup|Fixed missing library issue (Theobald.Persistence) for Designer-only installation|
 |5.0.2 [H]|2021-10-28|Designer|Fixed a bug that caused seemingly arbitrary error messages and erroneous dialog output after viewing extraction logs |
