@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.9.2 [L]|2021-11-09|Table Join|TableJoin will be removed March 2022|
 |[6.9.1 [L]](https://kb.theobald-software.com/release-notes/XtractIS-6.9.1.html)|2021-11-08|Report|Report component: multiple fixes.([Release note](https://kb.theobald-software.com/release-notes/XtractIS-6.9.1.html))|
 |6.8.0 [M]|2021-09-07|Report|Reworked the report component.|
 |6.7.6 [L]|2021-09-01|General|Updated license check.|
