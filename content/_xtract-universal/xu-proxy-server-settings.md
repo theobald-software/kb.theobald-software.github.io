@@ -21,7 +21,7 @@ When connecting to a destination in Xtract Universal the connection will always 
 This can be achieved following the [Microsoft guidelines](https://docs.microsoft.com/en-us/dotnet/framework/network-programming/proxy-configuration).
 Modify the **XtractRun.exe.config** and the **XtractDesigner.exe.config** files, that can be found in the Xtract Universal installation folder. <br>
 Enter the following section in both files: 
-``` XML
+```xml
 <system.net>
     <defaultProxy>
         <proxy  proxyaddress="http://[My_Proxyserver]:3128"
@@ -31,15 +31,48 @@ Enter the following section in both files:
 </system.net>
 ```
 
-For *My_Proxyserver* set the IP address of your proxy server: 
-![XU-proxy-settings-02](/img/contents/xu/xu-proxy-settings-02.png){:class="img-responsive"}
-![XU-proxy-settings-03](/img/contents/xu/xu-proxy-settings-03.png){:class="img-responsive"}
+**XtractRun.exe.config:**
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <system.net>
+        <defaultProxy>
+            <proxy proxyaddress="http://[My_Proxyserver]:3128" bypassonlocal="true" />
+        </defaultProxy>
+    </system.net>
+    <startup>
+        <!-- ... -->
+    </startup>
+    <runtime>
+        <!-- ... -->
+    </runtime>
+</configuration>
+```
+**XtractDesigner.exe.config:**
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+​
+	<configSections>
+		<!-- ... -->
+	</configSections>
+​
+	<system.net>  
+		<defaultProxy>  
+			<proxy  proxyaddress="http://[My_Proxyserver]:3128"
+                bypassonlocal="true"  
+        />  
+		</defaultProxy>  
+	</system.net>
+	
+```
 
 {: .box-note}
 **Note:** Proxy server settings are generic settings that apply to all XU destinations.  
 
 *****
 Related Links
+- [Microsoft Help: < defaultProxy > Element (Network Settings)](https://docs.microsoft.com/en-us/dotnet/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings)
 - [Xtract Universal - Online Help](https://help.theobald-software.com/en/xtract-universal/)
 
 

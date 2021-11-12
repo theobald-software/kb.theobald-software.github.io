@@ -1,5 +1,16 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.1.2 [L]|2021-11-09|Table Join|TableJoin will be removed March 2022|
+|5.1.1 [L]|2021-11-05|Destinations|Fixed intermittent Deadlocks/Timeouts in the SSRS/PBIRS Data Extension in Visual Studio.|
+|5.1.0 [L]|2021-11-04|Destinations|Introduced the Hadoop destination|
+|5.0.3 [L]|2021-11-04|Setup|Fixed missing library issue (Theobald.Persistence) for Designer-only installation|
+|5.0.2 [H]|2021-10-28|Designer|Fixed a bug that caused seemingly arbitrary error messages and erroneous dialog output after viewing extraction logs |
+|5.0.1 [M]|2021-10-20|Server|Fixes & improvements for configuration version check|
+|[5.0.0 [M]](https://kb.theobald-software.com/release-notes/XtractUniversal-5.0.0.html)|2021-10-18|General|SAP passwords are encrypted in context of XU service account (breaking)([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-5.0.0.html))|
+|4.32.19 [L]|2021-10-13|General|Added timestamp to the metadata API. Each extraction now shows when the last run was started, too.|
+|4.32.18 [L]|2021-10-13|Destinations|Fix for handling correctly stage name's case sensitiveness on Snowflake destination|
+|[4.32.17 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-4.32.17.html)|2021-10-11|Destinations|Fixed a Bug in the PowerBI Report Server (SSRS) Destination. All pending HttpRequests were cancelled everytime the DataExtension finished generating a Report. This caused intermittent failures when multiple reports were rendered at the same time by the Report Server.([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-4.32.17.html))|
+|4.32.16 [L]|2021-10-06|General|Fixed the preview mode setting, which was incorrectly disabled|
 |4.32.15 [L]|2021-09-28|Destinations|Fixed a Bug in the SSRS Plugins for the Power BI Report Server (and VS). When the connection was configured to use the identity of the user viewing the report, the credentials of the Report Server (or VS) process were used instead. This caused the HTTPS/Kerberos authentication against XU to fail.|
 |4.32.14 [L]|2021-09-23|Destinations|Power BI Destination: Fixed a bug where an error would occur in Power BI when an extraction returns 0 rows|
 |4.32.13 [L]|2021-09-22|Server|Fix for log file collision when running many extractions at once. Fix for timeout when starting more extractions than cores in the machine at once.|

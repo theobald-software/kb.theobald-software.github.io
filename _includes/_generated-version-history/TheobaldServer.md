@@ -1,5 +1,12 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|3.0.2 [L]|2021-11-02|General|RPC: Requesting non-existent extraction logs is no longer an error|
+|3.0.1 [M]|2021-10-28|General|Fix for reading unit errors in legacy RPC|
+|3.0.0 [L]|2021-10-21|General|Added new web server implementation|
+|2.0.3 [M]|2021-10-20|General|Names are checked after converting from paths, and logged/filtered when enumerating|
+|2.0.2 [M]|2021-10-20|General|Fix for retrieving latest runs|
+|2.0.1 [M]|2021-10-20|General|Fixes & improvements for configuration version check|
+|2.0.0 [M]|2021-10-18|General|New RPC Server implementation|
 |1.2.2 [M]|2021-09-28|General|Fix for timeout while stopping servers|
 |1.2.1 [L]|2021-09-22|General|Performance improvement for ForkingWaitHandleServer on machines with few cores.|
 |1.2.0 [L]|2021-09-09|General|Rpc server rust port|

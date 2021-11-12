@@ -1,5 +1,12 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.16.7 [L]|2021-11-12|Licensing|Added static methods to ProductLicense which indicate whether a License CanHaveComponents and CanHaveDestinations based on LicenseProduct and LicenseKind. This is helpful for the new LicenseTools. Also added a class LicenseFileWriter which encapsulates some directory and filename logic which is shared beteen LicenseTool and AutomatedLicenseCreation.|
+|2.16.6 [L]|2021-11-04|General|16-Bit character code points are now correctly displayed in JSON strings|
+|2.16.5 [L]|2021-10-26|WPF|Added folder browser.|
+|2.16.4 [L]|2021-10-05|Licensing|Added LicenseSerialNumber and tests to Theobald.Licensing. Contains all business rules to create a LicenseSerialNumber as it is used in CRM. For automation of the License File creation, this code should be centrally available.|
+|2.16.3 [L]|2021-10-04|Licensing|Added PersistedCounter to library to centralize all relevant code around License Creation into Theobald.Licensing.|
+|2.16.2 [L]|2021-10-01|General|Delimiter for rows can now be set in CsvReader |
+|2.16.1 [L]|2021-09-30|General|Add constructor to initialize NamedList from IEnumerable|
 |2.16.0 [L]|2021-09-28|General|Added WaitRegistration class |
 |2.15.7 [L]|2021-09-28|General|ProcessAsync flags set to create no console window|
 |2.15.6 [L]|2021-09-28|General|ProcessAsync added support for arguments|
