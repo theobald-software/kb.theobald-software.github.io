@@ -1,0 +1,136 @@
+{
+    "name": "ProcessBlobStorageFile",
+    "properties": {
+        "activities": [
+            {
+                "name": "Execute DataBricks SubPipeline",
+                "type": "ExecutePipeline",
+                "dependsOn": [
+                    {
+                        "activity": "sp_pipelinelog",
+                        "dependencyConditions": [
+                            "Succeeded"
+                        ]
+                    }
+                ],
+                "userProperties": [],
+                "typeProperties": {
+                    "pipeline": {
+                        "referenceName": "ProcessWithDataBricks",
+                        "type": "PipelineReference"
+                    },
+                    "waitOnCompletion": true,
+                    "parameters": {
+                        "fileName": {
+                            "value": "@pipeline().parameters.fileName",
+                            "type": "Expression"
+                        },
+                        "folderPath": {
+                            "value": "@pipeline().parameters.folderPath",
+                            "type": "Expression"
+                        }
+                    }
+                }
+            },
+            {
+                "name": "sp_pipelinelog",
+                "type": "SqlServerStoredProcedure",
+                "dependsOn": [],
+                "policy": {
+                    "timeout": "7.00:00:00",
+                    "retry": 0,
+                    "retryIntervalInSeconds": 30,
+                    "secureOutput": false,
+                    "secureInput": false
+                },
+                "userProperties": [],
+                "typeProperties": {
+                    "storedProcedureName": "[dbo].[usp_InsertPipelineLog]",
+                    "storedProcedureParameters": {
+                        "DataFactoryName": {
+                            "value": {
+                                "value": "@pipeline().DataFactory",
+                                "type": "Expression"
+                            },
+                            "type": "String"
+                        },
+                        "FileName": {
+                            "value": {
+                                "value": "@pipeline().parameters.fileName",
+                                "type": "Expression"
+                            },
+                            "type": "String"
+                        },
+                        "FolderPath": {
+                            "value": {
+                                "value": "@pipeline().parameters.folderPath",
+                                "type": "Expression"
+                            },
+                            "type": "String"
+                        },
+                        "PipelineName": {
+                            "value": {
+                                "value": "@pipeline().Pipeline",
+                                "type": "Expression"
+                            },
+                            "type": "String"
+                        },
+                        "PipelineRunID": {
+                            "value": {
+                                "value": "@pipeline().RunId",
+                                "type": "Expression"
+                            },
+                            "type": "String"
+                        },
+                        "PipelineTriggerID": {
+                            "value": {
+                                "value": "@pipeline().TriggerId",
+                                "type": "Expression"
+                            },
+                            "type": "String"
+                        },
+                        "PipelineTriggerName": {
+                            "value": {
+                                "value": "@pipeline().TriggerName",
+                                "type": "Expression"
+                            },
+                            "type": "String"
+                        },
+                        "PipelineTriggerTime": {
+                            "value": {
+                                "value": "@pipeline().TriggerTime",
+                                "type": "Expression"
+                            },
+                            "type": "String"
+                        },
+                        "PipelineTriggerType": {
+                            "value": {
+                                "value": "@pipeline().TriggerType",
+                                "type": "Expression"
+                            },
+                            "type": "String"
+                        }
+                    }
+                },
+                "linkedServiceName": {
+                    "referenceName": "xuazuredwhb_xtract_sapdata",
+                    "type": "LinkedServiceReference"
+                }
+            }
+        ],
+        "parameters": {
+            "fileName": {
+                "type": "string"
+            },
+            "folderPath": {
+                "type": "string"
+            }
+        },
+        "folder": {
+            "name": "ke"
+        },
+        "annotations": [],
+        "lastPublishTime": "2021-09-29T09:29:06Z"
+    },
+    "type": "Microsoft.DataFactory/factories/pipelines"
+}

@@ -1,0 +1,28 @@
+{
+    "name": "BlobEventsTrigger01",
+    "properties": {
+        "annotations": [],
+        "runtimeState": "Started",
+        "pipelines": [
+            {
+                "pipelineReference": {
+                    "referenceName": "ProcessBlobStorageFile",
+                    "type": "PipelineReference"
+                },
+                "parameters": {
+                    "fileName": "@triggerBody().fileName",
+                    "folderPath": "@triggerBody().folderPath"
+                }
+            }
+        ],
+        "type": "BlobEventsTrigger",
+        "typeProperties": {
+            "blobPathBeginsWith": "/ke-container/blobs/",
+            "ignoreEmptyBlobs": true,
+            "scope": "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/XU_resourcegroup/providers/Microsoft.Storage/storageAccounts/xtractstorage",
+            "events": [
+                "Microsoft.Storage.BlobCreated"
+            ]
+        }
+    }
+}
