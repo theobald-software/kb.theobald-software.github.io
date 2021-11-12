@@ -1,6 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
-|1.22.1 [L]|2021-11-12|Report|Fixed a bug where report rows without pipes in them were being skipped even if you ran the report without dynamic column widths and offsets setting turned on. This change is breaking.|
+|1.22.1 [L]|2021-11-12|Report|Fixed a bug where report rows without pipes in them were being skipped even if the extraction was ran without dynamic column widths and offsets setting turned on. This change is breaking.|
 |[1.22.0 [L]](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.22.0.html)|2021-11-03|General|Table and ODP: Added setting to automatically adjust currency decimals based on reference field([Release note](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.22.0.html))|
 |1.21.1 [L]|2021-10-05|Report|Fixed a bug where fetching report selection parameters would not use the custom function module defined in extraction settings and would override that setting with the default value of Z_XTRACT_IS_REMOTE_REPORT.|
 |[1.21.0 [L]](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.21.0.html)|2021-09-24|BW Cube|Updated cube component with new BICS mode (beta).([Release note](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.21.0.html))|
