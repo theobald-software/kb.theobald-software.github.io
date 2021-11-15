@@ -37,7 +37,7 @@ Keep in mind that this is no best practice document or recommendation.
 Xtract Universal extracts SAP data and loads it into an Azure Storage as a parquet file. An Azure Storage event trigger is used to run an ADF pipeline for further processing of the SAP file. 
 
 #### ADF Pipelines and Storage Event Triggers
-The *Master pipeline* is triggered by an Azure Storage event and calls a child pipeline for further processing. The *Master pipeline" has an event trigger based on Azure storage. 
+The *Master pipeline* is triggered by an Azure Storage event and calls a child pipeline for further processing. The *Master pipeline* has an event trigger based on Azure storage. 
 
 The Master pipeline has 2 activities:
 	- write a log to an Azure SQL database. This step is optional.
