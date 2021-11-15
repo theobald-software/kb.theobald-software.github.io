@@ -12,7 +12,7 @@ weight: 52
 This article shows how to run an event-driven pipeline in Azure Data Factory to process SAP data extracted with [Xtract Universal](https://theobald-software.com/en/xtract-universal/) into an Azure Storage. </br>
 
 Xtract Universal is a universal SAP extraction platform that is used in this example to extract and upload SAP customer master data to Azure Storage. <br> 
-An event then trigger an ADF pipeline to process the SAP parquet file, e.g. with [Databricks](https://docs.microsoft.com/en-us/azure/databricks/scenarios/what-is-azure-databricks).
+An event then triggers an ADF pipeline to process the SAP parquet file, e.g. with [Databricks](https://docs.microsoft.com/en-us/azure/databricks/scenarios/what-is-azure-databricks).
 Xtract Universal supports different file formats for Azure storage, this example uses [Apache Parquet](https://docs.microsoft.com/en-us/azure/databricks/data/data-sources/read-parquet), which is a column file format that provides optimizations to speed up queries and is more efficient than CSV or JSON.
 
 Target audience: Customers who utilize Azure Data Factory (ADF) as a platform for orchestrating data movement and transformation. <br>
@@ -37,7 +37,7 @@ Keep in mind that this is no best practice document or recommendation.
 Xtract Universal extracts SAP data and loads it into an Azure Storage as a parquet file. An Azure Storage event trigger is used to run an ADF pipeline for further processing of the SAP file. 
 
 #### ADF Pipelines and Storage Event Triggers
-The *Master pipeline* should be triggered by an Azure Storage event and call a child pipeline for further processing. The *Master pipeline" has an event trigger based on Azure Datalake storage. 
+The *Master pipeline* is triggered by an Azure Storage event and calls a child pipeline for further processing. The *Master pipeline" has an event trigger based on Azure storage. 
 
 The Master pipeline has 2 activities:
 	- write a log to an Azure SQL database. This step is optional.
@@ -48,7 +48,7 @@ This article focuses on the *Master pipeline*.
 The *Child pipeline* processes the parquet file e.g., with Databricks. The *Child pipeline* in this example is a placeholder. 
 
 #### Use Azure SQL for logging (optional)
-In our scenario we are logging the ADF pipeline that runs into an Azue SQL table using a stored procedure. 
+In our scenario the ADF pipeline has an activity that runs a stored procedure to log some entries about the pipeline run into an Azue SQL table. 
 
 ### Step 1: Define the SAP Extraction in Xtract Universal
 
@@ -93,6 +93,7 @@ Use the Storage account name and Container name defined in the Xtract Universal 
 The event trigger provides the following parameters:
 - @triggerBody().fileName and 
 - @triggerBody().folderPath 
+
 They are used as input parameters for the *Master Pipeline*.<br>
 ![ADF_Pipeline_Trigger03](/img/contents/xu/xu-adf-storage-trigger/xu-pipeline-trigger-04.png)
 
