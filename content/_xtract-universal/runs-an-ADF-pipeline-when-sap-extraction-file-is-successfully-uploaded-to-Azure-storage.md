@@ -45,20 +45,19 @@ The Master pipeline has 2 activities:
 
 This article focuses on the *Master pipeline*. 
 
-The *Child pipeline* processes the parquet file e.g., with Databricks. 
-The *Child pipeline* in this example is a placeholder. 
+The *Child pipeline* processes the parquet file e.g., with Databricks. The *Child pipeline* in this example is a placeholder. 
 
 #### Use Azure SQL for logging (optional)
 In our scenario we are logging the ADF pipeline that runs into an Azue SQL table using a stored procedure. 
 
 ### Step 1: Define the SAP Extraction in Xtract Universal
 
-Define an SAP extraction and set the destination to Azure Storage.</br>
+Define an SAP extraction and set the destination to Azure Storage.<br>
 ![XU_Extraction](/img/contents/xu/xu-adf-storage-trigger/xu-extraction-azure-destination.png)
 
 ![XU_Extraction_AzureDest1](/img/contents/xu/xu-adf-storage-trigger/xu-exraction-destination.png)
 
-In thsi example we use the storage account *xtractstorage* and a container called *ke-container*:</br>
+In this example we use the storage account *xtractstorage* and a container called *ke-container*:<br>
 ![XU_Extraction_AzureDest1](/img/contents/xu/xu-adf-storage-trigger/xu-azure-destination-01.png)
 
 ![XU_Extraction_AzureDest1](/img/contents/xu/xu-adf-storage-trigger/xu-azure-destination-02.png)
@@ -69,7 +68,7 @@ Define 2 pipelines in ADF:
 - a master pipeline called *ProcessBlogStorageFile* and 
 - a child pipeline called *ProcessWithDataBricks* 
 
-The *Master pipeline* contains two activities:</br>
+The *Master pipeline* contains two activities:<br>
 ![ADF_Pipeline](/img/contents/xu/xu-adf-storage-trigger/adf-pipeline-overview.png)
 
 The first activity *sp_pipelinelog* executes an SQL stored procedure to write a log entry to an Azure SQL table. The second activity runs a dummy subpipeline. As both activities are out of the scope of this article, there are no further details. 
@@ -83,7 +82,7 @@ Define the following parameters:
 Define the trigger as followed: 
 ![ADF_Pipeline_Trigger00](/img/contents/xu/xu-adf-storage-trigger/adf-pipeline-trigger-edit.png)
 
-Use the Storage account name and Container name defined in the Xtract Universal Azure Storage destination:</br> 
+Use the Storage account name and Container name defined in the Xtract Universal Azure Storage destination:<br> 
 ![ADF_Pipeline_Trigger01](/img/contents/xu/xu-adf-storage-trigger/xu-pipeline-trigger-01.png)
 
 
@@ -94,28 +93,28 @@ Use the Storage account name and Container name defined in the Xtract Universal 
 The event trigger provides the following parameters:
 - @triggerBody().fileName and 
 - @triggerBody().folderPath 
-They are used as input parameters for the *Master Pipeline*.</br>
+They are used as input parameters for the *Master Pipeline*.<br>
 ![ADF_Pipeline_Trigger03](/img/contents/xu/xu-adf-storage-trigger/xu-pipeline-trigger-04.png)
 
 Publish the pipeline.
 
 ### Step 4: Run the SAP Extraction in Xtract Universal
 
-Run the extraction in Xtract Universal e.g. using the Run dialog.</br>
+Run the extraction in Xtract Universal e.g. using the Run dialog.<br>
 ![Run_Extraction](/img/contents/xu/xu-adf-storage-trigger/xu-extraction-successful.png) 
 
 ### Step 5: Check the Azure Blob storage 
-When the extraction is finished, check the Azure Storage.</br> 
+When the extraction is finished, check the Azure Storage.<br> 
 ![Azure_Storage_Parquet](/img/contents/xu/xu-adf-storage-trigger/azure-storage-parquet-file.png ) 
 
 
 ### Step 6: Check the log table in Azure SQL 
-The log table shows an entry each for the master and child pipeline.</br>
+The log table shows an entry each for the master and child pipeline.<br>
 ![SQL_log](/img/contents/xu/xu-adf-storage-trigger/sql-run-log.png) 
 
 
 ### Step 7: Check Trigger and Pipeline Runs in ADF 
-In ADF you can also check the trigger and pipeline run: </br>
+In ADF you can also check the trigger and pipeline run: <br>
 ![ADF_Trigger_Run](/img/contents/xu/xu-adf-storage-trigger/adf-trigger-run.png) 
 
 ![ADF_Pipeline_Run](/img/contents/xu/xu-adf-storage-trigger/adf-pipeline-run.png) 
