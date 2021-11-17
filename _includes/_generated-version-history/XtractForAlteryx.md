@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.13.1 [M]|2021-11-17|BAPI|Fix for data types when using workflow tables as input|
 |[1.13.0 [L]](https://kb.theobald-software.com/release-notes/XtractForAlteryx-1.13.0.html)|2021-09-24|BW Cube|Updated cube component adding BICS extraction mode.([Release note](https://kb.theobald-software.com/release-notes/XtractForAlteryx-1.13.0.html))|
 |1.12.3 [L]|2021-04-06|ODP|Added HierarchyName property to allow parameterization|
 |1.12.2 [L]|2021-04-01|Setup|Fix for message displaying when no Alteryx installation is found during setup|
