@@ -3,6 +3,9 @@ layout: page
 title: Run an ADF pipeline when an SAP extraction file is successfully uploaded to Azure storage
 description: Runs an ADF pipeline when extraction file is successfully uploaded to Azure storage
 permalink: /:collection/:path
+redirect_from:
+  - xtract-universal/runs-an-ADF-pipeline-when-sap-extraction-file-is-successfully-uploaded-to-Azure-storage.md
+  - xtract-universal/running-an-ADF-pipeline-when-sap-extraction-file-is-uploaded-to-Azure-storage.md
 weight: 52
 ---
 
