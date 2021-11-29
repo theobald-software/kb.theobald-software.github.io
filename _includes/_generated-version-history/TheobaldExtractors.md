@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.23.1 [M]|2021-11-29|General|Table & ODP: Now set currency decimals to 4 when using "adjust currency decimals"|
 |1.23.0 [L]|2021-11-12|BAPI|Reworked parameterization|
 |1.22.1 [L]|2021-11-12|Report|Fixed a bug where report rows without pipes in them were being skipped even if the extraction was ran without dynamic column widths and offsets setting turned on. This change is breaking.|
 |[1.22.0 [L]](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.22.0.html)|2021-11-03|General|Table and ODP: Added setting to automatically adjust currency decimals based on reference field([Release note](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.22.0.html))|
