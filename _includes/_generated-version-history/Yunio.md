@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|0.7.0 [L]|2021-11-30|General|Various fixes & improvements|
 |0.6.0 [L]|2021-11-24|General|Various fixes & improvements|
 |0.5.0 [L]|2021-09-24|General|.NET 5.0 Migration|
 |0.4.0 [L]|2021-09-16|General|Beta Release|
