@@ -32,8 +32,8 @@ Enter the following section in both files:
 ```
 
 {: .box-note }																   
-**Note:** Before Xtract Universal version 5.0 the **Theobald.Xu.Web.Worker.exe.config** was called **XtractRun.exe.config.
-If you use Xtract Universal version < 5.0, modify the **XtractRun.exe.config** instead of the **Theobald.Xu.Web.Worker.exe.config**.
+**Note:** Before Xtract Universal version 5.0 the **Theobald.Xu.Web.Worker.exe.config** was called **XtractRun.exe.config**.
+If you use Xtract Universal version <= 4.x, modify the **XtractRun.exe.config** instead of the **Theobald.Xu.Web.Worker.exe.config**.
 
 **Theobald.Xu.Web.Worker.exe.config:**
 ```xml
