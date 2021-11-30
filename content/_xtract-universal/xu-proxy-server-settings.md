@@ -19,7 +19,10 @@ When connecting to a destination in Xtract Universal the connection will always 
 
 ### XU application specific ###
 This can be achieved following the [Microsoft guidelines](https://docs.microsoft.com/en-us/dotnet/framework/network-programming/proxy-configuration).
-Modify the **Theobald.Xu.Web.Worker.exe.config** and the **XtractDesigner.exe.config** files, that can be found in the Xtract Universal installation folder. <br>
+
+If you use Xtract universal version >= 5.x, modify the **Theobald.Xu.Web.Worker.exe.config** and the **XtractDesigner.exe.config** files, that can be found in the Xtract Universal installation folder. <br>
+If you use Xtract universal version <= 4.x, modify the **XtractRun.exe.config** and the **XtractDesigner.exe.config** files, that can be found in the Xtract Universal installation folder. <br>
+
 Enter the following section in both files: 
 ```xml
 <system.net>
@@ -31,9 +34,6 @@ Enter the following section in both files:
 </system.net>
 ```
 
-{: .box-note }																   
-**Note:** Before Xtract Universal version 5.0 the **Theobald.Xu.Web.Worker.exe.config** was called **XtractRun.exe.config.
-If you use Xtract Universal version < 5.0, modify the **XtractRun.exe.config** instead of the **Theobald.Xu.Web.Worker.exe.config**.
 
 **Theobald.Xu.Web.Worker.exe.config:**
 ```xml
