@@ -31,6 +31,10 @@ Enter the following section in both files:
 </system.net>
 ```
 
+{: .box-note }																   
+**Note:** Before Xtract Universal version 5.0 the **Theobald.Xu.Web.Worker.exe.config** was called **XtractRun.exe.config.
+If you use Xtract Universal version < 5.0, modify the **XtractRun.exe.config** instead of the **Theobald.Xu.Web.Worker.exe.config**.
+
 **Theobald.Xu.Web.Worker.exe.config:**
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
