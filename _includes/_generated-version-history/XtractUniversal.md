@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|[5.1.3 [M]](https://kb.theobald-software.com/release-notes/XtractUniversal-5.1.3.html)|2021-12-01|Designer|Improvements and fixes for the run window([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-5.1.3.html))|
 |5.1.2 [L]|2021-11-09|Table Join|TableJoin will be removed March 2022|
 |5.1.1 [L]|2021-11-05|Destinations|Fixed intermittent Deadlocks/Timeouts in the SSRS/PBIRS Data Extension in Visual Studio.|
 |5.1.0 [L]|2021-11-04|Destinations|Introduced the Hadoop destination|
