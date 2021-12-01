@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.1.9 [L]|2021-12-01|General|Removed translations|
 |5.1.8 [L]|2021-09-14|DeltaQ|Server pool: Improvements for error handling|
 |5.1.7 [M]|2021-09-10|DeltaQ|Log RFC server registration errors to extraction log|
 |5.1.6 [M]|2021-09-10|DeltaQ|Aborting extraction if errors occur while sending request IDoc|
