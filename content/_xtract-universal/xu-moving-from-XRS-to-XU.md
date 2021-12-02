@@ -16,7 +16,7 @@ Companies currently running Xtract RS.
 
 
 ### Why migrate?
-Xtrat Universal has undergone massive developments in the past years. New extraction types, like ODP, have been added. Existing extraction types, like Table, have undergone many improvements.
+Xtract Universal has undergone massive developments in the past years. New extraction types, like ODP, have been added. Existing extraction types, like Table, have undergone many improvements.
 Xtract Universal is more versatile in a sense that data can be written to various other data targets, besides SSRS.
 All future development efforts will take place in Xtract Universal, not Xtract RS.
 
