@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.24.0 [M]|2021-12-03|BAPI|Added description texts for data elements|
 |1.23.2 [L]|2021-11-30|OHS|Fix for "undefined" status of process chain|
 |1.23.1 [M]|2021-11-29|General|Table & ODP: Now set currency decimals to 4 when using "adjust currency decimals"|
 |1.23.0 [L]|2021-11-12|BAPI|Reworked parameterization|
