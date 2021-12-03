@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.14.15 [L]|2021-12-03|General|Derived classes of ERPException are Serializable now|
 |6.14.14 [L]|2021-09-22|Idoc|Fix for loading schema documentation|
 |6.14.13 [M]|2021-09-21|RFCServer|Fixed an issue where an RFCServer would not update its code page when using NWRFC|
 |6.14.12 [M]|2021-08-26|General|Fix for tables in tables|
