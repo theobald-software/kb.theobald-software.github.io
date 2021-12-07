@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|3.1.0 [L]|2021-12-07|General|Transaction component and pass-through mode |
 |3.0.3 [M]|2021-12-02|General|Fix for storing passwords with non-ASCII characters|
 |3.0.2 [L]|2021-11-02|General|RPC: Requesting non-existent extraction logs is no longer an error|
 |3.0.1 [M]|2021-10-28|General|Fix for reading unit errors in legacy RPC|
