@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|[5.1.5 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-5.1.5.html)|2021-12-09|Destinations|Introducing file size limit setting for the Snowflake destination([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-5.1.5.html))|
 |5.1.4 [L]|2021-12-02|Destinations|Fix for uploading data into Snowflake when path or file have white spaces or special characters|
 |[5.1.3 [M]](https://kb.theobald-software.com/release-notes/XtractUniversal-5.1.3.html)|2021-12-01|Designer|Improvements and fixes for the run window([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-5.1.3.html))|
 |5.1.2 [L]|2021-11-09|Table Join|TableJoin will be removed March 2022|
