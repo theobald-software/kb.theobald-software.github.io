@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.0.4 [L]|2021-12-10|Designer|Fixed missing Theobald.Persistence.dll on designer-only installation|
 |5.0.3 [L]|2021-11-09|Table Join|TableJoin will be removed March 2022|
 |5.0.2 [M]|2021-11-09|Designer|Fix for license display and service restart (broken since 5.0)|
 |5.0.1 [M]|2021-10-20|Setup|Config conversion is now performed before starting service during setup|
