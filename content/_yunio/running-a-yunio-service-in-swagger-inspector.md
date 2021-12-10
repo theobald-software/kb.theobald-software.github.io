@@ -33,14 +33,13 @@ For more information on the Swagger Inspector, see [Swagger Inspector Documentat
 **Tip:** If you don’t have any authentication, headers, or parameters to add to the service, paste the URL of your yunIO service endpoint directly into the main URI input line.
 Select *POST* from the method drop-down list and click **[Send]** to execute the service.
 
-### Parameterizing and Running a yunIO Service in Swagger Inspector
+### Parameterizing the Service
 
-#### Parameterizing
 All parameters defined in yunIO are accessible in the request body of the service. <br>
 To set parameters, edit the *Body*, e.g. change the WHERE clause of the table extraction. <br>
 ![Swagger-Inspector](/img/contents/yunio/swagger-inspector.png){:class="img-responsive"}
 
-#### Running the Service
+### Running the Service
 After parsing the service definition, the URL of the service endpoint should be available in the main URI input line.
 If not, enter the URL and select the *POST* method. 
 Click **[Send]** to execute the service.<br>
