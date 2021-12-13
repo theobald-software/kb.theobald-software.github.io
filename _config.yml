@@ -71,7 +71,7 @@ collections:
   required-support-information:
     output: true
     name: 'Required Support Information'
-    weight: 11
+    weight: 12
   board-connector:
     output: true
     name: 'BOARD Connector'
@@ -99,11 +99,11 @@ collections:
   troubleshooting:
     output: true
     name: 'Troubleshooting'
-    weight: 10
+    weight: 11
   version-history:
     output: true
     name: 'Version History'
-    weight: 12
+    weight: 13
   xtract-is:
     output: true
     name: 'Xtract IS'
@@ -112,6 +112,10 @@ collections:
     output: true
     name: 'Xtract Universal'
     weight: 8
+  yunio:
+    output: true
+    name: 'yunIO'
+    weight: 10
   posts:
     output: true
 
