@@ -23,7 +23,7 @@ The service has the following settings:<br>
 
 ### Loading a yunIO Service in Postman
 
-1. Open Postman in your brwoser or on your desktop.
+1. Open Postman in your browser or on your desktop.
 2. To load a service definition in Postman, navigate to your workspace and click **[Import]**.<br>
 ![Postman-Workspace](/img/contents/yunio/postman-workspace.png){:class="img-responsive"}
 3. There are 2 ways to import a yunIO service definition:<br>
@@ -55,7 +55,7 @@ Click **[Send]** to execute the service.<br>
 ![Swagger-Inspector](/img/contents/yunio/postman-run.png){:class="img-responsive"}
 
 The results are displayed in the **Response** section of Postman.
-
+![Postman-Results](/img/contents/yunio/postman-results.png){:class="img-responsive"}
 
 ******
 
