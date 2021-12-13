@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.17.0 [L]|2021-12-13|General|Added Theobald.CertificateEnrollment|
 |2.16.9 [L]|2021-12-02|General|Support to have an instance of ProcessAsync |
 |2.16.8 [L]|2021-11-22|Licensing|Added method to ILicenseBusinessRule that indicates whether the Rule applies to a certain Property of  a ProductLicense. This is helpful in a UI to highlight the input fields where a user has made bad inputs.|
 |2.16.7 [L]|2021-11-12|Licensing|Added static methods to ProductLicense which indicate whether a License CanHaveComponents and CanHaveDestinations based on LicenseProduct and LicenseKind. This is helpful for the new LicenseTools. Also added a class LicenseFileWriter which encapsulates some directory and filename logic which is shared beteen LicenseTool and AutomatedLicenseCreation.|
