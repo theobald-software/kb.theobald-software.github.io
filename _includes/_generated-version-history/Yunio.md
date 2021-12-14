@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.0.1 [L]|2021-12-14|Runtime|Output improved for parameter sequences of different types.|
 |1.0.0 [M]|2021-12-09|General|First official relase, end of public beta|
 |0.8.0 [L]|2021-12-07|General|Added Transaction (experimental), fixes & improvements|
 |0.7.0 [L]|2021-11-30|General|Various fixes & improvements|
