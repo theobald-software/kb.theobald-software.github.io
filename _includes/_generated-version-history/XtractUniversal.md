@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.1.7 [M]|2021-12-15|Designer|Fixed daylight saving time transition issue on log window|
 |5.1.6 [L]|2021-12-10|Destinations|Adding column comments for tables created by the Snowflake destination|
 |[5.1.5 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-5.1.5.html)|2021-12-09|Destinations|Introducing file size limit setting for the Snowflake destination([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-5.1.5.html))|
 |5.1.4 [L]|2021-12-02|Destinations|Fix for uploading data into Snowflake when path or file have white spaces or special characters|
