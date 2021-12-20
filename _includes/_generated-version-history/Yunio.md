@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.0.2 [L]|2021-12-20|General|Fixes for OpenApi-file generation and input validation. Rework of password handling when editing a Connection.|
 |1.0.1 [L]|2021-12-14|Runtime|Output improved for parameter sequences of different types.|
 |1.0.0 [M]|2021-12-09|General|First official relase, end of public beta|
 |0.8.0 [L]|2021-12-07|General|Added Transaction (experimental), fixes & improvements|
