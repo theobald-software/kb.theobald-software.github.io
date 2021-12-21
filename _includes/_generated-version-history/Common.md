@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.17.2 [L]|2021-12-21|Licensing|Improvements from Code Review for License Creation logic.|
 |2.17.1 [L]|2021-12-16|WPF|Introducing style for readonly textboxes|
 |2.17.0 [L]|2021-12-13|General|Added Theobald.CertificateEnrollment|
 |2.16.9 [L]|2021-12-02|General|Support to have an instance of ProcessAsync |
