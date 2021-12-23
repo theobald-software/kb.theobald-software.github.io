@@ -5,14 +5,9 @@ description: Using Xtract Universal
 permalink: /:collection/:path
 weight: 1
 ---
+Should you encounter a problem or error when using our software, please submit a support ticket via our [ticket system]( https://support.theobald-software.com/helpdesk).
 
-In the event of a problem or error in connection with the use of our software, customers, partners and interested
-
-parties have the opportunity to submit support tickets via our [ticket system]( https://support.theobald-software.com/helpdesk). 
-
-In order to offer our customers and prospects a competent service, we need the following information about the use of our software and the architecture used in your system landscape.
-
-The most important information about errors or problems is ensured by the transmission of complete logs in text / excel format.
+Please make sure to provide as much information as possible in order for the Theobald Software support team to understand and analyze the issue you are facing.
 
 The customer-specific settings can be visualized as screenshots. All of the following information can be determined independently by the user of our Xtract products.
 
