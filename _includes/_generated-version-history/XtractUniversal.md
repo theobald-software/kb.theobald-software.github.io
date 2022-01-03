@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|[5.1.9 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-5.1.9.html)|2022-01-03|Setup|Tableau's files are not anymore shipped along with XtractUniversal's setup([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-5.1.9.html))|
 |5.1.8 [L]|2021-12-22|Designer|Introducing combo runtime parameters (source and destination) and URL copy notification on run window|
 |5.1.7 [M]|2021-12-15|Designer|Fixed daylight saving time transition issue on log window|
 |5.1.6 [L]|2021-12-10|Destinations|Adding column comments for tables created by the Snowflake destination|
