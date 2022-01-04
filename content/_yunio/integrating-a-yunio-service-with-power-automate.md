@@ -18,13 +18,13 @@ The service has the following settings:<br>
 - Set the Import Parameter NAME1 to *Supplied by Caller*.
 - Select all fields in the Table *CUSTOMER_T* for the output.
 2. Download the service definition (![download-file](/img/contents/yunio/download.png) icon).<br>
-![yunio-Services](/img/contents/yunio/yunio-run-services-function.png){:class="img-responsive" width="800px"}
+![yunio-Services-Function-Download](/img/contents/yunio/yunio-run-services-function-download.png){:class="img-responsive" width="800px"}
 
 {: .box-tip }
 **Tip:** It is recommended to test a yunIO service in a REST client first before integrating it with Power Automate. There are examples for [Swagger Inspector](https://kb.theobald-software.com/yunio/running-a-yunio-service-in-swagger-inspector) and [Postman](https://kb.theobald-software.com/yunio/running-a-yunio-service-in-postman) in the knowledgebase. 
 
 
-### Loading a yunIO Service Definition into Power Automate and configuring it
+### Configuring a yunIO custom connector in Power Automate
 
 1. Open the section **Data > Custom Connectors** in Power Automate and click on **+ New custom connector**.
 2. Click on **Import an OpenAPI file** and give the connector a name of your choice. Select the previously downloaded service definition from your harddrive and click on **Continue**.
@@ -42,8 +42,8 @@ If *Request credentials from callers when running services* is enabled in the yu
 In our example we choose *Basic authentication* and label the parameters as *SAP User* and *Password*
 ![Power-Automate-Custom-Connector-Security.png](/img/contents/yunio/power-automate-custom-connector-security.png){:class="img-responsive"} 
 ![Power-Automate-Custom-Connector-Security-Basic.png](/img/contents/yunio/power-automate-custom-connector-security-basic.png){:class="img-responsive"} 
-5. The **Definition** screen gives an overview about the yunIO service definition. Nothing needs to be changed here. This also applies to the **Code (Preview)** section.
-Before the service can be tested in the **Test** screen, the custom connector must be published with *Create connector*. 
+5. The **Definition** screen gives an overview about the yunIO service definition. Nothing needs to be changed here. This also applies to the **Code (Preview)** screen.
+Before the service can be tested in the **Test** screen, the custom connector must be published with **Create connector**. 
 
 ### Testing the Service
 
