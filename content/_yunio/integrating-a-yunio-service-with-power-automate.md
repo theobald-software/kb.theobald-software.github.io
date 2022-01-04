@@ -29,16 +29,17 @@ The service has the following settings:<br>
 1. Open the section **Data > Custom Connectors** in Power Automate and click on **+ New custom connector**.
 2. Click on **Import an OpenAPI file** and give the connector a name of your choice. Select the previously downloaded service definition from your harddrive and click on **Continue**.
 The other import methods can also be used in principle, but are not explained in this article. Importing a locally stored definition is the most common method. 
-3. In the **General** screen you can upload a connector icon of your choice. If yunIO is installed on a local server environment, the checkbox at *Connect via on-premises gateway* can be selected. <br>
-If TLS is enabled in yunIO, the HTTPS scheme is pre-selected. In this example, TLS is not enabled, so HTTP is set. <br>  
+3. In the **General** screen you can upload a connector icon of your choice. <br> If yunIO is installed on a local server environment, the checkbox at *Connect via on-premises gateway* can be selected.<br>
+If TLS is enabled in yunIO, the HTTPS scheme is pre-selected. In this example, TLS is not enabled, so HTTP is set.<br>  
 Under **Host** the host address for yunIO service consumption with the respective port is preset. For local installations, as it is the case in this example, the host address is *localhost*. <br>  
 The **Base URL** box represents extensions of the REST service URL that is triggered with the custom connector. Nothing needs to be changed here. <br>
 ![Power-Automate-Custom-Connector-Ceneral.png](/img/contents/yunio/power-automate-custom-connector-general.png){:class="img-responsive"}
-Keep in mind that as soon as you integrate services from a local yunIO installation with a cloud hostes platform such as Power Automate you need some sort of gateway to tunnel the connection.
-A comfortable way for integration with Power Automate is with the [**Microsoft On-premises data gateway**](https://docs.microsoft.com/en-us/data-integration/gateway/). However, it is up to you to decide which gateway solution you want to use.   
+Keep in mind that as soon as you integrate services from a local yunIO installation with a cloud hosted platform such as Power Automate you need some sort of gateway to tunnel the connection.
+A comfortable way for the integration with Power Automate is with the [**Microsoft On-premises data gateway**](https://docs.microsoft.com/en-us/data-integration/gateway/). However, it is up to you to decide which gateway solution you want to use.   
 4. In the **Security** screen the authentication type for service consumption can be selected. *No authentication* is pre-set. <br>
 That means that there is no authentication required by users calling up the connector. <br>
-If *Request credentials from callers when running services* is enabled in the yunIO connection settings, *Basic authentication* can also be selected. This means that the SAP user name and password of the (technical) user that is used for the SAP connection must be stored in the Connection Settings defined in the **Test** screen.
+If *Request credentials from callers when running services* is enabled in the yunIO connection settings, *Basic authentication* can also be selected. 
+This means that the SAP user name and password of the (technical) user that is used for the SAP connection, must be stored in the Connection Settings defined in the **Test** screen.
 In our example we choose *Basic authentication* and label the parameters as *SAP User* and *Password*
 ![Power-Automate-Custom-Connector-Security.png](/img/contents/yunio/power-automate-custom-connector-security.png){:class="img-responsive"} 
 ![Power-Automate-Custom-Connector-Security-Basic.png](/img/contents/yunio/power-automate-custom-connector-security-basic.png){:class="img-responsive"} 
