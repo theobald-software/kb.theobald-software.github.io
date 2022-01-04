@@ -55,8 +55,8 @@ Confirm the settings with **Create connection**.
 ![Power-Automate-Custom-Connector-Test-Connection.png](/img/contents/yunio/power-automate-custom-connector-test-connection.png){:class="img-responsive"} 
 
 
-To test the service and see data flowing from SAP, enter valid import values for the parameters you defined as *Supplied by caller* in the yunIO service settings. 
-Then click on **Test operation**.
+To test the service and see data flowing from SAP, **(1)** enter valid import values for the parameters you defined as *Supplied by caller* in the yunIO service settings. 
+Then **(2)** click on **Test operation**. In the **(3)** Request Body box the SAP response can be viewed. 
 
 ![Power-Automate-Custom-Connector-Test-Operation.png](/img/contents/yunio/power-automate-custom-connector-test-operation.png){:class="img-responsive"} 
 
