@@ -30,8 +30,8 @@ The service has the following settings:<br>
 2. Click on **Import an OpenAPI file** and give the connector a name of your choice. Select the previously downloaded service definition from your harddrive and click on **Continue**.
 The other import methods can also be used in principle, but are not explained in this article. Importing a locally stored definition is the most common method. 
 3. In the **General** screen you can upload a connector icon of your choice. <br> If yunIO is installed on a local server environment, the checkbox at *Connect via on-premises gateway* can be selected.<br>
-If TLS is enabled in yunIO, the HTTPS scheme is pre-selected. In this example, TLS is not enabled, so HTTP is set.<br>  
-Under **Host** the host address for yunIO service consumption with the respective port is preset. For local installations, as it is the case in this example, the host address is *localhost*. <br>  
+With [TLS enabled](https://help.theobald-software.com/en/yunio/server-settings#transport-layer-security) in the yunIO server settings, the HTTPS scheme is pre-selected. In this example, TLS is disabled, so the HTTP scheme is set.<br> 
+Under **Host** the host address for yunIO service consumption with the respective port is preset. For local installations, as it is the case in this example, the host address is *localhost*.<br> 
 The **Base URL** box represents extensions of the REST service URL that is triggered with the custom connector. Nothing needs to be changed here. <br>
 ![Power-Automate-Custom-Connector-Ceneral.png](/img/contents/yunio/power-automate-custom-connector-general.png){:class="img-responsive"}
 Keep in mind that as soon as you integrate services from a local yunIO installation with a cloud hosted platform such as Power Automate you need some sort of gateway to tunnel the connection.
