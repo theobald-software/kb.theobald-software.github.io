@@ -8,7 +8,8 @@ weight: 3
 
 This article shows how to integrate a yunIO service with Microsoft Power Automate.
 
-Power Automate is a cloud-based process automation service provided by Microsoft. The platform can be used to create automated workflows between different cloud apps and services to synchronize and collect data, get notifications, start approvals, and more. 
+Power Automate is a cloud-based process automation service provided by Microsoft. 
+The platform can be used to create automated workflows between different cloud apps and services that synchronize and collect data, get notifications, start approvals, and more. 
 For more Information on Power Automate see [Microsoft Power Automate Documentation](https://docs.microsoft.com/en-us/power-automate/).
 
 ### Prerequisites in yunIO
@@ -21,63 +22,61 @@ The service has the following settings:<br>
 ![yunio-Services-Function-Download](/img/contents/yunio/yunio-run-services-function-download.png){:class="img-responsive" width="800px"}
 
 {: .box-tip }
-**Tip:** It is recommended to test a yunIO service in a REST client first before integrating it with Power Automate. There are examples for [Swagger Inspector](https://kb.theobald-software.com/yunio/running-a-yunio-service-in-swagger-inspector) and [Postman](https://kb.theobald-software.com/yunio/running-a-yunio-service-in-postman) in the knowledgebase. 
+**Tip:** It is recommended to test a yunIO service in a REST client before integrating it with Power Automate, see [Running a yunIO Service in Swagger Inspector](https://kb.theobald-software.com/yunio/running-a-yunio-service-in-swagger-inspector) or [Running a yunIO Service in Postman](https://kb.theobald-software.com/yunio/running-a-yunio-service-in-postman). 
 
 ### Other Prerequisites
-As soon as you integrate services from a local yunIO installation with a cloud hosted platform such as Power Automate you need some sort of gateway to tunnel the connection.
-It is up to you to decide which gateway solution you want to use.<br>  
-A comfortable way for the integration with Power Automate is with the [**Microsoft On-premises data gateway**](https://docs.microsoft.com/en-us/data-integration/gateway/).<br> 
-If you choose this option, install and configure the on-premises gateway before proceeding to the next steps. 
-
+When integrating services from a local yunIO installation with a cloud hosted platform like Power Automate, a gateway is needed to tunnel the connection e.g., the [**Microsoft On-premises data gateway**](https://docs.microsoft.com/en-us/data-integration/gateway/).
+You decide which gateway solution you want to use.<br> 
+If you choose the **Microsoft On-premises data gateway**, install and configure the gateway before proceeding to the next steps.
+ 
 ### Configuring a yunIO custom connector in Power Automate
 
 1. Open the section **Data > Custom Connectors** in Power Automate and click on **+ New custom connector**.
-2. Click on **Import an OpenAPI file** and give the connector a name of your choice. Select the previously downloaded service definition from your harddrive and click on **Continue**.
-The other import methods can also be used in principle, but are not explained in this article. Importing a locally stored definition is the most common method. 
-3. In the **General** screen general information for the custom connector is defined. <br> 
-- With **Upload** you can upload a connector icon of your choice. Defining an alternative icon background colour or a service description is optional.  
-- If you had decided to use the on-prem data gateway, the checkbox at **Connect via on-premises gateway** can be activated.<br>
-- **Scheme**: With [TLS enabled](https://help.theobald-software.com/en/yunio/server-settings#transport-layer-security) in the yunIO server settings, the HTTPS scheme is pre-selected. In this example, TLS is disabled, so the HTTP scheme is set.<br> 
-- Under **Host** the host address for yunIO service consumption with the respective port is preset. For local installations, as it is the case in this example, the host address is *localhost*.<br> 
-- The **Base URL** box represents extensions of the REST service URL that is triggered with the custom connector. Nothing needs to be changed here. <br>
+2. Click on **Import an OpenAPI file** and give the connector a name of your choice. Select the service definition from [Prerequisites in yunIO](#prerequisites-in-yunio) from your harddrive and click **Continue**. 
+3. In the **General** tab you can define general information for the custom connector. <br> 
+- With **Upload** you can upload a connector icon of your choice. Defining an alternative icon background color or a service description is optional.  
+- If you use an on-premises data gateway, activate the checkbox **Connect via on-premises gateway**.<br>
+- **Scheme**: With [TLS enabled](https://help.theobald-software.com/en/yunio/server-settings#transport-layer-security) in the yunIO server settings, the HTTPS scheme is pre-selected. In this example TLS is disabled, so the HTTP scheme is set.<br> 
+- Under **Host** the host address for the yunIO service consumption with its respective port is preset. For local installations the host address is `localhost:[port]`.<br> 
+- The **Base URL** represents extensions of the REST service URL that is triggered by the custom connector. <br>
 ![Power-Automate-Custom-Connector-Ceneral.png](/img/contents/yunio/power-automate-custom-connector-general.png){:class="img-responsive"}
-4. In the **Security** screen the authentication type for service consumption can be selected. <br> 
-- *No authentication* is pre-set. This means that there is no authentication required by users calling up the connector. <br>
-- If *Request credentials from callers when running services* is enabled in the yunIO connection settings, *Basic authentication* can also be selected. 
-This means that the SAP user name and password of the (technical) user that is used for the SAP connection, must be stored in the Connection Settings defined in the **Test** screen.
-- In our example we choose *Basic authentication* and label the parameters as *SAP User* and *Password*
+4. In the **Security** tab you can select the authentication type for service consumption. <br> 
+- *No authentication* is pre-set. This means that there is no authentication required by users calling the connector. <br>
+- If [*Request credentials from callers when running services*](https://help.theobald-software.com/en/yunio/sap-connection#authentication) is enabled in the yunIO connection settings, you can also select *Basic authentication*. 
+This means that the SAP user name and password used for the SAP connection, must be stored in the Connection Settings defined in the [**Test** tab](#testing-the-service).
+- This example uses *Basic authentication* and labels the parameters *SAP User* and *Password*
 ![Power-Automate-Custom-Connector-Security.png](/img/contents/yunio/power-automate-custom-connector-security.png){:class="img-responsive"} 
 ![Power-Automate-Custom-Connector-Security-Basic.png](/img/contents/yunio/power-automate-custom-connector-security-basic.png){:class="img-responsive"} 
-5. The **Definition** screen gives an overview about the yunIO service definition. Nothing needs to be changed here. This also applies to the **Code (Preview)** screen.
-Before the service can be tested in the **Test** screen, the custom connector must be published with **Create connector**. 
+5. The **Definition** tab gives an overview about the yunIO service definition. No changes necessary. This also applies to the **Code (Preview)** tab.
+
+{: .box-note }
+**Note:** Before the service can be tested in the **Test** tab, the custom connector must be published with **Create connector**. 
 
 ### Testing the Service
 
-In the **Test** screen the custom connector can be tested. <br>
-- Create a connection first with **+ New connection**. 
-- Enter the credentials of the SAP user you have defined for the connection to the SAP source system in the yunIO connection settings. Furthermore select the gateway instance for the *Microsoft on-prem data gateway* if you selected this option in the *General* screen.
+In the **Test** tab the custom connector can be tested. <br>
+- Create a connection with **+ New connection**. 
+- Enter the credentials of the SAP user you have defined in the yunIO connection settings. If you selected to connect via an on-premises gateway in the *General* tab, select your gateway instance.
 - Confirm the settings with **Create connection**.   
 
 ![Power-Automate-Custom-Connector-Test-Connection.png](/img/contents/yunio/power-automate-custom-connector-test-connection.png){:class="img-responsive"} 
 
-
-To test the service and see data flowing from SAP, 
+To test run the service 
 - **(1)** enter valid import values for the parameters you defined as *Supplied by caller* in the yunIO service settings. 
-- Then **(2)** click on **Test operation**. 
-- In the **(3)** Request Body box the SAP response can be viewed. 
+- **(2)** click **Test operation**. 
+- **(3)** the SAP response is displayed in the Request Body. 
 
 ![Power-Automate-Custom-Connector-Test-Operation.png](/img/contents/yunio/power-automate-custom-connector-test-operation.png){:class="img-responsive"} 
 
 {: .box-tip }
-**Tip:** For services calling Function Modules or BAPIs that use table or structured input information it can help to switch *Raw Body* off to get a better structured input screen.
+**Tip:** For services calling Function Modules or BAPIs that use tables or structured input information, switch **Raw Body** off to get a better structured input screen.
 
 
 ### Using the Service in a Power Automate Flow
-After the connector was successfully tested it can be used in a Flow. Add a new action to the Flow and search for the custom connector name. <br>
-After adding the connector to the Flow, the input fields can be parameterised.
-
+After a connector is successfully tested, it can be used in a Flow. 
+- Add a new action to the Flow and search for the name of the custom connector. <br>
 ![Power-Automate-Custom-Connector-Flow-Action.png](/img/contents/yunio/power-automate-custom-connector-flow-action.png){:class="img-responsive"} 
-
+- Once the connector is added, the input fields can be parameterized. <br>
 ![Power-Automate-Custom-Connector-Flow.png](/img/contents/yunio/power-automate-custom-connector-flow.png){:class="img-responsive"} 
 
 ******
