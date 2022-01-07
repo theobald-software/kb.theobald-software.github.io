@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.1.11 [L]|2022-01-07|Destinations|Updated Tableau destination to VC++ 2015|
 |5.1.10 [L]|2022-01-03|Destinations|Hadoop destination now supports script expressions in its remote folder setting|
 |[5.1.9 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-5.1.9.html)|2022-01-03|Setup|Tableau's files are not anymore shipped along with XtractUniversal's setup([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-5.1.9.html))|
 |5.1.8 [L]|2021-12-22|Designer|Introducing combo runtime parameters (source and destination) and URL copy notification on run window|
