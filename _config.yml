@@ -119,6 +119,7 @@ collections:
   posts:
     output: true
 
+
 ########## SECTION 4 - OTHER SETTINGS ##########
 ########## Be careful with changes to these settings, as it could break things.
 timezone: "Europe/Berlin"
