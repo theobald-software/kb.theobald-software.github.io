@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Supported SAP and S/4HANA Versions
+title: SAP Versions supported by Theobald Software Products
 description: Supported SAP and HANA Versions by Theobald Software Products
 permalink: /:collection/:path
 weight: 9
@@ -40,10 +40,10 @@ The underlying type of the database is irrelevant.
 
 ### Supported SAP S/4HANA Systems
 
-- The following table lists all available SAP S/4HANA cloud systems:<br>
+The following table lists all available SAP S/4HANA cloud systems:<br>
 ![Available-S/4HANA-Systems1](/img/contents/SAP-systems-cloud-overview.png){:class="img-responsive"}
 
-- The following table lists all available SAP S/4HANA on premise systems:<br>
+The following table lists all available SAP S/4HANA on premise systems:<br>
 ![Available-S/4HANA-Systems2](/img/contents/SAP-systems-premise-overview.png){:class="img-responsive"}
 
 #### Limited Support for SAP S/4HANA Cloud Extended Edition
