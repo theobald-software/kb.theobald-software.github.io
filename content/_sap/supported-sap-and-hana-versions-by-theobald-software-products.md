@@ -1,21 +1,16 @@
 ---
 layout: page
-title: Supported SAP and HANA Versions by Theobald Software Products
+title: Supported SAP and S/4HANA Versions
 description: Supported SAP and HANA Versions by Theobald Software Products
 permalink: /:collection/:path
 weight: 9
 ---
 
-Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
+This article gives an overview of all SAP systems that are supported by Theobald products.<br> 
+The underlying type of the database is irrelevant.
 
-Theobald Software products are compatible with the following SAP versions. 
-The underlying type of the database is irrelevant. This can be a MSSQL, Oracle or even a HANA DB:
+### Supported SAP ERP Systems
 
-ERP:
-
-- SAP R/3 Enterprise Edition 4.0B
-- SAP R/3 Enterprise Edition 4.3
-- SAP R/3 Enterprise Edition 4.5B
 - SAP R/3 Enterprise Edition 4.6C
 - SAP R/3 Enterprise Edition 4.6F
 - SAP R/3 Enterprise Edition 4.7
@@ -24,7 +19,7 @@ ERP:
 - SAP Business All-in-One
 - SAP ERP Central Component (ECC) 6.0 with enhancement package 1-8
 
-BW:
+### Supported SAP BW Systems
 
 - SAP BW 3.1
 - SAP BW 3.1C
@@ -38,13 +33,27 @@ BW:
 - SAP BW 7.4
 - SAP BW 7.5
 
-HANA:
+### Supported SAP HANA Systems
 
 - SAP BW powered by SAP HANA
-- SAP S/4 HANA
 - SAP BW/4HANA
- 
 
-Our SAP connectivity is based on our SAP S/4HANA certified ERPConnect: 
+### Supported SAP S/4HANA Systems
 
-[https://theobald-software.com/en/certification.html](https://theobald-software.com/en/certification.html)
+- The following table lists all available SAP S/4HANA cloud systems:<br>
+![Available-S/4HANA-Systems1](/img/contents/SAP-systems-cloud-overview.png){:class="img-responsive"}
+
+- The following table lists all available SAP S/4HANA on premise systems:<br>
+![Available-S/4HANA-Systems2](/img/contents/SAP-systems-premise-overview.png){:class="img-responsive"}
+
+#### Limited Support for SAP S/4HANA Cloud Extended Edition
+
+The installation of Custom Function Modules on SAP S/4HANA Cloud Extended Edition is not yet supported.
+Therefore the functionality of [Table](https://help.theobald-software.com/en/xtract-universal/sap-customizing/custom-function-module-for-table-extraction) and [Report](https://help.theobald-software.com/en/xtract-universal/sap-customizing/install-report-custom-function-module) extractions is limited for SAP S/4HANA Cloud Extended Edition.
+
+
+******
+
+#### Related Links
+- [List of SAP Systems supported by Xtract Universal](https://help.theobald-software.com/en/xtract-universal/introduction/requirements#supported-sap-systems-and-releases)
+- [SAP S/4HANA Certificate for ERPConnect](https://theobald-software.com/en/certification.html)
