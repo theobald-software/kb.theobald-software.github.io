@@ -28,7 +28,7 @@ If a dialog box prompts you to enter a package, enter a package in the customerâ
 3. Run transaction *RSA5* to access Transfer Business Content DataSources.<br> 
 Alternatively run transaction *SBIW*, and select **[Business Content DataSources] > [Transfer Business Content DataSources]**.
 4. Select a DataSource or a Node you want to activate from the overview tree.
-5. Click **Activate DataSources** to activate the selected DataSources.
+5. Click **[Activate DataSources]** to activate the selected DataSources.
 
 For more information on the activation process, see [Set Up and Activate DataSources](https://help.sap.com/viewer/7a60944343e543a1ab99e9b2904dab09/CLOUD/en-US/e5d447257a95416190d29638a64a5dfa.html).
 
