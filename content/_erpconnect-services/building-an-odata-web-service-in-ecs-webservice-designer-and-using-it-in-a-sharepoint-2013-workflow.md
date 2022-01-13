@@ -408,4 +408,4 @@ We hope you are inspired by this scenario and realize the great potential of the
 
 [Here](/files/PurchaseRequisitionODataWebService.zip) you can download the WebService Model file. 
 
-If you have any questions or comments regarding this article or SAP integration in general don’t hesitate to contact us: support@theobald-software.com.
+If you have any questions or comments regarding this article or SAP integration in general don’t hesitate to contact us: https://support.theobald-software.com.

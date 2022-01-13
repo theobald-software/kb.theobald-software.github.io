@@ -334,7 +334,7 @@ We’ve learned why the SOAP mechanism is powerful, where and how it can be used
 tEcs+ is actively extending client side ERPConnect Services extension library, which simplifies responsive JavaScript development for SAP.
 
 
-Enjoy delivering your SAP data with ERPConnect Services and WebService Designer! Our team is always happy to help, just contact us: support@theobald-software.com.
+Enjoy delivering your SAP data with ERPConnect Services and WebService Designer! Our team is always happy to help, just contact us: https://support.theobald-software.com.
 
 ### 5. Links
 

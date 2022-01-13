@@ -81,7 +81,7 @@ Migration from Xtract RS to Xtract Universal with SSRS destination is free of ch
 
 Please contact [Theobald Software sales team](mailto:sales@theobald-software.com). They will issue a new license file for Xtract Universal.
 <br>
-For technical questions contact [Theobald Software support team](support@theobald-software.com).
+For technical questions contact [Theobald Software support team](https://support.theobald-software.com).
 
 
 
