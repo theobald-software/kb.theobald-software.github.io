@@ -1,3 +1,3 @@
 ### Contact our support team
 ---  
-Support Portal: <https://support.theobald-software.com>  
+Contact via [Support Portal](https://support.theobald-software.com)
