@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.17.4 [L]|2022-01-13|WPF|Added text box icon.|
 |2.17.3 [L]|2022-01-06|General|Improvements for certificate enrollment|
 |2.17.2 [L]|2021-12-21|Licensing|Improvements from Code Review for License Creation logic.|
 |2.17.1 [L]|2021-12-16|WPF|Introducing style for readonly textboxes|
