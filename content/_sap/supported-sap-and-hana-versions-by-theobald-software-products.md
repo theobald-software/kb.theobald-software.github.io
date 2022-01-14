@@ -38,6 +38,7 @@ The underlying type of the database is irrelevant.
 - SAP BW powered by SAP HANA
 - SAP BW/4HANA
 
+#### SAP S/4HANA
 The following table lists all available SAP S/4HANA cloud systems and their compatibility with Theobald products:<br>
 ![Available-S/4HANA-Systems1](/img/contents/SAP-systems-cloud-overview.png){:class="img-responsive"}
 
@@ -48,7 +49,6 @@ The following table lists all available SAP S/4HANA on premise systems and their
 
 The installation of Custom Function Modules on SAP S/4HANA Cloud Extended Edition is not yet supported.
 Therefore the functionality of [Table](https://help.theobald-software.com/en/xtract-universal/sap-customizing/custom-function-module-for-table-extraction) and [Report](https://help.theobald-software.com/en/xtract-universal/sap-customizing/install-report-custom-function-module) extractions is limited for SAP S/4HANA Cloud Extended Edition.
-
 
 ******
 
