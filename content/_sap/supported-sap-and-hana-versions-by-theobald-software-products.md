@@ -38,12 +38,10 @@ The underlying type of the database is irrelevant.
 - SAP BW powered by SAP HANA
 - SAP BW/4HANA
 
-### Supported SAP S/4HANA Systems
-
-The following table lists all available SAP S/4HANA cloud systems:<br>
+The following table lists all available SAP S/4HANA cloud systems and their compatibility with Theobald products:<br>
 ![Available-S/4HANA-Systems1](/img/contents/SAP-systems-cloud-overview.png){:class="img-responsive"}
 
-The following table lists all available SAP S/4HANA on premise systems:<br>
+The following table lists all available SAP S/4HANA on premise systems and their compatibility with Theobald products:<br>
 ![Available-S/4HANA-Systems2](/img/contents/SAP-systems-premise-overview.png){:class="img-responsive"}
 
 #### Limited Support for SAP S/4HANA Cloud Extended Edition
