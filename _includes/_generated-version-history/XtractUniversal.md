@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.1.13 [M]|2022-01-17|Designer|Fix for run window that could not display the output for extractions with certain characters in their names|
 |[5.1.12 [M]](https://kb.theobald-software.com/release-notes/XtractUniversal-5.1.12.html)|2022-01-14|Destinations|Parquet: Fix for Spark compatibility mode column names that contain not supported symbols([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-5.1.12.html))|
 |5.1.11 [L]|2022-01-07|Destinations|Updated Tableau destination to VC++ 2015|
 |5.1.10 [L]|2022-01-03|Destinations|Hadoop destination now supports script expressions in its remote folder setting|
