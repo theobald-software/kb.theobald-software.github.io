@@ -47,7 +47,7 @@ content:
     - title: "<strong>Theobald Software</strong>"
       url: "https://theobald-software.com/en/"
   homepage-title: "Browse through our knowledge articles"
-  homepage-search-title: "How can we help?"
+  homepage-search-title: "Knowledge Base <br><small>How can we help?</small>"
   sidemenu-return-to-home: "Back to <strong>Homepage</strong> of Knowledgebase"
   sidemenu-return-to-section: "Back to overview for "
   sidebar-right-title: "On this page"
