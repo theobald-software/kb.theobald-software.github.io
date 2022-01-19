@@ -6,6 +6,10 @@ permalink: /:collection/:path
 weight: 9
 ---
 
+<!---
+Original SAP S/4HANA-Excel-Tabelle in X:\Support+Pre-Sales\S4HanaCloud
+-->
+
 This article gives an overview of all SAP S/4HANA systems that are supported by Theobald products.<br> 
 
 ### SAP S/4HANA Cloud Systems
