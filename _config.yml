@@ -27,7 +27,7 @@ social:
   - https://twitter.com/TheobaldSoftw
   - https://www.linkedin.com/company/theobald-software/
   - https://www.youtube.com/user/TheobaldSoftware
-  
+
 # TODO: please fill in
 # google_site_verification:
 
@@ -57,7 +57,7 @@ content:
   search-box-text: "Search..."
   section-page-default-explanation: "The following knowledge articles are in this section."
   news-overview-page-default-explanation: "All news articles can be found here."
-   
+
 ########## SECTION 3 - COLLECTION CONFIGURATIONS ##########
 ########## Languages can easily be added this way.
 ##########  see the readme file for more information regarding that,
@@ -167,3 +167,5 @@ exclude:
 #google_analytics: ""
 # GTM ID
 #gtm: ""
+# Matomo site ID
+matomo_analytics: "3"
