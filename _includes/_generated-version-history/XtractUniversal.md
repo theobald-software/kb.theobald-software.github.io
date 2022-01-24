@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.1.15 [L]|2022-01-24|Designer|Disabling the output displaying for Sql Server destination on the run window|
 |5.1.14 [M]|2022-01-18|General|Support for DLL licenses will be removed in June 2022. Please download your JSON licenses from my.theobald-software.com.|
 |5.1.13 [M]|2022-01-17|Designer|Fix for run window that could not display the output for extractions with certain characters in their names|
 |[5.1.12 [M]](https://kb.theobald-software.com/release-notes/XtractUniversal-5.1.12.html)|2022-01-14|Destinations|Parquet: Fix for Spark compatibility mode column names that contain not supported symbols([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-5.1.12.html))|
