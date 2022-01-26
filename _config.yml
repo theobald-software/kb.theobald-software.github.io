@@ -17,7 +17,7 @@ twitter:
   username: TheobaldSoftw
   card: summary
 
-logo: /img/company/theobald_knowledgebase_logo.png
+logo: /img/company/theobald_knowledgebase_logo.svg
 
 # Only for SEO purposes, change the footer under _include/_footer as well if any of this changes.
 social:
@@ -141,14 +141,14 @@ defaults:
       type: "pages"
     values:
       layout: "page"
-      image: /img/company/theobald_knowledgebase_logo.png
+      image: /img/company/theobald_knowledgebase_logo.svg
       lang: "en_GB"
   - scope:
       path: ""
       type: "posts"
     values:
       layout: "post"
-      image: /img/company/theobald_knowledgebase_logo.png
+      image: /img/company/theobald_knowledgebase_logo.svg
       lang: "en_GB"
       is_post: true
 # Exclude
