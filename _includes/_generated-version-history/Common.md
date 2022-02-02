@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.17.6 [M]|2022-02-02|WPF|Fix for ProgressDialog error handling|
 |2.17.5 [L]|2022-02-02|WPF|Added ControlNotInitializedException, marked TaskRunner as obsolete|
 |2.17.4 [L]|2022-01-13|WPF|Added text box icon.|
 |2.17.3 [L]|2022-01-06|General|Improvements for certificate enrollment|
