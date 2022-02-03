@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|[1.25.1 [L]](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.25.1.html)|2022-02-03|Table|Fixed a bug where metadata of views was not retrieved correctly.([Release note](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.25.1.html))|
 |1.25.0 [M]|2022-01-27|ODP|Metadata can now be refreshed without performing a new lookup|
 |1.24.1 [L]|2021-12-08|General|Fix for BCD length conversion|
 |1.24.0 [M]|2021-12-03|BAPI|Added description texts for data elements|
