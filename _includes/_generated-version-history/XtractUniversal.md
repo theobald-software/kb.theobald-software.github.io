@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.1.16 [L]|2022-02-03|Destinations|Improved error message in SSRS Destination if an Extraction did not finish successfully.|
 |5.1.15 [L]|2022-01-24|Designer|Disabling the output displaying for Sql Server destination on the run window|
 |5.1.14 [M]|2022-01-18|General|Support for DLL licenses will be removed in June 2022. Please download your JSON licenses from my.theobald-software.com.|
 |5.1.13 [M]|2022-01-17|Designer|Fix for run window that could not display the output for extractions with certain characters in their names|
