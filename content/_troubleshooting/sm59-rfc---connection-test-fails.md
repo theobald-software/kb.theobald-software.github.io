@@ -18,7 +18,8 @@ When clicking on 'Connection Test' in the RFC Destination I want to use, I get a
 
 **Reason:**
 
-This is no ERROR. A Connection Test is not possible, because Xtract IS is registering at the SAP System only when the package is running. When the package is not running, there is no connection between SSIS and SAP, and so the test will always fail.
+This is not an ERROR. A Connection Test is not possible, because the Xtract product is registering at the SAP System only when the package is running. 
+When the DeltaQ extraction is not running, there is no connection between our Xtract product and SAP, and so the test will always fail.
 
 
 **Solution:**
