@@ -57,6 +57,10 @@ Click **[Send]** to execute the service.<br>
 The results are displayed in the **Response** section of Postman.
 ![Postman-Results](/img/contents/yunio/postman-results.png){:class="img-responsive"}
 
+{: .box-note }
+**Note:** If the option [**Request credentials from callers when running services**](https://help.theobald-software.com/en/yunio/sap-connection#authentication) is active in the connection settings in yunIO, 
+you have to select *Basic Authentication* in the *Authentication* tab of Postman and enter your SAP credentials before running the service.
+
 ******
 
 #### Related Links

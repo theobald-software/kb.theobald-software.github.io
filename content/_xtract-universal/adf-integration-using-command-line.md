@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Integration in Azure Data Factory using the Command Line Tool
+title: Integration in Azure Data Factory using Command Line
 description: automation-of-xu-data-extracts-with-adf
 permalink: /:collection/:path
 weight: 50
