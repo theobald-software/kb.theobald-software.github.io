@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.26.0 [L]|2022-02-08|Table|Updated Z_THEO_READ_TABLE to version 2.11. Background job timeout can now be set manually in extraction settings.|
 |[1.25.1 [L]](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.25.1.html)|2022-02-03|Table|Fixed a bug where metadata of views was not retrieved correctly.([Release note](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.25.1.html))|
 |1.25.0 [M]|2022-01-27|ODP|Metadata can now be refreshed without performing a new lookup|
 |1.24.1 [L]|2021-12-08|General|Fix for BCD length conversion|
