@@ -8,13 +8,13 @@ weight: 51
 
 
 ### About
-This article describes how Azure Data Factory can be used to trigger and automate SAP data movements with [Xtract Universal](https://theobald-software.com/en/xtract-universal/). <br>
+This article describes how Azure Data Factory can be used to trigger and automate SAP data movements using [Xtract Universal's](https://theobald-software.com/en/xtract-universal/) webservices. <br>
 Target audience: Customers who utilize Azure Data Factory (ADF) as a platform for orchestrating data movement and transformation. <br>
 
 {: .box-note}
 **Note:** The following is a suggestion of how a possible orchestration of Xtract Universal extractions from ADF could look like. It describes the basic principles for doing so. It is no best practice document or recommendation.
 
-### Prerequisites and assumptions
+### Prerequisites
 
 - You are familiar with Xtract Universal and have created a number of extractions. Read the [Getting Started with Xtract Univeral](https://help.theobald-software.com/en/xtract-universal/getting-started) help pages if required.
 - You have assigned a [push-destination](https://help.theobald-software.com/en/xtract-universal/destinations#pull-and-push-destinations) like Azure Blob Storage or Azure SQL Server, to the extractions.<br> 

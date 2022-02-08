@@ -1,18 +1,18 @@
 ---
 layout: page
-title: Integration in Azure Data Factory using XU's Command Line Tool
+title: Integration in Azure Data Factory using the Command Line Tool
 description: automation-of-xu-data-extracts-with-adf
 permalink: /:collection/:path
 weight: 50
 ---
 Target audience: Customers who utilize Azure Data Factory as a platform orchestrating data movement and transformation. <br>
 
-This article describes how Azure Data Factory can be used to trigger and automate SAP data movements with [Xtract Universal](https://theobald-software.com/en/xtract-universal/) from Theobald Software.
+This article shows how Azure Data Factory can be used to trigger and automate SAP data movements using [Xtract Universal's](https://theobald-software.com/en/xtract-universal/) command line tool.
 
-### Prerequisites and assumptions ###
+### Prerequisites
 
 - Xtract Universal is installed on a cloud VM and is accessible remotely over HTTP/S
-- Customer uses Azure Data Factory
+- Customer fas access to Azure Data Factory
 
 ### Step 1: Create your SAP data extract in XU <br>
 
