@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Automation of XU data extracts with ADF - Part 1
+title: Integration in Azure Data Factory using XU's Command Line Tool
 description: automation-of-xu-data-extracts-with-adf
 permalink: /:collection/:path
 weight: 50
