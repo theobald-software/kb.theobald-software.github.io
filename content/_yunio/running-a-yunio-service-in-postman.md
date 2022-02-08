@@ -51,7 +51,7 @@ For more information on variables in Postman, see [Using Variables in Postman](h
 ### Running the Service
 
 {: .box-note }
-**Note:** If the option [**Request credentials from callers when running services**](https://help.theobald-software.com/en/yunio/sap-connection#authentication) is active in the connection settings in yunIO, 
+**Note:** If the option [*Request credentials from callers when running services*](https://help.theobald-software.com/en/yunio/sap-connection#authentication) is active in the connection settings in yunIO, 
 you have to select *Basic Authentication* in the *Authentication* tab of Postman and enter your SAP credentials before running the service.
 
 After importing the service definition, the URL of the service endpoint is available in the main URI input line.
