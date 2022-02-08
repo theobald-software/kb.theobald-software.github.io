@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|[5.2.0 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-5.2.0.html)|2022-02-08|Designer|Make sure to update designer AND server!([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-5.2.0.html))|
 |5.1.17 [L]|2022-02-07|Destinations|S3, Azure Storage, Google Cloud Storage: Removed unused certificate pinning from code.|
 |5.1.16 [L]|2022-02-03|Destinations|Improved error message in SSRS Destination if an Extraction did not finish successfully.|
 |5.1.15 [L]|2022-01-24|Designer|Disabling the output displaying for Sql Server destination on the run window|
