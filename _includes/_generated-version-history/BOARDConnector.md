@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|[5.1.0 [L]](https://kb.theobald-software.com/release-notes/BOARDConnector-5.1.0.html)|2022-02-08|Designer|Make sure to update designer AND server!([Release note](https://kb.theobald-software.com/release-notes/BOARDConnector-5.1.0.html))|
 |5.0.5 [M]|2022-01-18|General|Support for DLL licenses will be removed in June 2022. Please download your JSON licenses from my.theobald-software.com.|
 |5.0.4 [L]|2021-12-10|Designer|Fixed missing Theobald.Persistence.dll on designer-only installation|
 |5.0.3 [L]|2021-11-09|Table Join|TableJoin will be removed March 2022|
