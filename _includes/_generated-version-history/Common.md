@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.17.7 [L]|2022-02-09|WPF|Added SnapsToDevicePixels=true to Style|
 |2.17.6 [M]|2022-02-02|WPF|Fix for ProgressDialog error handling|
 |2.17.5 [L]|2022-02-02|WPF|Added ControlNotInitializedException, marked TaskRunner as obsolete|
 |2.17.4 [L]|2022-01-13|WPF|Added text box icon.|
