@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.0.4 [M]|2022-02-09|Designer|Implemented column "select-all"/"de-select all" for table services.|
 |1.0.3 [L]|2022-02-08|Designer|More concise display of some error messages (e. g. connection test)|
 |1.0.2 [L]|2021-12-20|General|Fixes for OpenApi-file generation and input validation. Rework of password handling when editing a Connection.|
 |1.0.1 [L]|2021-12-14|Runtime|Output improved for parameter sequences of different types.|
