@@ -12,7 +12,7 @@ The newly created SAP customer number is then automatically written back to Sale
 
 ### About
 
-This article describes leads you through all necessary steps to set up the following process:
+This article leads you through all necessary steps to set up the following process:
 
 - When an account in the *Sales Console* of Salesforce is modified, a Power Automate workflow is triggered.
 - The workflow checks if the type of the account is set to *Customer - Direct* and if the customer exists in SAP.
@@ -65,6 +65,8 @@ If TYPE does not equal 'E' (error), the SAP customer number is written back to S
 7. Optional: Send notifications when a customer is created or log all synchronized Salesforce accounts e.g., in a SharePoint Online list. 
 8. Turn on the workflow.
 
+{: .box-note }
+**Note:** The yunIO input parameters *Company Code* and *Sales Org* can be provided by Salesforce like in this article, or set as static values in Power Automate.
 
 ### Triggering the Process
 
