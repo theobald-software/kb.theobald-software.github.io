@@ -46,7 +46,7 @@ Customize your Salesforce account to provide SAP related fields:
 For more information on how to customize fields in Salesforce, see [Salesforce Documentation: Create Custom Fields](https://help.salesforce.com/s/articleView?id=sf.adding_fields.htm&type=5).
 
 {: .box-note }
-**Note:** Creating *Company Code* and *Sales Org* in Salesforce is optional as they can also be set as static values in Power Automate.
+**Note:** Creating *Company Code*, *Sales Org*, *Distribution Channel* and *Disivion* in Salesforce is optional as they can also be set as static values in Power Automate.
 
 ![salesforce_before_sap](/img/contents/yunio/salesforce_before_sap.png){:class="img-responsive" width="900px"}
 
@@ -71,8 +71,8 @@ If TYPE does not equal 'E' (error), the SAP customer number is written back to S
 
 ### Triggering the Process
 
-1. Go to Salesforce and change the account type from *Prospect* to *Customer - Direct*.<br>
-Make sure that the checkbox *In SAP* is deactivated and the fields *Company Code* and *Sales Org* are not empty.
+1. Go to Salesforce and change the account type from *Prospect* to *Customer - Direct*.
+Make sure that the checkbox *In SAP* is deactivated.
 2. The Power Automate workflow runs and creates the customer in SAP. <br>
 ![power-automate-finished](/img/contents/yunio/power-automate-finished.png){:class="img-responsive"}
 3. Check if the SAP customer number is set in Salesforce and if the checkbox *In SAP* is active.
