@@ -7,8 +7,8 @@ weight: 6
 ---
 
 This article shows how to synchronize a Salesforce account in near-real time with SAP.<br>
-In the following example scenario data from Salesforce is used to automatically create a customer in SAP. 
-The newly created SAP customer number is then automatically written back to Salesforce.
+In the following scenario, data from Salesforce is used to automatically create a customer in SAP. 
+The newly created SAP customer number is then written back to Salesforce.
 
 ### About
 
