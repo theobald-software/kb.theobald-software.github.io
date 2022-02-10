@@ -1,13 +1,13 @@
 ---
 layout: page
-title: Sync Salesforce to SAP using Power Automate and yunIO
-description: Sync salesforce to SAP in near-real-time using power automate and yunIO
+title: Sync Salesforce with SAP using Power Automate and yunIO
+description: Sync Salesforce with SAP in near-real-time using power automate and yunIO
 permalink: /:collection/:path
 weight: 6
 ---
 
 This article shows how to synchronize a Salesforce account in near-real time with SAP.<br>
-In the following scenario, data from Salesforce is used to automatically create a customer in SAP. 
+In the following scenario, data from Salesforce is used to automatically create a customer account in SAP. 
 The newly created SAP customer number is then written back to Salesforce.
 
 ### About
@@ -17,7 +17,7 @@ This article leads you through all necessary steps to set up the following proce
 - When an account in the *Sales Console* of Salesforce is modified, a Power Automate workflow is triggered.
 - The workflow checks if the type of the account is set to *Customer - Direct* and if the customer exists in SAP.
 - If both conditions are true, a [yunIO](https://help.theobald-software.com/en/yunio/) service that writes customer data from Salesforce to SAP is executed.
-- Once the customer is created in SAP, the newly created SAP customer number is written back to Salesforce.
+- Once the customer is created in SAP, the newly created SAP customer number is written back to the Salesforce sales account.
 
 ### Setup in yunIO
 
@@ -25,7 +25,7 @@ yunIO is the connector that reads and writes data from and to SAP.
 
 1. Define the connection to your SAP system in yunIO. This connection will be used to create the SAP customer.
 For more information on how to set up an SAP connection, see [Online Help: SAP connection](https://help.theobald-software.com/en/yunio/sap-connection).
-2. Create a new service in yunIO. This example uses the BAPI BAPI_CUSTOMER_CREATEFROMDATA1 to create a customer in SAP. 
+2. Create a new service in yunIO. This example uses the standard BAPI BAPI_CUSTOMER_CREATEFROMDATA1 to create a customer in SAP. 
 For more information on how to create a service, see [Online Help: Getting Started](https://help.theobald-software.com/en/yunio/getting-started#creating-a-service)<br>
 - Set all import parameters you want to transfer from Salesforce to SAP to *Supplied by Caller* e.g., NAME, CITY, POSTL_COD1, STREET, etc.
 - Select CUSTOMERNO for export. This Export parameter contains the newly created SAP customer number that is written back to Salesforce.<br>
@@ -40,10 +40,10 @@ For more information on how to create a service, see [Online Help: Getting Start
 
 Customize your Salesforce account to provide SAP related fields:
 - Create a field *SAP ID*. Once a customer is created in SAP, the customer number is written back into *SAP ID*.
-- *Company Code* and *Sales Org* are details required to create the SAP customer.
+- *Company Code*, *Sales Org*, *Distribution Channel* and *Disivion* are organisation details required to create the SAP customer.
 - Create a checkbox that indicates if the customer exists in SAP.
 
-For more information on how to create custom fields in Salesforce, see [Salesforce Documentation: Create Custom Fields](https://help.salesforce.com/s/articleView?id=sf.adding_fields.htm&type=5).
+For more information on how to customize fields in Salesforce, see [Salesforce Documentation: Create Custom Fields](https://help.salesforce.com/s/articleView?id=sf.adding_fields.htm&type=5).
 
 {: .box-note }
 **Note:** Creating *Company Code* and *Sales Org* in Salesforce is optional as they can also be set as static values in Power Automate.
