@@ -45,6 +45,9 @@ Customize your Salesforce account to provide SAP related fields:
 
 For more information on how to create custom fields in Salesforce, see [Salesforce Documentation: Create Custom Fields](https://help.salesforce.com/s/articleView?id=sf.adding_fields.htm&type=5).
 
+{: .box-note }
+**Note:** Creating *Company Code* and *Sales Org* in Salesforce is optional as they can also be set as static values in Power Automate.
+
 ![salesforce_before_sap](/img/contents/yunio/salesforce_before_sap.png){:class="img-responsive" width="900px"}
 
 
@@ -65,8 +68,6 @@ If TYPE does not equal 'E' (error), the SAP customer number is written back to S
 7. Optional: Send notifications when a customer is created or log all synchronized Salesforce accounts e.g., in a SharePoint Online list. 
 8. Turn on the workflow.
 
-{: .box-note }
-**Note:** The yunIO input parameters *Company Code* and *Sales Org* can be provided by Salesforce like in this article, or set as static values in Power Automate.
 
 ### Triggering the Process
 
