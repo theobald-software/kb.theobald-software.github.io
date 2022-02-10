@@ -63,7 +63,7 @@ If both conditions are true, execute the yunIO service to write the customer dat
 ![power-automate-yunio-parameters](/img/contents/yunio/power-automate-yunio-parameters.png){:class="img-responsive"}
 5. Check if the SAP customer was created using the yunIO return field TYPE (5). <br>
 If TYPE does not equal 'E' (error), the SAP customer number is written back to Salesforce.
-6. When updating the Salesforce account (6), assign the CUSTOMERNO from yunIO to **SAP ID* and set the checkbox *In SAP* to 'Yes'.
+6. When updating the Salesforce account (6), assign the CUSTOMERNO from yunIO to *SAP ID* and set the checkbox *In SAP* to 'Yes'.
 ![power-automate-write-to-salesforce](/img/contents/yunio\power-automate-write-to-salesforce.png){:class="img-responsive"}
 7. Optional: Send notifications when a customer is created or log all synchronized Salesforce accounts e.g., in a SharePoint Online list. 
 8. Turn on the workflow.
