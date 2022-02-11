@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.0.5 [L]|2022-02-10|Designer|Small fix for previous release, so the Services can be created.|
 |1.0.4 [M]|2022-02-09|Designer|Implemented column "select-all"/"de-select all" for table services.|
 |1.0.3 [L]|2022-02-08|Designer|More concise display of some error messages (e. g. connection test)|
 |1.0.2 [L]|2021-12-20|General|Fixes for OpenApi-file generation and input validation. Rework of password handling when editing a Connection.|
