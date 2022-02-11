@@ -22,6 +22,7 @@ This article leads you through all necessary steps to set up the following proce
 ### Setup in yunIO
 
 yunIO is the connector that reads and writes data from and to SAP.
+For more information on yunIO, see [Theobald Software: yunIO](https://theobald-software.com/en/yunio/).
 
 1. Define the connection to your SAP system in yunIO. This connection will be used to create the SAP customer.
 For more information on how to set up an SAP connection, see [Online Help: SAP connection](https://help.theobald-software.com/en/yunio/sap-connection).
