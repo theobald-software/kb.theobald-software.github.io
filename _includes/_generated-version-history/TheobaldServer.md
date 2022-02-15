@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|3.3.0 [M]|2022-02-15|General|Added support for certificate SSO and reworked logic for opening SAP connections|
 |3.2.0 [L]|2022-02-08|General|Client side implementation to match Xtract Universal server; Fixes for client side notification handling; Server error information is now a JSON object |
 |3.1.0 [L]|2021-12-07|General|Transaction component and pass-through mode |
 |3.0.3 [M]|2021-12-02|General|Fix for storing passwords with non-ASCII characters|
