@@ -1,5 +1,7 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.3.1 [M]|2022-02-15|General|Fix for possibility of server not starting on fresh installations (broken since 5.2.0)|
+|5.3.0 [M]|2022-02-15|General|Added support for certificate SSO and reworked source details GUI|
 |5.2.1 [L]|2022-02-10|Designer|Fixed a bug where the log viewer for the web server would show the wrong logs.|
 |[5.2.0 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-5.2.0.html)|2022-02-08|Designer|Make sure to update designer AND server!([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-5.2.0.html))|
 |5.1.17 [L]|2022-02-07|Destinations|S3, Azure Storage, Google Cloud Storage: Removed unused certificate pinning from code.|
