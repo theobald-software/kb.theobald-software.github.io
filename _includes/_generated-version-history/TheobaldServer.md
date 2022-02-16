@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|3.4.1 [L]|2022-02-16|General|KeepAlive support for connection using the new authentication.|
 |3.4.0 [M]|2022-02-15|General|TheoAuth: Added support for WebSockets|
 |3.3.1 [L]|2022-02-15|General|Fixed issues where the Rpc client did not correctly close the connection when asked to.|
 |3.3.0 [M]|2022-02-15|General|Added support for certificate SSO and reworked logic for opening SAP connections|
