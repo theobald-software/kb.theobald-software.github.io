@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.10.0 [M]|2022-02-17|BAPI|Reworked BAPI component|
 |6.9.4 [M]|2022-01-18|General|Support for DLL licenses will be removed in June 2022. Please download your JSON licenses from my.theobald-software.com.|
 |6.9.3 [L]|2021-12-01|General|Removed French translation|
 |6.9.2 [L]|2021-11-09|Table Join|TableJoin will be removed March 2022|
