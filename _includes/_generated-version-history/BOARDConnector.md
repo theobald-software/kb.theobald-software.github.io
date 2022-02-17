@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.3.0 [M]|2022-02-17|BAPI|Reworked BAPI component|
 |5.2.0 [M]|2022-02-15|General|Added support for certificate SSO and reworked source details GUI|
 |[5.1.1 [L]](https://kb.theobald-software.com/release-notes/BOARDConnector-5.1.1.html)|2022-02-15|Designer|Various fixes and improvements following the 5.1.0 release.([Release note](https://kb.theobald-software.com/release-notes/BOARDConnector-5.1.1.html))|
 |[5.1.0 [L]](https://kb.theobald-software.com/release-notes/BOARDConnector-5.1.0.html)|2022-02-08|Designer|Make sure to update designer AND server!([Release note](https://kb.theobald-software.com/release-notes/BOARDConnector-5.1.0.html))|
