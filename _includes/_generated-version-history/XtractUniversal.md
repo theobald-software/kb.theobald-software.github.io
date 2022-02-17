@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.4.0 [M]|2022-02-17|BAPI|Reworked BAPI component|
 |[5.3.3 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-5.3.3.html)|2022-02-16|General|Fix for a connection issue and the designer becoming unresponsive in the destination settings.([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-5.3.3.html))|
 |[5.3.2 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-5.3.2.html)|2022-02-15|Designer|Various fixes and improvements following the 5.2.0 release.([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-5.3.2.html))|
 |5.3.1 [M]|2022-02-15|General|Fix for possibility of server not starting on fresh installations (broken since 5.2.0)|
