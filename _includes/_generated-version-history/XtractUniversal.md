@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|[5.4.2 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-5.4.2.html)|2022-02-18|General|Destination settings window uses the SAP object's name again and improvements on handling the designer disconnecting.([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-5.4.2.html))|
 |5.4.1 [L]|2022-02-17|Destinations|Fixed possible IndexOutOfRangeException in Oracle destination when using custom parameters e.g. in table where clauses.|
 |5.4.0 [M]|2022-02-17|BAPI|Reworked BAPI component|
 |[5.3.3 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-5.3.3.html)|2022-02-16|General|Fix for a connection issue and the designer becoming unresponsive in the destination settings.([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-5.3.3.html))|
