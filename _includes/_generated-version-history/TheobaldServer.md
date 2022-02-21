@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|3.4.2 [L]|2022-02-21|General|Fix for some errors not being communicated to the caller.|
 |3.4.1 [L]|2022-02-16|General|KeepAlive support for connection using the new authentication.|
 |3.4.0 [M]|2022-02-15|General|TheoAuth: Added support for WebSockets|
 |3.3.1 [L]|2022-02-15|General|Fixed issues where the Rpc client did not correctly close the connection when asked to.|
