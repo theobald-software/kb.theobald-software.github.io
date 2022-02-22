@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|[5.4.4 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-5.4.4.html)|2022-02-22|Designer|Fixed issues on the run window regarding the output displayer for Sql Server destination([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-5.4.4.html))|
 |5.4.3 [L]|2022-02-21|Designer|Fix for log window refreshing bug when no run is selected|
 |[5.4.2 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-5.4.2.html)|2022-02-18|General|Destination settings window uses the SAP object's name again and improvements on handling the designer disconnecting.([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-5.4.2.html))|
 |5.4.1 [L]|2022-02-17|Destinations|Fixed possible IndexOutOfRangeException in Oracle destination when using custom parameters e.g. in table where clauses.|
