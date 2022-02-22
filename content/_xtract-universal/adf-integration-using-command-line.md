@@ -12,7 +12,7 @@ This article shows how Azure Data Factory can be used to trigger and automate SA
 ### Prerequisites
 
 - Xtract Universal is installed on a cloud VM and is accessible remotely over HTTP/S
-- Customer fas access to Azure Data Factory
+- Customer has access to Azure Data Factory
 
 ### Step 1: Create your SAP data extract in XU <br>
 
@@ -90,11 +90,3 @@ In your storage account from step 3, you will find a folder named **adfjobs**. <
 For every pipeline execution, there will be a subfolder with log information. <br>
 The files **stderr.txt** and **stdout.txt** will contain the output from xu.exe. <br>
 ![XU data extracts with adf 12](/img/contents/xu/xu-data-extracts-with-adf_12.jpg){:class="img-responsive"} 
-
-
-
-
-
-
-
-

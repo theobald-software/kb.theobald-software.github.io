@@ -21,7 +21,7 @@ Target audience: Customers who utilize Azure Data Factory (ADF) as a platform fo
 **Note:** The following sections describe the basic principles for triggering an ADF pipeline.
 Keep in mind that this is no best practice document or recommendation.
 
-### Prerequisites and Assumptions
+### Prerequisites
 
 - You are familiar with Xtract Universal and have created a number of extractions, see [Getting Started with Xtract Univeral](https://help.theobald-software.com/en/xtract-universal/getting-started).
 - You are familiar with [Azure Storage](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction).
@@ -31,7 +31,7 @@ Keep in mind that this is no best practice document or recommendation.
 - You are familiar with ADF pipeline triggers, especially [triggering a pipeline in response to a storage event](https://docs.microsoft.com/en-us/azure/data-factory/how-to-create-event-trigger?tabs=data-factory). 
 
 
-### General overview
+### General Overview
 
 #### Azure Storage 
 Xtract Universal extracts SAP data and loads it into an Azure Storage as a parquet file. An Azure Storage event trigger is used to run an ADF pipeline for further processing of the SAP file. 
@@ -121,8 +121,8 @@ In ADF you can also check the trigger and pipeline run: <br>
 ![ADF_Pipeline_Run](/img/contents/xu/xu-adf-storage-trigger/adf-pipeline-run.png) 
 
 
-### Download JSON templates
-Here you can download the code of the master pipeline and the trigger in json format: <br>
-<a href="/files/xu/BlobEventsTrigger01.json">Download Trigger  as json</a> <br>
-<a href="/files/xu/ProcessBlobStorageFile.json">Download MASTER pipeline as json</a>
+### JSON templates
+
+- <a href="/files/xu/BlobEventsTrigger01.json">Download Trigger  as json</a> <br>
+- <a href="/files/xu/ProcessBlobStorageFile.json">Download MASTER pipeline as json</a>
 

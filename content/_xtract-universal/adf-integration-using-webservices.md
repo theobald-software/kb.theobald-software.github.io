@@ -59,7 +59,6 @@ Parameters and variables are used in both pipelines:
 - Parameters provide a constant value that is being used in various activities, so that we don't have to type in the same values again and again.
 - Variables take on dynamic values at runtime and are used to pass on data between different activities or pipelines.
 
-
 The following parameters and variables were created:
 
 | Parameter/Variable | Name                         | Data Type | Defined in      | Description                                                                                                                                                                                      |
@@ -71,19 +70,10 @@ The following parameters and variables were created:
 | Variable           | v_JOB_STATUS                 | String    | Child pipeline  | This variable stores the extraction's run status returned by *Web* activity*CHECK_XU_JOB_STATUS*. The variable’s value is set in the *Set variable* activity *JOB_STATUS*. As long as the variable has the status "Running", the *Until* activity *IS_JOB_RUNNING* is executed. Other values this variable can can have are "FinishedNoErrors" and "FinishedErrors".                                                                                                                                                                                                   |
 | Variable           | v_Log                        | String    | Child pipeline  |This variable stores the extraction's log returned by *Web* activity*XU_Get_Extraction_Log*. The variable’s value is set in the *Set variable* activity *Set_variable_XU_Log*. The value of this variable is appended to the log file in the *Copy data* activity *Copy Extraction Log to Blob*.                                                                                                                                                                                                  |
 
-
-
+For more information on using variables when calling extractions, see [Calling Dynamic Extractions with Variables in ADF](./calling-dynamic-extractions-with-variables-in-adf).
 
 ### JSON templates
 
-<a href="/files/xu/CHILD_pipeline_Execute_single_XU_extraction.json">Download CHILD pipeline as json</a> <br>
-<a href="/files/xu/MASTER_pipeline_Loop_over_XU_extractions.json">Download MASTER pipeline as json</a>
-
-
-
-
-
-
-
-
+- <a href="/files/xu/CHILD_pipeline_Execute_single_XU_extraction.json">Download CHILD pipeline as json</a> <br>
+- <a href="/files/xu/MASTER_pipeline_Loop_over_XU_extractions.json">Download MASTER pipeline as json</a>
 
