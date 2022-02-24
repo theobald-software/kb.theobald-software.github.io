@@ -1,6 +1,7 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
-|5.4.7 [L]|2022-02-24|Designer|Source settings: Fix for checkboxes in Plain/Ticket Issuer tab getting unticked|
+|5.4.8 [M]|2022-02-24|Designer|Improvements for Designer authentication|
+|5.4.7 [M]|2022-02-24|Designer|Source settings: Fix for checkboxes in Plain/Ticket Issuer tab getting unticked|
 |[5.4.6 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-5.4.6.html)|2022-02-24|Designer|Fixes for handling corrupt/empty directories and files in the config and logs directories([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-5.4.6.html))|
 |5.4.5 [L]|2022-02-24|Server|Fix for clearing result cache of extractions without source.json|
 |[5.4.4 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-5.4.4.html)|2022-02-22|Designer|Fixed issues on the run window regarding the output displayer for Sql Server destination([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-5.4.4.html))|
