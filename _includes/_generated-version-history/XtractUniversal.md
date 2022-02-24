@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|[5.4.6 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-5.4.6.html)|2022-02-24|Designer|Fixes for handling corrupt/empty directories and files in the config and logs directories([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-5.4.6.html))|
 |5.4.5 [L]|2022-02-24|Server|Fix for clearing result cache of extractions without source.json|
 |[5.4.4 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-5.4.4.html)|2022-02-22|Designer|Fixed issues on the run window regarding the output displayer for Sql Server destination([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-5.4.4.html))|
 |5.4.3 [L]|2022-02-21|Designer|Fix for log window refreshing bug when no run is selected|
