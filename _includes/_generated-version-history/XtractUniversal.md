@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.4.10 [L]|2022-02-25|Destinations|Azure Storage destination: fixed a bug where extraction would run into an error when using Append Blob type (bug introduced in 5.1.17)|
 |[5.4.9 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-5.4.9.html)|2022-02-25|Designer|Various UI/UX improvements([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-5.4.9.html))|
 |5.4.8 [M]|2022-02-24|Designer|Improvements for Designer authentication|
 |5.4.7 [M]|2022-02-24|Designer|Source settings: Fix for checkboxes in Plain/Ticket Issuer tab getting unticked|
