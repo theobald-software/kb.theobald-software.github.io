@@ -13,14 +13,12 @@ This article describes common error messages and how to handle them when working
 When trying to run the preview in the Xtract Report component, the following Exception occurs: <br> 
 *Screen output without connection to user:*
 
-![ScreenOutputWithoutConnectioToUser](/img/contents/ScreenOutputWithoutConnectioToUser.png){:class="img-responsive"}
-
-**Reason:**
+#### Reason
 
 There are reports that try to show a screen output e.g., another dynpro. 
 This is not possible when running reports in RFC, because no SAP GUI is involved. 
 
-**Solution:**
+#### Solution
 
 Running the report in the background suppresses screen outputs and redirects the output from the Report to the spool. 
 Xtract Report fetches the data from the spool of SAP without any additional settings.
@@ -38,12 +36,12 @@ If the dynpro is awaiting any input, this report is not compatible with our prod
 When trying to run the preview in the Xtract Report component, the following Exception occurs: <br> 
 *RfcListen failed(RFC_INVALID_HANDLE) (RFC_ERROR_SYSTEM_FAILURE) Exception condition "CNTL_ERROR" triggered.*
 
-**Reason:**
+#### Reason
 
 There are ABAP reports that expect an installed SAP GUI. 
 The error occurs when calling such a report from a remote machine without an installed SAP GUI. 
 
-**Solution:**
+#### Solution
 
 Activate the option *Use SAPGUI* in the connection settings of your Xtract product.
 In Xtract IS, set the *AttachesSapGui* property of the Connection Manager to *True*.
