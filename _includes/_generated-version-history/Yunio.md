@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.2.0 [M]|2022-03-07|Management|User management. Login for the designer and basic authentication for the web services. The TLS must be enabled.|
 |1.1.1 [L]|2022-02-15|Runtime|Improvements for opening SAP connections|
 |1.1.0 [M]|2022-02-11|Designer|Function module: support for a table parameter defined with TYPE keyword.|
 |1.0.5 [L]|2022-02-10|Designer|Small fix for previous release, so the Services can be created.|
