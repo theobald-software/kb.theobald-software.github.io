@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|[5.4.14 [M]](https://kb.theobald-software.com/release-notes/XtractUniversal-5.4.14.html)|2022-03-10|Destinations|Fix for Snowflake destination transaction control([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-5.4.14.html))|
 |5.4.13 [M]|2022-03-08|General|Fixed an issue where system clock changes could cause errors |
 |[5.4.12 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-5.4.12.html)|2022-03-07|Setup|Python setup script([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-5.4.12.html))|
 |5.4.11 [L]|2022-02-28|Designer|Fixed the destination settings window, which did not load existing configurations. Improved error handling for corrupted extractions.|
