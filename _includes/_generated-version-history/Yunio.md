@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.2.3 [L]|2022-03-10|Designer|RPC refactoring (should not change behaviour)|
 |1.2.2 [M]|2022-03-10|Designer|Improvements for texts and anonymous access checkbox|
 |1.2.1 [M]|2022-03-08|Designer|Fix for creating/deleting users without enabling TLS first.|
 |1.2.0 [M]|2022-03-07|Management|User management. Login for the designer and basic authentication for the web services. TLS must be enabled.|
