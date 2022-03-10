@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.4.15 [L]|2022-03-10|General|Fixed occasional crashes in cached Cube and Bapi extractions. These Extraction types can contain empty cells, even in numeric columns. The cache did not handle this case and tried parse the empty string a a number. Added special cases to the cache reader.|
 |[5.4.14 [M]](https://kb.theobald-software.com/release-notes/XtractUniversal-5.4.14.html)|2022-03-10|Destinations|Fix for Snowflake destination transaction control([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-5.4.14.html))|
 |5.4.13 [M]|2022-03-08|General|Fixed an issue where system clock changes could cause errors |
 |[5.4.12 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-5.4.12.html)|2022-03-07|Setup|Python setup script([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-5.4.12.html))|
