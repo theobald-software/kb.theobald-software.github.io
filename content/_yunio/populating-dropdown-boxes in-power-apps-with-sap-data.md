@@ -15,15 +15,15 @@ There are three examples for SAP interaction with dropdown boxes in Power Apps d
 
 1. Populate a dropdown box with SAP table data and provide a search filter through a separate input box.
 2. Populate a dropdown box with SAP table data without a search filter.
-3. Populate a dropdown box with SAP data returned from a function call. The input parameter\ search filter is provided through a separate input box.  
+3. Populate a dropdown box with SAP data returned from a function module call. The input parameter\ search filter is provided through a separate input box.  
 
 
 ### Prerequisites in yunIO
 
-1. Create three services in yunIO. For this example we use table services to query data from SAP tables MAKT and CSKT and a function service to call SAP standard functionj SD_RFC_CUSTOMER_GET. 
+1. Create three separate services in yunIO. For this example we use table services to query data from SAP tables MAKT and CSKT and a function service to call SAP standard function SD_RFC_CUSTOMER_GET. 
 The MAKT service has the following settings:<br>
-- Create a new service of type Table or Vieww and select table MAKT (Material Descriptions)
-- Select table fields MATNR (Material Number), SPRAS (Language Key) and MAKTX (Material Description (SHort Text))
+- Create a new service of type Table or View and select table MAKT (Material Descriptions)
+- Select table fields MATNR (Material Number), SPRAS (Language Key) and MAKTX (Material Description (Short Text))
 - Set a row limit of 100 rows in the Advanced Settings. 
 The CSKT service has the following settings:<br>
 - Create a new service of type Table or View and select table CSKT (Cost Center Texts)
@@ -31,7 +31,7 @@ The CSKT service has the following settings:<br>
 - Set a row limit of 100 rows in the Advanced Settings.
 The service for calling up function SD_RFC_CUSTOMER_GET has the following settings:<br>
 - Select a new service of type Function and select function module SD_RFC_CUSTOMER_GET
-- Set parameter NAME1 (Customer'S Name) under Import as Supplied by caller.
+- Set parameter NAME1 (Customer's Name) under *Import* as Supplied by caller.
 - Select all fields in the function table *CUSTOMER_T* for the output.
 2. Download the service definitions (![download-file](/img/contents/yunio/download.png) icon).<br>
 ![yunio-Services-Function-Download](/img/contents/yunio/yunio-run-services-function-download.png){:class="img-responsive" width="800px"}
@@ -52,9 +52,18 @@ To use a service created in the yunIO designer with Power Apps it must first be 
 ### Using the Services with Power Apps
 After a connector is successfully tested, it can be used as a data source in Power Apps. 
 - Create a new model-driven Power App with the Power Apps designer.<br>
-![Power-Automate-Custom-Connector-Flow-Action.png](/img/contents/yunio/power-automate-custom-connector-flow-action.png){:class="img-responsive"} 
 - Add three dropdown input fields and three labels to describe these fields. 
-- For the frist and the last dropdown field add additional Text input boxes above for the filtering. 
+[Power-Automate-Custom-Connector-Flow-Action.png](/img/contents/yunio/power-automate-custom-connector-flow-action.png){:class="img-responsive"} 
+- For the frist and the last dropdown field add additional Text input boxes above for the searching\filtering. 
+- Add the previously created yunIO custom connectors containing the MAKT service, the CSKT service and the Customer Get service.
+![yunio-powerapps-add-datasource](/img/contents/yunio/yunio_powerapps_datasource_readmakt.png){:class="img-responsive" width="800px"} 
+- Customize the following fields for populating the dropdown boxes. The first example is for querying SAP table data for table MAKT. The search field shall use a Where Clause to enable filtering the SAP table. 
+Use the following coding in the OnSelect box of the dropdown control in the advanced settings:
+```
+
+
+```
+With *ClearCollect* a collection with a name of your choice is filled data from the external data source.    
 
 
 ******
