@@ -1,7 +1,7 @@
 ---
 layout: page
-title: How to use yunIO to populate dropdown boxes in Power Apps with SAP data
-description: How to use yunIO to populate dropdown boxes in Power Apps with SAP data
+title: How to use yunIO to populate Drop Down Controls in Power Apps
+description: How to use yunIO to populate Drop Down Controls in Power Apps with SAP data
 permalink: /:collection/:path
 weight: 3
 ---
@@ -12,30 +12,28 @@ For more Information on Power Apps, see [Microsoft Power Apps Documentation](htt
 
 ### About 
 The following 3 examples for SAP interaction with dropdown boxes in Power Apps are documented:
-- Populating a dropdown box with SAP table data without a search filter.
-- Populating a dropdown box with SAP table data using a search filter.
-- Populating a dropdown box with SAP data returned from a function module call. <!--- The input parameter\ search filter is provided by a separate input box.  -->
+- Populating a drop down control with SAP table data without a search filter.
+- Populating a drop down control with SAP table data using a search filter.
+- Populating a drop down control with SAP data returned from a function module call. <!--- The input parameter\ search filter is provided by a separate input box.  -->
 
 
 ### Prerequisites in yunIO
 
 1. The example applications in this article use multiple yunIO services. Create the following 3 services in yunIO: 
 - Create a Table service to query data from the SAP table MAKT with the following settings:<br>
-Select table fields MATNR (Material Number), SPRAS (Language Key) and MAKTX (Material Description). Set the row limit to 100 rows. <br>
-image
+Select the table fields MATNR (Material Number), SPRAS (Language Key) and MAKTX (Material Description) for output. Set the row limit to 100 rows. <br>
 - Create a Table service to query data from the SAP table CSKT with the following settings:<br>
-Select table fields KOSTL (Cost Center), KTEXT (General Name) and LTEXT (Description). Set the row limit to 100 rows. <br>
-image
-- Create a Function Module service for calling the function SD_RFC_CUSTOMER_GET with the following settings:<br>
+Select the table fields KOSTL (Cost Center), KTEXT (General Name) and LTEXT (Description) for output. Set the row limit to 100 rows. <br>
+- Create a Function Module service that calls the function SD_RFC_CUSTOMER_GET with the following settings:<br>
 Set the input parameter NAME1 (Customer's Name) to *Supplied by caller*.
 Select all fields in the table *CUSTOMER_T* for the output.<br>
-image
-{: .box-note }
-**Note:**  In PowerApps every data source is limited to 500 items. Therefore, it is recommended to pre-filter requests to a manageable amount of data and a row limit is set in this example. 
 2. Download the service definition (![download-file](/img/contents/yunio/download.png) icon) of all 3 services.<br>
 ![yunio-Services-Function-Download](/img/contents/yunio/yunio-run-services-function-download.png){:class="img-responsive" width="800px"}
 
 For more information on how to create services, see [Online Help: Creating a Service](https://help.theobald-software.com/en/yunio/getting-started#creating-a-service).
+
+{: .box-note }
+**Note:**  In PowerApps every data source is limited to 500 items. Therefore, it is recommended to pre-filter requests to a manageable amount of data e.g., by using a row limit in the yunIO service. 
 
 {: .box-tip }
 **Tip:** It is recommended to test a yunIO service in a REST client before integrating it with a Micrososft Power Platform, see [Running a yunIO Service in Swagger Inspector](https://kb.theobald-software.com/yunio/running-a-yunio-service-in-swagger-inspector) or [Running a yunIO Service in Postman](https://kb.theobald-software.com/yunio/running-a-yunio-service-in-postman). 
@@ -59,28 +57,28 @@ After a connector is successfully tested, it can be used as a data source in Pow
 3. For the first and the last dropdown field add additional Text input boxes (input_sap_material_number and input_customers) for search/filter values. <br> 
 ![yunio-powerapps-model-driven-app](/img/contents/yunio/yunio_powerapps_modeldriven_app.png){:class="img-responsive"} 
 4. Add the previously created yunIO custom connectors containing the MAKT service, the CSKT service and the CustomerGet service. <br>
-![yunio-powerapps-add-datasources](/img/contents/yunio/C:\Source\kb.theobald-software.github.io\img\contents\yunio\yunio_powerapps_yunio_datasources.png){:class="img-responsive" width="800px"} 
-5. Customize the fields for populating the dropdown boxes with SAP values, see the examples below. 
+![yunio-powerapps-add-datasources](/img/contents/yunio/yunio_powerapps_yunio_datasources.png){:class="img-responsive" width="800px"} 
+5. Customize the fields for populating the drop down controles with SAP values, see the examples below. 
 
 #### Example 1: Populating a Dropdown Box with SAP Table Data without a Search Filter
 
-The first example queries SAP table data for table CSKT (Cost Center Texts). The dropdown box is populated without any search filtering.
+The first example queries SAP table data for table CSKT (Cost Center Texts). The drop down control is populated without any search filtering.
 1. Use the following code in the *OnSelect* box of the dropdown control in the advanced settings: 
 ````
 ClearCollect(SAPData,yunIO_1.ReadCSKT());
 ```
 With *ClearCollect* a collection with a name of your choice (here *SAPData*) is filled with data from the external data source.
-The results are displayed when unfolding the dropdown box.    
-2. Use the *Concatenate* function in field Items to concatenate and display more than one table column in the dropdown box. 
-In the *Value* box *Result* is displayed, thats the result of the SAP table query stored in the collection variable *SAPData*.
+The results are displayed when unfolding the drop down control.    
+2. Use the *Concatenate* function in field Items to concatenate and display more than one table column in the drop down control. 
+The result of the SAP table query, stored in the collection variable *SAPData*, is displayed in the *Value* box as *Result*.
 In this example the fields KOSTL (cost center) and LTEXT (cost center description) are concatenated and displayed, separated by a space. Other column separators are possible.
 ````
 Concatenate(SAPData.KOSTL," ",SAPData.LTEXT)
 ```
-![yunio-powerapps-display-cost-centers](/img/contents/yunio/C:\Source\kb.theobald-software.github.io\img\contents\yunio\yunio_powerapps_display_costcenters.png){:class="img-responsive" width="800px"} 
+![yunio-powerapps-display-cost-centers](/img/contents/yunio/yunio_powerapps_display_costcenters.png){:class="img-responsive" width="800px"} 
 
 {: .box-tip }
-**Tip:** You can display a quick preview in the Power Apps studio by clicking Alt and the dropdown box.  
+**Tip:** You can display a quick preview in the Power Apps studio by clicking **[Alt] + the drop down control**.  
 
 #### Example 2: Populating a Dropdown Box with SAP Table Data using a Search Filter
 The second example queries SAP table data for table MAKT (Material Decriptions). 
@@ -92,18 +90,20 @@ ClearCollect(SAPResult,yunIO.MAKTService({whereClause:Concatenate("SPRAS = 'EN' 
 ```
 With *ClearCollect* a collection with a name of your choice (here *SAPResult*) is filled with data from the external data source.
 The Where Clause points to the input field *input_sap_material_number* (configured as Text).    
-2. Use the *Concatenate* function in field Items to concatenate and display more than one table column in the dropdown box. 
-In the *Value* box *Result* is displayed, thats the result of the SAP table query stored in the collection variable *SAPResult*.
+2. Use the *Concatenate* function in field Items to concatenate and display more than one table column in the drop down control. 
+The result of the SAP table query, stored in the collection variable *SAPResult*, is displayed in the *Value* box as *Result*.
 In this example the fields MATNR (material number) and MAKTX (material description are concatenated and displayed, separated by a space. Other column separators are possible.
 ```
 Concatenate(SAPResult.MATNR," ",SAPResult.MAKTX)  
 ```
-![yunio-powerapps-search-materials](/img/contents/yunio/C:\Source\kb.theobald-software.github.io\img\contents\yunio\yunio_powerapps_search_materials.png){:class="img-responsive" width="800px"} 
+![yunio-powerapps-search-materials](/img/contents/yunio/yunio_powerapps_search_materials.png){:class="img-responsive" width="800px"} 
 
-**Tip:** You can also use the OnChange field of the text input box for the ClearCollect statement. this has the advantage that the Dropdown Box is populated immediately when the search text is entered. 
+{: .box-tip }
+**Tip:**  You can also use the *OnChange* field of the text input box for the *ClearCollect* statement. 
+This has the advantage that the drop down control is populated while the search text is entered. 
 
 #### Example 3: Populating a Dropdown Box with SAP Data returned from a Function Module Call
-The third example calls the SAP function module SD_RFC_CUSTOMER_GET using an input parameter to display the table output (table CUSTOMER_T) in the dropdown box. The input parameter is passed to 
+The third example calls the SAP function module SD_RFC_CUSTOMER_GET using an input parameter to display the table output (table CUSTOMER_T) in the drop down control. The input parameter is passed to 
 the function by a separate text box. In this example the text box enables searching for a customer name (field NAME1).
 1. Use the following code in the *OnSelect* box of the dropdown control in the advanced settings:
 ```
@@ -111,17 +111,16 @@ ClearCollect(CustomerGetResult,yunIO_2.postCustomerGet({NAME1:input_customer_nam
 ```
 With *ClearCollect* a collection with a name of your choice (her *CustomerGetResult*) is filled with data from the external data source.
 The input parameter NAME1 points to the text input field *input_customer_name*. There is a reference to the output table CUSTOMER_T at the end of the statement, which allows to select the output fields of that table later on.  
-2. Use the *Concatenate* function in field Items to concatenate and display more then one table column in the dropdown box. 
-In the *Value* box *Result* is displayed, thats the result of the SAP function call stored in the collection variable *CustomerGetResult*.
+2. Use the *Concatenate* function in field Items to concatenate and display more then one table column in the drop down control. 
+The result of the SAP table query, stored in the collection variable *CustomerGetResult*, is displayed in the *Value* box as *Result*.
 In this example fields NAME1 (customer name) and KUNNR (customer number) are concatenated and displayed, separated wby a space. Other column separators are possible.
 ````
 Concatenate(CustomerGetResult.NAME1," ",CustomerGetResult.KUNNR)
 ```
-![yunio-powerapps-search-customers](/img/contents/yunio/C:\Source\kb.theobald-software.github.io\img\contents\yunio\yunio_powerapps_search_customers.png){:class="img-responsive" width="800px"} 
+![yunio-powerapps-search-customers](/img/contents/yunio/yunio_powerapps_search_customers.png){:class="img-responsive" width="800px"} 
 
 ******
 
 #### Related Links
-- [Web Version of the Swagger Inspector](https://inspector.swagger.io/builder)
-- [Swagger Inspector Documentation](https://swagger.io/docs/swagger-inspector/how-to-use-swagger-inspector/)
+- [Microsoft Documentation: Drop down control](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/controls/control-drop-down)
 - [yunIO Help: How to Run a Service](https://help.theobald-software.com/en/yunio#how-to-run-a-service)
