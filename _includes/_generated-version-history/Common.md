@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.17.9 [L]|2022-03-14|General|Refactoring for the certificate pinning and TLS error handling interfaces|
 |2.17.8 [L]|2022-02-25|WPF|Fix for about window to display server or cluster info correcly according to the license|
 |2.17.7 [L]|2022-02-09|WPF|Added SnapsToDevicePixels=true to Style|
 |2.17.6 [M]|2022-02-02|WPF|Fix for ProgressDialog error handling|
