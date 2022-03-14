@@ -11,7 +11,7 @@ Power Apps is a cloud-based platform to build custom business applications based
 For more Information on Power Apps, see [Microsoft Power Apps Documentation](https://docs.microsoft.com/en-us/powerapps/).
 
 ### About 
-The following 3 examples for SAP interaction with drop down controls in Power Apps are documented:
+The following 3 examples for SAP interaction with drop down controls in Power Apps are documented in this article:
 - Populating a drop down control with SAP table data without a search filter.
 - Populating a drop down control with SAP table data using a search filter.
 - Populating a drop down control with SAP data returned from a function module call. <!--- The input parameter\ search filter is provided by a separate input box.  -->
@@ -64,7 +64,7 @@ After a connector is successfully tested, it can be used as a data source in Pow
 
 The first example queries SAP table data for table CSKT (Cost Center Texts). The drop down control is populated without any search filtering.
 1. Use the following code in the *OnSelect* box of the dropdown control in the advanced settings: 
-````
+```
 ClearCollect(SAPData,yunIO_1.ReadCSKT());
 ```
 With *ClearCollect* a collection with a name of your choice (here *SAPData*) is filled with data from the external data source.
@@ -72,7 +72,7 @@ The results are displayed when unfolding the drop down control.
 2. Use the *Concatenate* function in the field *Items* to concatenate and display more than one table column in the drop down control. 
 The result of the SAP table query, stored in the collection variable *SAPData*, is displayed in the *Value* box as *Result*.
 In this example the fields KOSTL (cost center) and LTEXT (cost center description) are concatenated and displayed, separated by a space. Other column separators are possible.
-````
+```
 Concatenate(SAPData.KOSTL," ",SAPData.LTEXT)
 ```
 ![yunio-powerapps-display-cost-centers](/img/contents/yunio/yunio_powerapps_display_costcenters.png){:class="img-responsive" width="800px"} 
@@ -114,7 +114,7 @@ The input parameter NAME1 points to the text input control *input_customer_name*
 2. Use the *Concatenate* function in the field *Items* to concatenate and display more then one table column in the drop down control. 
 The result of the SAP table query, stored in the collection variable *CustomerGetResult*, is displayed in the *Value* box as *Result*.
 In this example fields NAME1 (customer name) and KUNNR (customer number) are concatenated and displayed, separated by a space. Other column separators are possible.
-````
+```
 Concatenate(CustomerGetResult.NAME1," ",CustomerGetResult.KUNNR)
 ```
 ![yunio-powerapps-search-customers](/img/contents/yunio/yunio_powerapps_search_customers.png){:class="img-responsive" width="800px"} 
