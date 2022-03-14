@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|3.4.4 [L]|2022-03-14|General|Usage of the new certificate pinning and TLS error handling interface|
 |3.4.3 [M]|2022-02-24|General|Improvements for designer authentication|
 |3.4.2 [L]|2022-02-21|General|Fix for some errors not being communicated to the caller.|
 |3.4.1 [L]|2022-02-16|General|KeepAlive support for connection using the new authentication.|
