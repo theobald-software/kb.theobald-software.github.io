@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|[5.4.17 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-5.4.17.html)|2022-03-15|Designer|Fix for the destination settings dialog, which was not correctly loading existing settings. Fix for an issue in the run window, where long running extraction involving a SQL destination would crash the designer.([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-5.4.17.html))|
 |5.4.16 [L]|2022-03-14|General|TLS errors when opening a Postgres connection are now more descriptive.|
 |5.4.15 [L]|2022-03-10|General|Fixed occasional crashes in cached Cube and Bapi extractions. These Extraction types can contain empty cells, even in numeric columns. The cache did not handle this case and tried parse the empty string a a number. Added special cases to the cache reader.|
 |[5.4.14 [M]](https://kb.theobald-software.com/release-notes/XtractUniversal-5.4.14.html)|2022-03-10|Destinations|Fix for Snowflake destination transaction control([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-5.4.14.html))|
