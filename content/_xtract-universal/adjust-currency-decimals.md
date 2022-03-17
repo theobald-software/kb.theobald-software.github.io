@@ -20,7 +20,7 @@ This description serves as an example procedure for reference fields that do not
 - The use of left outer joins in the Table component by the custom function module Z_THEO_READ_TABLE in version 2.x or higher.
 - SAP Authority object for the *Adjust Currency Decimals* settings: *S_TABU_NAM	ACTVT=03; TABLE=TCURX*
 
-### Main Part
+### Adjust Currency Decimals Procedure
 
 1. Performing the table look-up on the standard EKPO table and selecting appropriate fields, e.g. EKPO~NETPR (Net Order Value in PO Currency).
 ![EKPO Table Look-up](/img/contents/xu/adjust-currency-decimals/ekpo-table-look-up.png){:class="img-responsive"}
@@ -38,6 +38,24 @@ This description serves as an example procedure for reference fields that do not
 
 {: .box-note }
 **Note:** The decimal places of the field *[NETPR]* in the target destination Microsoft SQL Server is defined exemplarily as follows *NUMERIC(15,4)*.
+
+### Details Error Message
+
+>Cannot initialize currency conversion because the reference field for field 'NETPR' (Reference field: 'WAERS', Reference table: 'EKKO') was not found
+
+System.InvalidOperationException: Cannot initialize currency conversion because the reference field for field 'NETPR' (Reference field: 'WAERS', Reference table: 'EKKO') was not found
+   at Theobald.Extractors.Common.CurrencyConverter.Create[T](R3Connection connection, IList`1 fields, Predicate`1 shouldConvert, Func`2 getCurrencyKeyFieldIndex, LoggerBase logger)
+   at Theobald.Extractors.Table.TheoReadTableExtractor.InitializeCurrencyConversion()
+   at Theobald.Extractors.Table.TheoReadTableExtractor.Run(Action`1 processPackage, CancellationToken cancellationToken)
+   at Theobald.Extractors.Common.ExtractorBase`1.Run(Action`1 processResult, LoggerBase logger, CancellationToken cancellationToken)
+   at Theobald.Extractors.Common.ExtractorBase`1.Run(Action`1 processResult, LoggerBase logger)
+   at Theobald.Extractors.Table.TableExtractionDefinition.RunPreview(R3Connection connection, LoggerBase loggerBase)
+   at System.Threading.Tasks.Task`1.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Theobald.Extractors.Table.Gui.TableMainControl.<LoadLivePreviewAsync>d__14.MoveNext()
 
 ******
 
