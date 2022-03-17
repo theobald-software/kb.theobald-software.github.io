@@ -15,6 +15,9 @@ This article shows how to use the integration type *Transaction* in yunIO.<br>
 The following example application uses transactions to create new equipment in SAP.
 For more information on creating equipment, see [SAP Help: Creating a Piece of Equipment](https://help.sap.com/viewer/f0e0dd7850e64947aa66a647f8d3af09/6.18.latest/en-US/bc78bb53707db44ce10000000a174cb4.html).
 
+{: .box-note }
+**Note:** The transaction feature only works with SAP dialog users.
+
 ### Prerequisites
 
 1. Log off the SAP GUI.<br>

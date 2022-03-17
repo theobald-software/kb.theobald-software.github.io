@@ -11,14 +11,14 @@ As of Xtract Universal Version 4.26.1, the command line tool *xu-config.exe* is 
 **Note:** This tool is **EXPERIMENTAL** and still in development. Beware of bugs and breaking changes! It's currently limited to the extraction types [Table](https://help.theobald-software.com/en/xtract-universal/table) and [DeltaQ](https://help.theobald-software.com/en/xtract-universal/datasource-deltaq).
 
 ### Creating a single Table extraction using Command Prompt
-1. Start the Command Prompt application (1) with admin-user rights (2).
+1. Start the Command Prompt application (1) with admin-user rights (2). 
 ![cmd-prompt](/img/contents/cmd_prompt.png){:class="img-responsive"}
-2. Navigation and selection of the *xu-config.exe* command line tool.
+2. Navigate and select the *xu-config.exe* command line tool. 
 ![administrator-command-prompt-xu-config](/img/contents/administrator-command-prompt-xu-config.png){:class="img-responsive"}
 3. Input of a [defined SAP Connection, Destination](https://help.theobald-software.com/en/xtract-universal/advanced-techniques/backup-and-migration#configuration-files) & SAP table object for the parameter \<source\>, \<destination\>, \<table\>. The names of the parameters are not case sensitive. <br>
 `C:\Program Files\XtractUniversal>xu-config.exe --extraction ec5 sqlserver2019 --table TCURR`
-4. Execution of the *xu-config* by confirming the input.
-5. Checking the generated table extraction in the Xtract Universal Designer or in the following directory: <br>`C:\Program Files\XtractUniversal\config\extractions`
+4. Execute the *xu-config* by confirming the input. The xu-config and the XU service must run under the same account.
+5. Check the generated table extraction in the Xtract Universal Designer or in the following directory: <br>`C:\Program Files\XtractUniversal\config\extractions`
 ![xu-config-xu-designer-gui](/img/contents/xu-config-xu-designer-gui.png){:class="img-responsive"} 
 6. Use of all known functionalities e.g., filters, runtime parameters, execution, scheduling of extraction.
 

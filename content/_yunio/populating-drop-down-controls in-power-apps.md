@@ -33,7 +33,7 @@ Select all fields in the table *CUSTOMER_T* for the output.<br>
 For more information on how to create services, see [Online Help: Creating a Service](https://help.theobald-software.com/en/yunio/getting-started#creating-a-service).
 
 {: .box-note }
-**Note:**  In PowerApps every data source is limited to 500 items. Therefore, it is recommended to pre-filter requests to a manageable amount of data e.g., by using a row limit in the yunIO service. 
+**Note:**  In Power Apps every data source is limited to 500 items. Therefore, it is recommended to pre-filter requests to a manageable amount of data e.g., by using a row limit in the yunIO service. 
 
 {: .box-tip }
 **Tip:** It is recommended to test a yunIO service in a REST client before integrating it with a Micrososft Power Platform, see [Running a yunIO Service in Swagger Inspector](https://kb.theobald-software.com/yunio/running-a-yunio-service-in-swagger-inspector) or [Running a yunIO Service in Postman](https://kb.theobald-software.com/yunio/running-a-yunio-service-in-postman). 
@@ -98,9 +98,18 @@ Concatenate(SAPResult.MATNR," ",SAPResult.MAKTX)
 ```
 ![yunio-powerapps-search-materials](/img/contents/yunio/yunio_powerapps_search_materials.png){:class="img-responsive" width="800px"} 
 
+
 {: .box-tip }
 **Tip:**  You can also use the *OnChange* field of the text input control for the *ClearCollect* statement. 
 This has the advantage that the drop down control is populated while the search text is entered. 
+
+**Ignoring Leading Zeroes:**<br>
+To ignore leading zeroes when using the search filter for MAKT, use the following code for the *ClearCollect* statement:
+```
+ClearCollect(SAPResult;yunIO.MAKTService({whereClause:Concatenate("SPRAS = 'DE' AND ( MATNR LIKE '";Substitute(input_sap_material_number.Text;"*";"%");"' OR MAKTX LIKE '";Substitute(input_sap_material_number.Text;"*";"%");"' )")}));;
+If(CountRows(SAPResult)=1;Set(varinput_sap_material_number;false)
+
+```
 
 #### Example 3: Populating a Drop Down Control with SAP Data returned from a Function Module Call
 The third example calls the SAP function module SD_RFC_CUSTOMER_GET using an input parameter to display the table output (table CUSTOMER_T) in the drop down control. The input parameter is passed to 
