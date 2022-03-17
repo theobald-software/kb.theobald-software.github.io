@@ -1,6 +1,7 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
-|1.2.5 [H]|2022-03-16|Runtime|Security fix: "User is allowed to log on" is also checked when running services now|
+|1.3.0 [M]|2022-03-17|Designer|Dynamic page load, fixes for settings, fix for deleting user|
+|1.2.5 [H]|2022-03-16|Runtime|Security fix: "User is allowed to log in" is also checked when running services now|
 |1.2.4 [M]|2022-03-10|Designer|Improvements for entering SAP password & console logging|
 |1.2.3 [L]|2022-03-10|Designer|RPC refactoring (should not change behaviour)|
 |1.2.2 [M]|2022-03-10|Designer|Improvements for texts and anonymous access checkbox|
