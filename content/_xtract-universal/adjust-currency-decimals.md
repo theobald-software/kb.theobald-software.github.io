@@ -9,7 +9,11 @@ This article describes how to specified the correct references to currency/unit 
 
 For more information to choose the currency/unit field from the target structure, see [SAP Help: Amount and Quantity Fields Must Reference Currencies and Units](https://help.sap.com/doc/a7b666550852bd7de10000000a44538d/700_SFIN20%20006/en-US/f77ecb53f0f67314e10000000a174cb4.html) and the below mentioned Related Links.
 
-In the following example, the SAP standard field EKPO~NETPR (Net Order Value in PO Currency) of the Data Element Attrributes is referenced to determine the correct decimal places based on the currency unit of measure EKKO~WAERS (Currency Key).
+In the following example, the SAP standard field EKPO~NETPR (Net Order Value in PO Currency) of the Data Element Attrributes is referenced to determine the correct decimal places 
+
+based on the currency unit of measure EKKO~WAERS (Currency Key).
+
+### Data Element Attribute - Field EKPO~NETPR
 
 ![Data Element Attributes](/img/contents/xu/adjust-currency-decimals/data-element-attribute-specification.png){:class="img-responsive"}
 
@@ -28,6 +32,7 @@ This description serves as an example procedure for reference fields that do not
 ![EKPO Table Look-up](/img/contents/xu/adjust-currency-decimals/enable-adjust-currency-decimals.png){:class="img-responsive"}
 3. Execute the *Load Live Preview*. (2)
 ![ERROR: Cannot-initialize-currency-conversion](/img/contents/xu/adjust-currency-decimals/error-cannot-initialize-currency-conversion.png){:class="img-responsive"}
+>Cannot initialize currency conversion because the reference field for field 'NETPR' (Reference field: 'WAERS', Reference table: 'EKKO') was not found.
 4. Look-up the requested Table EKKO and select the reference field EKKO-WAERS. (3)
 ![Reference Field EKKO-WAERS](/img/contents/xu/adjust-currency-decimals/reference-field-ekko-waers.png){:class="img-responsive"} 
 5. Create a left outer join condition manually. (4)(5)
@@ -38,24 +43,6 @@ This description serves as an example procedure for reference fields that do not
 
 {: .box-note }
 **Note:** The decimal places of the field *[NETPR]* in the target destination Microsoft SQL Server is defined exemplarily as follows *NUMERIC(15,4)*.
-
-### Details Error Message
-
->Cannot initialize currency conversion because the reference field for field 'NETPR' (Reference field: 'WAERS', Reference table: 'EKKO') was not found
-
-System.InvalidOperationException: Cannot initialize currency conversion because the reference field for field 'NETPR' (Reference field: 'WAERS', Reference table: 'EKKO') was not found
-   at Theobald.Extractors.Common.CurrencyConverter.Create[T](R3Connection connection, IList`1 fields, Predicate`1 shouldConvert, Func`2 getCurrencyKeyFieldIndex, LoggerBase logger)
-   at Theobald.Extractors.Table.TheoReadTableExtractor.InitializeCurrencyConversion()
-   at Theobald.Extractors.Table.TheoReadTableExtractor.Run(Action`1 processPackage, CancellationToken cancellationToken)
-   at Theobald.Extractors.Common.ExtractorBase`1.Run(Action`1 processResult, LoggerBase logger, CancellationToken cancellationToken)
-   at Theobald.Extractors.Common.ExtractorBase`1.Run(Action`1 processResult, LoggerBase logger)
-   at Theobald.Extractors.Table.TableExtractionDefinition.RunPreview(R3Connection connection, LoggerBase loggerBase)
-   at System.Threading.Tasks.Task`1.InnerInvoke()
-   at System.Threading.Tasks.Task.Execute()
---- End of stack trace from previous location where exception was thrown ---
-   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
-   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   at Theobald.Extractors.Table.Gui.TableMainControl.<LoadLivePreviewAsync>d__14.MoveNext()
 
 ******
 
