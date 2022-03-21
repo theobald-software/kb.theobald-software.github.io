@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.3.2 [L]|2022-03-16|BAPI|Fixed an issue where runtime parameters inside of table rows were not applied correctly (Bug introduced in 5.3.0)|
 |5.3.1 [M]|2022-03-08|General|Fixed an issue where system clock changes could cause errors |
 |5.3.0 [M]|2022-02-17|BAPI|Reworked BAPI component|
 |5.2.0 [M]|2022-02-15|General|Added support for certificate SSO and reworked source details GUI|
