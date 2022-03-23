@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|3.4.6 [L]|2022-03-23|General|Replaced Swabian HTTP status reason phrases with English ones|
 |3.4.5 [L]|2022-03-16|General|Locked account is also considered a general authentication problem now|
 |3.4.4 [L]|2022-03-14|General|Usage of the new certificate pinning and TLS error handling interface|
 |3.4.3 [M]|2022-02-24|General|Improvements for designer authentication|
