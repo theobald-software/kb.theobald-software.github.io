@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|[5.4.20 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-5.4.20.html)|2022-03-25|Designer|Fix for log window's date filters([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-5.4.20.html))|
 |5.4.19 [L]|2022-03-23|General|Added upload check script in order to confirm if the setup file has the expected version|
 |5.4.18 [L]|2022-03-16|BAPI|Fixed an issue where runtime parameters inside of table rows were not applied correctly (Bug introduced in 5.4.0)|
 |[5.4.17 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-5.4.17.html)|2022-03-15|Designer|Fix for the destination settings dialog, which was not correctly loading existing settings. Fix for an issue in the run window, where long running extraction involving a SQL destination would crash the designer.([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-5.4.17.html))|
