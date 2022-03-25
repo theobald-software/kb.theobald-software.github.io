@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.14.17 [L]|2022-03-25|General|Introduced Interface IR3Connection to make consumers of R3Connection testable.|
 |6.14.16 [L]|2021-12-28|General|Fix for tracing null values|
 |6.14.15 [L]|2021-12-03|General|Derived classes of ERPException are Serializable now|
 |6.14.14 [L]|2021-09-22|Idoc|Fix for loading schema documentation|
