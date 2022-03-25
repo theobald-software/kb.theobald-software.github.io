@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.10.2 [L]|2022-03-25|General|Added upload check script in order to confirm if the setup file has the expected version|
 |6.10.1 [L]|2022-03-16|BAPI|Fixed an issue where runtime parameters inside of table rows were not applied correctly (Bug introduced in 6.10.0)|
 |6.10.0 [M]|2022-02-17|BAPI|Reworked BAPI component|
 |6.9.4 [M]|2022-01-18|General|Support for DLL licenses will be removed in June 2022. Please download your JSON licenses from my.theobald-software.com.|
