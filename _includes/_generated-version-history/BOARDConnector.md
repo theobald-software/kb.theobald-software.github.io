@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.3.3 [L]|2022-03-25|General|Added upload check script in order to confirm if the setup file has the expected version|
 |5.3.2 [L]|2022-03-16|BAPI|Fixed an issue where runtime parameters inside of table rows were not applied correctly (Bug introduced in 5.3.0)|
 |5.3.1 [M]|2022-03-08|General|Fixed an issue where system clock changes could cause errors |
 |5.3.0 [M]|2022-02-17|BAPI|Reworked BAPI component|
