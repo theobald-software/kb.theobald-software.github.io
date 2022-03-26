@@ -29,7 +29,7 @@ When integrating services from a local yunIO installation with a cloud hosted pl
 You decide which gateway solution you want to use.<br> 
 If you choose the **Microsoft On-premises data gateway**, install and configure the gateway before proceeding to the next steps.
  
-### Configuring a yunIO custom connector in Power Automate
+### Configuring a yunIO Custom Connector in Power Automate
 
 1. Open the section **Data > Custom Connectors** in Power Automate and click on **+ New custom connector**.
 2. Click on **Import an OpenAPI file** and give the connector a name of your choice. Select the service definition from [Prerequisites in yunIO](#prerequisites-in-yunio) from your harddrive and click **Continue**. 
@@ -51,6 +51,10 @@ This means that the SAP user name and password used for the SAP connection, must
 
 {: .box-note }
 **Note:** Before the service can be tested in the **Test** tab, the custom connector must be published with **Create connector**. 
+
+{: .box-tip }
+**Tip:** When testing a new custom connector, you can switch to **Swagger Editor** mode and paste test sets directly from Swagger Editor / Swagger Inspector.
+For more information on how to test yunIO services in Swagger Inspector, refer to the knowledge base article [Running a yunIO Service in Swagger Inspector](https://kb.theobald-software.com/yunio/running-a-yunio-service-in-swagger-inspector).
 
 ### Testing the Service
 
