@@ -10,6 +10,9 @@ As of Xtract Universal Version 4.26.1, the command line tool *xu-config.exe* is 
 {: .box-note }
 **Note:** This tool is **EXPERIMENTAL** and still in development. Beware of bugs and breaking changes! It's currently limited to the extraction types [Table](https://help.theobald-software.com/en/xtract-universal/table) and [DeltaQ](https://help.theobald-software.com/en/xtract-universal/datasource-deltaq).
 
+{: .box-note }
+**Note:** Since Xtract Universal 5.0.0, xu-config.exe needs to be executed under the same Windows AD account as the [Xtract Universal service](https://help.theobald-software.com/en/xtract-universal/advanced-techniques/service-account) is running.
+
 ### Creating a single Table extraction using Command Prompt
 1. Start the Command Prompt application (1) with admin-user rights (2). 
 ![cmd-prompt](/img/contents/cmd_prompt.png){:class="img-responsive"}
