@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.4.22 [L]|2022-03-28|Designer|About window was refactored|
 |[5.4.21 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-5.4.21.html)|2022-03-28|Designer|Improvement on change source and change destination windows' click flows.([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-5.4.21.html))|
 |[5.4.20 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-5.4.20.html)|2022-03-25|Designer|Fix for log window's date filters([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-5.4.20.html))|
 |5.4.19 [L]|2022-03-23|General|Added upload check script in order to confirm if the setup file has the expected version|
