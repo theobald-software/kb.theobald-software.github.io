@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.10.3 [L]|2022-03-28|General|About window was refactored|
 |6.10.2 [L]|2022-03-25|General|Added upload check script in order to confirm if the setup file has the expected version|
 |6.10.1 [L]|2022-03-16|BAPI|Fixed an issue where runtime parameters inside of table rows were not applied correctly (Bug introduced in 6.10.0)|
 |6.10.0 [M]|2022-02-17|BAPI|Reworked BAPI component|
