@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.14.2 [L]|2022-03-28|Designer|About window was refactored|
 |1.14.1 [L]|2022-03-25|General|Added upload check script in order to confirm if the setup file has the expected version|
 |1.14.0 [M]|2022-02-17|BAPI|General Availability (end of beta)|
 |1.13.1 [M]|2021-11-17|BAPI|Fix for data types when using workflow tables as input|
