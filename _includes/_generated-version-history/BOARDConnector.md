@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.4.0 [M]|2022-03-31|Table Join|Removed deprecated TableJoin component (JOINS are still supported by the Table component)|
 |5.3.4 [L]|2022-03-28|Designer|About window was refactored|
 |5.3.3 [L]|2022-03-25|General|Added upload check script in order to confirm if the setup file has the expected version|
 |5.3.2 [L]|2022-03-16|BAPI|Fixed an issue where runtime parameters inside of table rows were not applied correctly (Bug introduced in 5.3.0)|
