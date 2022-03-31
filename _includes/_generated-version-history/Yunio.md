@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.5.0 [M]|2022-03-31|Designer|Function: Aggregate parameter controls for all table/structure members|
 |1.4.0 [M]|2022-03-25|Designer|Added cache modification check for static files|
 |1.3.3 [L]|2022-03-25|General|Added upload check script in order to confirm if the published setup file has the expected version|
 |1.3.2 [M]|2022-03-22|Designer|Fixed logos, CSS refactoring, completely removed 'Chota.css' library|
