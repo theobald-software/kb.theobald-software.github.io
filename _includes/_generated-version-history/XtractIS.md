@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.11.1 [M]|2022-04-01|BAPI|Fixed a bug where some BAPI settings might not be converted correctly when updating from versions prior to 6.10.0|
 |6.11.0 [M]|2022-03-31|Table Join|Removed deprecated TableJoin component (JOINS are still supported by the Table component)|
 |6.10.3 [L]|2022-03-28|General|About window was refactored|
 |6.10.2 [L]|2022-03-25|General|Added upload check script in order to confirm if the setup file has the expected version|
