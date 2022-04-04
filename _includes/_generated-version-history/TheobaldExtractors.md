@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.27.0 [M]|2022-04-04|BW Cube|Updates to the BWCube component for increased stability, performance and compatibility.|
 |1.26.1 [L]|2022-02-09|Report|Fixed a bug where the report lookup would throw an error when the new version of RFC_READ_TABLE was used.|
 |1.26.0 [L]|2022-02-08|Table|Updated Z_THEO_READ_TABLE to version 2.11. Background job timeout can now be set manually in extraction settings.|
 |[1.25.1 [L]](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.25.1.html)|2022-02-03|Table|Fixed a bug where metadata of views was not retrieved correctly.([Release note](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.25.1.html))|
