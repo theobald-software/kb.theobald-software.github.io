@@ -6,8 +6,6 @@ permalink: /newcube/
 weight: 6
 ---
 
-**THIS IS A NON PRODUCTIVE PAGE FOR INTERNAL USAGE BY THEOBALD SOFTWARE ONLY**
-
 
 ### Why did we rework the BWCube component?
 - Internal code rework so as to allow better maintenance and adding additional features in the future
