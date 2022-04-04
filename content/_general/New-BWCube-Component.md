@@ -49,25 +49,8 @@ Also, when opening the extractions in the XU Designer, the extraction window is 
 
 
 ### No free hand MDX - things that worked in free hand MDX but currently won't work in the new release
-- Swapping of Column and Rows axes possible
-Measures are always displayed on columns, dimensions are always displayed on rows. 
-
-This is temporary and will be implemented later!
-
-- No hierarchical display of dimensions possible
-
-This may be temporary only.
-
-```
-SELECT    { [0EFUZM0P10X7PS3AZVMOPPOFE].[0EFUZM0P10X7PS3AZVMOPPUQY] }
-ON COLUMNS,
-     NON EMPTY
- DESCENDANTS( [0GL_ACCOUNT                   INT].[LEVEL02])
-
-ON ROWS
-FROM
-  [0FIGL_C10/TEST_HIERARCHY_01]
-  ```
+- Swapping of Column and Rows axes. Measures are always displayed on columns, dimensions are always displayed on rows. This is temporary and will be implemented later!
+- No hierarchical display of dimensions using the DESCENDANTS function, e.g.   ```DESCENDANTS( [0GL_ACCOUNT                   INT].[LEVEL02])```  This may be temporary only.
 
 
 
@@ -97,7 +80,7 @@ New feature: Limit the number of extracted rows. Only available in MDX mode. Not
 ![RowLimit](/img/contents/NewBWCube_RowLimit.png)
 
 #### Features no longer available
-![RowLimit](/img/contents/NewBWCube_GoneSettings.png)
+![GoneSettings](/img/contents/NewBWCube_GoneSettings.png)
 
 - MDX mode (gone for good)
 - BEx mode (gone for good)
@@ -110,71 +93,32 @@ New feature: Limit the number of extracted rows. Only available in MDX mode. Not
 BICS stands for Business Intelligence Consumer Service. It's the communication interface that SAP's own BI clients like Analysis for Office use, when querying BW data. It is SAP's native BI interface. The official interface for 3rd party tools for querying BW is called OLAP BAPI. This interface uses MDX as a query language. 
 
 Chances are that data extraction through BICS is faster than through MDX. This would currently be the main reason why you would be using BICS.
+The BICS mode is also meant as a replacement of the previous Bex 3.x mode.
 
 {: .box-note }
 **Note:**  BICS is currently running in beta mode. You may be stumbling over bugs or missing functionality. In this case, contact Theobald Software support. 
 
-### Open Issues
+### Currently known issues with BICS mode
 
 
-1. Conversion: Formatted Values
-2. Conversion: Use Description + TextAndCode --> Text --> Breaking!!
-3. //Manual Filter Exclude - > Different number of extraction records: New BWCube component has the correct value, though!
-4. Member Filter einen Level tiefer expandieren.
-~~5. Konvertiertes Slicing....~~
+- BICS only works when using the NW RFC protocol. Select this protocol in the SAP source connection setup **before** doing a metadata lookup in BICS mode.
+
+![BICS_UseNWRFC](/img/contents/NewBWCube_BICS_UseNWRFC.png)
+
+- Especially on newer BW systems, we may be faced with initial metadata lookup not fetching any metadata (empty window). In this case, run the BICS compatibility report below.
+- No Key columns, just Description columns are available for output.
+- Automatic Slicing may not work in all cases.
+
+### BICS Compatibility Report
+Run this report if the BICS mode does not display any metadata.
+Send the output of this report to the Theobald Software support team for further analysis.
+
+![BICS_CompatibilityReport](/img/contents/NewBWCube_BICSCompatibilityReport.png)
 
 
-#### BICS (Business Intelligence Consumer Interface)
-
-- SAP's native interface that is used by their own BI clients for connecting to SAP.
-- Is meant as a new feature as well as to replace Bex 3.x mode
-- Beta means: You may find a number of things that don't work as expected. Please report to TS Support team. Also, multiple breaking changes until final release are possible and likely.
-- BICS is still beta: Especially on newer BW systems, we may be faced with Lookup not fetching any metadata (empty window). In this case, record traces and report to TS Support team.
-- No Key columns, just Description columns
-- At Lookup: No asterisk(*) required
-- Can extract more InfoCubes than MDX, for example DSOs.
 
 
-#### Share with colleagues
-- "Load more members"- button
 
-- Description Texts have changed, no '_' and Umlaute
-new version:
-```
-CREATE TABLE [Y_BICS_DESCRIPTION_3_2022_02_02_11_14_06_009]
-(
-   [Buchungskreis] NATIONAL CHARACTER VARYING(255),
-   [Buchungskreis Schlüssel] NATIONAL CHARACTER VARYING(4),
-   [Buchungskreis Bezeichnung] NATIONAL CHARACTER VARYING(20),
-   [Menge in Basiseinh.] NUMERIC(15,6),
-   [Auftragsbestand] NUMERIC(15,3),
-   [Nettowert OA in StWg] NUMERIC(15,2),
-   [Anzahl der Belege] NUMERIC(15,3),
-   [Kosten in Statwährng] NUMERIC(15,2)
-);
-```
-
-converted from 5.x/MDX
-```
-CREATE TABLE [Z_BICS_DESCRIPTION]
-(
-   [Buchungskreis] NATIONAL CHARACTER VARYING(255),
-   [Land] NATIONAL CHARACTER VARYING(255),
-   [Werk] NATIONAL CHARACTER VARYING(255),
-   [Verk_ufergruppe] NATIONAL CHARACTER VARYING(255),
-   [Buchungskreis_Schl_ssel] NATIONAL CHARACTER VARYING(255),
-   [Buchungskreis_Bezeichnung] NATIONAL CHARACTER VARYING(255),
-   [Menge_in_Basiseinh_] NUMERIC(15,6),
-   [Auftragsbestand] NUMERIC(15,3),
-   [Nettowert_OA_in_StWg] NUMERIC(15,2),
-   [Anzahl_der_Belege] NUMERIC(15,3),
-   [Kosten_in_Statw_hrng] NUMERIC(15,2)
-);
-
-```   
-
-
-- Slicing Dimension: Performance improvements (1 million records, 12 minutes versus 20 minutes)
 
 
 
