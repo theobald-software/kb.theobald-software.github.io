@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|[5.6.0 [M]](https://kb.theobald-software.com/release-notes/XtractUniversal-5.6.0.html)|2022-04-04|BW Cube|New BWCube extractor (breaking)([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-5.6.0.html))|
 |5.5.0 [M]|2022-03-31|Table Join|Removed deprecated TableJoin component (JOINS are still supported by the Table component)|
 |5.4.22 [L]|2022-03-28|Designer|About window was refactored|
 |[5.4.21 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-5.4.21.html)|2022-03-28|Designer|Improvement on change source and change destination windows' click flows.([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-5.4.21.html))|
