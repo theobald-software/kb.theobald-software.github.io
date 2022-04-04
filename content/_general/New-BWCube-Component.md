@@ -2,7 +2,7 @@
 layout: page
 title: Useful information regarding the new BWCube component
 description: Useful information regarding the new BWCube component
-permalink: /newcube/
+permalink: /:collection/:path
 weight: 6
 ---
 
