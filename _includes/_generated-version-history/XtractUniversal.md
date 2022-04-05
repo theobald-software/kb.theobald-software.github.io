@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.6.1 [L]|2022-04-05|Destinations|Exasol destination: fixed support for INT8 columns|
 |[5.6.0 [M]](https://kb.theobald-software.com/release-notes/XtractUniversal-5.6.0.html)|2022-04-04|BW Cube|New BWCube extractor (breaking)([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-5.6.0.html))|
 |5.5.0 [M]|2022-03-31|Table Join|Removed deprecated TableJoin component (JOINS are still supported by the Table component)|
 |5.4.22 [L]|2022-03-28|Designer|About window was refactored|
