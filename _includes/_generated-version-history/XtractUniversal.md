@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.6.3 [L]|2022-04-11|ODP|Selections can now be parameterized with lists of strings|
 |5.6.2 [M]|2022-04-07|BW Cube|Now allowing extractions without measure selections in MDX mode. Added support for additional options in interval/complex BEx variable selections.|
 |5.6.1 [L]|2022-04-05|Destinations|Exasol destination: fixed support for INT8 columns & data provider update to version 7.1.4|
 |[5.6.0 [M]](https://kb.theobald-software.com/release-notes/XtractUniversal-5.6.0.html)|2022-04-04|BW Cube|New BWCube extractor (breaking)([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-5.6.0.html))|
