@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.28.0 [L]|2022-04-11|ODP|Selections can now be parameterized with lists of strings|
 |1.27.1 [L]|2022-04-07|BW Cube|Now allowing extractions without measure selections in MDX mode. Added support for additional options in interval/complex BEx variable selections.|
 |1.27.0 [M]|2022-04-04|BW Cube|Updates to the BWCube component for increased stability, performance and compatibility.|
 |1.26.1 [L]|2022-02-09|Report|Fixed a bug where the report lookup would throw an error when the new version of RFC_READ_TABLE was used.|
