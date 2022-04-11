@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.12.1 [M]|2022-04-11|BAPI|Fixed an issue where the component could not be edited when there are variables/parameters of type DateTime defined in the package|
 |[6.12.0 [M]](https://kb.theobald-software.com/release-notes/XtractIS-6.12.0.html)|2022-04-11|BAPI|Fixed two issues related to parameterization when upgrading from versions before 6.10.0([Release note](https://kb.theobald-software.com/release-notes/XtractIS-6.12.0.html))|
 |6.11.1 [M]|2022-04-01|BAPI|Fixed a bug where some BAPI settings might not be converted correctly when updating from versions prior to 6.10.0|
 |6.11.0 [M]|2022-03-31|Table Join|Removed deprecated TableJoin component (JOINS are still supported by the Table component)|
