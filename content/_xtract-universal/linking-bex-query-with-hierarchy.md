@@ -44,6 +44,7 @@ If the BW Hierarchy extraction is acts as primary data source, the "Null" node i
 <!---![Tableau_Relationship_with_Null_Node](/img/contents/Tableau_Relationship_with_Null_Node.png){:class="img-responsive"} -->
 <!---![Tableau_Relationship_without_Null_Node](/img/contents/Tableau_Relationship_without_Null_Node.png){:class="img-responsive"} -->
 
+*****
 #### Related Links
 - [How to Create Relationships in Tableau](https://help.tableau.com/current/pro/desktop/en-us/relate_tables.htm#create-a-relationship)
 - [Tutorial: Relationships in Tableau](https://www.tableau.com/learn/tutorials/on-demand/relationships)
