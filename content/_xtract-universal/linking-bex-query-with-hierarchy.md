@@ -20,7 +20,7 @@ Note that using *Text* as the column name style can result in column names that 
 4. Create a BW Hierarchy extraction as described in [Defining a Hierarchy Extraction](https://help.theobald-software.com/en/xtract-universal/bw-hierarchies/hierarchy-extraction-define). 
 <!--- ![XU-Tableau-Hierarchy](/img/contents/XU-Tableau-Hierarchy.png){:class="img-responsive"} -->
 5. Open the Extraction Settings of the Hierarchy and set **Representation** to *Natural*:
-![XU-Tableau-Hierarchy-Settings](/img/content/XU-Tableau-Hierarchy-Settings.png){:class="img-responsive"}
+![XU-Tableau-Hierarchy-Settings](/img/contents/XU-Tableau-Hierarchy-Settings.png){:class="img-responsive"}
 
 
 ### Creating a Relationship in Tableau
