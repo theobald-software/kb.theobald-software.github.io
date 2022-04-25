@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.29.0 [L]|2022-04-25|Table|Added graphical WHERE clause editor.|
 |1.28.1 [L]|2022-04-21|BW Cube|Fixed a bug where BW Cube Extractions would return broken data when used with Classic RFC library|
 |1.28.0 [L]|2022-04-11|ODP|Selections can now be parameterized with lists of strings|
 |1.27.1 [L]|2022-04-07|BW Cube|Now allowing extractions without measure selections in MDX mode. Added support for additional options in interval/complex BEx variable selections.|
