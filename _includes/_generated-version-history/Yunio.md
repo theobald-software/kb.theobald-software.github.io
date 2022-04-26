@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.5.4 [L]|2022-04-26|General|Improved dependencies resources (.NET 6.0)|
 |1.5.3 [L]|2022-04-22|General|Improved opening custom designer web page.|
 |[1.5.2 [L]](https://kb.theobald-software.com/release-notes/Yunio-1.5.2.html)|2022-04-21|Designer|Introduced progress dialog([Release note](https://kb.theobald-software.com/release-notes/Yunio-1.5.2.html))|
 |1.5.1 [L]|2022-03-31|Designer|Improved layout of transaction component and added support for several new controls|
