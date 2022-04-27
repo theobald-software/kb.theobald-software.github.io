@@ -1,6 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
-|1.29.1 [L]|2022-04-25|Table|Fixed a bug when switching from WHERE clause editor mode to text mode would cause an error.|
+|1.29.1 [L]|2022-04-25|Table|Fixed a bug where switching from WHERE clause editor mode to text mode would cause an error.|
 |1.29.0 [L]|2022-04-25|Table|Added graphical WHERE clause editor. Fixed a bug where Count Rows function didn't take scripted expressions into account.|
 |1.28.1 [L]|2022-04-21|BW Cube|Fixed a bug where BW Cube Extractions would return broken data when used with Classic RFC library|
 |1.28.0 [L]|2022-04-11|ODP|Selections can now be parameterized with lists of strings|
