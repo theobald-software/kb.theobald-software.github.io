@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.16.1 [L]|2022-04-27|ODP|Fixed a bug where the advanced settings button was disabled for providers that do not support deltas|
 |1.16.0 [L]|2022-04-25|Table|Added graphical where clause editor.|
 |1.15.1 [L]|2022-04-07|BW Cube|Now allowing extractions without measure selections in MDX mode. Added support for additional options in interval/complex BEx variable selections.|
 |1.15.0 [M]|2022-04-04|BW Cube|Updated BWCube component with multiple improvements regarding stability, performance and compatibility.|
