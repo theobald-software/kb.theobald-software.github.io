@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.5.5 [L]|2022-04-30|General|Option to enable .NET Runtime update over Windows Update (for Windows Server Editions).|
 |1.5.4 [L]|2022-04-26|General|Improved dependencies resources (.NET 6.0)|
 |1.5.3 [L]|2022-04-22|General|Improved opening custom designer web page.|
 |[1.5.2 [L]](https://kb.theobald-software.com/release-notes/Yunio-1.5.2.html)|2022-04-21|Designer|Introduced progress dialog([Release note](https://kb.theobald-software.com/release-notes/Yunio-1.5.2.html))|
