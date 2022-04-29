@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.29.3 [L]|2022-04-29|BW Cube|Cube legacy mode: fix for duplicate property column names|
 |1.29.2 [L]|2022-04-29|BW Cube|Fixed a bug that caused extractions with empty result sets to fail.|
 |1.29.1 [L]|2022-04-25|Table|Fixed a bug where switching from WHERE clause editor mode to text mode would cause an error.|
 |1.29.0 [L]|2022-04-25|Table|Added graphical WHERE clause editor. Fixed a bug where Count Rows function didn't take scripted expressions into account.|
