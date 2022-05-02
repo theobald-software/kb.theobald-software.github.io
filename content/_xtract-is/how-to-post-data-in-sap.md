@@ -46,7 +46,7 @@ For more information, see [Connection Manager](https://help.theobald-software.co
 3. Look up the function module Z_ECS_PRODUCT_CREATE_MULTI.<br>
 ![ssis-write-xtractis-fuba-01](/img/contents/xis/BAPI-table-input.png){:class="img-responsive" }
 4. Connect the source component to the Xtract BAPI component. <br>
-![ssis-write-xtractis-fuba-02](/img/contents/ssis-write-xtractis-fuba-02.png){:class="img-responsive" }
+![ssis-write-xtractis-fuba-02](/img/contents/xis/ssis-write-xtractis-fuba-02.png){:class="img-responsive" }
 5. Run the SSIS Package and check the results in SAP.<br>
 
 *****
