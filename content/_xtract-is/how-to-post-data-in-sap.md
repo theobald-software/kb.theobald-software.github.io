@@ -13,7 +13,7 @@ A table that contains the product information and is stored on an SQL Server is 
 ### SAP Function Module
 The SAP custom function module Z_ECS_PRODUCT_CREATE_MULTI has a table parameter *T_PRODUCTS* that can be used for input. <br>
 The table has the following structure:<br>
-![ssis-write-sap-01](/img/content/ssis-write-sap-01.png){:class="img-responsive" }
+![ssis-write-sap-01](/img/contents/ssis-write-sap-01.png){:class="img-responsive" }
 
 ### Input Table
 
@@ -34,7 +34,7 @@ CREATE TABLE [SAP Products] (
 ```
 
 The table has the following content:<br>
-![ssis-write-sql-01](/img/content/ssis-write-sql-01.png){:class="img-responsive" }
+![ssis-write-sql-01](/img/contents/ssis-write-sql-01.png){:class="img-responsive" }
 
 ### Set Up in SSIS
 
@@ -46,7 +46,7 @@ For more information, see [Connection Manager](https://help.theobald-software.co
 3. Look up the function module Z_ECS_PRODUCT_CREATE_MULTI.<br>
 ![ssis-write-xtractis-fuba-01](/img/contents/xis/BAPI-table-input.png){:class="img-responsive" }
 4. Connect the source component to the Xtract BAPI component. <br>
-![ssis-write-xtractis-fuba-02](/img/content/ssis-write-xtractis-fuba-02.png){:class="img-responsive" }
+![ssis-write-xtractis-fuba-02](/img/contents/ssis-write-xtractis-fuba-02.png){:class="img-responsive" }
 5. Run the SSIS Package and check the results in SAP.<br>
 
 *****
