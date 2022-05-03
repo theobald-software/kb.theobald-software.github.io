@@ -6,7 +6,8 @@ permalink: /:collection/:path
 weight: 20
 ---
 
-See the [Xtract Kernel Version History](./xtract-kernel-version-history) for changes related to core extraction logic.
+See the [Theobald Extractors Version History](./theobald-extractors-version-history) for changes related to core SAP integration logic.
+For changes related to the server, please also take a look at the [Theobald.Server Version History](./theobald-server-version-history).
 
 {% include version-history-header.md %}
 
