@@ -1,7 +1,7 @@
 ---
 layout: page
-title: YunIO Version History
-description: YunIO Version History
+title: yunIO Version History
+description: yunIO Version History
 permalink: /:collection/:path
 weight: 20
 ---
