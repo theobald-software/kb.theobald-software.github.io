@@ -6,7 +6,15 @@ permalink: /:collection/:path
 weight: 90
 ---
 
-See the [Xtract Kernel Version History](./xtract-kernel-version-history) for changes related to core extraction logic.
+Theobald Extractors contains core extraction & SAP integration logic and is used by the following products:
+* [BOARD Connector](./board-connector-version-history)
+* [Xtract for Alteryx](./xtract-for-alteryx-version-history)
+* [Xtract IS](./xtract-is-version-history)
+* [Xtract Universal](./xtract-universal-version-history)
+* [yunIO](./yunio-version-history)
+
+For communication with the SAP system, Theobald Extractors use [ERPConnect](./erpconnect-version-history).
+
 
 {% include version-history-header.md %}
 

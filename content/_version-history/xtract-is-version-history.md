@@ -6,7 +6,7 @@ permalink: /:collection/:path
 weight: 10
 ---
 
-See the [Xtract Kernel Version History](./xtract-kernel-version-history) for changes related to core extraction logic.
+See the [Theobald Extractors Version History](./theobald-extractors-version-history) and the [Xtract Kernel Version History](./xtract-kernel-version-history) for changes related to core extraction logic.
 
 {% include version-history-header.md %}
 

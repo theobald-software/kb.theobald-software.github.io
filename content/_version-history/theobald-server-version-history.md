@@ -6,7 +6,9 @@ permalink: /:collection/:path
 weight: 100
 ---
 
-See the [Xtract Kernel Version History](./xtract-kernel-version-history) for changes related to core extraction logic.
+Theobald Server contains the common server basis and is used by the following products:
+* [Xtract Universal](./xtract-universal-version-history)
+* [yunIO](./yunio-version-history)
 
 {% include version-history-header.md %}
 

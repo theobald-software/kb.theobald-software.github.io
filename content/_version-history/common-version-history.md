@@ -6,7 +6,7 @@ permalink: /:collection/:path
 weight: 120
 ---
 
-See the [Xtract Kernel Version History](./xtract-kernel-version-history) for changes related to core extraction logic.
+This is the common basis for all Theobald Software products. It contains low-level technical changes that typically not directly relevant to the users.
 
 {% include version-history-header.md %}
 
