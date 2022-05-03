@@ -1,7 +1,6 @@
 ---
-ref: xtract-universal-19
 layout: page
-title: Networking
+title: yunIO Networking Scenarios
 description: Data Flow between Service Caller and SAP
 product: xtract-universal
 parent: xtract-universal
