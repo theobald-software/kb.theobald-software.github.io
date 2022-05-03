@@ -13,7 +13,7 @@ Theobald Extractors contains core extraction & SAP integration logic and is used
 * [Xtract Universal](./xtract-universal-version-history)
 * [yunIO](./yunio-version-history)
 
-For communication with the SAP system, the Xtract Kernel uses [ERPConnect](./erpconnect-version-history).
+For communication with the SAP system, Theobald Extractors use [ERPConnect](./erpconnect-version-history).
 
 
 {% include version-history-header.md %}
