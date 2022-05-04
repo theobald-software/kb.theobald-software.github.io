@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|[5.7.1 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-5.7.1.html)|2022-05-04|General|New features for xu-config.exe([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-5.7.1.html))|
 |5.7.0 [L]|2022-04-25|Table|Added graphical where clause editor.|
 |5.6.3 [L]|2022-04-11|ODP|Selections can now be parameterized with lists of strings|
 |5.6.2 [M]|2022-04-07|BW Cube|Now allowing extractions without measure selections in MDX mode. Added support for additional options in interval/complex BEx variable selections.|
