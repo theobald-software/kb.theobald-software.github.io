@@ -25,7 +25,7 @@ If the service caller, yunIO and SAP are all part of the same network, the path 
 
 Examples:
 - Caller, yunIO and SAP run on-premises.
-- Caller, yunIO and SAP run in same cloud environment. 
+- Caller, yunIO and SAP run in the same cloud environment. 
 
 ### Different Networks
 
@@ -54,27 +54,27 @@ For callers in cloud environments, it might not be possible to restrict requests
 2. The yunIO server communicates with SAP. The response is sent back to the caller. 
 
 ### Azure Relay
-The yunIO service can be exposed to the caller through Azure Relay.
+The yunIO service can be exposed to the caller through [Azure Relay](https://docs.microsoft.com/en-gb/azure/azure-relay/relay-what-is-it).
 For callers in cloud environments it might not be possible to restrict requests to the yunIO server to trusted origins through Azure Relay rules.
 In this scenario it is not necessary to change firewall rules of the yunIO/SAP network to allow incoming requests from other networks. 
 Only outgoing requests from the yunIO/SAP network to Azure Relay must be allowed.
 
 ![Add parameters](/img/contents/yunio/ts-knowledge-base_azure-relay.png){:class="img-responsive" width="600px"}
 
-1. The yunIO server connects from yunIO/SAP network to Azure Relay and establishes a tunnel.
+1. The yunIO server connects from the yunIO/SAP network to Azure Relay and establishes a secure tunnel.
 2. a) The caller makes a request to Azure Relay.<br>
 b) The request is forwarded through the secure tunnel to the yunIO server.
 3. The yunIO server communicates with SAP. The response is sent back to the caller. 
 
 ### Azure VPN
-The caller and yunIO/SAP can be connected through a tunnel and joined to the same VNet in Azure.
+The caller and yunIO/SAP can be connected through a secure tunnel and joined to the same VNet in Azure.
 The yunIO server can be protected from requests from untrusted sources by restricting access to the VNet in Azure.
 In this scenario it is not necessary to change firewall rules of the yunIO/SAP network to allow incoming requests from other networks. 
 Only outgoing requests from the yunIO/SAP network to Azure must be allowed.
 
 ![Add parameters](/img/contents/yunio/ts-knowledge-base_azure-vpn.png){:class="img-responsive" width="600px"}
 
-1. The VPN client connects from yunIO/SAP network to Azure, establishes the tunnel.
+1. The VPN client connects from yunIO/SAP network to Azure, establishes the secure tunnel.
 2. a) The caller makes a request to the yunIO server via VNet.<br>
 b) The request is forwarded through the secure tunnel to the yunIO/SAP network.<br>
 c) The request is forwarded to the yunIO server.
@@ -82,14 +82,14 @@ c) The request is forwarded to the yunIO server.
 
 
 ### Microsoft On-Premises Data Gateway
-If the caller is one of the cloud services that is supported by the on-premises data gateway, requests to the yunIO server can be forwarded to the yunIO server through that gateway.
+If the caller is one of the cloud services that is supported by the [on-premises data gateway](https://docs.microsoft.com/en-gb/data-integration/gateway/service-gateway-onprem), requests to the yunIO server can be forwarded to the yunIO server through that gateway.
 The yunIO server can be protected from requests from untrusted sources using connection roles of the on-premises data gateway.
 In this scenario it is not necessary to change firewall rules of the yunIO/SAP network to allow incoming requests from other networks. 
 Only outgoing requests from the yunIO/SAP network to Azure must be allowed.
 
 ![Add parameters](/img/contents/yunio/ts-knowledge-base_azure-data-gateway.png){:class="img-responsive" width="600px"}
 
-1. The on-premises data gateway connects from yunIO/SAP network to Azure, establishes the tunnel.
+1. The on-premises data gateway connects from yunIO/SAP network to Azure, establishes the secure tunnel.
 2. a) The caller makes a request to the yunIO server via gateway resource.<br>
 b) The request is forwarded through the secure tunnel to the on-premises data gateway.<br>
 c) The request is forwarded to the yunIO server.
