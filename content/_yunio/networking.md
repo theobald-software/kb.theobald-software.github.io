@@ -95,3 +95,9 @@ b) The request is forwarded through the secure tunnel to the on-premises data ga
 c) The request is forwarded to the yunIO server.
 3. The yunIO server communicates with SAP. The response is sent back to the caller. 
 
+******
+#### Related Links:
+
+- [yunIO Online Help](https://help.theobald-software.com/en/yunio/)
+- [Microsoft Documentation: Azure Relay](https://docs.microsoft.com/en-gb/azure/azure-relay/relay-what-is-it)
+- [Microsoft Documentation: On-premises Data Gateway](https://docs.microsoft.com/en-gb/data-integration/gateway/service-gateway-onprem)
