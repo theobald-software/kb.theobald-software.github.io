@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|3.4.8 [L]|2022-05-06|General|Fix for transaction deserialization|
 |3.4.7 [M]|2022-03-25|General|Fixed timezone of Date header (was local time), nice reaon phrase for HTTP status 304|
 |3.4.6 [L]|2022-03-23|General|Replaced Swabian HTTP status reason phrases with English ones|
 |3.4.5 [L]|2022-03-16|General|Locked account is also considered a general authentication problem now|
