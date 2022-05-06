@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.17.12 [L]|2022-05-06|Licensing|Added overload to ProductLicense.Sign which allows to specify a CreationDate. |
 |2.17.11 [L]|2022-03-28|WPF|About window was refactored|
 |2.17.10 [L]|2022-03-23|General|Added a LoggerTrace which logs to the Debug Console. That allows to debug GUI applications because they don't have a console to write to.|
 |2.17.9 [L]|2022-03-14|General|Refactoring for the certificate pinning and TLS error handling interfaces|
