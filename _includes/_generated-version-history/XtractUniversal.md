@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.8.0 [L]|2022-05-09|Destinations|Introduced KNIME destination|
 |5.7.2 [L]|2022-05-05|Designer|Fix for displaying list runtime parameters, which affected source and destination parameters on run window|
 |[5.7.1 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-5.7.1.html)|2022-05-04|General|New features for xu-config.exe([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-5.7.1.html))|
 |5.7.0 [L]|2022-04-25|Table|Added graphical where clause editor.|
