@@ -1,7 +1,7 @@
 ---
 layout: page
 title: TCP/IP Ports of SAP
-description: TCP/IP Ports of SAP
+description: SAP TCP/IP Ports
 permalink: /:collection/:path
 weight: 21
 ---
