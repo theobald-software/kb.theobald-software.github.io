@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.14.18 [L]|2022-05-10|RFC Client|Fixed a bug where tables with built-in types were not created correctly using R3Connection.CreateFunction|
 |6.14.17 [L]|2022-03-25|General|Introduced Interface IR3Connection to make consumers of R3Connection testable.|
 |6.14.16 [L]|2021-12-28|General|Fix for tracing null values|
 |6.14.15 [L]|2021-12-03|General|Derived classes of ERPException are Serializable now|
