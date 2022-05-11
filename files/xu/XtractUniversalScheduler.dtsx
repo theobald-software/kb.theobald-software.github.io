@@ -1,0 +1,148 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="4/7/2022 1:45:29 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="TODD"
+  DTS:CreatorName="THEOBALD\steffan"
+  DTS:DTSID="{8628C99A-2E6D-4342-8A29-12014D273E7E}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.180"
+  DTS:LocaleID="1031"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="71"
+  DTS:VersionGUID="{53E831C2-F4CF-4E22-BD58-FD8D6C7B99C5}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:PackageParameters>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:DTSID="{E009D070-8A84-4AF8-A008-7A9A86D1A7C9}"
+      DTS:ObjectName="XtractUniversalServer"
+      DTS:Required="True">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue">dbtest-ws2019.theobald.local</DTS:Property>
+    </DTS:PackageParameter>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:DTSID="{1C25F69F-0F21-4AF6-9897-4542594A840B}"
+      DTS:ObjectName="XtractUniversalServerPort"
+      DTS:Required="True">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue">8065</DTS:Property>
+    </DTS:PackageParameter>
+  </DTS:PackageParameters>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{74448F4E-5C8F-4AF7-B7E2-04FC20C47E61}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="&quot;-s &quot; + @[$Package::XtractUniversalServer]  + &quot; -p &quot; + @[$Package::XtractUniversalServerPort]  + &quot; -n &quot; +  REPLACE ( SUBSTRING( @[User::extraction_folder_name], 53, LEN(@[User::extraction_folder_name]) - 52 ) , &quot;\\general.json&quot;, &quot;&quot;)"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="extraction_arguments">
+      <DTS:VariableValue
+        DTS:DataType="8">-s dbtest-ws2019.theobald.local -p 8065 -n ExtractionName</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{4180F978-DE5C-4708-89B9-6BA3CA3E0F77}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="extraction_folder_name">
+      <DTS:VariableValue
+        DTS:DataType="8">C:\Program Files\XtractUniversal\config\extractions\ExtractionName\general.json</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Foreach Loop Container"
+      DTS:CreationName="STOCK:FOREACHLOOP"
+      DTS:Description="Foreach Loop Container"
+      DTS:DTSID="{F3E19564-0DED-4A0F-BDE6-04F1748A2E49}"
+      DTS:ExecutableType="STOCK:FOREACHLOOP"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Foreach Loop Container">
+      <DTS:ForEachEnumerator
+        DTS:CreationName="Microsoft.ForEachFileEnumerator"
+        DTS:DTSID="{037269B7-D110-483D-852A-B523276957B0}"
+        DTS:ObjectName="{037269B7-D110-483D-852A-B523276957B0}">
+        <DTS:ObjectData>
+          <ForEachFileEnumeratorProperties>
+            <FEFEProperty
+              Folder="C:\Program Files\XtractUniversal\config\extractions" />
+            <FEFEProperty
+              FileSpec="general.json" />
+            <FEFEProperty
+              FileNameRetrievalType="0" />
+            <FEFEProperty
+              Recurse="-1" />
+          </ForEachFileEnumeratorProperties>
+        </DTS:ObjectData>
+      </DTS:ForEachEnumerator>
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Foreach Loop Container\XtractUniversalSchedule"
+          DTS:CreationName="Microsoft.ExecuteProcess"
+          DTS:Description="Execute Process Task"
+          DTS:DTSID="{aef87af0-6ee8-4a15-a5b8-34e4da65bd24}"
+          DTS:ExecutableType="Microsoft.ExecuteProcess"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="XtractUniversalSchedule"
+          DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:PropertyExpression
+            DTS:Name="Arguments">@[User::extraction_arguments]</DTS:PropertyExpression>
+          <DTS:ObjectData>
+            <ExecuteProcessData
+              Executable="C:\Program Files\XtractUniversal\xu.exe"
+              Arguments="-s dbtest-ws2019.theobald.local -p 8065 -n ExtractionName"
+              FailTaskIfReturnCodeIsNotSuccessValue="False" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:ForEachVariableMappings>
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{BED0648E-D8B5-4C79-A443-17F82AEB5C25}"
+          DTS:ObjectName="{BED0648E-D8B5-4C79-A443-17F82AEB5C25}"
+          DTS:ValueIndex="0"
+          DTS:VariableName="User::extraction_folder_name" />
+      </DTS:ForEachVariableMappings>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="200,42"
+          Id="Package\Foreach Loop Container\XtractUniversalSchedule"
+          TopLeft="65.5,72.5" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="363,297"
+          Size="363,340"
+          Id="Package\Foreach Loop Container"
+          TopLeft="115,120" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
