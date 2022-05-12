@@ -24,7 +24,7 @@ The following programs and tools are a prerequisite for using the above-mentione
 - Install [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15).
 - Configure[ SQL Server Agent](https://docs.microsoft.com/en-us/sql/ssms/agent/configure-sql-server-agent?view=sql-server-ver15).
 - Install [Xtract Universal Server](https://help.theobald-software.com/en/xtract-universal/introduction/installation-and-update).
-- Download SSIS-package [*XtractUniversalScheduler.dtsx*](/files/xu/XtractUniversalScheduler.dtsx){:download="XtractUniversalScheduler.dtsx"}.
+- Download SSIS-package [*XtractUniversalScheduler.dtsx*](/files/xu/XtractUniversalScheduler.dtsx){:download="XtractUniversalScheduler.dtsx").
 
 {: .box-note }
 **Note:** The Xtract Universal Server must be installed on the same environment as the SQL-Server / SSIS-DB using the default directory `C:\Program Files\XtractUniversal`.
