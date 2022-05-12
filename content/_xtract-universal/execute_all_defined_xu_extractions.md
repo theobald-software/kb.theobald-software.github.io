@@ -48,10 +48,10 @@ The following programs and tools are a prerequisite for using the above-mentione
 #### About the SSIS Package
 The SSIS package contains the following SSIS variables:
 
-SSIS Variables | Data type | <div style="width:290px">Example Value</div> | Expression
+SSIS Variables | Data type | Example Value | Expression
 ------------ | ------------- | ----- | ---------| 
 extraction_arguments| String | *-s todd.theobald.local -p 8065 -n ExtractionName* | `"-s " + @[$Package::XtractUniversalServer]  + " -p " + @[$Package::XtractUniversalServerPort]  + " -n " +  REPLACE ( SUBSTRING( @[User::extraction_folder_name], 53, LEN(@[User::extraction_folder_name]) - 52 ) , "\\general.json", "")`
-extraction_folder_name | String | *C:\Program Files\XtractUniversal\config\extractions\ExtractionName\general.json* | -
+extraction_folder_name | String | *C:\Program Files\XtractUniversal\config\ extractions\ExtractionName\general.json* | -
 
 ****
 #### Releated Links
