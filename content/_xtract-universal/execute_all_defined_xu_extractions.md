@@ -48,13 +48,13 @@ The following programs and tools are a prerequisite for using the above-mentione
 #### About the SSIS Package
 The SSIS package contains the following SSIS variables:
 
-SSIS Variables | Data type | Example Value | Expression
+SSIS Variables | Data type | <div style="width:290px">Example Value</div> | Expression
 ------------ | ------------- | ----- | ---------| 
 extraction_arguments| String | *-s todd.theobald.local -p 8065 -n ExtractionName* | `"-s " + @[$Package::XtractUniversalServer]  + " -p " + @[$Package::XtractUniversalServerPort]  + " -n " +  REPLACE ( SUBSTRING( @[User::extraction_folder_name], 53, LEN(@[User::extraction_folder_name]) - 52 ) , "\\general.json", "")`
 extraction_folder_name | String | *C:\Program Files\XtractUniversal\config\extractions\ExtractionName\general.json* | -
 
 ****
-#### Releated Link
+#### Releated Links
 - [Call via Commandline](https://help.theobald-software.com/en/xtract-universal/execute-and-automate-extractions/call-via-commandline)
 - [Run Integration Services (SSIS) Packages](https://docs.microsoft.com/en-us/sql/integration-services/packages/run-integration-services-ssis-packages?view=sql-server-ver15)
 - [Create an SQL-Server Agent Job](https://docs.microsoft.com/en-us/sql/ssms/agent/create-a-job?view=sql-server-ver15)
