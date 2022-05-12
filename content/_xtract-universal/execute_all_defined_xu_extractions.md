@@ -31,7 +31,7 @@ The following programs and tools are a prerequisite for using the above-mentione
 
 1. Import the SSIS-package *XtractUniversalScheduler.dtsx* into the SSIS-DB using the Microsoft SQL Server Management Studio.
 2. Adjust the SSIS parameters to the correct values of the customer installation.<br>
-![Configure_XtractUniversalScheduler](/img/contents/xu/Configure_XtractUniversalScheduler.png){:class="img-responsive"}
+![Configure_XtractUniversalScheduler](/img/contents/xu/Configure_XtractUniversalScheduler.png){:class="img-responsive" width="830px"}
 
    | SSIS Parameter | Data type | Sensitive | Required | Example Value | Info |
    ------------ | ------------- | ---------- | ---------| -------- |-------|
