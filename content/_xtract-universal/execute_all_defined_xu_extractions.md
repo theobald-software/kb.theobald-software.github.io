@@ -35,7 +35,7 @@ The following programs and tools are a prerequisite for using the above-mentione
 
    | SSIS Parameter | Data type | Sensitive | Required | Example Value | Info |
    ------------ | ------------- | ---------- | ---------| -------- |-------|
-   | XtractUniversalServer| String | False | True | *[ServerName.theobald.local}* | [Xtract Universal Server](https://help.theobald-software.com/en/xtract-universal/getting-started/connect-designer-with-server) | 
+   | XtractUniversalServer| String | False | True | *[ServerName.theobald.local]* | [Xtract Universal Server](https://help.theobald-software.com/en/xtract-universal/getting-started/connect-designer-with-server) | 
    | XtractUniversalServerPort | String | False | True | *8065* | [XU-Server Ports](https://help.theobald-software.com/en/xtract-universal/server/ports) |
 3. Schedule the deployed SSIS package using the integrated SQL Server Agent execution jobs. For more information, see [Microsoft Documentation: Create a SQL-Server Agent Job](https://docs.microsoft.com/en-us/sql/ssms/agent/create-a-job?view=sql-server-ver15).
 ![Create_Job_XtractUniversalScheduler_XtractUniversalScheduler](/img/contents/xu/Create_Job_XtractUniversalScheduler.png){:class="img-responsive"}
