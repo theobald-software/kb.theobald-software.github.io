@@ -11,8 +11,8 @@
   DTS:LocaleID="1031"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="71"
-  DTS:VersionGUID="{53E831C2-F4CF-4E22-BD58-FD8D6C7B99C5}">
+  DTS:VersionBuild="75"
+  DTS:VersionGUID="{1A5B1FB3-2717-4563-A044-7DECA979C2AB}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:PackageParameters>
@@ -24,7 +24,7 @@
       DTS:Required="True">
       <DTS:Property
         DTS:DataType="8"
-        DTS:Name="ParameterValue">dbtest-ws2019.theobald.local</DTS:Property>
+        DTS:Name="ParameterValue">todd.theobald.local</DTS:Property>
     </DTS:PackageParameter>
     <DTS:PackageParameter
       DTS:CreationName=""
@@ -47,7 +47,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="extraction_arguments">
       <DTS:VariableValue
-        DTS:DataType="8">-s dbtest-ws2019.theobald.local -p 8065 -n ExtractionName</DTS:VariableValue>
+        DTS:DataType="8">-s todd.theobald.local -p 8065 -n ExtractionName</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -103,7 +103,7 @@
           <DTS:ObjectData>
             <ExecuteProcessData
               Executable="C:\Program Files\XtractUniversal\xu.exe"
-              Arguments="-s dbtest-ws2019.theobald.local -p 8065 -n ExtractionName"
+              Arguments="-s todd.theobald.local -p 8065 -n ExtractionName"
               FailTaskIfReturnCodeIsNotSuccessValue="False" />
           </DTS:ObjectData>
         </DTS:Executable>
@@ -111,8 +111,8 @@
       <DTS:ForEachVariableMappings>
         <DTS:ForEachVariableMapping
           DTS:CreationName=""
-          DTS:DTSID="{BED0648E-D8B5-4C79-A443-17F82AEB5C25}"
-          DTS:ObjectName="{BED0648E-D8B5-4C79-A443-17F82AEB5C25}"
+          DTS:DTSID="{237E09FA-3E56-496C-B72B-494463BA5602}"
+          DTS:ObjectName="{237E09FA-3E56-496C-B72B-494463BA5602}"
           DTS:ValueIndex="0"
           DTS:VariableName="User::extraction_folder_name" />
       </DTS:ForEachVariableMappings>
