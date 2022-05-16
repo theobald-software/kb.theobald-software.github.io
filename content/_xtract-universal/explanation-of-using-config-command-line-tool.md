@@ -8,7 +8,7 @@ weight: 16
 As of Xtract Universal Version 4.26.1, the command line tool *xu-config.exe* is available to customers for creating extractions outside of the Xtract Universal Designer: `C:\Program Files\XtractUniversal\xu-config.exe`.
 
 {: .box-note }
-**Note:** This tool is **EXPERIMENTAL** and still in development. Beware of bugs and breaking changes! It's currently limited to the extraction types [Table](https://help.theobald-software.com/en/xtract-universal/table) and [DeltaQ](https://help.theobald-software.com/en/xtract-universal/datasource-deltaq).
+**Note:** This tool is **EXPERIMENTAL** and still in development. Beware of bugs and breaking changes! It's currently limited to the extraction types [Table](https://help.theobald-software.com/en/xtract-universal/table) [ODP](https://help.theobald-software.com/en/xtract-universal/odp) and [DeltaQ](https://help.theobald-software.com/en/xtract-universal/datasource-deltaq).
 
 {: .box-note }
 **Note:** Since Xtract Universal 5.0.0, xu-config.exe needs to be executed under the same Windows AD account as the [Xtract Universal service](https://help.theobald-software.com/en/xtract-universal/advanced-techniques/service-account) is running. In this case, you need to run the Windows command prompt as that respective user or use the ```runas```command.
