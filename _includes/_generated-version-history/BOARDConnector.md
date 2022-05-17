@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.6.1 [L]|2022-05-17|Designer|Fix for change source window call|
 |5.6.0 [L]|2022-04-28|Server|Enabled JSON metadata API|
 |5.5.1 [M]|2022-04-07|BW Cube|Now allowing extractions without measure selections in MDX mode. Added support for additional options in interval/complex BEx variable selections.|
 |[5.5.0 [M]](https://kb.theobald-software.com/release-notes/BOARDConnector-5.5.0.html)|2022-04-04|BW Cube|New BWCube extractor (breaking)([Release note](https://kb.theobald-software.com/release-notes/BOARDConnector-5.5.0.html))|
