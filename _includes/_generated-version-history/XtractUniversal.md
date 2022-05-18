@@ -1,5 +1,7 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.8.3 [L]|2022-05-18|Designer|The Designer does now correctly resolve IPv6 addresses.|
+|5.8.2 [L]|2022-05-18|Designer|Readded former Snowflake Azure regions to keep backward compatibility|
 |5.8.1 [L]|2022-05-16|Destinations|The flat-file CSV destination does now support file splitting.|
 |5.8.0 [L]|2022-05-09|Destinations|Introduced KNIME destination|
 |5.7.2 [L]|2022-05-05|Designer|Fix for displaying list runtime parameters, which affected source and destination parameters on run window|
