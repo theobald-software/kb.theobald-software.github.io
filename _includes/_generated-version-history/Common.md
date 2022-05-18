@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.17.14 [L]|2022-05-18|General|Fixed a bug where the CsvLineReader would return lines multiple times if the buffer is small enough.|
 |2.17.13 [L]|2022-05-11|Licensing|Added integration tests for real-world ProductLicenses|
 |2.17.12 [L]|2022-05-06|Licensing|Added overload to ProductLicense.Sign which allows to specify a CreationDate. |
 |2.17.11 [L]|2022-03-28|WPF|About window was refactored|
