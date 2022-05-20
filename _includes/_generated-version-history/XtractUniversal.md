@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.8.5 [L]|2022-05-20|General|Added parameter context on xu-config for ODP extractions|
 |5.8.4 [L]|2022-05-18|Destinations|Fixed a bug where the SSRS/Power BI Report Server Destination would output rows multiple times. Was caused by an unfortunate combination of the buffer size used and a bug in the internal CSV parsing.|
 |5.8.3 [L]|2022-05-18|Designer|The Designer does now correctly resolve IPv6 addresses.|
 |5.8.2 [L]|2022-05-18|Designer|Readded former Snowflake Azure regions to keep backward compatibility|
