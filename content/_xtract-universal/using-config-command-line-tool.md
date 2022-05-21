@@ -5,15 +5,25 @@ description: Creating extractions without using the Xtract Universal designer GU
 permalink: /:collection/:path
 weight: 16
 ---
-As of Xtract Universal Version 4.26.1, the command line tool *xu-config.exe* is available to customers for creating extractions outside of the Xtract Universal Designer: `C:\Program Files\XtractUniversal\xu-config.exe`.
+As of Xtract Universal Version 4.26.1, the command line tool *xu-config.exe* is available to customers for creating Table, ODP and DeltaQ extractions outside of the Xtract Universal Designer: `C:\Program Files\XtractUniversal\xu-config.exe`.
 
 {: .box-note }
 **Note:** This tool is **EXPERIMENTAL** and still in development. Beware of bugs and breaking changes! It's currently limited to the extraction types [Table](https://help.theobald-software.com/en/xtract-universal/table) [ODP](https://help.theobald-software.com/en/xtract-universal/odp) and [DeltaQ](https://help.theobald-software.com/en/xtract-universal/datasource-deltaq).
 
 {: .box-note }
-**Note:** Since Xtract Universal 5.0.0, xu-config.exe needs to be executed under the same Windows AD account as the [Xtract Universal service](https://help.theobald-software.com/en/xtract-universal/advanced-techniques/service-account) is running. In this case, you need to run the Windows command prompt as that respective user or use the ```runas```command.
+**Note:** As of Xtract Universal 5.0.0, xu-config.exe must be executed under the same Windows AD account as the [Xtract Universal service](https://help.theobald-software.com/en/xtract-universal/advanced-techniques/service-account) is running. In this case, you need to run the Windows command prompt as that respective user or use the ```runas```command.
 
-### Creating a single Table extraction using Windows Command Prompt
+
+### Creating SAP Sources
+
+The xu-config.exe only supports SAP Connections using plain authentication.
+
+
+### Creating Destinations
+
+The xu-config.exe only supports Azure and Amazon S3 destinations
+
+### Creating a single Table Extraction using Windows Command Prompt
 1. Start the Command Prompt application (1) with admin-user rights (2). 
 ![cmd-prompt](/img/contents/cmd_prompt.png){:class="img-responsive"}
 2. Navigate and select the *xu-config.exe* command line tool. 
@@ -27,6 +37,9 @@ As of Xtract Universal Version 4.26.1, the command line tool *xu-config.exe* is 
 
 {: .box-note }
 **Note:** The following table settings are set by default after creation: **Package Size (50000)**, **Extract data in background job (enabled)**, **Selecting all related fields**.
+
+{: .box-tip }
+**Tip:** Use the command `xu-config.exe -h` to find more examples on how to create Xtract Universal components.
 
 ### Creating multiple Table extractions using PowerShell-Script
 Using suitable scripts, a large number of extractions can be generated almost automatically and consequently contribute for the generation of an SAP data warehouse.
@@ -65,8 +78,9 @@ foreach ($tableName in $tableList) {
 }
 ```
 
+
 *****
-#### Related links
+#### Related Links
  - [SAP Connection](https://help.theobald-software.com/en/xtract-universal/introduction/sap-connection#creating-an-sap-connection)
  - [Destination](https://help.theobald-software.com/en/xtract-universal/xu-destinations/managing-destinations)
  - [SAP table object](https://help.theobald-software.com/en/xtract-universal/getting-started/define-a-table-extraction#adding-tables)
@@ -75,9 +89,3 @@ foreach ($tableName in $tableList) {
  - [Scheduling an extraction](https://help.theobald-software.com/en/xtract-universal/advanced-techniques/scheduling_extraction)
  - [Extraction Parameters](https://help.theobald-software.com/en/xtract-universal/advanced-techniques/extraction-parameters)
  
- 
- 
-
-
-
-
