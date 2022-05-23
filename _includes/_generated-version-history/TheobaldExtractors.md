@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.29.8 [L]|2022-05-23|General|Extractors that implement the complex parameter interface must also implement scalar parameter interface|
 |1.29.7 [L]|2022-05-12|BW Cube|Fix for date columns being 0 and in wrong format in date columns of BICS extractions.|
 |1.29.6 [L]|2022-05-09|BW Cube|Fix for unavailable runtime parameters in dimension range filters.|
 |1.29.5 [L]|2022-05-03|Table|Fix for STRING/XSTRING columns with NWRFC|
