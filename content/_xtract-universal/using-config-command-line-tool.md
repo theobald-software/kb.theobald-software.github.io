@@ -17,13 +17,12 @@ The tool supports the extraction types [Table](https://help.theobald-software.co
 
 ### Creating an SAP Source using Windows Command Prompt
 
-{: .box-note }
-**Note:** The xu-config.exe only supports SAP Connections with plain authentication.
+Note that the xu-config.exe only supports SAP connections with plain authentication.
 
 1. Start the Command Prompt application (1) with admin-user rights (2). 
 ![cmd-prompt](/img/contents/cmd_prompt.png){:class="img-responsive"}
 2. Navigate to the installation directory of Xtract Universal (3).
-3. Run the following shell command to create an encrypted password for your SAP source: `powershell ./protect-password.ps1` (4). <br>
+3. Run the following shell command to create an encrypted password for your SAP source: `powershell ./protect-password.ps1` (4).<br>
 The execution of powershell scripts must be authorized on your system, see [Microsoft Documentation: Managing the execution policy with PowerShell](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.2#managing-the-execution-policy-with-powershell).
 4. Select the *xu-config.exe* command line tool from the Xtract Universal installation directory and enter the following command: <br>
 `xu-config.exe --source <name> <host> <instance-number> <client> <language> <user> <protected-password>`.<br>
@@ -35,7 +34,7 @@ Replace the parameters in `< >`with actual values (5). The parameters are not ca
 ### Creating a Destination using Windows Command Prompt
 
 {: .box-note }
-**Note:** The xu-config.exe only supports the [Azure Storage](https://help.theobald-software.com/en/xtract-universal/destinations/azure-storage#destination-details) and [Amazon AWS S3](https://help.theobald-software.com/en/xtract-universal/destinations/amazon-aws-s3#destination-details) destinations.
+**Note:** The xu-config.exe only supports the creation of the [Azure Storage](https://help.theobald-software.com/en/xtract-universal/destinations/azure-storage#destination-details) and [Amazon AWS S3](https://help.theobald-software.com/en/xtract-universal/destinations/amazon-aws-s3#destination-details) destinations.
 
 1. Start the Command Prompt application (1) with admin-user rights (2). 
 ![cmd-prompt](/img/contents/cmd_prompt.png){:class="img-responsive"}
