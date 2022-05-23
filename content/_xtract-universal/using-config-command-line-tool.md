@@ -41,10 +41,11 @@ Replace the parameters in `< >`with actual values (5). The parameters are not ca
 2. Navigate to the installation directory of Xtract Universal (3).
 3. Run the following shell command to create encrypted passwords or keys needed for the destination: `powershell ./protect-password.ps1` (4). <br>
 The execution of powershell scripts must be authorized on your system, see [Microsoft Documentation: Managing the execution policy with PowerShell](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.2#managing-the-execution-policy-with-powershell).
-4. Select the *xu-config.exe* command line tool and depending on the destination you want to create, enter one of the commands below. Replace the parameters in `< >` with actual values (5). The names of the parameters are not case sensitive.<br>
-- Azure Storage: `xu-config.exe --azure <account> <accesskey> <container> <folder(opt)>`<br>
-- Amazon AWS S3 with user credentials: `xu-config.exe --s3 --auth user <key> <secretkey> <bucket> <region> <folder(opt)>`<br>
-- Amazon AWS S3 with authentication via IAM role: `xu-config.exe --s3 --auth iam <bucket> <region> <folder(opt)>`<br>
+4. Select the *xu-config.exe* command line tool and depending on the destination you want to create, enter one of the commands below. 
+Azure Storage: `xu-config.exe --azure <account> <accesskey> <container> <folder(opt)>`.<br>
+Amazon AWS S3 with user credentials: `xu-config.exe --s3 --auth user <key> <secretkey> <bucket> <region> <folder(opt)>`.<br>
+Amazon AWS S3 with authentication via IAM role: `xu-config.exe --s3 --auth iam <bucket> <region> <folder(opt)>`.<br>
+Replace the parameters in `< >` with actual values (5). The names of the parameters are not case sensitive.<br>
 5. Execute the *xu-config* by confirming the input. The xu-config and the XU service must run under the same account.<br>
 ![create_destination_command_prompt](/img/contents/create_destination_command_prompt.png){:class="img-responsive"}
 6. Check the generated destination in the Xtract Universal Designer or in the following directory: <br>`C:\Program Files\XtractUniversal\config\destinations`.
