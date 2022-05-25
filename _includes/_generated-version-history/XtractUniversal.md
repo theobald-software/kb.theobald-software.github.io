@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.8.7 [L]|2022-05-25|Destinations|Fix for truncate statement and introduced handling for multiple statements in the Snowflake destination|
 |5.8.6 [L]|2022-05-24|Destinations|Added missing Snowflake legacy Azure region "North Europe (legacy)"|
 |5.8.5 [L]|2022-05-20|General|Added parameter context on xu-config for ODP extractions|
 |5.8.4 [L]|2022-05-18|Destinations|Fixed a bug where the SSRS/Power BI Report Server Destination would output rows multiple times. Was caused by an unfortunate combination of the buffer size used and a bug in the internal CSV parsing.|
