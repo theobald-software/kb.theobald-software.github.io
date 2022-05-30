@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.16.4 [L]|2022-05-30|BW Cube|Support for Only_Structures behavior in MDX BEx Queries. Various bug fixes and general improvements for the Cube component.|
 |1.16.3 [L]|2022-05-23|General|Fixed a bug where scalar parameters disappeared from the tool properties|
 |1.16.2 [L]|2022-05-03|Report|Report component is now out of beta.|
 |1.16.1 [L]|2022-04-27|ODP|Fixed a bug where the advanced settings button was disabled for providers that do not support deltas|
