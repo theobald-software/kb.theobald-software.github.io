@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.8.10 [L]|2022-05-31|Destinations|Removed validation on Snowflake destination which forbade custom regions|
 |5.8.9 [L]|2022-05-30|BW Cube|Support for Only_Structures behavior in MDX BEx Queries. Various bug fixes and general improvements for the Cube component.|
 |5.8.8 [L]|2022-05-30|Designer|Fixed a bug where during authentication the users groups where not checked correctly.|
 |5.8.7 [L]|2022-05-25|Destinations|Fix for truncate statement and introduced handling for multiple statements in the Snowflake destination|
