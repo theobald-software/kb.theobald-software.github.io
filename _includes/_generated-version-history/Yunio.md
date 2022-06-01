@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.5.7 [L]|2022-06-01|General|Fixed a bug where loading the source for transaction would result in an error.|
 |1.5.6 [L]|2022-05-31|General|Subdirectory support for the websocket server connection. (Not yet enabled in the UI and runtime)|
 |1.5.5 [L]|2022-04-30|General|Option to enable .NET Runtime update over Windows Update (for Windows Server Editions).|
 |1.5.4 [L]|2022-04-26|General|Improved dependencies resources (.NET 6.0)|
