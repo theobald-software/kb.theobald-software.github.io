@@ -52,6 +52,11 @@ For information on how to integrate a yunIO service with Power Automate, see [In
 ### Using yunIO Services in Power Apps
 
 After a connector is successfully tested, it can be used as a data source in Power Apps. 
+
+{: .box-note }
+**Note:** The Power Apps coding syntax is dependant on the configured language settings, e.g., the English `ClearCollect(SAPData,yunIO_1.ReadCSKT());` becomes `ClearCollect(SAPData;yunIO_1.ReadCSKT())` for German language users. 
+For more information, see [Microsoft: Formula separators and chaining operator](https://docs.microsoft.com/en-us/power-platform/power-fx/global#formula-separators-and-chaining-operator).
+
 1. Create a new model-driven Power App containing one screen using the Power Apps studio designer.<br>
 2. Add three drop down controls and three labels to describe the fields.
 3. For the first and the last drop down control add additional text input controls (here *input_sap_material_number* and *input_customers*) for search/filter values. <br> 
@@ -131,7 +136,7 @@ Concatenate(CustomerGetResult.NAME1," ",CustomerGetResult.KUNNR)
 ******
 
 #### Related Links
-- [Youtube Tutorial: SAP process automation | Power Automate SAP Connector](https://www.youtube.com/watch?v=A-2cOpGmCJ8)
+- [Youtube Tutorial: SAP process automation] Power Automate SAP Connector](https://www.youtube.com/watch?v=A-2cOpGmCJ8)
 - [Microsoft Documentation: Drop down control](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/controls/control-drop-down)
 - [Microsoft Documentation: Text input control](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/controls/control-text-input)
 - [yunIO Help: How to Run a Service](https://help.theobald-software.com/en/yunio#how-to-run-a-service)
