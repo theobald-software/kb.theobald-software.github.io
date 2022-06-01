@@ -19,8 +19,24 @@ A pre-built AI Builder template is used for this use case.
 
 1. Create a service in yunIO for incoming invoice creation. For this example we use BAPI_INCOMINGINVOICE_CREATE1 to create an incoming invoice in SAP. 
 The service has the following settings:<br>
-- Set the Import Parameter NAME1 to *Supplied by Caller*.
-- Select all fields in the Table *CUSTOMER_T* for the output.
+- Set the following import parameters to *Supplied by Caller* (Structure *HEADERDATA*).
+	- INVOICE_IND (Indicator: post invoice)
+	- DOC_TYPE (Document Type)
+	- DOC_DATE (Document Date in Document)	
+	- PSTNG_DATE (Posting Date in the Document)
+	- COMP_CODE	(Company Code)
+	- DIFF_INV (Different Invoicing Party)
+	- CURRENCY (Currency Key)
+	- CURRENCY_ISO (ISO currency code)
+	- GROSS_AMOUNT (Gross Invoice Amount in Document Currency)
+	- PMNTTRMS (Terms of Payment Key)
+	- BLINE_DATE (Baseline Date for Due Date Calculation)
+	- PMNT_BLOCK (Payment Block Key)
+	- PYMT_METH	(Payment Method)
+	- PMTMTHSUPL (Payment Method Supplement)
+	- INVOICESTATUS	(Invoice Document Status)
+- Select export parameters FISCALYEAR (Fiscal Year) and INVOICEDOCUMENTNUMBER (Document Number of an Invoice Document) for the output.  
+- Select all fields in the Table *RETURN* for the output.
 2. Download the service definition (![download-file](/img/contents/yunio/download.png) icon).<br>
 ![yunio-Services-Function-Download](/img/contents/yunio/yunio-run-services-function-download.png){:class="img-responsive" width="800px"}
 
