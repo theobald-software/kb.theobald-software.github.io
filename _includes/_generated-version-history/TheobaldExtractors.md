@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.29.10 [L]|2022-06-01|BW Cube|Fix for disabled measures/dimensions tree in MDX mode when a query does not have any measures.|
 |[1.29.9 [L]](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.29.9.html)|2022-05-30|BW Cube|Support for Only_Structures behavior in MDX BEx Queries. Various bug fixes and general improvements for the Cube component.([Release note](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.29.9.html))|
 |1.29.8 [L]|2022-05-23|General|Extractors that implement the complex parameter interface must also implement scalar parameter interface|
 |1.29.7 [L]|2022-05-12|BW Cube|Fix for date columns being 0 and in wrong format in date columns of BICS extractions.|
