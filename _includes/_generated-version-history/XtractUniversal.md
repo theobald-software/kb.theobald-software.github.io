@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.8.13 [L]|2022-06-02|Destinations|Introduced truncate only statement for Snowflake destination|
 |5.8.12 [M]|2022-06-02|BAPI|Fixed a bug where primary keys where missing after upgrading|
 |5.8.11 [L]|2022-05-31|Designer|Subdirectory support for the RPC server connection. (Not yet enabled in the UI and runtime)|
 |5.8.10 [L]|2022-05-31|Destinations|Removed validation on Snowflake destination which forbade custom regions|
