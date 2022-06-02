@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.8.12 [M]|2022-06-02|BAPI|Fixed a bug where primary keys where missing after upgrading|
 |5.8.11 [L]|2022-05-31|Designer|Subdirectory support for the RPC server connection. (Not yet enabled in the UI and runtime)|
 |5.8.10 [L]|2022-05-31|Destinations|Removed validation on Snowflake destination which forbade custom regions|
 |5.8.9 [L]|2022-05-30|BW Cube|Support for Only_Structures behavior in MDX BEx Queries. Various bug fixes and general improvements for the Cube component.|
