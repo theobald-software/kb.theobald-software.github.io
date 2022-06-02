@@ -40,6 +40,9 @@ The service has the following settings:<br>
 2. Download the service definition (![download-file](/img/contents/yunio/download.png) icon).<br>
 ![yunio-Services-Function-Download](/img/contents/yunio/yunio-run-services-function-download.png){:class="img-responsive" width="800px"}
 
+{: .box-note }
+**Note:** Depending on your SAP customizing for the invoicing process, it could be other parameters be necessary to sucessfully create an incoming invoice. This is an example with the minimum required fields from our SAP demo environment.  
+
 {: .box-tip }
 **Tip:** It is recommended to test a yunIO service in a REST client before integrating it with Power Automate, see [Running a yunIO Service in Swagger Inspector](https://kb.theobald-software.com/yunio/running-a-yunio-service-in-swagger-inspector) or [Running a yunIO Service in Postman](https://kb.theobald-software.com/yunio/running-a-yunio-service-in-postman). 
 
@@ -47,60 +50,31 @@ The service has the following settings:<br>
 When integrating services from a local yunIO installation with a cloud hosted platform like Power Automate, a gateway is needed to tunnel the connection e.g., the [**Microsoft On-premises data gateway**](https://docs.microsoft.com/en-us/data-integration/gateway/).
 You decide which gateway solution you want to use.<br> 
 If you choose the **Microsoft On-premises data gateway**, install and configure the gateway before proceeding to the next steps.
+
+The process for incoming invoice creation must be customized and ready to use in SAP. It is recommended to test a BAPI/function call in SAP first with transaction SE37 before building a web service of it.   
+
  
 ### Configuring a yunIO Custom Connector in Power Automate
+Import and configure the created yunIO service for incoming invoice creation in Power Automate.  
+For detailed information about how to configure, test and use a custom connector build with a yunIO service have a look at the [following knowledgebase article](https://kb.theobald-software.com/yunio/integrating-a-yunio-service-with-power-automate).
 
-1. Open the section **Data > Custom Connectors** in Power Automate and click on **+ New custom connector**.
-2. Click on **Import an OpenAPI file** and give the connector a name of your choice. Select the service definition from [Prerequisites in yunIO](#prerequisites-in-yunio) from your harddrive and click **Continue**. 
-3. In the **General** tab you can define general information for the custom connector. <br> 
-- With **Upload** you can upload a connector icon of your choice. Defining an alternative icon background color or a service description is optional.  
-- If you use an on-premises data gateway, activate the checkbox **Connect via on-premises gateway**.<br>
-- **Scheme**: With [TLS enabled](https://help.theobald-software.com/en/yunio/server-settings#transport-layer-security) in the yunIO server settings, the HTTPS scheme is pre-selected. In this example TLS is disabled, so the HTTP scheme is set.<br> 
-- Under **Host** the host address for the yunIO service consumption with its respective port is preset. For local installations the host address is `localhost:[port]`.<br> 
-- The **Base URL** represents extensions of the REST service URL that is triggered by the custom connector. <br>
-![Power-Automate-Custom-Connector-Ceneral.png](/img/contents/yunio/power-automate-custom-connector-general.png){:class="img-responsive"}
-4. In the **Security** tab you can select the authentication type for service consumption. <br> 
-- *No authentication* is pre-set. This means that there is no authentication required by users calling the connector. <br>
-- If [*Request credentials from callers when running services*](https://help.theobald-software.com/en/yunio/sap-connection#authentication) is enabled in the yunIO connection settings, you can also select *Basic authentication*. 
-This means that the SAP user name and password used for the SAP connection, must be stored in the Connection Settings defined in the [**Test** tab](#testing-the-service).
-- This example uses *Basic authentication* and labels the parameters *SAP User* and *Password*
-![Power-Automate-Custom-Connector-Security.png](/img/contents/yunio/power-automate-custom-connector-security.png){:class="img-responsive"} 
-![Power-Automate-Custom-Connector-Security-Basic.png](/img/contents/yunio/power-automate-custom-connector-security-basic.png){:class="img-responsive"} 
-5. The **Definition** tab gives an overview about the yunIO service definition. No changes necessary. This also applies to the **Code (Preview)** tab.
+### Create a Power Automate Flow for invoice processing using the AI Builder
+In our use case we want to automatically extract invoicing information with the AI Builder tool from random invocing PDF files and post this information to SAP.
 
-{: .box-note }
-**Note:** Before the service can be tested in the **Test** tab, the custom connector must be published with **Create connector**. 
+Therefore we dwell on the following prebuilt [model provided by Microsoft](https://docs.microsoft.com/en-gb/ai-builder/flow-invoice-processing).
+Follow the steps described in the documentation. 
 
-{: .box-tip }
-**Tip:** When testing a new custom connector, you can switch to **Swagger Editor** mode and paste test sets directly from Swagger Editor / Swagger Inspector.
-For more information on how to test yunIO services in Swagger Inspector, refer to the knowledge base article [Running a yunIO Service in Swagger Inspector](https://kb.theobald-software.com/yunio/running-a-yunio-service-in-swagger-inspector).
+After the AI Builder step add an initialize variable step, with the following settings. We need this to automatically convert the invoice date coming from the document into SAP compliant format. 
+![Power-Automate-initialize-variable.png](/img/contents/yunio/yunio-power-automate-initialize-variable.png){:class="img-responsive"}
 
-### Testing the Service
+For simplicity we use only one variable and use it later for the document date, the posting date and the billing date required for inocming invoice creation in SAP..
+Map the field *Invoice Date (Date)* returned from the AI Builder action to field *Value* of the initialize variable action.
 
-In the **Test** tab the custom connector can be tested. <br>
-- Create a connection with **+ New connection**. 
-- Enter the credentials of the SAP user you have defined in the yunIO connection settings. If you selected to connect via an on-premises gateway in the *General* tab, select your gateway instance.
-- Confirm the settings with **Create connection**.   
+After that add the previously created yunIO custom connector for incomcing invoice creation as a workflow step.
 
-![Power-Automate-Custom-Connector-Test-Connection.png](/img/contents/yunio/power-automate-custom-connector-test-connection.png){:class="img-responsive"} 
+You need to map the output fields of the AI Builder action now to the parameters of the custom connector.  
+  
 
-To test run the service 
-- **(1)** enter valid import values for the parameters you defined as *Supplied by caller* in the yunIO service settings. 
-- **(2)** click **Test operation**. 
-- **(3)** the SAP response is displayed in the Request Body. 
-
-![Power-Automate-Custom-Connector-Test-Operation.png](/img/contents/yunio/power-automate-custom-connector-test-operation.png){:class="img-responsive"} 
-
-{: .box-tip }
-**Tip:** For services calling Function Modules or BAPIs that use tables or structured input information, switch **Raw Body** off to get a better structured input screen.
-
-
-### Using the Service in a Power Automate Flow
-After a connector is successfully tested, it can be used in a Flow. 
-- Add a new action to the Flow and search for the name of the custom connector. <br>
-![Power-Automate-Custom-Connector-Flow-Action.png](/img/contents/yunio/power-automate-custom-connector-flow-action.png){:class="img-responsive"} 
-- Once the connector is added, the input fields can be parameterized. <br>
-![Power-Automate-Custom-Connector-Flow.png](/img/contents/yunio/power-automate-custom-connector-flow.png){:class="img-responsive"} 
 
 ******
 
