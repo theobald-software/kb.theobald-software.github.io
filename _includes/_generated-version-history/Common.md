@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.18.0 [L]|2022-06-03|Licensing|Added new field Extractions to ProductLicense. Fixed property Sources not to be nullable anymore. Moved common code from Licensing Tools to Theobald.Licensing|
 |2.17.15 [L]|2022-05-31|WPF|The progress dialog now always runs the work load on a background thread.|
 |2.17.14 [L]|2022-05-18|General|Fixed a bug where the CsvLineReader would return lines multiple times if the buffer is small enough.|
 |2.17.13 [L]|2022-05-11|Licensing|Added integration tests for real-world ProductLicenses|
