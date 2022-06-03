@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.6.0 [M]|2022-06-03|Designer|Improved the OpenAPI for usage with Nintex Cloud.|
 |1.5.8 [L]|2022-06-01|Designer|Fixed a bug where searching for tables and BAPIs in SAP would throw an error due to broken javascript references.|
 |1.5.7 [L]|2022-06-01|General|Fixed a bug where loading the source for transaction would result in an error.|
 |1.5.6 [L]|2022-05-31|General|Subdirectory support for the websocket server connection. (Not yet enabled in the UI and runtime)|
