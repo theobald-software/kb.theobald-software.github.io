@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.8.14 [L]|2022-06-03|Designer|Fixed a bug, where after changing the service account sources would no longer be editable.|
 |5.8.13 [L]|2022-06-02|Destinations|Introduced truncate only statement for Snowflake destination|
 |5.8.12 [M]|2022-06-02|BAPI|Fixed a bug where primary keys where missing after upgrading|
 |5.8.11 [L]|2022-05-31|Designer|Subdirectory support for the RPC server connection. (Not yet enabled in the UI and runtime)|
