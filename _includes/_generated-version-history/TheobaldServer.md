@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|3.5.2 [L]|2022-06-03|General|Fixed a bug, where receiving an RPC error message would crash the client reader.|
 |3.5.1 [L]|2022-06-01|General|Fixed a bug where the HTTP server would not send a valid HTTP response when the chunk encoded body was empty.|
 |3.5.0 [L]|2022-05-31|General|Subdirectory support for persistence and RPC server/client.|
 |3.4.9 [L]|2022-05-12|General|Transaction worker executable files are now signed |
