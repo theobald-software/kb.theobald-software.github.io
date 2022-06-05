@@ -13,7 +13,7 @@ For more information on Postman, see [Postman Documentation](https://learning.po
 
 ### Prerequisites in yunIO
 
-1. Create a service in yunIO. For this article we use the BAPI SD_RFC_CUSTOMER_GET to search and extract customer data from SAP. 
+1. Create a service in yunIO. This example uses the BAPI SD_RFC_CUSTOMER_GET to search and extract customer data from SAP. 
 The service has the following settings:<br>
 - Set the Import Parameter NAME1 to *Supplied by Caller*.
 - Select all fields in the Table *CUSTOMER_T* for the output.
