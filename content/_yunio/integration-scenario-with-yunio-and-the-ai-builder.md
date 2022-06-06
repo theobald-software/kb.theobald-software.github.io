@@ -1,28 +1,31 @@
 ---
 layout: page
-title: Integation scenario with yunIO and the AI Builder
+title: Integation Scenario with yunIO and AI Builder
 description: Integation scenario with yunIO and the AI Builder
 permalink: /:collection/:path
 weight: 3
 ---
 
-This article shows how to integrate yunIO with Microsoft Power Automate and the [Microsoft AI Builder](https://docs.microsoft.com/en-gb/ai-builder/overview).
+This article shows how to integrate yunIO with Microsoft Power Automate and the [Microsoft AI Builder](https://docs.microsoft.com/en-gb/ai-builder/overview).<br>
 
-### About
-AI Builder is a Microsoft Power Platform capability that enables the usage of artificial intelligence to automate processes in Power Apps and Power Automate.
-Microsoft offers a couple of pre-built AI models to start using the tool without training the AI model first.
-For more information on AI Builder, see the official [Microsoft AI Builder Documentation](https://docs.microsoft.com/en-gb/ai-builder/overview).
-
-This article uses an AI Builder scenario template in Power Automate to automatically extract and post invoice information to the backend SAP ERP system. 
+AI Builder enables the usage of artificial intelligence to automate processes in Power Apps and Power Automate.
+Microsoft offers pre-built AI models to start using the tool without training the AI model first.
+The following example scenario uses an AI Builder template in Power Automate to automatically extract and post invoice information to the backend SAP ERP system. 
 In the SAP system an incoming invoice for a previously created purchase order is booked.
  
-### Prerequisites in yunIO
+### Prerequisites
+- When integrating services from a local yunIO installation with a cloud hosted platform like Power Automate, a gateway is needed to tunnel the connection e.g., the [**Microsoft On-premises data gateway**](https://docs.microsoft.com/en-us/data-integration/gateway/).
+You decide which gateway solution you want to use. Install and configure the gateway.
+- The process for incoming invoice creation must be customized and ready to use in SAP.  
+- Test the BAPI/function call in SAP with transaction SE37 before building the web service. Note which parameters are needed for the call.
 
+### Creating a Service in yunIO
 
-1. Create a service in yunIO for incoming invoice creation. <br>
-This example uses the BAPI_INCOMINGINVOICE_CREATE1 to create an incoming invoice in SAP. 
+Create a yunIO service for incoming invoices.<br>
 Note that the parameters that are needed to create an incoming invoice are dependent on your customized SAP settings for the invoicing process.
-We recommend testing the BAPI/function call in SAP with transaction SE37 before building the web service. 
+
+1. Create a service in yunIO of type *Function Module / BAPI*. <br>
+This example uses the BAPI_INCOMINGINVOICE_CREATE1 to create an incoming invoice in SAP. 
 2. Set the following import parameters to *Supplied by Caller* (Structure *HEADERDATA*):<br>
 - INVOICE_IND (Indicator: post invoice)<br>
 - DOC_TYPE (Document Type)<br>
@@ -48,15 +51,11 @@ We recommend testing the BAPI/function call in SAP with transaction SE37 before 
 - QUANTITY (Quantity)<br>
 - PO_UNIT (Purchase Order Unit of Measure)	<br>
 5. Download the service definition (![download-file](/img/contents/yunio/download.png) icon).<br>
-![yunio-Services-Function-Download](/img/contents/yunio/yunio-run-services-function-download.png){:class="img-responsive" width="800px"}
+![yunio-Services-Function-Download](/img/contents/yunio/yunio-run-services-function-download-invoices.png){:class="img-responsive" width="800px"}
 
 {: .box-tip }
 **Tip:** It is recommended to test a yunIO service in a REST client before integrating it with Power Automate, see [Running a yunIO Service in Swagger Inspector](https://kb.theobald-software.com/yunio/running-a-yunio-service-in-swagger-inspector) or [Running a yunIO Service in Postman](https://kb.theobald-software.com/yunio/running-a-yunio-service-in-postman). 
 
-### Other Prerequisites
-- When integrating services from a local yunIO installation with a cloud hosted platform like Power Automate, a gateway is needed to tunnel the connection e.g., the [**Microsoft On-premises data gateway**](https://docs.microsoft.com/en-us/data-integration/gateway/).
-You decide which gateway solution you want to use. Install and configure the gateway.
-- The process for incoming invoice creation must be customized and ready to use in SAP.  
 
 ### Configuring a yunIO Custom Connector in Power Automate
 
