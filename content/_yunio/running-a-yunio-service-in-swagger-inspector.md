@@ -13,7 +13,7 @@ For more information on the Swagger Inspector, see [Swagger Inspector Documentat
 
 ### Prerequisites in yunIO
 
-1. Create a service in yunIO. For this article we use a Table service with the following settings:<br>
+1. Create a service in yunIO. This example uses a Table service with the following settings:<br>
 ![Table-Extraction](/img/contents/yunio/table-settings.png){:class="img-responsive" width="800px" }
 2. Copy the URL of the service definition (![copy-URL](/img/contents/yunio/copyURL.png) icon) or download the service definition (![download-file](/img/contents/yunio/download.png) icon).<br>
 ![yunio-Services](/img/contents/yunio/yunio-run-services.png){:class="img-responsive" width="800px"}
