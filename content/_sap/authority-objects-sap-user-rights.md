@@ -116,22 +116,21 @@ S_RFC            RFC_TYPE=FUGR; RFC_NAME=AQRC; ACTVT=16
 
 ### Report
 
-Look up report, preview und execute:
+Look up reports and TxCodes, preview und execute:
 
 ```
 S_RFC            RFC_TYPE=FUGR; RFC_NAME=ZXTRACTABAP; ACTVT=16
+S_TABU_NAM       ACTVT=03; TABLE=TRDIR, TRDIRT, TSTC, VARID
 S_GUI            ACTVT=61 
 ```
 
-Look up a report, preview and execute the report in a batch job.
+Execute the report as a **batch job**.
 
 ```
-S_RFC            RFC_TYPE=FUGR; RFC_NAME=ZXTRACTABAP; ACTVT=16
 S_TABU_DIS       ACTVT=03; DICBERCLS=&NC& 
 S_TABU_DIS       ACTVT=03; DICBERCLS=SS
 S_BTCH_ADM       BTCADMIN=Y
 S_BTCH_JOB       JOBGROUP=*; JOBACTION=RELE
-S_GUI            ACTVT=61
 ```
 
 {: .box-note }
