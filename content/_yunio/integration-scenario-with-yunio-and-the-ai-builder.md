@@ -68,9 +68,9 @@ To automatically extract invoicing information with the AI Builder tool from ran
 
 1. Follow the steps described in the [Microsoft AI Builder Documentation](https://docs.microsoft.com/en-gb/ai-builder/flow-invoice-processing) to create a new Power Automate flow that uses the invoice processing pre-built model of AI Builder.
 2. Add an *Initialize variable* action after the AI Builder action. 
-This variable is used to automatically convert extracted dates into an SAP compliant format, i.e. the document date, 
-the posting date and the billing date required for incoming invoice creation in SAP. 
-3. Map the field *Invoice Date (Date)* returned from the AI Builder action to field *Value* of the *Initialize variable* action.<br>
+This variable is used to automatically convert extracted dates into an SAP compliant format. 
+3. Map the field *Invoice Date (Date)* returned from the AI Builder action to field *Value* of the *Initialize variable* action.
+For simplicity reasons this example uses only one date variable for the fields DOC_DATE, PSTNG_DATE and BLING_DATE. <br>
 ![Power-Automate-initialize-variable.png](/img/contents/yunio/yunio-power-automate-initialize-variable.png){:class="img-responsive"}
 4. Add the yunIO custom connector for incoming invoice creation.
 5. Map the required output fields of the AI Builder action to the matching parameters of the custom connector. 
