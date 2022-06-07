@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.29.12 [M]|2022-06-07|ODP|Fixed a bug that caused extractions to fail with "Expected new buffer marker" error|
 |1.29.11 [L]|2022-06-02|BW Cube|MDX mode: invalid measure values 'X' are now written to the output as NULL.|
 |1.29.10 [L]|2022-06-01|BW Cube|Fix for disabled measures/dimensions tree in MDX mode when a query does not have any measures.|
 |[1.29.9 [L]](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.29.9.html)|2022-05-30|BW Cube|Support for Only_Structures behavior in MDX BEx Queries. Various bug fixes and general improvements for the Cube component.([Release note](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.29.9.html))|
