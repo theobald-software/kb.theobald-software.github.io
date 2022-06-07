@@ -24,7 +24,7 @@ For more information on creating a service, see [Creating a Service](https://hel
 
 
 {: .box-note }
-**Note:** The integration type *Transaction* is currently marked as "experimental" and is not fully funcional. 
+**Note:** The integration type *Transaction* is currently marked as "experimental" and is not fully functional. 
 Future versions will work with any SAP transaction code.
 
 {: .box-tip }

@@ -78,8 +78,7 @@ Keep in mind that some fields need fixed values required by SAP (INVOICESTATUS, 
 Because the table ITEMDATA is used in a BAPI that can process multiple invoice items, Power Automate automatically sets an *Apply to each* action as the next workflow step. 
 This example demonstrates a simple case with a single invoice line item. 
 ![Power-Automate-AI-Builder-mapping1.png](/img/contents/yunio/yunio-power-automate-ai-builder-mapping1.png){:class="img-responsive"}
-6. Use an expression to automatically convert the date fields into an SAP compliant format. 
-For more information on date conversion and other useful converting functions, see [Conversion Function in Power Automate](#creating-a-power-automate-flow-for-invoice-processing). 
+6. Use an expression to automatically convert the date fields into an SAP compliant format, see [Formats and Conversions in Power Automate](./conversion-in-power-automate). 
 7. Optional: Add an email notification action to get notified about the newly created incoming invoice.
 Use the output parameters INVOICEDOCNUMBER and FISCALYEAR in the notification email to see if the invoice was successfully created.
 Other SAP output information (i.e. table RETURN) can be extracted to analyze the data in case of workflow failures. <br>
