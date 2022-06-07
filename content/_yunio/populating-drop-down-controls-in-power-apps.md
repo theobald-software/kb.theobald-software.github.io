@@ -39,8 +39,8 @@ For more information on how to create services, see [Online Help: Creating a Ser
 **Tip:** It is recommended to test a yunIO service in a REST client before integrating it with a Micrososft Power Platform, see [Running a yunIO Service in Swagger Inspector](https://kb.theobald-software.com/yunio/running-a-yunio-service-in-swagger-inspector) or [Running a yunIO Service in Postman](https://kb.theobald-software.com/yunio/running-a-yunio-service-in-postman). 
 
 ### Other Prerequisites
-- When integrating services from a local yunIO installation with a cloud hosted platform like Power Apps, a gateway is needed to tunnel the connection e.g., the [**Microsoft On-premises data gateway**](https://docs.microsoft.com/en-us/data-integration/gateway/).
-You decide which gateway solution you want to use. Install and configure the gateway.
+- When integrating services from a local yunIO installation with a cloud hosted platform like Power Automate, a gateway is to tunnel the connection is recommended, e.g., the [**Microsoft On-premises data gateway**](https://docs.microsoft.com/en-us/data-integration/gateway/).
+For more information about yunIO networking settings, see [yunIO Networking Scenarios](https://kb.theobald-software.com/yunio/networking).
 
 ### Configuring a yunIO Custom Connector in Power Automate
 

@@ -14,8 +14,8 @@ The following example scenario uses an AI Builder template in Power Automate to 
 In the SAP system an incoming invoice for a previously created purchase order is booked.
  
 ### Prerequisites
-- When integrating services from a local yunIO installation with a cloud hosted platform like Power Automate, a gateway is needed to tunnel the connection e.g., the [**Microsoft On-premises data gateway**](https://docs.microsoft.com/en-us/data-integration/gateway/).
-You decide which gateway solution you want to use. Install and configure the gateway.
+- When integrating services from a local yunIO installation with a cloud hosted platform like Power Automate, a gateway is to tunnel the connection is recommended, e.g., the [**Microsoft On-premises data gateway**](https://docs.microsoft.com/en-us/data-integration/gateway/).
+For more information about yunIO networking settings, see [yunIO Networking Scenarios](https://kb.theobald-software.com/yunio/networking).
 - The process for incoming invoice creation must be customized and ready to use in SAP.  
 - Test the BAPI/function call in SAP with transaction SE37 before building the web service. Note which parameters are needed for the call.
 
@@ -43,7 +43,7 @@ This example uses the BAPI_INCOMINGINVOICE_CREATE1 to create an incoming invoice
 - PMTMTHSUPL (Payment Method Supplement)<br>
 - INVOICESTATUS	(Invoice Document Status)<br>
 3. Select export parameters FISCALYEAR (Fiscal Year) and INVOICEDOCUMENTNUMBER (Document Number of an Invoice Document) for the output.  
-4. Select the Table *RETURN* for the output and set the following fields of table ITEAMDATA to *Supplied by Caller*:<br>
+4. Select the Table *RETURN* for the output and set the following fields of table ITEMDATA to *Supplied by Caller*:<br>
 - INVOICE_DOC_ITEM (Document Item in Invoice Document)<br>
 - PO_NUMBER (Purchase Order Number)<br>
 - PO_ITEM (Item Number of Purchasing Document)<br>
@@ -75,10 +75,12 @@ the posting date and the billing date required for incoming invoice creation in 
 4. Add the yunIO custom connector for incoming invoice creation.
 5. Map the required output fields of the AI Builder action to the matching parameters of the custom connector. 
 Keep in mind that some fields need fixed values required by SAP (INVOICESTATUS, INVOICE_IND,...), while others need output values from the invoice document extracted with the AI Builder action (DOC_DATE,...).<br>
+Because the table ITEMDATA is used in a BAPI that can process multiple invoice items, Power Automate automatically sets an *Apply to each* action as the next workflow step. 
+This example demonstrates a simple case with a single invoice line item. 
 ![Power-Automate-AI-Builder-mapping1.png](/img/contents/yunio/yunio-power-automate-ai-builder-mapping1.png){:class="img-responsive"}
 6. Use an expression to automatically convert the date fields into an SAP compliant format. 
 For more information on date conversion and other useful converting functions, see [Conversion Function in Power Automate](#creating-a-power-automate-flow-for-invoice-processing). 
-7. Optional: add an email notification action to get notified about the newly created incoming invoice.
+7. Optional: Add an email notification action to get notified about the newly created incoming invoice.
 Use the output parameters INVOICEDOCNUMBER and FISCALYEAR in the notification email to see if the invoice was successfully created.
 Other SAP output information (i.e. table RETURN) can be extracted to analyze the data in case of workflow failures. <br>
 ![Power-Automate-email-notification-invoice.png](/img/contents/yunio/yunio-power-automate-notification-invoice.png){:class="img-responsive"}
