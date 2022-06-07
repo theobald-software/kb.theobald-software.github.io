@@ -59,7 +59,7 @@ This example uses the BAPI_INCOMINGINVOICE_CREATE1 to create an incoming invoice
 
 ### Configuring a yunIO Custom Connector in Power Automate
 
-To use the service created in [Prerequisites in yunIO](#prerequisites-in-yunio) with Power Apps, it must be available as a custom connector in Power Automate. 
+To use the service created in [Creating a Service in yunIO](#creating-a-service-in-yunio) with Power Apps, it must be available as a custom connector in Power Automate. 
 For information on how to integrate a yunIO service with Power Automate, see [Integrating a yunIO Service with Power Automate](https://kb.theobald-software.com/yunio/integrating-a-yunio-service-with-power-automate).
 
 ### Creating a Power Automate Flow for Invoice processing
