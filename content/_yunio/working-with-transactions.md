@@ -1,14 +1,9 @@
 ---
-ref: xtract-universal-19
 layout: page
 title: Working with Transactions
 description: Creating Equipment Using Transactions in yunIO
-product: xtract-universal
-parent: xtract-universal
 permalink: /:collection/:path
-weight: 90
-lang: en_GB
-progressstate: 5
+weight: 5
 ---
 
 This article shows how to use the integration type *Transaction* in yunIO.<br>
