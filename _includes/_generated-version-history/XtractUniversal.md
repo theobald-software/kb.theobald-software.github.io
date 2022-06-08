@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.9.0 [L]|2022-06-08|General|Removed support for legacy DLL licenses|
 |5.8.15 [L]|2022-06-07|Designer|Azure Storage destination now logs the requests made to Azure.|
 |5.8.14 [L]|2022-06-03|Designer|Fixed a bug, where after changing the service account sources would no longer be editable.|
 |5.8.13 [L]|2022-06-02|Destinations|Introduced truncate only statement for Snowflake destination|
