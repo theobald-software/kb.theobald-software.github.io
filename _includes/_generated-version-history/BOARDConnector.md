@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.7.0 [L]|2022-06-08|General|Removed support for legacy DLL licenses|
 |5.6.3 [L]|2022-06-01|General|The RPC server and persistence do now support subdirectories. (Not implemented in Designer and Runtime)|
 |5.6.2 [L]|2022-05-18|General|Fixed a bug where when changing the server configuration, the server would not restart when the user selected 'yes' when being asked for a restart|
 |5.6.1 [L]|2022-05-17|Designer|Fix for change source window call|
