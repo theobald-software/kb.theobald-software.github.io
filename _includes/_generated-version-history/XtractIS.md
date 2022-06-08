@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.14.0 [L]|2022-06-08|General|Removed support for legacy DLL licenses|
 |6.13.1 [M]|2022-06-02|BAPI|Fixed several issues related to the conversion of legacy BAPI tables |
 |6.13.0 [L]|2022-04-25|Table|Added graphical where clause editor.|
 |6.12.1 [M]|2022-04-11|BAPI|Fixed an issue where the component could not be edited when there are variables/parameters of type DateTime defined in the package|
