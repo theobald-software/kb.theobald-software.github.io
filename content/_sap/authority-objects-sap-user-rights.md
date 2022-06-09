@@ -123,7 +123,7 @@ S_RO_OSOA        OLTPSOURCE=*; OSOAAPCO=*; OSOAPART=DATA, DEFINITION; ACTVT=03
 
 ### BAPI
 
-Authority objects needed for the BAPI's / Custom Function Modules:
+Look up a BAPI extraction:
 
 ```
 S_RFC            ACTVT=16; RFC_TYPE=FUGR; RFC_NAME=DDIF_FIELDINFO_GET, SDIFRUNTIME                 
