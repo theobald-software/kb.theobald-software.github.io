@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.29.13 [L]|2022-06-09|General|Added unit and integration tests for Table Extractor|
 |1.29.12 [M]|2022-06-07|ODP|Fixed a bug that caused extractions to fail with "Expected new buffer marker" error|
 |1.29.11 [L]|2022-06-02|BW Cube|MDX mode: invalid measure values 'X' are now written to the output as NULL.|
 |1.29.10 [L]|2022-06-01|BW Cube|Fix for disabled measures/dimensions tree in MDX mode when a query does not have any measures.|
