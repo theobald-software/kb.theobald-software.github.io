@@ -71,6 +71,61 @@ When using "Adjust currency decimals" setting:
 S_TABU_NAM       ACTVT=03; TABLE=TCURX
 ```
 
+### Report
+
+Look up reports and TxCodes, preview und execute:
+
+```
+S_RFC            RFC_TYPE=FUGR; RFC_NAME=ZXTRACTABAP; ACTVT=16
+S_TABU_NAM       ACTVT=03; TABLE=TRDIR, TRDIRT, TSTC, VARID
+S_GUI            ACTVT=61 
+```
+
+Execute the report as a **batch job**.
+
+```
+S_TABU_DIS       ACTVT=03; DICBERCLS=&NC& 
+S_TABU_DIS       ACTVT=03; DICBERCLS=SS
+S_BTCH_ADM       BTCADMIN=Y
+S_BTCH_JOB       JOBGROUP=*; JOBACTION=RELE
+```
+
+{: .box-note }
+**Note** The needed transport request for function group *ZXTRACTABAP* is located in the following path: ```C:\Program Files\[XtractProduct]\ABAP\Report\Z_XTRACT_IS_REMOTE_REPORT-transport.zip``` of the default installation.
+
+### SAP Query
+
+Look up and execute a query:
+
+```
+S_RFC            RFC_TYPE=FUGR; RFC_NAME=AQRC; ACTVT=16 
+```
+
+### ODP
+
+A complete and detailed list of authorization objects refer to [SAP Note 2855052](https://launchpad.support.sap.com/#/notes/2855052) - Authorizations required for ODP Data Replication API 2.0. 
+
+When using "Adjust currency decimals" setting:
+```
+S_TABU_NAM       ACTVT=03; TABLE=TCURX
+```
+
+<!---
+Authority objects needed for the Operational Data Provisioning (ODP):
+```
+S_RFC            RFC_TYPE=FUGR,FUNC; RFC_NAME=RODPS_REPL; ACTVT=16                  
+S_TCODE          TCD=BSANL_ACWB, ODQMON, RODPS_ODP_IMG, RSO2, RSOR, RSRTS_ODP_DIS            
+S_ADMI_FCD       Value=NADM 
+S_APPL_LOG       ALG_OBJECT=ODQ; ALG_SUBOBJ=*; ACTVT=03, 06
+S_RO_OSOA        OLTPSOURCE=*; OSOAAPCO=*; OSOAPART=DATA, DEFINITION; ACTVT=03
+```
+--->
+
+### BAPI
+
+```
+S_RFC            ACTVT=16; RFC_TYPE=FUGR; RFC_NAME=DDIF_FIELDINFO_GET, SDIFRUNTIME                 
+```
 
 ### BW Query / BW Cube
 
@@ -106,56 +161,6 @@ S_ADMI_FCD       S_ADMI_FCD=PADM;
 
 Alternatively, you can assign pfcg template *S_RS_RREPU - BW Role: Reporting User*. This template contains above authorizations except for S_ADMI_FCD.
 
-### SAP Query
-
-Look up and execute a query:
-
-```
-S_RFC            RFC_TYPE=FUGR; RFC_NAME=AQRC; ACTVT=16 
-```
-
-### Report
-
-Look up reports and TxCodes, preview und execute:
-
-```
-S_RFC            RFC_TYPE=FUGR; RFC_NAME=ZXTRACTABAP; ACTVT=16
-S_TABU_NAM       ACTVT=03; TABLE=TRDIR, TRDIRT, TSTC, VARID
-S_GUI            ACTVT=61 
-```
-
-Execute the report as a **batch job**.
-
-```
-S_TABU_DIS       ACTVT=03; DICBERCLS=&NC& 
-S_TABU_DIS       ACTVT=03; DICBERCLS=SS
-S_BTCH_ADM       BTCADMIN=Y
-S_BTCH_JOB       JOBGROUP=*; JOBACTION=RELE
-```
-
-{: .box-note }
-**Note** The needed transport request for function group *ZXTRACTABAP* is located in the following path: ```C:\Program Files\[XtractProduct]\ABAP\Report\Z_XTRACT_IS_REMOTE_REPORT-transport.zip``` of the default installation.
-
-
-### ODP
-
-A complete and detailed list of authorization objects refer to [SAP Note 2855052](https://launchpad.support.sap.com/#/notes/2855052) - Authorizations required for ODP Data Replication API 2.0. 
-
-When using "Adjust currency decimals" setting:
-```
-S_TABU_NAM       ACTVT=03; TABLE=TCURX
-```
-
-<!---
-Authority objects needed for the Operational Data Provisioning (ODP):
-```
-S_RFC            RFC_TYPE=FUGR,FUNC; RFC_NAME=RODPS_REPL; ACTVT=16                  
-S_TCODE          TCD=BSANL_ACWB, ODQMON, RODPS_ODP_IMG, RSO2, RSOR, RSRTS_ODP_DIS            
-S_ADMI_FCD       Value=NADM 
-S_APPL_LOG       ALG_OBJECT=ODQ; ALG_SUBOBJ=*; ACTVT=03, 06
-S_RO_OSOA        OLTPSOURCE=*; OSOAAPCO=*; OSOAPART=DATA, DEFINITION; ACTVT=03
-```
---->
 
 ### DeltaQ
 
