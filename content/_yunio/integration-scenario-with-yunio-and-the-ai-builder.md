@@ -7,9 +7,10 @@ weight: 3
 ---
 
 This article shows how to integrate yunIO with Microsoft Power Automate and the [Microsoft AI Builder](https://docs.microsoft.com/en-gb/ai-builder/overview).<br>
-
 AI Builder enables the usage of artificial intelligence to automate processes in Power Apps and Power Automate.
 Microsoft offers pre-built AI models to start using the tool without training the AI model first.
+
+### About
 The following example scenario uses an AI Builder template in Power Automate to automatically extract and post invoice information to the backend SAP ERP system. 
 In the SAP system an incoming invoice for a previously created purchase order is booked.
  
@@ -24,7 +25,7 @@ For more information about yunIO networking settings, see [yunIO Networking Scen
 Create a yunIO service for incoming invoices.<br>
 Note that the parameters that are needed to create an incoming invoice are dependent on your customized SAP settings for the invoicing process.
 
-1. Create a service in yunIO of type *Function Module / BAPI*. <br>
+1. Create a service in yunIO. Select *Function Module / BAPI* as the extraction type for the service. <br>
 This example uses the BAPI_INCOMINGINVOICE_CREATE1 to create an incoming invoice in SAP. 
 2. Set the following import parameters to *Supplied by Caller* (Structure *HEADERDATA*):<br>
 - INVOICE_IND (Indicator: post invoice)<br>

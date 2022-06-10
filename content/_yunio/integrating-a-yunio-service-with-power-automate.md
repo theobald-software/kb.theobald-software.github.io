@@ -12,7 +12,12 @@ Power Automate is a cloud-based process automation service provided by Microsoft
 The platform can be used to create automated workflows between different cloud apps and services that synchronize and collect data, get notifications, start approvals, and more. 
 For more Information on Power Automate see [Microsoft Power Automate Documentation](https://docs.microsoft.com/en-us/power-automate/).
 
-### Prerequisites in yunIO
+
+### Prerequisites
+- When integrating services from a local yunIO installation with a cloud hosted platform like Power Automate, a gateway is to tunnel the connection is recommended, e.g., the [**Microsoft On-premises data gateway**](https://docs.microsoft.com/en-us/data-integration/gateway/).
+For more information about yunIO networking settings, see [yunIO Networking Scenarios](https://kb.theobald-software.com/yunio/networking).
+
+### Creating a Service in yunIO
 
 1. Create a service in yunIO. For this example we use the BAPI SD_RFC_CUSTOMER_GET to search and extract customer data from SAP. 
 The service has the following settings:<br>
@@ -24,9 +29,6 @@ The service has the following settings:<br>
 {: .box-tip }
 **Tip:** It is recommended to test a yunIO service in a REST client before integrating it with Power Automate, see [Running a yunIO Service in Swagger Inspector](https://kb.theobald-software.com/yunio/running-a-yunio-service-in-swagger-inspector) or [Running a yunIO Service in Postman](https://kb.theobald-software.com/yunio/running-a-yunio-service-in-postman). 
 
-### Other Prerequisites
-- When integrating services from a local yunIO installation with a cloud hosted platform like Power Automate, a gateway is to tunnel the connection is recommended, e.g., the [**Microsoft On-premises data gateway**](https://docs.microsoft.com/en-us/data-integration/gateway/).
-For more information about yunIO networking settings, see [yunIO Networking Scenarios](https://kb.theobald-software.com/yunio/networking).
 
 ### Configuring a yunIO Custom Connector in Power Automate
 
@@ -57,7 +59,7 @@ For more information on how to test yunIO services in Swagger Inspector, refer t
 
 ### Testing the Service
 
-In the **Test** tab the custom connector can be tested. <br>
+The custom connector can be tested in the **Test** tab. <br>
 - Create a connection with **+ New connection**. 
 - Enter the credentials of the SAP user you have defined in the yunIO connection settings. If you selected to connect via an on-premises gateway in the *General* tab, select your gateway instance.
 - Confirm the settings with **Create connection**.   

@@ -16,8 +16,11 @@ The following 3 examples for SAP interaction with drop down controls in Power Ap
 - Populating a drop down control with SAP table data using a search filter.
 - Populating a drop down control with SAP data returned from a function module call. <!--- The input parameter\ search filter is provided by a separate input box.  -->
 
+### Prerequisites
+- When integrating services from a local yunIO installation with a cloud hosted platform like Power Automate, a gateway is to tunnel the connection is recommended, e.g., the [**Microsoft On-premises data gateway**](https://docs.microsoft.com/en-us/data-integration/gateway/).
+For more information about yunIO networking settings, see [yunIO Networking Scenarios](https://kb.theobald-software.com/yunio/networking).
 
-### Prerequisites in yunIO
+### Creating a Service in yunIO
 
 1. The example applications in this article use multiple yunIO services. Create the following 3 services in yunIO: 
 - Create a Table service to query data from the SAP table MAKT with the following settings:<br>
@@ -38,13 +41,10 @@ For more information on how to create services, see [Online Help: Creating a Ser
 {: .box-tip }
 **Tip:** It is recommended to test a yunIO service in a REST client before integrating it with a Microsoft Power Platform, see [Running a yunIO Service in Swagger Inspector](https://kb.theobald-software.com/yunio/running-a-yunio-service-in-swagger-inspector) or [Running a yunIO Service in Postman](https://kb.theobald-software.com/yunio/running-a-yunio-service-in-postman). 
 
-### Other Prerequisites
-- When integrating services from a local yunIO installation with a cloud hosted platform like Power Automate, a gateway is to tunnel the connection is recommended, e.g., the [**Microsoft On-premises data gateway**](https://docs.microsoft.com/en-us/data-integration/gateway/).
-For more information about yunIO networking settings, see [yunIO Networking Scenarios](https://kb.theobald-software.com/yunio/networking).
 
 ### Configuring a yunIO Custom Connector in Power Automate
 
-To use the service created in [Prerequisites in yunIO](#prerequisites-in-yunio) with Power Apps, it must be available as a custom connector in Power Automate. 
+To use the service created in [Creating a Service in yunIO](##creating-a-service-in-yunio) with Power Apps, it must be available as a custom connector in Power Automate. 
 For information on how to integrate a yunIO service with Power Automate, see [Integrating a yunIO Service with Power Automate](https://kb.theobald-software.com/yunio/integrating-a-yunio-service-with-power-automate). 
 
 
