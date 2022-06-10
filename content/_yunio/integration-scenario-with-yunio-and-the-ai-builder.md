@@ -42,14 +42,15 @@ This example uses the BAPI_INCOMINGINVOICE_CREATE1 to create an incoming invoice
 - PMTMTHSUPL (Payment Method Supplement)<br>
 - INVOICESTATUS	(Invoice Document Status)<br>
 3. Select export parameters FISCALYEAR (Fiscal Year) and INVOICEDOCUMENTNUMBER (Document Number of an Invoice Document) for the output.  
-4. Select the Table *RETURN* for the output and set the following fields of table ITEMDATA to *Supplied by Caller*:<br>
+4. Select the Table *RETURN* for the output.
+5. Set the following fields of table ITEMDATA to *Supplied by Caller*:<br>
 - INVOICE_DOC_ITEM (Document Item in Invoice Document)<br>
 - PO_NUMBER (Purchase Order Number)<br>
 - PO_ITEM (Item Number of Purchasing Document)<br>
 - ITEM_AMOUNT (Amount in document currency)<br>
 - QUANTITY (Quantity)<br>
 - PO_UNIT (Purchase Order Unit of Measure)	<br>
-5. Download the service definition (![download-file](/img/contents/yunio/download.png) icon).<br>
+6. Download the service definition (![download-file](/img/contents/yunio/download.png) icon).<br>
 ![yunio-Services-Function-Download](/img/contents/yunio/yunio-run-services-function-download-invoices.png){:class="img-responsive" width="800px"}
 
 {: .box-tip }
