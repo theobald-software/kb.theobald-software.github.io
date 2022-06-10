@@ -25,10 +25,9 @@ The service has the following settings:<br>
 **Tip:** It is recommended to test a yunIO service in a REST client before integrating it with Power Automate, see [Running a yunIO Service in Swagger Inspector](https://kb.theobald-software.com/yunio/running-a-yunio-service-in-swagger-inspector) or [Running a yunIO Service in Postman](https://kb.theobald-software.com/yunio/running-a-yunio-service-in-postman). 
 
 ### Other Prerequisites
-When integrating services from a local yunIO installation with a cloud hosted platform like Power Automate, a gateway is needed to tunnel the connection e.g., the [**Microsoft On-premises data gateway**](https://docs.microsoft.com/en-us/data-integration/gateway/).
-You decide which gateway solution you want to use.<br> 
-If you choose the **Microsoft On-premises data gateway**, install and configure the gateway before proceeding to the next steps.
- 
+- When integrating services from a local yunIO installation with a cloud hosted platform like Power Automate, a gateway is to tunnel the connection is recommended, e.g., the [**Microsoft On-premises data gateway**](https://docs.microsoft.com/en-us/data-integration/gateway/).
+For more information about yunIO networking settings, see [yunIO Networking Scenarios](https://kb.theobald-software.com/yunio/networking).
+
 ### Configuring a yunIO Custom Connector in Power Automate
 
 1. Open the section **Data > Custom Connectors** in Power Automate and click on **+ New custom connector**.
@@ -86,5 +85,5 @@ After a connector is successfully tested, it can be used in a Flow.
 ******
 
 #### Related Links
-- [Youtube Tutorial: SAP process automation | Power Automate SAP Connector](https://www.youtube.com/watch?v=A-2cOpGmCJ8)
+- [Youtube Tutorial: SAP process automation - Power Automate SAP Connector](https://www.youtube.com/watch?v=A-2cOpGmCJ8)
 - [yunIO Help: How to Run a Service](https://help.theobald-software.com/en/yunio#how-to-run-a-service)
