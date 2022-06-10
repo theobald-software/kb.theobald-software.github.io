@@ -13,10 +13,6 @@ The platform can be used to create automated workflows between different cloud a
 For more Information on Power Automate see [Microsoft Power Automate Documentation](https://docs.microsoft.com/en-us/power-automate/).
 
 
-### Prerequisites
-- When integrating services from a local yunIO installation with a cloud hosted platform like Power Automate, a gateway is to tunnel the connection is recommended, e.g., the [**Microsoft On-premises data gateway**](https://docs.microsoft.com/en-us/data-integration/gateway/).
-For more information about yunIO networking settings, see [yunIO Networking Scenarios](https://kb.theobald-software.com/yunio/networking).
-
 ### Creating a Service in yunIO
 
 1. Create a service in yunIO. For this example we use the BAPI SD_RFC_CUSTOMER_GET to search and extract customer data from SAP. 
@@ -31,6 +27,10 @@ The service has the following settings:<br>
 
 
 ### Configuring a yunIO Custom Connector in Power Automate
+
+{: .box-note }
+**Note:** When integrating services from a local yunIO installation with a cloud hosted platform like Power Automate, a gateway is to tunnel the connection is recommended, e.g., the [**Microsoft On-premises data gateway**](https://docs.microsoft.com/en-us/data-integration/gateway/).
+For more information about yunIO networking settings, see [yunIO Networking Scenarios](https://kb.theobald-software.com/yunio/networking).
 
 1. Open the section **Data > Custom Connectors** in Power Automate and click on **+ New custom connector**.
 2. Click on **Import an OpenAPI file** and give the connector a name of your choice. Select the service definition from [Prerequisites in yunIO](#prerequisites-in-yunio) from your harddrive and click **Continue**. 

@@ -10,15 +10,12 @@ This article shows how to integrate yunIO services with Microsoft Power Apps.<br
 Power Apps is a cloud-based platform to build custom business applications based on different data sources.
 For more Information on Power Apps, see [Microsoft Power Apps Documentation](https://docs.microsoft.com/en-us/powerapps/).
 
-### About 
+### About
 The following 3 examples for SAP interaction with drop down controls in Power Apps are documented in this article:
 - Populating a drop down control with SAP table data without a search filter.
 - Populating a drop down control with SAP table data using a search filter.
 - Populating a drop down control with SAP data returned from a function module call. <!--- The input parameter\ search filter is provided by a separate input box.  -->
 
-### Prerequisites
-- When integrating services from a local yunIO installation with a cloud hosted platform like Power Automate, a gateway is to tunnel the connection is recommended, e.g., the [**Microsoft On-premises data gateway**](https://docs.microsoft.com/en-us/data-integration/gateway/).
-For more information about yunIO networking settings, see [yunIO Networking Scenarios](https://kb.theobald-software.com/yunio/networking).
 
 ### Creating a Service in yunIO
 
@@ -36,7 +33,7 @@ Select all fields in the table *CUSTOMER_T* for the output.<br>
 For more information on how to create services, see [Online Help: Creating a Service](https://help.theobald-software.com/en/yunio/getting-started#creating-a-service).
 
 {: .box-note }
-**Note:**  In Power Apps every data source is limited to 500 items. Therefore, it is recommended to pre-filter requests to a manageable amount of data e.g., by using a row limit in the yunIO service. 
+**Note:** In Power Apps every data source is limited to 500 items. Therefore, it is recommended to pre-filter requests to a manageable amount of data e.g., by using a row limit in the yunIO service. 
 
 {: .box-tip }
 **Tip:** It is recommended to test a yunIO service in a REST client before integrating it with a Microsoft Power Platform, see [Running a yunIO Service in Swagger Inspector](https://kb.theobald-software.com/yunio/running-a-yunio-service-in-swagger-inspector) or [Running a yunIO Service in Postman](https://kb.theobald-software.com/yunio/running-a-yunio-service-in-postman). 
@@ -47,6 +44,9 @@ For more information on how to create services, see [Online Help: Creating a Ser
 To use the service created in [Creating a Service in yunIO](##creating-a-service-in-yunio) with Power Apps, it must be available as a custom connector in Power Automate. 
 For information on how to integrate a yunIO service with Power Automate, see [Integrating a yunIO Service with Power Automate](https://kb.theobald-software.com/yunio/integrating-a-yunio-service-with-power-automate). 
 
+{: .box-note }
+**Note:** When integrating services from a local yunIO installation with a cloud hosted platform like Power Automate, a gateway is to tunnel the connection is recommended, e.g., the [**Microsoft On-premises data gateway**](https://docs.microsoft.com/en-us/data-integration/gateway/).
+For more information about yunIO networking settings, see [yunIO Networking Scenarios](https://kb.theobald-software.com/yunio/networking).
 
 ### Using yunIO Services in Power Apps
 

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Integation Scenario with yunIO and AI Builder
+title: Integating a YunIO Scenario with Power Automate and AI Builder
 description: Integation scenario with yunIO and the AI Builder
 permalink: /:collection/:path
 weight: 3
@@ -9,14 +9,10 @@ weight: 3
 This article shows how to integrate yunIO with Microsoft Power Automate and the [Microsoft AI Builder](https://docs.microsoft.com/en-gb/ai-builder/overview).<br>
 AI Builder enables the usage of artificial intelligence to automate processes in Power Apps and Power Automate.
 Microsoft offers pre-built AI models to start using the tool without training the AI model first.
-
-### About
 The following example scenario uses an AI Builder template in Power Automate to automatically extract and post invoice information to the backend SAP ERP system. 
 In the SAP system an incoming invoice for a previously created purchase order is booked.
  
 ### Prerequisites
-- When integrating services from a local yunIO installation with a cloud hosted platform like Power Automate, a gateway is to tunnel the connection is recommended, e.g., the [**Microsoft On-premises data gateway**](https://docs.microsoft.com/en-us/data-integration/gateway/).
-For more information about yunIO networking settings, see [yunIO Networking Scenarios](https://kb.theobald-software.com/yunio/networking).
 - The process for incoming invoice creation must be customized and ready to use in SAP.  
 - Test the BAPI/function call in SAP with transaction SE37 before building the web service. Note which parameters are needed for the call.
 
@@ -62,6 +58,10 @@ This example uses the BAPI_INCOMINGINVOICE_CREATE1 to create an incoming invoice
 
 To use the service created in [Creating a Service in yunIO](#creating-a-service-in-yunio) with Power Automate, it must be available as a custom connector in Power Automate. 
 For information on how to integrate a yunIO service with Power Automate, see [Integrating a yunIO Service with Power Automate](https://kb.theobald-software.com/yunio/integrating-a-yunio-service-with-power-automate).
+
+{: .box-note }
+**Note:** When integrating services from a local yunIO installation with a cloud hosted platform like Power Automate, a gateway is to tunnel the connection is recommended, e.g., the [**Microsoft On-premises data gateway**](https://docs.microsoft.com/en-us/data-integration/gateway/).
+For more information about yunIO networking settings, see [yunIO Networking Scenarios](https://kb.theobald-software.com/yunio/networking).
 
 ### Creating a Power Automate Flow for Invoice processing
 
