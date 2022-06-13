@@ -68,7 +68,7 @@ For more information about yunIO networking settings, see [yunIO Networking Scen
 
 ### Creating a Power Automate Flow for Invoice processing
 
-To automatically extract invoicing information with the AI Builder tool from random invoicing PDF files and post this information to SAP.
+The following workflow automatically extracts invoicing information with the AI Builder tool from random invoicing PDF files and posts this information to SAP.
 
 1. Follow the steps described in the [Microsoft AI Builder Documentation](https://docs.microsoft.com/en-gb/ai-builder/flow-invoice-processing) to create a new Power Automate flow that uses the invoice processing pre-built model of AI Builder.
 2. Add an *Initialize variable* action after the AI Builder action. 
