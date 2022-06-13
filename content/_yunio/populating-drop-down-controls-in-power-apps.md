@@ -64,7 +64,7 @@ For more information, see [Microsoft: Formula separators and chaining operator](
 ![yunio-powerapps-add-datasources](/img/contents/yunio/yunio_powerapps_yunio_datasources.png){:class="img-responsive" width="800px"} 
 5. Customize the fields for populating the drop down controls with SAP values, see the examples below. 
 
-#### Example 1: Populating a Drop Down Control with SAP Table Data without a Search Filter
+### Example 1: Populating a Drop Down Control with SAP Table Data without a Search Filter
 
 The first example queries SAP table data for table CSKT (Cost Center Texts). The drop down control is populated without any search filtering.
 1. Use the following code in the *OnSelect* box of the dropdown control in the advanced settings: 
@@ -84,7 +84,7 @@ Concatenate(SAPData.KOSTL," ",SAPData.LTEXT)
 {: .box-tip }
 **Tip:** You can display a quick preview in the Power Apps studio by clicking **[Alt] + the drop down control**.  
 
-#### Example 2: Populating a Drop Down Control with SAP Table Data using a Search Filter
+### Example 2: Populating a Drop Down Control with SAP Table Data using a Search Filter
 The second example queries SAP table data for table MAKT (Material Descriptions). 
 The search field uses a Where Clause to filter the SAP table. 
 
@@ -115,7 +115,7 @@ If(CountRows(SAPResult)=1;Set(varinput_sap_material_number;false)
 
 ```
 
-#### Example 3: Populating a Drop Down Control with SAP Data returned from a Function Module Call
+### Example 3: Populating a Drop Down Control with SAP Data returned from a Function Module Call
 The third example calls the SAP function module SD_RFC_CUSTOMER_GET using an input parameter to display the table output (table CUSTOMER_T) in the drop down control. The input parameter is passed to 
 the function by a separate text input control. In this example the text input control enables searching for customer names (field NAME1).
 1. Use the following code in the *OnSelect* box of the drop down control in the advanced settings:
@@ -135,7 +135,7 @@ Concatenate(CustomerGetResult.NAME1," ",CustomerGetResult.KUNNR)
 ******
 
 #### Related Links
-- [Youtube Tutorial: SAP process automation] Power Automate SAP Connector](https://www.youtube.com/watch?v=A-2cOpGmCJ8)
+- [Youtube Tutorial: SAP process automation - Power Automate SAP Connector](https://www.youtube.com/watch?v=A-2cOpGmCJ8)
 - [Microsoft Documentation: Drop down control](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/controls/control-drop-down)
 - [Microsoft Documentation: Text input control](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/controls/control-text-input)
 - [yunIO Help: How to Run a Service](https://help.theobald-software.com/en/yunio#how-to-run-a-service)
