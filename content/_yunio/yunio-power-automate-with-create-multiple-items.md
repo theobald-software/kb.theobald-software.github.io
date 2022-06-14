@@ -57,8 +57,8 @@ For information on how to integrate a yunIO service with Power Automate, see [In
 For more information about yunIO networking settings, see [yunIO Networking Scenarios](https://kb.theobald-software.com/yunio/networking).
 
 ### Creating the Input Data 
-- Create data sets that include values for all fields in the table COSTCENTERLIST that are set to *Supplied by Caller* in the yunIO service.
-If needed, [download a sample EXCEL file (.xlsx)](/files/yunio/Create_Multiple_Cost_Centers.xlsx){:download="Create_Multiple_Cost_Centers.xlsx"}.<br>
+- Create data sets that include values for all fields in the table COSTCENTERLIST that are set to *Supplied by Caller* in the yunIO service.<br>
+If needed, [download a sample EXCEL file (.xlsx)](/files/yunio/Create_Multiple_Cost_Centers.xlsx){:download="Create_Multiple_Cost_Centers.xlsx"}.
 - Upload the data sets to the SharePoint document library or any other location that is accessible for Power Automate.
  
 ### Creating a Power Automate Flow for Multiple Items 
