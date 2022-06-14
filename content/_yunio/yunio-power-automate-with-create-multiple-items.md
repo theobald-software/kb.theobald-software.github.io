@@ -13,7 +13,8 @@ Power Automate is a cloud-based process automation service provided by Microsoft
 The following example scenario creates multiple cost centers in the SAP cost center master data. This article guides you through the following process:
 - Create a yunIO service that can handle multiple input values.
 - Create multiple data sets and that can be used as an input for the yunIO service.<br>
-In this example, multiple items are passed to the SAP function via an Excel spreadsheet. Other options are SharePoint lists, a Power App with Gallery Control for multiple line items, a Nintex Form with a repeating section and others.
+In this example, multiple items are passed to the SAP function via an Excel spreadsheet. 
+Other options are SharePoint lists, a Power App with *Gallery Control* for multiple line items, a Nintex Form with a repeating section and others.
 - Create a Power Automate workflow that reads and processes data from the input table to run the yunIO service.
 
 ### Creating a Service in yunIO
@@ -97,7 +98,8 @@ Enter a value for the import parameter CONTROLLINGAREA and assign the filled arr
 9. Optional: Add an email notification action to get notified about the newly created cost centers.
 10.	Test the workflow.<br>
 Check if the workflow steps are successfully executed one after the other.<br>
-Check if the cost centers from the input table are created in SAP.<br>
+Check if the cost centers from the input data sets are created in SAP (table CSKS).<br>
+![SAP_cost-centers](/img/contents/yunio/SAP_cost-centers.png){:class="img-responsive" width="800px"}
 
 ******
 
