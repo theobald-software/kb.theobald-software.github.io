@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Integating a YunIO Scenario with Power Automate and AI Builder
+title: Integating a yunIO Scenario with Power Automate and AI Builder
 description: Integation scenario with yunIO and the AI Builder
 permalink: /:collection/:path
 weight: 3
@@ -21,7 +21,9 @@ In the SAP system an incoming invoice for a previously created purchase order is
 ### Creating a Service in yunIO
 
 Create a yunIO service for incoming invoices.<br>
-Note that the parameters that are needed to create an incoming invoice are dependent on your customized SAP settings for the invoicing process.
+
+{: .box-note }
+**Note:** The parameters that are needed to create an incoming invoice are dependent on your customized SAP settings for the invoicing process.
 
 1. Create a service in yunIO. Select *Function Module / BAPI* as the extraction type for the service. <br>
 This example uses the BAPI_INCOMINGINVOICE_CREATE1 to create an incoming invoice in SAP. 
