@@ -53,5 +53,6 @@ Providing extraction dates is not necessary.
 ******
 
 #### Related Links
+- [Change Data Capture with CDHDR](https://kb.theobald-software.com/xtract-universal/change-data-capture-with-cdhdr)
 - [Table: WHERE Clause](https://help.theobald-software.com/en/xtract-universal/table/where-clause)
 - [Xtract Universal: Script Expressions](https://help.theobald-software.com/en/xtract-universal/advanced-techniques/script-expressions)
