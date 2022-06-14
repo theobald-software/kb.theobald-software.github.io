@@ -56,7 +56,7 @@ For information on how to integrate a yunIO service with Power Automate, see [In
 **Note:** When integrating services from a local yunIO installation with a cloud hosted platform like Power Automate, a gateway is to tunnel the connection is recommended, e.g., the [**Microsoft On-premises data gateway**](https://docs.microsoft.com/en-us/data-integration/gateway/).
 For more information about yunIO networking settings, see [yunIO Networking Scenarios](https://kb.theobald-software.com/yunio/networking).
 
-### Creating the Input Data 
+### Creating Input Data 
 - Create data sets that include values for all fields in the table COSTCENTERLIST that are set to *Supplied by Caller* in the yunIO service.<br>
 If needed, [download a sample EXCEL file (.xlsx)](/files/yunio/Create_Multiple_Cost_Centers.xlsx){:download="Create_Multiple_Cost_Centers.xlsx"}.
 - Upload the data sets to the SharePoint document library or any other location that is accessible for Power Automate.
