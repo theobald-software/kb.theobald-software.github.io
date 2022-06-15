@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|7.0.0 [M]|2022-06-15|General|Removed ERPConnect45.dll - please use ERPConnectStandard20.dll or ERPConnect35.dll instead|
 |[6.14.19 [L]](https://kb.theobald-software.com/release-notes/ERPConnect-6.14.19.html)|2022-05-17|Idoc|Fixed a bug where saving an Idoc schema incorrectly changed field names([Release note](https://kb.theobald-software.com/release-notes/ERPConnect-6.14.19.html))|
 |6.14.18 [L]|2022-05-10|RFC Client|Fixed a bug where tables with built-in types were not created correctly using R3Connection.CreateFunction|
 |6.14.17 [L]|2022-03-25|General|Introduced Interface IR3Connection to make consumers of R3Connection testable.|
