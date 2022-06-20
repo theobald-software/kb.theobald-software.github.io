@@ -13,19 +13,6 @@ This article describes the required steps for setting up Single Sign-On (SSO) wi
 ABAP application server has to run on a Windows OS and SNC with Kerberos encryption setup on SAP. <br>
 
 
-### What is SNC?
-
-Secure Network Connection (SNC) secures the data communication paths to your SAP system. 
-SNC offers cryptographic algorithms you can apply to your data for increased protection and application-level end-to-end security.<br>
-All communication that takes place between two SNC-protected components is secured e.g., between the SAP application server and Theobald products.
-
-There are three levels of security protection you can apply with SNC:
-- Authentication only
-- Integrity protection
-- Privacy protection
-
-For more information on SNC, see [SAP Help: SNC](https://help.sap.com/doc/saphelp_nw73ehp1/7.31.19/en-US/e6/56f466e99a11d1a5b00000e835363f/content.htm?no_cache=true).
-
 ### Activation of HTTPS 
 
 1. Enable access control protocol HTTPS (1) within the tab *Web Server* settings.
@@ -100,3 +87,7 @@ e.g., `C:\SNC\gx64krb5.dll` (3).
 
 In SAP, apply the Kerberos SNC settings as described in the [SAP Help](https://help.sap.com/viewer/e815bb97839a4d83be6c4fca48ee5777/7.5.9/EN-US/440ebf6c9b2b0d1ae10000000a114a6b.html).
 
+#### Related Links
+- [Online Help: SSO and SNC with Kerberos Wrapper Library](https://help.theobald-software.com/en/xtract-universal/advanced-techniques/sap-single-sign-on#sso-and-snc-with-kerberos-wrapper-library)
+- [Online Help: X.509 certificate](https://help.theobald-software.com/en/xtract-universal/security/install-x.509-Certificate)
+- [Running the Xtract Universal Service under a Windows Service Account](https://help.theobald-software.com/en/xtract-universal/advanced-techniques/service-account).
