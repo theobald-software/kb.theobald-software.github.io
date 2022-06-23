@@ -19,7 +19,7 @@ The following code adds leading zeros to a variable *strValue*: <br>
 ### Date Conversion
 
 When working with yunIO dates use the SAP format "yyyyMMdd".<br>
-The following code converts German ("dd.MM.yyyy") and US ("MM/dd/yyyy") dates to the SAP date format ("yyyyMMdd"):
+The following code converts German ("dd.MM.yyyy") and US ("MM/dd/yyyy") dates to the SAP date format ("yyyyMMdd") for variable *strDate*:
 
 ```
 concat(
