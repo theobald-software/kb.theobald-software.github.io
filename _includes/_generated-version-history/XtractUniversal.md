@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.9.3 [L]|2022-06-23|Destinations|Alteryx: Fixed a bug that caused errors when disabling date conversion|
 |5.9.2 [L]|2022-06-17|Designer|Fixed a bug which cause threading related exceptions in various dialogs.|
 |5.9.1 [L]|2022-06-10|Destinations|Fix for Snowflake settings serialization|
 |5.9.0 [L]|2022-06-08|General|Removed support for legacy DLL licenses|
