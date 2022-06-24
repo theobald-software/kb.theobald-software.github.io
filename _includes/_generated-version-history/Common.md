@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.20.0 [M]|2022-06-24|General|JSON serialization for date/time|
 |2.19.2 [L]|2022-06-23|Licensing|Fixed Bug around License Business Rules for YunIO licenses.|
 |2.19.1 [L]|2022-06-14|Licensing|Added new field Extractions to ProductLicense and updated Tests and LicenseBuilders accordingly. Moved shared code from License creation applications to Common.|
 |2.19.0 [L]|2022-06-08|Licensing|Removed support for legacy DLL licenses|
