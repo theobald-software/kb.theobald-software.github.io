@@ -87,6 +87,14 @@ New feature: Limit the number of extracted rows. Only available in MDX mode. Not
 
 ![RowLimit](/img/contents/NewBWCube_RowLimit.png)
 
+### Changed and improved column naming convention
+After migration, the old naming convention is still in place.
+The new naming convention is applied when:
+1. creating a new BWCube extraction.
+2. running a metadata refresh on an existing extraction.
+
+Keep in mind that the new naming convention might affect consecutive workflows.
+
 
 ### Features no longer available
 ![GoneSettings](/img/contents/NewBWCube_GoneSettings.png)
@@ -94,14 +102,6 @@ New feature: Limit the number of extracted rows. Only available in MDX mode. Not
 - Sorting Output (gone for good)
 - Real Data Preview (in MDX mode, real data is automatically used, no dummy data anymore)
 - MDX mode and BEx mode, as mentioned above.
-
-### Known issues/limitations with MDX mode
-
-- Complex Bex variables currently don't support all operators. This may change in a future release.
-- MDX mode requires to select at least on measure for output. This may change in a future release.
-- Issues with migrated extractions that contained no measures for output.
-
-
 
 
 
