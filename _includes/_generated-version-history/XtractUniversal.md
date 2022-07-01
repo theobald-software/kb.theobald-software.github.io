@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|[5.10.0 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-5.10.0.html)|2022-07-01|General|Added extractions limit check([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-5.10.0.html))|
 |5.9.4 [L]|2022-06-30|Destinations|Fixed a bug in S3 destination, where manually input bucket name would not be saved when IAM role authentication was selected.|
 |5.9.3 [L]|2022-06-23|Destinations|Alteryx: Fixed a bug that caused errors when disabling date conversion|
 |5.9.2 [L]|2022-06-17|Designer|Fixed a bug which cause threading related exceptions in various dialogs.|
