@@ -34,7 +34,7 @@ This resets all TLS settings in yunIO, including the certificate selection.
 ### Renewing a Certificate Automatically
 
 If you're using [win-acme](https://www.win-acme.com/reference/plugins/installation/script) for the renewal of Letsencrypt certificates, run the following PowerShell script with the same client that runs win-acme:
-- ![Download the PowerShell Script for Letsencrypt Certificate Renewal](/files/yunio/yunio-le.ps1)
+- [Download the PowerShell Script for Letsencrypt Certificate Renewal](/files/yunio/yunio-le.ps1){:download="/files/yunio/yunio-le.ps1"}
 
 #### About win-acme
 win-acme creates a scheduled task for the renewal process. 
