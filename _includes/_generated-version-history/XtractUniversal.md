@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.10.4 [L]|2022-07-06|Destinations|Azure Storage destination: fixed a bug where connection to Azure didn't work. (Bug introduced in 5.9.4)|
 |[5.10.3 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-5.10.3.html)|2022-07-04|Destinations|Introduced ODBC command timeouts for the Snowflake destination([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-5.10.3.html))|
 |5.10.2 [M]|2022-07-01|Security|Fix for requesting SAP credentials at runtime|
 |5.10.1 [M]|2022-07-01|Server|Fixed a bug that caused list runtime parameters to be ignored (Bug introduced in 5.8.4)|
