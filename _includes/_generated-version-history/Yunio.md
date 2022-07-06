@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.7.0 [H]|2022-07-06|Designer|Access control added|
 |1.6.2 [M]|2022-06-24|Designer|Big css refactoring|
 |1.6.1 [M]|2022-06-03|Designer|Swagger/OpenAPI: Removed writeOnly from whereClause|
 |1.6.0 [M]|2022-06-03|Designer|Improved the OpenAPI for usage with Nintex Cloud.|
