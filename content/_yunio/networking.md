@@ -18,10 +18,10 @@ This article provides examples of networking scenarios between a service caller 
 ### Same Network
 
 If the service caller, yunIO and SAP are all part of the same network, the path for request and reponse is as follows:
-![Same Network](/img/contents/yunio/ts-knowledge-base_same-network.png){:class="img-responsive" width="600px"}
 
 1. The caller sends the request directly to the yunIO server via HTTP or HTTPS.
-2. The yunIO server communicates with SAP. The response is sent back to the caller. 
+2. The yunIO server communicates with SAP. The response is sent back to the caller.<br> 
+![Same Network](/img/contents/yunio/ts-knowledge-base_same-network.png){:class="img-responsive" width="600px"}
 
 Examples:
 - Caller, yunIO and SAP run on-premises.
@@ -48,10 +48,10 @@ A direct connection can be established, if firewall rules allow incoming request
 HTTPS should always be enabled for direct connections to protect the confidentiality and integrity of the communication.
 For callers in cloud environments, it might not be possible to restrict requests to the yunIO server to trusted origins through firewall rules.
 
-![Different Network](/img/contents/yunio/ts-knowledge-base_directly-open-port.png){:class="img-responsive" width="600px"}
 
 1. The caller sends the request directly to the yunIO server via HTTPS.
-2. The yunIO server communicates with SAP. The response is sent back to the caller. 
+2. The yunIO server communicates with SAP. The response is sent back to the caller. <br>
+![Different Network](/img/contents/yunio/ts-knowledge-base_directly-open-port.png){:class="img-responsive" width="600px"}
 
 ### Azure Relay
 The yunIO service can be exposed to the caller through [Azure Relay](https://docs.microsoft.com/en-gb/azure/azure-relay/relay-what-is-it).
@@ -59,12 +59,12 @@ For callers in cloud environments it might not be possible to restrict requests 
 In this scenario it is not necessary to change firewall rules of the yunIO/SAP network to allow incoming requests from other networks. 
 Only outgoing requests from the yunIO/SAP network to Azure Relay must be allowed.
 
-![Add parameters](/img/contents/yunio/ts-knowledge-base_azure-relay.png){:class="img-responsive" width="600px"}
 
 1. The yunIO server connects from the yunIO/SAP network to Azure Relay and establishes a secure tunnel.
 2. a) The caller makes a request to Azure Relay.<br>
 b) The request is forwarded through the secure tunnel to the yunIO server.
-3. The yunIO server communicates with SAP. The response is sent back to the caller. 
+3. The yunIO server communicates with SAP. The response is sent back to the caller. <br>
+![Add parameters](/img/contents/yunio/ts-knowledge-base_azure-relay.png){:class="img-responsive" width="600px"}
 
 ### Azure VPN
 The caller and yunIO/SAP can be connected through a secure tunnel and joined to the same VNet in Azure.
@@ -72,13 +72,13 @@ The yunIO server can be protected from requests from untrusted sources by restri
 In this scenario it is not necessary to change firewall rules of the yunIO/SAP network to allow incoming requests from other networks. 
 Only outgoing requests from the yunIO/SAP network to Azure must be allowed.
 
-![Add parameters](/img/contents/yunio/ts-knowledge-base_azure-vpn.png){:class="img-responsive" width="600px"}
 
 1. The VPN client connects from yunIO/SAP network to Azure, establishes the secure tunnel.
 2. a) The caller makes a request to the yunIO server via VNet.<br>
 b) The request is forwarded through the secure tunnel to the yunIO/SAP network.<br>
 c) The request is forwarded to the yunIO server.
-3. The yunIO server communicates with SAP. The response is sent back to the caller. 
+3. The yunIO server communicates with SAP. The response is sent back to the caller. <br>
+![Add parameters](/img/contents/yunio/ts-knowledge-base_azure-vpn.png){:class="img-responsive" width="600px"}
 
 
 ### Microsoft On-Premises Data Gateway
@@ -89,13 +89,13 @@ Make sure that the gateway and power platform region settings are identical, see
 In this scenario it is not necessary to change firewall rules of the yunIO/SAP network to allow incoming requests from other networks. 
 Only outgoing requests from the yunIO/SAP network to Azure must be allowed.
 
-![Add parameters](/img/contents/yunio/ts-knowledge-base_azure-data-gateway.png){:class="img-responsive" width="600px"}
 
 1. The on-premises data gateway connects from yunIO/SAP network to Azure, establishes the secure tunnel.
 2. a) The caller makes a request to the yunIO server via gateway resource.<br>
 b) The request is forwarded through the secure tunnel to the on-premises data gateway.<br>
 c) The request is forwarded to the yunIO server.
-3. The yunIO server communicates with SAP. The response is sent back to the caller. 
+3. The yunIO server communicates with SAP. The response is sent back to the caller. <br>
+![Add parameters](/img/contents/yunio/ts-knowledge-base_azure-data-gateway.png){:class="img-responsive" width="600px"}
 
 ******
 #### Related Links:
