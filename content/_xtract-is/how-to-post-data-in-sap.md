@@ -45,7 +45,7 @@ To correctly map the data, the following requirements must be met:
 - The data types in the input table must be the same as in the Xtract BAPI component.
 
 To look up column names and data types in the Xtract BAPI component, open the *Tables* tab and click on the ![glasses](/img/contents/glasses.png) icon next to the table.
-![ssis-write-xtractis-fuba-01](/img/contents/xis/BAPI-table-input.png){:class="img-responsive" }
+![ssis-write-xtractis-fuba-01](/img/contents/xis/BAPI-table-input-2.png){:class="img-responsive" }
 
 {: .box-tip }
 **Tip**: If the column names and / or datatypes of the input table and the Xtract BAPI table do not match, add a **Derived Column** component to convert the input data.
@@ -60,7 +60,8 @@ For information on how to use Xtract components, see [Online Help: Getting Start
 For more information, see [Connection Manager](https://help.theobald-software.com/en/xtract-is/sap-connection/the-connection-manager).
 3. Look up the function module Z_ECS_PRODUCT_CREATE_MULTI.<br>
 ![ssis-write-xtractis-fuba-01](/img/contents/xis/BAPI-table-input.png){:class="img-responsive" }
-4. Connect the source component to the Xtract BAPI component. The data in the source is automatically mapped to the corresponding table in the Xtract BAPI component.<br>
+4. Connect the source component to the Xtract BAPI component. <br>
+The data in the source is automatically mapped to the corresponding table in the Xtract BAPI component.<br>
 ![ssis-write-xtractis-fuba-02](/img/contents/xis/ssis-write-xtractis-fuba-02.png){:class="img-responsive" }
 5. Run the SSIS Package and check the results in SAP.<br>
 
