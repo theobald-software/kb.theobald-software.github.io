@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.14.2 [M]|2022-07-07|BAPI|Fixed problems that caused extractions to fail after upgrading from versions before 6.10.0|
 |6.14.1 [M]|2022-06-23|General|Fixed a bug that caused "method not found" errors when editing components|
 |6.14.0 [L]|2022-06-08|General|Removed support for legacy DLL licenses|
 |6.13.1 [M]|2022-06-02|BAPI|Fixed several issues related to the conversion of legacy BAPI tables |
