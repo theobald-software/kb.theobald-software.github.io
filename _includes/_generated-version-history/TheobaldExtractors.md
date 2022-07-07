@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.30.1 [H]|2022-07-07|BW Cube|Fix for asynchronous processing problems|
 |1.30.0 [M]|2022-06-24|General|Added IResultTables for value conversion|
 |1.29.14 [L]|2022-06-13|BW Cube|Internal adjustments to BEx variable dialog button behavior in BICS mode.|
 |1.29.13 [L]|2022-06-09|General|Added unit and integration tests for Table Extractor|
