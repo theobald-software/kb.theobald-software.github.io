@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.10.5 [L]|2022-07-08|General|Cleaning the result cache does now use the new RPC server/client capabilities instead of the Web server, which cause issues with custom authentication in the past.|
 |5.10.4 [L]|2022-07-06|Destinations|Azure Storage destination: fixed a bug where connection to Azure didn't work. (Bug introduced in 5.9.4)|
 |[5.10.3 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-5.10.3.html)|2022-07-04|Destinations|Introduced ODBC command timeouts for the Snowflake destination([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-5.10.3.html))|
 |5.10.2 [M]|2022-07-01|Security|Fix for requesting SAP credentials at runtime|
