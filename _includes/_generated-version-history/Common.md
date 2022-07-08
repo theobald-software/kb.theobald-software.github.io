@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.20.2 [L]|2022-07-08|General|Non-blocking (async) versions of the IO helper functions were added|
 |2.20.1 [L]|2022-07-01|WPF|Added extractions limit on about window|
 |2.20.0 [M]|2022-06-24|General|JSON serialization for date/time|
 |2.19.2 [L]|2022-06-23|Licensing|Fixed Bug around License Business Rules for YunIO licenses.|
