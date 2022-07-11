@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.7.2 [M]|2022-07-11|BOARD API|Fixed several issues that caused errors when retrieving metadata|
 |5.7.1 [L]|2022-07-08|General|The clear result cache functionality does now use the new RPC server capabilities instead of the HTTP server.|
 |5.7.0 [L]|2022-06-08|General|Removed support for legacy DLL licenses|
 |5.6.3 [L]|2022-06-01|General|The RPC server and persistence do now support subdirectories. (Not implemented in Designer and Runtime)|
