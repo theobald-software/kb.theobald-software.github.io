@@ -18,7 +18,7 @@ The table has the following structure:<br>
 
 ### Input Table
 
-The format of an input table must be compatible with the parameters of the function module, see [Requirements for Data Mapping](#requirements-for-data-mapping).<br>
+The format of an input table must be compatible with the parameters of the function module, see [Online Help: Mapping Input Tables](https://help.theobald-software.com/en/xtract-is/bapi/parameters#mapping-input-tables).<br>
 The following table is stored on an SQL Server: 
 
 ```
@@ -36,20 +36,6 @@ CREATE TABLE [SAP Products] (
 
 The table has the following content:<br>
 ![ssis-write-sql-01](/img/contents/ssis-write-sql-01.png){:class="img-responsive" }
-
-### Requirements for Data Mapping
-
-When connecting an input table to the Xtract BAPI component, a data mapping between the input table and the Xtract BAPI tables is executed automatically.
-To correctly map the data, the following requirements must be met:
-- The column names of the input table must be the same as in the Xtract BAPI component.
-- The data types in the input table must be the same as in the Xtract BAPI component.
-
-To look up column names and data types in the Xtract BAPI component, open the *Tables* tab and click on the ![glasses](/img/contents/glasses.png) icon next to the table.
-![ssis-write-xtractis-fuba-01](/img/contents/xis/BAPI-table-input-2.png){:class="img-responsive" }
-
-{: .box-tip }
-**Tip**: If the column names and / or datatypes of the input table and the Xtract BAPI table do not match, add a **Derived Column** component to convert the input data.
-
 
 ### Setup in SSIS
 
