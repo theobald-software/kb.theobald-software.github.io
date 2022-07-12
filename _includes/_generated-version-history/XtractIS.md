@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|7.0.1 [L]|2022-07-12|BAPI|Fixed an issue that caused the component to get stuck when using pipeline inputs inside of loops|
 |7.0.0 [M]|2022-07-08|General|Removed support for SQL Server 2012|
 |6.14.2 [M]|2022-07-07|BAPI|Fixed problems that caused extractions to fail after upgrading from versions before 6.10.0|
 |6.14.1 [M]|2022-06-23|General|Fixed a bug that caused "method not found" errors when editing components|
