@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Integrating SAP real-time data into BOARD user interface
-description: Integrating SAP real-time data into BOARD user interface
+title: Integrating SAP real-time data into Board user interface
+description: Integrating SAP real-time data into Board user interface
 permalink: /:collection/:path
 weight: 1
 ---
@@ -10,11 +10,11 @@ Please also have a look in our [OnlineHelp](https://help.theobald-software.com/e
 
 Objective:
 
-SAP Purchase Orders will be read from an SAP Database within the BOARD Designer. Clicking on a row will in turn fetch vendor description from SAP using ERPConnect and show it in a built-in web-page inside BOARD.
+SAP Purchase Orders will be read from an SAP Database within the Board Designer. Clicking on a row will in turn fetch vendor description from SAP using ERPConnect and show it in a built-in web-page inside Board.
 
  
 
-To demonstrate this particular of many possible integration scenarios between ERPConnect and BOARD, let us create a simple project using:
+To demonstrate this particular of many possible integration scenarios between ERPConnect and Board, let us create a simple project using:
 
 a.    DataView component
 
@@ -22,7 +22,7 @@ b.    Viewer component
 
 ![Board-connect-image001](/img/contents/image001.jpg){:class="img-responsive"}
 
-1.Using common BOARD techniques and a correctly configured DataView component (details omitted for brevity, please reference the [BOARD Documentation](http://help.board.com/) if needed) gives us the following view, containing a table with Purchase information.
+1.Using common Board techniques and a correctly configured DataView component (details omitted for brevity, please reference the [Board Documentation](http://help.board.com/) if needed) gives us the following view, containing a table with Purchase information.
 
 ![Board-connect-image002](/img/contents/image002.jpg){:class="img-responsive"}
 
@@ -108,7 +108,7 @@ You can find the full code of the WebForms project at the end of the article.
 
 Add the WebSite to the IIS (if needed) and copy the URL.
 
-4.Finish the integration by specifying this URL in the Layout Designer of the Viewer component in the BOARD Project.
+4.Finish the integration by specifying this URL in the Layout Designer of the Viewer component in the Board Project.
 
 ![Board-connect-image005](/img/contents/image005.jpg){:class="img-responsive"}
 

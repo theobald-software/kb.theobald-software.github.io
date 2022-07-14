@@ -8,7 +8,7 @@ weight: 6
 
 
 ## About
-With Xtract Universal 5.6.0, Board Connector 5.5.0 and Xtract for Alteryx 1.15.0, a reworked BW Cube component has been released, see [Version History](https://kb.theobald-software.com/version-history). This article is meant to shed some light on this new component. Most of the following only applies to Xtract Universal and Board Connector.
+With Xtract Universal 5.6.0, BOARD Connector 5.5.0 and Xtract for Alteryx 1.15.0, a reworked BW Cube component has been released, see [Version History](https://kb.theobald-software.com/version-history). This article is meant to shed some light on this new component. Most of the following only applies to Xtract Universal and BOARD Connector.
 
 Should you have questions about or issues with the new BWCube component, contact [Theobald Software support](https://support.theobald-software.com) team.
 
