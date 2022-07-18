@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.30.3 [L]|2022-07-18|BW Cube|Refactored all MDX RFC Functions to static creation; added support for non-unicode SAP systems.|
 |1.30.2 [L]|2022-07-18|BW Cube|Cube BICS mode now supports list parameters in filters and variables.|
 |1.30.1 [H]|2022-07-07|BW Cube|Fix for asynchronous processing problems|
 |1.30.0 [M]|2022-06-24|General|Added IResultTables for value conversion|
