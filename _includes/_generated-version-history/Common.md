@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.20.3 [L]|2022-07-19|General|Updated NWRFC SDK to 7.50 Patch-Level 10|
 |2.20.2 [L]|2022-07-08|General|Non-blocking (async) versions of the IO helper functions were added|
 |2.20.1 [L]|2022-07-01|WPF|Added extractions limit on about window|
 |2.20.0 [M]|2022-06-24|General|JSON serialization for date/time|
