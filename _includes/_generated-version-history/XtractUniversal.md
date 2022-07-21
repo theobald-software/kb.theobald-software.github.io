@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.11.2 [L]|2022-07-21|BW Cube|Fix for converting ranges in variable and filter selections when running the config converter on BW Cube extractions.|
 |[5.11.1 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-5.11.1.html)|2022-07-21|General|Added a popup on run window to get SAP credentials from caller([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-5.11.1.html))|
 |5.11.0 [L]|2022-07-20|Destinations|Removed MicroStrategy destination|
 |5.10.5 [L]|2022-07-08|General|Cleaning the result cache does now use the new RPC server/client capabilities instead of the Web server, which cause issues with custom authentication in the past.|
