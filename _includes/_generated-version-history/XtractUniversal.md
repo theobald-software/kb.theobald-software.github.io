@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|[5.11.1 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-5.11.1.html)|2022-07-21|General|Added a popup on run window to get SAP credentials from caller([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-5.11.1.html))|
 |5.11.0 [L]|2022-07-20|Destinations|Removed MicroStrategy destination|
 |5.10.5 [L]|2022-07-08|General|Cleaning the result cache does now use the new RPC server/client capabilities instead of the Web server, which cause issues with custom authentication in the past.|
 |5.10.4 [L]|2022-07-06|Destinations|Azure Storage destination: fixed a bug where connection to Azure didn't work. (Bug introduced in 5.9.4)|
