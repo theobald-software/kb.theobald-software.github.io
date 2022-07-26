@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|[5.11.4 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-5.11.4.html)|2022-07-26|Destinations|Introduced Tableau column mapping for existing .hyper files([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-5.11.4.html))|
 |5.11.3 [L]|2022-07-26|Destinations|Parquet: Added compatibility for BigQuery naming requirements|
 |5.11.2 [L]|2022-07-21|BW Cube|Fix for converting ranges in variable and filter selections when running the config converter on BW Cube extractions.|
 |[5.11.1 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-5.11.1.html)|2022-07-21|General|Added a popup on run window to get SAP credentials from caller([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-5.11.1.html))|
