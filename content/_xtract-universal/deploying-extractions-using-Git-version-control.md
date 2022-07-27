@@ -1,9 +1,9 @@
 ---
 layout: page
-title: Versioning new extractions using Git
-description: Versioning new extractions using Git
+title: Deploying Extractions Using Git Version Control
+description: Deploying Extractions Using Git Version Control
 permalink: /:collection/:path
-weight: 52
+weight: 60
 ---
 ### About
 
