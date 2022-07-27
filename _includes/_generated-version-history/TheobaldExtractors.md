@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.30.5 [L]|2022-07-27|BW Cube|Fix for failing mdx extractions with packaging enabled and only dimensions selected.|
 |[1.30.4 [L]](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.30.4.html)|2022-07-22|Table|Updated Z_THEO_READ_TABLE to version 2.12([Release note](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.30.4.html))|
 |1.30.3 [L]|2022-07-18|BW Cube|Refactored all MDX RFC Functions to static creation; added support for non-unicode SAP systems.|
 |1.30.2 [L]|2022-07-18|BW Cube|Cube BICS mode now supports list parameters in filters and variables.|
