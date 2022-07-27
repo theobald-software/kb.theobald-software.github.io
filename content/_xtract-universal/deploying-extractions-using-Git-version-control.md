@@ -13,8 +13,8 @@ With this implementation, new developments on a test environment of Xtract Unive
 
 The implementation of various Git security techniques ensures an error-free transfer without compromising the production system.
 
-{: .box-note}
-**Note:** Target audience: Xtract Universal customers using a production as well as development environment for SAP data replications.
+
+**Target audience:** Xtract Universal customers using a production as well as development environment for SAP data replications.
 
 ### Prerequisites
 
