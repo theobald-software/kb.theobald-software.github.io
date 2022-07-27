@@ -26,7 +26,7 @@ The implementation of various Git security techniques ensures an error-free tran
 ### General Overview
 
 1. Creation of a new Git repository according to instructions. The .git folder is created in the following path of the Xtract Universal installation(s): `C:\Program Files\XtractUniversal\config`.
-![.git Folder-Repository](/img/contents/git_Folder.png){:class="img-responsive"}
+![Git Folder Repository](/img/contents/git_Folder.png){:class="img-responsive"}
 2. The created Xtract Universal Config Repo must be cloned on all local development environments, see sample screenshot:
 ![Clone Repository](/img/contents/clone_repository_fork.png){:class="img-responsive"}
 3. Create development branches to separate and monitor changes.
