@@ -32,7 +32,8 @@ The implementation of various Git security techniques ensures an error-free tran
 ![Clone Repository](/img/contents/clone_repository_fork.png){:class="img-responsive"}
 3. Create development branches to separate and monitor changes.
 
-{: .box-tip} Tip: The initial initialization of the Git version control requires an empty config folder. For this reason, the existing config folder must first be renamed and then filled with the configuration files.
+{: .box-tip} 
+**Tip:** The initial initialization of the Git version control requires an empty config folder. For this reason, the existing config folder must first be renamed and then filled with the configuration files.
 
 Git branches then enable the technical separation of the production repository from the local development environments. 
 
