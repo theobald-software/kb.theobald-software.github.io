@@ -30,7 +30,7 @@ The implementation of various [Git](https://gitforwindows.org/) security techniq
 1. Create a new Git Repository
   (How to do this depends on the technology you use. e. g.)
    - [GitHub](https://docs.github.com/en/get-started/quickstart/create-a-repo)
-   - [AzureDevOps](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-new-repo?view=azure-devops)
+   - [Azure DevOps](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-new-repo?view=azure-devops)
    - [Git-scm](https://git-scm.com/book/en/v2/Git-on-the-Server-Setting-Up-the-Server)
 2. Clone the repository into your XtractUniversal installation directory
    - The repository directory **must** be named `config`!
@@ -43,7 +43,7 @@ The implementation of various [Git](https://gitforwindows.org/) security techniq
 1. Create a new Git Repository
   (How to do this depends on the technology you use. e. g.)
    - [GitHub](https://docs.github.com/en/get-started/quickstart/create-a-repo)
-   - [AzureDevOps](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-new-repo?view=azure-devops)
+   - [Azure DevOps](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-new-repo?view=azure-devops)
    - [Git-scm](https://git-scm.com/book/en/v2/Git-on-the-Server-Setting-Up-the-Server)
 2. Initialize a local repository in your XtractUniversal `config` directory
   with `git init`
