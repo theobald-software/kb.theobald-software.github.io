@@ -60,6 +60,6 @@ These messages are not yunIO specific and should be treated accordingly.
 ******
 
 #### Related Links
-- [yunIO Help: Getting Started](https://help.theobald-software.com/en/getting-started)
+- [yunIO Help: Getting Started](https://help.theobald-software.com/en/yunio/getting-started)
 - [yunIO Help: Transactions](https://help.theobald-software.com/en/yunio/transactions)
 - [SAP Help: Creating a Piece of Equipment](https://help.sap.com/viewer/f0e0dd7850e64947aa66a647f8d3af09/6.18.latest/en-US/bc78bb53707db44ce10000000a174cb4.html).

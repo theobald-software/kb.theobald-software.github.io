@@ -45,4 +45,4 @@ You can see the following event in the Event Viewer:
 ***********
 #### Related Links
 
-- [Schedule Extractions using xu.exe command line](https://help.theobald-software.com/en/xtract-universal/advanced-techniques/scheduling_extraction)
+- [Schedule Extractions using xu.exe command line](https://help.theobald-software.com/en/xtract-universal/execute-and-automate-extractions/call-via-scheduler)

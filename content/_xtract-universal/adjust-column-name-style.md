@@ -9,7 +9,7 @@ weight: 9
 The following section describes a common business scenario to rename column name style within Microsoft SQL-Server environment.
 The given example shows how to use Custom SQL in the Finalization step of the database transaction within Xtract Universal destination settings.
 
-Xtract Universal offers 4 different [Column Name Styles](https://help.theobald-software.com/en/xtract-universal/xu-destinations/microsoft-sql-server/sql-server-settings#column-name-style) for naming the SAP table columns in databases:
+Xtract Universal offers 4 different [Column Name Styles](https://help.theobald-software.com/en/xtract-universal/destinations/microsoft-sql-server#column-name-style) for naming the SAP table columns in databases:
 - Code - `[FieldName]`
 - Prefixed Code - `[TabName]~[FieldName]`
 - CodeAndText - `[FieldName]_[FieldDescription]`

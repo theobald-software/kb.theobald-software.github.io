@@ -115,5 +115,4 @@ foreach ($tableName in $tableList) {
  - [Running an Extraction](https://help.theobald-software.com/en/xtract-universal/getting-started/run-an-extraction)
  - [WHERE Clause](https://help.theobald-software.com/en/xtract-universal/table/where-clause)
  - [Scheduling an Extraction](https://help.theobald-software.com/en/xtract-universal/advanced-techniques/scheduling_extraction)
- - [Extraction Parameters](https://help.theobald-software.com/en/xtract-universal/advanced-techniques/extraction-parameters)
  

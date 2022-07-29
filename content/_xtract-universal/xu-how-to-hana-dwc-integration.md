@@ -15,8 +15,6 @@ Xtract Universal enables data extraction **from** ABAP based SAP systems, like S
 - BI Analytic clients
 - etc.
 
-Xtract Universal's [HANA destination](https://help.theobald-software.com/en/xtract-universal/xu-destinations/sap-hana) adds [SAP Data Warehouse Cloud (DWC)](https://saphanajourney.com/data-warehouse-cloud/) to above list of supported destinations.
-
 This article describes the simple steps how to extract and load SAP data to a database table on SAP DWC. This would be the data ingestion or staging part of a data load. <br>
 Any post-processing and data modeling on DWC is **not** covered in this article.
 
