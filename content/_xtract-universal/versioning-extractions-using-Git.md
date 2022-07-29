@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Deploying Extractions Using Git Version Control
-description: Deploying Extractions Using Git Version Control
+title: Versioning And Managing Environments With Git
+description: Versioning extractions while maintaining a clear separation between develpment and production environment
 permalink: /:collection/:path
 weight: 52
 ---
