@@ -26,30 +26,32 @@ The implementation of various [Git](https://gitforwindows.org/) security techniq
 ### Setup
 
 #### When setting up a new environment
-  1. Create a new Git Repository
-    (How to do this depends on the technology you use. e. g.)
-     - [GitHub](https://docs.github.com/en/get-started/quickstart/create-a-repo)
-     - [AzureDevOps](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-new-repo?view=azure-devops)
-     - [Git-scm](https://git-scm.com/book/en/v2/Git-on-the-Server-Setting-Up-the-Server)
-  2. Clone the repository into your XtractUniversal installation directory
-     - The repository directory **must** be named `config`!
-     - [Xtract Universal installation directory](https://help.theobald-software.com/en/xtract-universal/introduction/installation-and-update#program-directory-files):
-  3. Use dedicated branches for test and development environments
+
+1. Create a new Git Repository
+  (How to do this depends on the technology you use. e. g.)
+   - [GitHub](https://docs.github.com/en/get-started/quickstart/create-a-repo)
+   - [AzureDevOps](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-new-repo?view=azure-devops)
+   - [Git-scm](https://git-scm.com/book/en/v2/Git-on-the-Server-Setting-Up-the-Server)
+2. Clone the repository into your XtractUniversal installation directory
+   - The repository directory **must** be named `config`!
+   - [Xtract Universal installation directory](https://help.theobald-software.com/en/xtract-universal/introduction/installation-and-update#program-directory-files):
+3. Use dedicated branches for test and development environments
   and the main branch for the production system
 
 #### When setting up in an existing environment
-  1. Create a new Git Repository
-    (How to do this depends on the technology you use. e. g.)
-     - [GitHub](https://docs.github.com/en/get-started/quickstart/create-a-repo)
-     - [AzureDevOps](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-new-repo?view=azure-devops)
-     - [Git-scm](https://git-scm.com/book/en/v2/Git-on-the-Server-Setting-Up-the-Server)
-  2. Initialize a local repository in your XtractUniversal `config` directory
-    with `git init`
-     - the config directory should like this
-     ![.git Folder-Repository](/img/contents/.git_Folder.png){:class="img-responsive"}
-  3. Attach the remote repository to your local one with
-     `git remote add origin [ssh/https]://git-server-address/path/to/repo.git`
-  4. Commit the current config
+
+1. Create a new Git Repository
+  (How to do this depends on the technology you use. e. g.)
+   - [GitHub](https://docs.github.com/en/get-started/quickstart/create-a-repo)
+   - [AzureDevOps](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-new-repo?view=azure-devops)
+   - [Git-scm](https://git-scm.com/book/en/v2/Git-on-the-Server-Setting-Up-the-Server)
+2. Initialize a local repository in your XtractUniversal `config` directory
+  with `git init`
+   - the config directory should like this
+   ![.git Folder-Repository](/img/contents/.git_Folder.png){:class="img-responsive"}
+3. Attach the remote repository to your local one with
+   `git remote add origin [ssh/https]://git-server-address/path/to/repo.git`
+4. Commit the current config
 
 By using the main branch for the production environment
 and development branches for the development or test environments
