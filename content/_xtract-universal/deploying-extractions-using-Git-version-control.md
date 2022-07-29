@@ -1,9 +1,9 @@
 ---
 layout: page
-title: Versioning new extractions using Git
-description: Versioning new extractions using Git
+title: Deploying Extractions Using Git Version Control
+description: Deploying Extractions Using Git Version Control
 permalink: /:collection/:path
-weight: 52
+weight: 60
 ---
 ### About
 
@@ -13,24 +13,27 @@ With this implementation, new developments on a test environment of Xtract Unive
 
 The implementation of various Git security techniques ensures an error-free transfer without compromising the production system.
 
-{: .box-note}
-**Note:** Target audience: Xtract Universal customers using a production as well as development environment for SAP data replications.
+
+**Target audience:** Xtract Universal customers using a production as well as development environment for SAP data replications.
 
 ### Prerequisites
 
 - Technically separate development and production environment of Xtract Universal.
 - Xtract Universal developers have [read-only access](https://help.theobald-software.com/en/xtract-universal/security/access-management) to the Xtract Universal production system.
 - Git client installed locally on the development environment and the production environment, [Fork](https://fork.dev/home) as an example.
+- The Xtract Universal installations must have the same release status on the different servers.
 
 
 ### General Overview
 
-1. Creation of a new Git repository according to instructions. The .git folder is created in the following path of the Xtract Universal installation(s): `C:\Program Files\XtractUniversal\config`.
-![.git Folder-Repository](/img/contents/.git_Folder.png){:class="img-responsive"}
+1. Creation of a new Git repository according to instructions. The .git folder is created in the following path - `C:\Program Files\XtractUniversal\config` - of the Xtract Universal installation(s).
+![Git Folder Repository](/img/contents/git_Folder.png){:class="img-responsive"}
 2. The created Xtract Universal Config Repo must be cloned on all local development environments, see sample screenshot:
 ![Clone Repository](/img/contents/clone_repository_fork.png){:class="img-responsive"}
 3. Create development branches to separate and monitor changes.
 
+{: .box-tip} 
+**Tip:** The initial initialization of the Git version control requires an empty config folder. For this reason, the existing config folder must first be renamed and then filled with the configuration files.
 
 Git branches then enable the technical separation of the production repository from the local development environments. 
 

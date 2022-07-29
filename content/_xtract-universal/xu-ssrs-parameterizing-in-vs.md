@@ -21,7 +21,7 @@ The following example uses the [WHERE clause](https://help.theobald-software.com
 ### Prerequisites
 
 Create a table extraction with an SSRS destination in Xtract Universal. This example uses the SAP standard table *MAKT*. <br>
-Add the extraction as a data source in Visual Studio and create a report ad described in [SSRS in Visual Studio](https://help.theobald-software.com/en/xtract-universal/destinations/server-report-services/ssrs-in-vs#add-an-extraction-as-a-data-source-in-visual-studio).
+Add the extraction as a data source in Visual Studio and create a report ad described in [SSRS in Visual Studio](https://help.theobald-software.com/en/xtract-universal/destinations/server-report-services#adding-an-extraction-as-a-data-source-in-visual-studio).
 
 ### Computed Query Parameters
 

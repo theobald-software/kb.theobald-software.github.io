@@ -10,21 +10,15 @@ This article shows how to use the integration type *Transaction* in yunIO.<br>
 The following example application uses transactions to create new equipment in SAP.
 For more information on creating equipment, see [SAP Help: Creating a Piece of Equipment](https://help.sap.com/viewer/f0e0dd7850e64947aa66a647f8d3af09/6.18.latest/en-US/bc78bb53707db44ce10000000a174cb4.html).
 
-{: .box-note }
-**Note:** The transaction feature only works with SAP dialog users.
 
 ### Prerequisites
 
-1. Log off the SAP GUI.<br>
-When running transactions, a connection to your SAP system is established using the credentials in your connection settings.
-It is not possible to run multiple instances of SAP with the same user in parallel with yunIO.
+1. The SAP connection asigned to a transaction service must use an SAP dialog user with enough access rights to create new equipment. 
 2. Create a new *Transaction* service in yunIO.
-Make sure that the SAP user assigned to your service has enough access rights to create new equipment.<br>
 For more information on creating a service, see [Creating a Service](https://help.theobald-software.com/en/yunio/getting-started#creating-a-service).<br>
 
-
 {: .box-note }
-**Note:** The integration type *Transaction* is currently marked as "experimental" and is not fully functional. 
+**Note:** The integration type *Transaction* is currently marked as "Preview" and is not fully functional. 
 Future versions will work with any SAP transaction code.
 
 {: .box-tip }
@@ -66,6 +60,6 @@ These messages are not yunIO specific and should be treated accordingly.
 ******
 
 #### Related Links
-- [yunIO Help: Getting Started](https://help.theobald-software.com/en/getting-started)
+- [yunIO Help: Getting Started](https://help.theobald-software.com/en/yunio/getting-started)
 - [yunIO Help: Transactions](https://help.theobald-software.com/en/yunio/transactions)
 - [SAP Help: Creating a Piece of Equipment](https://help.sap.com/viewer/f0e0dd7850e64947aa66a647f8d3af09/6.18.latest/en-US/bc78bb53707db44ce10000000a174cb4.html).

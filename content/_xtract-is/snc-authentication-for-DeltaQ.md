@@ -38,7 +38,7 @@ Go to SNC tab provide the SNC Name of the SAP user and click on **[Save]**. In o
 
 ### RFC destination configuration
 Enable SNC for the corresponding RFC destination regarding SPN of SAP User account. In the example, the RFC destination *XTRACT10* is being used for enabling SNC
-1. In *SM59* double-click on the already created TCP/IP RFC destination as explained in our online help [Xtract IS – RFC Destination](https://help.theobald-software.com/en/xtract-is/sap-customizing/preparation-for-ohs-in-bw) and go to change mode.
+1. In *SM59* double-click on the already created TCP/IP RFC destination as explained in the online help [Xtract IS – RFC Destination](https://help.theobald-software.com/en/xtract-is/sap-customizing/preparation-for-ohs-in-bw) and go to change mode.
 2. In the Logon & Security tab, under Status of Secure Protocol, click on [SNC] and in the pop-up screen Change View *SNC Extension: Details*
    - Provide the SPN (Service Principal Name) of SAP user account in the field Partners (1). In our case, the SNC Partner is *p:RfcServer/Malapati@THEOBALD.LOCAL*.
    - Set the Quality of Protection to Default (2).
@@ -53,7 +53,7 @@ Enable SNC for the corresponding RFC destination regarding SPN of SAP User accou
 ***********
 #### Related Links
 
-- [Xtract IS – RFC Destination](https://help.theobald-software.com/en/xtract-is/open-hub-service-ohs/preparation-in-bw/rfc-destination)
+- [Xtract IS – RFC Destination](https://help.theobald-software.com/en/xtract-is/sap-customizing/preparation-for-ohs-in-bw#creating-an-rfc-destination)
 - [Xtract IS – The Connection Manager](https://help.theobald-software.com/en/xtract-is/sap-connection/the-connection-manager)
 - [Xtract IS – SAP Connection with SNC](https://help.theobald-software.com/en/xtract-is/sap-connection/sap-connection-with-snc)
 - [Help.SAP – Maintaining RFC destinations and their SNC options](https://help.sap.com/viewer/e73bba71770e4c0ca5fb2a3c17e8e229/7.5.8/en-US/57898009a859493a8bce56caaf0f8e13.html)
