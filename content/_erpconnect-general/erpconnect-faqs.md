@@ -39,7 +39,7 @@ If a SAP-Router is used, the ports are 3299 and 3399. If not, the ports are 32XX
 
 *I'm not able to obtain a SSO ticket.*
 
-Please have a look at SAP Note 356691 and use the test tool described there to check if everything is set up correctly. You may also make sure that you have the latest ERPConnect release. German speaking customers may also have a look here: '[Single Sign-On sicher konfigurieren](https://www.bsi.bund.de/DE/Themen/ITGrundschutz/ITGrundschutzKataloge/Inhalt/_content/m/m04/m04258.html)'
+Please have a look at SAP Note 356691 and use the test tool described there to check if everything is set up correctly. You may also make sure that you have the latest ERPConnect release.
 
 **Binding LINQ sets to a grid**
 

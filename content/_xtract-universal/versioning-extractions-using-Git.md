@@ -48,7 +48,7 @@ The implementation of various [Git](https://gitforwindows.org/) security techniq
 2. Initialize a local repository in your XtractUniversal `config` directory
   with `git init`
    - the config directory should like this
-   ![.git Folder-Repository](/img/contents/.git_Folder.png){:class="img-responsive"}
+   ![.git Folder-Repository](/img/contents/git_Folder.png){:class="img-responsive"}
 3. Attach the remote repository to your local one with
    `git remote add origin [ssh/https]://git-server-address/path/to/repo.git`
 4. Commit the current config
