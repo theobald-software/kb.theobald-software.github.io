@@ -36,6 +36,9 @@ The implementation of various [Git](https://gitforwindows.org/) security techniq
    - [Xtract Universal installation directory](https://help.theobald-software.com/en/xtract-universal/introduction/installation-and-update#program-directory-files):
 3. Use dedicated branches for test and development environments
   and the main branch for the production system
+  
+{: .box-tip} 
+**Tip:** The initial initialization of the Git version control requires an empty config folder. For this reason, the existing config folder must first be renamed and then filled with the configuration files.
 
 ### When setting up in an existing environment
 
