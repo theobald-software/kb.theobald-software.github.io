@@ -103,7 +103,7 @@ You possibly have to activate the function module in the settings first (click d
 
 You can test the function module by entering different input parameters than the ones from the recording and execute it.
 
-![image014](/img/contents/image014.png){:class="img-responsive"}
+![image014](/img/contents/image014.jpg){:class="img-responsive"}
 
 Check material master data table MARA if the material has been created. If there is a new entry you know that the function module works. 
 

@@ -32,10 +32,6 @@ The Theobald Software Bot, which is located in the cloud (Microsoft Azure platfo
 In this list, all the necessary information to create a sales order in the SAP system is stored (e.g. material number, plant, quantity, delivery date). <br>
 As soon as the new item is created in the SharePoint list, a  Nintex Workflos Cloud workflow is triggered in the background which will first activate an approval process. Only when the assigned person (e.g. manager, coworker) has approved the request, the sales order is submitted to the on-premise SAP system and is posted there.
 
-Please take look on the following video where the scenario is presented and described in detail: [Theobald Software Chat Bot Scenario video](https://kb.theobald-software.github.io/img/contents/ecscore).
-
-This video is an excerpt of a demo session held at the Nintex InspireX conference in New Orleans in February 2017.
-
 ***********
 
 #### Related Links ####

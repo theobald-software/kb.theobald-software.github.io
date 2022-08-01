@@ -359,8 +359,6 @@ Save and publish the workflow when you are finished.
 
 For testing the new build workflow open your SharePoint list **Create purchase requisitions** and create a new list item. You should not create the workflow item with your farm administrator user but with another user who has permissions to create items in this list. Otherwise there might be authorization problems in the approval process.
 
-![image054](/img/contents/image054.jpg){:class="img-responsive"}
-
 
 ![image055](/img/contents/image055.jpg){:class="img-responsive"}
 

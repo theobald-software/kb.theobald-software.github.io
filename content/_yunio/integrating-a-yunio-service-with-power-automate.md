@@ -87,5 +87,5 @@ After a connector is successfully tested, it can be used in a Flow.
 ******
 
 #### Related Links
-- [Youtube Tutorial: SAP process automation - Power Automate SAP Connector](https://www.youtube.com/watch?v=A-2cOpGmCJ8)
+- [Youtube Tutorial: SAP process automation - Power Automate SAP Connector](https://www.youtube.com/watch?v=k_yL8Bphfus)
 - [yunIO Help: How to Run a Service](https://help.theobald-software.com/en/yunio#how-to-run-a-service)

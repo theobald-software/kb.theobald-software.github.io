@@ -114,5 +114,5 @@ foreach ($tableName in $tableList) {
  - [Define a Table Extraction](https://help.theobald-software.com/en/xtract-universal/getting-started/define-a-table-extraction#adding-tables)
  - [Running an Extraction](https://help.theobald-software.com/en/xtract-universal/getting-started/run-an-extraction)
  - [WHERE Clause](https://help.theobald-software.com/en/xtract-universal/table/where-clause)
- - [Scheduling an Extraction](https://help.theobald-software.com/en/xtract-universal/advanced-techniques/scheduling_extraction)
+ - [Scheduling an Extraction](https://help.theobald-software.com/en/xtract-universal/execute-and-automate-extractions/call-via-scheduler)
  

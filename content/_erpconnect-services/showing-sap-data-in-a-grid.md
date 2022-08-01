@@ -341,18 +341,10 @@ Related links:
 
 Links in article:
 
-[1] [http://msdn.microsoft.com/en-us/library/ee231579.aspx](http://msdn.microsoft.com/en-us/library/ee231579.aspx)
-
-[2] [http://cksdev.codeplex.com/](http://cksdev.codeplex.com/)
-
-[3] [https://theobald-software.com/en/erpconnect-services-productinfo.html](https://theobald-software.com/en/erpconnect-services-productinfo.html)
-
-[4] [http://jquery.com](http://jquery.com)
-
-[5] [http://code.jquery.com/jquery-1.10.2.min.js](http://code.jquery.com/jquery-1.10.2.min.js)
-
-[6] [http://datatables.net](http://datatables.net)
-
-[7] [http://datatables.net/releases/DataTables-1.9.4.zip](http://datatables.net/releases/DataTables-1.9.4.zip)
-
-[8] [http://www.kendoui.com/](http://www.kendoui.com/)
+- [http://msdn.microsoft.com/en-us/library/ee231579.aspx](http://msdn.microsoft.com/en-us/library/ee231579.aspx)
+- [https://theobald-software.com/en/erpconnect-services-productinfo.html](https://theobald-software.com/en/erpconnect-services-productinfo.html)
+- [http://jquery.com](http://jquery.com)
+- [http://code.jquery.com/jquery-1.10.2.min.js](http://code.jquery.com/jquery-1.10.2.min.js)
+- [http://datatables.net](http://datatables.net)
+- [http://datatables.net/releases/DataTables-1.9.4.zip](http://datatables.net/releases/DataTables-1.9.4.zip)
+- [http://www.kendoui.com/](http://www.kendoui.com/)

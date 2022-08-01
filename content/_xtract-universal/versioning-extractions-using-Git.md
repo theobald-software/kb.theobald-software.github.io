@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Deploying Extractions Using Git Version Control
-description: Deploying Extractions Using Git Version Control
+title: Versioning And Managing Environments With Git
+description: Versioning extractions while maintaining a clear separation between develpment and production environment
 permalink: /:collection/:path
 weight: 52
 ---
@@ -30,7 +30,7 @@ The implementation of various [Git](https://gitforwindows.org/) security techniq
 1. Create a new Git Repository
   (How to do this depends on the technology you use. e. g.)
    - [GitHub](https://docs.github.com/en/get-started/quickstart/create-a-repo)
-   - [AzureDevOps](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-new-repo?view=azure-devops)
+   - [Azure DevOps](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-new-repo?view=azure-devops)
    - [Git-scm](https://git-scm.com/book/en/v2/Git-on-the-Server-Setting-Up-the-Server)
 2. Clone the repository into your XtractUniversal installation directory
    - The repository directory **must** be named `config`!
@@ -43,12 +43,12 @@ The implementation of various [Git](https://gitforwindows.org/) security techniq
 1. Create a new Git Repository
   (How to do this depends on the technology you use. e. g.)
    - [GitHub](https://docs.github.com/en/get-started/quickstart/create-a-repo)
-   - [AzureDevOps](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-new-repo?view=azure-devops)
+   - [Azure DevOps](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-new-repo?view=azure-devops)
    - [Git-scm](https://git-scm.com/book/en/v2/Git-on-the-Server-Setting-Up-the-Server)
 2. Initialize a local repository in your XtractUniversal `config` directory
   with `git init`
    - the config directory should like this
-   ![.git Folder-Repository](/img/contents/.git_Folder.png){:class="img-responsive"}
+   ![.git Folder-Repository](/img/contents/git_Folder.png){:class="img-responsive"}
 3. Attach the remote repository to your local one with
    `git remote add origin [ssh/https]://git-server-address/path/to/repo.git`
 4. Commit the current config

@@ -91,7 +91,7 @@ We are going to write a NAPA-App, in the context of SharepointOnline (Office365)
 
 Let us write a simple App which loads some Customers from SAP, using Functional Module SD_RFC_CUSTOMER_GET, and shows them in a simple table.
 
-![wireframe](/img/contents/_wireframe.png){:class="img-responsive"}
+![wireframe](/img/contents/wireframe.png){:class="img-responsive"}
 
 #### 2.3 Prerequisites
 
@@ -160,7 +160,7 @@ Login to Azure Management Portal and create a new Azure ServiceBus entity (Servi
 
 Copy connection string, we will need it later: 
 
-![15_24_21-Service Bus-Windows-Azure](/img/contents/15_24_21-Service-Bus-Windows-Azure.png){:class="img-responsive"}
+![15_24_21-Service Bus-Windows-Azure](/img/contents/15_24_21-Service-Bus-Windows-Azure.jpg){:class="img-responsive"}
 
 
 ![15_25_38-Service-Bus-Windows-Azure](/img/contents/15_25_38-Service-Bus-Windows-Azure.jpg){:class="img-responsive"}
@@ -401,7 +401,7 @@ Bootstrap: [http://getbootstrap.com](http://getbootstrap.com)
 
 Sharepoint Online: [http://sharepoint.com](http://sharepoint.com)
 
-Azure Management Portal: [https://manage.windowsazure.com](https://manage.windowsazure.com)
+Azure Portal: [https://manage.windowsazure.com](https://azure.microsoft.com/de-de/get-started/azure-portal/)
 
 
 
