@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.7.3 [L]|2022-08-02|Designer|Fix for redirecting unknown Designer URLs|
 |1.7.2 [L]|2022-07-15|General|Update transaction component|
 |1.7.1 [M]|2022-07-08|Designer|Fixes for deleting users|
 |1.7.0 [H]|2022-07-06|Designer|Access control added|
