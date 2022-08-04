@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.11.6 [H]|2022-08-04|BAPI|Fix for structures with includes, please refresh metadata|
 |5.11.5 [L]|2022-07-28|Report|Fixed a bug where converting report extractions from pre 4.31.0 version would fail, if range selection options (between / not between) were defined on report parameters.|
 |[5.11.4 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-5.11.4.html)|2022-07-26|Destinations|Introduced Tableau column mapping for existing .hyper files. It is required to update the Tableau Export Library folder.([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-5.11.4.html))|
 |5.11.3 [L]|2022-07-26|Destinations|Parquet: Added compatibility for BigQuery naming requirements|
