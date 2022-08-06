@@ -389,7 +389,7 @@ Enjoy experimenting with ECSCore! Our team is always there for you.
 
 References:
 
-ErpConnectServices:[https://theobald-software.com/de/erpconnectservices-downloads.htm](https://theobald-software.com/de/erpconnectservices-downloads.htm)
+ErpConnectServices:[https://theobald-software.com/erpconnect-services/](https://theobald-software.com/erpconnect-services/)
 
 tEcs: [https://static.theobald-software.com/tEcs/4.1](https://static.theobald-software.com/tEcs/4.1)
 

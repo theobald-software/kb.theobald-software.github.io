@@ -135,7 +135,7 @@ Concatenate(CustomerGetResult.NAME1," ",CustomerGetResult.KUNNR)
 ******
 
 #### Related Links
-- [Youtube Tutorial: SAP process automation - Power Automate SAP Connector](https://www.youtube.com/watch?v=A-2cOpGmCJ8)
+- [Youtube Tutorial: SAP process automation - Power Automate SAP Connector](https://www.youtube.com/watch?v=k_yL8Bphfus&t=2s)
 - [Microsoft Documentation: Drop down control](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/controls/control-drop-down)
 - [Microsoft Documentation: Text input control](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/controls/control-text-input)
 - [yunIO Help: How to Run a Service](https://help.theobald-software.com/en/yunio#how-to-run-a-service)

@@ -16,7 +16,7 @@ To realize this business scenario the following platforms and tools were used:
 - ECS Core as SAP integration platform
 - Nintex Workflow Cloud as workflow solution
 
-With **[ECS Core](https://theobald-software.com/ecs-core/)**, Theobald Software provides a connector which enables code and no-code SAP integration for cloud environments and solutions such as Office 365, Nintex Workflow Cloud, Microsoft Power Automate and many more.
+With **ECS Core**, Theobald Software provides a connector which enables code and no-code SAP integration for cloud environments and solutions such as Office 365, Nintex Workflow Cloud, Microsoft Power Automate and many more.
 
 For this scenario, ECS Core in combination with **Nintex Workflow Cloud** (NWC) was used. NWC is a workflow solution for process automation in the cloud. Connectors to numerous other cloud applications are provided in NWC.
 

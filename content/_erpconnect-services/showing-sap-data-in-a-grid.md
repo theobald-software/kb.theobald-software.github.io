@@ -67,11 +67,7 @@ Now get the ERPConnect Services package (ECS).
 
 [https://theobald-software.com/en/erpconnect-services-productinfo.html](https://theobald-software.com/en/erpconnect-services-productinfo.html)
 
-After having ERPConnect Services installed from
-
-[https://theobald-software.com/en/erpconnect-services-downloads.html?prod=ERPConnectServices](https://theobald-software.com/en/erpconnect-services-downloads.html?prod=ERPConnectServices)
-
-please ensure, that the ECS Service is running and passes the proxy test. You may need to restart the server in order for all components to get initialized.
+After having ERPConnect Services installed, ensure that the ECS Service is running and passes the proxy test. You may need to restart the server in order for all components to get initialized.
 
 *{SharepointServer}/_admin/ServiceApplications.aspx*
 

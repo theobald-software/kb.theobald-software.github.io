@@ -95,5 +95,5 @@ Create a step of type "Operating System (CmdExec)" and set the command to "C:\Pr
 #### References ####
 
 [Xtract Universal](https://theobald-software.com/en/xtract-universal/) - product information <br>
-[Xtract Universal](https://help.theobald-software.com/en/xtract-universal/advanced-techniques/scheduling_extraction) - "Scheduling an extraction" OnlineHelp section <br>
+[Xtract Universal](https://help.theobald-software.com/en/xtract-universal/execute-and-automate-extractions/call-via-scheduler) - "Scheduling an extraction" OnlineHelp section <br>
 
