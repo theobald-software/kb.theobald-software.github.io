@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.30.7 [L]|2022-08-08|Table|Fixed a bug in WHERE clause editor where using numeric values in value blocks would in some cases not result a correct WHERE clause.|
 |1.30.6 [H]|2022-08-04|BAPI|Fix for structure includes|
 |1.30.5 [L]|2022-07-27|BW Cube|Fix for failing mdx extractions with packaging enabled and only dimensions selected.|
 |[1.30.4 [L]](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.30.4.html)|2022-07-22|Table|Updated Z_THEO_READ_TABLE to version 2.12([Release note](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.30.4.html))|
