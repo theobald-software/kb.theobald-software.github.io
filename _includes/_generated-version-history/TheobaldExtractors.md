@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.30.9 [L]|2022-08-09|Report|Fixed a bug where TCODE lookup would not work with some newer SAP systems.|
 |1.30.8 [L]|2022-08-09|Table|Fixed a bug in WHERE clause editor, where single quotes in value blocks would not be escaped when running the extraction, causing syntax errors.|
 |1.30.7 [L]|2022-08-08|Table|Fixed a bug in WHERE clause editor where using numeric values in value blocks would in some cases not result a correct WHERE clause.|
 |1.30.6 [H]|2022-08-04|BAPI|Fix for structure includes|
