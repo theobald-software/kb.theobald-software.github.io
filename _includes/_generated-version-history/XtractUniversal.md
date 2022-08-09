@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.11.8 [L]|2022-08-09|Destinations|Fixed a bug on Tableau destination that broke the communication with Tableau Server|
 |5.11.7 [L]|2022-08-08|Designer|Fixed an issue where editing an extraction could cause the primary key information to get out of sync with the source system. Fixed an issue where when using AD-Authentication unnecessary AD-requests would slow down some designer actions|
 |5.11.6 [H]|2022-08-04|BAPI|Fix for structures with includes, please refresh metadata|
 |5.11.5 [L]|2022-07-28|Report|Fixed a bug where converting report extractions from pre 4.31.0 version would fail, if range selection options (between / not between) were defined on report parameters.|
