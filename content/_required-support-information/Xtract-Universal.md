@@ -28,7 +28,7 @@ The following information is required to process a support ticket. Transmit **en
 
 - Press CTRL + Shift + L for opening the Web Server logs.
 - Select the corresponding Web Worker Log to the executed extraction.
-- Copy the entire log information by **[Copy to clipboard]** (3).
+- Copy the entire log information by **[Copy Logs]** (3).
 
 ![XU-Web Worker Log](/img/contents/web-worker-logs.png){:class="img-responsive"}
 
