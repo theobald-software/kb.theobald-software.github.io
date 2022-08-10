@@ -7,7 +7,9 @@ permalink: /:collection/:path
 ---
 Should you encounter a problem or error when using our software, please submit a support ticket via our [ticket system]( https://support.theobald-software.com/helpdesk).<br> 
 
-Please make sure to provide as much information as possible in order for the Theobald Software support team to understand and analyze the issue you are facing e.g.<br>
+{: .box-note }
+**Note**: Please make sure to provide as much information as possible in order for the Theobald Software support team to understand and analyze the issue you are facing.
+
 - Screenshots of the component settings 
 - SSIS logs as .txt or .xlsx file format
 - Xtract IS version number 
@@ -39,14 +41,13 @@ The following information is required to process a support ticket. Please do alw
 
 The following information is optional and can be requested by the support consultant. Please do always provide the **complete** SSIS-log instead of excerpts.
 
-- Activate the trace function , see [Trace Directory](https://help.theobald-software.com/en/xtract-is/sap-connection/the-connection-manager#trace-directory-2) 
+- Activate the trace function, see [Trace Directory](https://help.theobald-software.com/en/xtract-is/sap-connection/the-connection-manager#trace-directory-2) 
  
 ### Version of Xtract IS without log (optional)
 
 1. Double click on any Xtract IS component.
-2. Click on **XtractIS Info (8) > Version History (9) > Product Tab (10)**.
+2. Click on **Xtract IS Info (8) > General > Copy info (9)**.
 ![XIS-Version](/img/contents/xis_version_ohne_log.png){:class="img-responsive"}
-![xis_version_history_window](/img/contents/xis_version_history_window.png){:class="img-responsive"}
 3. Copy to a text file or make a screenshot.
 
 ### Version of Visual Studio (VS) or SSDT (optional)
