@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|3.5.6 [L]|2022-08-12|General|Fixed an issue where the configuration server would send inconsistent data upon reading extraction runs if the user does not have access to the extraction|
 |3.5.5 [L]|2022-07-15|General|Update transaction component|
 |3.5.4 [L]|2022-07-08|General|The RPC Server does now support cleaning the result cache. The RPC client does now support requesting to clean the result cache.|
 |3.5.3 [L]|2022-06-03|General|Added Access-Control-Allow-Origin header in responses for legacy implementation|
