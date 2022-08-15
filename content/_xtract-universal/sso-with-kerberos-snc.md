@@ -12,6 +12,28 @@ This article describes the required steps for setting up Single Sign-On (SSO) wi
 **Warning!  Single Sign-On availability** <br> 
 ABAP application server has to run on a Windows OS and SNC with Kerberos encryption setup on SAP. <br>
 
+### Requirements
+- The SAP ABAP application server runs under a Windows operating system. 
+- The BI client (which calls the extraction) runs under Windows.
+- The SAP Kerberos Wrapper Library (gsskrb5) is used as the SNC solution.
+
+### "Double Hop" Issue
+
+SNC solution must support the Windows credentials being passed on by an Xtract product. 
+Since Active Directory is based on Kerberos, a "Double Hop" issue may occur. 
+Here is a possible solution to the "Double Hop" issue:<br>
+
+For security reasons, Kerberos does not allow credentials to be passed on. 
+But there are Kerberos extensions from Microsoft (S4U extensions) that allow credentials passing on. 
+These extensions are also known as "constrained delegation".
+Because the Kerberos Wrapper Library uses the Microsoft extensions for Kerberos to work around the "Double Hop" issue, it is only available for Windows. 
+It therefore only works with SAP application servers under Windows and clients under Windows.
+
+Unlike the Kerberos Wrapper Library (gsskrb5) from SAP (according to SAP), SAP's Common Crypto Library does not explicitly support credentials to be passed on. 
+The Kerberos Wrapper Library (gsskrb5) used by multiple customers of Theobald Software products.
+
+When using an SNC solution from a third-party vendor, use either the Kerberos Wrapper Library or a corresponding solution of the third-party vendor.
+
 
 ### Activation of HTTPS 
 
