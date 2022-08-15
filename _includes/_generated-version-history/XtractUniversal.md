@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.11.10 [L]|2022-08-15|Designer|Fixed the behavior in the log on of the designer, which made it impossible to specify the domain name for windows authentication with different user.|
 |5.11.9 [L]|2022-08-12|Server|Fixed an issue where the configuration server would send inconsistent data upon reading extraction runs if the user does not have access to the extraction.|
 |5.11.8 [L]|2022-08-09|Destinations|Fixed a bug on Tableau destination that broke the communication with Tableau Server|
 |5.11.7 [L]|2022-08-08|Designer|Fixed an issue where editing an extraction could cause the primary key information to get out of sync with the source system. Fixed an issue where when using AD-Authentication unnecessary AD-requests would slow down some designer actions|
