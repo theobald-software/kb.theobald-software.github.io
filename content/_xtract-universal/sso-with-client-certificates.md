@@ -35,9 +35,9 @@ a) The XU server requests the Client certificate from the Windows Certificate St
 If a certificate is available, the process continues with step 3.
 If no certificate is available steps 2b) to 2e) are executed.<br>
 b) The XU server requests an enrollment agent certificate from the Windows Certificate Store via the Windows API.
-The enrollment agent certificate can be used to issue client certificates.
-c) The XU server receives the enrollment agent certificate from the Windows Certificate Store.
-d) If the requested certificate from 2a) is not found in the Windows Certificate Store, the XU server enrolls a new client certificate for the caller using the enrollment agent certificate.
+The enrollment agent certificate can be used to issue client certificates.<br>
+c) The XU server receives the enrollment agent certificate from the Windows Certificate Store.<br>
+d) If the requested certificate from 2a) is not found in the Windows Certificate Store, the XU server enrolls a new client certificate for the caller using the enrollment agent certificate.<br>
 e) The Windows Certificate Store receives the new client certificate from the Active Directory Services via MSRPC.
 3. The XU server receives the client certificate of the caller from the Windows Certificate Store.
 4. The XU server configures the SAP Secure Login Client via the Windows Registry.
