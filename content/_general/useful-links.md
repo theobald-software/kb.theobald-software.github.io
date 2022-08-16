@@ -50,14 +50,3 @@ BI 7.0 Documentation, Open Hub Destination<br>
 BW 3.5, Open Hub Services, Creating InfoSpokes<br>
 [http://searchsap.techtarget.com/general/0,295582,sid21_gci1224995,00.html](http://searchsap.techtarget.com/general/0,295582,sid21_gci1224995,00.html)
 
-BW Demo Content<br>
-[http://www.sdn.sap.com/irj/scn/go/portal/prtroot/docs/library/uuid/902519b7-5337-2b10-cb95-a4db52dc57aa?overridelayout=true](http://www.sdn.sap.com/irj/scn/go/portal/prtroot/docs/library/uuid/902519b7-5337-2b10-cb95-a4db52dc57aa?overridelayout=true)
-
-
-#### DeltaQ and R/3 <-> BW issues
-
-How To… Create Generic DataSources which use the Delta Queue<br>
-[https://www.sdn.sap.com/irj/sdn/go/portal/prtroot/docs/library/uuid/d3219af2-0c01-0010-71ac-dbb4356cf4bf](https://www.sdn.sap.com/irj/sdn/go/portal/prtroot/docs/library/uuid/d3219af2-0c01-0010-71ac-dbb4356cf4bf)
-
-Tutorial: How to create a generic extractor for BW: [http://www.sdn.sap.com/irj/scn/go/portal/prtroot/docs/library/uuid/a0f46157-e1c4-2910-27aa-e3f4a9c8df33?QuickLink=index&overridelayout=true](http://www.sdn.sap.com/irj/scn/go/portal/prtroot/docs/library/uuid/a0f46157-e1c4-2910-27aa-e3f4a9c8df33?QuickLink=index&overridelayout=true)
-

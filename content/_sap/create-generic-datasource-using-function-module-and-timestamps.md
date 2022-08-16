@@ -345,9 +345,3 @@ All following calls must have the update type D (Delta Update). The delta proces
 #### References ####
 
 [SAP Help about Maintaining generic datasources](http://help.sap.com/saphelp_nw04/helpdata/en/37/4f3ca8b672a34082ab3085d3c22145/frameset.htm) <br>
-
-[SAP BI Generic Extraction Using a Function Module](http://www.sdn.sap.com/irj/scn/go/portal/prtroot/docs/library/uuid/a0f46157-e1c4-2910-27aa-e3f4a9c8df33) <br>
-
-[How to Create Generic Delta](http://www.sdn.sap.com/irj/sdn/go/portal/prtroot/docs/library/uuid/84bf4d68-0601-0010-13b5-b062adbb3e33) <br>
-
-[SAP BI Generic Extraction Using a Function Module](http://www.sdn.sap.com/irj/scn/go/portal/prtroot/docs/library/uuid/a0f46157-e1c4-2910-27aa-e3f4a9c8df33) <br>
