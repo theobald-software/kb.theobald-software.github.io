@@ -104,7 +104,7 @@ Check if the cost centers from the input data sets are created in SAP (table CSK
 ******
 
 #### Related Links
-- [Youtube Tutorial: SAP process automation - Power Automate SAP Connector](https://www.youtube.com/watch?v=A-2cOpGmCJ8)
+- [Youtube Tutorial: SAP process automation - Power Automate SAP Connector](https://youtu.be/k_yL8Bphfus)
 - [Microsoft Community Post: Example for Item Arrays](https://powerusers.microsoft.com/t5/Building-Flows/Build-JSON-object/m-p/113188#M11041)
 - [yunIO Help: How to Run a Service](https://help.theobald-software.com/en/yunio#how-to-run-a-service)
 
