@@ -1,12 +1,12 @@
 ---
 layout: page
-title: SSO with Logon-Ticket
+title: SSO with Client Certificates
 description: SSO with Logon-Ticket
 permalink: /:collection/:path
 weight: 56
 ---
 
-This article describes the process of setting up Single-Sign-On (SSO) cia Secure Network Communication (SNC) with SAP client certificates. <br>
+This article describes the process of setting up Single-Sign-On (SSO) via Secure Network Communication (SNC) with SAP client certificates. <br>
 For more information on using SSO with Xtract Universal, refer to [Online Help: SAP Single-Sign-On](https://help.theobald-software.com/en/xtract-universal/advanced-techniques/sap-single-sign-on).
 
 ### Requirements
