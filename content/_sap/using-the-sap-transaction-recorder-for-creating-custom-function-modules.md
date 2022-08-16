@@ -49,7 +49,7 @@ First open the Transaction Recorder with transaction SHDB. There are probably al
 
 Click *New recording* to start a new transaction recording.
 
-![image002-1](/img/contents/image002-1.gif){:class="img-responsive"}
+![image002-1](/img/contents/image002.gif){:class="img-responsive"}
 
 In the *Create Recording* window two mandatory fields have to be filled. In the Recording field enter an individual name for the new recording according to your company name conventions. Furthermore, enter the required transaction in the Transaction Code field. In our example we choose transaction MM01 for material creation. You don’t have to change the recording parameters in the window’s lower section. Click *Start recording*. 
 
