@@ -15,7 +15,7 @@ The usage of *SSO Certificate* requires the correct characteristics of the archi
 - Implement SAP SSO  with X.509 certificates without Secure Login Server, see [SAP-Documentation: Authentication Methods without Secure Login Server](https://help.sap.com/viewer/df185fd53bb645b1bd99284ee4e4a750/LATEST/en-US/7c45fe620ab9469083f7ab50a9008c37.html).
 - Implement Microsoft Certificate Store and Active Directory Certificate Templates for SAPGUI/RFC, see [Microsoft TechNet: Certificate Template](https://social.technet.microsoft.com/wiki/contents/articles/53249.active-directory-certificate-services-enterprise-ca-architecture.aspx#Certificate_Template).
 - Set up an enrollment agent for Xtract Universal in AD, see [Microsoft TechNet: Establish Restricted Enrollment Agents](https://social.technet.microsoft.com/wiki/contents/articles/10942.ad-cs-security-guidance.aspx#Establish_Restricted_Enrollment_Agents).
-- Install the SAP Secure Login Client on the server that runs Xtract Universal, see [SAP-Dokumentation: Secure Login Client](https://help.sap.com/viewer/8ac26ac20064447ba9e65b18e1bb747e/Cloud/en-US/b304e57f6393461dafd7affc2760b05b.html).
+- Install the SAP Secure Login Client on the server that runs Xtract Universal, see [SAP-Dokumentation: Secure Login Client](https://help.sap.com/viewer/8ac26ac20064447ba9e65b18e1bb747e/Cloud/en-US/b304e57f6393461dafd7affc2760b05b.html).<br>
 The Secure Login Client ensures that the correct SNC library is available for *SSO Certificate*.
 This library is used to open the SAP connection.
 - The XU service must run under a Windows AD Service account, see [Run an Xtract Universal Service under a Windows Service Account](https://help.theobald-software.com/en/xtract-universal/advanced-techniques/service-account).
@@ -30,7 +30,7 @@ The following graphic illustrates the process of authentication via *SSO Certifi
 1. The user of the BI tool (caller) triggers an extraction by calling the XU webservice of your Xtract product.
 The caller uses their Active Directory identity to authenticate against the XU webservice via HTTPS and SPNEGO.
 2. The XU server checks if a certificate for the caller is available in the Windows Certificate Store.
-If no certificate is available for the caller, a new certificate is issued by the Windows enrollment agent.
+If no certificate is available for the caller, a new certificate is issued by the Windows enrollment agent.<br>
 a) The XU server requests the Client certificate from the Windows Certificate Store via the Windows API.
 If a certificate is available, the process continues with step 3.
 If no certificate is available steps 2b) to 2e) are executed.<br>
