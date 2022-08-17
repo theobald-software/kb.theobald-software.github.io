@@ -401,7 +401,7 @@ Bootstrap: [http://getbootstrap.com](http://getbootstrap.com)
 
 Sharepoint Online: [http://sharepoint.com](http://sharepoint.com)
 
-Azure Portal: [https://manage.windowsazure.com](https://azure.microsoft.com/de-de/get-started/azure-portal/)
+Azure Portal: [https://azure.microsoft.com/en-us/get-started/azure-portal/](https://azure.microsoft.com/en-us/get-started/azure-portal/)
 
 
 

@@ -9,7 +9,7 @@ weight: 6
 In this article a scenario is described, where a Salesforce account is synchronized in near-real time to SAP. An SAP customer is automatically created and the customer number is written back to Salesforce using the following tools:
 
 - SAP ECC system on Premise
-- [ECS Core](https://theobald-software.com/en/ecs-core/) for SAP process integration with cloud scenarios
+- ECS Core for SAP process integration with cloud scenarios
 - Salesforce
 - Microsoft Power Automate as workflow solution
 
