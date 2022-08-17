@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.11.12 [L]|2022-08-17|Designer|Fixed a bug where deselecting all primary keys would result in restoring the default configuration for the primary keys|
 |5.11.11 [L]|2022-08-17|Destinations|MySQL data provider updated to latest version (8.0.30)|
 |5.11.10 [L]|2022-08-15|Designer|Fixed the behavior in the log on of the designer, which made it impossible to specify the domain name for windows authentication with different user.|
 |5.11.9 [L]|2022-08-12|Server|Fixed an issue where the configuration server would send inconsistent data upon reading extraction runs if the user does not have access to the extraction.|
