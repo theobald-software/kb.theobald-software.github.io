@@ -152,8 +152,6 @@ The mechanism to relay the queries from clients to a secured environment (with E
 
 Login to Azure Management Portal and create a new Azure ServiceBus entity (Service Bus > Create > Namespace Name > OK):
 
-[https://manage.windowsazure.com](https://manage.windowsazure.com)
-
 ![Service-Bus-Windows-Azure](/img/contents/Service-Bus-Windows-Azure.jpg){:class="img-responsive"}
 
 #### 4.2 Retrieve connection details

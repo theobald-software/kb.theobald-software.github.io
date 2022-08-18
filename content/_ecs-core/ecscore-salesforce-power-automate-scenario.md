@@ -80,7 +80,6 @@ allowfullscreen></iframe>
 *****
 Related Links <br>
 
-- [ECS Core](https://theobald-software.com/en/ecs-core/) - product information <br>
 - [ECS Core](https://help.theobald-software.com/en/ecs-core/) - OnlineHelp <br>
 - [ECS Core](https://theobald-software.com/en/ecs-core/demo-portal/) - demo portal <br>
 
