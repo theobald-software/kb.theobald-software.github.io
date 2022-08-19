@@ -15,3 +15,4 @@ Gemfile.lock
 # no temporary vim files
 *~
 *.swp
+*.jekyll-metadata

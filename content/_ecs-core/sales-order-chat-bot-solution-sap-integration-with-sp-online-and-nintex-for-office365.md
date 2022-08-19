@@ -36,6 +36,5 @@ As soon as the new item is created in the SharePoint list, a  Nintex Workflos C
 
 #### Related Links ####
 
-- [ECS Core](https://theobald-software.com/en/ecs-core/) - product information <br>
 - [ECS Core](https://help.theobald-software.com/en/ecs-core/) - OnlineHelp <br>
 - [ECS Core](https://theobald-software.com/en/ecs-core/demo-portal/) - demo portal <br>
