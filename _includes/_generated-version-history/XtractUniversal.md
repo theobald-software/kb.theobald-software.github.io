@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.11.15 [L]|2022-08-23|BAPI|Fixed a bug that caused legacy conversion for BAPI extractions to be skipped (introduced in 5.11.6)|
 |[5.11.14 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-5.11.14.html)|2022-08-19|Destinations|Introduced empty value as null setting for the Snowflake destination([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-5.11.14.html))|
 |5.11.13 [L]|2022-08-18|Designer|Fixed a bug causing an error on no fields being selected when editing a table extraction.|
 |5.11.12 [L]|2022-08-17|Designer|Fixed a bug where deselecting all primary keys would result in restoring the default configuration for the primary keys|
