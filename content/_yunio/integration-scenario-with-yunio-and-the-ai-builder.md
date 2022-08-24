@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Integating a yunIO Scenario with Power Automate and AI Builder
+title: Integrating a yunIO Scenario with Power Automate and AI Builder
 description: Integation scenario with yunIO and the AI Builder
 permalink: /:collection/:path
 weight: 3
