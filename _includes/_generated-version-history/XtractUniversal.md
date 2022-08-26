@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.11.17 [L]|2022-08-26|Destinations|Google Cloud Storage: Fixed a bug where users would not be able to run extractions when using service account authentication if XU Designer runs on different machine than XU Server.|
 |5.11.16 [L]|2022-08-24|Destinations|Google Cloud Storage: Service account authentication is now supported.|
 |5.11.15 [L]|2022-08-23|BAPI|Fixed a bug that caused legacy conversion for BAPI extractions to be skipped (introduced in 5.11.6)|
 |[5.11.14 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-5.11.14.html)|2022-08-19|Destinations|Introduced empty value as null setting for the Snowflake destination([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-5.11.14.html))|
