@@ -65,58 +65,58 @@ content:
 ##########  requires more than just adding a language here.
 collections_dir: content
 collections:
+  general:
+    output: true
+    name: 'General'
+    weight: 1
+  sap:
+    output: true
+    name: 'SAP'
+    weight: 2
+  xtract-is:
+    output: true
+    name: 'Xtract IS'
+    weight: 3
+  xtract-universal:
+    output: true
+    name: 'Xtract Universal'
+    weight: 4
+  yunio:
+    output: true
+    name: 'yunIO'
+    weight: 5
+  board-connector:
+    output: true
+    name: 'BOARD Connector'
+    weight: 6
+  erpconnect-general:
+    output: true
+    name: 'ERPConnect - General'
+    weight: 7
+  erpconnect-samples:
+    output: true
+    name: 'ERPConnect - Samples'
+    weight: 8
+  erpconnect-services:
+    output: true
+    name: 'ERPConnect Services'
+    weight: 9
   ecs-core:
     output: true
     name: 'ECS Core'
-    weight: 3
+    weight: 10
   required-support-information:
     output: true
     name: 'Required Support Information'
     weight: 12
-  board-connector:
-    output: true
-    name: 'BOARD Connector'
-    weight: 9
-  erpconnect-general:
-    output: true
-    name: 'ERPConnect - General'
-    weight: 1
-  erpconnect-samples:
-    output: true
-    name: 'ERPConnect - Samples'
-    weight: 2
-  erpconnect-services:
-    output: true
-    name: 'ERPConnect Services'
-    weight: 4
-  general:
-    output: true
-    name: 'General'
-    weight: 5
-  sap:
-    output: true
-    name: 'SAP'
-    weight: 6
-  troubleshooting:
-    output: true
-    name: 'Troubleshooting'
-    weight: 11
   version-history:
     output: true
     name: 'Version History'
     weight: 13
-  xtract-is:
+  troubleshooting:
     output: true
-    name: 'Xtract IS'
-    weight: 7
-  xtract-universal:
-    output: true
-    name: 'Xtract Universal'
-    weight: 8
-  yunio:
-    output: true
-    name: 'yunIO'
-    weight: 10
+    name: 'Troubleshooting'
+    weight: 14
   posts:
     output: true
 
