@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.11.19 [M]|2022-08-29|BAPI|Fixed a bug that caused errors during metadata retrieval if the BAPI contains parameters where the same structure is included multiple times (bug introduced in 5.11.15)|
 |5.11.18 [L]|2022-08-26|Designer|Fixed a bug where Primary Key settings would not be stored when editing an extraction.|
 |5.11.17 [L]|2022-08-26|Destinations|Google Cloud Storage: Fixed a bug where users would not be able to run extractions when using service account authentication if XU Designer runs on different machine than XU Server.|
 |5.11.16 [L]|2022-08-24|Destinations|Google Cloud Storage: Service account authentication is now supported.|
