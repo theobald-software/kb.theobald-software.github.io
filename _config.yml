@@ -97,10 +97,6 @@ collections:
     output: true
     name: 'SAP'
     weight: 6
-  troubleshooting:
-    output: true
-    name: 'Troubleshooting'
-    weight: 11
   version-history:
     output: true
     name: 'Version History'
