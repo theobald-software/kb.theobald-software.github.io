@@ -49,15 +49,15 @@ content:
       url: "https://theobald-software.com/en/"
   homepage-title: "Browse through our knowledge articles"
   homepage-search-title: "Knowledge Base <br><small>How can we help?</small>"
-  sidemenu-return-to-home: "Back to <strong>Homepage</strong> of Knowledgebase"
+  sidemenu-return-to-home: "Back to <strong>Homepage</strong> of Knowledge Base"
   sidemenu-return-to-section: "Back to overview for "
   sidebar-right-title: "On this page"
   search-no-results: "We didn't find any results for the search: "
-  search-title: "Search the Knowledgebase"
+  search-title: "Search the Knowledg Base"
   search-results: "Results"
   search-box-text: "Search..."
   section-page-default-explanation: "The following knowledge articles are in this section."
-  news-overview-page-default-explanation: "All news articles can be found here."
+  news-overview-page-default-explanation: "All new articles can be found here."
 
 ########## SECTION 3 - COLLECTION CONFIGURATIONS ##########
 ########## Languages can easily be added this way.
@@ -113,10 +113,6 @@ collections:
     output: true
     name: 'Version History'
     weight: 13
-  troubleshooting:
-    output: true
-    name: 'Troubleshooting'
-    weight: 14
   posts:
     output: true
 
