@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.12.4 [L]|2022-08-31|General|Hotfix Setup not recognizing installed .NET Framework|
 |1.12.3 [L]|2021-03-04|WebServiceDesigner|Correction in a web services' administration web page|
 |1.12.2 [L]|2020-01-16|General|Not provisioning to SearchServers by default.|
 |1.12.1 [L]|2019-07-01|General|Updated to MSBuild 16|
