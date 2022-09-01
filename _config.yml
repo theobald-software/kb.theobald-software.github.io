@@ -101,14 +101,6 @@ collections:
     output: true
     name: 'ERPConnect Services'
     weight: 9
-  ecs-core:
-    output: true
-    name: 'ECS Core'
-    weight: 10
-  required-support-information:
-    output: true
-    name: 'Required Support Information'
-    weight: 12
   version-history:
     output: true
     name: 'Version History'
