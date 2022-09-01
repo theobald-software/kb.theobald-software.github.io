@@ -45,8 +45,8 @@ content:
   navbar-links:
     - title: "<strong>Online Help</strong>"
       url: "https://help.theobald-software.com"
-    - title: "<strong>Theobald Software</strong>"
-      url: "https://theobald-software.com/en/"
+    - title: "<strong>Troubleshooting Portal</strong>"
+      url: "https://support.theobald-software.com/helpdesk/KB"
   homepage-title: "Browse through our knowledge articles"
   homepage-search-title: "Knowledge Base <br><small>How can we help?</small>"
   sidemenu-return-to-home: "Back to <strong>Homepage</strong> of Knowledge Base"
