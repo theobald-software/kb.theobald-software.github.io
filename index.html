@@ -44,13 +44,6 @@ common-css:
     </div>
 </header>
 
-<div class="row-centered-plus" role="main">
-<h3>Welcome to the Theobald Software Knowledge Base</h3>
-<p>Here you can find in-depth articles, use cases and a version history for all Theobald Software products.<br>
-For basic information on how to use Theobald Software products, refer to our <a href="https://help.theobald-software.com/en/">Online Help</a>.<br>
-For information on troubleshooting and error messages, refer to our <a href="https://support.theobald-software.com/helpdesk/KB">Troubleshooting Portal</a>.<br></br></p>
-</div>
-
 <div class="row row-centered aligned-row" role="main">
 
 
@@ -66,17 +59,16 @@ For information on troubleshooting and error messages, refer to our <a href="htt
                         {% endif %}
                         <hr class="length">
                         {% assign filtered_docs = collection.docs | sort: 'weight' %}
-                        {% for doc in filtered_docs limit:4 %}
+                        {% for doc in filtered_docs limit:6 %}
                             {% unless doc.relative_path contains '/index' %}
                                 <div class="double-listing-item">
                                     <a class="double-listing-link" href="{{doc.url}}">{{doc.title}}</a>
                                 </div>
                             {% endunless %}
                         {% endfor %}
-						
+                        <br>
                         {% if collection_doc != '' %}
-                            <a class="double-listing-link-read-more" href="{{ read_more_link }}">Show all articles about {{ collection.name }}</a>
-							<br>
+                            <a class="double-listing-link-read-more" href="{{ read_more_link }}">Read more about {{ collection.name }}</a>
                         {% endif %}
                     </div>
                 </div>
