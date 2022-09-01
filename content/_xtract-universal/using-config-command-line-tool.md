@@ -2,6 +2,8 @@
 layout: page
 title: Creating extractions without using the Xtract Universal designer GUI
 description: Creating extractions without using the Xtract Universal designer GUI
+redirect_from:
+  - xtract-universal/explanation-of-using-config-command-line-tool
 permalink: /:collection/:path
 weight: 16
 ---
