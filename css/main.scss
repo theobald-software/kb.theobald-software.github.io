@@ -512,8 +512,14 @@ img {
   text-decoration: none;
   display: block;
 }
+
+.row-centered-plus {
+  margin-left: 200px;
+  margin-right: 30px;
+}
 .double-listing-link-read-more {
   color: $color-text-primary;
+  padding-top: 10px;
   text-decoration: none;
   display: block;
 }
