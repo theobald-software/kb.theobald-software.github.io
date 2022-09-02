@@ -104,7 +104,7 @@ collections:
   version-history:
     output: true
     name: 'Version History'
-    weight: 13
+    weight: 10
   posts:
     output: true
 
