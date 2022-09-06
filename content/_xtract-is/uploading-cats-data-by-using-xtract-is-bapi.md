@@ -1,131 +1,84 @@
 ---
 layout: page
-title: Uploading CATS data by using Xtract IS BAPI
+title: Uploading CATS data using Xtract BAPI
 description: uploading-cats-data-by-using-xtract-is-bapi
 permalink: /:collection/:path
 weight: 110
 ---
 
-### Content ###
+This article shows how to upload CATS data from an SQL server table by using SSIS and the [Xtract IS BAPI](https://help.theobald-software.com/en/xtract-is/bapi) component.
 
-This article shows, how to upload CATS data from a SQL server table by using SSIS and [Xtract IS BAPI](https://help.theobald-software.com/en/xtract-is/bapi).
+### About BAPI_CATIMESHEETMGR_INSERT
 
-### Introduction ###
+The BAPI BAPI_CATIMESHEETMGR_INSERT creates Time Sheet entries in SAP.
 
-For creating Time Sheet entries in SAP, we use BAPI_CATIMESHEETMGR_INSERT. The important input fields are PROFILE and TESTRUN (import parameters) and table CATSRECORDS_IN. The results will be available in tables CATSRECORDS_OUT and RETURN. <br>
-The RETURN table contains different types of messages, for example warning, information, error etc. If the input records do not have any errors, then the table CATSRECORDS_OUT will be populated with the same number of input records, otherwise it will not contain any entries. <br>
+- Input:
+Important input fields for BAPI_CATIMESHEETMGR_INSERT are the import parameters PROFILE and TESTRUN and the table CATSRECORDS_IN. 
+- Output:
+The results are available in the tables CATSRECORDS_OUT and RETURN. <br>
+The RETURN table contains different types of messages, e.g., warnings, information, errors, etc. 
+If the input records do not have any errors, then the table CATSRECORDS_OUT will be populated with the same number of input records, otherwise it will not contain any entries. <br>
 
-{: .box-note }
-**Note:** When we post records using this BAPI, it is to be noted that only records that do not contain errors are posted. If an error occurs during posting, none of the data – including records that do not contain errors – is posted. Therefeore it is advisable to include only a small number of records in each posting.
+#### Troubleshooting
+The ROW fields in the RETURN table can be used to identify errors, see [Checking for Errors](#checking-for-errors).<br>
+Example: If the second and third entries have errors then the ROW of table RETURN will be populated as 2 and 3.
 
-For example, let us populate 10 entries to CATSRECORDS_IN and execute the BAPI.
+### Input Table
 
-If there is no error then CATSRECORDS_OUT will contain 10 entries.
-
-If two entries have errors, then CATSRECORDS_OUT will be empty, but we can identify the erroneous entries with the help of RETURN table. <br> 
-The erroneous entries can be easily identified with the ROW fields of table RETURN. If the second and third entries have errors then the ROW of table RETURN will be populated as 2 and 3.
-
-By using Xtract IS BAPI, with the help of three SQL tables, we can fill the input details and read the output tables.
-
-The three tables, to be created in SQL database are for CATSRECORD_IN and for CATSRECORD_OUT and RETURN. We need to fill the import parameters PROFILE with an appropriate value and TESTRUN as SPACE too.
-
-Here is an overview of the data flow task.
-![CATS-Bapi_01](/img/contents/xis/CATS-Bapi_01.jpg){:class="img-responsive"}
-
-### Step-by-step explanation ###
-
-**Step 1: Prepare input Table in SQL Databse**
-<br>
-Create a SQL table for CATSRECORDS_IN with the following fields:
+The format of an input table (column names and data types) must be compatible with the parameters of the BAPI, see [Online Help: Mapping Input Tables](https://help.theobald-software.com/en/xtract-is/bapi/parameters#mapping-input-tables).<br>
+The following table is stored on an SQL Server:
 
 Table Name: BAPICATSINPUT
-![CATS-Bapi_02](/img/contents/xis/CATS-Bapi_02.jpg){:class="img-responsive"}
+![CATS-Bapi_02](/img/contents/xis/CATS-Bapi_02.png){:class="img-responsive"}
 
-Fill the table with sample data:
-![CATS-Bapi_03](/img/contents/xis/CATS-Bapi_03.jpg){:class="img-responsive"}
+The table has the following content:
+![CATS-Bapi_03](/img/contents/xis/CATS-Bapi_03.png){:class="img-responsive"}
 
-**Step 2: Create Xtract IS BAPI Component**
+### Setup in SSIS
 
-For creating the Xtract IS BAPI component, we need to create the data flow task and necessary OLE DB and XTRACT connections.
+For information on how to use Xtract components, see [Online Help: Getting Started with Xtract IS](https://help.theobald-software.com/en/xtract-is/getting-started).
 
-After this, create an OLE DB Source and map it with the already created BAPICATSINPUT table.
+1. Create a new *Data Flow* and add a *Connection Manager* that connects to your SAP system, see [Online Help: Connection Manager](https://help.theobald-software.com/en/xtract-is/sap-connection/the-connection-manager).
+2. Add the Xtract BAPI component to the workflow.
+3. Assign the *Connection Manager* to the Xtract BAPI component manually or by double clicking on the component.
+4. Open the Xtract BAPI component and look up the BAPI BAPI_CATIMESHEETMGR_INSERT.
+5. Provide the PROFILE "TEST" and TESTRUN " " as import parameters.<br>
+![CATS-Bapi_04](/img/contents/xis/BAPI-CATS-Imports.png){:class="img-responsive"}
+6. Add the tables CATSRECORD_OUT and RETURN to the output.<br>
+![CATS-Bapi_05](/img/contents/xis/BAPI-CATS-Tables.png){:class="img-responsive"}
+7. Add a source. In this example, add an OLE DB Source to the workflow and map it with the [input table](#input-table) BAPICATSINPUT.
+8. Connect the OLE DB Source to the Xtract BAPI component. The window "Input Putput Selection" opens.
+9. Select the table CATSRECORD_IN to map the data from the input table to CATSRECORD_IN.<br>
+The table fields are mapped automatically. For this, the name and data types of the table columns must match.
+If the input table and CATSRECORD_IN do not match, add a Deprived Column component between the OLE DB Source and the Xtract BAPI component to format the input table accordingly.
+![CATS-Bapi_06](/img/contents/xis/BAPI-CATS-mapping.png){:class="img-responsive"}
+10. Create two OLE DB destinations for the tables CATSRECORDS_OUT and RETURN of the Xtract BAPI component.<br>
+![CATS-Bapi_07](/img/contents/xis/CATS-Bapi_04.png){:class="img-responsive"}
+11. Execute the workflow and check the SQL output tables.
+12. Use the transaction CAT3 to check the data in SAP. <br>
+![CATS-Bapi_08](/img/contents/xis/CATS-Bapi_16.png){:class="img-responsive"}
 
-Then create the BAPI component and assign the BAPI BAPI_CATIMESHEETMGR_INSERT .
+### Checking for Errors
 
-For example, let us provide the PROFILE "TEST" and TESTRUN "SPACE"" as import parameters. We should map the input type of CATSRECORD_IN as "Pipeline" and also the output type of CATSRECORD_OUT and RETURN as "Pipeline".
-![CATS-Bapi_04](/img/contents/xis/CATS-Bapi_04.jpg){:class="img-responsive"}
-![CATS-Bapi_05](/img/contents/xis/CATS-Bapi_05.jpg){:class="img-responsive"}
+The ROW fields in the RETURN table can be used to identify errors. Example:<br>
 
-Then map corresponding fields of CATSRECORD_IN with the fields of SQL table BAPICATSINPUT.
-
-![CATS-Bapi_06](/img/contents/xis/CATS-Bapi_06.jpg){:class="img-responsive"}
-![CATS-Bapi_07](/img/contents/xis/CATS-Bapi_07.jpg){:class="img-responsive"}
-![CATS-Bapi_08](/img/contents/xis/CATS-Bapi_08.jpg){:class="img-responsive"}
-
-**Step3: Prepare the output tables in the SQL Database**
-
-Create two OLE DB destinations for CATSRECORDS_OUT and RETURN tables of the BAPI.
-
-Let us create BAPICATSRETURN and BAPICATSOUT tables for these OLE DB destinations and map the corresponding fields.
-
-BAPICATSRETURN:
-![CATS-Bapi_09](/img/contents/xis/CATS-Bapi_09.jpg){:class="img-responsive"}
-
-![CATS-Bapi_10](/img/contents/xis/CATS-Bapi_10.jpg){:class="img-responsive"}
-
-BAPICATSOUTPUT:
-![CATS-Bapi_11](/img/contents/xis/CATS-Bapi_11.jpg){:class="img-responsive"}
-
-![CATS-Bapi_12](/img/contents/xis/CATS-Bapi_12.jpg){:class="img-responsive"}
-
-**Step 4: Execute the application**
-
-Now that the design is finished let us execute the application.
-
-The output will be as follows.
-![CATS-Bapi_13](/img/contents/xis/CATS-Bapi_13.jpg){:class="img-responsive"}
-From the above diagram, we would be able to see that for n number of records of CATSRECORDS_IN, there is exactly the same number of records in CATSRECORDS_OUT. So the data has been updated successfully.
-
-Now let us check the SQL tables BAPICATSOUTPUT and BAPICATSRETURN. 
-
-BAPICATSOUTPUT:
-![CATS-Bapi_14](/img/contents/xis/CATS-Bapi_14.jpg){:class="img-responsive"}
-
-BAPICATSRETURN:
-![CATS-Bapi_15](/img/contents/xis/CATS-Bapi_15.jpg){:class="img-responsive"}
-
-There is only an information message. 
-
-**Step 5: Check the output and identify errors**
-
-Now let us check the SAP transaction CAT3 (Time Sheet: Display Times)
-
-We have to provide PROFILE, WORKDATE and EMPLOYEENUMBER.
-![CATS-Bapi_16](/img/contents/xis/CATS-Bapi_16.jpg){:class="img-responsive"}
-![CATS-Bapi_17](/img/contents/xis/CATS-Bapi_17.jpg){:class="img-responsive"}
-![CATS-Bapi_18](/img/contents/xis/CATS-Bapi_18.jpg){:class="img-responsive"}
-![CATS-Bapi_19](/img/contents/xis/CATS-Bapi_19.jpg){:class="img-responsive"}
-![CATS-Bapi_20](/img/contents/xis/CATS-Bapi_20.jpg){:class="img-responsive"}
-
-Let us now execute entries with errors.
-
-Populate the table CATSRECORDS_IN with the following entries.
+1. To produce an error, set the the value for ABS_ATT_TYPE in the input table BAPICATSINPUT to 0005.
 ![CATS-Bapi_21](/img/contents/xis/CATS-Bapi_21.jpg){:class="img-responsive"}
-
-Here the Attendance or Absence Type is 0005 instead of 0001 for the second and fourth entries. Let us check the output now.
-![CATS-Bapi_22](/img/contents/xis/CATS-Bapi_22.jpg){:class="img-responsive"}
-
-Here the CATSRECORDS_OUT does not have any entries. So it is clear that data is not updated.
-
-Let us query the table RETURN to identify the error.
-
-By checking the ROW numbers we can easily identify the erroneous records. From the message, it is clear that the attendance/absence type (0005) is not maintained.
+2. Run the SSIS package.<br>
+The output table CATSRECORDS_OUT does not have any entries. This means that the data in SAP is not updated.
+3. Query the SQL table RETURN to identify the error.<br>
+The numbers in the ROW column show which rows contain the erroneous records. <br>
+The message displayed in the MESSAGE column indicates that the attendance/absence type (0005) is not maintained.
 ![CATS-Bapi_23](/img/contents/xis/CATS-Bapi_23.jpg){:class="img-responsive"}
+
+{: .box-note }
+**Note:** When using BAPI_CATIMESHEETMGR_INSERT, note that only records without errors are posted. 
+If an error occurs during posting, none of the data – including records without errors – is posted. 
+We recommend including only a small number of records in each posting.
+
 
 ***********
 
-#### References ####
-
-[Xtract IS](https://theobald-software.com/en/xtract-is/) - product information <br>
-[Xtract IS](https://help.theobald-software.com/en/xtract-is/) - OnlineHelp <br>
-[Xtract IS](https://help.theobald-software.com/en/xtract-is/bapi) - BAPI component help section<br>
+#### Related Links
+- [Online Help: Xtract BAPI](https://help.theobald-software.com/en/xtract-is/bapi) 
+- [Knowledge Base Article: How to Post Data in SAP with Xtract BAPI](https://kb.theobald-software.com/xtract-is/how-to-post-data-in-sap)
