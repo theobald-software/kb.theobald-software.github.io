@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.7.5 [L]|2022-09-07|Designer|Settings support custom hostname for OpenAPI|
 |1.7.4 [L]|2022-08-03|Designer|Removed detailed CORS settings|
 |1.7.3 [L]|2022-08-02|Designer|Fix for redirecting unknown Designer URLs|
 |1.7.2 [L]|2022-07-15|General|Update transaction component|
