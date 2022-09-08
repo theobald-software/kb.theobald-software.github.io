@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|3.5.8 [L]|2022-09-08|General|A Rpc client can now request its current privilege level.|
 |3.5.7 [L]|2022-09-07|General|Added OpenAPI config to known exchanges|
 |3.5.6 [L]|2022-08-12|General|Fixed an issue where the configuration server would send inconsistent data upon reading extraction runs if the user does not have access to the extraction|
 |3.5.5 [L]|2022-07-15|General|Update transaction component|
