@@ -1,5 +1,7 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.5.0 [M]|2022-09-08|OHS|Removed OHS|
+|5.4.0 [M]|2022-09-08|Report|Removed Report|
 |5.3.0 [M]|2022-03-31|Table Join|Removed TableJoin|
 |5.2.0 [M]|2022-02-17|BAPI|Removed BAPI extractor|
 |5.1.9 [L]|2021-12-01|General|Removed translations|
