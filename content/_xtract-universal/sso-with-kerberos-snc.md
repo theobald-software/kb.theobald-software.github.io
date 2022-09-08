@@ -9,6 +9,9 @@ weight: 56
 This article describes the required steps for setting up Single Sign-On (SSO) with Secure Network Communication (SNC) and Kerberos encryption.
 
 {: .box-warning }
+**Warning! SAP officially does not support the Kerberos Wrapper Library (gx64krb5.dll) anymore.** 
+
+{: .box-warning }
 **Warning!  Single Sign-On availability** <br> 
 ABAP application server has to run on a Windows OS and SNC with Kerberos encryption setup on SAP. <br>
 
@@ -104,12 +107,11 @@ e.g., `C:\SNC\gx64krb5.dll` (3).
 {: .box-note}
 **Note:** The SAP Logon Pad SNC settings for partner name differ from the ones used in Xtract products. SAP Logon Pad uses the UPN of the SAP service accounts and Xtract products use the Service Principal Name (SPN). Use the following notation: *p:[SAP Service Account]@[domain]*. SPN's are case sensitive in the SNC partner name.
 
-
 ### SNC Activation in SAP
 
 In SAP, apply the Kerberos SNC settings as described in the [SAP Help](https://help.sap.com/viewer/e815bb97839a4d83be6c4fca48ee5777/7.5.9/EN-US/440ebf6c9b2b0d1ae10000000a114a6b.html).
 
-#### Related Links
+### Related Links
 - [Online Help: SSO and SNC with Kerberos Wrapper Library](https://help.theobald-software.com/en/xtract-universal/advanced-techniques/sap-single-sign-on#sso-and-snc-with-kerberos-wrapper-library)
 - [Online Help: X.509 certificate](https://help.theobald-software.com/en/xtract-universal/security/install-x.509-Certificate)
 - [Running the Xtract Universal Service under a Windows Service Account](https://help.theobald-software.com/en/xtract-universal/advanced-techniques/service-account).
