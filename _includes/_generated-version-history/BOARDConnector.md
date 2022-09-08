@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.8.0 [M]|2022-09-08|OHS|New OHS component (with Table extraction mode and support for BW/4HANA 2.0)|
 |5.7.3 [H]|2022-08-04|BAPI|Fix for structures with includes, please refresh metadata|
 |5.7.2 [M]|2022-07-11|BOARD API|Fixed several issues that caused errors when retrieving metadata|
 |5.7.1 [L]|2022-07-08|General|The clear result cache functionality does now use the new RPC server capabilities instead of the HTTP server.|
