@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.11.22 [L]|2022-09-08|Designer|The Designer users privilege level is now correctly fetched from the server.|
 |5.11.21 [L]|2022-09-06|Destinations|Qlik Sense: Script generator now creates a fail safe script|
 |[5.11.20 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-5.11.20.html)|2022-09-06|Destinations|Where clause is now accessible through script expressions in destination folder path.([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-5.11.20.html))|
 |5.11.19 [M]|2022-08-29|BAPI|Fixed a bug that caused errors during metadata retrieval if the BAPI contains parameters where the same structure is included multiple times (bug introduced in 5.11.15)|
