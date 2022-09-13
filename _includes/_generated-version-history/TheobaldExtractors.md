@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.30.11 [M]|2022-09-13|OHS|Fixed assembly version of Theobald.Extractors.Ohs.dll|
 |1.30.10 [M]|2022-08-29|ODP|Fixed an issue where trailing zeros of RAW fields where truncated|
 |1.30.9 [L]|2022-08-09|Report|Fixed a bug where TCODE lookup would not work with some newer SAP systems.|
 |1.30.8 [L]|2022-08-09|Table|Fixed a bug in WHERE clause editor, where single quotes in value blocks would not be escaped when running the extraction, causing syntax errors.|
