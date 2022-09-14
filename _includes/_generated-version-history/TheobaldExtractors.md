@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|[1.30.12 [L]](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.30.12.html)|2022-09-14|Table|Updated Z_THEO_READ_TABLE to version 2.13.([Release note](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.30.12.html))|
 |1.30.11 [M]|2022-09-13|OHS|Fixed assembly version of Theobald.Extractors.Ohs.dll|
 |1.30.10 [M]|2022-08-29|ODP|Fixed an issue where trailing zeros of RAW fields where truncated|
 |1.30.9 [L]|2022-08-09|Report|Fixed a bug where TCODE lookup would not work with some newer SAP systems.|
