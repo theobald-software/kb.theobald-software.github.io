@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.12.2 [M]|2022-09-14|General|Fixed a bug where extractions of type Query, DeltaQ and Hierarchy could not be ran. (Bug introduced in 5.11.20)|
 |5.12.1 [L]|2022-09-13|OHS|Removed "Refresh metadata" button|
 |5.12.0 [M]|2022-09-08|OHS|New OHS component (with Table extraction mode and support for BW/4HANA 2.0)|
 |5.11.22 [L]|2022-09-08|Designer|The Designer users privilege level is now correctly fetched from the server.|
