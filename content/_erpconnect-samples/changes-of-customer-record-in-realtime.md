@@ -34,6 +34,6 @@ allowfullscreen></iframe>
 #### Related Links
 - [Download ERPConnect Trial Version](https://theobald-software.com/en/download-trial)
 - [ERPConnect Online-help](https://help.theobald-software.com/en/erpconnect/)
-- [ERPConnect API](https://help.theobald-software.com/en/erpconnect/appendix/erp-connect-api)
+- [ERPConnect API](https://help.theobald-software.com/en/erpconnect/misc#erpconnect-api)
 
 
