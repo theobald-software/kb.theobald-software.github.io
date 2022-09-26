@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.12.5 [L]|2022-09-26|Table|added support for function modules /BODS/RFC_STREAM_READ_TABLE and /SAPDS/RFC_STREAM_READ_TABLE|
 |5.12.4 [L]|2022-09-21|BW Cube|Fixed a bug that might cause the BWCube edit window to close unexpectedly when opening the General Settings.|
 |5.12.3 [L]|2022-09-14|DeltaQ|GUI: Fix for "No valid name prefix defined"|
 |5.12.2 [M]|2022-09-14|General|Fixed a bug where extractions of type Query, DeltaQ and Hierarchy could not be ran. (Bug introduced in 5.11.20)|
