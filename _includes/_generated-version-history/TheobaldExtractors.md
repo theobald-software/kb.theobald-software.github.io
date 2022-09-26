@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.31.0 [L]|2022-09-26|Table|added support for function modules /BODS/RFC_STREAM_READ_TABLE and /SAPDS/RFC_STREAM_READ_TABLE|
 |[1.30.12 [L]](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.30.12.html)|2022-09-14|Table|Updated Z_THEO_READ_TABLE to version 2.13.([Release note](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.30.12.html))|
 |1.30.11 [M]|2022-09-13|OHS|Fixed assembly version of Theobald.Extractors.Ohs.dll|
 |1.30.10 [M]|2022-08-29|ODP|Fixed an issue where trailing zeros of RAW fields where truncated|
