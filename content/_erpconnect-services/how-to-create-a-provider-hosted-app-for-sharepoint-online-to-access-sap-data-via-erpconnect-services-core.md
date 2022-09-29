@@ -425,11 +425,10 @@ OAuth 2.0: Authorization Code Grant Flow
 
 [http://msdn.microsoft.com/en-us/library/azure/dn645542.aspx](http://msdn.microsoft.com/en-us/library/azure/dn645542.aspx)
 
-Azure AD: Adding, Updating, and Removing an Application
+Add and manage Azure AD applications
 
-[http://msdn.microsoft.com/library/azure/dn132599.aspx](http://msdn.microsoft.com/library/azure/dn132599.aspx)
+[https://learn.microsoft.com/en-us/azure/marketplace/manage-aad-apps)
 
 ERPConnect Services
 
 [https://theobald-software.com/en/erpconnect-services-productinfo.html](https://theobald-software.com/en/erpconnect-services-productinfo.html)
-
