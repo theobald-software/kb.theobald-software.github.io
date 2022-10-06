@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|7.1.1 [M]|2022-10-06|General|Packed numbers that exceed the range of System.Decimal throw an exception instead of being cut off silently|
 |7.1.0 [L]|2022-08-30|RFC Client|Introduced Execute(RFCFunction) method to IR3Connection interface to improve testability of R3Connection dependent code|
 |7.0.0 [M]|2022-06-15|General|Removed ERPConnect45.dll - please use ERPConnectStandard20.dll or ERPConnect35.dll instead|
 |[6.14.19 [L]](https://kb.theobald-software.com/release-notes/ERPConnect-6.14.19.html)|2022-05-17|Idoc|Fixed a bug where saving an Idoc schema incorrectly changed field names([Release note](https://kb.theobald-software.com/release-notes/ERPConnect-6.14.19.html))|
