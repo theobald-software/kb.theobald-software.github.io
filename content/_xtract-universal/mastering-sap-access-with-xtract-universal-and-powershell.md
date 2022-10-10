@@ -3,7 +3,7 @@ layout: page
 title: Mastering SAP Access with Xtract Universal and Powershell
 description: Mastering SAP Access with Xtract Universal and Powershell
 permalink: /:collection/:path
-weight: 55
+weight: 100
 ---
 
 This article showcases how to use PowerShell scripts in combination with Xtract Universal.

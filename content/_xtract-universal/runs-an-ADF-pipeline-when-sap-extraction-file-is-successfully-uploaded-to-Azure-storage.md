@@ -3,7 +3,7 @@ layout: page
 title: Run an ADF pipeline when an SAP extraction file is uploaded to Azure storage
 description: Runs an ADF pipeline when extraction file is uploaded to Azure storage
 permalink: /:collection/:path
-weight: 52
+weight: 125
 ---
 
 

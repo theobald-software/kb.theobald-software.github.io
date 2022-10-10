@@ -3,7 +3,7 @@ layout: page
 title: Execute & Schedule All Xtract Universal Extractions
 description: execute_all_defined_xu_extractions 
 permalink: /:collection/:path
-weight: 11
+weight: 45
 ---
 
 ### About

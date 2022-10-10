@@ -5,7 +5,7 @@ description: Creating extractions without using the Xtract Universal designer GU
 redirect_from:
   - xtract-universal/explanation-of-using-config-command-line-tool
 permalink: /:collection/:path
-weight: 16
+weight: 25
 ---
 As of Xtract Universal Version 4.26.1, the command line tool *xu-config.exe* is available to customers for creating extractions, sources and destinations outside of the Xtract Universal Designer: `C:\Program Files\XtractUniversal\xu-config.exe`.
 

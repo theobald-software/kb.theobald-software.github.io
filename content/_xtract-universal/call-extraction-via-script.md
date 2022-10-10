@@ -3,7 +3,7 @@ layout: page
 title: Call Extraction via Script
 description: Call Extraction via Script
 permalink: /:collection/:path
-weight: 29
+weight: 5
 ---
 This section shows how to call an extraction from a [Windows script (.bat)](./call-extraction-via-script#call-via-windows-script-bat) or [PowerShell script](./call-extraction-via-script#call-via-powershell-script).
 

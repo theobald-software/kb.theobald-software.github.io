@@ -3,7 +3,7 @@ layout: page
 title: Calling Dynamic Extractions with Variables in ADF
 description: Calling Dynamic Extractions with Variables in ADF
 permalink: /:collection/:path
-weight: 53
+weight: 10
 ---
 
 This article shows how to call Xtract Universal extractions dynamically from Azure Data Factory (ADF) using user-defined variables. <br>

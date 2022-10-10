@@ -3,7 +3,7 @@ layout: page
 title: Pentaho Integration via HTTP
 description: Pentaho Integration via HTTP
 permalink: /:collection/:path
-weight: 40
+weight: 111
 ---
 
 This chapter shows best practices about the integration and usage of Xtract Universal with Pentaho Data Integration (ETL) aka Kettle by calling the Xtract Universal HTTP endpoint (aka http-csv destination). <br>

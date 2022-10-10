@@ -3,7 +3,7 @@ layout: page
 title: How to restrict the execution of extractions?
 description: using HTTPS restriction to AD users 
 permalink: /:collection/:path
-weight: 10
+weight: 60
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/de/xtract-universal/) for further information.

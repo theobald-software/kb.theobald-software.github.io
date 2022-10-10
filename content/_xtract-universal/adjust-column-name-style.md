@@ -3,7 +3,7 @@ layout: page
 title: Post-Processing Column Name Style
 description: Post-Processing Column Name Style by using generic SQL-statement
 permalink: /:collection/:path
-weight: 9
+weight: 115
 ---
 
 The following section describes a common business scenario to rename column name style within Microsoft SQL-Server environment.

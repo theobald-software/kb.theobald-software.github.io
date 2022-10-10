@@ -3,7 +3,7 @@ layout: page
 title: Talend Integration via HTTP
 description: Talend Integration HTTP
 permalink: /:collection/:path
-weight: 20
+weight: 160
 ---
 
 In the following we demonstrate the Talend integration via a REST web service call.

@@ -3,7 +3,7 @@ layout: page
 title: Dynamic Runtime Parameter within KNIME Workflow
 description: Dynamic Runtime Parameter within KNIME Workflow
 permalink: /:collection/:path
-weight: 11
+weight: 40
 ---
 ### About this approach
 

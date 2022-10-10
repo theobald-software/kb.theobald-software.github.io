@@ -3,7 +3,7 @@ layout: page
 title: Collation Settings for MSSQL Server Destination
 description: example of how to append the collation for a specified column
 permalink: /:collection/:path
-weight: 5
+weight: 20
 ---
 
 The following section describes a common problem that occurs when pushing SAP data into an SQL server database when collation is not set case-sensitive.

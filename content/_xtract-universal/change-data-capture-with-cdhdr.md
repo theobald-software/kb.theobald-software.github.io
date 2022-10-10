@@ -3,7 +3,7 @@ layout: page
 title: Change Data Capture with CDHDR
 description: Change Data Capture with CDHDR
 permalink: /:collection/:path
-weight: 22
+weight: 15
 progressstate: 5
 ---
 

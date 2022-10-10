@@ -3,7 +3,7 @@ layout: page
 title: How to extract SAP data to SAP Data Warehouse Cloud (DWC)
 description: Using Xtract Universal's HANA destination to push data to SAP DWC
 permalink: /:collection/:path
-weight: 21
+weight: 50
 ---
 
 

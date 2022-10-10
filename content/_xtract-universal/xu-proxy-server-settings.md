@@ -3,7 +3,7 @@ layout: page
 title: Proxy server settings in Xtract Universal
 description: proxy-server-settings-in-xtract-universal
 permalink: /:collection/:path
-weight: 51
+weight: 120
 ---
 
 ### About ###

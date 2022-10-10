@@ -3,7 +3,7 @@ layout: page
 title: How to schedule Xtract Universal extractions to load data from SAP.
 description: How-to-schedule-Xtract-Universal-extractions-to-load-data-from-SAP.
 permalink: /:collection/:path
-weight: 31
+weight: 65
 ---
 
 ### Content ###

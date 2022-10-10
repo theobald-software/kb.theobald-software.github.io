@@ -3,7 +3,7 @@ layout: page
 title: Integrating SAP Data into a Snowflake Data Warehouse
 description: integrating-sap-data-into-a-snowflake-data-warehouse
 permalink: /:collection/:path
-weight: 45
+weight: 85
 ---
 
 Theobald Software has partnered with Snowflake to build a showcase for integrating SAP ERP data into a Snowflake cloud data warehouse. 

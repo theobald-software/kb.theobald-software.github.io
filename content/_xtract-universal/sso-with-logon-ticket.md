@@ -3,7 +3,7 @@ layout: page
 title: SSO with Logon-Ticket
 description: SSO with Logon-Ticket
 permalink: /:collection/:path
-weight: 55
+weight: 155
 ---
 
 This article describes the process of running extractions for [pull destinations](https://help.theobald-software.com/en/xtract-universal/destinations#pull-and-push-destinations) using Single-Sign-On (SSO) with SAP Logon-Ticket. <br>

@@ -3,7 +3,7 @@ layout: page
 title: Integration in Azure Data Factory using Command Line
 description: automation-of-xu-data-extracts-with-adf
 permalink: /:collection/:path
-weight: 50
+weight: 75
 ---
 Target audience: Customers who utilize Azure Data Factory as a platform orchestrating data movement and transformation. <br>
 

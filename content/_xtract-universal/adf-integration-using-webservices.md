@@ -3,7 +3,7 @@ layout: page
 title: Integration in Azure Data Factory using Webservices
 description: automation-of-xu-data-extracts-with-adf-Part 2
 permalink: /:collection/:path
-weight: 51
+weight: 80
 ---
 
 

@@ -3,7 +3,7 @@ layout: page
 title: How to insert xtract universal extraction events into the windows logs
 description: how-to-insert-xtract-universal-extraction-events-into-the-windows-logs-and-show-them-in-the-event-viewer
 permalink: /:collection/:path
-weight: 3
+weight: 55
 ---
 You can use the Windows Event Viewer to show events from your extractions of Xtract Universal. 
 

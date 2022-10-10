@@ -3,7 +3,7 @@ layout: page
 title: SSO with Kerberos SNC
 description: SSO with Kerberos SNC
 permalink: /:collection/:path
-weight: 56
+weight: 152
 ---
 
 This article describes the required steps for setting up Single Sign-On (SSO) with Secure Network Communication (SNC) and Kerberos encryption.

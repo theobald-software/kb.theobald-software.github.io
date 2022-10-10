@@ -3,7 +3,7 @@ layout: page
 title: Delta Table Extraction
 description: Delta Table Extraction
 permalink: /:collection/:path
-weight: 21
+weight: 30
 ---
 
 This article shows how to load data incrementally from an SAP Table based on date fields.

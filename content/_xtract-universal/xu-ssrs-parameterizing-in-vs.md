@@ -3,7 +3,7 @@ layout: page
 title: Using Computed Query Parameters for SSRS with Xtract Universal
 description: Using Computed Query Parameters in Visual Studio for SSRS
 permalink: /:collection/:path
-weight: 52
+weight: 160
 ---
 
 This article contains information on how to parameterize extractions in Visual Studio in context of Xtract Universal's [SSRS destination](https://help.theobald-software.com/en/xtract-universal/destinations/server-report-services).

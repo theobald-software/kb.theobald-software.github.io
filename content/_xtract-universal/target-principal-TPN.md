@@ -3,7 +3,7 @@ layout: page
 title: How to use target principal field (TPN)
 description: How-to-use-target-principal-field(TPN)
 permalink: /:collection/:path
-weight: 4
+weight: 70
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/xtract-universal/security/user-management) for further information.

@@ -3,7 +3,7 @@ layout: page
 title: Linking a BEx query with a Hierarchy in Tableau
 description: Migrating from Xtract RS to Xtract Universal (with SSRS destination)
 permalink: /:collection/:path
-weight: 63
+weight: 95
 ---
 
 This articles shows how to link BEx Query and BW Hierarchy extractions in the Tableau destination.

@@ -3,7 +3,7 @@ layout: page
 title: Self-signed certificate creation
 description: Self-signed certificate creation
 permalink: /:collection/:path
-weight: 52
+weight: 135
 ---
 ### Target audience ###
 Customers who want to use certificates with Xtract Universal. <br>

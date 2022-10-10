@@ -3,7 +3,7 @@ layout: page
 title: Pentaho Integration via the Command Line
 description: Pentaho Integration via the Command Line
 permalink: /:collection/:path
-weight: 30
+weight: 110
 ---
 
 This chapter shows best practices about the integration and usage of Xtract Universal with Pentaho Data Integration (ETL) aka Kettle by calling the Xtract Universal Command Line (xu.exe).<br>

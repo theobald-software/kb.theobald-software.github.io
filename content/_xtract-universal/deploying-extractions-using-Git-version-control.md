@@ -3,7 +3,7 @@ layout: page
 title: Deploying Extractions Using Git Version Control
 description: Deploying Extractions Using Git Version Control
 permalink: /:collection/:path
-weight: 60
+weight: 35
 ---
 
 ### About

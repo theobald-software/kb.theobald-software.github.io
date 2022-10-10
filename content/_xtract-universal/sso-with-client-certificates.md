@@ -3,7 +3,7 @@ layout: page
 title: SSO with Client Certificates
 description: SSO with Logon-Ticket
 permalink: /:collection/:path
-weight: 56
+weight: 150
 ---
 
 This article describes the process of setting up Single-Sign-On (SSO) via Secure Network Communication (SNC) with SAP client certificates. <br>

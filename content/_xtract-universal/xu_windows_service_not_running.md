@@ -3,7 +3,7 @@ layout: page
 title: Xtract Universal Server Troubleshooting
 description: Xtract Universal Server Troubleshooting
 permalink: /:collection/:path
-weight: 6
+weight: 170
 ---
 The Xtract Universal (XU) server is a standard Windows service that runs under the Local System Account by default. 
 

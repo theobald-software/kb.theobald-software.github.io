@@ -3,7 +3,7 @@ layout: page
 title: Setting Up OAuth 2.0 for the Google Cloud Storage Destination
 description: Dynamic Runtime Parameter within KNIME Workflow
 permalink: /:collection/:path
-weight: 31
+weight: 140
 ---
 
 Xtract Universal supports OAuth 2.0 for authentication with the Google servers.
