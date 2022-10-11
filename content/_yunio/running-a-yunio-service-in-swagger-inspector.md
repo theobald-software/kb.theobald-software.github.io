@@ -3,7 +3,7 @@ layout: page
 title: Running a yunIO Service in Swagger Inspector
 description: Running a yunIO Service in Swagger Inspector
 permalink: /:collection/:path
-weight: 1
+weight: 2
 ---
 
 This article shows how to run a yunIO service in Swagger Inspector.

@@ -3,7 +3,7 @@ layout: page
 title: Integrating a yunIO Scenario with Power Automate and AI Builder
 description: Integation scenario with yunIO and the AI Builder
 permalink: /:collection/:path
-weight: 3
+weight: 4
 ---
 
 This article shows how to integrate yunIO with Microsoft Power Automate and the [Microsoft AI Builder](https://docs.microsoft.com/en-gb/ai-builder/overview).<br>

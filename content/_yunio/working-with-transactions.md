@@ -3,7 +3,7 @@ layout: page
 title: Working with Transactions
 description: Creating Equipment Using Transactions in yunIO
 permalink: /:collection/:path
-weight: 5
+weight: 50
 ---
 
 This article shows how to use the integration type *Transaction* in yunIO.<br>

@@ -3,7 +3,7 @@ layout: page
 title: Sync Salesforce with SAP using Power Automate and yunIO
 description: Sync Salesforce with SAP in near-real-time using power automate and yunIO
 permalink: /:collection/:path
-weight: 6
+weight: 40
 ---
 
 This article shows how to synchronize a Salesforce account in near-real time with SAP.<br>

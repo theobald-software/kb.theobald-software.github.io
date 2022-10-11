@@ -3,7 +3,7 @@ layout: page
 title: Running a yunIO Service in Postman
 description: Running a yunIO Service in Postman
 permalink: /:collection/:path
-weight: 2
+weight: 1
 ---
 
 This article shows how to run a yunIO service in Postman.

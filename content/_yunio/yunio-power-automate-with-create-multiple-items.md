@@ -3,7 +3,7 @@ layout: page
 title: How to use yunIO with Power Automate to create multiple items in SAP
 description: How to use yunIO with Power Automate to create multiple items in SAP
 permalink: /:collection/:path
-weight: 3
+weight: 20
 ---
 
 This article shows how to use yunIO with Microsoft Power Automate to create multiple items in SAP with one service call.<br>

@@ -3,7 +3,7 @@ layout: page
 title: Formats and Conversions in Power Automate
 description: Formats and Conversions in Power Automate
 permalink: /:collection/:path
-weight: 15
+weight: 10
 ---
 
 This article offers conversion tips and code templates for working with yunIO in Power Automate.
