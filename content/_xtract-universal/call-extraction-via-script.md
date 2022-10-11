@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Call Extraction via Script
+title: Call Extractions via Script
 description: Call Extraction via Script
 permalink: /:collection/:path
 weight: 5
