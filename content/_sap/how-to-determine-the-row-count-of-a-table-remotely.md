@@ -3,7 +3,7 @@ layout: page
 title: How to determine the row count of a table remotely
 description: How to determine the row count of a table remotely
 permalink: /:collection/:path
-weight: 6
+weight: 30
 ---
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.

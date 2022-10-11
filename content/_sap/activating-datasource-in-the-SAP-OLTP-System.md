@@ -3,7 +3,7 @@ layout: page
 title: Activating DataSources in the SAP OLTP System
 description: Activating-DataSources-in-the-SAP-OLTP-System 
 permalink: /:collection/:path
-weight: 10
+weight: 5
 ---
 
 This article shows how to activate DataSources in your SAP system and make them available for Theobald Software products.

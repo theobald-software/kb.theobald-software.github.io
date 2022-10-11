@@ -3,7 +3,7 @@ layout: page
 title: SAP S/4HANA Versions supported by Theobald Software Products
 description: Supported SAP and HANA Versions by Theobald Software Products
 permalink: /:collection/:path
-weight: 9
+weight: 45
 ---
 
 <!---

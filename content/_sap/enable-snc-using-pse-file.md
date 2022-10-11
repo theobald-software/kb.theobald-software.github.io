@@ -3,7 +3,7 @@ layout: page
 title: Enabling Secure Network Communication (SNC) via X.509 certificate
 description: Enabling Secure Network Communication (SNC) via X.509 certificate 
 permalink: /:collection/:path
-weight: 11
+weight: 20
 ---
 ### About this approach
 

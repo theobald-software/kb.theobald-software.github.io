@@ -3,7 +3,7 @@ layout: page
 title: Create Generic DataSources using a Function Module and Timestamps
 description: create-generic-datasources-using-function-module-and-timestamps
 permalink: /:collection/:path
-weight: 11
+weight: 15
 ---
 
 ### Delta fields ###

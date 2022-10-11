@@ -3,7 +3,7 @@ layout: page
 title: How to import an SAP Transport Request with the Transport Management System STMS
 description: How to import an SAP Transport Request with the Transport Management System STMS
 permalink: /:collection/:path
-weight: 2
+weight: 35
 ---
 
 In this HowTo we will import a Transport Request for the custom functions that is included in the ABAP subdirectory of your product installation folder (e.g. `C:\Program Files\[XtractProduct]\ABAP`).
