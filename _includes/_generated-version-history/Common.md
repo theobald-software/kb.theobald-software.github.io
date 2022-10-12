@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.20.5 [L]|2022-09-07|General|Updated gacutil|
 |2.20.4 [L]|2022-07-20|General|Support for writing Date/Time JSON array elements|
 |2.20.3 [L]|2022-07-19|General|Updated NWRFC SDK to 7.50 Patch-Level 10|
 |2.20.2 [L]|2022-07-08|General|Non-blocking (async) versions of the IO helper functions were added|
