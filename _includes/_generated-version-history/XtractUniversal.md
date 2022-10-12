@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.13.1 [M]|2022-10-12|Destinations|Azure: Fixed a bug where using the Parquet Spark compatibility mode would not replace special characters in column names (breaking change)|
 |5.13.0 [L]|2022-09-28|Destinations|Custom object names in destination settings now support script expressions.|
 |5.12.5 [L]|2022-09-26|Table|added support for function modules /BODS/RFC_STREAM_READ_TABLE and /SAPDS/RFC_STREAM_READ_TABLE|
 |5.12.4 [L]|2022-09-21|BW Cube|Fixed a bug that might cause the BWCube edit window to close unexpectedly when opening the General Settings.|
