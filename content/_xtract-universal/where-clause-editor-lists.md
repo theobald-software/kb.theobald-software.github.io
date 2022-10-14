@@ -6,7 +6,7 @@ permalink: /:collection/:path
 weight: 160
 ---
 
-This article shows how to use static lists and SELECT statements in Xtract Universal's [WHERE Clause Editor](https://help.theobald-software.com/en/xtract-universal/table/where-clause#where-clause-editor).<br>
+This article shows how to use static lists and SELECT statements in the [WHERE Clause Editor](https://help.theobald-software.com/en/xtract-universal/table/where-clause#where-clause-editor).<br>
 
 {: .box-note }
 **Note:** List parameters or not yet supported by the Table component.
