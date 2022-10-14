@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|[1.31.2 [L]](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.31.2.html)|2022-10-14|Report|Non executable ABAP programs can't be selected in report lookup anymore.([Release note](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.31.2.html))|
 |1.31.1 [M]|2022-10-06|BAPI|Fixed a bug that caused errors during metadata retrieval if the function module contains include structures that don't exist|
 |1.31.0 [L]|2022-09-26|Table|added support for function modules /BODS/RFC_STREAM_READ_TABLE and /SAPDS/RFC_STREAM_READ_TABLE|
 |[1.30.12 [L]](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.30.12.html)|2022-09-14|Table|Updated Z_THEO_READ_TABLE to version 2.13.([Release note](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.30.12.html))|
