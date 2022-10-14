@@ -62,3 +62,8 @@ The following example statement returns all the active customers (rows in the ta
 ![where-clause-editor](/img/contents/xu/select-statement.png){:class="img-responsive"}
 10. Click **[OK]** to confirm your input.
 11. Click **[Load live Preview]** or run the extraction to check the output.
+
+
+*****
+#### Related Links
+- [Online Help: WHERE Clause Editor](https://help.theobald-software.com/en/xtract-universal/table/where-clause#where-clause-editor)
