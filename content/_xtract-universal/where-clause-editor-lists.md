@@ -33,8 +33,8 @@ The following example statement returns all the active customers (rows in the ta
 6. Select *List* as the type of the static filter value.<br>
 ![where-clause-editor](/img/contents/xu/where-clause-editor-00.png){:class="img-responsive"}
 7. Click **[Press to Edit]** in the static value component of the WHERE clause. The window "Edit List" opens.
-8. Select either *String* or *Number* in the field **Type**.
-9. Click **[Add]** to add items to the list. You can edit items by double-clicking an item.<br>
+8. Select *String* as the **Type** of the list. When working with numbers, select *Number*.
+9. Click **[Add]** to add items to the list. You can edit items via double-click.<br>
 ![where-clause-editor](/img/contents/xu/where-clause-editor-04.png){:class="img-responsive"}
 10. Click **[OK]** to confirm your input.
 11. Click **[Load live Preview]** or run the extraction to check the output.
@@ -57,8 +57,8 @@ The following example statement returns all the active customers (rows in the ta
 6. Select *List* as the type of the static filter value.<br>
 ![where-clause-editor](/img/contents/xu/where-clause-editor-01.png){:class="img-responsive"}
 7. Click **[Press to Edit]** in the static value component of the WHERE clause. The window "Edit List" opens.
-8. Select *SELECT* in the field **Type** to create a list using a SELECT statement. 
-9. Enter the SELECT statement ```SELECT KUNNR FROM VBAK```to create a list that contains all items of the column KUNNR from the SAP table VBAK.<br>
+8. Select *SELECT* as the **Type** of the list. 
+9. Enter the SELECT statement ```SELECT KUNNR FROM VBAK``` to create a list that contains all items of the column KUNNR from the SAP table VBAK.<br>
 ![where-clause-editor](/img/contents/xu/select-statement.png){:class="img-responsive"}
 10. Click **[OK]** to confirm your input.
 11. Click **[Load live Preview]** or run the extraction to check the output.
