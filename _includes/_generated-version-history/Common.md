@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.21.1 [L]|2022-10-19|General|Introduced ILog interface to reduce coupling with specific log implementations.|
 |2.20.6 [M]|2022-10-13|General|Packed numbers that exceed the precision of System.Decimal throw an exception instead of being rounded|
 |2.20.5 [L]|2022-09-07|General|Updated gacutil|
 |2.20.4 [L]|2022-07-20|General|Support for writing Date/Time JSON array elements|
