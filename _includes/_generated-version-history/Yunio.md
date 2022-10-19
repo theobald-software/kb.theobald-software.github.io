@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|[1.8.0 [L]](https://kb.theobald-software.com/release-notes/Yunio-1.8.0.html)|2022-10-19|Runtime|New runtime.([Release note](https://kb.theobald-software.com/release-notes/Yunio-1.8.0.html))|
 |1.7.6 [L]|2022-09-12|Designer|Styling for Toasts|
 |1.7.5 [L]|2022-09-07|Designer|Settings support custom hostname for OpenAPI|
 |1.7.4 [L]|2022-08-03|Designer|Removed detailed CORS settings|
