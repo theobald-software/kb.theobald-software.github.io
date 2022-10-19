@@ -28,10 +28,10 @@ The following example statement returns all the active customers (rows in the ta
 2. Navigate to the *WHERE Clause* tab in the main window of the extraction and click **[Editor Mode]** to open the WHERE clause editor. <br>
 ![where-clause-editor](/img/contents/where-clause-builder.png){:class="img-responsive"}
 3. Click **[Add criteria]** and **[Default with literal]** to create an empty template in the WHERE clause editor.
-4. Select the column *ORT01* from KNA1 as the data that is filtered.
+4. Select the column *ORT01* from KNA1 as the data you want to filter.
 5. Select *IN* as the operator. *IN* is the only operator that can be used for lists.
 6. Select *List* as the type of the static filter value.<br>
-![where-clause-editor](/img/contents/xu/where-clause-editor-01.png){:class="img-responsive"}
+![where-clause-editor](/img/contents/xu/where-clause-editor-00.png){:class="img-responsive"}
 7. Click **[Press to Edit]** in the static value component of the WHERE clause. The window "Edit List" opens.
 8. Select either *String* or *Number* in the field **Type**.
 9. Click **[Add]** to add items to the list. You can edit items by double-clicking an item.<br>
@@ -52,7 +52,7 @@ The following example statement returns all the active customers (rows in the ta
 2. Navigate to the *WHERE Clause* tab in the main window of the extraction and click **[Editor Mode]** to open the WHERE clause editor. <br>
 ![where-clause-editor](/img/contents/where-clause-builder.png){:class="img-responsive"}
 3. Click **[Add criteria]** and **[Default with literal]** to create an empty template in the WHERE clause editor.
-4. Select the column *KUNNR* from KNA1 as the data that is filtered.
+4. Select the column *KUNNR* from KNA1 as the data you want to filter.
 5. Select *IN* as the operator. *IN* is the only operator that can be used for lists.
 6. Select *List* as the type of the static filter value.<br>
 ![where-clause-editor](/img/contents/xu/where-clause-editor-01.png){:class="img-responsive"}
