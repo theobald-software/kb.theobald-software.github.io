@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.14.1 [L]|2022-10-20|Designer|Fixed an error, which made it impossible to create new extractions. Fixed the handling of default values for the source of a new extraction.|
 |5.14.0 [L]|2022-10-18|General|Removed Sources restriction check during license validation logic. Existing licenses will continue to work but the Sources restriction will not have any effect anymore.|
 |5.13.2 [M]|2022-10-14|Designer|Various fixes for file extensions|
 |5.13.1 [M]|2022-10-12|Destinations|Azure: Fixed a bug where using the Parquet Spark compatibility mode would not replace special characters in column names (breaking change)|
