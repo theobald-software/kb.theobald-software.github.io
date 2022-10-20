@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|3.5.10 [L]|2022-10-20|General|Removed a senseless default for the associated source of an extraction.|
 |3.5.9 [L]|2022-10-19|General|A new runtime was implemented. It provides only a subset of the current runtime but will grow its feature set in the near future. Various modules use the new ILog interface.|
 |3.5.8 [L]|2022-09-08|General|A Rpc client can now request its current privilege level.|
 |3.5.7 [L]|2022-09-07|General|Added OpenAPI config to known exchanges|
