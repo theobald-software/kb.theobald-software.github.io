@@ -61,7 +61,7 @@ For more information on how to test yunIO services in Swagger Inspector, refer t
 
 The custom connector can be tested in the **Test** tab. <br>
 - Create a connection with **+ New connection**. 
-- Enter the credentials of the SAP user you have defined in the yunIO connection settings. If you selected to connect via an on-premises gateway in the *General* tab, select your gateway instance.
+- Enter the credentials of the SAP user you have defined in the yunIO connection settings. If you select to connect via an on-premises gateway in the *General* tab, select your gateway instance.
 - Confirm the settings with **Create connection**.   
 
 ![Power-Automate-Custom-Connector-Test-Connection.png](/img/contents/yunio/power-automate-custom-connector-test-connection.png){:class="img-responsive"} 
