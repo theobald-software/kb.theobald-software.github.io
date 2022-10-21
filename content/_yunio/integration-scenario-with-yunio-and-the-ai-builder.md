@@ -100,7 +100,7 @@ In your case other (fixed) values might be necessary to run the process.
 1. Upload a suitable invoice PDF-document. 
 If needed, [download a sample EXCEL file (.xlsx)](/files/yunio/Invoice_Easy_Computer_Software-AI-Builder-Sample.xlsx){:download="Invoice_Easy_Computer_Software-AI-Builder-Sample.xlsx"} that can be used as an invoice document.<br>
 Note that a purchase order on which the incoming invoice can be booked, must already exist in the SAP ERP system. 
-For more information on incoming invoices, see [SAP Documentation: Incoming Invoice](https://help.sap.com/docs/SAP_ERP/ffc393c91a904eb5b0bec93aa34e42d8/dc6eb6531de6b64ce10000000a174cb4.html?version=6.02.latest&locale=en-US).
+For more information on incoming invoices, see [SAP Documentation: Incoming Invoice](https://help.sap.com/docs/SAP_ERP/ffc393c91a904eb5b0bec93aa34e42d8/dc6eb6531de6b64ce10000000a174cb4.html?version=6.02.latest&locale=en-US).<br>
 ![Power-Automate-AI-Builder-run-flow.png](/img/contents/yunio/yunio-ai-builder-run-flow.png){:class="img-responsive"}
 2. Check if the workflow steps are successfully executed one after the other.<br>
 3. Check if an incoming invoice is created in SAP. <br>
