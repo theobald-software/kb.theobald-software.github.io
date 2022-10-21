@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.31.5 [L]|2022-10-21|BW Cube|Fixed a bug that caused measures in MDX mode being handled as strings instead of numbers when the formatted values option is enabled.|
 |1.31.4 [L]|2022-10-19|General|The extractors now use the new ILog interface. The BAPIExtractor now can take a callback being called when the data has arrived from the SAP system.|
 |[1.31.3 [L]](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.31.3.html)|2022-10-14|Table|Updated Z_THEO_READ_TABLE to version 2.14([Release note](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.31.3.html))|
 |[1.31.2 [L]](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.31.2.html)|2022-10-14|Report|Non executable ABAP programs can't be selected in report lookup anymore.([Release note](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.31.2.html))|
