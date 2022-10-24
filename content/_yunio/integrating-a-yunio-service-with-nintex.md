@@ -54,9 +54,9 @@ For more information on how to set up the Nintex Gateway with yunIO, see [Nintex
 ### Using the yunIO Xtension in a Nintex workflow
 After an Xtension is created, it can be used in a workflow. 
 
-- Drag&Drop the yunIO Xtension from [Configuring a yunIO Xtension in Nintex](#configuring-a-yunio-xtension-in-nintex) into the workflow.
-- Parameterize the input fields. <br>
-![nintex-xtensions3](/img/contents/yunio/nintex-xtension2.png){:class="img-responsive"}
+- Drag&Drop the yunIO Xtension from [Configuring a yunIO Xtension in Nintex](#configuring-a-yunio-xtension-in-nintex) into the workflow (5).
+- Parameterize the input fields (6). <br>
+![nintex-xtensions3](/img/contents/yunio/nintex-xtension3.png){:class="img-responsive"}
 
 
 ******
