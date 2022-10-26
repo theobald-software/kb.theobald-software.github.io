@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.14.3 [L]|2022-10-26|Server|Fixed a bug where extractions would run into an error if the source or destination parameter is set.|
 |5.14.2 [L]|2022-10-26|Destinations|Fixed an error that caused parquet to always use the column name style Code|
 |5.14.1 [L]|2022-10-20|Designer|Fixed an error, which made it impossible to create new extractions. Fixed the handling of default values for the source of a new extraction.|
 |5.14.0 [L]|2022-10-18|General|Removed Sources restriction check during license validation logic. Existing licenses will continue to work but the Sources restriction will not have any effect anymore.|
