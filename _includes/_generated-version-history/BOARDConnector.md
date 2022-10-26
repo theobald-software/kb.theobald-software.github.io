@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.8.1 [L]|2022-10-26|Server|Fixed a bug where extractions would run into an error if the source or destination parameter is set.|
 |5.8.0 [M]|2022-09-08|OHS|New OHS component (with Table extraction mode and support for BW/4HANA 2.0)|
 |5.7.3 [H]|2022-08-04|BAPI|Fix for structures with includes, please refresh metadata|
 |5.7.2 [M]|2022-07-11|BOARD API|Fixed several issues that caused errors when retrieving metadata|
