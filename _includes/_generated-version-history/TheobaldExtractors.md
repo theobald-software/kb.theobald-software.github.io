@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.32.2 [L]|2022-11-04|General|Added more date/time result types|
 |1.32.1 [L]|2022-11-03|Table|Values of RfcReadTableResult instances can now be accessed by column name.|
 |1.32.0 [L]|2022-10-28|General|Added column mapping feature|
 |[1.31.6 [L]](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.31.6.html)|2022-10-24|Table|Updated Z_THEO_READ_TABLE to version 2.15.([Release note](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.31.6.html))|
