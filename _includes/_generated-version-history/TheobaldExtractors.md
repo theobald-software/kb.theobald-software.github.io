@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.33.0 [L]|2022-11-07|General|Added metadata retrieval for more date/time types|
 |1.32.2 [L]|2022-11-04|General|Added more date/time result types|
 |1.32.1 [L]|2022-11-03|Table|Values of RfcReadTableResult instances can now be accessed by column name.|
 |1.32.0 [L]|2022-10-28|General|Added column mapping feature|
