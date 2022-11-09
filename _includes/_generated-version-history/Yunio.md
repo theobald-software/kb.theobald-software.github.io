@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.9.3 [L]|2022-11-09|Designer|Fixes & improvements for license UI|
 |1.9.2 [L]|2022-11-09|Designer|Delete button in service/connection details|
 |1.9.1 [L]|2022-11-07|Designer|License UI|
 |1.9.0 [L]|2022-10-27|Designer|Added WHERE clause editor.|
