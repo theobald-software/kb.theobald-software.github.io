@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|7.2.1 [L]|2022-11-11|General|AbapDate.ToString() now returns ABAP string representations of dates.|
 |7.2.0 [L]|2022-11-11|General|Added AbapDate, removed ConversionUtils, renamed UtcLong to AbapTimestamp|
 |7.1.2 [L]|2022-11-05|General|Added UtcLong.Parse()|
 |7.1.1 [M]|2022-10-06|General|Packed numbers that exceed the range of System.Decimal throw an exception instead of being cut off silently|
