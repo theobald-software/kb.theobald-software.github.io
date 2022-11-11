@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|7.2.0 [L]|2022-11-11|General|Added AbapDate, removed ConversionUtils, renamed UtcLong to AbapTimestamp|
 |7.1.2 [L]|2022-11-05|General|Added UtcLong.Parse()|
 |7.1.1 [M]|2022-10-06|General|Packed numbers that exceed the range of System.Decimal throw an exception instead of being cut off silently|
 |7.1.0 [L]|2022-08-30|RFC Client|Introduced Execute(RFCFunction) method to IR3Connection interface to improve testability of R3Connection dependent code|
