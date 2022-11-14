@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.21.4 [L]|2022-11-14|General|Moved SlimXml + Language Key to ERPConnect|
 |2.21.3 [L]|2022-11-05|General|Moved Abap* classes to ERPConnect|
 |2.21.2 [L]|2022-11-05|General|Added more date/time ABAP types|
 |2.21.1 [L]|2022-10-19|General|Introduced ILog interface to reduce coupling with specific log implementations.|
