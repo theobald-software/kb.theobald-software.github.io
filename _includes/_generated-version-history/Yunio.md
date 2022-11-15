@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.9.5 [L]|2022-11-15|General|Changed default RFC library to NWRFC|
 |1.9.4 [L]|2022-11-09|Theobald.Server|The self-managing windows service executable was ported to rust, replacing a Windows-only C++ implementation. The same was done for the listeners, which accept incoming network connections.|
 |1.9.3 [L]|2022-11-09|Designer|Fixes & improvements for license UI|
 |1.9.2 [L]|2022-11-09|Designer|Delete button in service/connection details|
