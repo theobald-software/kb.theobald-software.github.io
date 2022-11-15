@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|3.5.13 [L]|2022-11-15|General|Changed default RFC library to NWRFC|
 |3.5.12 [L]|2022-11-09|General|Improved move-exchange handling|
 |3.5.11 [L]|2022-11-08|General|Product OpenApi PathMapping changed to Endpoint.|
 |3.5.10 [L]|2022-10-20|General|Removed a senseless default for the associated source of an extraction.|
