@@ -1,6 +1,7 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
-|1.9.6 [L]|2022-11-17|Theobald.Server|Fixed an issue where the new runtime would not find the transaction workers due to incorrect paths.|
+|1.9.7 [M]|2022-11-18|Designer|Table - Swagger/OpenAPI fixes for some data types|
+|1.9.6 [M]|2022-11-17|Theobald.Server|Fixed an issue where the new runtime would not find the transaction workers due to incorrect paths.|
 |1.9.5 [L]|2022-11-15|General|Changed default RFC library to NWRFC|
 |1.9.4 [L]|2022-11-09|Theobald.Server|The self-managing windows service executable was ported to rust, replacing a Windows-only C++ implementation. The same was done for the listeners, which accept incoming network connections.|
 |1.9.3 [L]|2022-11-09|Designer|Fixes & improvements for license UI|
