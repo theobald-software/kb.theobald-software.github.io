@@ -1,5 +1,7 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.9.9 [L]|2022-11-18|Designer|Fix for edit URLs|
+|1.9.8 [L]|2022-11-18|Designer|Fix for RPC error handling|
 |1.9.7 [M]|2022-11-18|Designer|Table - Swagger/OpenAPI fixes for some data types|
 |1.9.6 [M]|2022-11-17|Theobald.Server|Fixed an issue where the new runtime would not find the transaction workers due to incorrect paths.|
 |1.9.5 [L]|2022-11-15|General|Changed default RFC library to NWRFC|
