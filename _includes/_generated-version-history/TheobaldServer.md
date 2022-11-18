@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|3.5.15 [L]|2022-11-18|General|Rpc server now checks all payload for illegal bytes before sending|
 |3.5.14 [L]|2022-11-17|General|Fixed an occasional deadlock when writing an HTTP response to the network. Fixed a bug where an error during transaction execution would not be communicated properly.|
 |3.5.13 [L]|2022-11-15|General|Changed default RFC library to NWRFC|
 |3.5.12 [L]|2022-11-09|General|Improved move-exchange handling|
