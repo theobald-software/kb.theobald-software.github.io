@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.16.1 [L]|2022-11-21|Destinations|Tableau definition window now can display the site's projects hierarchy|
 |5.16.0 [L]|2022-11-09|Setup|Added logic to abort setup due to running processes.|
 |[5.15.0 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-5.15.0.html)|2022-10-28|General|Added column mapping feature, enabled for the file csv and Tableau destinations([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-5.15.0.html))|
 |5.14.3 [L]|2022-10-26|Server|Fixed a bug where extractions would run into an error if the source or destination parameter is set.|
