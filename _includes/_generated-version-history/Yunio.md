@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.9.10 [L]|2022-11-24|Theobald.Server|Fixed an issue where the service would not start and quit with an error in case of missing designer files instead of fixing them.|
 |1.9.9 [L]|2022-11-18|Designer|Fix for edit URLs|
 |1.9.8 [L]|2022-11-18|Designer|Fix for RPC error handling|
 |1.9.7 [M]|2022-11-18|Designer|Table - Swagger/OpenAPI fixes for some data types|
