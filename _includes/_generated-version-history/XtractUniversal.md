@@ -1,6 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
-|5.16.4 [L]|2022-11-25|Destinations|Azure Storage destination now logs WebExceptionStatus when an error in network communication with Azure occurs.|
+|5.16.4 [L]|2022-11-25|Destinations|Azure Storage destination: now logs WebExceptionStatus when an error in network communication with Azure occurs.|
 |5.16.3 [L]|2022-11-23|Destinations|Qlik Sense: connection variable in script now automatically adapts to server settings.|
 |[5.16.2 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-5.16.2.html)|2022-11-23|Destinations|Snowflake custom SQL fix and removal of timestamp on staged csv file name([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-5.16.2.html))|
 |5.16.1 [L]|2022-11-21|Destinations|Tableau definition window now can display the site's projects hierarchy|
