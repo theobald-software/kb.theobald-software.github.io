@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.16.5 [L]|2022-11-28|Server|Fixed a bug introduced in 5.14.1 where the JSON representation of the API for extractions sources and destinations erroneously was an array.|
 |5.16.4 [L]|2022-11-25|Destinations|Azure Storage destination now logs WebExceptionStatus when an error in network communication with Azure occurs.|
 |5.16.3 [L]|2022-11-23|Destinations|Qlik Sense: connection variable in script now automatically adapts to server settings.|
 |[5.16.2 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-5.16.2.html)|2022-11-23|Destinations|Snowflake custom SQL fix and removal of timestamp on staged csv file name([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-5.16.2.html))|
