@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.10.1 [L]|2022-12-01|Theobald.Server|Fixed the logging of the service, which was too verbose.|
 |[1.10.0 [L]](https://kb.theobald-software.com/release-notes/Yunio-1.10.0.html)|2022-11-28|General|Updated transaction, existing transaction services need to be re-created.([Release note](https://kb.theobald-software.com/release-notes/Yunio-1.10.0.html))|
 |1.9.10 [L]|2022-11-24|Theobald.Server|Fixed an issue where the service would not start and quit with an error in case of missing designer files instead of fixing them.|
 |1.9.9 [L]|2022-11-18|Designer|Fix for edit URLs|
