@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.16.7 [L]|2022-12-02|Designer|Fix for bug that would crash the designer when opening extraction's settings with deleted destination|
 |5.16.6 [L]|2022-11-30|Destinations|Fix for table names containing single quotes from script expressions in SQL Server destination.|
 |5.16.5 [L]|2022-11-28|Server|Fixed a bug introduced in 5.14.1 where the JSON representation of the API for extractions sources and destinations erroneously was an array.|
 |5.16.4 [L]|2022-11-25|Destinations|Azure Storage destination now logs WebExceptionStatus when an error in network communication with Azure occurs.|
