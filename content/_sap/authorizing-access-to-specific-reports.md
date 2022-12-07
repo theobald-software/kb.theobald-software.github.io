@@ -9,7 +9,6 @@ weight: 10
 This article shows how to set up access control for specific reports.<br>
 
 ### About
-By default all reports are accessible.<br>
 To limit access to a report, an authorization group must be assigned to the report.<br>
 Access to the report can then be granted through the S_PROGRAM authorization object, see [SAP Note 338177](https://launchpad.support.sap.com/#/notes/338177).
 
