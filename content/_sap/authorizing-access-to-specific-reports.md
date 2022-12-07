@@ -28,5 +28,3 @@ Assigning an authorization group makes the report not accessible from function m
 9. Save and generate the authorization.
 10. Assign the user role to users.
 
-{: .box-note}
-**Note:** Reports without an assigned authorization group can be accessed freely.
