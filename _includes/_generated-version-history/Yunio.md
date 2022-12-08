@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.11.1 [M]|2022-12-08|Designer|Fix for login (bug introduced int 1.11.0)|
 |1.11.0 [L]|2022-12-07|Gateway|Azure Relay Hybrid Connection Support. Editing Service Name. Improved OpenAPI.|
 |1.10.1 [L]|2022-12-01|Theobald.Server|Fixed the logging of the service, which was too verbose.|
 |[1.10.0 [L]](https://kb.theobald-software.com/release-notes/Yunio-1.10.0.html)|2022-11-28|General|Updated transaction, existing transaction services need to be re-created.([Release note](https://kb.theobald-software.com/release-notes/Yunio-1.10.0.html))|
