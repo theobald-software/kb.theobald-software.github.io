@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.16.8 [L]|2022-12-09|Designer|Fix for opening correctly the destination settings window (introduced on 5.16.7)|
 |5.16.7 [L]|2022-12-02|Designer|Fix for bug that would crash the designer when opening extraction's settings with deleted destination|
 |5.16.6 [L]|2022-11-30|Destinations|Fix for table names containing single quotes from script expressions in SQL Server destination.|
 |5.16.5 [L]|2022-11-28|Server|Fixed a bug introduced in 5.14.1 where the JSON representation of the API for extractions sources and destinations erroneously was an array.|
