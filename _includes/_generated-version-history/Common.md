@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.21.7 [L]|2022-12-14|General|Introduced a new type for ergonomic handling of the logger. Extended JSON writer to write ulong types. Introduced a new interface for the LicenseLoader.|
 |2.21.6 [L]|2022-12-13|WPF|Fix for XtractDataGridRowHeader style|
 |2.21.5 [L]|2022-12-01|General|Added a 64bits version for the Fnv1a hash generator|
 |2.21.4 [L]|2022-11-14|General|Moved SlimXml + Language Key to ERPConnect|
