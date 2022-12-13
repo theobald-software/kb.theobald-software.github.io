@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.21.6 [L]|2022-12-13|WPF|Fix for XtractDataGridRowHeader style|
 |2.21.5 [L]|2022-12-01|General|Added a 64bits version for the Fnv1a hash generator|
 |2.21.4 [L]|2022-11-14|General|Moved SlimXml + Language Key to ERPConnect|
 |2.21.3 [L]|2022-11-05|General|Moved Abap* classes to ERPConnect|
