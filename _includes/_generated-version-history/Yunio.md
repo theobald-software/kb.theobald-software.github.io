@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.11.3 [L]|2022-12-14|General|Fixed a bug where an error during a CORS request would not send CORS headers. This would cause the client to not be able to access the error information sent in the response. Service executions now have their dedicated log file. Fixed a bug where table services would not finish if the result set was empty.|
 |1.11.2 [M]|2022-12-08|Designer|Fixes & improvements for disabling TLS|
 |1.11.1 [M]|2022-12-08|Designer|Fix for login (bug introduced int 1.11.0)|
 |1.11.0 [L]|2022-12-07|Gateway|Azure Relay Hybrid Connection Support. Editing Service Name. Improved OpenAPI.|
