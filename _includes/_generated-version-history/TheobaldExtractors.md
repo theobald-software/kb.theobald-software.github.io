@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.33.5 [L]|2022-12-13|Table|Fix for Table preview's grid row header style|
 |1.33.4 [L]|2022-11-15|BW Cube|Fix for possible conversion errors when formatted values option in MDX mode is enabled|
 |1.33.3 [L]|2022-11-15|BW Cube|Cube legacy mode: fix for duplicate dimension column names|
 |1.33.2 [L]|2022-11-08|General|Fixes for timestamps|
