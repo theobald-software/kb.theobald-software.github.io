@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|3.5.16 [L]|2022-12-14|General|Fixed a bug in the HTTP server which caused CORS headers to be omitted in certain error cases. The new runtime is now able to execute Report extractions. The new runtime does now create dedicated logs and status information for each extraction execution.|
 |3.5.15 [L]|2022-11-18|General|Rpc server now checks all payload for illegal bytes before sending|
 |3.5.14 [L]|2022-11-17|General|Fixed an occasional deadlock when writing an HTTP response to the network. Fixed a bug where an error during transaction execution would not be communicated properly.|
 |3.5.13 [L]|2022-11-15|General|Changed default RFC library to NWRFC|
