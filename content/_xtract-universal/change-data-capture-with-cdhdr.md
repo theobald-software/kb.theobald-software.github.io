@@ -40,7 +40,7 @@ This field is used for joining the tables and to get the delta data from MAKT.
 The OBJECTID from CDHDR and MATNR from MAKT have same entries and thus form an inner join condition.<br>
 7. Click **[Add]** and confirm your selection with **[OK]**.
 8. Open the tab *WHERE Clause* and enter the following filter criteria:
-`CDHDR~UDATE = '#{ DateTime.Now.AddDays.ToString(\"yyyyMMdd\") }#'`. <br>
+`CDHDR~UDATE = '#{ DateTime.Now.ToString("yyyyMMdd") }#'`. <br>
 This criteria uses script expressions to get the current date in the SAP format ("yyyyMMdd").
 ![CDHDR-MAKT-where](/img/contents/CDHDR-MAKT-where.png){:class="img-responsive"}
 9. Click **[Load live review]** to check the results.
@@ -48,7 +48,7 @@ Only the data in MAKT that has been changed on today's date is extracted.
 10. Schedule the extraction daily. 
 
 {: .box-tip }
-**Tip:** To extract all changes of the day before, change the WHERE clause to `CDHDR~UDATE >= '#{ DateTime.Now.AddDays(-1).ToString(\"yyyyMMdd\") }#'` and schedule the extraction every night at 1p.m. or later. 
+**Tip:** To extract all changes of the day before, change the WHERE clause to `CDHDR~UDATE >= '#{ DateTime.Now.AddDays(-1).ToString("yyyyMMdd") }#'` and schedule the extraction every night at 1p.m. or later. 
 
 *****
 
