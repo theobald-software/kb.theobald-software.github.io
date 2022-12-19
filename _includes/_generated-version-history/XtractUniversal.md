@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.16.10 [L]|2022-12-19|General|SSRS Plugin now writes xml files with "pretty" formatting enabled.|
 |5.16.9 [L]|2022-12-15|Server|Fixed a bug where RPC calls to fetch the most recent extraction runs would have an invalid format when log files for runs were missing.|
 |5.16.8 [L]|2022-12-09|Designer|Fix for opening correctly the destination settings window (bug introduced in 5.16.7)|
 |5.16.7 [L]|2022-12-02|Designer|Fix for bug that would crash the designer when opening extraction's settings with deleted destination|
