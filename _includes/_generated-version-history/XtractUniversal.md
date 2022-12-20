@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.16.12 [L]|2022-12-20|Destinations|Fix for a possible collation issue when using the Prepare Merge statement in the Microsoft SQL Server destination.|
 |5.16.11 [L]|2022-12-20|Destinations|Power BI Connector: Fixed an issue that caused the connector .pqx file to not be recognized by Power BI Desktop (Bug introduced in November 2022)|
 |5.16.10 [L]|2022-12-19|General|SSRS Plugin now writes xml files with "pretty" formatting enabled.|
 |5.16.9 [L]|2022-12-15|Server|Fixed a bug where RPC calls to fetch the most recent extraction runs would have an invalid format when log files for runs were missing.|
