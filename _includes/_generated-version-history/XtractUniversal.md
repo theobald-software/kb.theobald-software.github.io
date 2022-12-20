@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.16.11 [L]|2022-12-20|Destinations|Power BI Connector: Fixed an issue that caused the connector .pqx file to not be recognized by Power BI Desktop (Bug introduced in November 2022)|
 |5.16.10 [L]|2022-12-19|General|SSRS Plugin now writes xml files with "pretty" formatting enabled.|
 |5.16.9 [L]|2022-12-15|Server|Fixed a bug where RPC calls to fetch the most recent extraction runs would have an invalid format when log files for runs were missing.|
 |5.16.8 [L]|2022-12-09|Designer|Fix for opening correctly the destination settings window (bug introduced in 5.16.7)|
