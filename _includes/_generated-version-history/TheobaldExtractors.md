@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.34.1 [L]|2022-12-21|BW Cube|Fix for incorrect unit column values in MDX mode.|
 |1.34.0 [L]|2022-12-20|BW Cube|Added the option to select a custom structure on the columns axis for MDX extractions.|
 |1.33.5 [L]|2022-12-13|Table|Fix for Table preview's grid row header style|
 |1.33.4 [L]|2022-11-15|BW Cube|Fix for possible conversion errors when formatted values option in MDX mode is enabled|
