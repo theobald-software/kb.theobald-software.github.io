@@ -52,3 +52,5 @@ In the following example, only results till 01.01 of the current fiscal year are
 |`"BUDAT >= " + "'" + (DT_STR, 4, 1252) DATEPART( "yy", GETDATE() ) + "01%'" + " AND BUDAT < " + "'" + (DT_STR, 4, 1252) DATEPART( "yy", GETDATE() ) + "04%'"`|	BUDAT >= ‘202001%’ AND BUDAT < ‘202004%’|	All values in Q1 of the current year.|
 |`"BUDAT LIKE " + "'" + (DT_STR, 4, 1252) DATEPART("yy" , GETDATE()) + RIGHT("0" + (DT_STR, 2, 1252) DATEPART("mm" , GETDATE()), 2) + "%'"`| BUDAT LIKE ‘202007%’	| All values of the current month. |
 |`"BUDAT LIKE " + "'" + (DT_STR, 4, 1252) DATEPART("yy" , GETDATE()) + "%'"`|	BUDAT LIKE ‘2020%’	|All values of the current year. |
+|`(DT_WSTR, 4) YEAR( GETDATE() )`|	2022	|Current year value. |
+|`(DT_WSTR, 4) DATEPART( "yy", DATEADD( "yy", -9, GETDATE() ) )`|	2013	|Annual calculation based on the number parameter used. |
