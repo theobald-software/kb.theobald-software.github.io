@@ -13,11 +13,8 @@ The T-SQL query on existing SQL table objects is a single value that is then pas
 
 The following example uses the Xtract BAPI task, which dynamically executes the FISCYEAR selection field at runtime. 
 
-{: .box-tipp }
-**Tipp:**  This case study can also be used for other Xtract tasks in SQL Sever Integration Services (SSIS).
-
-
-C:\Users\steffan\kb.theobald-software.github.io\img\contents\xis\BAPI-task-selection-criterion.png
+{: .box-note }
+**Note:**  This case study can also be used for other Xtract tasks in SQL Sever Integration Services (SSIS).
 
 ### Step-by-Step Guide
 
