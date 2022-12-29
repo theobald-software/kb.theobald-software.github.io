@@ -11,23 +11,23 @@ The following article describes how T-SQL query results can be passed to SSIS va
 
 The T-SQL query on existing SQL table objects is a single value that is then passed to a dedicated selection criterion. 
 
-The following example uses the Xtract BAPI task, which dynamically executes the FISCYEAR selection field at runtime. 
+The following example uses the Xtract BAPI task, which dynamically executes the *FISCYEAR* selection field at runtime. 
 
 {: .box-note }
-**Note:**  This case study can also be used for other Xtract tasks in SQL Sever Integration Services (SSIS).
+**Note:**  This example case can also be used for other Xtract IS tasks within SQL Sever Integration Services (SSIS).
 
 ### Step-by-Step Guide
 
 1. Drag & Drop the SSIS Task *Execute SQL Task* to the Control Flow canvas (1).
 ![Execute SQL Task - Control Flow](/img/contents/xis/control-flow-execute-sql-task.png){:class="img-responsive"}
-2. Create a SSIS-Variable of data type String, e.g. myGJAHR (2).
+2. Create a SSIS-Variable of data type String, e.g. *@[User::myGJAHR]* (2).
 ![Execute SQL Task - Control Flow](/img/contents/xis/ssis-variable-myGJAHR.png){:class="img-responsive"}
 3. Use the correct OLE-DB connection to the SQL Server Database, where the required Table values already exists.
 4. Edit the Execute SQL Task and click on the *Build Query button* (3).
 ![Execute SQL Task - Control Flow](/img/contents/xis/build-query-button.png){:class="img-responsive"}
 5. Select the required T-SQL statement to fetch the needed value, e.g. fiscal year column MSEG~MJAHR: *SELECT MAX(MJAHR) AS maxMJAHR FROM MSEG*.
 ![Execute SQL Task - Control Flow](/img/contents/xis/query-builder.png){:class="img-responsive"}
-6. Open the *Result Set* configuration and map the result of te T-SQL statement to the defined SSIS variable (4).
+6. Open the *Result Set* configuration and map the result of the T-SQL statement to the defined SSIS variable *@[User::myGJAHR]* (4).
 ![Execute SQL Task - Control Flow](/img/contents/xis/result-set-configuration.png){:class="img-responsive"}
 7. Proceed with configuring a Data Flow task with the Xtract BAPI task and corresponding OLE-DB task for processing the BAPI result.
 ![Execute SQL Task - Control Flow](/img/contents/xis/data-flow-task.png){:class="img-responsive"}
