@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|[1.17.0 [L]](https://kb.theobald-software.com/release-notes/XtractForAlteryx-1.17.0.html)|2023-01-04|Hierarchy|Improved Hierarchy Extractor. Now full support for Links, Intervals, and all variants of time dependent Hierarchy structure. Performance tested for Hierarchies with up to 1 million rows.([Release note](https://kb.theobald-software.com/release-notes/XtractForAlteryx-1.17.0.html))|
 |1.16.6 [L]|2022-11-16|General|Switched default RFC library to NWRFC|
 |1.16.5 [L]|2022-09-26|Table|added support for function modules /BODS/RFC_STREAM_READ_TABLE and /SAPDS/RFC_STREAM_READ_TABLE|
 |1.16.4 [L]|2022-05-30|BW Cube|Support for Only_Structures behavior in MDX BEx Queries. Various bug fixes and general improvements for the Cube component.|
