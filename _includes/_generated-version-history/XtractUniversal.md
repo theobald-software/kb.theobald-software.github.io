@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.17.0 [L]|2023-01-08|Destinations|Internal changes for extraction-specific file destination settings (conversion required)|
 |5.16.15 [L]|2023-01-07|Destinations|Internal changes to destination setting serialization|
 |[5.16.14 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-5.16.14.html)|2023-01-02|Destinations|Snowflake now deletes the remote staged file automatically([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-5.16.14.html))|
 |[5.16.13 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-5.16.13.html)|2022-12-29|Destinations|Added support for Snowflake organization account identifier([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-5.16.13.html))|
