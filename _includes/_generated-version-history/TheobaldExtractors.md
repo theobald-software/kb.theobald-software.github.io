@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.35.1 [L]|2023-01-09|BW Cube|Fix for error on InfoCube lookup in MDX mode|
 |[1.35.0 [L]](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.35.0.html)|2023-01-04|Hierarchy|New Hierarchy Extractor([Release note](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.35.0.html))|
 |1.34.1 [L]|2022-12-21|BW Cube|Fix for incorrect unit column values in MDX mode.|
 |1.34.0 [L]|2022-12-20|BW Cube|Added the option to select a custom structure on the columns axis for MDX extractions.|
