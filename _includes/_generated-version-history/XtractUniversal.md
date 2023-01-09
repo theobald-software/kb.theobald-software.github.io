@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.17.2 [L]|2023-01-09|Destinations|Fix for ConfigConverter auto detection during setup|
 |5.17.1 [L]|2023-01-09|Destinations|Fix for date zero replacement default (bug introduced in 5.17.0)|
 |5.17.0 [L]|2023-01-08|Destinations|Internal changes for extraction-specific file destination settings (conversion required)|
 |5.16.15 [L]|2023-01-07|Destinations|Internal changes to destination setting serialization|
