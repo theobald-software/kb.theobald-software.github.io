@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.18.1 [L]|2023-01-10|Destinations|Added append operation for Hadoop destination (only valid for csv files)|
 |[5.18.0 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-5.18.0.html)|2023-01-10|General|Adjustments for ConfigConverter and date conversion (config conversion required)([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-5.18.0.html))|
 |5.17.2 [L]|2023-01-09|Destinations|Fix for ConfigConverter auto detection during setup|
 |5.17.1 [L]|2023-01-09|Destinations|Fix for date zero replacement default (bug introduced in 5.17.0)|
