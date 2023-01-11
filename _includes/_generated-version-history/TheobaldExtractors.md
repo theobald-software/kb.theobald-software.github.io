@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|[1.36.0 [L]](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.36.0.html)|2023-01-11|Report|Updated Z_XTRACT_IS_REMOTE_REPORT to version 1.2. (Breaking change)([Release note](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.36.0.html))|
 |1.35.3 [L]|2023-01-11|BW Cube|Fix for possible error when saving dimension filters in MDX mode|
 |1.35.2 [L]|2023-01-09|General|Added range checks for SapDateConverter|
 |1.35.1 [L]|2023-01-09|BW Cube|Fix for error on InfoCube load in MDX mode|
