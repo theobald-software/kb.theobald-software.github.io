@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.21.9 [L]|2023-01-15|Licensing|Added Table CDC as new LicenseComponent|
 |2.21.8 [L]|2023-01-06|General|Made ReadJsonProperty() and WriteJsonFields() public|
 |2.21.7 [L]|2022-12-14|General|Introduced a new type for ergonomic handling of the logger. Extended JSON writer to write ulong types. Introduced a new interface for the LicenseLoader.|
 |2.21.6 [L]|2022-12-13|WPF|Fix for XtractDataGridRowHeader style|
