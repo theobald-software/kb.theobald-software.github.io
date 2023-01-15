@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|3.5.18 [L]|2023-01-15|General|Added Table CDC as new extraction type|
 |3.5.17 [L]|2022-12-15|General|Fixed a bug where RPC calls to fetch the most recent extraction runs would have an invalid format when log files for runs were missing.|
 |3.5.16 [L]|2022-12-14|General|Fixed a bug in the HTTP server which caused CORS headers to be omitted in certain error cases. The new runtime is now able to execute Report extractions. The new runtime does now create dedicated logs and status information for each extraction execution.|
 |3.5.15 [L]|2022-11-18|General|Rpc server now checks all payload for illegal bytes before sending|
