@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.20.0 [L]|2023-01-16|General|New conversion architecture (internal changes)|
 |5.19.1 [L]|2023-01-15|Destinations|Fixes for column encryption metadata|
 |5.19.0 [H]|2023-01-15|TableCDC|Added Table CDC extractor (preview)|
 |5.18.3 [L]|2023-01-12|Destinations|Fixes for column name style|
