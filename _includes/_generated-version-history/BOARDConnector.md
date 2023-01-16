@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.11.0 [L]|2023-01-16|General|New conversion architecture (internal changes)|
 |5.10.0 [H]|2023-01-16|TableCDC|Added Table CDC extractor (preview)|
 |[5.9.0 [L]](https://kb.theobald-software.com/release-notes/BOARDConnector-5.9.0.html)|2023-01-10|General|Removed config conversion of version 2.x([Release note](https://kb.theobald-software.com/release-notes/BOARDConnector-5.9.0.html))|
 |5.8.1 [L]|2022-10-26|Server|Fixed a bug where extractions would run into an error if the source or destination parameter is set.|
