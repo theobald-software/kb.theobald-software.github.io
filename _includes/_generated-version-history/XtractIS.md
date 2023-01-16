@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|7.1.0 [L]|2023-01-16|General|Added Support for SQL Server 2022 (no support yet for Visual Studio 2022)|
 |7.0.4 [L]|2022-11-15|General|Changed default RFC library to NetWeaver|
 |7.0.3 [L]|2022-09-26|Table|added support for function modules /BODS/RFC_STREAM_READ_TABLE and /SAPDS/RFC_STREAM_READ_TABLE|
 |7.0.2 [H]|2022-08-04|BAPI|Fix for structures with includes, please refresh metadata|
