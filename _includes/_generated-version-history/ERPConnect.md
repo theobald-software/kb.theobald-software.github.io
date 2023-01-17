@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|7.5.0 [L]|2023-01-17|SNC|Added support for External ID|
 |7.4.0 [L]|2023-01-11|LINQtoERP|Removed LINQtoERP VS2012|
 |7.3.0 [L]|2022-12-23|General|Added classes to convert geometry EWKB to WKB and WKT|
 |7.2.1 [L]|2022-11-11|General|AbapDate.ToString() now returns ABAP string representations of dates.|
