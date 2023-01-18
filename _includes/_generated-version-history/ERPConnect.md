@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|7.5.1 [L]|2023-01-18|General|BWCube: fix for invalid MDX when selecting a hierarchy and a property on the same dimension|
 |7.5.0 [L]|2023-01-17|SNC|Added support for External ID|
 |7.4.0 [L]|2023-01-11|LINQtoERP|Removed LINQtoERP VS2012|
 |7.3.0 [L]|2022-12-23|General|Added classes to convert geometry EWKB to WKB and WKT|
