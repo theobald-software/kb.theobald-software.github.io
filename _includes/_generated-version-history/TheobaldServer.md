@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|3.6.2 [L]|2023-01-20|General|Fixes & improvements for opening RFC Designer connections with SSO|
 |3.6.1 [L]|2023-01-20|General|External ID SSO: Using CommonCryptoLib SNC name format instead of Kerberos Wrapper Library format|
 |3.6.0 [L]|2023-01-19|General|Added support for External ID SSO|
 |3.5.18 [L]|2023-01-15|General|Added Table CDC as new extraction type|
