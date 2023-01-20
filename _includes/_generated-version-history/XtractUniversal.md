@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.21.0 [L]|2023-01-19|Security|Added support for External ID SSO|
 |5.20.2 [M]|2023-01-18|Destinations|Azure Storage: Added option to generate and upload CDM files alongside the data. (preview)|
 |5.20.1 [L]|2023-01-17|TableCDC|added icon for table cdc extractions shown in extractions list|
 |5.20.0 [L]|2023-01-16|General|New conversion architecture (internal changes)|
