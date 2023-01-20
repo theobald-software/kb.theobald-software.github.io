@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Authorizing Access to Specific Reports
+title: Authorizing Access to Reports via Authorization Groups
 description: Authorizing Access to Specific Reports
 permalink: /:collection/:path
 weight: 10
@@ -11,7 +11,6 @@ This article shows how to set up access control for reports.<br>
 ### About
 To grant access to a report, an authorization group must be assigned to the report.<br>
 Access to the report can then be granted through the S_PROGRAM authorization object, see [SAP Note 338177](https://launchpad.support.sap.com/#/notes/338177).
-
 
 ### Authorizing Access to Specific Reports
 
@@ -29,4 +28,4 @@ Access to the report can then be granted through the S_PROGRAM authorization obj
 10. Assign the user role to users.
 
 #### Related Links
-- [Z_XTRACT_IS_REMOTE_REPORT_README.pdf](/files/Z_XTRACT_IS_REMOTE_REPORT.pdf){:target="_blank"}
+- [How to Create the Custom Authorization Object Z_TS_PROG](./how-to-create-the-custom-authority-object-z-ts-prog)
