@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.21.1 [L]|2023-01-21|Designer|Added support for server side RFC connection test with SSO configurations|
 |5.21.0 [L]|2023-01-19|Security|Added support for External ID SSO|
 |5.20.2 [M]|2023-01-18|Destinations|Azure Storage: Added option to generate and upload CDM files alongside the data. (preview)|
 |5.20.1 [L]|2023-01-17|TableCDC|added icon for table cdc extractions shown in extractions list|
