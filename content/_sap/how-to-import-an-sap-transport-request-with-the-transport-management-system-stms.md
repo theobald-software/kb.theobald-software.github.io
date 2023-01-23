@@ -1,13 +1,67 @@
 ---
 layout: page
-title: How to import an SAP Transport Request with the Transport Management System STMS
+title: How to import an SAP Transport Request
 description: How to import an SAP Transport Request with the Transport Management System STMS
 permalink: /:collection/:path
 weight: 35
 ---
 
-This article shows how to import a Transport Request for the custom functions modules that are included in the ABAP subdirectory of the installation directory, e.g., `C:\Program Files\[XtractProduct]\ABAP`.
+This article shows how to import transport requests for custom functions modules that are included in the installation directory of your product, e.g., `C:\Program Files\[XtractProduct]\ABAP`.
 
+### Upload SAP Transport Requests to SAP
+
+If you have access to the file system of SAP, you can copy and paste the files of your transport request directly into the `data` and `cofiles` folders of your SAP system. <br>
+If you don't have access to the file system, follow the steps below to upload the files of your transport request using SAP transactions:
+
+1. Unzip the transport request provided in the installation directory of your product, e.g., `C:\Program Files\[XtractProduct]\ABAP`.
+2. Open SAP and go to transaction AL11.
+3. Find the entry DIR_TRANS in the column *Name of Directory Parameter*.
+Note or copy the path shown in the column *Directory*.<br>
+![SAP-AL11](/img/contents/sap-al11.png){:class="img-responsive"}
+4. Go to transaction CG3Z. The window "Upload File: Parameters" opens.
+5. In the field **Source file on front end** you select your request file from from step 1. The name of the file starts with an "R", e.g., R900472.
+6. In the field **Target file on application server** you construct your target path using the following pattern: `{copied path from step 2}\data\{request file name}`.<br>
+![SAP-Upload-File](/img/contents/sap-upload-files.png){:class="img-responsive"}
+7. Click **[Upload]** (![Import icon](/img/contents/icons/upload.png){:style="display:inline"} icon). When prompted, confirm the upload. A confirmation message about the successful upload is displayed at the bottom of the window.
+8. In the field **Source file on front end** you select your cofile from from step 1. The name of the file starts with a "K", e.g., K900472.
+9. In the field **Target file on application server** you construct your target path using the following pattern: `{copied path from step 2}\cofiles\{cofile name}`.<br>
+![SAP-Upload-File](/img/contents/sap-upload-files2.png){:class="img-responsive"}
+10. Click **[Upload]** (![Import icon](/img/contents/icons/upload.png){:style="display:inline"} icon). When prompted, confirm the upload. 
+
+If the upload was successful, a confirmation message is displayed at the bottom of the SAP window.<br>
+The files are now available in SAP.
+
+### Import SAP Transport Requests
+
+Follow the steps below to add the transport requests to the import queue and import them:
+
+1. Go to transaction STMS to open the transport management system.
+2. Click **[Import Overview]** (![Import icon](/img/contents/icons/sap-import.png){:style="display:inline"} icon).<br>
+![SAP-Upload-File](/img/contents/sap-transport-management-system.png){:class="img-responsive"}
+3. Double click on the import queue in which you want to load the transport request into.<br>
+![SAP-Queues](/img/contents/sap-import-queues.png){:class="img-responsive"}
+4. Open the transport request selection dialog via **More > Extras > Other Requests > Add**.
+5. Select the transport request and confirm. If prompted, confirm the import.
+![SAP-Queues](/img/contents/sap-import-queue.png){:class="img-responsive"}
+6. Select your transport request from the list and click **[Import Request]** (![Import icon](/img/contents/icons/sap-import-request.png){:style="display:inline"} icon). The window "Import Transport Request" opens.
+7. Enter the target client. 
+If the version of the SAP system where the transport request was created differs from your SAP system version, select the option **Ignore Invalid Component Version**.<br>
+![SAP-Import-Requests](/img/contents/sap-import-transport-request.png){:class="img-responsive"}
+8. Confirm your settings. 
+
+The transport request is imported.
+
+### Check the Status of Transport Requests
+
+The import overview of the transport management system (transaction STMS) lists all transport requests.<br>
+The status of the transport requests is displayed in the column "RC".
+
+A green bar indicates that the import was successful.
+In case of warnings or errors, double click on the icon to view the error messages.<br>
+![SAP-Import-Rewuests](/img/contents/sap-check-transport-requests.png){:class="img-responsive"}
+
+<!---
+### Add Transport Request to the Import Queue
 1. Unzip and copy the file R900141.ECC into the data folder and the file K900141.ECC into the co-files folder of our SAP System, e.g., `\\SAPServer\c$\usr\sap\trans\`
 Note that the last 3 digits of the transport numbers may be different in recent versions.<br>
 Alternative: Use the transaction code CG3Z to upload the files to SAP. Use the transaction AL11 to check if the files are in the correct directory.
@@ -33,3 +87,5 @@ Alternative: Use the transaction code CG3Z to upload the files to SAP. Use the t
 
 The checkmark ![STMSIcon04](/img/contents/STMSIcon04.png){:class="img-responsive" style="display:inline"} shows that the import finished successfully.<br>
 ![STMS11](/img/contents/STMS11.png){:class="img-responsive"}
+your comment goes here
+-->
