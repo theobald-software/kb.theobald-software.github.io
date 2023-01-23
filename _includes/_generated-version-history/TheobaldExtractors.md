@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.38.1 [M]|2023-01-23|BAPI|Only send scalar parameters if value has been provided|
 |1.38.0 [L]|2023-01-16|General|Adjustments for new conversion architecture (internal changes)|
 |1.37.1 [L]|2023-01-15|Security|Updated Bouncy Castle to version 2.0|
 |1.37.0 [H]|2023-01-15|TableCDC|Added Table CDC extractor|
