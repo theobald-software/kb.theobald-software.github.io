@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.11.6 [M]|2023-01-24|Runtime|Fix for JSON if more than one structure is selected for output|
 |1.11.5 [L]|2023-01-20|General|Transaction: Input and output fields can now be selected. Existing transaction services need to be re-created.|
 |1.11.4 [L]|2023-01-19|Designer|Log UI for services|
 |1.11.3 [L]|2022-12-14|General|Fixed a bug where an error during a CORS request would not send CORS headers. This would cause the client to not be able to access the error information sent in the response. Service executions now have their dedicated log file. Fixed a bug where table services would not finish if the result set was empty.|
