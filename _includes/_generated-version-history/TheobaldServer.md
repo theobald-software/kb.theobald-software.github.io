@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|3.6.4 [L]|2023-01-25|General|experimental rpc exchange: get-licesnse-status|
 |3.6.3 [L]|2023-01-21|General|Using logged in Designer user for server RFC connection test|
 |3.6.2 [L]|2023-01-20|General|Fixes & improvements for opening RFC Designer connections with SSO|
 |3.6.1 [L]|2023-01-20|General|External ID SSO: Using CommonCryptoLib SNC name format instead of Kerberos Wrapper Library format|
