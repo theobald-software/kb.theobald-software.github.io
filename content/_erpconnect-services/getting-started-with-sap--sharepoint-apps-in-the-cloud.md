@@ -167,9 +167,7 @@ Copy connection string, we will need it later:
 
 #### 5.1 Installation
 
-Get the package of ERPConnectServices and Install it on the machine, which has access to an SAP system:
-
-[https://theobald-software.com/erpconnect-services](https://theobald-software.com/erpconnect-services/)
+Get the package of ERPConnectServices and install it on the machine, which has access to an SAP system.
 
 #### 5.2 Configuration
 
@@ -239,8 +237,6 @@ ii. We should include Bootstrap (with jQuery, which should already be included b
  
 
 IMPORTANT! please check and use the latest version of tEcs, where newest changes and improvements are incorporated!
-
-Please visit: [http://static.theobald-software.com/tEcs/](http://static.theobald-software.com/tEcs/)
 
 ```
 <script src="//static.theobald-software.com/tEcs/4.6.0/theobald.ecs.min.js"></script>
@@ -386,12 +382,6 @@ Enjoy experimenting with ECSCore! Our team is always there for you.
 ### 10. Links
 
 References:
-
-ErpConnectServices:[https://theobald-software.com/erpconnect-services](https://theobald-software.com/erpconnect-services)
-
-tEcs: [https://static.theobald-software.com/tEcs/4.1](https://static.theobald-software.com/tEcs/4.1)
-
-(latest version [https://static.theobald-software.com/tEcs/latest](https://static.theobald-software.com/tEcs/latest))
 
 jQuery: [http://jquery.com](http://jquery.com)
 

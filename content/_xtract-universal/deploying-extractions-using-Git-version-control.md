@@ -8,7 +8,7 @@ weight: 35
 
 ### About
 
-The following article describes a versioning of newly developed extractions using [Git](https://gitforwindows.org/) and (optionally) the Git client [Fork](https://fork.dev/home) as an example.
+The following article describes a versioning of newly developed extractions using [Git](https://gitforwindows.org/) and (optionally) the Git client [Fork](https://fork.dev) as an example.
 
 With this implementation, new developments on a test environment of Xtract Universal can be transferred to the productive system and synchronized.
 
