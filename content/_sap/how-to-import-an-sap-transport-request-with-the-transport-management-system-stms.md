@@ -36,14 +36,14 @@ The files are now available in SAP.
 Follow the steps below to add the transport requests to the import queue and import them:
 
 1. Go to transaction STMS to open the transport management system.
-2. Click **[Import Overview]** (![Import icon](/img/contents/icons/sap-import.png){:style="display:inline"} icon).<br>
+2. Click **[Import Overview]** (![Import icon](/img/contents/icons/sap-imports.png){:style="display:inline"} icon).<br>
 ![SAP-Upload-File](/img/contents/sap-transport-management-system.png){:class="img-responsive"}
 3. Double click on the import queue in which you want to load the transport request into.<br>
 ![SAP-Queues](/img/contents/sap-import-queues.png){:class="img-responsive"}
 4. Open the transport request selection dialog via **More > Extras > Other Requests > Add**.
 5. Select the transport request and confirm. If prompted, confirm the import.
 ![SAP-Queues](/img/contents/sap-import-queue.png){:class="img-responsive"}
-6. Select your transport request from the list and click **[Import Request]** (![Import icon](/img/contents/icons/sap-import-request.png){:style="display:inline"} icon). The window "Import Transport Request" opens.
+6. Select your transport request from the list and click **[Import Request]** (![Import icon](/img/contents/icons/sap-import-requests.png){:style="display:inline"} icon). The window "Import Transport Request" opens.
 7. Enter the target client. 
 If the version of the SAP system where the transport request was created differs from your SAP system version, select the option **Ignore Invalid Component Version**.<br>
 ![SAP-Import-Requests](/img/contents/sap-import-transport-request.png){:class="img-responsive"}
