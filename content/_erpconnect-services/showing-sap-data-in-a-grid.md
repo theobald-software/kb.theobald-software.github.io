@@ -336,7 +336,6 @@ Related links:
 Links in article:
 
 - [http://msdn.microsoft.com/en-us/library/ee231579.aspx](http://msdn.microsoft.com/en-us/library/ee231579.aspx)
-- [https://theobald-software.com/en/erpconnect-services-productinfo.html](https://theobald-software.com/en/erpconnect-services-productinfo.html)
 - [http://jquery.com](http://jquery.com)
 - [http://code.jquery.com/jquery-1.10.2.min.js](http://code.jquery.com/jquery-1.10.2.min.js)
 - [http://datatables.net](http://datatables.net)

@@ -21,7 +21,7 @@ The implementation of various [Git](https://gitforwindows.org/) security techniq
 
 - Technically separate development and production environment of Xtract Universal.
 - Xtract Universal developers have [read-only access](https://help.theobald-software.com/en/xtract-universal/security/access-management) to the Xtract Universal production system.
-- Git client installed locally on the development environment and the production environment, [Fork](https://fork.dev/home) as an example.
+- Git client installed locally on the development environment and the production environment, [Fork](https://fork.dev) as an example.
 - The Xtract Universal installations must have the identical release version on the different servers.
 
 ### When setting up a new environment

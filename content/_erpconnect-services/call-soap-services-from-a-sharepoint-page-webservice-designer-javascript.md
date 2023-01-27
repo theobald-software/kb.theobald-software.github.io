@@ -340,9 +340,6 @@ Enjoy delivering your SAP data with ERPConnect Services and WebService Designer!
 
 References:
 
-ERPConnectServices (includes Web Service Designer):
-
-[https://theobald-software.com/erpconnect-services/](https://theobald-software.com/erpconnect-services/)
 
 tEcs+ (API and download):
 
