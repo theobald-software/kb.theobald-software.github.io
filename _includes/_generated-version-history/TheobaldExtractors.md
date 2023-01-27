@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|[1.39.0 [L]](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.39.0.html)|2023-01-27|BW Cube|Various improvements and new features in BICS cube extractor([Release note](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.39.0.html))|
 |1.38.2 [L]|2023-01-26|Report|Report helper and Report tests|
 |1.38.1 [M]|2023-01-23|BAPI|Only send scalar parameters if value has been provided|
 |1.38.0 [L]|2023-01-16|General|Adjustments for new conversion architecture (internal changes)|
