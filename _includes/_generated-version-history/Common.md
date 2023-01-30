@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.21.11 [M]|2023-01-30|General|Updated NW RFC SDK to 750 PL11|
 |2.21.10 [L]|2023-01-15|General|Support for writing ULEB128 encoding of 64-bit unsigned integer to byte array|
 |2.21.9 [L]|2023-01-15|Licensing|Added Table CDC as new LicenseComponent|
 |2.21.8 [L]|2023-01-06|General|Made ReadJsonProperty() and WriteJsonFields() public|
