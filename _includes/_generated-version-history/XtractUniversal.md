@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.21.4 [L]|2023-01-30|Designer|S3 Destination: fixed a bug where when file splitting was turned on and a folder path specified, only the first part file would end up in the correct folder in S3.|
 |5.21.3 [L]|2023-01-30|Destinations|Azure Storage: Added option to specify custom name for manifest file. Data will be placed in a separate folder that has the same name as the entity name.|
 |5.21.2 [L]|2023-01-27|Destinations|Parquet: Added option to not replace some special characters in column names when using Spark compatibility mode|
 |5.21.1 [L]|2023-01-21|Designer|Added support for server side RFC connection test with SSO configurations|
