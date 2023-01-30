@@ -429,6 +429,3 @@ Add and manage Azure AD applications
 
 [https://learn.microsoft.com/en-us/azure/marketplace/manage-aad-apps)
 
-ERPConnect Services
-
-[https://theobald-software.com/en/erpconnect-services-productinfo.html](https://theobald-software.com/en/erpconnect-services-productinfo.html)
