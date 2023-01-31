@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.21.13 [L]|2023-01-31|General|Method for JSON serialization of empty array|
 |2.21.12 [L]|2023-01-30|General|Updated librfc32 64-bit to 753 PL700|
 |2.21.11 [M]|2023-01-30|General|Updated NW RFC SDK to 750 PL11|
 |2.21.10 [L]|2023-01-15|General|Support for writing ULEB128 encoding of 64-bit unsigned integer to byte array|
