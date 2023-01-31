@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.11.1 [L]|2023-01-31|General|Fix a bug where empty lists in column transformation information would not correctly be serialized to JSON.|
 |5.11.0 [L]|2023-01-16|General|New conversion architecture (internal changes)|
 |5.10.0 [H]|2023-01-16|TableCDC|Added Table CDC extractor (preview)|
 |[5.9.0 [L]](https://kb.theobald-software.com/release-notes/BOARDConnector-5.9.0.html)|2023-01-10|General|Removed config conversion of version 2.x([Release note](https://kb.theobald-software.com/release-notes/BOARDConnector-5.9.0.html))|
