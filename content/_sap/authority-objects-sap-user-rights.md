@@ -91,9 +91,6 @@ S_BTCH_JOB       JOBGROUP=*; JOBACTION=RELE
 ```
 
 {: .box-note }
-**Note** Reports not assigned to an authorization group must have a custom authorization object Z_TS_PROG assigned to the user, see [Z_XTRACT_IS_REMOTE_REPORT_README.pdf](/files/Z_XTRACT_IS_REMOTE_REPORT.pdf){:target="_blank"} for more information.
-
-{: .box-note }
 **Note** The needed transport request for function group *ZXTRACTABAP* is located in the following path: ```C:\Program Files\[XtractProduct]\ABAP\Report\Z_XTRACT_IS_REMOTE_REPORT-transport.zip``` of the default installation.
 
 ### SAP Query
