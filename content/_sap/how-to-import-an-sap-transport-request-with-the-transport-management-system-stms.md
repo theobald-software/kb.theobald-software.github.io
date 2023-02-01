@@ -8,7 +8,8 @@ weight: 35
 
 This article shows how to import transport requests for custom functions modules that are included in the installation directory of your product, e.g., `C:\Program Files\[XtractProduct]\ABAP`.
 
-### Upload SAP Transport Requests to SAP
+<!---
+### Upload SAP Transport Requests to SAP Via Transactions
 
 If you have access to the file system of SAP, you can copy and paste the files of your transport request directly into the `data` and `cofiles` folders of your SAP system. <br>
 If you don't have access to the file system, follow the steps below to upload the files of your transport request using SAP transactions:
@@ -30,6 +31,34 @@ Note or copy the path shown in the column *Directory*.<br>
 
 If the upload was successful, a confirmation message is displayed at the bottom of the SAP window.<br>
 The files are now available in SAP.
+
+-->
+
+### Upload SAP Transport Requests to SAP
+
+If you have access to the file system of SAP, you can copy and paste the files of your transport request directly into the `data` and `cofiles` folders of your SAP system. <br>
+If you don't have access to the file system, follow the steps below to upload the files of your transport request using the SAP function module ARCHIVFILE_CLIENT_TO_SERVER:
+
+1. Unzip the transport request provided in the installation directory of your product, e.g., `C:\Program Files\[XtractProduct]\ABAP`.
+2. Open SAP and go to transaction AL11.
+3. Find the entry DIR_TRANS in the column *Name of Directory Parameter*.
+Note or copy the path shown in the column *Directory*.<br>
+![SAP-AL11](/img/contents/sap-al11.png){:class="img-responsive"}
+4. Go to transaction SE37.
+5. Enter name of function module ARCHIVFILE_CLIENT_TO_SERVER and click **[Test/Execute]**.
+![SAP-FuBa](/img/contents/sap-fuba.png){:class="img-responsive"} 
+6. In the field **PATH** you select your request file from from step 1. The name of the file starts with an "R", e.g., R900472.
+7. In the field **TARGET PATH** you construct your target path using the following pattern: `{copied path from step 2}\data\{request file name}`.<br>
+8. Enable case-sensitivity and click **[Execute]**. When prompted, confirm the upload. <br>
+![SAP-Upload-File](/img/contents/sap-fuba-upload.png){:class="img-responsive"}
+9. In the field **PATH** you select your cofile from from step 1. The name of the file starts with a "K", e.g., K900472.
+10. In the field **TARGET PATH** you construct your target path using the following pattern: `{copied path from step 2}\cofiles\{cofile name}`.<br>
+11. Enable case-sensitivity and click **[Execute]**. When prompted, confirm the upload. 
+
+The files are now available in SAP.
+
+{: .box-note }
+**Note:** Another method for uploading files to SAP is the SAP transaction CG3Z. This transaction is only available on ERP systems. 
 
 ### Import SAP Transport Requests
 
