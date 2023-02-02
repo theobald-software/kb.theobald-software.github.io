@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.21.6 [L]|2023-02-02|Destinations|GCS-Destination with file split: Aborting extraction deletes all uploaded parts.|
 |5.21.5 [L]|2023-01-31|General|Fix a bug where empty lists in column transformation information would not correctly be serialized to JSON.|
 |5.21.4 [L]|2023-01-30|Designer|S3 Destination: fixed a bug where when file splitting was turned on and a folder path specified, only the first part file would end up in the correct folder in S3.|
 |5.21.3 [L]|2023-01-30|Destinations|Azure Storage: Added option to specify custom name for manifest file. Data will be placed in a separate folder that has the same name as the entity name.|
