@@ -30,11 +30,11 @@ The following example application uses a yunIO service to change items in a sale
 ![change-sales-order](/img/contents/yunio/change-sales-order.png){:class="img-responsive"}
 3. Enter an order number between 1 - 4999999.<br>
 If you do not know the order number, use the search criteria to find the sales order you want to edit.<br>
-![change-sales-order2](/img/contents/yunio/change-sales-order2.png){:class="img-responsive"}
+![change-sales-order2](/img/contents/yunio/change-sales-order2.png){:class="img-responsive" width="850px"}
 4. Click **[Submit]** to execute the action and to continue to the next screen. All actions are logged in the *GUI Steps* section of the UI.
 5. If a pop-op window opens in SAP, the message of the pop-up window is displayed in yunIO. In this example, the message "*Consider the subsequent documents*" is displayed.<br>
 Click **[Continue]** to close the pop-up window and continue to the next screen.
-![change-sales-order3](/img/contents/yunio/change-sales-order3.png){:class="img-responsive"}
+![change-sales-order3](/img/contents/yunio/change-sales-order3.png){:class="img-responsive" width="850px"}
 6. Edit the sales order, e.g., change the quantity item, pricing coditions, etc.
 7. Click **[Submit]** to submit the changes to SAP.<br>
 ![change-sales-order4](/img/contents/yunio/change-sales-order4.png){:class="img-responsive"}
