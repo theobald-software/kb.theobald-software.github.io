@@ -2,11 +2,8 @@
 layout: page
 title: Integrating a yunIO Service with Nintex
 description: Integrating a yunIO Service with Nintex
-product: xtract-universal
-parent: xtract-universal
 permalink: /:collection/:path
 weight: 4
-lang: en_GB
 progressstate: 5
 ---
 
