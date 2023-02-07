@@ -59,7 +59,8 @@ Create a new SAP source system in your Xtract product to set up SSO with client 
 The SAP Crypto Library is installed as part of the SAP Secure Login Client.
 6. Enter the SNC partner name of the SAP system in the field **SNC partner name**. 
 This is the same partner name as the SNC name used to set up the SAP GUI.
-7. Activate the option **Enroll certificate on behalf of caller (Certificate SSO)**.
+7. Activate the option **Enroll certificate on behalf of caller (Certificate SSO)**.<br>
+![sso-certificate-auth2](/img/contents/sso-certificate-auth2.png){:class="img-responsive"}
 8. Enter the technical name of the Active Directory Certificate Template used to authenticate SAP users.
 9. Enter the thumbprint of the certificate of the enrollment agent.
 If you don't know the name or thumbprint, consult the IT department that manages the Active Directory Certificate Services.
