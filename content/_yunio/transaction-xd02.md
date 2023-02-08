@@ -2,6 +2,7 @@
 layout: page
 title: Working with Transaction XD02
 description: Working with Transaction XD02
+published: false
 permalink: /:collection/:path
 weight: 55
 ---
@@ -11,7 +12,7 @@ The following example application uses the transaction XD02 to change customer m
 
 ### Prerequisites
 
-The SAP connection asigned to a transaction service must use an SAP dialog user with enough access rights to create new equipment. 
+The SAP connection assigned to a transaction service must use an SAP dialog user with enough access rights to create new equipment. 
 
 {: .box-note }
 **Note:** The integration type *Transaction* is currently marked as "Preview" and is not fully functional. 
