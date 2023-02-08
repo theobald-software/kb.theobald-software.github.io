@@ -13,7 +13,7 @@ For more information on creating equipment, see [SAP Help: Creating a Piece of E
 
 ### Prerequisites
 
-1. The SAP connection asigned to a transaction service must use an SAP dialog user with enough access rights to create new equipment. 
+1. The SAP connection assigned to a transaction service must use an SAP dialog user with enough access rights to create new equipment. 
 2. Create a new *Transaction* service in yunIO.
 For more information on creating a service, see [Creating a Service](https://help.theobald-software.com/en/yunio/getting-started#creating-a-service).<br>
 
