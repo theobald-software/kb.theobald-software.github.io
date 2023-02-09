@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|[3.6.6 [L]](https://kb.theobald-software.com/release-notes/TheobaldServer-3.6.6.html)|2023-02-09|General|Logging consistency and SAP authentication fixes for the new runtime.([Release note](https://kb.theobald-software.com/release-notes/TheobaldServer-3.6.6.html))|
 |3.6.5 [L]|2023-02-01|General|Report Exchange|
 |3.6.4 [L]|2023-01-25|General|experimental rpc exchange: get-licesnse-status|
 |3.6.3 [L]|2023-01-21|General|Using logged in Designer user for server RFC connection test|
