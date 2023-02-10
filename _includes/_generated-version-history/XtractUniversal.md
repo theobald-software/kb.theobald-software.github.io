@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.21.8 [L]|2023-02-10|General|Fix extraction cache getting checked despite being disabled. Fix possible race condition in the RPC worker.|
 |5.21.7 [L]|2023-02-10|General|Removed "Support Client" from Help menus. Added extraction type (Cube, Table, ...) being executed in extraction and server logs|
 |5.21.6 [L]|2023-02-02|Destinations|GCS-Destination with file split: Aborting extraction deletes all uploaded parts.|
 |5.21.5 [L]|2023-01-31|General|Fix a bug where empty lists in column transformation information would not correctly be serialized to JSON.|
