@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|[5.21.9 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-5.21.9.html)|2023-02-10|Destinations|Oracle data provider updated and added support for connections to Oracle Autonomous DB.([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-5.21.9.html))|
 |5.21.8 [L]|2023-02-10|General|Fix extraction cache getting checked despite being disabled. Fix possible race condition in the RPC worker.|
 |5.21.7 [L]|2023-02-10|General|Removed "Support Client" from Help menus. Added extraction type (Cube, Table, ...) being executed in extraction and server logs|
 |5.21.6 [L]|2023-02-02|Destinations|GCS-Destination with file split: Aborting extraction deletes all uploaded parts.|
