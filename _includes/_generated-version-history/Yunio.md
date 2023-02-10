@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.11.8 [L]|2023-02-10|Designer|Transaction logs|
 |1.11.7 [L]|2023-01-27|Runtime|Root services URL returns version|
 |1.11.6 [M]|2023-01-24|Runtime|Fix for JSON if more than one structure is selected for output|
 |1.11.5 [L]|2023-01-20|General|Transaction: Input and output fields can now be selected. Existing transaction services need to be re-created.|
