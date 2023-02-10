@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.11.3 [L]|2023-02-10|General|Fix extraction cache getting checked despite being disabled. Fix possible race condition in the RPC worker.|
 |5.11.2 [L]|2023-02-10|General|Removed "Support Client" from Help menus. Added extraction type (Cube, Table, ...) being executed in extraction and server logs|
 |5.11.1 [L]|2023-01-31|General|Fix a bug where empty lists in column transformation information would not correctly be serialized to JSON.|
 |5.11.0 [L]|2023-01-16|General|New conversion architecture (internal changes)|
