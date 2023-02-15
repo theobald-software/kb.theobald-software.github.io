@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.39.3 [L]|2023-02-15|Report|Improved error message for when report lookup by TCODE fails.|
 |1.39.2 [L]|2023-02-13|BW Cube|Fixed a bug in MDX metadata refresh that caused invalid selections when a selected measure or dimension does not exist after refresh anymore.|
 |1.39.1 [L]|2023-02-06|Report|Report component UI improvements.|
 |[1.39.0 [L]](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.39.0.html)|2023-01-27|BW Cube|Various improvements and new features in BICS cube extractor([Release note](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.39.0.html))|
