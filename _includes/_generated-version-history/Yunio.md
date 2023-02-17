@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.11.9 [L]|2023-02-17|Designer|default/last used connection pre-selection when creating new service|
 |1.11.8 [L]|2023-02-10|Designer|Transaction logs|
 |1.11.7 [L]|2023-01-27|Runtime|Root services URL returns version|
 |1.11.6 [M]|2023-01-24|Runtime|Fix for JSON if more than one structure is selected for output|
