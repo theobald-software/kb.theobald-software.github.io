@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|7.5.5 [L]|2023-02-18|SNC|Added SNCSettings.RunImpersonated|
 |7.5.4 [L]|2023-02-18|General|Added Global.SetCpicConnectTimeout()|
 |7.5.3 [L]|2023-02-10|General|Added doc strings to interface IR3Connection. Cleanup, corrections, and some see and seealso references added to comments on both IR3Connection and R3Connection|
 |7.5.2 [L]|2023-01-21|SNC|Detect ineffective attempts to change SNC library after it has already been loaded|
