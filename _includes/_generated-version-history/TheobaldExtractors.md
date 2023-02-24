@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.39.5 [L]|2023-02-24|BW Cube|Fixed an issue that may cause errors when setting exclude filters or runtime parameters in filters when using MDX mode.|
 |1.39.4 [L]|2023-02-21|BAPI|BapiCatalogEntry with functionGroup|
 |1.39.3 [L]|2023-02-15|Report|Improved error message for when report lookup by TCODE fails.|
 |1.39.2 [L]|2023-02-13|BW Cube|Fixed a bug in MDX metadata refresh that caused invalid selections when a selected measure or dimension does not exist after refresh anymore.|
