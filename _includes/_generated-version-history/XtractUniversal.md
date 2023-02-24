@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.21.12 [L]|2023-02-24|Designer|Fix for column mapping validation on designer, which would not allow to change the destination settings|
 |5.21.11 [L]|2023-02-23|Destinations|Added support for key pair authentication on Snowflake destination|
 |5.21.10 [L]|2023-02-14|Designer|Fix for designer unexpectedly closing the server connection when opening an unconverted extraction.|
 |[5.21.9 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-5.21.9.html)|2023-02-10|Destinations|Oracle data provider updated and added support for connections to Oracle Autonomous DB.([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-5.21.9.html))|
