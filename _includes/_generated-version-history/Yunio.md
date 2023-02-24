@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.12.0 [L]|2023-02-24|Designer|Stability and usability improvements. Preparation for Report component.|
 |1.11.9 [L]|2023-02-17|Designer|default/last used connection pre-selection when creating new service|
 |1.11.8 [L]|2023-02-10|Designer|Transaction logs|
 |1.11.7 [L]|2023-01-27|Runtime|Root services URL returns version|
