@@ -29,18 +29,19 @@ The following example application uses a yunIO service to change items in a sale
 2. In the transaction service enter the transaction VA02 and press **[Start]**. A replicated SAP GUI of the transaction VA02 is displayed.
 ![change-sales-order](/img/contents/yunio/change-sales-order.png){:class="img-responsive"}
 3. Enter an order number between 1 - 4999999.<br>
-If you do not know the order number, use the search criteria to find the sales order you want to edit.<br>
+This input can be replaced with a runtime parameter after the transaction is recorded.
 ![change-sales-order2](/img/contents/yunio/change-sales-order2.png){:class="img-responsive" width="850px"}
 4. Click **[Submit]** to execute the action and to continue to the next screen. All actions are logged in the *GUI Steps* section of the UI.
 5. If a pop-op window opens in SAP, the message of the pop-up window is displayed in yunIO. In this example, the message "*Consider the subsequent documents*" is displayed.<br>
 Click **[Continue]** to close the pop-up window and continue to the next screen.
 ![change-sales-order3](/img/contents/yunio/change-sales-order3.png){:class="img-responsive" width="850px"}
-6. Edit the sales order, e.g., change the quantity item, pricing coditions, etc.
+6. Edit the sales order or record screens for parameterization.<br>
+All fields that need to be parameterized must be available in the section *GUI Steps*. Example: to parameterize a field in a specific tap or menu, the tab or menu must be accessed when recording the transaction.
 7. Click **[Submit]** to submit the changes to SAP.<br>
 ![change-sales-order4](/img/contents/yunio/change-sales-order4.png){:class="img-responsive"}
-8. Click **[Save]** to save your actions.
+8. Click **[Save]** to save your actions.<br>
+Alternatively, click **[Stop]** to start parameterizing, see [yunIO Help: Parameterize Transactions](https://help.theobald-software.com/en/yunio/transactions#parameterize-transactions).
 
-The changes are now available in SAP.
 
 {: .box-note }
 **Note:** When using *Transaction*, warnings and error messages from SAP are displayed in yunIO e.g., *"Equipment number... not in external number interval"*.
@@ -51,3 +52,4 @@ These messages are not yunIO specific and should be treated accordingly.
 #### Related Links
 - [yunIO Help: Getting Started](https://help.theobald-software.com/en/yunio/getting-started)
 - [yunIO Help: Transactions](https://help.theobald-software.com/en/yunio/transactions)
+- [yunIO Help: Parameterize Transactions](https://help.theobald-software.com/en/yunio/transactions#parameterize-transactions)
