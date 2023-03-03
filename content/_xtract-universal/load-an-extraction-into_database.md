@@ -36,10 +36,7 @@ To load data into a Microsoft SQL Server, a Microsoft SQL Server destination mus
 You can change the extraction-specific settings, if needed. This example uses the default settings:<br>
 ![Load-Shared-Destination-SQLServer](/img/contents/xu/sqlserver_destination-settings.png){:class="img-responsive"}
 4. Click **[OK]** to get back to the main window of the Designer.       
-5. Click **[Run] > [run in xu.exe]**
-![Run an extraction](/img/contents/xu/run_extraction.png){:class="img-responsive"} 
-The command line window opens and the successful extraction procedure ends with a message *Extraction finished successfully*.
-![Database-Metadata](/img/contents/xu/konsole_run_in_xu_exe.png){:class="img-responsive"}
+5. Click **[Run] > [Run]** to start the extraction. A successful extraction procedure ends with the status *Extraction finished successfully*.
 
 #### Checking the extraction result
 Open your SQL Management Studio and check the existence of the successfully extracted table. 
