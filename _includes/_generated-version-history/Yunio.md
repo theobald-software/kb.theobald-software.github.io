@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.12.2 [L]|2023-03-06|General|New EULA|
 |1.12.1 [L]|2023-03-01|Designer|WhereClause Builder improvement.|
 |1.12.0 [L]|2023-02-24|Designer|Stability and usability improvements. Preparation for Report component.|
 |1.11.9 [L]|2023-02-17|Designer|default/last used connection pre-selection when creating new service|
