@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|7.1.2 [L]|2023-03-06|General|New EULA|
 |7.1.1 [L]|2023-02-07|Table|Exposed table background job parameter as a custom property.|
 |7.1.0 [L]|2023-01-16|General|Added Support for SQL Server 2022 (no support yet for Visual Studio 2022)|
 |7.0.4 [L]|2022-11-15|General|Changed default RFC library to NetWeaver|
