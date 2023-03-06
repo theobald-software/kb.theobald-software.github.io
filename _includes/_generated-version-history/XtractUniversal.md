@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.21.13 [L]|2023-03-06|General|New EULA|
 |5.21.12 [L]|2023-02-24|Designer|Fix for column mapping validation on designer, which would not allow to change the destination settings|
 |5.21.11 [L]|2023-02-23|Destinations|Added support for key pair authentication on Snowflake destination|
 |5.21.10 [L]|2023-02-14|Designer|Fix for designer unexpectedly closing the server connection when opening an unconverted extraction.|
