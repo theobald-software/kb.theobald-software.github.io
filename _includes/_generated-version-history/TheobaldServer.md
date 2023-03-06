@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|3.6.10 [L]|2023-03-06|General|Fix a bug where the HTTP server would not attach CORS headers on failed authentication attempts. Rework the handling of parameters in the new runtime.|
 |3.6.9 [L]|2023-02-23|General|License check for number of extractions|
 |3.6.8 [L]|2023-02-21|General|RPC bapi / report metadata|
 |3.6.7 [L]|2023-02-18|General|Fix for SNC with Windows impersonation (broken since 3.6.0)|
