@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.8.1 [L]|2022-04-12|Management|Improved error message for mapping structure as a parameter (use scalars)|
 |2.8.0 [L]|2021-07-08|Designer|Improvement for tables in imports/exports/changings.|
 |2.7.0 [M]|2021-05-05|Consumer|Improved logic for custom SAP connections.|
 |2.6.1 [L]|2021-04-27|Management|Dependencies updated (stability).|
