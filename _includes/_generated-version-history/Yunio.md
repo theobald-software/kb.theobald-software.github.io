@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|[1.13.1 [M]](https://kb.theobald-software.com/release-notes/Yunio-1.13.1.html)|2023-03-07|Theobald.Server|Custom authentication related security fixes and improvements.([Release note](https://kb.theobald-software.com/release-notes/Yunio-1.13.1.html))|
 |[1.13.0 [M]](https://kb.theobald-software.com/release-notes/Yunio-1.13.0.html)|2023-03-07|General|This release adds full support for the Transaction component. It is now generally available and no longer in Preview.([Release note](https://kb.theobald-software.com/release-notes/Yunio-1.13.0.html))|
 |1.12.3 [L]|2023-03-06|Runtime|Fixed a bug where the HTTP server would not attach CORS headers on failed authentication attempts. Rework the handling of parameters in the new runtime. Services with scalar runtime parameters now support the GET request type. Values for the scalar parameters can be supplied as query parameter.|
 |1.12.2 [L]|2023-03-06|General|New EULA|
