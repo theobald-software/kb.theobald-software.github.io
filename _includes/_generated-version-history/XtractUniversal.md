@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|[5.21.14 [M]](https://kb.theobald-software.com/release-notes/XtractUniversal-5.21.14.html)|2023-03-07|Security|Custom authentication related security fixes and improvements.([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-5.21.14.html))|
 |5.21.13 [L]|2023-03-06|General|New EULA|
 |5.21.12 [L]|2023-02-24|Designer|Fix for column mapping validation on designer, which would not allow to change the destination settings|
 |5.21.11 [L]|2023-02-23|Destinations|Added support for key pair authentication on Snowflake destination|
