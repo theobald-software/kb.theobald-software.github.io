@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.11.6 [L]|2023-03-08|BW Cube|Fix for column order changes in MDX mode when adding filter selections or selecting and deselecting a dimension.|
 |[5.11.5 [M]](https://kb.theobald-software.com/release-notes/BOARDConnector-5.11.5.html)|2023-03-07|Security|Custom authentication related security fixes and improvements.([Release note](https://kb.theobald-software.com/release-notes/BOARDConnector-5.11.5.html))|
 |5.11.4 [L]|2023-03-06|General|New EULA|
 |5.11.3 [L]|2023-02-10|General|Fix extraction cache getting checked despite being disabled. Fix possible race condition in the RPC worker.|
