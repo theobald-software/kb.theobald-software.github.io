@@ -11,7 +11,7 @@ The following example application uses the transaction VA02 to change a sales or
 
 ### Prerequisites
 
-The SAP connection assigned to a transaction service must use an SAP dialog user with enough access rights to create new equipment. 
+The SAP connection assigned to a transaction service must use an SAP dialog user with enough access rights to edit sales orders. 
 
 {: .box-note }
 **Note:** The integration type *Transaction* is currently marked as "Preview" and is not fully functional. 
