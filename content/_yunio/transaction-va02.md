@@ -13,10 +13,6 @@ The following example application uses the transaction VA02 to change a sales or
 
 The SAP connection assigned to a transaction service must use an SAP dialog user with enough access rights to edit sales orders. 
 
-{: .box-note }
-**Note:** The integration type *Transaction* is currently marked as "Preview" and is not fully functional. 
-Future versions will work with any SAP transaction code.
-
 {: .box-tip }
 **Tip:** The transaction feature of yunIO offers the same functionalities as the SAP GUI. 
 Therefore knowing how to navigate the SAP GUI makes it easier to use the transaction feature. 
