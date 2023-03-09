@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Working with Transactions
+title: Working with Transaction IE01
 description: Creating Equipment Using Transactions in yunIO
 permalink: /:collection/:path
 weight: 50
