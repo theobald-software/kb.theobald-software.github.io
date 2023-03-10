@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.11.7 [L]|2023-03-10|TableCDC|Table CDC: Log table size can now be limited.|
 |5.11.6 [L]|2023-03-08|BW Cube|Fix for column order changes in MDX mode when adding filter selections or selecting and deselecting a dimension.|
 |[5.11.5 [M]](https://kb.theobald-software.com/release-notes/BOARDConnector-5.11.5.html)|2023-03-07|Security|Custom authentication related security fixes and improvements.([Release note](https://kb.theobald-software.com/release-notes/BOARDConnector-5.11.5.html))|
 |5.11.4 [L]|2023-03-06|General|New EULA|
