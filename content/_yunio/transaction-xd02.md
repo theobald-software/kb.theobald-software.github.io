@@ -29,6 +29,8 @@ The following example application uses a yunIO service to change customer master
 ![change-customer-master2](/img/contents/yunio/change-customer-master2.png){:class="img-responsive" }
 5. Edit the customer data or record screens for parameterization.<br>
 All fields that need to be parameterized must be available in the section *GUI Steps*. Example: to parameterize a field in a specific tap or menu, the tab or menu must be accessed when recording the transaction.
+7. Click **[Customer] > [Save]** to save the changes in SAP.<br>
+![change-customer-master4](/img/contents/yunio/change-customer-master4.png){:class="img-responsive"}
 6. Click **[Save]** to save your actions. <br>
 Alternatively, click **[Stop]** to start parameterizing, see [yunIO Help: Parameterize Transactions](https://help.theobald-software.com/en/yunio/transactions#parameterize-transactions).
 
