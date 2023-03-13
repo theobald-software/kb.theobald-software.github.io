@@ -21,7 +21,7 @@ Please redirect this article to your SAP Basis admins to get the relevant author
 
 ### General authorization objects
 
-The following objects are needed at least to establish a connection to SAP.
+The following objects are required to establish a connection to SAP.
 
 ```
 S_RFC            RFC_TYPE=FUGR; RFC_NAME=SYST; ACTVT=16
@@ -51,7 +51,7 @@ XXXX (stands for a placeholder) is the Authority Group for the table. To find ou
 If the table is not listed there the authority group is &NC&. For authorizing specific tables please use authorization object S_TABU_NAM instead of S_TABU_DIS.
 
 {: .box-note }
-**Note** The needed transport request for function group *Z_THEO_READ_TABLE* is located in the following path: ```C:\Program Files\[XtractProduct]\ABAP\Table``` of the default installation. 
+**Note** The transport request for function group *Z_THEO_READ_TABLE* is located in the following path: ```C:\Program Files\[XtractProduct]\ABAP\Table``` of the default installation. 
 
 When executing our custom function module Z_THEO_READ_TABLE in background:
 
@@ -71,9 +71,26 @@ When using "Adjust currency decimals" setting:
 S_TABU_NAM       ACTVT=03; TABLE=TCURX
 ```
 
+
+### Table CDC
+
+The following objects are required to create and extract a log table in SAP:
+
+```
+S_RFC            ACTVT=16; RFC_TYPE=FUGR, FUNC; RFC_NAME=CNV0, DDIF_FIELDINFO_GET, IUUC_ADBC, IUUC_REMOTE, RFC1, RFCPING, SDIFRUNTIME, SDTX, SYST,  Z_THEO_DELETE_LOG_ENTRIES, Z_THEO_READ_TABLE            
+S_DMC_S_R        ACTVT=33
+S_CTS_ADMI       CTS_ADMFCT=TABL
+S_TABU_CLI       CLIIDMAINT=X
+S_TABU_DIS       ACTVT=02, 03; DICBERCLS=*
+S_DEVELOP        ACTVT=02; DEVCLASS=$TMP; OBJNAME=/1LT/TS_*; OBJTYPE=*; P_GROUP=*
+```
+
+{: .box-note }
+**Note** The transport requests for the required function groups *Z_THEO_DELETE_LOG_ENTRIES* and *Z_THEO_READ_TABLE* are located in ```C:\Program Files\[XtractProduct]\ABAP\TableCDC``` and ```C:\Program Files\[XtractProduct]\ABAP\Table```. 
+
 ### Report
 
-Look up reports and TxCodes, preview und execute:
+Look up reports and TxCodes, preview and execute:
 
 ```
 S_RFC            RFC_TYPE=FUGR; RFC_NAME=ZXTRACTABAP; ACTVT=16
