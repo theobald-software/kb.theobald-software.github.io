@@ -38,7 +38,7 @@ This example uses script expressions to query the current date.
 2. Look up a table you want to extract data from, e.g., VBAK. <br>
 ![VBAK-Table](/img/contents/VBAK-Table.png){:class="img-responsive"}
 3. Open the WHERE clause tab of the Table component and enter the following criterion: <br>
-`(ERDAT >= '#{ DateTime.Now.AddDays(-1).ToString(\"yyyyMMdd\") }#' AND AEDAT = '00000000') OR AEDAT >= '#{ DateTime.Now.AddDays(-1).ToString(\"yyyyMMdd\") }#'` <br>
+`(ERDAT >= '#{ DateTime.Now.AddDays(-1).ToString("yyyyMMdd") }#' AND AEDAT = '00000000') OR AEDAT >= '#{ DateTime.Now.AddDays(-1).ToString("yyyyMMdd") }#'` <br>
 This criterion extracts data if one of the following conditions is true:<br>
 The data was created (ERDAT) the day before the current date and it has not been changed (AEDAT).<br>
 Or the data has changed (ARDAT) the day before the current date.
