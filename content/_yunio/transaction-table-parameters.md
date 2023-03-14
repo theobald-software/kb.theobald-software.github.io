@@ -33,51 +33,87 @@ All fields that can be parameterized are highlighted in green when hovering over
 ![transaction-va02-order](/img/contents/yunio/transaction-va02-order.png){:class="img-responsive"}
 7. Optional: Select **Output** to check if your input was successful.
 8. Click **[OK]** to save the parameter. The window “Parameterize Element” closes.
-9. Click **[Submit]** to save any changes in SAP.
-10. Click **[Save]** to save the service.
+9. Click **[Save]** to save the service.
 
 
-### Format the Input Table
+### Format of Input Tables
 
-1. Copy or download the OpenAPI/Swagger definition of the service.
-2. Open the service in a tool that supports OpenAPI/Swagger definitions, e.g., [Swagger Inspector](https://inspector.swagger.io/). 
-3. Make sure to use the `POST` method when integrating the service. `GET` does not support table parameters.
-4. Open the request body of the service. All input parameters are listed in the request body.<br>
-Table parameters have the following structure
+Table parameters have the following structure:
 
-```
+<table>
+<tr><th>
+Table structure in the http request body
+</th><th>
+Table structure in OpenAPI/Swagger definition
+</th></tr>
+<tr><td>
+<pre>
+"ITEMS": [
+    {
+        "selected": false,
+        "cells": {
+            "VBAP-POSNR": "",
+            "RV45A-MABNR": "",
+            "RV45A-KWMENG": "",
+            ...
+        }
+    },
+    {
+        "selected": false,
+        "cells": {
+            "VBAP-POSNR": "",
+            "RV45A-MABNR": "",
+            "RV45A-KWMENG": "",
+            ...
+        }
+    },
+    ... //more rows
+    ]
+</pre>
+</td>
+<td>
+<pre>
 ITEMS:
-   type: array
-   items:
-   type: object
-   properties:
-	selected:
-	   type: boolean
-	   cells:
-	    type: object
-		properties:
-		   VBAP-POSNR:
-			description: Item
-			type: string
-		   RV45A-MABNR:
-			description: Material
-			type: string
-		   RV45A-KWMENG:
-			description: Order Quantity
-			type: string
-		   VBAP-VRKME:
-			description: '@\QSales Unit@Un'
-			type: string
-		   VBAPD-EPMEH:
-			description: '@\QSchedule Lines Exist@S'
-			type: string
-		   VBAP-ARKTX:
-			description: Description
-			type: string
-		   VBAP-KDMAT:
-			description: Customer Material Numb
-			type: string
-```
+    type: array
+    items:
+      type: object
+      properties:
+        selected:
+          type: boolean
+        cells:
+          type: object
+          properties:
+            VBAP-POSNR:
+              description: Item
+              type: string
+            RV45A-MABNR:
+              description: Material
+              type: string
+            RV45A-KWMENG:
+              description: Order Quantity
+              type: string
+            ...
+			
+</pre>
+</td></tr>
+</table>
+
+Table parameters are passed to the service in the http request body. 
+Enter values for each column, e.g., `"VBAP-POSNR": "10"`, `"RV45A-MABNR": "M-01"`, `"RV45A-KWMENG": "5"`, etc.<br>
+The columns are represented by their SAP technical name, e.g., `VBAP-POSNR` = column *Item*, `RV45A-MABNR` = column *Material*, `RV45A-KWMENG` = column *Order Quantity*, etc.
+
+{: .box-tip }
+**Tip:** You can look up the description of the SAP technical column names in the OpenAPI/Swagger definition, e.g., [Swagger Editor](https://editor.swagger.io/).
+
+
+### Run the Service
+1. Copy or download the OpenAPI/Swagger definition of the service in yunIO.
+2. Open the service in a tool that supports OpenAPI/Swagger definitions, e.g., [Swagger Inspector](https://inspector.swagger.io/). 
+3. Make sure to use the `POST` method when integrating the service. The `GET` method does not support table parameters.
+4. Open the request body of the service. All input parameters are listed in the request body.<br>
+5. Enter values for each column, e.g., `"VBAP-POSNR": "10"`, `"RV45A-MABNR": "M-01"`, `"RV45A-KWMENG": "5"`, etc.<br>
+The columns are represented by their SAP technical name, e.g., `VBAP-POSNR` = column *Item*, `RV45A-MABNR` = column *Material*, `RV45A-KWMENG` = column *Order Quantity*, etc.
+You can look up the description of the SAP technical column names in the OpenAPI/Swagger definition.
 
 ```
 {
@@ -98,10 +134,6 @@ ITEMS:
     ]
 }
 ```
-
-### Run the Service
-
-
 
 ******
 
