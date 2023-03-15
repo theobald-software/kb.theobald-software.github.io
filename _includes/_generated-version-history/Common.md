@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|[2.22.0 [L]](https://kb.theobald-software.com/release-notes/Common-2.22.0.html)|2023-03-15|General|Added ByteSerialization and ByteBufferManager classes([Release note](https://kb.theobald-software.com/release-notes/Common-2.22.0.html))|
 |2.21.15 [L]|2023-03-07|General|Increased the number of iterations for PBKDF2. Implemented constant time byte array comparison. Added test cases for constant time array comparison.|
 |2.21.14 [L]|2023-02-15|General|Logging cleanup & refactoring|
 |2.21.13 [L]|2023-01-31|General|Method for JSON serialization of empty array|
