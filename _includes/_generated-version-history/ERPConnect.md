@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|7.5.6 [L]|2023-03-15|General|Replaced the local byte serialization/deserialization on Ewkb with the ByteSerialization from Theobald.Common (introduced on 2.22.0)|
 |7.5.5 [L]|2023-02-18|SNC|Added SNCSettings.RunImpersonated|
 |7.5.4 [L]|2023-02-18|General|Added Global.SetCpicConnectTimeout()|
 |7.5.3 [L]|2023-02-10|General|Added doc strings to interface IR3Connection. Cleanup, corrections, and some see and seealso references added to comments on both IR3Connection and R3Connection|
