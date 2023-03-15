@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.39.10 [L]|2023-03-15|General|Replaced the local byte buffer handling for column encryption with the ByteBufferManager from Theobald.Common (introduced on 2.22.0) |
 |1.39.9 [L]|2023-03-10|TableCDC|Table CDC: Log table size can now be limited. Internal improvements.|
 |1.39.8 [L]|2023-03-08|BW Cube|Fix for column order changes in MDX mode when adding filter selections or selecting and deselecting a dimension.|
 |1.39.7 [L]|2023-03-07|BW Cube|Added Direct load button in cube look up window.|
