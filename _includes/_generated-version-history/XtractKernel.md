@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.5.1 [L]|2023-03-15|DeltaQ|Replaced the local byte serialization/deserialization on IpcChannel with the ByteSerialization from Theobald.Common (introduced on 2.22.0)|
 |5.5.0 [M]|2022-09-08|OHS|Removed OHS|
 |5.4.0 [M]|2022-09-08|Report|Removed Report|
 |5.3.0 [M]|2022-03-31|Table Join|Removed TableJoin|
