@@ -27,7 +27,7 @@ For more information on PSE, see [SAP Help: Creating PSEs and Maintaining the PS
 SSO with External ID uses an X.509 certificate & PSE to create a trust relationship between the SAP application server and the service account that runs Xtract Universal.
 This allows Xtract Universal to impersonate any SAP user.
 
-![sap-external-id](/img/contents/xu/sso-with-external-id.png){:class="img-responsive" width="750px"}
+![sap-external-id](/img/contents/xu/sso-with-external-id.png){:class="img-responsive" width="700px"}
 
 1. Users authenticate themselves against Xtract Universal via Active Directory (Kerberos) and request data from SAP.
 2. Xtract Universal opens an RFC connection via SNC and uses PSE & External ID for authentication.
@@ -66,7 +66,7 @@ Create a new SAP source system in your Xtract product to set up SSO with Externa
 10. Click **[OK]** to save your changes. 
 
 
-### Related Links
+#### Related Links
 - [Online Help: SAP Single-Sign-On](https://help.theobald-software.com/en/xtract-universal/advanced-techniques/sap-single-sign-on).<br>
 - [Online Help: Running the Xtract Universal Service under a Windows Service Account](https://help.theobald-software.com/en/xtract-universal/advanced-techniques/service-account)
 - [SAP Help: Creating PSEs and Maintaining the PSE Infrastructure](https://help.sap.com/doc/saphelp_nw73ehp1/7.31.19/en-us/59/6b653a0c52425fe10000000a114084/frameset.htm)
