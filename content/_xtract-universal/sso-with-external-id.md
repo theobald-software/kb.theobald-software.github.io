@@ -9,7 +9,6 @@ weight: 154
 This article shows how to set up Single Sign-On (SSO) with Secure Network Communication (SNC) and External ID.<br>
 *SSO with External ID* uses a Personal Security Environment (PSE) to create a trust relationship between the SAP application server and the service account that runs Xtract Universal.
 This allows Xtract Universal to impersonate any SAP user.<br>
-For more information on using SSO with Xtract Universal, see [Online Help: SAP Single-Sign-On](https://help.theobald-software.com/en/xtract-universal/advanced-techniques/sap-single-sign-on).<br>
 
 ### Requirements
 
@@ -27,10 +26,8 @@ For more information on PSE, see [SAP Help: Creating PSEs and Maintaining the PS
 
 SSO with External ID uses an X.509 certificate & PSE to create a trust relationship between the SAP application server and the service account that runs Xtract Universal.
 This allows Xtract Universal to impersonate any SAP user.
-<!---
-Xtract Universal first logs into SAP as a technical user and checks for an SNC mapping of the caller's Windows identity in SAP table USRACL.
-If the Windows user is found, Xtract Universal logs in as the mapped SAP user and performs the actual extraction.
---->
+
+![sap-external-id](/img/contents/xu/sso-with-external-id.png){:class="img-responsive" width="750px"}
 
 1. Users authenticate themselves against Xtract Universal via Active Directory (Kerberos) and request data from SAP.
 2. Xtract Universal opens an RFC connection via SNC and uses PSE & External ID for authentication.
@@ -46,10 +43,10 @@ If the Windows user is found, Xtract Universal logs in as the mapped SAP user an
 Use the following format: <br>`sapgenpse get_pse <additional_options> -p <PSE_Name> –r <cert_req_file_name> -x <PIN> <Distinguished_Name>`.<br>
 Place the certificate in the directory that the environment variable SECUDIR points to.
 2. Use SAP transaction [STRUST](https://help.sap.com/saphelp_ewm900/helpdata/en/4c/5bdb17f85640f1e10000000a42189c/frameset.htm) to add the certificate to the list of trusted certificates.
-3. Use SAP transaction SNC0 to create an access control list that allows RFC and external IDs for the Common Name (CN) of the certificate created in step 1.<br>
+3. Use SAP transaction SNC0 to create an access control list item that allows RFC and external IDs for the Common Name (CN) of the certificate created in step 1.<br>
 ![sap-external-id](/img/contents/sap-external-id.png){:class="img-responsive"}
 4. Provide a technical user (SAP user with security policy set to *Technical User*) for the initial login with Xtract Universal. 
-This user must have privileges to read table the SAP table USRACL via the function module RFC_READ_TABLE. 
+This user must have privileges to read the SAP table USRACL via the function module RFC_READ_TABLE. 
 
 ### Setup in Xtract Universal
 
@@ -72,3 +69,4 @@ Create a new SAP source system in your Xtract product to set up SSO with Externa
 ### Related Links
 - [Online Help: SAP Single-Sign-On](https://help.theobald-software.com/en/xtract-universal/advanced-techniques/sap-single-sign-on).<br>
 - [Online Help: Running the Xtract Universal Service under a Windows Service Account](https://help.theobald-software.com/en/xtract-universal/advanced-techniques/service-account)
+- [SAP Help: Creating PSEs and Maintaining the PSE Infrastructure](https://help.sap.com/doc/saphelp_nw73ehp1/7.31.19/en-us/59/6b653a0c52425fe10000000a114084/frameset.htm)
