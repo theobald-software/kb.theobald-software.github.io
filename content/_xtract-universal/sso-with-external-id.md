@@ -6,16 +6,21 @@ permalink: /:collection/:path
 weight: 154
 ---
 
-This article shows hoe to set up Single Sign-On (SSO) with Secure Network Communication (SNC) and External ID.
+This article shows how to set up Single Sign-On (SSO) with Secure Network Communication (SNC) and External ID.<br>
+*SSO with External ID* uses a Personal Security Environment (PSE) to create a trust relationship between the SAP application server and the service account that runs Xtract Universal.
+This allows Xtract Universal to impersonate any SAP user.<br>
+For more information on using SSO with Xtract Universal, see [Online Help: SAP Single-Sign-On](https://help.theobald-software.com/en/xtract-universal/advanced-techniques/sap-single-sign-on).<br>
 
 ### Requirements
 
-The usage of SSO with External ID requires:
+The usage of *SSO with External ID* requires:
 - The Xtract Universal service must run under a Windows AD Service account, see [Run an Xtract Universal Service under a Windows Service Account](https://help.theobald-software.com/en/xtract-universal/advanced-techniques/service-account).
 - Windows AD users must be mapped to SAP users in the SAP table USRACL, see [SAP Help: Mapping Windows Users to SAP Users for Kerberos SSO](https://help.sap.com/saphelp_ewm900/helpdata/en/44/0efeafb9920d1be10000000a114a6b/frameset.htm).
 - The SAP Cryptographic Library must be installed on your SAP system, see [SAP Note 1848999](https://launchpad.support.sap.com/#/notes/1848999).
 For more information, see [SAP Help: Downloading and Installing the SAP Cryptographic Library](https://help.sap.com/docs/SAP_IDENTITY_MANAGEMENT/4773a9ae1296411a9d5c24873a8d418c/3d4ece540ae64e30997498025e37f686.html?locale=en-US).
-- The environment variable SECUDIR must be set to the PSE directory of the service account that runs Xtract Universal.
+- The SECUDIR environment variable must be set to the PSE directory of the service account that runs Xtract Universal.
+For more information on PSE, see [SAP Help: Creating PSEs and Maintaining the PSE Infrastructure](https://help.sap.com/doc/saphelp_nw73ehp1/7.31.19/en-us/59/6b653a0c52425fe10000000a114084/frameset.htm).
+<!---For more information on environment variables, see [Microsoft Documentation: ]().--->
 - Access to the Xtract Universal Designer and the Xtract Universal server must be restricted to Windows AD users, see [Restrict Access to Windows AD Users (Kerberos Authentication)](https://help.theobald-software.com/en/xtract-universal/security/server-security#restrict-access-to-windows-ad-users-kerberos-authentication).<br>
 
 ### The Process
@@ -55,31 +60,15 @@ Create a new SAP source system in your Xtract product to set up SSO with Externa
 3. Open the tab *General* and enter the connection details of your SAP system. <br>
 ![SAP-Source-Details](/img/contents/xu/sap_source-details.png){:class="img-responsive"}
 4. Open the tab *Authentication* and activate the option **Secure Network Communications (SNC)**.<br>
-![sso-certificate-auth](/img/contents/sso-certificate-auth.png){:class="img-responsive"}
+![sso-certificate-auth](/img/contents/xu/sso-external-id-source.png){:class="img-responsive"}
 5. Enter the name of the SAP technical communication user in the field **User**, see step 4 in [Process](#process).
-6. Enter the complete path to the SAP cryptographic library in the field **SNC Library**, e.g. `C:\Program Files\SAP\FrontEnd\SecureLogin\lib\sapcrypto.dll`
+6. Enter the complete path to the SAP cryptographic library in the field **SNC Library**, e.g. `C:\PSE\sapcrypto.dll`
 7. Enter the SPN of the SAP service account in the field **SNC partner name**. Use the following notation: `p:[SPN]@[Domain-FQDN-Uppercase]`. 
 8. Enable the option **SSO - Log in as caller via External ID**.
 9. Click **[Test Connection]** to verify your connection settings.
 10. Click **[OK]** to save your changes. 
 
-<!---
-#### Server Settings in Xtract Universal
-
-The following configuration is required in Xtract Universal:
-
-1. Navigate to **[Server > Settings]** in the main menu of the Designer. The window "Server Settings" opens.
-2. Open the *Web Server* tab.
-3. Select **HTTPS - Restricted to AD users with Designer read access**.
-4. Open to the *Configuration Server* tab.
-5. Select **Restrict Designer access to the following users/groups**.
-6. Add the Windows AD users that are allowed to execute an extraction and assign access rights. Assign at least Read permission to the Windows AD users. 
-For more information on access management in Xtract Universal see [Online Help: Access Management](https://help.theobald-software.com/en/xtract-universal/security/access-management#server-settings). 
-7. Click **[OK]**. When propted, restart the server to save your changes.
-
-For more information on restricting access to Xtract Universal to Windows AD users, see [Online Help: Server Security](https://help.theobald-software.com/en/xtract-universal/security/server-security).
---->
 
 ### Related Links
-- [Online Help: X.509 certificate](https://help.theobald-software.com/en/xtract-universal/security/install-x.509-Certificate)
-- [Running the Xtract Universal Service under a Windows Service Account](https://help.theobald-software.com/en/xtract-universal/advanced-techniques/service-account).
+- [Online Help: SAP Single-Sign-On](https://help.theobald-software.com/en/xtract-universal/advanced-techniques/sap-single-sign-on).<br>
+- [Online Help: Running the Xtract Universal Service under a Windows Service Account](https://help.theobald-software.com/en/xtract-universal/advanced-techniques/service-account)

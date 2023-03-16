@@ -9,7 +9,7 @@ weight: 155
 This article describes the process of running extractions for [pull destinations](https://help.theobald-software.com/en/xtract-universal/destinations#pull-and-push-destinations) using Single-Sign-On (SSO) with SAP Logon-Ticket. <br>
 For more information on using SSO with Xtract Universal, refer to [Online Help: SAP Single-Sign-On](https://help.theobald-software.com/en/xtract-universal/advanced-techniques/sap-single-sign-on).
 
-### Prerequisites
+### Requirements
 
 - The XU server must be set up to use HTTPS, see [SSO with Kerberos SNC](https://kb.theobald-software.com/xtract-universal/sso-with-kerberos-snc). 
 - The Xtract Universal service must run under an [XU Service Account](https://help.theobald-software.com/en/xtract-universal/advanced-techniques/service-account).
@@ -40,7 +40,7 @@ The AS Java sends the SAP Logon Ticket to the XU server via HTTPS as the value o
 ******
 
 #### Related Links
-- [Setting Up an XU Service Account](https://help.theobald-software.com/en/xtract-universal/advanced-techniques/service-account).
+- [Setting Up an XU Service Account](https://help.theobald-software.com/en/xtract-universal/advanced-techniques/service-account)
 - [Kerberos and SAP NetWeaver AS for Java](https://help.sap.com/doc/saphelp_nw75/7.5.5/EN-US/4c/8a4d292e2849a8b7cbd229be5c94a5/frameset.htm)
 - [Using Logon Tickets with AS ABAP](https://help.sap.com/doc/saphelp_nw75/7.5.5/EN-US/d0/dc33c460a243929b7ec120f55af101/frameset.htm)
 - [Youtube-Tutorial: Kerberos-Based Single Sign-On to Application Server Java Unlisted](https://www.youtube.com/watch?v=GRIkarGsU5U)
