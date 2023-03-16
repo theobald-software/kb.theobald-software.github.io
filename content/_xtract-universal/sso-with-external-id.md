@@ -58,7 +58,7 @@ Create a new SAP source system in your Xtract product to set up SSO with Externa
 ![SAP-Source-Details](/img/contents/xu/sap_source-details.png){:class="img-responsive"}
 4. Open the tab *Authentication* and activate the option **Secure Network Communications (SNC)**.<br>
 ![sso-certificate-auth](/img/contents/xu/sso-external-id-source.png){:class="img-responsive"}
-5. Enter the name of the SAP technical communication user in the field **User**, see step 4 in [Process](#process).
+5. Enter the name of the SAP technical communication user in the field **User**, see step 4 in [Process](#the-process).
 6. Enter the complete path to the SAP cryptographic library in the field **SNC Library**, e.g. `C:\PSE\sapcrypto.dll`
 7. Enter the SPN of the SAP service account in the field **SNC partner name**. Use the following notation: `p:[SPN]@[Domain-FQDN-Uppercase]`. 
 8. Enable the option **SSO - Log in as caller via External ID**.
