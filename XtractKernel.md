@@ -1,5 +1,14 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.5.1 [L]|2023-03-15|DeltaQ|Replaced the local byte serialization/deserialization on IpcChannel with the ByteSerialization from Theobald.Common (introduced on 2.22.0)|
+|5.5.0 [M]|2022-09-08|OHS|Removed OHS|
+|5.4.0 [M]|2022-09-08|Report|Removed Report|
+|5.3.0 [M]|2022-03-31|Table Join|Removed TableJoin|
+|5.2.0 [M]|2022-02-17|BAPI|Removed BAPI extractor|
+|5.1.9 [L]|2021-12-01|General|Removed translations|
+|5.1.8 [L]|2021-09-14|DeltaQ|Server pool: Improvements for error handling|
+|5.1.7 [M]|2021-09-10|DeltaQ|Log RFC server registration errors to extraction log|
+|5.1.6 [M]|2021-09-10|DeltaQ|Aborting extraction if errors occur while sending request IDoc|
 |5.1.5 [L]|2021-05-04|Hierarchy|Fixed an issue where hierarchies in natural representation had no object name specified|
 |5.1.4 [L]|2020-11-23|OHS|Re-enabled NWRFC for OHS|
 |5.1.3 [M]|2020-11-09|DeltaQ|Incoming Info IDocs reset timeout now|
