@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|3.6.13 [L]|2023-03-21|General|Fixed a bug, where the WWW-Authenticate HTTP header would be sent anymore.|
 |3.6.12 [M]|2023-03-09|General|Transaction: Fixed a bug that caused errors on special compression scenarios|
 |[3.6.11 [M]](https://kb.theobald-software.com/release-notes/TheobaldServer-3.6.11.html)|2023-03-07|General|Custom authentication related security fixes and improvements.([Release note](https://kb.theobald-software.com/release-notes/TheobaldServer-3.6.11.html))|
 |3.6.10 [L]|2023-03-06|General|Fix a bug where the HTTP server would not attach CORS headers on failed authentication attempts. Rework the handling of parameters in the new runtime.|
