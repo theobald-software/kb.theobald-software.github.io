@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.14.1 [L]|2023-03-21|Theobald.Server|Fixed a bug where the browser would not ask for credentials anymore when running a service.|
 |1.14.0 [M]|2023-03-17|Designer|Function: Added support for constant values and parameter renaming (experimental)|
 |[1.13.1 [M]](https://kb.theobald-software.com/release-notes/Yunio-1.13.1.html)|2023-03-07|Theobald.Server|Custom authentication related security fixes and improvements.([Release note](https://kb.theobald-software.com/release-notes/Yunio-1.13.1.html))|
 |[1.13.0 [M]](https://kb.theobald-software.com/release-notes/Yunio-1.13.0.html)|2023-03-07|General|This release adds full support for the Transaction component. It is now generally available and no longer in Preview.([Release note](https://kb.theobald-software.com/release-notes/Yunio-1.13.0.html))|
