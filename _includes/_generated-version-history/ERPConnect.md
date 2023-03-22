@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|7.5.8 [M]|2023-03-22|RFCServer|Classic RFC: Fixed a bug that caused import parameters in server and callback functions to be filled with garbage values when the application server did not supply them in the call |
 |7.5.7 [M]|2023-03-21|RFCServer|Classic RFC: Fixed a bug that caused an AccessViolationException when adding rows to a table that is defined in the server function, but not actually part of the call initiated by the SAP application server|
 |7.5.6 [L]|2023-03-15|General|Replaced the local byte serialization/deserialization on Ewkb with the ByteSerialization from Theobald.Common (introduced on 2.22.0)|
 |7.5.5 [L]|2023-02-18|SNC|Added SNCSettings.RunImpersonated|
