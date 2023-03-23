@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.17.3 [L]|2023-03-23|General|The setup can now be run without admin privileges to install for user-only Alteryx instances|
 |1.17.2 [L]|2023-03-06|General|New EULA|
 |1.17.1 [L]|2023-02-23|BW Cube|Added refresh metadata button and fixed an issue where some property texts may not be displayed in MDX extractions created with Xtract for Alteryx versions older than 1.15.0.|
 |[1.17.0 [L]](https://kb.theobald-software.com/release-notes/XtractForAlteryx-1.17.0.html)|2023-01-04|Hierarchy|Improved Hierarchy Extractor. Now full support for Links, Intervals, and all variants of time dependent Hierarchy structure. Performance tested for Hierarchies with up to 1 million rows.([Release note](https://kb.theobald-software.com/release-notes/XtractForAlteryx-1.17.0.html))|
