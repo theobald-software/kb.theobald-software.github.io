@@ -1,7 +1,7 @@
 ---
 ref: xu-getting-started-04
 layout: page
-title: Load an Extraction into a Microsoft SQL Server Database
+title: Write extracted Data into a Microsoft SQL Server Database
 description: Load an Extraction into Microsoft SQL Server
 permalink: /:collection/:path
 weight: 97
