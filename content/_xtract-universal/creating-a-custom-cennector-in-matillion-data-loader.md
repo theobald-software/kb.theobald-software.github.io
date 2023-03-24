@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Seamless SAP Integration with Matillion Data Loader Using Xtract Universal 
+title: Seamless SAP Integration with Matillion Data Loader and Xtract Universal 
 description: Creating a custom Connector in Matillion Data Loader 
 permalink: /:collection/:path
 weight: 23
