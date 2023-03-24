@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.39.14 [L]|2023-03-24|TableCDC|Reduced max value for log table size limit to 100.000 rows.|
 |1.39.13 [M]|2023-03-24|BAPI|Fixed a bug that caused errors with obsolete LIKE typed parameters|
 |1.39.12 [L]|2023-03-21|TableCDC|The size limit feature for the log table is now obligatory. Value can range from 1 to 10.000.000 rows.|
 |1.39.11 [L]|2023-03-20|BW Cube|Improved metadata load and refresh in the BICS component.|
