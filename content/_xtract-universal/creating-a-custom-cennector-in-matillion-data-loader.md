@@ -3,7 +3,7 @@ layout: page
 title: Seamless SAP Integration with Matillion Data Loader and Xtract Universal 
 description: Creating a custom Connector in Matillion Data Loader 
 permalink: /:collection/:path
-weight: 23
+weight: 135
 ---
 
 This article shows how to create a custom connector in Matillion Data Loader that loads SAP data via Xtract Universal into Snowflake.<br>
