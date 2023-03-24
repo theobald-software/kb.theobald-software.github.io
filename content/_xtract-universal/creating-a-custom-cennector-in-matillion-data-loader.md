@@ -50,6 +50,9 @@ This example scenario only extracts the KNA1 columns *ORT01*, *NAME1*, *LAND1* a
 
 The custom connector can now be used in a Matillion Data Loader pipeline.
 
+{: .box-note}
+**Note:** The Matillion Custom Connector must be set to the same region as Matillion Data Loader, e.g., US (N. Virginia).
+
 ### Create a Pipeline in Matillion Data Loader
 
 Create a pipeline that triggers the extraction and writes the data to a destination, see [Matillion Documentation: Creating a pipeline with custom connectors](https://documentation.matillion.com/mcc/docs/custom-connector-batch-pipeline).
@@ -57,27 +60,32 @@ Create a pipeline that triggers the extraction and writes the data to a destinat
 1. Open your Matillion Data Loader dashboard under [https://dataloader.matillion.com/dashboard](https://dataloader.matillion.com/dashboard).
 2. Click **[Add Pipeline]** to create a new pipeline (1).
 ![matillion-pipelines](/img/contents/xu/matillion-pipelines.png){:class="img-responsive"}
-3. Open the *Custom Connectors* tap to select the custom connector, that contains the connection settings for Xtract Universal.
+3. Open the *Custom Connectors* tap to select the custom connector (2), that contains the connection settings for Xtract Universal. 
 ![matillion-source](/img/contents/xu/matillion-source.png){:class="img-responsive"}
-4. Select your custom connector and use the arrow buttons to add the custom connector to the list **Endpoints to extract and load**.
-5. Click **[Continue with 1 endpoint]** to continue to the configuration of the endpoint.<br>
+4. Select the endpoint that calls the Xtract Universal extraction and use the arrow buttons to add the endpoint to the list **Endpoints to extract and load**.
+Note that a custom connector can have multiple endpoints.
+5. Click **[Continue with x endpoint]** (3).<br>
 ![matillion-endpoints](/img/contents/xu/matillion-endpoint.png){:class="img-responsive"}
-6. Configure... enter name of extraction?<br>
+6. In the *General* tab enter a name for the target table (4) under **Data warehouse table name**.<br>
 ![matillion-configure-endpoints](/img/contents/xu/matillion-configure-endpoint.png){:class="img-responsive"}
-7. Open the *Keys* tab and select the key properties, e.g., *KUNNR*.
-8. Click **[Continue]**.
-<!--- ![matillion-configure-endpoints-key](/img/contents/xu/matillion-configure-endpoint-key.png){:class="img-responsive"} -->
-9. Select the destination where the data is written to, e.g., snowflake.<br>
+7. Open the *Authentication* tab and enter the authentication details for the Xtract Universal webservice.
+8. Open the *Behaviour* tab and select the elements you want to include as columns in the target table. By default, all elements are selected.
+9. Optional: If your endpoint uses parameters, open the *Parameters* tab to define the parameters.
+10. Open the *Keys* tab and select a key column that is used to match existing data and prevent duplicates, e.g., *KUNNR*.
+11. Click **[Continue]** (5).<br>
+![matillion-configure-endpoints-key](/img/contents/xu/matillion-configure-endpoint-key.png){:class="img-responsive"}
+12. Select the destination to which the data is written to, e.g., [Connect to Snowflake](https://documentation.matillion.com/mdl/docs/connect-to-snowflake) (6).<br>
 ![matillion-destination](/img/contents/xu/matillion-destination.png){:class="img-responsive"}
-10. Enter the ... where the extracted data is written to.
-11. Click **[Continue]**.
-12. Enter a name for the pipeline.<br>
+13. Configure the destination, see [Matillion Documentation: Configure Snowflake](https://documentation.matillion.com/mdl/docs/connect-to-snowflake#configure-snowflake).
+14. Click **[Continue]**.
+15. Enter a name for the pipeline (7).<br>
 ![matillion-frequency](/img/contents/xu/matillion-frequency.png){:class="img-responsive"}
-13. Select when the pipeline is to be executed.
-13. Click **[Create pipeline]**. The pipeline is now listed in your dashboard.<br>
-![matillion-pipeline-done](/img/contents/xu/matillion-pipeline-done.png){:class="img-responsive"}
+16. Select at which interval pipeline is to be executed (8). The pipeline first runs after it is created and then continues with the specified frequency.
+17. Click **[Create pipeline]** to create and run the pipeline (9). <br>
 
-Run pipeline and check if the data was uploaded to the destination.
+The pipeline is now listed in your dashboard.
+Check if the data was successfully uploaded to the destination.<br>
+![matillion-pipeline-done](/img/contents/xu/matillion-pipeline-done.png){:class="img-responsive"}
 
 #### Related Links
 
