@@ -6,7 +6,7 @@ permalink: /:collection/:path
 weight: 20
 ---
 
-The following section describes a common problem that occurs when pushing SAP data into an SQL server database when collation is not set case-sensitive.
+This article describes a common problem that occurs when pushing SAP data into an SQL server database when collation is not set case-sensitive.
 The given example shows how to customize the drop & create SQL server statement within Xtract Universal destination settings.
 
 ### Collation SQL Server
@@ -45,8 +45,8 @@ _AI | accent-insensitive
 
 We want to extract the SAP table *MAKT* from ECC:
 
-1. Create an table extraction as discribed in [Online Help](https://help.theobald-software.com/en/xtract-universal/table) article.
-   - The look-up process dispends the corresponding metadata from our SAP object *MAKT*. 
+1. Create an table extraction as described in [Online Help](https://help.theobald-software.com/en/xtract-universal/table) article.
+   - The look-up process loads the corresponding metadata from our SAP object *MAKT*. 
 ![default_collation_statement](/img/contents/makt_metadata.png){:class="img-responsive"}
    - Composite primary key consists of the table fields: *MANDT*, *MATNR*, *SPRAS* with a unique constraint.
    - SAP field *SPRAS* is of data type *LANG* with a length *1*.
