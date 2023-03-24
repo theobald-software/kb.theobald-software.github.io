@@ -22,7 +22,7 @@ The following example scenario extracts the SAP table KNA1 (General Data in Cust
 ![KNA1](/img/contents/xu/kna1.png){:class="img-responsive"}
 2. Assign the `http-json` destination to the extraction, see [Online Help: Assigning Destinations](https://help.theobald-software.com/en/xtract-universal/getting-started/write-data-to-destination#assigning-destinations-to-extractions).
 
-### Create a Custom Connector in Matillion Data Loader
+### Create a Custom Connector in Matillion
 
 To extract SAP data via Xtract Universal you must define a custom connector that contains the connection details of Xtract Universal, see [Matillion Documentation: Matillion Custom Connector Overview](https://documentation.matillion.com/mcc/docs/custom-connector-overview).
 
