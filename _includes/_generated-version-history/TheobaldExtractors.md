@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.40.1 [L]|2023-03-27|BW Cube|BICS mode: Fixed dimension filter members not loading and filters with runtime parameter values not being applied.|
 |1.40.0 [M]|2023-03-24|BW Cube|BICS: Row limit for preview|
 |1.39.14 [L]|2023-03-24|TableCDC|Reduced max value for log table size limit to 100.000 rows.|
 |1.39.13 [M]|2023-03-24|BAPI|Fixed a bug that caused errors with obsolete LIKE typed parameters|
