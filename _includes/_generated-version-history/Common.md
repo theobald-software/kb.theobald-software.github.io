@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.23.0 [L]|2023-03-29|Licensing|Internal changes due to changed licensing model for TableCdc component.|
 |2.22.1 [L]|2023-03-23|General|VC++ 2013 setup was replaced by directly used DLLs (msvcp120.dll and msvcr120.dll)|
 |[2.22.0 [L]](https://kb.theobald-software.com/release-notes/Common-2.22.0.html)|2023-03-15|General|Added ByteSerialization and ByteBufferManager classes([Release note](https://kb.theobald-software.com/release-notes/Common-2.22.0.html))|
 |2.21.15 [L]|2023-03-07|General|Increased the number of iterations for PBKDF2. Implemented constant time byte array comparison. Added test cases for constant time array comparison.|
