@@ -6,11 +6,14 @@ permalink: /:collection/:path
 weight: 105
 ---
 
-This article showcases how to operate Xtract Universal with load balancing.
+This article shows how to operate Xtract Universal with load balancing.<br>
+In this context, load balancing refers to distributing the network traffic caused by Xtract Universal to multiple Windows servers.
 
 ### About Load Balancing
 
-A load balancer is a tool for managing traffic.
+In today's highly interconnected world, a load balancer is a crucial tool for managing traffic effectively. 
+
+
 The process of load balancing involves distributing network traffic across multiple servers to avoid server overloads. 
 When distributing it is necessary to use a load balancer between different Windows servers running Xtract Universal.
 
@@ -25,17 +28,12 @@ This can be important for businesses that experience sudden spikes in traffic.
 This makes it easier to monitor your network, troubleshoot issues, and make necessary adjustments.
 - Parallel Processing: 
 
-(use cases involve parallel processing, ...)
-In today's highly interconnected world, managing traffic effectively is essential, and a load balancer is a crucial tool for achieving this. 
-The process of load balancing involves distributing network traffic across multiple servers to prevent any one server, such as those running Xtract Universal on Windows servers, from becoming overloaded. 
-As a result, it's necessary to use a load balancer between different Windows servers running Xtract Universal.
-
 
 ### Prerequisites
 
 - Every Xtract Universal servers needs a server license, see [Online Help: Licensing](https://help.theobald-software.com/en/xtract-universal/introduction/license).
 - All Xtract Universal installations must share the same configuration folder, e.g. by using [git version control]([Deploying Extractions Using Git Version Control](https://kb.theobald-software.com/xtract-universal/deploying-extractions-using-Git-version-control)). 
-The configuration folder contains the settings for the destinations, extractions, sources, server and users.
+The configuration folder contains the settings for the destinations, extractions, sources, server and users. The folder can be found in the installation directory of Xtract Universal, e.g., `C:\Program Files\XtractUniversal\config`.
 - All Xtract Universal installations must use the same software version to avoid any version compatibility issues.
 
 ### The Process
