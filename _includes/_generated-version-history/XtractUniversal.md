@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.22.1 [L]|2023-03-31|Setup|Setup now checks if there are any running processes and offers option to abort setup.|
 |5.22.0 [H]|2023-03-29|TableCDC|Table CDC is now generally available.|
 |[5.21.17 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-5.21.17.html)|2023-03-23|General|Fixed Kerberos Authentication issue in Power BI Report Server plugin for Report Server caused by connection pooling of net framework([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-5.21.17.html))|
 |5.21.16 [L]|2023-03-13|Designer|Fix for server name validation on connect window|
