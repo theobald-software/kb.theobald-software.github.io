@@ -26,7 +26,6 @@ This makes it easier to monitor your network, troubleshoot issues, and make nece
 - Parallel Processing: A load balancer allows running multiple extractions at the same time on different servers. 
 This increases the amount of extractions that can be run in parallel, see [Online Help: Execute and Automate Extractions - Running parallel Extractions](https://help.theobald-software.com/en/xtract-universal/execute-and-automate-extractions#running-parallel-extractions)
 
-
 ### Prerequisites
 
 - Every Xtract Universal servers needs a server license, see [Online Help: Licensing](https://help.theobald-software.com/en/xtract-universal/introduction/license).
