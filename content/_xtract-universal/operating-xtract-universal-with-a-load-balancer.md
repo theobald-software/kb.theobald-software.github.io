@@ -7,15 +7,12 @@ weight: 105
 ---
 
 This article shows how to operate Xtract Universal with load balancing.<br>
-In this context, load balancing refers to distributing the network traffic caused by Xtract Universal to multiple Windows servers.
+In this context, load balancing means to distribute the network traffic across multiple Windows servers to avoid server overloads. 
 
 ### About Load Balancing
 
 In today's highly interconnected world, a load balancer is a crucial tool for managing traffic effectively. 
-
-
-The process of load balancing involves distributing network traffic across multiple servers to avoid server overloads. 
-When distributing it is necessary to use a load balancer between different Windows servers running Xtract Universal.
+When distributing network traffic caused by Xtract Universal it is necessary to use a load balancer between different Windows servers that run Xtract Universal.
 
 Typical use cases for load balancing include:
 - Improved Performance: By distributing network traffic across multiple Xtract Universal servers, a load balancer can significantly improve the performance of your network. 
@@ -24,9 +21,10 @@ This can be especially important for high-traffic applications that require fast
 This helps to prevent downtime and ensures that your network is always available.
 - Scalability: A load balancer can also help improve the scalability of your network by allowing you to easily add or remove Xtract Universal servers as needed. 
 This can be important for businesses that experience sudden spikes in traffic.
-- Centralized Management: A Load Balancer allows you to manage multiple servers from a single location. 
+- Centralized Management: A load balancer allows you to manage multiple servers from a single location. 
 This makes it easier to monitor your network, troubleshoot issues, and make necessary adjustments.
-- Parallel Processing: 
+- Parallel Processing: A load balancer allows running multiple extractions at the same time on different servers. 
+This increases the amount of extractions that can be run in parallel, see [Online Help: Execute and Automate Extractions - Running parallel Extractions](https://help.theobald-software.com/en/xtract-universal/execute-and-automate-extractions#running-parallel-extractions)
 
 
 ### Prerequisites
@@ -38,14 +36,17 @@ The configuration folder contains the settings for the destinations, extractions
 
 ### The Process
 
-When a web request comes to the load balancer in a setup with a load balancer and two Xtract Universal servers, here's what happens:
-1.	The load balancer is the entry point for all incoming web requests, so it's the first component to receive the request.
-2.	The load balancer uses a predefined algorithm (such as round-robin, least connections, or IP hash) to select the Xtract Universal server to handle the incoming web request.
-3.	Once the load balancer has determined which server to forward the request to, it forwards the request to that Xtract Universal server.
-4.	The selected Xtract Universal server processes the incoming request and sends the response back to the load balancer.
-5.	The load balancer receives the response from the selected server and forwards it back to the client who initiated the request.
-6.	For subsequent web requests, the load balancer repeats this process of selecting a Xtract Universal server to handle the request and forwarding it to that server for processing.
+A load balancer setup with two Xtract Universal servers uses the following process when processing requests:
+<!--- Sending a request to a load balancer setup with two Xtract Universal servers triggers the following process: -->
 
+1. A client sends a web request to the load balancer. The load balancer is the entry point for all incoming web requests, so it's the first component to receive the request.
+2. The load balancer uses a predefined algorithm (e.g., round-robin, least connections, or IP hash) to select the Xtract Universal server to handle the incoming web request.
+3. The load balancer forwards the request to the selected Xtract Universal server.
+4. The selected Xtract Universal server processes the incoming request and sends the response back to the load balancer.
+5. The load balancer receives the response from the selected server and forwards the response to the client.
+6. For subsequent web requests, the load balancer repeats this process.
+
+![Load-Balancer](/img/contents/xu/load-balancer.png){:class="img-responsive"}
 
 #### Related Links:
 - [Deploying Extractions Using Git Version Control](https://kb.theobald-software.com/xtract-universal/deploying-extractions-using-Git-version-control)
