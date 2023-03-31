@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.12.1 [L]|2023-03-31|Setup|Setup now checks if there are any running processes and offers option to abort setup.|
 |5.12.0 [H]|2023-03-29|TableCDC|Table CDC is now generally available.|
 |5.11.7 [L]|2023-03-10|TableCDC|Table CDC: Log table size can now be limited.|
 |5.11.6 [L]|2023-03-08|BW Cube|Fix for column order changes in MDX mode when adding filter selections or selecting and deselecting a dimension.|
