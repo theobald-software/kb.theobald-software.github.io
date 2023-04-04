@@ -29,8 +29,8 @@ This increases the amount of extractions that can be run in parallel, see [Onlin
 ### Prerequisites
 
 - Every Xtract Universal servers needs a server license, see [Online Help: Licensing](https://help.theobald-software.com/en/xtract-universal/introduction/license).
-- All Xtract Universal installations must share the same configuration folder, e.g. by using [git version control]([Deploying Extractions Using Git Version Control](https://kb.theobald-software.com/xtract-universal/deploying-extractions-using-Git-version-control)). 
-The configuration folder contains the settings for the destinations, extractions, sources, server and users. The folder can be found in the installation directory of Xtract Universal, e.g., `C:\Program Files\XtractUniversal\config`.
+- All Xtract Universal installations must share the same configuration folder, e.g. by using [git version control](https://kb.theobald-software.com/xtract-universal/deploying-extractions-using-Git-version-control). 
+The configuration folder contains the settings for the destinations, extractions, sources, server and users. The folder is located in the installation directory of Xtract Universal, e.g., `C:\Program Files\XtractUniversal\config`.
 - All Xtract Universal installations must use the same software version to avoid any version compatibility issues.
 
 ### The Process
@@ -45,7 +45,7 @@ A load balancer setup with two Xtract Universal servers uses the following proce
 5. The load balancer receives the response from the selected server and forwards the response to the client.
 6. For subsequent web requests, the load balancer repeats this process.
 
-![Load-Balancer](/img/contents/xu/load-balancer.png){:class="img-responsive"}
+![Load-Balancer](/img/contents/xu/load-balancer.png){:class="img-responsive" width="700px"}
 
 #### Related Links:
 - [Deploying Extractions Using Git Version Control](https://kb.theobald-software.com/xtract-universal/deploying-extractions-using-Git-version-control)
