@@ -1,6 +1,7 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
-|1.40.3 [L]|2023-03-31|Report|QuickGet with Variants|
+|1.40.4 [L]|2023-04-04|BW Cube|In BICS mode it is now possible to deselect dimensions that are defined on rows in a query extraction.|
+|1.40.3 [L]|2023-03-31|Report|Report improvement for coming feature in yunIO|
 |1.40.2 [L]|2023-03-29|TableCDC|Fixed a bug where filtering for columns based on name or description was not possible|
 |1.40.1 [L]|2023-03-27|BW Cube|BICS mode: Fixed dimension filter members not loading and filters with runtime parameter values not being applied.|
 |1.40.0 [M]|2023-03-24|BW Cube|BICS: Row limit for preview|
