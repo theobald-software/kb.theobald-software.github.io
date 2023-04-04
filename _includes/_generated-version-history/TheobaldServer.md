@@ -1,6 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
-|3.6.15 [L]|2023-03-31|General|Rpc report variants|
+|3.6.15 [L]|2023-03-31|General|Report improvement for coming feature in yunIO|
 |3.6.14 [H]|2023-03-23|General|Security fix: Negotiate authentication is required for all requests instead of only for the first request of each TCP connection|
 |3.6.13 [L]|2023-03-21|General|Fixed a bug, where the WWW-Authenticate HTTP header would be sent anymore.|
 |3.6.12 [M]|2023-03-09|General|Transaction: Fixed a bug that caused errors on special compression scenarios|
