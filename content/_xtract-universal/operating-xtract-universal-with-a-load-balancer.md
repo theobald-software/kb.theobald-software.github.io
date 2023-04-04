@@ -29,8 +29,10 @@ This increases the amount of extractions that can be run in parallel, see [Onlin
 ### Prerequisites
 
 - Every Xtract Universal servers needs a server license, see [Online Help: Licensing](https://help.theobald-software.com/en/xtract-universal/introduction/license).
-- All Xtract Universal installations must share the same configuration folder, e.g. by using [git version control](https://kb.theobald-software.com/xtract-universal/deploying-extractions-using-Git-version-control). 
-The configuration folder contains the settings for the destinations, extractions, sources, server and users. The folder is located in the installation directory of Xtract Universal, e.g., `C:\Program Files\XtractUniversal\config`.
+- All Xtract Universal servers must share the same configuration folder, e.g. by mapping the configuration folder to an external shared storage. 
+The configuration folder contains the settings for the destinations, extractions, sources, server and users.
+The folder is located in the installation directory of Xtract Universal, e.g., `C:\Program Files\XtractUniversal\config`.
+For versioning of the configuration folder you can use [git version control](https://kb.theobald-software.com/xtract-universal/deploying-extractions-using-Git-version-control).
 - All Xtract Universal installations must use the same software version to avoid any version compatibility issues.
 
 ### The Process
@@ -46,6 +48,12 @@ A load balancer setup with two Xtract Universal servers uses the following proce
 6. For subsequent web requests, the load balancer repeats this process.
 
 ![Load-Balancer](/img/contents/xu/load-balancer.png){:class="img-responsive" width="700px"}
+
+This setting can also be configured to act as Active / Standby servers. <br>
+This means you have multiple servers with identical configurations and applications where only one server is active, while the others remain passive or on standby until a failover event occurs.
+
+The load balancer forwards incoming requests to the active server. If the active server fails, the load balancer will automatically switch to one of the passive servers.
+The goal is to provide redundancy and ensure high availability and reliability of critical applications and services.
 
 #### Related Links:
 - [Deploying Extractions Using Git Version Control](https://kb.theobald-software.com/xtract-universal/deploying-extractions-using-Git-version-control)
