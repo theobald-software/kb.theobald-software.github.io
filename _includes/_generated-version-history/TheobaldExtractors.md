@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.41.1 [L]|2023-04-06|BW Cube|Dimensions are sorted alphabetically descending by description text in GUI|
 |1.41.0 [L]|2023-04-06|General|Added surrogate key result table|
 |1.40.5 [L]|2023-04-05|BW Cube|Fix in BICS mode for possible NullReferenceException during preview and extraction run|
 |1.40.4 [L]|2023-04-04|BW Cube|In BICS mode it is now possible to deselect dimensions that are defined on rows in a query extraction.|
