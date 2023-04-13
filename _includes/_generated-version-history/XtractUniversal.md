@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.23.2 [L]|2023-04-13|Destinations|Fix for missing type handling on Snowflake destination (would crash with surrogate key)|
 |[5.23.1 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-5.23.1.html)|2023-04-12|Destinations|Tableau destination now uses personal access tokens for authentication on Tableau Server/Cloud([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-5.23.1.html))|
 |5.23.0 [L]|2023-04-06|General|Added surrogate key feature|
 |5.22.1 [L]|2023-03-31|Setup|Setup now checks if there are any running processes and offers option to abort setup.|
