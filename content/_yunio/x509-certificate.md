@@ -19,7 +19,7 @@ There are two approaches for creating an X.509 certificate:
 {: .box-note }
 **Note:** On test environments you can use a self-signed certificate. For production environment it is recommended to use a certificate released by an (internal) certificate authority (CA). 
 
-### Create X.509 Certificate
+### Create an X.509 Certificate
 
 Have a TLS certificate issued by your IT network team considering the following points:
  
