@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|7.1.5 [L]|2023-04-17|BAPI|Connection managers can now be changed using the tool editor GUI|
 |7.1.4 [L]|2023-03-31|Setup|Setup now checks if there are any running processes and offers option to abort setup.|
 |7.1.3 [L]|2023-03-07|BW Cube|Fixed a bug where Cube extractions might fail because of a FormatException.|
 |7.1.2 [L]|2023-03-06|General|New EULA|
