@@ -8,7 +8,7 @@ progressstate: 25
 ---
 
 This article shows how to install an X.509 certificate for Transport encryption.<br>
-The installation of an X.509 certificate is required to use Transport Layer Security (TLS) and secure authentication with yunIO.
+The installation of an X.509 certificate is required to use [Transport Layer Security (TLS)](https://learn.microsoft.com/en-us/windows/win32/secauthn/transport-layer-security-protocol) and secure authentication with yunIO.
 
 ### About X.509 Certificates 
 
