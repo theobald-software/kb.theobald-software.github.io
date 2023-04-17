@@ -2,11 +2,8 @@
 layout: page
 title: yunIO Networking Scenarios
 description: Data Flow between Service Caller and SAP
-product: xtract-universal
-parent: xtract-universal
 permalink: /:collection/:path
 weight: 95
-lang: en_GB
 progressstate: 25
 ---
 
