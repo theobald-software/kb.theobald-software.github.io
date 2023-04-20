@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.23.3 [L]|2023-04-20|Designer|Added hotkey (F1) to open online help of current window|
 |5.23.2 [L]|2023-04-13|Destinations|Fix for missing type handling on Snowflake destination (would crash with surrogate key)|
 |[5.23.1 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-5.23.1.html)|2023-04-12|Destinations|Tableau destination now uses personal access tokens for authentication on Tableau Server/Cloud([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-5.23.1.html))|
 |5.23.0 [L]|2023-04-06|General|Added surrogate key feature|
