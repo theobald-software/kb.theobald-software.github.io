@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.41.4 [L]|2023-04-20|General|Fix metadata of decimal float as packed number|
 |1.41.3 [L]|2023-04-13|Report|Separate Column Detection step for yunIO Report|
 |1.41.2 [L]|2023-04-11|BW Cube|BICS: Removed redundant characteristics id serialization|
 |1.41.1 [L]|2023-04-06|BW Cube|Dimensions are sorted alphabetically descending by description text in GUI|
