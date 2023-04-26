@@ -53,10 +53,10 @@ content:
   sidemenu-return-to-section: "Back to overview for "
   sidebar-right-title: "On this page"
   search-no-results: "We didn't find any results for the search: "
-  search-title: "Search the Knowledg Base"
+  search-title: "Search the Knowledge Base"
   search-results: "Results"
   search-box-text: "Search..."
-  section-page-default-explanation: "The following knowledge articles are in this section."
+  section-page-default-explanation: "The following knowledge base articles are in this section."
   news-overview-page-default-explanation: "All new articles can be found here."
 
 ########## SECTION 3 - COLLECTION CONFIGURATIONS ##########
@@ -81,30 +81,34 @@ collections:
     output: true
     name: 'Xtract Universal'
     weight: 4
+  xtract-for-alteryx:
+    output: true
+    name: 'Xtract for Alteryx'
+    weight: 5
   yunio:
     output: true
     name: 'yunIO'
-    weight: 5
+    weight: 6
   board-connector:
     output: true
     name: 'BOARD Connector'
-    weight: 6
+    weight: 7
   erpconnect-general:
     output: true
     name: 'ERPConnect - General'
-    weight: 7
+    weight: 8
   erpconnect-samples:
     output: true
     name: 'ERPConnect - Samples'
-    weight: 8
+    weight: 9
   erpconnect-services:
     output: true
     name: 'ERPConnect Services'
-    weight: 9
+    weight: 10
   version-history:
     output: true
     name: 'Version History'
-    weight: 10
+    weight: 11
   posts:
     output: true
 
