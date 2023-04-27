@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.15.0 [M]|2023-04-27|Gateway|Improved handling of network failures for AzureRelay|
 |1.14.4 [L]|2023-04-15|Designer|Preview (yet disabled) for report service type with constant input values.|
 |1.14.3 [L]|2023-03-31|General|Setup now checks if there are any running processes and offers option to abort setup.|
 |1.14.2 [M]|2023-03-21|Designer|Function: Fixes & improvements for lists|
