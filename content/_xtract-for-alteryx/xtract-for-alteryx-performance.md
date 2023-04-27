@@ -50,7 +50,7 @@ This makes the extraction faster and more efficient, because less data needs to 
 **Tip:** Table and Report extractions offer the option to run as background jobs in the SAP system. 
 This means that the user can continue to work on the same machine while the extraction is run in the background.
 
-### Example Extraction
+### Example 
 
 The following example workflow finishes within 7.2 seconds:<br>
 
