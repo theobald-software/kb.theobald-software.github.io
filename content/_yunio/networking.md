@@ -42,9 +42,9 @@ If that is not possible, requests to the yunIO server can be made from untrusted
 ### Direct Connection
 
 A direct connection can be established, if firewall rules allow incoming requests from the caller's network to the yunIO/SAP network. 
-HTTPS should always be enabled for direct connections to protect the confidentiality and integrity of the communication.
+HTTPS should always be enabled for direct connections to protect the confidentiality and integrity of the communication, see [yunIO Server Settings: Transport Layer Security](https://help.theobald-software.com/en/yunio/server-settings#transport-layer-security).
+Note that the ports for service calls and for accessing the designer must be open, see [yunIO Server Settings: Services, Designer and WebSockets](https://help.theobald-software.com/en/yunio/server-settings#services-designer-and-websockets).
 For callers in cloud environments, it might not be possible to restrict requests to the yunIO server to trusted origins through firewall rules.
-
 
 1. The caller sends the request directly to the yunIO server via HTTPS.
 2. The yunIO server communicates with SAP. The response is sent back to the caller. <br>
@@ -80,12 +80,13 @@ c) The request is forwarded to the yunIO server.
 
 ### Microsoft On-Premises Data Gateway
 If the caller is one of the cloud services that is supported by the [on-premises data gateway](https://docs.microsoft.com/en-gb/data-integration/gateway/service-gateway-onprem), requests to the yunIO server can be forwarded to the yunIO server through that gateway.
-The yunIO server can be protected from requests from untrusted sources using connection roles of the on-premises data gateway.
-Make sure that the gateway and power platform region settings are identical, see [Check if the gateway is in the right region](https://docs.microsoft.com/en-gb/troubleshoot/power-platform/power-automate/check-if-gateway-is-the-right-region).
+The yunIO server can be protected from requests from untrusted sources using connection roles of the on-premises data gateway.<br>
+Make sure that:
+- the connectivity requirements from Microsoft are met, see [Adjust communication settings for the on-premises data gateway](https://learn.microsoft.com/en-us/data-integration/gateway/service-gateway-communication).
+- the gateway and power platform region settings are identical, see [Check if the gateway is in the right region](https://docs.microsoft.com/en-gb/troubleshoot/power-platform/power-automate/check-if-gateway-is-the-right-region).
 
 In this scenario it is not necessary to change firewall rules of the yunIO/SAP network to allow incoming requests from other networks. 
 Only outgoing requests from the yunIO/SAP network to Azure must be allowed.
-
 
 1. The on-premises data gateway connects from yunIO/SAP network to Azure, establishes the secure tunnel.
 2. a) The caller makes a request to the yunIO server via gateway resource.<br>
