@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|[5.24.0 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-5.24.0.html)|2023-04-27|Hierarchy|New Hierarchy Extractor - POSSIBLE BREAKING CHANGES for Hierarchy extractions([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-5.24.0.html))|
 |5.23.4 [L]|2023-04-26|General|Added update reminder that will periodically show a pop up asking for an update.|
 |5.23.3 [L]|2023-04-20|Designer|Added hotkey (F1) to open online help of current window|
 |5.23.2 [L]|2023-04-13|Destinations|Fix for missing type handling on Snowflake destination (would crash with surrogate key)|
