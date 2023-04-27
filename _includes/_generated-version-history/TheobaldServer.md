@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|3.6.18 [L]|2023-04-27|General|New Hierarchy Extractor merged into master|
 |3.6.17 [L]|2023-04-21|General|Report improvement for coming feature in yunIO|
 |3.6.16 [L]|2023-04-13|General|Report improvement for coming feature in yunIO|
 |3.6.15 [L]|2023-03-31|General|Report improvement for coming feature in yunIO|
