@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.18.0 [M]|2023-04-28|Query|Added query extractor|
 |1.17.4 [L]|2023-04-14|Setup|Added option to abort setup in case of running processes (Alteryx Designer and Server). Fixed bug where the wrong version number was displayed in the about window of the BAPI tool.|
 |1.17.3 [L]|2023-03-23|General|The setup can now be run without admin privileges to install for user-only Alteryx instances|
 |1.17.2 [L]|2023-03-06|General|New EULA|
