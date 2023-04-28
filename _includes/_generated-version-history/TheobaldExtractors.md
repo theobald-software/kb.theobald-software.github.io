@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.42.1 [M]|2023-04-28|BW Cube|MDX: Fixed Hierarchy member filter|
 |1.42.0 [L]|2023-04-28|Query|Added new query extractor|
 |1.41.5 [L]|2023-04-21|Report|Improved report API for yunIO|
 |1.41.4 [L]|2023-04-20|General|Fix metadata of decimal float as packed number|
