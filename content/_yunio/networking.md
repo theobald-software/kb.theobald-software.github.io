@@ -63,6 +63,8 @@ b) The request is forwarded through the secure tunnel to the yunIO server.
 3. The yunIO server communicates with SAP. The response is sent back to the caller. <br>
 ![Add parameters](/img/contents/yunio/ts-knowledge-base_azure-relay.png){:class="img-responsive" width="600px"}
 
+For information on how to set up an Azure Relay Hybrid Connection with yunIO, see [Establish an Azure Relay Hybrid Connection to yunIO](./establish-an-azure-relay-hybrid-connection).
+
 ### Azure VPN
 The caller and yunIO/SAP can be connected through a secure tunnel and joined to the same VNet in Azure.
 The yunIO server can be protected from requests from untrusted sources by restricting access to the VNet in Azure.

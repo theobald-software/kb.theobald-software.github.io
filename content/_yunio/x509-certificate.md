@@ -30,6 +30,10 @@ Have a TLS certificate issued by your IT network team considering the following 
 {: .box-tip }
 **Tip:** To display the Common Name (CN) of the certificate, double-click on the certificate in the Cetrificate Manager and navigate to the *Details* tab.
 
+{: .box-note }
+**Note:** The Windows Certificate Store works with most browsers. Note that Mozilla Firefox offers its own certificate storage.  
+Configure your Firefox browser to trust certificates in the Windows certificate store or import the certificate via an enterprise ploicy, see [Mozilla Support: Setting Up Certificate Authorities (CAs) in Firefox](https://support.mozilla.org/en-US/kb/setting-certificate-authorities-firefox).
+
 ### Import an X.509 Certificate
 
 1. Import the certificate to the Windows Certificate Store using Microsoft Management Console (mmc).
