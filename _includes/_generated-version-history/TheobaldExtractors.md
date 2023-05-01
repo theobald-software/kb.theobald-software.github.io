@@ -1,5 +1,7 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.42.4 [M]|2023-05-01|BW Cube|BICS: Fixes for filter preview|
+|1.42.3 [L]|2023-05-01|BW Cube|BICS: Improve session initialization|
 |1.42.2 [L]|2023-04-28|BW Cube|MDX: Fixed result columns of converted extractions (was broken since 1.34)|
 |1.42.1 [M]|2023-04-28|BW Cube|MDX: Fixed Hierarchy member filter|
 |1.42.0 [L]|2023-04-28|Query|Added new query extractor|
