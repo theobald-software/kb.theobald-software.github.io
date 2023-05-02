@@ -6,8 +6,8 @@ permalink: /:collection/:path
 weight: 165
 ---
 
-This article contains information on how to conduct performance measurements for Xtract for Alteryx.<br>
-This article also includes best practices to enhance the performance and an example benchmark.
+This article contains information on performance measurements for Xtract for Alteryx.<br>
+This includes the reliability of performance measurements, best practices to enhance the performance and an example benchmark.
 
 ### Reliability of Performance Measurements
 
