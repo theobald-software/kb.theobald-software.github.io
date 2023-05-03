@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.42.5 [L]|2023-05-03|BAPI|Fixed a bug that caused an IndexOutOfRangeException when incoming tables were disconnected previously|
 |1.42.4 [M]|2023-05-01|BW Cube|BICS: Fixes for filter preview|
 |1.42.3 [L]|2023-05-01|BW Cube|BICS: Improve session initialization|
 |1.42.2 [L]|2023-04-28|BW Cube|MDX: Fixed result columns of converted extractions (was broken since 1.34)|
