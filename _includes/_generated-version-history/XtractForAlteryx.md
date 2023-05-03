@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.18.2 [L]|2023-05-03|BAPI|Fixed a bug that caused the Alteryx Designer to close in case of an error|
 |1.18.1 [M]|2023-05-03|BAPI|Fixed a bug that caused the tool to not run when an input connection existed and the AMP Engine was used|
 |1.18.0 [M]|2023-04-28|Query|Added query extractor|
 |1.17.4 [L]|2023-04-14|Setup|Added option to abort setup in case of running processes (Alteryx Designer and Server). Fixed bug where the wrong version number was displayed in the about window of the BAPI tool.|
