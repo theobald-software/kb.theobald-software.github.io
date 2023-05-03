@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.15.2 [L]|2023-05-03|Designer|Improvements for server settings UI|
 |1.15.1 [L]|2023-05-02|Designer|Transaction: Fixed a bug where the menu and toolbar would disappear after popup dialogs|
 |1.15.0 [M]|2023-04-27|Gateway|Improved handling of network failures for AzureRelay|
 |1.14.4 [L]|2023-04-15|Designer|Preview (yet disabled) for report service type with constant input values.|
