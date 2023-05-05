@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|3.6.20 [L]|2023-05-05|General|Fixed a bug where the requested resource of a HTTP request would not get decoded properly.|
 |3.6.19 [L]|2023-04-27|General|Improved logging for Logon Ticket SSO|
 |3.6.18 [L]|2023-04-27|General|New Hierarchy Extractor merged into master|
 |3.6.17 [L]|2023-04-21|General|Report improvement for coming feature in yunIO|
