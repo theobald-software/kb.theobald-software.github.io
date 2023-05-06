@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.16.0 [M]|2023-05-06|Designer|This release adds the Report component in the Preview stage.|
 |[1.15.3 [H]](https://kb.theobald-software.com/release-notes/Yunio-1.15.3.html)|2023-05-05|General|**Security:** Fixed a path traversal vulnerability in the designer server which enabled it to serve any file from any accessible directory. Please update immediately.([Release note](https://kb.theobald-software.com/release-notes/Yunio-1.15.3.html))|
 |1.15.2 [L]|2023-05-03|Designer|Improvements for server settings UI|
 |1.15.1 [L]|2023-05-02|Designer|Transaction: Fixed a bug where the menu and toolbar would disappear after popup dialogs|
