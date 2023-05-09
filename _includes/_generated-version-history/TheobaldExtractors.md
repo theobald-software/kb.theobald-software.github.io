@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.42.7 [L]|2023-05-09|BW Cube|Fix for "Dimension on columns" setting not working correctly for MDX Query extractions with "Only Structures" set to false.|
 |1.42.6 [M]|2023-05-09|TableCDC|Fixed a bug that could cause multiple records with the same key to be included in a CDC extraction result|
 |1.42.5 [L]|2023-05-03|BAPI|Fixed a bug that caused an IndexOutOfRangeException when incoming tables were disconnected previously|
 |1.42.4 [M]|2023-05-01|BW Cube|BICS: Fixes for filter preview|
