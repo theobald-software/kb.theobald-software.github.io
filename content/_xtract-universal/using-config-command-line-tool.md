@@ -8,39 +8,40 @@ permalink: /:collection/:path
 weight: 25
 ---
 
-As of Xtract Universal Version 4.26.1, the command line tool *xu-config.exe* is available to customers in the installation directory of Xtract Universal, e.g. `C:\Program Files\XtractUniversal\xu-config.exe`.
-The *xu-config.exe* tool creates extractions, sources, destinations and tables outside of the Xtract Universal Designer.
+As of Xtract Universal Version 4.26.1, the command line tool xu-config.exe is available to customers in the installation directory of Xtract Universal, e.g. `C:\Program Files\XtractUniversal\xu-config.exe`.
+The xu-config.exe tool creates extractions, sources and destinations outside of the Xtract Universal Designer.
 
-
-{: .box-note }
-**Note:** The *xu-config.exe* tool is **EXPERIMENTAL** and is in development. Beware of bugs and breaking changes! 
-
-The *xu-config.exe* tool supports the following extraction types:
+The xu-config.exe tool supports the following extraction types:
 - [Table](https://help.theobald-software.com/en/xtract-universal/table)
 - [Table CDC](https://help.theobald-software.com/en/xtract-universal/table-cdc)
 - [ODP](https://help.theobald-software.com/en/xtract-universal/odp) 
 - [DeltaQ](https://help.theobald-software.com/en/xtract-universal/datasource-deltaq)
 
 {: .box-note }
-**Note:** As of Xtract Universal 5.0.0, the *xu-config.exe* must be run by the same Windows AD account that runs the [Xtract Universal Service](https://help.theobald-software.com/en/xtract-universal/advanced-techniques/service-account). 
+**Note:** The xu-config.exe tool is **EXPERIMENTAL** and is in development. Beware of bugs and breaking changes! 
+
+
+### Prerequisites
+
+- As of Xtract Universal 5.0.0, the xu-config.exe tool must be run by the same Windows AD account that runs the [Xtract Universal Service](https://help.theobald-software.com/en/xtract-universal/advanced-techniques/service-account). 
 This means, you either run the Windows command prompt as the respective user or you use the ```runas```command in the command prompt.
+This is necessary, because passwords are encrypted for the user account that runs the xu-config.exe tool and can only be decrypted by the same account.
+- The execution of powershell scripts must be authorized on your system, see [Microsoft Documentation: Managing the execution policy with PowerShell](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.2#managing-the-execution-policy-with-powershell).
 
 
 ### Creating an SAP Source using Windows Command Prompt
 
 {: .box-note }
-The tool *xu-config.exe* only supports SAP connections with plain authentication.
+The xu-config.exe tool only supports SAP connections with plain authentication.
 
-{: .box-note }
-The execution of powershell scripts must be authorized on your system, see [Microsoft Documentation: Managing the execution policy with PowerShell](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.2#managing-the-execution-policy-with-powershell).
-
-1. Start the Windows command prompt application (1) with administrator rights (2). 
+1. Start the Windows command prompt application (1) with administrator rights (2). <br>
 ![cmd-prompt](/img/contents/cmd_prompt.png){:class="img-responsive"}
-2. Navigate to the installation directory of Xtract Universal (3). ![create_source_command_prompt](/img/contents/create_source_command_prompt.png){:class="img-responsive"}
+2. Navigate to the installation directory of Xtract Universal (3). <br>
+![create_source_command_prompt](/img/contents/create_source_command_prompt.png){:class="img-responsive"}
 3. Run the following shell command to create an encrypted password for your SAP source: `powershell ./protect-password.ps1` (4).<br>
 4. Use the following command to select the `xu-config.exe` command line tool from the Xtract Universal installation directory and to create a new SAP source: <br>
 `xu-config.exe --source <name> <host> <instance-number> <client> <language> <user> <protected-password>`.<br>
-5. Replace the parameters in `< >`with actual values (5). The parameters are not case sensitive.<br>
+5. Replace the parameters in `< >` with actual values (5). The parameters are not case sensitive.<br>
 6. Press **[Enter]** to run the command. 
 7. Check the generated source in the Xtract Universal Designer or in the following directory: <br>`C:\Program Files\XtractUniversal\config\sources`.
 ![sources](/img/contents/xu_manage_source_2.png){:class="img-responsive"}
@@ -48,21 +49,18 @@ The execution of powershell scripts must be authorized on your system, see [Micr
 ### Creating a Destination using Windows Command Prompt
 
 {: .box-note }
-**Note:** The *xu-config.exe* tool only supports the creation of the [Azure Storage](https://help.theobald-software.com/en/xtract-universal/destinations/azure-storage#destination-details) and [Amazon AWS S3](https://help.theobald-software.com/en/xtract-universal/destinations/amazon-aws-s3#destination-details) destinations.
+**Note:** The xu-config.exe tool only supports the creation of the [Azure Storage](https://help.theobald-software.com/en/xtract-universal/destinations/azure-storage#destination-details) and [Amazon AWS S3](https://help.theobald-software.com/en/xtract-universal/destinations/amazon-aws-s3#destination-details) destinations.
 
-{: .box-note }
-The execution of powershell scripts must be authorized on your system, see [Microsoft Documentation: Managing the execution policy with PowerShell](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.2#managing-the-execution-policy-with-powershell).
-
-1. Start the Windows command prompt application (1) with administrator rights (2). 
+1. Start the Windows command prompt application (1) with administrator rights (2). <br>
 ![cmd-prompt](/img/contents/cmd_prompt.png){:class="img-responsive"}
-2. Navigate to the installation directory of Xtract Universal (3). ![create_destination_command_prompt](/img/contents/create_destination_command_prompt.png){:class="img-responsive"}
+2. Navigate to the installation directory of Xtract Universal (3). <br>
+![create_destination_command_prompt](/img/contents/create_destination_command_prompt.png){:class="img-responsive"}
 3. Run the following shell command to create encrypted passwords or keys necessary for the destination: `powershell ./protect-password.ps1` (4). <br>
 4. Use one the following commands to select the *xu-config.exe* command line tool from the Xtract Universal installation directory and to create a new destination: <br>
 - Azure Storage: `xu-config.exe --azure <account> <accesskey> <container> <folder(opt)>`.<br>
 - Amazon AWS S3 with user credentials: `xu-config.exe --s3 --auth user <key> <secretkey> <bucket> <region> <folder(opt)>`.<br>
 - Amazon AWS S3 with authentication via IAM role: `xu-config.exe --s3 --auth iam <bucket> <region> <folder(opt)>`.<br>
 5. Replace the parameters in `< >` with actual values (5). The names of the parameters are not case sensitive.<br>
-
 6. Press **[Enter]** to run the command.
 7. Check the generated destination in the Xtract Universal Designer or in the following directory: <br>`C:\Program Files\XtractUniversal\config\destinations`.
 ![Destinations](/img/contents/destinations_load_manage_shared.png){:class="img-responsive"}
