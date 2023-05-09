@@ -8,6 +8,9 @@ weight: 12
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
 
+{: .box-note }
+**Note:** SharePoint 2013 is not supported anymore.
+
 **Contents**
 
 1. Introduction

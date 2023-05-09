@@ -72,6 +72,10 @@ b. Consume this Service from a SharePoint Wiki page with ScriptEditor using clie
 
 #### 2.1 Deploying a Service with the WebService Designer (into SharePoint 2013)
 
+{: .box-note }
+**Note:** SharePoint 2013 is not supported anymore.
+
+
 We are going to deploy a simple WSD-Service called “SAPCustomerWebService” in SharePoint (WSD Template could be found in the download section at the bottom in the archive, extension wcsm). To find instructions for writing (designing) a service, using the WebService Designer please check our documentation:
 
 [https://help.theobald-software.com/en/erpconnect-services/ecs/webservice-designer](https://help.theobald-software.com/en/erpconnect-services/ecs/webservice-designer)
