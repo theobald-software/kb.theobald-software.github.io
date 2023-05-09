@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.24.2 [M]|2023-05-09|TableCDC|Fixed a bug that could cause multiple records with the same key to be included in a CDC extraction result|
 |5.24.1 [M]|2023-05-04|General|Table CDC extractions can now be created using xu-config|
 |[5.24.0 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-5.24.0.html)|2023-04-27|Hierarchy|New Hierarchy Extractor - POSSIBLE BREAKING CHANGES for Hierarchy extractions([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-5.24.0.html))|
 |5.23.4 [L]|2023-04-26|General|Added update reminder that will periodically show a pop up asking for an update.|
