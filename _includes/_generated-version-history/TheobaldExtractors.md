@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.42.9 [L]|2023-05-11|TableCDC|Added option to run initial load as background job|
 |1.42.8 [M]|2023-05-11|ODP|Workaround for SAP returning dates in inconsistent formats |
 |1.42.7 [L]|2023-05-09|BW Cube|Fix for "Dimension on columns" setting not working correctly for MDX Query extractions with "Only Structures" set to false.|
 |1.42.6 [M]|2023-05-09|TableCDC|Fixed a bug that could cause multiple records with the same key to be included in a CDC extraction result|
