@@ -37,6 +37,9 @@ All fields that need to be parameterized must be available in the section *GUI S
 ![change-sales-order4](/img/contents/yunio/change-sales-order4.png){:class="img-responsive"}
 8. Click **[Save]** to save your actions.<br>
 Alternatively, click **[Stop]** to start parameterizing, see [yunIO Help: Parameterize Transactions](https://help.theobald-software.com/en/yunio/transactions#parameterize-transactions).
+9. Copy the URL of the service definition ( ![copy-URL](/img/contents/yunio/copyURL.png) icon) or download the service definition ( ![download-file](/img/contents/yunio/download.png) icon) to integrate the service in your workflow.<br>
+For information on how to use yunIO services in Power Automate or Nintex, see [Integrating a yunIO Service with Power Automate](integrating-a-yunio-service-with-power-automate) or [Integrating a yunIO Service with Nintex](https://kb.theobald-software.com/yunio/integrating-a-yunio-service-with-nintex).
+![yunio-Services](/img/contents/yunio/yunio-run-services.png){:class="img-responsive" width="800px"}
 
 
 {: .box-note }
