@@ -19,7 +19,6 @@ Therefore knowing how to navigate the SAP GUI makes it easier to use the transac
 
 ### Select a Table as an Input Parameter in yunIO
 
-
 1. Create a transaction service that uses tables. <br>
 This article uses a service created in [Working with Transaction VA02](./transaction-va02). The service changes sales orders via transaction VA02.
 2. Click ![change-sales-order](/img/contents/yunio/edit-cog-icon.png) to open the service. <br>
@@ -34,7 +33,6 @@ All fields that can be parameterized are highlighted in green when hovering over
 7. Optional: Select **Output** to check if your input was successful.
 8. Click **[OK]** to save the parameter. The window “Parameterize Element” closes.
 9. Click **[Save]** to save the service.
-
 
 ### Format of Input Tables
 
@@ -52,22 +50,21 @@ Table structure in OpenAPI/Swagger definition
     {
         "selected": false,
         "cells": {
-            "VBAP-POSNR": "",
-            "RV45A-MABNR": "",
-            "RV45A-KWMENG": "",
+            "VBAP-POSNR": "20",
+            "RV45A-MABNR": "M-01",
+            "RV45A-KWMENG": "5",
             ...
         }
     },
     {
         "selected": false,
         "cells": {
-            "VBAP-POSNR": "",
-            "RV45A-MABNR": "",
-            "RV45A-KWMENG": "",
+            "VBAP-POSNR": "30",
+            "RV45A-MABNR": "M-02",
+            "RV45A-KWMENG": "10",
             ...
         }
-    },
-    ... //more rows
+    }
     ]
 </pre>
 </td>
@@ -93,7 +90,6 @@ ITEMS:
               description: Order Quantity
               type: string
             ...
-			
 </pre>
 </td></tr>
 </table>
@@ -102,33 +98,63 @@ Table parameters are passed to the service in the http request body.
 Enter values for each column, e.g., `"VBAP-POSNR": "10"`, `"RV45A-MABNR": "M-01"`, `"RV45A-KWMENG": "5"`, etc.<br>
 The columns are represented by their SAP technical name, e.g., `VBAP-POSNR` = column *Item*, `RV45A-MABNR` = column *Material*, `RV45A-KWMENG` = column *Order Quantity*, etc.
 
+{: .box-note }
+**Note:** In the http request body must only contain the table fields that have input values. Do not add fields without input in the http request body.<br>
+Correct: `"VBAP-WERKS": "3000"`<br>
+Incorrect: `"VBAP-WERKS": ""`
+
 {: .box-tip }
 **Tip:** You can look up the description of the SAP technical column names in the OpenAPI/Swagger definition, e.g., [Swagger Editor](https://editor.swagger.io/).
 
+Example:<br>
+![transaction-va02-order](/img/contents/yunio/table-input-requestbody.png){:class="img-responsive"}
 
 ### Run the Service
-1. Copy or download the OpenAPI/Swagger definition of the service in yunIO.
+2. Copy the URL of the service definition (![copy-URL](/img/contents/yunio/copyURL.png) icon) or download the service definition (![download-file](/img/contents/yunio/download.png) icon).<br>
+![yunio-Services](/img/contents/yunio/yunio-run-services.png){:class="img-responsive" width="800px"}
 2. Open the service in a tool that supports OpenAPI/Swagger definitions, e.g., [Swagger Inspector](https://inspector.swagger.io/). 
-3. Make sure to use the `POST` method when integrating the service. The `GET` method does not support table parameters.
-4. Open the request body of the service. All input parameters are listed in the request body.<br>
-5. Enter values for each column, e.g., `"VBAP-POSNR": "10"`, `"RV45A-MABNR": "M-01"`, `"RV45A-KWMENG": "5"`, etc.<br>
+3. Use the `POST` method when integrating the service. The `GET` method does not support table parameters.
+4. Open the request body of the service. All input parameters are listed in the request body.
+5. Copy the ...
+{
+    "skipPopups": false,
+    "Order": "16219",
+    "Items": [
+        {
+            "selected": false,
+            "cells": {
+
+6. Enter values for each column, e.g., `"VBAP-POSNR": "10"`, `"RV45A-MABNR": "M-01"`, `"RV45A-KWMENG": "5"`, etc.<br>
 The columns are represented by their SAP technical name, e.g., `VBAP-POSNR` = column *Item*, `RV45A-MABNR` = column *Material*, `RV45A-KWMENG` = column *Order Quantity*, etc.
 You can look up the description of the SAP technical column names in the OpenAPI/Swagger definition.
+7. Delete all table fields that do not have any input.
+
 
 ```
 {
     "skipPopups": false,
-    "AUFTRAG": [
-        {
-            "selected": false,
-            "cells": { }
-        },
+    "Order": "16219",
+    "Items": [
         {
             "selected": false,
             "cells": {
-                "VBAP-POSNR": "11",
-                "RV45A-MABNR": "TG11",
-                "RV45A-KWMENG": "5"
+                "VBAP-POSNR": "20",
+                "RV45A-MABNR": "M-01",
+                "RV45A-KWMENG": "5",
+                "VBAP-VRKME": "PC",
+                "VBAP-ARKTX": "Sony Sunny01",
+                "VBAP-PSTYV": "TAN",
+                "VBAP-UEPOS": "0",
+                "RV45A-PRGBZ": "D",
+                "RV45A-ETDAT": "08.06.2023",
+                "VBAP-WERKS": "3000",
+                "KOMV-KBETR": "1200,00",
+                "RV45A-KOEIN": "USD",
+                "VBAP-PRCTR": "3500",
+                "VBAP-ROUTE": "000001",
+                "VBKD-INCO1": "CFR",
+                "VBSTT-GBSTA_BEZ": "Completed",
+                "VBKD-VALTG": "0"
             }
         }
     ]
