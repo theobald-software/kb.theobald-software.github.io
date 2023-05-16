@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.43.1 [L]|2023-05-16|BW Cube|BICS: Fix for result copying|
 |1.43.0 [L]|2023-05-14|BW Cube|BICS: new implementation|
 |1.42.9 [L]|2023-05-11|TableCDC|Added option to run initial load as background job|
 |1.42.8 [M]|2023-05-11|ODP|Workaround for SAP returning dates in inconsistent formats |
