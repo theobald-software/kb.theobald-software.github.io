@@ -67,7 +67,7 @@ If needed, [download a sample EXCEL file (.xlsx)](/files/yunio/Create_Multiple_C
 The following workflow reads and processes data from a table and to create new cost centers in the SAP cost center master data.
 1. Create a new workflow.
 2. Add a manual trigger to test the workflow when necessary.
-3. Add a List rows present in table action to read the input data for the yunIO service. In this example, the data is hosted on SharePoint, see [Creating an Input Table](#creating-an-input-table).<br>
+3. Add a List rows present in table action to read the input data for the yunIO service. In this example, the data is hosted on SharePoint, see [Creating Input Data](#creating-input-data).<br>
 ![Power-Automate-Read-Data](/img/contents/yunio/Power-Automate-Read-Data.png){:class="img-responsive" width="800px"}
 4. Add an *Initialize variable* action to create an array that can store multiple items. Leave **Value** empty.<br>
 ![Power-Automate-Variable](/img/contents/yunio/Power-Automate-Variable.png){:class="img-responsive" width="800px"}
