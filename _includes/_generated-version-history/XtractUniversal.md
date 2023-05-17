@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.24.4 [L]|2023-05-17|BW Cube|Fix for missing columns after running config converter on old BW Cube MDX extractions.|
 |5.24.3 [L]|2023-05-11|TableCDC|Added option to run initial load as background job|
 |5.24.2 [M]|2023-05-09|TableCDC|Fixed a bug that could cause multiple records with the same key to be included in a CDC extraction result|
 |5.24.1 [M]|2023-05-04|General|Table CDC extractions can now be created using xu-config|
