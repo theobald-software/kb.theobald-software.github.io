@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.43.3 [L]|2023-05-17|BW Cube|BICS: Added safeguards against truncated CHAR / NUMC characteristic values|
 |1.43.2 [L]|2023-05-16|BW Cube|BICS: Filter is applied for characteristics that are not selected for output|
 |1.43.1 [L]|2023-05-16|BW Cube|BICS: Fix for result copying|
 |1.43.0 [L]|2023-05-14|BW Cube|BICS: new implementation|
