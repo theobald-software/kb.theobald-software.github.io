@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|[1.43.4 [L]](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.43.4.html)|2023-05-22|Table|Multiple UI fixes and usability improvements.([Release note](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.43.4.html))|
 |1.43.3 [L]|2023-05-17|BW Cube|BICS: Added safeguards against truncated CHAR / NUMC characteristic values|
 |1.43.2 [L]|2023-05-16|BW Cube|BICS: Filter is applied for characteristics that are not selected for output|
 |1.43.1 [L]|2023-05-16|BW Cube|BICS: Fix for result copying|
