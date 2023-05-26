@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.17.0 [M]|2023-05-26|Designer|Logs for services runs.|
 |1.16.3 [M]|2023-05-23|Runtime|Transaction: Fixed a bug that caused a less detailed error message to be displayed when the service run failed|
 |1.16.2 [M]|2023-05-17|General|Azure Relay: Enable log file switching every 24h|
 |1.16.1 [L]|2023-05-11|Gateway|Hotfix Azure Relay|
