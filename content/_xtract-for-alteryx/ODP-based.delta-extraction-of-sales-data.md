@@ -21,7 +21,7 @@ This article leads you through all necessary steps to set up the following workf
 | :------ |:--- | :--- |
 | SAP ERP | BW Extractors: *2LIS_11_VAITM* (Sales Document Item Data) & *0CUSTOMER_ATTR* (Customer Master Data) | Xtract ODP |
 
-You can download the Alteryx workflow for this application in the [Alteryx Community - Gallery title and link here](https://community.alteryx.com/t5/Community-Gallery/ODP-based-Delta-Extraction-of-Sales-and-Customer-Data-from-SAP/ta-p/1140120).
+You can download the Alteryx workflow for this application in the [Alteryx Community - ODP based Delta Extraction of Sales and Customer Data from SAP ERP with Xtract for Alteryx](https://community.alteryx.com/t5/Community-Gallery/ODP-based-Delta-Extraction-of-Sales-and-Customer-Data-from-SAP/ta-p/1140120).
 
 
 ![odp-workflow](/img/contents/xfa/odp-workflow.png){:class="img-responsive"}
