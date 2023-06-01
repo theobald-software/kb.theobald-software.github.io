@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.23.5 [L]|2023-06-01|Licensing|Moved some licensing code to a separate project. Marked outdated licensing enum members as obsolete.|
 |2.23.4 [L]|2023-06-01|General|Add win32 job API |
 |2.23.3 [L]|2023-05-11|WPF|New FolderBrowserDialog: Increased search depth, changed icons to windows stock icons, hide system entries and hidden folders, added manual path input field and improved perfomance.|
 |2.23.1 [L]|2023-04-26|General|Added Update-Reminder feature|
