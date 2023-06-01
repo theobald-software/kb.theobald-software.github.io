@@ -1,6 +1,7 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
-|1.17.2 [L]|2023-05-31|General|Added check in the setup to prevent that the designer gets started in browser, when the service fails to start after installation.|
+|1.18.0 [M]|2023-06-01|Gateway|Azure Relay Manager decides more reliability when to reconnect.|
+|1.17.2 [L]|2023-05-31|General|Added check in the setup to prevent that the designer gets started in browser after installation without running service.|
 |1.17.1 [L]|2023-05-26|Designer|Filtering by names in services list.|
 |1.17.0 [M]|2023-05-26|Designer|Logs for services runs.|
 |1.16.3 [M]|2023-05-23|Runtime|Transaction: Fixed a bug that caused a less detailed error message to be displayed when the service run failed|
