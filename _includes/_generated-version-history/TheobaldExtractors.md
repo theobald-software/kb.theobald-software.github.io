@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.43.6 [L]|2023-06-01|BW Cube|BICS: Fixed data type of timestamp characteristics|
 |1.43.5 [L]|2023-05-26|BW Cube|MDX: fixed a bug that caused errors when deselecting all measures|
 |[1.43.4 [L]](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.43.4.html)|2023-05-22|Table|Multiple UI fixes and usability improvements.([Release note](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.43.4.html))|
 |1.43.3 [L]|2023-05-17|BW Cube|BICS: Added safeguards against truncated CHAR / NUMC characteristic values|
