@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.25.2 [L]|2023-06-01|Designer|Fixed bug on extraction settings window when extraction was not yet fully configured|
 |5.25.1 [L]|2023-05-31|Service|Added option to clone and delete extractions in the xu-config tool.|
 |5.25.0 [L]|2023-05-26|Destinations|Added Huawei Cloud OBS destination (preview).|
 |5.24.4 [L]|2023-05-17|BW Cube|Fix for missing columns after running config converter on old BW Cube MDX extractions.|
