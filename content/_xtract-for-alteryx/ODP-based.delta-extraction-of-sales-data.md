@@ -24,7 +24,7 @@ This article leads you through all necessary steps to set up the following workf
 You can download the Alteryx workflow for this application in the [Alteryx Community - ODP based Delta Extraction of Sales and Customer Data from SAP ERP with Xtract for Alteryx](https://community.alteryx.com/t5/Community-Gallery/ODP-based-Delta-Extraction-of-Sales-and-Customer-Data-from-SAP/ta-p/1140120).
 
 
-![odp-workflow](/img/contents/xfa/odp-workflow.png){:class="img-responsive"}
+![odp-workflow](/img/contents/xfa/odp-workflow.png){:class="img-responsive" width="900px"}
 
 ### Prerequisites
 
@@ -81,8 +81,6 @@ The Xtract ODP component can now be used to access and process the extracted SAP
 
 *****
 #### Related Links
-<!---
-uncomment once the Alteryx Community gallery is published:
-- [Alteryx Community - Gallery title and link here]()
--->
+- [Alteryx Community - ODP based Delta Extraction of Sales and Customer Data from SAP ERP with Xtract for Alteryx](https://community.alteryx.com/t5/Community-Gallery/ODP-based-Delta-Extraction-of-Sales-and-Customer-Data-from-SAP/ta-p/1140120)
 - [Online Help: Xtract ODP (Operational Data Provisioning)](https://help.theobald-software.com/en/xtract-for-alteryx/odp)
+- [Online Help: Sample Workflows](https://help.theobald-software.com/en/xtract-for-alteryx/sample-workflows)
