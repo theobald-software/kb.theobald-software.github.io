@@ -17,26 +17,31 @@ The SAP connection assigned to a transaction service must use an SAP dialog user
 **Tip:** The transaction feature of yunIO offers the same functionalities as the SAP GUI. 
 Therefore knowing how to navigate the SAP GUI makes it easier to use the transaction feature. 
 
-### Select a Table as an Input Parameter in yunIO
+### Selecting a Table as an Input Parameter
 
 1. Create a transaction service that uses tables. <br>
-This article uses a service created in [Working with Transaction VA02](./transaction-va02). The service changes sales orders via transaction VA02.
+The following example uses a service that changes sales orders via transaction VA02, see [Working with Transaction VA02](./transaction-va02). 
 2. Click ![change-sales-order](/img/contents/yunio/edit-cog-icon.png) to open the service. <br>
 ![change-sales-order](/img/contents/yunio/transaction-edit.png){:class="img-responsive"}
 3. Click on the documented actions in the section *GUI Steps* to navigate to the screen that contains the table you want to parameterize.<br>
-4. Click on the table that you want to parameterize. The window “Parameterize Element” opens. 
+4. Click on the fields and tables that you want to parameterize. The window “Parameterize Element” opens. 
 All fields that can be parameterized are highlighted in green when hovering over them.<br>
-![transaction-va02-table](/img/contents/yunio/transaction-va02-table.png){:class="img-responsive"}
-5. In the window “Parameterize Element”, select **Input** to override the content of the table when running the service.
-6. Enter a name for the parameter, e.g. *ITEMS*.<br>
+![table-parameters](/img/contents/yunio/table-parameter.gif){:class="img-responsive" style="border:1px solid black;"}
+5. In the window “Parameterize Element”, select **Input** to override the content of the table when running the service. 
+6. Enter a custom name for the parameter, e.g. *ITEMS*.<br>
 ![transaction-va02-order](/img/contents/yunio/transaction-va02-order.png){:class="img-responsive"}
-7. Optional: Select **Output** to check if your input was successful.
-8. Click **[OK]** to save the parameter. The window “Parameterize Element” closes.
-9. Click **[Save]** to save the service.
+7. Click **[OK]** to save the parameter. The window “Parameterize Element” closes.
+8. Click **[Save]** to save the service.
+
+{: .box-note }
+**Note:** When defining input parameters, make sure to parameterize fields before they are submitted in the GUI steps. 
+If you define an input parameter after a submit, the input is not submitted to SAP.
 
 ### Format of Input Tables
 
-Table parameters have the following structure:
+Table parameters are passed to the service in the http request body. <br>
+In the request body, the columns of the table are represented by their SAP technical name, e.g., `RV45A-MABNR` = *Material* column, `RV45A-KWMENG` = *Order Quantity* column, etc.
+You can look up the description of the SAP technical names in the OpenAPI/Swagger definition, e.g., [Swagger Editor](https://editor.swagger.io/).
 
 <table>
 <tr><th>
@@ -50,18 +55,18 @@ Table structure in OpenAPI/Swagger definition
     {
         "selected": false,
         "cells": {
-            "VBAP-POSNR": "20",
-            "RV45A-MABNR": "M-01",
-            "RV45A-KWMENG": "5",
+            "VBAP-POSNR": "",
+            "RV45A-MABNR": "",
+            "RV45A-KWMENG": "",
             ...
         }
     },
     {
         "selected": false,
         "cells": {
-            "VBAP-POSNR": "30",
-            "RV45A-MABNR": "M-02",
-            "RV45A-KWMENG": "10",
+            "VBAP-POSNR": "",
+            "RV45A-MABNR": "",
+            "RV45A-KWMENG": "",
             ...
         }
     }
@@ -91,75 +96,50 @@ ITEMS:
               type: string
             ...
 </pre>
-</td></tr>
+</td>
+</tr>
 </table>
 
-Table parameters are passed to the service in the http request body. 
-Enter values for each column, e.g., `"VBAP-POSNR": "10"`, `"RV45A-MABNR": "M-01"`, `"RV45A-KWMENG": "5"`, etc.<br>
-The columns are represented by their SAP technical name, e.g., `VBAP-POSNR` = column *Item*, `RV45A-MABNR` = column *Material*, `RV45A-KWMENG` = column *Order Quantity*, etc.
 
-{: .box-note }
-**Note:** In the http request body must only contain the table fields that have input values. Do not add fields without input in the http request body.<br>
-Correct: `"VBAP-WERKS": "3000"`<br>
-Incorrect: `"VBAP-WERKS": ""`
-
-{: .box-tip }
-**Tip:** You can look up the description of the SAP technical column names in the OpenAPI/Swagger definition, e.g., [Swagger Editor](https://editor.swagger.io/).
-
-Example:<br>
-![transaction-va02-order](/img/contents/yunio/table-input-requestbody.png){:class="img-responsive"}
-
-### Run the Service
-2. Copy the URL of the service definition (![copy-URL](/img/contents/yunio/copyURL.png) icon) or download the service definition (![download-file](/img/contents/yunio/download.png) icon).<br>
-![yunio-Services](/img/contents/yunio/yunio-run-services.png){:class="img-responsive" width="800px"}
+### Running a Service with Table Parameters
+1. Copy the URL of the service definition (![copy-URL](/img/contents/yunio/copyURL.png) icon) or download the service definition (![download-file](/img/contents/yunio/download.png) icon).<br>
+![yunio-Services](/img/contents/yunio/yunio-run-services.png){:class="img-responsive" }
 2. Open the service in a tool that supports OpenAPI/Swagger definitions, e.g., [Swagger Inspector](https://inspector.swagger.io/). 
 3. Use the `POST` method when integrating the service. The `GET` method does not support table parameters.
 4. Open the request body of the service. All input parameters are listed in the request body.
-5. Copy the ...
-{
-    "skipPopups": false,
-    "Order": "16219",
-    "Items": [
-        {
-            "selected": false,
-            "cells": {
-
-6. Enter values for each column, e.g., `"VBAP-POSNR": "10"`, `"RV45A-MABNR": "M-01"`, `"RV45A-KWMENG": "5"`, etc.<br>
-The columns are represented by their SAP technical name, e.g., `VBAP-POSNR` = column *Item*, `RV45A-MABNR` = column *Material*, `RV45A-KWMENG` = column *Order Quantity*, etc.
-You can look up the description of the SAP technical column names in the OpenAPI/Swagger definition.
-7. Delete all table fields that do not have any input.
-
-
+5. Delete all table entries that are not subject to change. 
+6. Enter values for all fields that you want to overwrite, e.g., `"RV45A-MABNR": "M-01"`, `"RV45A-KWMENG": "5"`, etc.
+The http request body must only contain table fields with valid input values.
+The following example changes the order quantity of the first two items to 1 and 2:
 ```
 {
     "skipPopups": false,
-    "Order": "16219",
-    "Items": [
+    "Order": "16216",
+    "ITEMS": [
         {
             "selected": false,
             "cells": {
-                "VBAP-POSNR": "20",
-                "RV45A-MABNR": "M-01",
-                "RV45A-KWMENG": "5",
-                "VBAP-VRKME": "PC",
-                "VBAP-ARKTX": "Sony Sunny01",
-                "VBAP-PSTYV": "TAN",
-                "VBAP-UEPOS": "0",
-                "RV45A-PRGBZ": "D",
-                "RV45A-ETDAT": "08.06.2023",
-                "VBAP-WERKS": "3000",
-                "KOMV-KBETR": "1200,00",
-                "RV45A-KOEIN": "USD",
-                "VBAP-PRCTR": "3500",
-                "VBAP-ROUTE": "000001",
-                "VBKD-INCO1": "CFR",
-                "VBSTT-GBSTA_BEZ": "Completed",
-                "VBKD-VALTG": "0"
+                "RV45A-KWMENG": "1"
+            }
+        },
+        {
+            "selected": false,
+            "cells": {
+                "RV45A-KWMENG": "2"
             }
         }
     ]
 }
 ```
+6. Run the service. If the service run is successful, the response body contains a confirmation that the order was saved.<br>
+![change-sales-order-table-swagger](/img/contents/yunio/change-sales-order-table-swagger.png){:class="img-responsive" width="900px"}
+7. Open SAP to check if the changes in the sales order.<br>
+![change-sales-order-table-sap](/img/contents/yunio/change-sales-order-table-sap.png){:class="img-responsive" width="900px"}
+
+
+{: .box-note }
+**Note:** It is currently not possible to add new items to tables.
+
 
 ******
 
