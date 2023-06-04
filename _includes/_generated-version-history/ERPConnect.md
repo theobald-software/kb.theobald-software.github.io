@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|7.7.0 [L]|2023-06-04|General|Added AbapSignedNumericCharacter|
 |7.6.1 [L]|2023-04-05|RFC Client|R3Connection.GetSSOTicket() now supports SNC SSO with NWRFC|
 |[7.6.0 [M]](https://kb.theobald-software.com/release-notes/ERPConnect-7.6.0.html)|2023-03-31|RFC Client|Various breaking changes to R3Connection API([Release note](https://kb.theobald-software.com/release-notes/ERPConnect-7.6.0.html))|
 |7.5.8 [M]|2023-03-22|RFCServer|Classic RFC: Fixed a bug that caused import parameters in server and callback functions to be filled with garbage values when the application server did not supply them in the call |
