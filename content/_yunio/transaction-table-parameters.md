@@ -100,21 +100,24 @@ ITEMS:
 </tr>
 </table>
 
+When passing a table to yunIO, only pass fields that have values assigned to them. Delete all table fields that are not subject to change from the request body.<br>
+Correct: `"RV45A-KWMENG": "5"`<br>
+Incorrect: `"RV45A-KWMENG": ""`
+
 
 ### Running a Service with Table Parameters
 1. Copy the URL of the service definition (![copy-URL](/img/contents/yunio/copyURL.png) icon) or download the service definition (![download-file](/img/contents/yunio/download.png) icon).<br>
 ![yunio-Services](/img/contents/yunio/yunio-run-services.png){:class="img-responsive" }
 2. Open the service in a tool that supports OpenAPI/Swagger definitions, e.g., [Swagger Inspector](https://inspector.swagger.io/). 
 3. Use the `POST` method when integrating the service. The `GET` method does not support table parameters.
-4. Open the request body of the service. All input parameters are listed in the request body.
+4. Open the request body of the service. All input parameters are listed in the request body.<br>
+![change-sales-order-table-swagger-default](/img/contents/yunio/change-sales-order-table-swagger-default.png){:class="img-responsive"}
 5. Delete all table entries that are not subject to change. 
 6. Enter values for all fields that you want to overwrite, e.g., `"RV45A-MABNR": "M-01"`, `"RV45A-KWMENG": "5"`, etc.
 The http request body must only contain table fields with valid input values.
 The following example changes the order quantity of the first two items to 1 and 2:
 ```
 {
-    "skipPopups": false,
-    "Order": "16216",
     "ITEMS": [
         {
             "selected": false,
@@ -136,10 +139,35 @@ The following example changes the order quantity of the first two items to 1 and
 7. Open SAP to check if the changes in the sales order.<br>
 ![change-sales-order-table-sap](/img/contents/yunio/change-sales-order-table-sap.png){:class="img-responsive" width="900px"}
 
+#### Adding new Items to a Table
+When adding new items to a table, the existing table rows must be passed as empty to avoid overwriting existing content. <br>
+The following example adds a new item at the 4th row of the table:
 
-{: .box-note }
-**Note:** It is currently not possible to add new items to tables.
-
+```
+"ITEMS": [
+    {
+        "selected": false,
+        "cells": { }
+    },
+    {
+        "selected": false,
+        "cells": { }
+    },
+    {
+        "selected": false,
+        "cells": { }
+    },
+    {
+        "selected": false,
+        "cells": {
+            "VBAP-POSNR": "40",
+            "RV45A-MABNR": "M-01",
+            "RV45A-KWMENG": "5",
+            "VBAP-VRKME": "PC"
+         }
+    }
+]
+```
 
 ******
 
