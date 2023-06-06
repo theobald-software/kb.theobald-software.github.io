@@ -7,19 +7,21 @@ weight: 45
 ---
 
 This article shows how to synchronize a SharePoint list in near-real time with SAP.
-In the following scenario, data from SharePoint is used to automatically create a purchase requisition in SAP. The newly created SAP order number is then written back to SharePoint.
+In the following scenario, data from SharePoint is used to automatically create a purchase requisition in SAP. The newly created SAP purchase requisition number is then written back to SharePoint.
 
 ### About
 This article leads you through all necessary steps to set up the following process:
 
-- When a new purchase requisition is added to a SharePoint list, a Power Automate workflow is triggered.
-- The workflow uses the SharePoint data to run a yunIO service that creates a new purchase requisition in SAP .
-- When the purchase requisition is created in SAP, the new SAP order number is written back to the SharePoint list
+- When a new purchase requisition is added to a SharePoint list, a Power Automate workflow is triggered. 
+This process also works with other automation tools, e.g. Nintex.
+- The workflow uses the SharePoint data to run a yunIO service that creates a new purchase requisition in SAP.
+- When the purchase requisition is created in SAP, the new SAP purchase requisition number is written back to the SharePoint list.
 
 ### Setup in yunIO
 
 yunIO is the connector that reads and writes data from and to SAP.
-For more information on yunIO, see [Theobald Software: yunIO](https://theobald-software.com/en/yunio/).
+For more information on yunIO, see [Theobald Software: yunIO](https://theobald-software.com/en/yunio/).<br>
+The following yunIO service creates purchase requisitions in SAP:
 
 1. Define a [connection to your SAP system](https://help.theobald-software.com/en/yunio/sap-connection) in yunIO. 
 2. [Create a new service](https://help.theobald-software.com/en/yunio/getting-started#creating-a-service) in yunIO. This example uses the integration type *Function Module* for the service.
@@ -66,7 +68,7 @@ For more information on yunIO, see [Theobald Software: yunIO](https://theobald-s
 	| PRITEM | ACCTASSCAT | Updated information in related user data field |
 
 6. Select the table RETURN for export. This table contains logs and error messages.
-7. Select the export parameter NUMBER for the output. This parameter contains the new SAP order number that is written back to SharePoint.
+7. Select the export parameter NUMBER for the output. This parameter contains the new SAP purchase requisition number that is written back to SharePoint.
 8. Activate the advanced setting **Commits Transaction**. If this option is active, the function module “BAPI_TRANSACTION_COMMIT” is called after processing the selected Function Module / BAPI. 
 BAPI_PR_CREATE require this commit function to successfully update data in the database.<br>
 ![SAPPurchaseRequisitionCreate-export](/img/contents/yunio/SAPPurchaseRequisitionCreate-export.png){:class="img-responsive"}
@@ -78,17 +80,25 @@ BAPI_PR_CREATE require this commit function to successfully update data in the d
 
 ### Setup in SharePoint
 
-Customize your Salesforce account to provide SAP related fields:
-- Create a field *SAP ID*. Once a customer is created in SAP, the customer number is written back into *SAP ID*.
-- *Company Code*, *Sales Org*, *Distribution Channel* and *Disivion* are organization details required to create the SAP customer.
-- Create a checkbox that indicates if the customer exists in SAP.
+Create a SharePoint list that provides SAP related fields.
+For this example, create the following columns:
+- Material
+- Plant
+- Quantity
+- Delivery Date
+- Cost Center
+- Purchase Requisition Number (when a purchase requisition number is created in SAP, it is written back to this column)
 
-For more information on how to customize fields in Salesforce, see [Salesforce Documentation: Create Custom Fields](https://help.salesforce.com/s/articleView?id=sf.adding_fields.htm&type=5).
+![sharepoint-purchase-requisition](/img/contents/yunio/sharepoint-purchase-requisition.png){:class="img-responsive" }
+
+For more information on SharePoint lists, see [Microsoft Documentation: Introduction to lists](https://support.microsoft.com/en-us/office/introduction-to-lists-0a1c3ace-def0-44af-b225-cfa8d92c52d7).
 
 {: .box-note }
-**Note:** Creating *Company Code*, *Sales Org*, *Distribution Channel* and *Disivion* in Salesforce is optional as they can also be set as static values in Power Automate.
+**Note:** Defining other input parameters in SharePoint is optional as they can also be set as static values in Power Automate.
 
-![salesforce_before_sap](/img/contents/yunio/salesforce_before_sap.png){:class="img-responsive" width="900px"}
+{: .box-tip }
+**Tip:** You can use a Power App form to simplify and validate the SharePoint input, see [Using yunIO Services in Power Apps](https://kb.theobald-software.com/yunio/populating-drop-down-controls-in-power-apps#using-yunio-services-in-power-apps).
+
 
 ### Setup in Power Automate
 
