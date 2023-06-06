@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|[1.20.0 [L]](https://kb.theobald-software.com/release-notes/Yunio-1.20.0.html)|2023-06-06|Runtime|Refactored the services server backend to enable future development. Various bug fixes.([Release note](https://kb.theobald-software.com/release-notes/Yunio-1.20.0.html))|
 |1.19.0 [M]|2023-06-01|General|Old logs are now automatically deleted when executing a service|
 |1.18.0 [M]|2023-06-01|Gateway|Azure Relay Manager decides more reliability when to reconnect.|
 |1.17.2 [L]|2023-05-31|General|Added check in the setup to prevent that the designer gets started in browser after installation without running service.|
