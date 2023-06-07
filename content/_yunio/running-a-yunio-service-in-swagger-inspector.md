@@ -21,7 +21,7 @@ For more information on the Swagger Inspector, see [Swagger Inspector Documentat
 ### Loading a yunIO Service into Swagger Inspector
 
 1. Open Swagger Inspector in your browser.
-2. Navigate to the **Definition** menu (1). There are 2 ways to load a yunIO service definition into the swagger inspector:<br>
+2. Navigate to the **Definition** menu (1). There are 2 ways to load a yunIO service definition into the Swagger Inspector:<br>
 - Paste the URL of the service definition into the designated input field (2).
 - Click on the upload icon to load a service definition from your hard drive (2).
 3. Click **[PARSE]** to analyze the service definition (3).<br>
