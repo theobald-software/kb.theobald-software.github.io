@@ -23,10 +23,12 @@ For more information on the Swagger Inspector, see [Swagger Inspector Documentat
 1. Open Swagger Inspector in your browser.
 2. Navigate to the **Definition** menu (1). There are 2 ways to load a yunIO service definition into the swagger inspector:<br>
 - Paste the URL of the service definition into the designated input field (2).
-- Click on the upload icon to load a service definition from your harddrive (2).
+- Click on the upload icon to load a service definition from your hard drive (2).
 3. Click **[PARSE]** to analyze the service definition (3).<br>
 ![Swagger-Inspector-Load-Service-1](/img/contents/yunio/swagger-inspector-load.png){:class="img-responsive"}
-4. Once the service is parsed, click on the service (4) to access any authentication, headers and parameter settings of the service.<br>
+4. Once the service is parsed, click on either the GET or POST method of the service (4) to access the authentication, headers and parameter settings of the service.<br>
+We recommend using the POST method with Transport Layer Security (HTTPS) to ensure data protection. 
+Do not use the GET method to send sensible data, e.g. credentials.<br>
 ![Swagger-Inspector-Load-Service-2](/img/contents/yunio/swagger-inspector-load-body.png){:class="img-responsive"}
 
 {: .box-tip }
@@ -39,11 +41,14 @@ All parameters defined in yunIO are accessible in the request body of the servic
 To set parameters, edit the *Body*, e.g. change the WHERE clause of the table extraction. <br>
 ![Swagger-Inspector](/img/contents/yunio/swagger-inspector.png){:class="img-responsive"}
 
+{: .box-note }
+**Note:** When passing a WHERE clause to a yunIo service using the http GET method, you must add spaces manually, e.g., `MANDT=800 and LAND1='DE'` instead of `MANDT=800andLAND1='DE'`.
+
 ### Running the Service
 
 {: .box-note }
 **Note:** If the option [*Request credentials from callers when running services*](https://help.theobald-software.com/en/yunio/sap-connection#authentication) is active in the connection settings in yunIO, 
-you have to select *Basic Authentication* in the *Authentication & Headers* tab of Swagger Insector and enter your SAP credentials before running the service.
+you have to select *Basic Authentication* in the *Authentication & Headers* tab of Swagger Inspector and enter your SAP credentials before running the service.
 
 After parsing the service definition, the URL of the service endpoint should be available in the main URI input line.
 If not, enter the URL and select the *POST* method. 
