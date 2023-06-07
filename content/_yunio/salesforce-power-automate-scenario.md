@@ -39,7 +39,7 @@ Select CUSTOMERNO for export. This Export parameter contains the newly created S
 
 ### Setup in Salesforce
 
-Customize your Salesforce account to provide SAP related fields:
+Customize your Salesforce account to provide SAP-related fields:
 - Create a field *SAP ID*. Once a customer is created in SAP, the customer number is written back into *SAP ID*.
 - *Company Code*, *Sales Org*, *Distribution Channel* and *Division* are organization details required to create the SAP customer.
 - Create a checkbox that indicates if the customer exists in SAP.
@@ -54,9 +54,9 @@ For more information on how to customize fields in Salesforce, see [Salesforce D
 
 ### Setup in Power Automate
 
-1. Integrate the yunIO service created in [Setup in yunIO](#setup-in-yunio) in Power Automate, see [Integrating a yunIO Service with Power Automate](https://kb.theobald-software.com/yunio/integrating-a-yunio-service-with-power-automate#configuring-a-yunio-custom-connector-in-power-automate).
+1. Integrate the yunIO service created in [Setup in yunIO](#setup-in-yunio) as a Custom Connector in Power Automate, see [Integrating a yunIO Service with Power Automate](https://kb.theobald-software.com/yunio/integrating-a-yunio-service-with-power-automate#configuring-a-yunio-custom-connector-in-power-automate).
 2. Create a new workflow that is triggered when a Salesforce account is modified (1).
-3. Check if the account type is *Customer - Direct* and if the customer does not yet exist in SAP (2).<br>
+3. Check if the account type in Salesforce is set to *Customer - Direct* and if the customer does not yet exist in SAP (2).<br>
 If one or both conditions are false, end the workflow (3).
 If both conditions are true, execute the yunIO service to write the customer data to SAP (4).<br>
 ![power-automate-salesforce-conditions](/img/contents/yunio/power-automate-salesforce-conditions.png){:class="img-responsive"}
@@ -72,7 +72,7 @@ If TYPE does not equal 'E' (error), the SAP customer number is written back to S
 
 ### Triggering the Process
 
-1. Go to Salesforce and change the account type from *Prospect* to *Customer - Direct*.
+1. Open Salesforce and change the account type from *Prospect* to *Customer - Direct*.
 Make sure that the checkbox *In SAP* is deactivated.
 2. The Power Automate workflow runs and creates the customer in SAP. <br>
 ![power-automate-finished](/img/contents/yunio/power-automate-finished.png){:class="img-responsive"}

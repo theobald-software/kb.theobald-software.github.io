@@ -80,7 +80,7 @@ BAPI_PR_CREATE require this commit function to successfully update data in the d
 
 ### Setup in SharePoint
 
-Create a SharePoint list that provides SAP related fields.
+Create a SharePoint list that provides SAP-related fields.
 For this example, create the following columns:
 - Material
 - Plant
@@ -89,7 +89,7 @@ For this example, create the following columns:
 - Cost Center
 - Purchase Requisition Number (when a purchase requisition number is created in SAP, it is written back to this column)
 
-![sharepoint-purchase-requisition](/img/contents/yunio/sharepoint-purchase-requisition.png){:class="img-responsive" }
+![sharepoint-purchase-requisition](/img/contents/yunio/sharepoint-purchase-requisition0.png){:class="img-responsive" }
 
 For more information on SharePoint lists, see [Microsoft Documentation: Introduction to lists](https://support.microsoft.com/en-us/office/introduction-to-lists-0a1c3ace-def0-44af-b225-cfa8d92c52d7).
 
@@ -102,64 +102,21 @@ For more information on SharePoint lists, see [Microsoft Documentation: Introduc
 
 ### Setup in Power Automate
 
-{: .box-note }
-**Note:** When integrating services from a local yunIO installation with a cloud hosted platform like Power Automate, a gateway to tunnel the connection is recommended, e.g., the [**Microsoft On-premises data gateway**](https://docs.microsoft.com/en-us/data-integration/gateway/).
-For more information about yunIO networking settings, see [yunIO Networking Scenarios](https://kb.theobald-software.com/yunio/networking).
-
-1. Open the section **Data > Custom Connectors** in Power Automate and click on **+ New custom connector**.
-2. Click on **Import an OpenAPI file** and give the connector a name of your choice. Select the service definition from [Setup in yunIO](#setup-in-yunio) from your harddrive and click **Continue**. 
-3. In the **General** tab you can define general information for the custom connector. <br> 
-- With **Upload** you can upload a connector icon of your choice. Defining an alternative icon background color or a service description is optional.  
-- If you use an on-premises data gateway, activate the checkbox **Connect via on-premises gateway**.<br>
-- **Scheme**: With [TLS enabled](https://help.theobald-software.com/en/yunio/server-settings#transport-layer-security) in the yunIO server settings, the HTTPS scheme is pre-selected. In this example TLS is disabled, so the HTTP scheme is set.<br> 
-- Under **Host** the host address for the yunIO service consumption with its respective port is preset. For local installations the host address is `localhost:[port]`.<br> 
-- The **Base URL** represents extensions of the REST service URL that is triggered by the custom connector. <br>
-![Power-Automate-Custom-Connector-Ceneral.png](/img/contents/yunio/power-automate-custom-connector-general.png){:class="img-responsive"}
-4. In the **Security** tab you can select the authentication type for service consumption. <br> 
-- *No authentication* is pre-set. This means that there is no authentication required by users calling the connector. <br>
-- If [*Request credentials from callers when running services*](https://help.theobald-software.com/en/yunio/sap-connection#authentication) is enabled in the yunIO connection settings, you can also select *Basic authentication*. 
-This means that the SAP user name and password used for the SAP connection, must be stored in the Connection Settings defined in the [**Test** tab](#testing-the-service).
-- This example uses *Basic authentication* and labels the parameters *SAP User* and *Password*
-![Power-Automate-Custom-Connector-Security.png](/img/contents/yunio/power-automate-custom-connector-security.png){:class="img-responsive"} 
-![Power-Automate-Custom-Connector-Security-Basic.png](/img/contents/yunio/power-automate-custom-connector-security-basic.png){:class="img-responsive"} 
-5. The **Definition** tab gives an overview about the yunIO service definition. No changes necessary. This also applies to the **Code (Preview)** tab.
-
-{: .box-note }
-**Note:** Before the service can be tested in the **Test** tab, the custom connector must be published with **Create connector**. 
-
-{: .box-tip }
-**Tip:** When testing a new custom connector, you can switch to **Swagger Editor** mode and paste test sets directly from Swagger Editor / Swagger Inspector.
-For more information on how to test yunIO services in Swagger Inspector, refer to the knowledge base article [Running a yunIO Service in Swagger Inspector](https://kb.theobald-software.com/yunio/running-a-yunio-service-in-swagger-inspector).
-
-### Testing the Service
-
-The custom connector can be tested in the **Test** tab. <br>
-- Create a connection with **+ New connection**. 
-- Enter the credentials of the SAP user you have defined in the yunIO connection settings. If you select to connect via an on-premises gateway in the *General* tab, select your gateway instance.
-- Confirm the settings with **Create connection**.   
-
-![Power-Automate-Custom-Connector-Test-Connection.png](/img/contents/yunio/power-automate-custom-connector-test-connection.png){:class="img-responsive"} 
-
-To test run the service 
-- **(1)** enter valid import values for the parameters you defined as *Supplied by caller* in the yunIO service settings. 
-- **(2)** click **Test operation**. 
-- **(3)** the SAP response is displayed in the Request Body. 
-
-![Power-Automate-Custom-Connector-Test-Operation.png](/img/contents/yunio/power-automate-custom-connector-test-operation.png){:class="img-responsive"} 
-
-{: .box-tip }
-**Tip:** For services calling Function Modules or BAPIs that use tables or structured input information, switch **Raw Body** off to get a better structured input screen.
+1. Integrate the yunIO service created in [Setup in yunIO](#setup-in-yunio) as a Custom Connector in Power Automate, see [Integrating a yunIO Service with Power Automate](https://kb.theobald-software.com/yunio/integrating-a-yunio-service-with-power-automate#configuring-a-yunio-custom-connector-in-power-automate).
+2. Create a new workflow that is triggered when a new item is added to the SharePoint list.
+3. Add the yunIO connector created in step 1 to the workflow and map the purchase requisition data from SharePoint to the input parameters of yunIO.<br>
+![sharepoint-purchase-requisition3](/img/contents/yunio/sharepoint-purchase-requisition3.png){:class="img-responsive"}
+4. Make sure that the SharePoint input uses the right format, e.g., the delivery date must have the SAP format `YYYYmmDD` and the cost center must have 10 characters, including leading zeroes.
+5. Add a SharePoint **Update Item** tool to write the purchase requisition number from the yunIO Custom Connector back to the SharePoint list.<br>
+![sharepoint-purchase-requisition2](/img/contents/yunio/sharepoint-purchase-requisition2.png){:class="img-responsive"}
+7. Optional: Send notifications when a purchase requisition is created. 
+8. Turn on the workflow.
 
 
-### Using the Service in a Power Automate Flow
-After a connector is successfully tested, it can be used in a Flow. 
-- Add a new action to the Flow and search for the name of the custom connector. <br>
-![Power-Automate-Custom-Connector-Flow-Action.png](/img/contents/yunio/power-automate-custom-connector-flow-action.png){:class="img-responsive"} 
-- Once the connector is added, the input fields can be parameterized. <br>
-![Power-Automate-Custom-Connector-Flow.png](/img/contents/yunio/power-automate-custom-connector-flow.png){:class="img-responsive"} 
+### Triggering the Process
 
-******
+1. Open SharePoint and add a new purchase requisition.
+2. The Power Automate workflow runs and creates the purchase requisition in SAP.
+3. Check if the SAP purchase requisition number is written back to SharePoint.
+![sharepoint-purchase-requisition](/img/contents/yunio/sharepoint-purchase-requisition.png){:class="img-responsive" }
 
-#### Related Links
-- [Youtube Tutorial: SAP process automation - Power Automate SAP Connector](https://www.youtube.com/watch?v=k_yL8Bphfus)
-- [yunIO Help: How to Run a Service](https://help.theobald-software.com/en/yunio#how-to-run-a-service)
