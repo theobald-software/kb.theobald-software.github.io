@@ -1,41 +1,36 @@
 ---
 layout: page
-title: ODP based Delta Extraction of Sales and Customer Data from an SAP ERP System 
-description: Test
+title: Create and Load Purchase Requisitions in SAP ERP 
+description: Create and Load Purchase Requisitions in SAP ERP 
 permalink: /:collection/:path
-weight: 180
+weight: 20
 ---
 
-This article shows how to use the Xtract ODP component of Xtract for Alteryx to load sales documents and customer master data from an SAP ERP system.<br>
+This article shows how to use the Xtract BAPI component of Xtract for Alteryx to create a new purchase requisition in SAP and how to load the data of the purchase requisition into Alteryx.
 
 ### About this Workflow
 
 This article leads you through all necessary steps to set up the following workflow:
-- Load all customer master data from the SAP ERP system
-- Process the extracted SAP data
-- Load sales data using the delta mechanism of the Xtract ODP component
-
- The delta mechanism of the Xtract ODP component allows loading only the added or changed data (since the last run) from an SAP ERP system.
+- Create a new purchase requisition in an SAP ERP system. <br>
+This process uses a simple input table that contains the data for the purchase requisition.
+- Use the new purchase requisition number to load the details of the purchase requisition into Alteryx. <br>
+This process uses an input parameter and a macro to pass the input parameter to the Xtract BAPI component.
 
 | SAP System | SAP Objects | Xtract for Alteryx Component |
 | :------ |:--- | :--- |
-| SAP ERP | BW Extractors: *2LIS_11_VAITM* (Sales Document Item Data) & *0CUSTOMER_ATTR* (Customer Master Data) | Xtract ODP |
+| SAP ERP | *BAPI_REQUISITION_CREATE* (Create Purchase Requisition) <br>*BAPI_REQUISITION_GETDETAIL* (Display Purchase Requisition Details) | Xtract BAPI |
 
+<!---
 You can download the Alteryx workflow for this application in the [Alteryx Community - ODP based Delta Extraction of Sales and Customer Data from SAP ERP with Xtract for Alteryx](https://community.alteryx.com/t5/Community-Gallery/ODP-based-Delta-Extraction-of-Sales-and-Customer-Data-from-SAP/ta-p/1140120).
+-->
 
-
-![odp-workflow](/img/contents/xfa/odp-workflow.png){:class="img-responsive" width="900px"}
+![bapi-workflow](/img/contents/xfa/bapi-workflow.png){:class="img-responsive"}
 
 ### Prerequisites
 
-Implement the following SAP notes to use the Xtract ODP component:
-- [1931427 - ODP Data Replication API 2.0](https://launchpad.support.sap.com/#/notes/1931427)
-- [2232584 - Release of SAP extractors for ODP replication (ODP SAPI)](https://launchpad.support.sap.com/#/notes/2232584)
-- [1560241 - Release of DataSources for ODP data replication API](https://launchpad.support.sap.com/#/notes/1560241)
-- [2196500 - ODP Package size cannot be reduced below 50 MB](https://launchpad.support.sap.com/#/notes/2196500/D)
-- [2191995 - ODQ Package Size cannot be reduced below 50 MByte](https://launchpad.support.sap.com/#/notes/2191995/D)
 
-### Delta Extraction of Sales Documents
+
+### Creating a new Purchase Requisition
 
 Follow the steps below to load sales data from your SAP ERP system:
 1. Drag & drop the Xtract ODP component into your Alteryx workflow (1).<br>
