@@ -26,7 +26,7 @@ For more information on the Swagger Inspector, see [Swagger Inspector Documentat
 - Click on the upload icon to load a service definition from your hard drive (2).
 3. Click **[PARSE]** to analyze the service definition (3).<br>
 ![Swagger-Inspector-Load-Service-1](/img/contents/yunio/swagger-inspector-load.png){:class="img-responsive"}
-4. Once the service is parsed, click on either the GET or POST method of the service (4) to access the authentication, headers and parameter settings of the service.<br>
+4. Once the service is parsed, click on either the GET or POST method of the service (4) to access authentication, headers and parameter settings.<br>
 We recommend using the POST method with Transport Layer Security (HTTPS) to ensure data protection. 
 Do not use the GET method to send sensible data, e.g. credentials.<br>
 ![Swagger-Inspector-Load-Service-2](/img/contents/yunio/swagger-inspector-load-body.png){:class="img-responsive"}
@@ -42,13 +42,12 @@ To set parameters, edit the *Body*, e.g. change the WHERE clause of the table ex
 ![Swagger-Inspector](/img/contents/yunio/swagger-inspector.png){:class="img-responsive"}
 
 {: .box-note }
-**Note:** When passing a WHERE clause to a yunIo service using the http GET method, you must add spaces manually, e.g., `MANDT=800 and LAND1='DE'` instead of `MANDT=800andLAND1='DE'`.
+**Note:** When passing a WHERE clause to a yunIo service using the http GET method, add spaces manually, e.g., `MANDT=800 and LAND1='DE'` instead of `MANDT=800andLAND1='DE'`.
 
 ### Running the Service
 
 {: .box-note }
-**Note:** If the option [*Request credentials from callers when running services*](https://help.theobald-software.com/en/yunio/sap-connection#authentication) is active in the connection settings in yunIO, 
-you have to select *Basic Authentication* in the *Authentication & Headers* tab of Swagger Inspector and enter your SAP credentials before running the service.
+**Note:** If the option [*Request credentials from callers when running services*](https://help.theobald-software.com/en/yunio/sap-connection#authentication) is active in the connection settings in yunIO, select *Basic Authentication* in the *Authentication & Headers* tab of Swagger Inspector and enter your SAP credentials before running the service.
 
 After parsing the service definition, the URL of the service endpoint should be available in the main URI input line.
 If not, enter the URL and select the *POST* method. 
