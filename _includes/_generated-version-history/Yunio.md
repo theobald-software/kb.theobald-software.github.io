@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.20.2 [L]|2023-06-09|Designer|Delete button inside service fixed|
 |1.20.1 [L]|2023-06-07|Management|Fixed a bug where the windows service could not be stopped when Azure Relay was active.|
 |[1.20.0 [L]](https://kb.theobald-software.com/release-notes/Yunio-1.20.0.html)|2023-06-06|Runtime|Refactored the services server backend to enable future development. Various bug fixes.([Release note](https://kb.theobald-software.com/release-notes/Yunio-1.20.0.html))|
 |1.19.0 [M]|2023-06-01|General|Old logs are now automatically deleted when executing a service|
