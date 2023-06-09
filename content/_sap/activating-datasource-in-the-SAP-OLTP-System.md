@@ -40,5 +40,5 @@ DataSources can be extracted using the ODP or DeltaQ component of any Theobald S
 #### Related Links
 - [Set Up and Activate DataSources](https://help.sap.com/viewer/7a60944343e543a1ab99e9b2904dab09/CLOUD/en-US/e5d447257a95416190d29638a64a5dfa.html)
 - [SAP Help: Application Component Hierarchy](https://help.sap.com/viewer/107a6e8a38b74ede94c833ca3b7b6f51/2.0.9/en-US/bd594782b57c4c0db445752e31519e31.html)
-- [Copying BI Content DataSources to the Active Version](http://saphelp.ucc.ovgu.de/NW750/EN/4a/0c98f779291b43e10000000a42189c/frameset.htm)
+- [Copying BI Content DataSources to the Active Version](https://help.sap.com/doc/saphelp_nw73ehp1/7.31.19/en-US/4a/0c98f779291b43e10000000a42189c/content.htm)
 - [SAP Help: Editing DataSources and Application Component Hierarchies](https://help.sap.com/doc/saphelp_nw73ehp1/7.31.19/en-US/49/ae67401d4988448036b180dc9ec1e6/frameset.htm)
