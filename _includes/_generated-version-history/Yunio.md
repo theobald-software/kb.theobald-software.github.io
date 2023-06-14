@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.20.4 [L]|2023-06-15|Designer|Preparations for Service Access Control|
 |1.20.3 [L]|2023-06-09|Designer|Delete button inside services fix|
 |1.20.2 [L]|2023-06-09|Designer|Filtering services list by type and source|
 |1.20.1 [L]|2023-06-07|Management|Fixed a bug where the windows service could not be stopped when Azure Relay was active.|
