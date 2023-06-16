@@ -26,6 +26,8 @@ For more information, see [Online Help: Parameterizing](https://help.theobald-so
 | :------ |:--- | :--- |
 | SAP ERP | *BAPI_REQUISITION_CREATE* (Create Purchase Requisition) <br>*BAPI_REQUISITION_GETDETAIL* (Display Purchase Requisition Details) | Xtract BAPI |
 
+You can download the Alteryx workflow for this application here: [BAPI-ERP-ReadAndWriteWithMacro.yxzp](/files/xfa/BAPI-ERP-ReadAndWriteWithMacro.yxzp){:download="BAPI-ERP-ReadAndWriteWithMacro.yxzp"}
+
 <!---
 You can download the Alteryx workflow for this application in the [Alteryx Community - ODP based Delta Extraction of Sales and Customer Data from SAP ERP with Xtract for Alteryx](https://community.alteryx.com/t5/Community-Gallery/ODP-based-Delta-Extraction-of-Sales-and-Customer-Data-from-SAP/ta-p/1140120).
 -->
@@ -105,6 +107,7 @@ The batch macro can now be used to load SAP purchase requisition data of any giv
 
 *****
 #### Related Links
+- [Download Link for BAPI-ERP-ReadAndWriteWithMacro.yxzp](/files/xfa/BAPI-ERP-ReadAndWriteWithMacro.yxzp){:download="BAPI-ERP-ReadAndWriteWithMacro.yxzp"}
 - [Online Help: Xtract BAPI](https://help.theobald-software.com/en/xtract-for-alteryx/bapi)
 - [Online Help: Sample Workflows](https://help.theobald-software.com/en/xtract-for-alteryx/sample-workflows)
 - [Online Help: Parameterizing](https://help.theobald-software.com/en/xtract-for-alteryx/parameterizing)
