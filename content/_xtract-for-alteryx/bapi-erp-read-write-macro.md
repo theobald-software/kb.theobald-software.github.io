@@ -11,14 +11,15 @@ This article shows how to use the Xtract BAPI component of Xtract for Alteryx to
 ### About this Workflow
 
 This article leads you through all necessary steps to set up the following workflow:
-- Create the purchase requisition in an SAP ERP system. <br>
+- Create a new purchase requisition in an SAP ERP system. <br>
 This process uses a simple input table that contains the data for the purchase requisition.
 - Use the new purchase requisition number to load the details of the purchase requisition into Alteryx. <br>
 This process uses an input parameter and a batch macro to pass the input parameter to the Xtract BAPI component.
 
 {: .box-note }
-**Note:** While input tables can be passed to the Xtract BAPI component directly, single values require the usage of batch macros.
-For more information on how to parameterize Xtract components, see [Online Help: Parameterizing](https://help.theobald-software.com/en/xtract-for-alteryx/parameterizing). 
+**Note:** When using Xtract for Alteryx version 1.18 and below tables can be passed to the Xtract BAPI component directly, while single values require the usage of batch macros.
+As of Xtract for Alteryx version 1.19 all input parameters can be passed to the Xtract BAPI component without the use of a batch macro. 
+For more information, see [Online Help: Parameterizing](https://help.theobald-software.com/en/xtract-for-alteryx/parameterizing). 
 
 
 | SAP System | SAP Objects | Xtract for Alteryx Component |
