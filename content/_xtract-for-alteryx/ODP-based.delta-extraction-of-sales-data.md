@@ -6,7 +6,7 @@ permalink: /:collection/:path
 weight: 180
 ---
 
-The following article shows how to use the Xtract ODP component of Xtract for Alteryx to load sales documents and customer master data from an SAP ERP system.<br>
+This article shows how to use the Xtract ODP component of Xtract for Alteryx to load sales documents and customer master data from an SAP ERP system.<br>
 
 ### About this Workflow
 
@@ -66,7 +66,7 @@ Follow the steps below to load customer master data from your SAP ERP system:
 2. Select an SAP connection (2). If no SAP connection is available, create a new connection, see [Online Help: Creating an SAP Connection](https://help.theobald-software.com/en/xtract-for-alteryx/sap-connection).
 3. Click **[Edit]** (3) to open the main window of the Xtract ODP component.
 4. In the main window of the component click ![magnifying-glass](/img/contents/icons/magnifying-glass.png). The window “Operational Data Provider Lookup” opens.
-5. In the field Name (4) enter the name of the customer master data extractor: *0CUSTOMER_ATTR*. Use wildcards (*), if needed.<br>
+5. In the field **Name** (4) enter the name of the customer master data extractor: *0CUSTOMER_ATTR*. Use wildcards (*), if needed.<br>
 ![odp-lookup-customer-data](/img/contents/xfa/odp-lookup-customer-data.png){:class="img-responsive"}
 6. Click ![magnifying-glass](/img/contents/icons/magnifying-glass.png) and select the *0CUSTOMER_ATTR* extractor from the displayed list (5).
 7. Click **[OK]**.

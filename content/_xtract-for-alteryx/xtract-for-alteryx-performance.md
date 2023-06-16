@@ -3,7 +3,7 @@ layout: page
 title: Xtract fo Alteryx Performance Considerations
 description: Test
 permalink: /:collection/:path
-weight: 165
+weight: 20
 ---
 
 This article contains information on performance measurements for Xtract for Alteryx.<br>
