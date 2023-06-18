@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.43.9 [L]|2023-06-18|BW Cube|BICS: Fixed integer, decimal and partial float key figure values|
 |1.43.8 [L]|2023-06-15|BW Cube|MDX: Fixed legacy name conflict resolution|
 |1.43.7 [L]|2023-06-04|BW Cube|BICS: Fixed data type of integer characteristics|
 |1.43.6 [L]|2023-06-01|BW Cube|BICS: Fixed data type of timestamp characteristics|
