@@ -56,7 +56,7 @@ Follow the steps below to create a new purchase requisition in SAP:
 Use this information to prepare the input data of the purchase requisition:<br>
 ![create-purchase-requisition-input-table](/img/contents/xfa/create-purchase-requisition-input-table.png){:class="img-responsive"}
 9. Connect the input data to the Xtract BAPI component (6).<br>
-![bapi-input](/img/contents/xfa/bapi-input.jpg){:class="img-responsive"}
+![bapi-input](/img/contents/xfa/bapi-input.jpg){:class="img-responsive"} 
 10. Open the Xtract BAPI component.
 11. In the tab *Tables* assign the input data to the table REQUISITION_ITEMS.<br>
 ![create-purchase-requisition-table-param](/img/contents/xfa/create-purchase-requisition-table-param.png){:class="img-responsive"}
@@ -64,6 +64,8 @@ Use this information to prepare the input data of the purchase requisition:<br>
 12. In the tab *Exports* add the export parameter NUMBER for the output.
 ![create-purchase-requisition-export-param](/img/contents/xfa/create-purchase-requisition-export-param.png){:class="img-responsive"}
 13. Click **[OK]** to save the settings.
+14. Select the Xtract BAPI component and activate the option **Commit work in SAP after execution**.<br>
+![BAPI-configuration](/img/contents/xfa/BAPI-configuration.png){:class="img-responsive"}
 
 The Xtract BAPI component can now be used to create purchase requisitions in SAP.
 
