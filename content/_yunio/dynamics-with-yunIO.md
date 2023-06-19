@@ -28,62 +28,31 @@ Follow the steps below to set up a yunIO service that creates purchase requisiti
 
 1. Define a [connection to your SAP system](https://help.theobald-software.com/en/yunio/sap-connection) in yunIO. 
 2. [Create a new service](https://help.theobald-software.com/en/yunio/getting-started#creating-a-service) in yunIO. This example uses the integration type *Function Module* for the service.
-3. [Look up](https://help.theobald-software.com/en/yunio/bapis-and-function-modules#look-up-a-function-module--bapi) the standard BAPI, BAPI_PR_CREATE that creates purchase requisitions in SAP. 
-4. Set the following import parameters to *Supplied by Caller*: 
+3. [Look up](https://help.theobald-software.com/en/yunio/bapis-and-function-modules#look-up-a-function-module--bapi) the standard BAPI, BAPI_REQUISITION_CREATE that creates purchase requisitions in SAP. 
+4. Set the following table parameters to *Supplied by Caller*:
 
 	| Table | Field | Description |
 	| :------ |:--- | :--- |
-	| PRHEADER |  | Transfer Structure for Enjoy Purchase Req. - Header |
-	| PRHEADER | PR_TYPE | Order Type (Purchasing) |
-	| PRHEADERX |  | Change Parameter for Enjoy Purchase Requisition - Header |
-	| PRHEADERX | PR_TYPE | Updated information in related user data field |
-	
-5. Set the following table parameters to *Supplied by Caller*:
+	| REQUISITION_ITEMS | PREQ_ITEM | Item Number of Purchase Requisition |
+	| REQUISITION_ITEMS  | DOC_TYPE | Purchase Requisition Document Type |
+	| REQUISITION_ITEMS  | MATERIAL | Material Number |
+	| REQUISITION_ITEMS  | PLANT | Plant |
+	| REQUISITION_ITEMS  | QUANTITY | Purchase Requisition Quantity |
+	| REQUISITION_ITEMS  | DELIV_DATE | Item Delivery Date |
 
-	| Table | Field | Description |
-	| :------ |:--- | :--- |
-	| PRACCOUNT |  | Transfer Structure for Enjoy Purchase Req. - Acct Assignment |
-	| PRACCOUNT | PREQ_ITEM | Item Number of Purchase Requisition |
-	| PRACCOUNT | SERIAL_NO | Sequential Number of Account Assignment |
-	| PRACCOUNT | GL_ACCOUNT | G/L Account Number |
-	| PRACCOUNT | COSTCENTER | Cost Center |
-	| PRACCOUNTX | | Change Toolbar for Enjoy Purchase Req. - Account Assignment |
-	| PRACCOUNTX | PREQ_ITEM | Item Number of Purchase Requisition |
-	| PRACCOUNTX | SERIAL_NO | Sequential Number of Account Assignment |
-	| PRACCOUNTX | PREQ_ITEMX | Updated information in related user data field |
-	| PRACCOUNTX | SERIAL_NOX | Updated information in related user data field |
-	| PRACCOUNTX | GL_ACCOUNT | Updated information in related user data field |
-	| PRACCOUNTX | COSTCENTER | Updated information in related user data field |
-	| PRITEM | | Transfer Structure for Enjoy Purchase Req. - Item Data |
-	| PRITEM | PREQ_ITEM | Item Number of Purchase Requisition |
-	| PRITEM | MATERIAL | Material Number |
-	| PRITEM | PLANT | Plant |
-	| PRITEM | QUANTITY | Purchase Requisition Quantity |
-	| PRITEM | DELIV_DATE | Item Delivery Date |
-	| PRITEM | ACCTASSCAT | Account Assignment Category |
-	| PRITEMX | | Change Parameter for Enjoy Purchase Requisition - Item Data |
-	| PRITEM | PREQ_ITEM | Item Number of Purchase Requisition |
-	| PRITEM | PREQ_ITEMX | Updated information in related user data field |
-	| PRITEM | MATERIAL | Updated information in related user data field |
-	| PRITEM | PLANT | Updated information in related user data field |
-	| PRITEM | QUANTITY | Updated information in related user data field |
-	| PRITEM | DELIV_DATE | Updated information in related user data field |
-	| PRITEM | ACCTASSCAT | Updated information in related user data field |
-
-6. Select the table RETURN for export. This table contains logs and error messages.
-7. Select the export parameter NUMBER for the output. This parameter contains the new SAP purchase requisition number that is written back to SharePoint.
-8. Activate the advanced setting **Commits Transaction**. If this option is active, the function module “BAPI_TRANSACTION_COMMIT” is called after processing the selected Function Module / BAPI. 
-BAPI_PR_CREATE require this commit function to successfully update data in the database.<br>
-![SAPPurchaseRequisitionCreate-export](/img/contents/yunio/SAPPurchaseRequisitionCreate-export.png){:class="img-responsive"}
+5. Select the table RETURN for the output. This table contains logs and error messages.
+6. Select the export parameter NUMBER for the output. This parameter contains the new SAP purchase requisition number that is written back to Dynamics 365.
+8. Activate the advanced setting **Commits Transaction**.<br>
+![SAPRequisitionCreate-export](/img/contents/yunio/SAPRequisitionCreate-export.png){:class="img-responsive"}
 8. Download the service definition (![download-file](/img/contents/yunio/download.png) icon).<br>
 ![yunio-Services-Function-Download](/img/contents/yunio/yunio-run-services-function-download.png){:class="img-responsive" }
 
 {: .box-tip }
 **Tip:** It is recommended to test a yunIO service in a REST client before integrating it with Power Automate, see [Running a yunIO Service in Swagger Inspector](https://kb.theobald-software.com/yunio/running-a-yunio-service-in-swagger-inspector) or [Running a yunIO Service in Postman](https://kb.theobald-software.com/yunio/running-a-yunio-service-in-postman). 
 
-### Setup in SharePoint
+### Setup in Dynamics 365
 
-Create a SharePoint list that provides SAP-related fields.
+Create ... that provides SAP-related fields.
 For this example, create the following columns:
 - Material
 - Plant
