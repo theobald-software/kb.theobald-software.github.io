@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.19.2 [L]|2023-06-20|General|Fixed a bug that causes errors in subsequent tools when copying Xtract tools and using the old Alteryx engine|
 |1.19.1 [L]|2023-06-14|BAPI|Fixed a bug that caused errors when passing pipeline tables into the BAPI tool (Bug introduced in 1.19.0)|
 |1.19.0 [L]|2023-06-12|General|Runtime parameters can now be provided from the workflow pipeline using input connection 'P'|
 |1.18.2 [L]|2023-05-03|BAPI|Fixed a bug that caused the Alteryx Designer to close in case of an error|
