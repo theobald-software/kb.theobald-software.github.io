@@ -6,22 +6,21 @@ permalink: /:collection/:path
 weight: 1
 ---
 
-Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
-
 ### About
-To use our products you need an SAP connection user with sufficient authorization in SAP. Authorizations are assigned via authorization objects in SAP. <br>
+To use Theobald Software products you need an SAP connection user with sufficient authorization in SAP. Authorizations are assigned via authorization objects in SAP. <br>
 
 The authorizations in the first section "General authorization objects" are required to establish an SAP connection with the SAP application server. 
-The remaining sections show the authorizations required for the respective components. Depending on the components that you want to use, the corresponding authorizations are required. 
+The remaining sections show the authorizations required for the respective components. Depending on the component in use, the corresponding authorizations are required. 
 
-Please redirect this article to your SAP Basis admins to get the relevant authorization objects you require for your SAP connection user.  
+Redirect this article to your SAP Basis admins to get the relevant authorization objects for your SAP connection user.  
 
 {: .box-note }
-**Note** Should you still get an authorization error in or software, ask SAP Basis to record an ST01-/ or SU53-authorization trace in SAP. This trace tells you, which authorizations objects are missing.
+**Note** If you still get an authorization error, ask SAP Basis to record an ST01-/ or SU53-authorization trace in SAP. This trace shows which authorizations objects are missing.
 
 ### General authorization objects
 
 The following objects are required to establish a connection to SAP.
+Download the required SAP roles --- [SAP profile for general authorization](/files/sap_roles/ZXTGENERAL.SAP)
 
 ```
 S_RFC            RFC_TYPE=FUGR; RFC_NAME=SYST; ACTVT=16
@@ -47,13 +46,13 @@ S_TABU_DIS       ACTVT=03; DICBERCLS=XXXX
 S_TABU_NAM       ACTVT=03; TABLE=DD02V, DD17S, DD27S, ENLFDIR
 ```
 
-XXXX (stands for a placeholder) is the Authority Group for the table. To find out, which authority group belongs to which table look at table TDDAT (e.g. with SE16). 
-If the table is not listed there the authority group is &NC&. For authorizing specific tables please use authorization object S_TABU_NAM instead of S_TABU_DIS.
+XXXX (stands for a placeholder) is the Authority Group for the table. To determine, which authority group belongs to which table look at table TDDAT (e.g. with SE16). 
+If the table is not listed, the authority group is &NC&. For authorizing specific tables use authorization object S_TABU_NAM instead of S_TABU_DIS.
 
 {: .box-note }
 **Note** The transport request for function group *Z_THEO_READ_TABLE* is located in the following path: ```C:\Program Files\[XtractProduct]\ABAP\Table``` of the default installation. 
 
-When executing our custom function module Z_THEO_READ_TABLE in background:
+When executing the custom function module Z_THEO_READ_TABLE in the background:
 
 ```
 S_BTCH_ADM       BTCADMIN=Y
@@ -108,7 +107,7 @@ S_BTCH_JOB       JOBGROUP=*; JOBACTION=RELE
 ```
 
 {: .box-note }
-**Note** The needed transport request for function group *ZXTRACTABAP* is located in the following path: ```C:\Program Files\[XtractProduct]\ABAP\Report\Z_XTRACT_IS_REMOTE_REPORT-transport.zip``` of the default installation.
+**Note** The necessary transport request for function group *ZXTRACTABAP* is located in the following path: ```C:\Program Files\[XtractProduct]\ABAP\Report\Z_XTRACT_IS_REMOTE_REPORT-transport.zip``` of the default installation.
 
 ### SAP Query
 
@@ -120,7 +119,7 @@ S_RFC            RFC_TYPE=FUGR; RFC_NAME=AQRC; ACTVT=16
 
 ### ODP
 
-A complete and detailed list of authorization objects refer to [SAP Note 2855052](https://launchpad.support.sap.com/#/notes/2855052) - Authorizations required for ODP Data Replication API 2.0. 
+For a complete and detailed list of authorization objects refer to [SAP Note 2855052](https://launchpad.support.sap.com/#/notes/2855052) - Authorizations required for ODP Data Replication API 2.0. 
 
 When using "Adjust currency decimals" setting:
 ```
@@ -160,7 +159,7 @@ S_TABU_NAM       ACTVT=03; TABLE=RSRREPDIR
 S_TABU_NAM       ACTVT=03; TABLE=RSZGLOBV
 ```
 
-Optional (needed for date conversion): 
+Optional (necessary for date conversion): 
 
 ```
 S_TABU_NAM       ACTVT=03; TABLE=DD03L
@@ -183,7 +182,7 @@ Alternatively, you can assign pfcg template *S_RS_RREPU - BW Role: Reporting Use
 
 ### DeltaQ
 
-Authority objects needed for the customizing check:
+Authority objects necessary for the customizing check:
 
 ```
 S_RFC            RFC_TYPE=FUGR; RFC_NAME=SUSR; ACTVT=16  
