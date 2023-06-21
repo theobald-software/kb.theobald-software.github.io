@@ -13,7 +13,7 @@ In the following scenario, data from SharePoint is used to automatically create 
 This article leads you through all necessary steps to set up the following process:
 
 - When a new purchase requisition is added to a SharePoint list, a Power Automate workflow is triggered. 
-This process also works with other automation tools, e.g. Nintex.
+This process also works with other automation tools, e.g., Nintex.
 - The workflow uses the SharePoint data to run a yunIO service that creates a new purchase requisition in SAP.
 - When the purchase requisition is created in SAP, the new SAP purchase requisition number is written back to the SharePoint list.
 
@@ -75,11 +75,11 @@ Follow the steps below to set up a yunIO service that creates purchase requisiti
 8. Activate the advanced setting **Commits Transaction**. If this option is active, the function module “BAPI_TRANSACTION_COMMIT” is called after processing the selected Function Module / BAPI. 
 BAPI_PR_CREATE require this commit function to successfully update data in the database.<br>
 ![SAPPurchaseRequisitionCreate-export](/img/contents/yunio/SAPPurchaseRequisitionCreate-export.png){:class="img-responsive"}
-8. Download the service definition (![download-file](/img/contents/yunio/download.png) icon).<br>
+8. Click ![download-file](/img/contents/yunio/download.png) to download the service definition.<br>
 ![yunio-Services-Function-Download](/img/contents/yunio/yunio-run-services-function-download.png){:class="img-responsive" }
 
 {: .box-tip }
-**Tip:** It is recommended to test a yunIO service in a REST client before integrating it with Power Automate, see [Running a yunIO Service in Swagger Inspector](https://kb.theobald-software.com/yunio/running-a-yunio-service-in-swagger-inspector) or [Running a yunIO Service in Postman](https://kb.theobald-software.com/yunio/running-a-yunio-service-in-postman). 
+**Tip:** Test a yunIO service in a REST client before integrating it with Power Automate, see [Running a yunIO Service in Swagger Inspector](https://kb.theobald-software.com/yunio/running-a-yunio-service-in-swagger-inspector) or [Running a yunIO Service in Postman](https://kb.theobald-software.com/yunio/running-a-yunio-service-in-postman). 
 
 ### Setup in SharePoint
 
