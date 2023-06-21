@@ -24,7 +24,7 @@ The access to reports is granted based on the name of the report.
 Object: Z_TS_PRO<br>
 Text: Theobald Software Report Authorization<br>
 ![report-create-authorization-object](/img/contents/sap-create-authorization-object.png){:class="img-responsive"}
-4. Click **[Continue]** (icon). The section *Authorization fields* can be edited.
+4. Click **[Continue]** to enable editing of the section *Authorization fields*.
 5. Manually enter S_NAME as the first entry in *Authorization fields*. 
 6. Click **[Save]** to save the authorization object.
 
