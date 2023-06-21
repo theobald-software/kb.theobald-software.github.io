@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.25.4 [L]|2023-06-21|General|Added removed tablecdc component to xu-config|
 |5.25.3 [L]|2023-06-16|Destinations|Added support for VS 2022 for SSRS/Power BI Report Server Plugin|
 |5.25.2 [L]|2023-06-01|Designer|Fixed bug on extraction settings window when extraction was not yet fully configured|
 |5.25.1 [L]|2023-05-31|Service|Added option to clone and delete extractions in the xu-config tool.|
