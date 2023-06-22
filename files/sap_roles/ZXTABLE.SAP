@@ -1,0 +1,38 @@
+DATE                                              20230605                                          150828
+RELEASE                                           740
+LOADED_AGRS                                       ZXTABLE
+AGR_DEFINE                                        800ZXTABLE                                                     WEINREICH   20190516100311000000000000000STEFFAN     20230605150803000000000000000
+AGR_1250                                          800ZXTABLE                       000001S_BTCH_ADMT-EP55166300    U  O000010Background Processing: Background Administrator
+AGR_1250                                          800ZXTABLE                       000002S_BTCH_JOBT-EP55166300    U  O000013Background Processing: Operations on Background Jobs
+AGR_1250                                          800ZXTABLE                       000003S_DSAUTH  T-EP55166300    U  O000026DataServices: Auth Object
+AGR_1250                                          800ZXTABLE                       000004S_RFC     T-EP55166300    U  O000004Berechtigungsprüfung beim RFC-Zugriff
+AGR_1250                                          800ZXTABLE                       000005S_TABU_NAMT-EP55166300    U  O000021Tabellenzugriff über generische Standardtools
+AGR_1251                                          800ZXTABLE                       000001S_RFC     T-EP55166300    ACTVT     16                                                                              U  O000005
+AGR_1251                                          800ZXTABLE                       000002S_RFC     T-EP55166300    RFC_NAME  SDIFRUNTIME                                                                     U  O000006
+AGR_1251                                          800ZXTABLE                       000003S_RFC     T-EP55166300    RFC_NAME  SDTX                                                                            U  O000006
+AGR_1251                                          800ZXTABLE                       000004S_TABU_NAMT-EP55166300    TABLE     ENLFDIR                                                                         U  O000023
+AGR_1251                                          800ZXTABLE                       000005S_TABU_NAMT-EP55166300    TABLE     DD27S                                                                           U  O000023
+AGR_1251                                          800ZXTABLE                       000006S_RFC     T-EP55166300    RFC_NAME  Z_THEO_READ_TABLE                                                               U  O000006
+AGR_1251                                          800ZXTABLE                       000007S_RFC     T-EP55166300    RFC_TYPE  FUGR                                                                            U  O000007
+AGR_1251                                          800ZXTABLE                       000011S_TABU_NAMT-EP55166300    ACTVT     03                                                                              U  O000022
+AGR_1251                                          800ZXTABLE                       000012S_RFC     T-EP55166300    RFC_NAME  S1EM                                                                            U  O000006
+AGR_1251                                          800ZXTABLE                       000014S_TABU_NAMT-EP55166300    TABLE     DD02V                                                                           U  O000023
+AGR_1251                                          800ZXTABLE                       000015S_TABU_NAMT-EP55166300    TABLE     DD17S                                                                           U  O000023
+AGR_1251                                          800ZXTABLE                       000019S_BTCH_ADMT-EP55166300    BTCADMIN  Y                                                                               U  O000011
+AGR_1251                                          800ZXTABLE                       000020S_BTCH_JOBT-EP55166300    JOBACTION RELE                                                                            U  O000014
+AGR_1251                                          800ZXTABLE                       000021S_BTCH_JOBT-EP55166300    JOBGROUP  *                                                                               U  O000015
+AGR_1251                                          800ZXTABLE                       000024S_DSAUTH  T-EP55166300    ACTVT     16                                                                              U  O000027
+AGR_TEXTS                                         800ZXTABLE                       D00000Authority Role for Theobald Products
+AGR_FLAGS                                         800ZXTABLE                       COLL_AGR  BABI        20170824083026WEINREICH   20190805150036
+AGR_FLAGS                                         800ZXTABLE                       DEVCLASS  BABI        20170824083026BABI        20170824083026
+AGR_FLAGS                                         800ZXTABLE                       EXTSAP_F01BABI        20170824083026BABI        20170824083026
+AGR_FLAGS                                         800ZXTABLE                       EXTSAP_F02BABI        20170824083026BABI        20170824083026
+AGR_FLAGS                                         800ZXTABLE                       EXTSAP_F03BABI        20170824083026BABI        20170824083026
+AGR_FLAGS                                         800ZXTABLE                       EXTSAP_F04BABI        20170824083026BABI        20170824083026
+AGR_FLAGS                                         800ZXTABLE                       EXTSAP_F05BABI        20170824083026BABI        20170824083026
+AGR_FLAGS                                         800ZXTABLE                       FORCE_MIX BABI        20170824083258STEFFAN     20230605150802
+AGR_FLAGS                                         800ZXTABLE                       FORCE_YEL WEINREICH   20190516100317STEFFAN     20230605150803
+AGR_FLAGS                                         800ZXTABLE                       MASTER_LANBABI        20170824083026BABI        20170824083026D
+AGR_FLAGS                                         800ZXTABLE                       RESP_USER             20170824083026BABI        20170824083026
+AGR_TIME                                          800ZXTABLE                       PROFILE   WEINREICH   20190516100311000000000000000STEFFAN     20230605150802000000000000000
+AGR_LSD                                           800ZXTABLE                                                     D
