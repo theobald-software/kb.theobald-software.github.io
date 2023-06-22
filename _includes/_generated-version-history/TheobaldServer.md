@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|3.8.1 [L]|2023-06-22|General|Fixed a bug where the authorization procedure for AD-users would not use the correct identifier.|
 |[3.8.0 [L]](https://kb.theobald-software.com/release-notes/TheobaldServer-3.8.0.html)|2023-06-06|General|Added common base for web worker, HTTP server backend and running extractions. An accompanying framework for writing tests for this stack was added as well. Various bug fixes.([Release note](https://kb.theobald-software.com/release-notes/TheobaldServer-3.8.0.html))|
 |3.7.0 [L]|2023-06-01|General|Common log cleanup base|
 |3.6.20 [L]|2023-05-05|General|Fixed a bug where the requested resource of a HTTP request would not get decoded properly.|
