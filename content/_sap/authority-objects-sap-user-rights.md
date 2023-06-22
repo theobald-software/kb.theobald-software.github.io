@@ -15,11 +15,13 @@ The remaining sections show the authorizations required for the respective compo
 Redirect this article to your SAP Basis admins to get the relevant authorization objects for your SAP connection user.  
 
 The following table contains the required SAP roles in the form of dowloadable SAP profile files:
+
+
 Component | SAP Profile File
 ------------ | -------------
 [General authorization objects](#general-authorization-objects) | [ZXTGENERAL.SAP](/files/sap_roles/ZXTGENERAL.SAP)
 [Table](#table) | [ZXTABLE.SAP](/files/sap_roles/ZXTABLE.SAP) 
-... | 
+... | ..
 
 
 {: .box-note }
