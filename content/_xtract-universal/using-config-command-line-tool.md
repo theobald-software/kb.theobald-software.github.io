@@ -85,7 +85,20 @@ The names of the parameters are not case sensitive. <br>
 **Note:** The following table settings are set by default after creation: **Package Size** (50000), **Extract data in background job** (enabled), all columns are selected for output.
 
 {: .box-tip }
-**Tip:** Use the command `xu-config.exe -h` to find examples for Table, Table CDC, ODP and DeltaQ extractions.
+**Tip:** Use the command `xu-config.exe -h` to look up the syntax for Table, Table CDC, ODP and DeltaQ extractions.
+
+#### Example Extractions
+
+| Extraction Type | Example Command |
+| :------ |:--- | :--- | :--- | :--- |
+| Table | `xu-config.exe --extraction ec5 sql-server --table TCURR` |
+| DeltaQ | `xu-config.exe --extraction ec5 sql-server --table TCURR` |
+| ODP (ABAP Core Data Services)| `xu-config.exe --extraction bw2 sql-server --odp ABAP_CDS UCONRFC_ATTR$F` |
+| ODP (SAP NetWeaver Business Warehouse)| `xu-config.exe --extraction bw2 sql-server --odp BW 0ADDR_SHORT$T` |
+| ODP (SAP HANA Information Views)| `xu-config.exe --extraction S4H sql-server --odp HANA HCCT232H1KHY32F7UL59IH224$F` |
+| ODP (DataSources/Extractors)| `xu-config.exe --extraction ec5 sql-server --odp SAPI 2LIS_11_VAITM` |
+| Table CDC (extract table on first run)| `xu-config.exe --extraction ec5 csv --tablecdc KNA1 true 5000` |
+| Table CDC (do not extract table on first run)| `xu-config.exe --extraction ec5 csv --tablecdc KNA1 false 10000` |
 
 #### Creating multiple Table Extractions using a PowerShell-Script
 
@@ -127,6 +140,7 @@ foreach ($tableName in $tableList) {
 	}    	  
 }
 ```
+
 
 
 *****
