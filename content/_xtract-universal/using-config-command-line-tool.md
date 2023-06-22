@@ -87,7 +87,7 @@ The names of the parameters are not case sensitive. <br>
 {: .box-tip }
 **Tip:** Use the command `xu-config.exe -h` to look up the syntax for Table, Table CDC, ODP and DeltaQ extractions.
 
-#### Example Extractions
+#### Examples for all Extraction Types
 
 | Extraction Type | Example Command |
 | :------ |:--- | :--- | :--- | :--- |
