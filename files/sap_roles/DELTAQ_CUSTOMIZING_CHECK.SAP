@@ -1,0 +1,91 @@
+DATE                                              20190802                                          160601
+RELEASE                                           740
+LOADED_AGRS                                       DELTAQ_CUSTOMIZING_CHECK
+AGR_DEFINE                                        800DELTAQ_CUSTOMIZING_CHECK                                    STEFFAN     20190403133801000000000000000STEFFAN     20190802160538000000000000000
+AGR_1250                                          800DELTAQ_CUSTOMIZING_CHECK      000001B_ALE_RECVDELTAQ_CUS00    U  O000004ALE/EDI: Receiving IDocs via RFC
+AGR_1250                                          800DELTAQ_CUSTOMIZING_CHECK      000002S_ADMI_FCDDELTAQ_CUS00    U  O000019System Authorizations
+AGR_1250                                          800DELTAQ_CUSTOMIZING_CHECK      000003S_ADMI_FCDDELTAQ_CUS01    U  O000021System Authorizations
+AGR_1250                                          800DELTAQ_CUSTOMIZING_CHECK      000004S_BTCH_ADMDELTAQ_CUS00    U  O000024Background Processing: Background Administrator
+AGR_1250                                          800DELTAQ_CUSTOMIZING_CHECK      000005S_BTCH_JOBDELTAQ_CUS00    U  O000027Background Processing: Operations on Background Jobs
+AGR_1250                                          800DELTAQ_CUSTOMIZING_CHECK      000006S_IDOCDEFTDELTAQ_CUS00    U  O000043WFEDI: S_IDOCDEFT - Access to IDoc Development
+AGR_1250                                          800DELTAQ_CUSTOMIZING_CHECK      000007S_IDOCMONIDELTAQ_CUS00    U  O000049WFEDI: S_IDOCMONI - Access to IDoc Monitoring
+AGR_1250                                          800DELTAQ_CUSTOMIZING_CHECK      000008S_RFC     DELTAQ_CUS00    U  O000007Authorization Check for RFC Access
+AGR_1250                                          800DELTAQ_CUSTOMIZING_CHECK      000009S_RFC_ADM DELTAQ_CUS00    U  O000012Administration for RFC Destination
+AGR_1250                                          800DELTAQ_CUSTOMIZING_CHECK      000010S_SPO_DEV DELTAQ_CUS00    U  O000031Spool: Device authorizations
+AGR_1250                                          800DELTAQ_CUSTOMIZING_CHECK      000011S_TABU_DISDELTAQ_CUS00    U  O000034Table Maintenance (via standard tools such as SM30)
+AGR_1250                                          800DELTAQ_CUSTOMIZING_CHECK      000012S_TABU_NAMDELTAQ_CUS00    U  O000038Table Access via Generic Standard Tools
+AGR_1250                                          800DELTAQ_CUSTOMIZING_CHECK      000013S_TABU_NAMDELTAQ_CUS01    U  O000056Table Access via Generic Standard Tools
+AGR_1251                                          800DELTAQ_CUSTOMIZING_CHECK      000001S_RFC     DELTAQ_CUS00    ACTVT     16                                                                              U  O000008
+AGR_1251                                          800DELTAQ_CUSTOMIZING_CHECK      000002S_RFC     DELTAQ_CUS00    RFC_NAME  RFC_GET_SYSTEM_INFO                                                             U  O000009
+AGR_1251                                          800DELTAQ_CUSTOMIZING_CHECK      000003S_RFC     DELTAQ_CUS00    RFC_TYPE  FUGR                                                                            U  O000010
+AGR_1251                                          800DELTAQ_CUSTOMIZING_CHECK      000004S_RFC     DELTAQ_CUS00    RFC_TYPE  FUNC                                                                            U  O000010
+AGR_1251                                          800DELTAQ_CUSTOMIZING_CHECK      000005S_ADMI_FCDDELTAQ_CUS00    S_ADMI_FCDNADM                                                                            U  O000020
+AGR_1251                                          800DELTAQ_CUSTOMIZING_CHECK      000006S_RFC     DELTAQ_CUS00    RFC_NAME  SUSR                                                                            U  O000009
+AGR_1251                                          800DELTAQ_CUSTOMIZING_CHECK      000007S_TABU_DISDELTAQ_CUS00    ACTVT     02                                                                              U  O000035
+AGR_1251                                          800DELTAQ_CUSTOMIZING_CHECK      000008S_TABU_DISDELTAQ_CUS00    ACTVT     03                                                                              U  O000035
+AGR_1251                                          800DELTAQ_CUSTOMIZING_CHECK      000009S_TABU_DISDELTAQ_CUS00    DICBERCLS SA                                                                              U  O000036
+AGR_1251                                          800DELTAQ_CUSTOMIZING_CHECK      000010S_TABU_NAMDELTAQ_CUS00    ACTVT     02                                                                              U  O000039
+AGR_1251                                          800DELTAQ_CUSTOMIZING_CHECK      000011S_TABU_NAMDELTAQ_CUS00    ACTVT     03                                                                              U  O000039
+AGR_1251                                          800DELTAQ_CUSTOMIZING_CHECK      000012S_TABU_NAMDELTAQ_CUS00    TABLE     EDIPOA                                                                          U  O000040
+AGR_1251                                          800DELTAQ_CUSTOMIZING_CHECK      000013S_RFC     DELTAQ_CUS00    RFC_NAME  RFC1                                                                            U  O000009
+AGR_1251                                          800DELTAQ_CUSTOMIZING_CHECK      000014S_RFC     DELTAQ_CUS00    RFC_NAME  SYST                                                                            U  O000009
+AGR_1251                                          800DELTAQ_CUSTOMIZING_CHECK      000015S_RFC     DELTAQ_CUS00    RFC_NAME  RFC_READ_TABLE                                                                  U  O000009
+AGR_1251                                          800DELTAQ_CUSTOMIZING_CHECK      000016S_RFC_ADM DELTAQ_CUS00    ACTVT     03                                                                              U  O000013
+AGR_1251                                          800DELTAQ_CUSTOMIZING_CHECK      000017S_RFC_ADM DELTAQ_CUS00    ICF_VALUE *                                                                               U  O000014
+AGR_1251                                          800DELTAQ_CUSTOMIZING_CHECK      000018S_RFC_ADM DELTAQ_CUS00    RFCDEST   XTRACTFS                                                                        U  O000015
+AGR_1251                                          800DELTAQ_CUSTOMIZING_CHECK      000019S_RFC_ADM DELTAQ_CUS00    RFCTYPE   T                                                                               U  O000016
+AGR_1251                                          800DELTAQ_CUSTOMIZING_CHECK      000020S_TABU_NAMDELTAQ_CUS00    TABLE     RFCDES                                                                          U  O000040
+AGR_1251                                          800DELTAQ_CUSTOMIZING_CHECK      000021S_TABU_NAMDELTAQ_CUS00    TABLE     TBDLS                                                                           U  O000040
+AGR_1251                                          800DELTAQ_CUSTOMIZING_CHECK      000022S_TABU_NAMDELTAQ_CUS00    TABLE     T000                                                                            U  O000040
+AGR_1251                                          800DELTAQ_CUSTOMIZING_CHECK      000023S_TABU_NAMDELTAQ_CUS00    TABLE     RSBASIDOC                                                                       U  O000040
+AGR_1251                                          800DELTAQ_CUSTOMIZING_CHECK      000024S_RFC     DELTAQ_CUS00    RFC_NAME  CRFC                                                                            U  O000009
+AGR_1251                                          800DELTAQ_CUSTOMIZING_CHECK      000025S_RFC_ADM DELTAQ_CUS00    ACTVT     36                                                                              U  O000013
+AGR_1251                                          800DELTAQ_CUSTOMIZING_CHECK      000026S_TABU_DISDELTAQ_CUS00    DICBERCLS SS                                                                              U  O000036
+AGR_1251                                          800DELTAQ_CUSTOMIZING_CHECK      000027S_TABU_DISDELTAQ_CUS00    DICBERCLS SC                                                                              U  O000036
+AGR_1251                                          800DELTAQ_CUSTOMIZING_CHECK      000028S_RFC     DELTAQ_CUS00    RFC_NAME  SYSU                                                                            U  O000009
+AGR_1251                                          800DELTAQ_CUSTOMIZING_CHECK      000029S_RFC     DELTAQ_CUS00    RFC_NAME  SDTX                                                                            U  O000009
+AGR_1251                                          800DELTAQ_CUSTOMIZING_CHECK      000030S_RFC     DELTAQ_CUS00    RFC_NAME  SDIFRUNTIME                                                                     U  O000009
+AGR_1251                                          800DELTAQ_CUSTOMIZING_CHECK      000031S_RFC     DELTAQ_CUS00    RFC_NAME  RSC1                                                                            U  O000009
+AGR_1251                                          800DELTAQ_CUSTOMIZING_CHECK      000032S_RFC     DELTAQ_CUS00    RFC_NAME  RSAK                                                                            U  O000009
+AGR_1251                                          800DELTAQ_CUSTOMIZING_CHECK      000033S_RFC     DELTAQ_CUS00    RFC_NAME  ERFC                                                                            U  O000009
+AGR_1251                                          800DELTAQ_CUSTOMIZING_CHECK      000034S_RFC     DELTAQ_CUS00    RFC_NAME  EDIW                                                                            U  O000009
+AGR_1251                                          800DELTAQ_CUSTOMIZING_CHECK      000035S_RFC     DELTAQ_CUS00    RFC_NAME  EDIN                                                                            U  O000009
+AGR_1251                                          800DELTAQ_CUSTOMIZING_CHECK      000036S_RFC     DELTAQ_CUS00    RFC_NAME  EDIMEXT                                                                         U  O000009
+AGR_1251                                          800DELTAQ_CUSTOMIZING_CHECK      000037S_RFC     DELTAQ_CUS00    RFC_NAME  EDI1                                                                            U  O000009
+AGR_1251                                          800DELTAQ_CUSTOMIZING_CHECK      000038S_RFC     DELTAQ_CUS00    RFC_NAME  BATG                                                                            U  O000009
+AGR_1251                                          800DELTAQ_CUSTOMIZING_CHECK      000039S_RFC     DELTAQ_CUS00    RFC_NAME  ARFC                                                                            U  O000009
+AGR_1251                                          800DELTAQ_CUSTOMIZING_CHECK      000040S_RFC     DELTAQ_CUS00    RFC_NAME  /BIC/*                                                                          U  O000009
+AGR_1251                                          800DELTAQ_CUSTOMIZING_CHECK      000041S_RFC     DELTAQ_CUS00    RFC_NAME  /BI0/*                                                                          U  O000009
+AGR_1251                                          800DELTAQ_CUSTOMIZING_CHECK      000042B_ALE_RECVDELTAQ_CUS00    EDI_MES   RSRQST                                                                          U  O000005
+AGR_1251                                          800DELTAQ_CUSTOMIZING_CHECK      000043S_IDOCDEFTDELTAQ_CUS00    EDI_TCD   WE30                                                                            U  O000047
+AGR_1251                                          800DELTAQ_CUSTOMIZING_CHECK      000044S_IDOCDEFTDELTAQ_CUS00    EDI_DOC   *                                                                               U  O000046
+AGR_1251                                          800DELTAQ_CUSTOMIZING_CHECK      000045S_IDOCDEFTDELTAQ_CUS00    EDI_CIM   *                                                                               U  O000045
+AGR_1251                                          800DELTAQ_CUSTOMIZING_CHECK      000046S_IDOCDEFTDELTAQ_CUS00    ACTVT     03                                                                              U  O000044
+AGR_1251                                          800DELTAQ_CUSTOMIZING_CHECK      000047S_BTCH_ADMDELTAQ_CUS00    BTCADMIN  Y                                                                               U  O000025
+AGR_1251                                          800DELTAQ_CUSTOMIZING_CHECK      000048S_IDOCDEFTDELTAQ_CUS00    ACTVT     02                                                                              U  O000044
+AGR_1251                                          800DELTAQ_CUSTOMIZING_CHECK      000049S_IDOCDEFTDELTAQ_CUS00    ACTVT     01                                                                              U  O000044
+AGR_1251                                          800DELTAQ_CUSTOMIZING_CHECK      000050S_BTCH_JOBDELTAQ_CUS00    JOBGROUP  ' '                                                                             U  O000029
+AGR_1251                                          800DELTAQ_CUSTOMIZING_CHECK      000051S_BTCH_JOBDELTAQ_CUS00    JOBACTION RELE                                                                            U  O000028
+AGR_1251                                          800DELTAQ_CUSTOMIZING_CHECK      000052S_SPO_DEV DELTAQ_CUS00    SPODEVICE *                                                                               U  O000032
+AGR_1251                                          800DELTAQ_CUSTOMIZING_CHECK      000053S_ADMI_FCDDELTAQ_CUS01    S_ADMI_FCDNADM                                                                            U  O000022
+AGR_1251                                          800DELTAQ_CUSTOMIZING_CHECK      000054S_IDOCMONIDELTAQ_CUS00    EDI_TCD   WE*                                                                             U  O000055
+AGR_1251                                          800DELTAQ_CUSTOMIZING_CHECK      000055S_IDOCMONIDELTAQ_CUS00    EDI_PRT   *                                                                               U  O000054
+AGR_1251                                          800DELTAQ_CUSTOMIZING_CHECK      000056S_IDOCMONIDELTAQ_CUS00    EDI_PRN   *                                                                               U  O000053
+AGR_1251                                          800DELTAQ_CUSTOMIZING_CHECK      000057S_IDOCMONIDELTAQ_CUS00    EDI_MES   *                                                                               U  O000052
+AGR_1251                                          800DELTAQ_CUSTOMIZING_CHECK      000058S_TABU_NAMDELTAQ_CUS01    TABLE     DD02V                                                                           U  O000058
+AGR_1251                                          800DELTAQ_CUSTOMIZING_CHECK      000059S_IDOCMONIDELTAQ_CUS00    EDI_DIR   *                                                                               U  O000051
+AGR_1251                                          800DELTAQ_CUSTOMIZING_CHECK      000060S_IDOCMONIDELTAQ_CUS00    ACTVT     03                                                                              U  O000050
+AGR_1251                                          800DELTAQ_CUSTOMIZING_CHECK      000061S_TABU_NAMDELTAQ_CUS01    ACTVT     03                                                                              U  O000057
+AGR_TEXTS                                         800DELTAQ_CUSTOMIZING_CHECK      E00000authority objects für deltaQ customizing check
+AGR_FLAGS                                         800DELTAQ_CUSTOMIZING_CHECK      COLL_AGR  STEFFAN     20190403133801STEFFAN     20190802160538
+AGR_FLAGS                                         800DELTAQ_CUSTOMIZING_CHECK      DEVCLASS  STEFFAN     20190403133801STEFFAN     20190403133801
+AGR_FLAGS                                         800DELTAQ_CUSTOMIZING_CHECK      EXTSAP_F01STEFFAN     20190403133801STEFFAN     20190403133801
+AGR_FLAGS                                         800DELTAQ_CUSTOMIZING_CHECK      EXTSAP_F02STEFFAN     20190403133801STEFFAN     20190403133801
+AGR_FLAGS                                         800DELTAQ_CUSTOMIZING_CHECK      EXTSAP_F03STEFFAN     20190403133801STEFFAN     20190403133801
+AGR_FLAGS                                         800DELTAQ_CUSTOMIZING_CHECK      EXTSAP_F04STEFFAN     20190403133801STEFFAN     20190403133801
+AGR_FLAGS                                         800DELTAQ_CUSTOMIZING_CHECK      EXTSAP_F05STEFFAN     20190403133801STEFFAN     20190403133801
+AGR_FLAGS                                         800DELTAQ_CUSTOMIZING_CHECK      FORCE_MIX STEFFAN     20190403135437STEFFAN     20190429123226
+AGR_FLAGS                                         800DELTAQ_CUSTOMIZING_CHECK      MASTER_LANSTEFFAN     20190403133801STEFFAN     20190403133801E
+AGR_FLAGS                                         800DELTAQ_CUSTOMIZING_CHECK      RESP_USER             20190403133801STEFFAN     20190403133801
+AGR_TIME                                          800DELTAQ_CUSTOMIZING_CHECK      PROFILE   STEFFAN     20190403135437000000000000000STEFFAN     20190429123226000000000000000
+AGR_LSD                                           800DELTAQ_CUSTOMIZING_CHECK                                    E

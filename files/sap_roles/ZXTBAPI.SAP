@@ -1,0 +1,22 @@
+DATE                                              20230607                                          111556
+RELEASE                                           740
+LOADED_AGRS                                       ZXTBAPI
+AGR_DEFINE                                        800ZXTBAPI                                                     STEFFAN     20220609113242000000000000000STEFFAN     20220609114018000000000000000
+AGR_1250                                          800ZXTBAPI                       000001S_RFC     T-EP55166500    U  O000004Authorization Check for RFC Access
+AGR_1251                                          800ZXTBAPI                       000001S_RFC     T-EP55166500    ACTVT     16                                                                              U  O000005
+AGR_1251                                          800ZXTBAPI                       000002S_RFC     T-EP55166500    RFC_NAME  DDIF_FIELDINFO_GET                                                              U  O000006
+AGR_1251                                          800ZXTBAPI                       000003S_RFC     T-EP55166500    RFC_TYPE  FUGR                                                                            U  O000007
+AGR_1251                                          800ZXTBAPI                       000004S_RFC     T-EP55166500    RFC_NAME  SDIFRUNTIME                                                                     U  O000006
+AGR_TEXTS                                         800ZXTBAPI                       E00000Authority Objects for BAPI components
+AGR_FLAGS                                         800ZXTBAPI                       COLL_AGR  STEFFAN     20220609113242STEFFAN     20220609113242
+AGR_FLAGS                                         800ZXTBAPI                       DEVCLASS  STEFFAN     20220609113242STEFFAN     20220609113242
+AGR_FLAGS                                         800ZXTBAPI                       EXTSAP_F01STEFFAN     20220609113242STEFFAN     20220609113242
+AGR_FLAGS                                         800ZXTBAPI                       EXTSAP_F02STEFFAN     20220609113242STEFFAN     20220609113242
+AGR_FLAGS                                         800ZXTBAPI                       EXTSAP_F03STEFFAN     20220609113242STEFFAN     20220609113242
+AGR_FLAGS                                         800ZXTBAPI                       EXTSAP_F04STEFFAN     20220609113242STEFFAN     20220609113242
+AGR_FLAGS                                         800ZXTBAPI                       EXTSAP_F05STEFFAN     20220609113242STEFFAN     20220609113242
+AGR_FLAGS                                         800ZXTBAPI                       FORCE_MIX STEFFAN     20220609113453STEFFAN     20220609114016
+AGR_FLAGS                                         800ZXTBAPI                       MASTER_LANSTEFFAN     20220609113242STEFFAN     20220609113242E
+AGR_FLAGS                                         800ZXTBAPI                       RESP_USER             20220609113242STEFFAN     20220609113242
+AGR_TIME                                          800ZXTBAPI                       PROFILE   STEFFAN     20220609113453000000000000000STEFFAN     20220609114016000000000000000
+AGR_LSD                                           800ZXTBAPI                                                     E
