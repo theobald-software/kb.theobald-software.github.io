@@ -12,7 +12,7 @@ Matillion Data Loader is a cloud based data loading platform that extracts data 
 ### Prerequisites
 
 - Matillion Hub Account, see [Official Website](https://hub.matillion.com/). 
-- Snowflake Destination for the Matillion Data Loader pipeline, see [Matillion Documentation: Destinations - Set up Snowflake](https://documentation.matillion.com/mdl/docs/set-up-snowflake).
+- Snowflake Destination for the Matillion Data Loader pipeline, see [Matillion Documentation: Destinations - Set up Snowflake](https://docs.matillion.com/data-productivity-cloud/batch/docs/set-up-snowflake/).
 - Xtract Universal must be accessible via the internet, e.g., by hosting Xtract Universal on a webserver with a static IP address or via third party tools like [ngrock](https://ngrok.com/). 
 
 ### Setup in Xtract Universal
@@ -24,7 +24,7 @@ The following example scenario extracts the SAP table KNA1 (General Data in Cust
 
 ### Create a Custom Connector in Matillion
 
-To extract SAP data via Xtract Universal you must define a custom connector that contains the connection details of Xtract Universal, see [Matillion Documentation: Matillion Custom Connector Overview](https://documentation.matillion.com/mcc/docs/custom-connector-overview).
+To extract SAP data via Xtract Universal you must define a custom connector that contains the connection details of Xtract Universal, see [Matillion Documentation: Matillion Custom Connector Overview](https://docs.matillion.com/data-productivity-cloud/custom-connector/docs/custom-connector-overview/).
 
 1. Open the website [https://create-connector.matillion.com/](https://create-connector.matillion.com/) and log in to create the custom connector.
 2. Click **[Add Connector]** (1) to create a new custom connector.<br>
@@ -52,7 +52,7 @@ The custom connector can now be used in a Matillion Data Loader pipeline.
 
 ### Create a Pipeline in Matillion Data Loader
 
-Create a pipeline that triggers the extraction and writes the data to a destination, see [Matillion Documentation: Creating a pipeline with custom connectors](https://documentation.matillion.com/mcc/docs/custom-connector-batch-pipeline).
+Create a pipeline that triggers the extraction and writes the data to a destination, see [Matillion Documentation: Create a pipeline with custom connectors](https://docs.matillion.com/data-productivity-cloud/custom-connector/docs/custom-connector-batch-pipeline/).
 
 1. Open your Matillion Data Loader dashboard under [https://dataloader.matillion.com/dashboard](https://dataloader.matillion.com/dashboard).
 2. Click **[Add Pipeline]** to create a new pipeline (1).
@@ -72,9 +72,9 @@ Note that a custom connector can have multiple endpoints.
 11. Click **[Continue]** (6).<br>
 ![matillion-configure-endpoints-key](/img/contents/xu/matillion-configure-endpoint-key.png){:class="img-responsive"}
 12. Select the destination to which the data is written to, e.g., Snowflake (7). 
-For more information on how to connect to Snowflake, see [Matillion Documentation: Connect to Snowflake](https://documentation.matillion.com/mdl/docs/connect-to-snowflake).<br>
+For more information on how to connect to Snowflake, see [Matillion Documentation: Connect to Snowflake](https://docs.matillion.com/data-productivity-cloud/batch/docs/connect-to-snowflake/).<br>
 ![matillion-destination](/img/contents/xu/matillion-destination.png){:class="img-responsive"}
-13. Configure the destination, see [Matillion Documentation: Configure Snowflake](https://documentation.matillion.com/mdl/docs/connect-to-snowflake#configure-snowflake).
+13. Configure the destination, see [Matillion Documentation: Configure Snowflake](https://docs.matillion.com/data-productivity-cloud/batch/docs/connect-to-snowflake/#configure-snowflake).
 14. Click **[Continue]**.
 15. Enter a name for the pipeline (8).<br>
 ![matillion-frequency](/img/contents/xu/matillion-frequency.png){:class="img-responsive"}
@@ -89,6 +89,6 @@ The pipeline now runs automatically at the specified frequency.
 #### Related Links
 
 - [Online Help: Getting Started with Xtract Universal](https://help.theobald-software.com/en/xtract-universal/getting-started)
-- [Matillion Documentation: Snowflake Destination](https://documentation.matillion.com/mdl/docs/set-up-snowflake)
-- [Matillion Documentation: Matillion Custom Connector Overview](https://documentation.matillion.com/mcc/docs/custom-connector-overview)
-- [Matillion Documentation: Creating a pipeline with custom connectors](https://documentation.matillion.com/mcc/docs/custom-connector-batch-pipeline).
+- [Matillion Documentation: Snowflake Destination](https://docs.matillion.com/data-productivity-cloud/batch/docs/set-up-snowflake/)
+- [Matillion Documentation: Matillion Custom Connector Overview](https://docs.matillion.com/data-productivity-cloud/custom-connector/docs/custom-connector-overview/)
+- [Matillion Documentation: Create a pipeline with custom connectors](https://docs.matillion.com/data-productivity-cloud/custom-connector/docs/custom-connector-batch-pipeline/).
