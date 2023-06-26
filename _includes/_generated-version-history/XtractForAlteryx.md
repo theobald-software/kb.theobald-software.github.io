@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.19.3 [L]|2023-06-26|General|Assert uniqueness of output column names|
 |1.19.2 [L]|2023-06-20|General|Fixed a bug that causes errors in subsequent tools when copying Xtract tools and using the old Alteryx engine|
 |1.19.1 [L]|2023-06-14|BAPI|Fixed a bug that caused errors when passing pipeline tables into the BAPI tool (Bug introduced in 1.19.0)|
 |1.19.0 [L]|2023-06-12|General|Runtime parameters can now be provided from the workflow pipeline using input connection 'P'|
