@@ -22,7 +22,7 @@ The following table contains a collection of roles required access rights SAP ro
 Component / Extraction Type  | SAP Role File
 ------------ | -------------
 [General authorization objects](#general-authorization-objects) | [ZXTGENERAL.SAP](/files/sap_roles/ZXTGENERAL.SAP)
-[BAPI](#bapi) |
+[BAPI](#bapi) | [ZXTBAPI.SAP](/files/sap_roles/ZXTBAPI.SAP)
 [BW Cube](#bw-cube--bw-query)|
 [BW Hierarchy](#bw-hierarchy) |
 [ODP (Operational Data Provisioning)](#odp) |
@@ -38,47 +38,60 @@ Component / Extraction Type  | SAP Role File
 **Note** If you still get an authorization error, ask SAP Basis to record an ST01-/ or SU53-authorization trace in SAP. This trace shows which authorizations objects are missing.
 
 ### General authorization objects
+The following objects are required to establish a connection to SAP. <br>
+*Click to expand the details:*
 
-The following objects are required to establish a connection to SAP.
+<details> <summary> Necessary SAP authorizations </summary>
 
-```
+<pre>
 S_RFC            RFC_TYPE=FUGR; RFC_NAME=SYST; ACTVT=16
 S_RFC            RFC_TYPE=FUGR; RFC_NAME=SRFC; ACTVT=16
 S_RFC            RFC_TYPE=FUGR; RFC_NAME=RFC1; ACTVT=16
-```
+</pre>
+
+
+</details> 
 Download the corresponding SAP role --- [SAP profile for general authorization](/files/sap_roles/ZXTGENERAL.SAP)
 
 ### BAPI
 
-Look up a BAPI extraction:
+Necessary SAP authorizations 
 
 ```
-S_RFC            ACTVT=16; RFC_TYPE=FUGR; RFC_NAME=DDIF_FIELDINFO_GET, SDIFRUNTIME                 
+S_RFC            ACTVT=16; RFC_TYPE=FUGR; RFC_NAME=DDIF_FIELDINFO_GET, SDIFRUNTIME     
 ```
+         
+Download the corresponding SAP role ---  [SAP profile for BAPI Extractions](/files/sap_roles/ZXTBAPI.SAP)
 
 ### BW Cube / BW Query 
 
-Authorizations for the underlying Queries, Cubes and InfoAreas need to be assigned via ```S_RS_COMP```and ```S_RS_COMP1```. <br>
-Analysis authorizations are assigned via ```S_RS_AUTH```.
+Authorizations for the underlying Queries, Cubes, InfoAreas and analysis need to be assigned via: 
 
-#### Look up and execute a BW Query / BW Cube (OLAP BAPI/MDX and BEx mode):
+- ```S_RS_COMP```
+- ```S_RS_COMP1```
+- ```S_RS_AUTH```
 
-```
+
+*Click to expand the details:*
+
+<details> <summary> Necessary SAP authorizations </summary>
+
+<pre>
+
 S_RFC            RFC_TYPE=FUGR; RFC_NAME=RSOB; ACTVT=16
 S_RFC            RFC_TYPE=FUGR; RFC_NAME=RRX1; ACTVT=16
 S_TABU_NAM       ACTVT=03; TABLE=RSRREPDIR
 S_TABU_NAM       ACTVT=03; TABLE=RSZGLOBV
-```
 
-Optional (necessary for date conversion): 
+</pre>
 
-```
-S_TABU_NAM       ACTVT=03; TABLE=DD03L
-```
+</details>
 
-#### Look up and execute a BW Query / BW Cube (BICS mode ):
 
-```
+
+<details> <summary> BICS mode </summary>
+
+<pre>
 S_RFC            RFC_TYPE=FUGR;RFC_NAME=SYST;ACTVT=16;type=RF;name=RFCPING;
 S_RFC            RFC_TYPE=FUGR; RFC_NAME=RSOBJS_RFC_INTERFACE; ACTVT=16; type=RF;name=RSOBJS_GET_NODES;
 S_RFC            RFC_TYPE=FUGR;RFC_NAME=RSAO_CORE;ACTVT=16;type=RF;name=RSAO_BICS_SESSION_INITIALIZE
@@ -86,14 +99,26 @@ S_RFC            RFC_TYPE=FUGR;RFC_NAME=RSBOLAP_BICS_CONSUMER;ACTVT=16;type=RF;n
 S_RFC            RFC_TYPE=FUGR;RFC_NAME=RSBOLAP_BICS_PROVIDER;ACTVT=16;type=RF;name=BICS_PROV_OPEN;
 S_RFC            RFC_TYPE=FUGR;RFC_NAME=RSBOLAP_BICS_PROVIDER_VAR;ACTVT=16;type=RF;name=BICS_PROV_VA
 S_ADMI_FCD       S_ADMI_FCD=PADM;
+</pre>
+
+</details>
+
+Date conversion (optional):
+
+```
+S_TABU_NAM       ACTVT=03; TABLE=DD03L
 ```
 
-Alternatively, you can assign pfcg template *S_RS_RREPU - BW Role: Reporting User*. This template contains above authorizations except for S_ADMI_FCD.
+Alternatively, you can assign pfcg template ```S_RS_RREPU``` - BW Role: Reporting User. This template contains above authorizations except for ```S_ADMI_FCD```.
+
+Download the corresponding SAP role ---  
 
 ### BW Hierarchy
+*Click to expand the details:*
 
-Look up and read hierarchies:
-```
+<details> <summary> Necessary SAP authorizations </summary>
+
+<pre>
 S_RFC          RFC_TYPE=FUNC, FUGR; RFC_NAME=RSNDI_SHIE; ACTVT=16
 S_RFC          RFC_TYPE=FUNC, FUGR; RFC_NAME=BAPI_IOBJ_GETDETAIL; ACTVT=16
 S_RFC          RFC_TYPE=FUNC, FUGR; RFC_NAME=DDIF_FIELDINFO_GET; ACTVT=16
@@ -111,8 +136,9 @@ S_TABU_DIS     ACTVT=02, 03; DICBERCLS=BWG
 S_TABU_NAM     ACTVT=02, 03; TABLE=/BIC/*
 S_TABU_NAM     ACTVT=02, 03; TABLE=ENLFDIR
 S_TABU_NAM     ACTVT=02, 03; TABLE=RSHIEDIR
-```
+ </pre>
 
+</details>
 
 ### ODP
 
@@ -122,22 +148,16 @@ When using "Adjust currency decimals" setting:
 ```
 S_TABU_NAM       ACTVT=03; TABLE=TCURX
 ```
+Download the corresponding SAP role ---   
 
-<!---
-Authorization objects needed for the Operational Data Provisioning (ODP):
-```
-S_RFC            RFC_TYPE=FUGR,FUNC; RFC_NAME=RODPS_REPL; ACTVT=16                  
-S_TCODE          TCD=BSANL_ACWB, ODQMON, RODPS_ODP_IMG, RSO2, RSOR, RSRTS_ODP_DIS            
-S_ADMI_FCD       Value=NADM 
-S_APPL_LOG       ALG_OBJECT=ODQ; ALG_SUBOBJ=*; ACTVT=03, 06
-S_RO_OSOA        OLTPSOURCE=*; OSOAAPCO=*; OSOAPART=DATA, DEFINITION; ACTVT=03
-```
---->
+
 ### OHS
+*Click to expand the details:*
 
-Look up an OHS extraction:
+<details> <summary> Necessary SAP authorizations </summary>
 
-```
+<pre>
+
 S_RFC      RFC_TYPE=FUGR; RFC_NAME=RSB3RD; ACTVT=16
 S_RFC      RFC_TYPE=FUGR; RFC_NAME=SDTX; ACTVT=16
 S_RFC      RFC_TYPE=FUGR; RFC_NAME=BAPT; ACTVT=16
@@ -153,39 +173,37 @@ S_BTCH_JOB JOBGROUP=*; JOBACTION=RELE
 S_RS_TR    RSTLOGOSRC=CUBE; RSSTTRSRC=*; RSOBJNMSRC=0D_DECU; RSTLOGOTGT=DEST; RSSTTRTGT=' '; RSOBJNMTG=*; ACTVT=16
 S_RS_AUTH  BIAUTH=0BI_ALL
 S_ADMI_FCD S_ADMI_FCD=ST0R
-```
+
+</pre>
+</details>
+
+Download the corresponding SAP role ---  
 
 
 
 ### SAP Query
 
-Look up and execute a query:
-
 ```
 S_RFC            RFC_TYPE=FUGR; RFC_NAME=AQRC; ACTVT=16 
 ```
- 
 
 ### Report
 
-Look up reports and TxCodes, preview and execute:
+*Click to expand the details:*
+
+<details> <summary> Necessary SAP authorizations </summary>
+
+<pre>
 
 
-```
 S_RFC            RFC_TYPE=FUGR; RFC_NAME=ZXTRACTABAP; ACTVT=16
 S_TABU_NAM       ACTVT=03; TABLE=TRDIR, TRDIRT, TSTC, VARID
 S_GUI            ACTVT=61 
-```
-
-
-Execute the report as a **batch job**.
-
-```
 S_TABU_DIS       ACTVT=03; DICBERCLS=&NC& 
 S_TABU_DIS       ACTVT=03; DICBERCLS=SS
 S_BTCH_ADM       BTCADMIN=Y
 S_BTCH_JOB       JOBGROUP=*; JOBACTION=RELE
-```
+</pre>
 
 
 {: .box-note }
@@ -195,21 +213,16 @@ S_BTCH_JOB       JOBGROUP=*; JOBACTION=RELE
 
 ### Table
 
-Look up tables and table metadata e.g., primary keys & indexed table fields:
+<details> <summary> Necessary SAP authorizations </summary>
 
-```
-S_RFC            ACTVT=16; RFC_TYPE=FUGR; RFC_NAME=SDTX, SDIFRUNTIME                
-S_TABU_DIS       ACTVT=03; DICBERCLS=&NC&, SS
-S_TABU_NAM       ACTVT=03; TABLE=ENLFDIR
-```
+<pre>
 
-**or** use the following separate authorization check for each table to read: 
 
-```
 S_RFC            ACTVT=16; RFC_TYPE=FUGR; RFC_NAME=RFC_READ_TABLE, DDIF_FIELDINFO_GET, SDTX, SDIFRUNTIME, Z_THEO_READ_TABLE                   
 S_TABU_DIS       ACTVT=03; DICBERCLS=XXXX
 S_TABU_NAM       ACTVT=03; TABLE=DD02V, DD17S, DD27S, ENLFDIR
-```
+
+</pre>
 
 XXXX (stands for a placeholder) is the Authorization Group for the table. To determine, which authorization group belongs to which table look at table TDDAT (e.g. with SE16). 
 If the table is not listed, the authorization group is &NC&. For authorizing specific tables use authorization object S_TABU_NAM instead of S_TABU_DIS.
@@ -230,7 +243,7 @@ When using the *count rows* button (if not using Z_THEO_READ_TABLE):
 S_RFC            RFC_TYPE=FUNC; RFC_NAME=EM_GET_NUMBER_OF_ENTRIES; ACTVT=16  
 ```
 
-When using "Adjust currency decimals" setting:
+When using *Adjust currency decimals* setting:
 ```
 S_TABU_NAM       ACTVT=03; TABLE=TCURX
 ```
@@ -238,23 +251,24 @@ S_TABU_NAM       ACTVT=03; TABLE=TCURX
 
 ### Table CDC
 
-The following objects are required to create and extract a log table in SAP:
+<details> <summary> Necessary SAP authorizations </summary>
 
-```
+<pre>
 S_RFC            ACTVT=16; RFC_TYPE=FUGR, FUNC; RFC_NAME=CNV0, IUUC_ADBC, IUUC_REMOTE, SDIFRUNTIME, SDTX, Z_THEO_DELETE_LOG_ENTRIES, Z_THEO_READ_TABLE            
 S_DMC_S_R        ACTVT=33
 S_CTS_ADMI       CTS_ADMFCT=TABL
 S_TABU_CLI       CLIIDMAINT=X
 S_TABU_DIS       ACTVT=02, 03; DICBERCLS=*
 S_DEVELOP        ACTVT=02; DEVCLASS=$TMP; OBJNAME=/1LT/TS_*; OBJTYPE=*; P_GROUP=*
-```
+</pre>
+</details> 
 
 {: .box-note }
 **Note** The transport requests for the required function groups *Z_THEO_DELETE_LOG_ENTRIES* and *Z_THEO_READ_TABLE* are located in ```C:\Program Files\[XtractProduct]\ABAP\TableCDC``` and ```C:\Program Files\[XtractProduct]\ABAP\Table```. 
 
 
 ### DeltaQ (Depricated)
-Click to expand the details:
+*Click to expand the details:*
 
 <details>
 <summary> Authorization objects for the customizing check:</summary>
@@ -335,4 +349,4 @@ S_RO_OSOA        OLTPSOURCE=*; OSOAAPCO=*; OSOAPART=DATA; ACTVT=03;  | Only in S
 ******
 #### Related Links
 - [SAP  Role Administration](https://help.sap.com/doc/saphelp_nw74/7.4.16/en-us/52/6714a9439b11d1896f0000e8322d00/content.htm)
-
+- [SAP ONE Support Launchpad](https://launchpad.support.sap.com/#/notes/2855052)
