@@ -7,7 +7,7 @@ weight: 55
 ---
 
 This article shows how to use the integration type *Transaction* with transaction PA40 in yunIO.<br>
-The following example application uses the transaction PA40 to to define the personnel actions in SAP.
+The following example application uses the transaction PA40 to define personnel actions in SAP.
 
 ### Prerequisites
 
@@ -17,9 +17,9 @@ The SAP connection assigned to a transaction service must use an SAP dialog user
 **Tip:** The transaction feature of yunIO offers the same functionalities as the SAP GUI. 
 Therefore knowing how to navigate the SAP GUI makes it easier to use the transaction feature. 
 
-### Update Customer Master Data
+### Create a new Employee in SAP
 
-The following example application uses a yunIO service to register a new employee in SAP.
+The following example application uses a yunIO service to create a new employee in SAP.
 
 1. Create a new Service with the integration type *Transaction*. For more information on creating a service, see [Creating a Service](https://help.theobald-software.com/en/yunio/getting-started#creating-a-service).
 2. In the transaction service enter the transaction PA40 and press **[Start]**. A replicated SAP GUI of the transaction PA40 is displayed.
@@ -36,9 +36,13 @@ Click **[Submit]** to close any pop-up windows and continue to the next screen.
 ![personnel-actions2](/img/contents/yunio/personnel-actions2.png){:class="img-responsive"}
 10. Click **[HR master data] > [Save]** to create the new employee in SAP.<br>
 ![personnel-actions3](/img/contents/yunio/personnel-actions3.png){:class="img-responsive"}
-11. Click **[Save]** to save your actions. <br>
+11. Click **[Continue]**.<br>
+![personnel-actions4](/img/contents/yunio/personnel-actions4.png){:class="img-responsive"}
+12. Enter the address of the new employee.<br>
+![personnel-actions5](/img/contents/yunio/personnel-actions5.png){:class="img-responsive"}
+13. Click **[Save]** to save your actions. <br>
 Alternatively, click **[Stop]** to start parameterizing, see [yunIO Help: Parameterize Transactions](https://help.theobald-software.com/en/yunio/transactions#parameterize-transactions).
-12. Copy the URL of the service definition ( ![copy-URL](/img/contents/yunio/copyURL.png) icon) or download the service definition ( ![download-file](/img/contents/yunio/download.png) icon) to integrate the service in your workflow.<br>
+14. Copy the URL of the service definition ( ![copy-URL](/img/contents/yunio/copyURL.png) icon) or download the service definition ( ![download-file](/img/contents/yunio/download.png) icon) to integrate the service in your workflow.<br>
 For information on how to use yunIO services in Power Automate or Nintex, see [Integrating a yunIO Service with Power Automate](integrating-a-yunio-service-with-power-automate) or [Integrating a yunIO Service with Nintex](https://kb.theobald-software.com/yunio/integrating-a-yunio-service-with-nintex).
 ![yunio-Services](/img/contents/yunio/yunio-run-services.png){:class="img-responsive"}
 
