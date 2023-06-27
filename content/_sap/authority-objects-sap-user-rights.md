@@ -9,15 +9,18 @@ weight: 1
 ### About
 To use Theobald Software products you need an SAP connection user with sufficient authorization in SAP. Authorizations are assigned via authorization objects in SAP. <br>
 
-The authorizations in the first section [General authorization objects](#general-authorization-objects) are required to establish an SAP connection with the SAP application server. 
+The authorizations in the section [General authorization objects](#general-authorization-objects) are required to establish an SAP connection with the SAP application server. 
+The required authorizations for each extraction type are listed in their respective section.  
 
-The remaining sections show the authorizations required for the respective components. Depending on the component in use, the corresponding authorizations are required. 
+Redirect this article to your SAP Basis administrators to get the relevant authorization objects for your SAP connection user.  
 
-Redirect this article to your SAP Basis admins to get the relevant authorization objects for your SAP connection user.  
+{: .box-tip }
+**Tip:** Theobald Software provides SAP profiles that include authorizations, see [SAP Authorization Profiles](#sap-authorization-profiles).
 
 ### SAP Authorization Profiles
 
-Theobald Software collected and combined the necessary authorizations into corresponding SAP roles. You can download the offered SAP profiles and directly upload them to your SAP system:
+Theobald Software collected and combined the necessary authorizations for all extraction types into corresponding SAP roles. <br>
+You can download the SAP profiles and upload them to your SAP system:
 
 Component / Extraction Type  | SAP Role File
 ------------ | -------------
@@ -237,7 +240,9 @@ Download the corresponding SAP role ---  [SAP profile for Report](/files/sap_rol
 
 
 ### Table
+
 *Click to expand the details:*
+
 <details> <summary> Necessary SAP authorizations </summary>
 
 <pre>
@@ -273,7 +278,8 @@ S_RFC            RFC_TYPE=FUNC; RFC_NAME=EM_GET_NUMBER_OF_ENTRIES; ACTVT=16
 
 </details>
 
-<details> <summary>Necessary SAP authorizations - <i>Adjust currency decimals<i> setting</summary> 
+<details> <summary> Necessary SAP authorizations - <i>Adjust currency decimals</i> setting</summary> 
+
 <pre>
 S_TABU_NAM       ACTVT=03; TABLE=TCURX
 </pre>
@@ -283,7 +289,9 @@ S_TABU_NAM       ACTVT=03; TABLE=TCURX
 Download the corresponding SAP role ---  [SAP profile for Table](/files/sap_roles/ZXTABLE.SAP). 
 
 ### Table CDC
+
 *Click to expand the details:*
+
 <details> <summary> Necessary SAP authorizations </summary>
 
 <pre>
@@ -305,6 +313,7 @@ S_DEVELOP        ACTVT=02; DEVCLASS=$TMP; OBJNAME=/1LT/TS_*; OBJTYPE=*; P_GROUP=
 Download the corresponding SAP role ---  [SAP profile for Table CDC](/files/sap_roles/ZXTABLECDC.SAP).
 
 ### DeltaQ (Depricated)
+
 *Click to expand the details:*
 
 <details>
