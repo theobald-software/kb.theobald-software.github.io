@@ -1,0 +1,21 @@
+DATE                                              20190813                                          131337
+RELEASE                                           740
+LOADED_AGRS                                       ZXTQUERY
+AGR_DEFINE                                        800ZXTQUERY                                                    STEFFAN     20190813063801000000000000000STEFFAN     20190813063902000000000000000
+AGR_1250                                          800ZXTQUERY                      000001S_RFC     T-E555125400    U  O000004Authorization Check for RFC Access
+AGR_1251                                          800ZXTQUERY                      000001S_RFC     T-E555125400    ACTVT     16                                                                              U  O000005
+AGR_1251                                          800ZXTQUERY                      000002S_RFC     T-E555125400    RFC_NAME  AQRC                                                                            U  O000006
+AGR_1251                                          800ZXTQUERY                      000003S_RFC     T-E555125400    RFC_TYPE  FUGR                                                                            U  O000007
+AGR_TEXTS                                         800ZXTQUERY                      E00000needed authority objects for using SAP Query component
+AGR_FLAGS                                         800ZXTQUERY                      COLL_AGR  STEFFAN     20190813063801STEFFAN     20190813063801
+AGR_FLAGS                                         800ZXTQUERY                      DEVCLASS  STEFFAN     20190813063801STEFFAN     20190813063801
+AGR_FLAGS                                         800ZXTQUERY                      EXTSAP_F01STEFFAN     20190813063801STEFFAN     20190813063801
+AGR_FLAGS                                         800ZXTQUERY                      EXTSAP_F02STEFFAN     20190813063801STEFFAN     20190813063801
+AGR_FLAGS                                         800ZXTQUERY                      EXTSAP_F03STEFFAN     20190813063801STEFFAN     20190813063801
+AGR_FLAGS                                         800ZXTQUERY                      EXTSAP_F04STEFFAN     20190813063801STEFFAN     20190813063801
+AGR_FLAGS                                         800ZXTQUERY                      EXTSAP_F05STEFFAN     20190813063801STEFFAN     20190813063801
+AGR_FLAGS                                         800ZXTQUERY                      FORCE_MIX STEFFAN     20190813063900STEFFAN     20190813063900
+AGR_FLAGS                                         800ZXTQUERY                      MASTER_LANSTEFFAN     20190813063801STEFFAN     20190813063801E
+AGR_FLAGS                                         800ZXTQUERY                      RESP_USER             20190813063801STEFFAN     20190813063801
+AGR_TIME                                          800ZXTQUERY                      PROFILE   STEFFAN     20190813063900000000000000000STEFFAN     20190813063900000000000000000
+AGR_LSD                                           800ZXTQUERY                                                    E

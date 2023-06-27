@@ -1,0 +1,75 @@
+DATE                                              20190813                                          130838
+RELEASE                                           740
+LOADED_AGRS                                       ZXTDELTAQ
+AGR_DEFINE                                        800ZXTDELTAQ                                                   STEFFAN     20190813072158000000000000000STEFFAN     20190813124911000000000000000
+AGR_1250                                          800ZXTDELTAQ                     000001B_ALE_RECVT-E555125500    U  O000052ALE/EDI: Receiving IDocs via RFC
+AGR_1250                                          800ZXTDELTAQ                     000002S_BTCH_ADMT-E555125500    U  O000049Background Processing: Background Administrator
+AGR_1250                                          800ZXTDELTAQ                     000003S_BTCH_JOBT-E555125500    U  O000045Background Processing: Operations on Background Jobs
+AGR_1250                                          800ZXTDELTAQ                     000004S_IDOCDEFTT-E555125500    U  O000015WFEDI: S_IDOCDEFT - Access to IDoc Development
+AGR_1250                                          800ZXTDELTAQ                     000005S_IDOCMONIT-E555125500    U  O000021WFEDI: S_IDOCMONI - Access to IDoc Monitoring
+AGR_1250                                          800ZXTDELTAQ                     000006S_RFC     T-E555125500    U  O000004Authorization Check for RFC Access
+AGR_1250                                          800ZXTDELTAQ                     000007S_RFC_ADM T-E555125500    U  O000029Administration for RFC Destination
+AGR_1250                                          800ZXTDELTAQ                     000008S_RO_OSOA T-E555125500    U  O000036SAP DataSource Authorizations
+AGR_1250                                          800ZXTDELTAQ                     000009S_SPO_DEV T-E555125500    U  O000042Spool: Device authorizations
+AGR_1250                                          800ZXTDELTAQ                     000010S_TABU_DIST-E555125500    U  O000010Table Maintenance (via standard tools such as SM30)
+AGR_1251                                          800ZXTDELTAQ                     000001S_IDOCDEFTT-E555125500    ACTVT     02                                                                              U  O000016
+AGR_1251                                          800ZXTDELTAQ                     000002S_IDOCDEFTT-E555125500    EDI_CIM   *                                                                               U  O000017
+AGR_1251                                          800ZXTDELTAQ                     000003S_IDOCDEFTT-E555125500    EDI_DOC   *                                                                               U  O000018
+AGR_1251                                          800ZXTDELTAQ                     000004S_IDOCDEFTT-E555125500    EDI_TCD   WE30                                                                            U  O000019
+AGR_1251                                          800ZXTDELTAQ                     000005S_RFC     T-E555125500    ACTVT     16                                                                              U  O000005
+AGR_1251                                          800ZXTDELTAQ                     000006S_RFC     T-E555125500    RFC_NAME  RSAG                                                                            U  O000006
+AGR_1251                                          800ZXTDELTAQ                     000007S_RFC     T-E555125500    RFC_NAME  SDIFRUNTIME                                                                     U  O000006
+AGR_1251                                          800ZXTDELTAQ                     000008S_RFC     T-E555125500    RFC_TYPE  FUGR                                                                            U  O000007
+AGR_1251                                          800ZXTDELTAQ                     000009S_TABU_DIST-E555125500    ACTVT     03                                                                              U  O000011
+AGR_1251                                          800ZXTDELTAQ                     000010S_TABU_DIST-E555125500    DICBERCLS SC                                                                              U  O000012
+AGR_1251                                          800ZXTDELTAQ                     000011S_TABU_DIST-E555125500    DICBERCLS SS                                                                              U  O000012
+AGR_1251                                          800ZXTDELTAQ                     000012S_RFC     T-E555125500    RFC_NAME  SYSU                                                                            U  O000006
+AGR_1251                                          800ZXTDELTAQ                     000013S_RFC     T-E555125500    RFC_NAME  SDTX                                                                            U  O000006
+AGR_1251                                          800ZXTDELTAQ                     000014S_RFC     T-E555125500    RFC_NAME  RSC1                                                                            U  O000006
+AGR_1251                                          800ZXTDELTAQ                     000015S_RFC     T-E555125500    RFC_NAME  RSAP_REMOTE_HIERARCHY_CATALOG                                                   U  O000006
+AGR_1251                                          800ZXTDELTAQ                     000016S_RFC     T-E555125500    RFC_NAME  RSAK                                                                            U  O000006
+AGR_1251                                          800ZXTDELTAQ                     000017S_RFC     T-E555125500    RFC_NAME  RSA1_OLTPSOURCE_GET_SELECTIONS                                                  U  O000006
+AGR_1251                                          800ZXTDELTAQ                     000018S_RFC     T-E555125500    RFC_NAME  RSA1_OLTPSOURCE_GET_ALL                                                         U  O000006
+AGR_1251                                          800ZXTDELTAQ                     000019S_RFC     T-E555125500    RFC_NAME  ERFC                                                                            U  O000006
+AGR_1251                                          800ZXTDELTAQ                     000020S_RFC     T-E555125500    RFC_NAME  EDIW                                                                            U  O000006
+AGR_1251                                          800ZXTDELTAQ                     000021S_RFC     T-E555125500    RFC_NAME  EDIN                                                                            U  O000006
+AGR_1251                                          800ZXTDELTAQ                     000022S_RFC     T-E555125500    RFC_NAME  EDIMEXT                                                                         U  O000006
+AGR_1251                                          800ZXTDELTAQ                     000023S_RFC     T-E555125500    RFC_NAME  EDI1                                                                            U  O000006
+AGR_1251                                          800ZXTDELTAQ                     000024S_RFC     T-E555125500    RFC_NAME  BATG                                                                            U  O000006
+AGR_1251                                          800ZXTDELTAQ                     000025S_RFC     T-E555125500    RFC_NAME  ARFC                                                                            U  O000006
+AGR_1251                                          800ZXTDELTAQ                     000026S_RFC     T-E555125500    RFC_NAME  /BIC/*                                                                          U  O000006
+AGR_1251                                          800ZXTDELTAQ                     000027S_RFC     T-E555125500    RFC_NAME  /BI0/*                                                                          U  O000006
+AGR_1251                                          800ZXTDELTAQ                     000028S_IDOCDEFTT-E555125500    ACTVT     03                                                                              U  O000016
+AGR_1251                                          800ZXTDELTAQ                     000029S_TABU_DIST-E555125500    DICBERCLS &NC&                                                                            U  O000012
+AGR_1251                                          800ZXTDELTAQ                     000030S_IDOCMONIT-E555125500    ACTVT     03                                                                              U  O000022
+AGR_1251                                          800ZXTDELTAQ                     000031S_IDOCMONIT-E555125500    EDI_DIR   *                                                                               U  O000023
+AGR_1251                                          800ZXTDELTAQ                     000032S_IDOCMONIT-E555125500    EDI_MES   *                                                                               U  O000024
+AGR_1251                                          800ZXTDELTAQ                     000033S_IDOCMONIT-E555125500    EDI_PRN   *                                                                               U  O000025
+AGR_1251                                          800ZXTDELTAQ                     000034S_IDOCMONIT-E555125500    EDI_PRT   *                                                                               U  O000026
+AGR_1251                                          800ZXTDELTAQ                     000035S_IDOCMONIT-E555125500    EDI_TCD   WE*                                                                             U  O000027
+AGR_1251                                          800ZXTDELTAQ                     000036S_RFC_ADM T-E555125500    ACTVT     03                                                                              U  O000030
+AGR_1251                                          800ZXTDELTAQ                     000037S_RFC_ADM T-E555125500    ICF_VALUE *                                                                               U  O000031
+AGR_1251                                          800ZXTDELTAQ                     000038S_RFC_ADM T-E555125500    RFCTYPE   T                                                                               U  O000033
+AGR_1251                                          800ZXTDELTAQ                     000039S_RFC_ADM T-E555125500    RFCDEST   XTRACT*                                                                         U  O000032
+AGR_1251                                          800ZXTDELTAQ                     000040S_RO_OSOA T-E555125500    OSOAPART  DATA                                                                            U  O000040
+AGR_1251                                          800ZXTDELTAQ                     000041S_RO_OSOA T-E555125500    OSOAAPCO  *                                                                               U  O000039
+AGR_1251                                          800ZXTDELTAQ                     000042S_RO_OSOA T-E555125500    OLTPSOURCE*                                                                               U  O000038
+AGR_1251                                          800ZXTDELTAQ                     000043S_RO_OSOA T-E555125500    ACTVT     03                                                                              U  O000037
+AGR_1251                                          800ZXTDELTAQ                     000044S_SPO_DEV T-E555125500    SPODEVICE *                                                                               U  O000043
+AGR_1251                                          800ZXTDELTAQ                     000045S_BTCH_JOBT-E555125500    JOBACTION RELE                                                                            U  O000046
+AGR_1251                                          800ZXTDELTAQ                     000046S_BTCH_JOBT-E555125500    JOBGROUP  *                                                                               U  O000047
+AGR_1251                                          800ZXTDELTAQ                     000047S_BTCH_ADMT-E555125500    BTCADMIN  Y                                                                               U  O000050
+AGR_1251                                          800ZXTDELTAQ                     000048B_ALE_RECVT-E555125500    EDI_MES   RSRQST                                                                          U  O000053
+AGR_TEXTS                                         800ZXTDELTAQ                     E00000needed authority objects for (re)activating, processing datasource
+AGR_FLAGS                                         800ZXTDELTAQ                     COLL_AGR  STEFFAN     20190813072158STEFFAN     20190813072158
+AGR_FLAGS                                         800ZXTDELTAQ                     DEVCLASS  STEFFAN     20190813072158STEFFAN     20190813072158
+AGR_FLAGS                                         800ZXTDELTAQ                     EXTSAP_F01STEFFAN     20190813072158STEFFAN     20190813072158
+AGR_FLAGS                                         800ZXTDELTAQ                     EXTSAP_F02STEFFAN     20190813072158STEFFAN     20190813072158
+AGR_FLAGS                                         800ZXTDELTAQ                     EXTSAP_F03STEFFAN     20190813072158STEFFAN     20190813072158
+AGR_FLAGS                                         800ZXTDELTAQ                     EXTSAP_F04STEFFAN     20190813072158STEFFAN     20190813072158
+AGR_FLAGS                                         800ZXTDELTAQ                     EXTSAP_F05STEFFAN     20190813072158STEFFAN     20190813072158
+AGR_FLAGS                                         800ZXTDELTAQ                     FORCE_MIX STEFFAN     20190813072534STEFFAN     20190813124910
+AGR_FLAGS                                         800ZXTDELTAQ                     MASTER_LANSTEFFAN     20190813072158STEFFAN     20190813072158E
+AGR_FLAGS                                         800ZXTDELTAQ                     RESP_USER             20190813072158STEFFAN     20190813072158
+AGR_TIME                                          800ZXTDELTAQ                     PROFILE   STEFFAN     20190813072534000000000000000STEFFAN     20190813124910000000000000000
+AGR_LSD                                           800ZXTDELTAQ                                                   E

@@ -1,0 +1,37 @@
+DATE                                              20230622                                          144907
+RELEASE                                           740
+LOADED_AGRS                                       ZXTBWHIERARCHY
+AGR_DEFINE                                        800ZXTBWHIERARCHY                                              STEFFAN     20230622132436000000000000000STEFFAN     20230622144655000000000000000
+AGR_1250                                          800ZXTBWHIERARCHY                000001S_RFC     T-B212002900    U  O000004Authorization Check for RFC Access
+AGR_1250                                          800ZXTBWHIERARCHY                000002S_RS_ADMWBT-B212002900    U  O000019Data Warehousing Workbench - Objects
+AGR_1250                                          800ZXTBWHIERARCHY                000003S_TABU_DIST-B212002900    U  O000010Table Maintenance (via standard tools such as SM30)
+AGR_1250                                          800ZXTBWHIERARCHY                000004S_TABU_NAMT-B212002900    U  O000014Table Access via Generic Standard Tools
+AGR_1251                                          800ZXTBWHIERARCHY                000001S_RFC     T-B212002900    ACTVT     16                                                                              U  O000005
+AGR_1251                                          800ZXTBWHIERARCHY                000002S_RFC     T-B212002900    RFC_NAME  BAPI_IOBJ_GETDETAIL                                                             U  O000006
+AGR_1251                                          800ZXTBWHIERARCHY                000003S_RFC     T-B212002900    RFC_NAME  DDIF_FIELDINFO_GET                                                              U  O000006
+AGR_1251                                          800ZXTBWHIERARCHY                000004S_RFC     T-B212002900    RFC_NAME  RFC_GET_FUNCTION_INTERFACE                                                      U  O000006
+AGR_1251                                          800ZXTBWHIERARCHY                000005S_TABU_DIST-B212002900    ACTVT     03                                                                              U  O000011
+AGR_1251                                          800ZXTBWHIERARCHY                000006S_RFC     T-B212002900    RFC_NAME  RSBAPI_IOBJ                                                                     U  O000006
+AGR_1251                                          800ZXTBWHIERARCHY                000007S_RFC     T-B212002900    RFC_NAME  RSNDI_SHIE                                                                      U  O000006
+AGR_1251                                          800ZXTBWHIERARCHY                000008S_RFC     T-B212002900    RFC_NAME  SDIFRUNTIME                                                                     U  O000006
+AGR_1251                                          800ZXTBWHIERARCHY                000009S_RFC     T-B212002900    RFC_NAME  SDTX                                                                            U  O000006
+AGR_1251                                          800ZXTBWHIERARCHY                000010S_RFC     T-B212002900    RFC_TYPE  FUGR                                                                            U  O000007
+AGR_1251                                          800ZXTBWHIERARCHY                000011S_TABU_DIST-B212002900    DICBERCLS BWG                                                                             U  O000012
+AGR_1251                                          800ZXTBWHIERARCHY                000012S_RS_ADMWBT-B212002900    ACTVT     03                                                                              U  O000020
+AGR_1251                                          800ZXTBWHIERARCHY                000013S_RS_ADMWBT-B212002900    RSADMWBOBJINFOOBJECT                                                                      U  O000021
+AGR_1251                                          800ZXTBWHIERARCHY                000014S_TABU_DIST-B212002900    ACTVT     02                                                                              U  O000011
+AGR_1251                                          800ZXTBWHIERARCHY                000015S_TABU_DIST-B212002900    DICBERCLS BWC                                                                             U  O000012
+AGR_1251                                          800ZXTBWHIERARCHY                000016S_TABU_NAMT-B212002900    ACTVT     02                                                                              U  O000015
+AGR_1251                                          800ZXTBWHIERARCHY                000017S_TABU_NAMT-B212002900    TABLE     /BIC/*                                                                          U  O000016
+AGR_1251                                          800ZXTBWHIERARCHY                000018S_TABU_NAMT-B212002900    ACTVT     03                                                                              U  O000015
+AGR_1251                                          800ZXTBWHIERARCHY                000019S_TABU_NAMT-B212002900    TABLE     ENLFDIR                                                                         U  O000016
+AGR_1251                                          800ZXTBWHIERARCHY                000020S_TABU_NAMT-B212002900    TABLE     RSHIEDIR                                                                        U  O000016
+AGR_1251                                          800ZXTBWHIERARCHY                000021S_RFC     T-B212002900    RFC_NAME  Z_THEO_READ_TABLE                                                               U  O000006
+AGR_TEXTS                                         800ZXTBWHIERARCHY                E00000Needed Authorization objects for extracting BW Hierarchies
+AGR_FLAGS                                         800ZXTBWHIERARCHY                COLL_AGR  STEFFAN     20230622132436STEFFAN     20230622132436
+AGR_FLAGS                                         800ZXTBWHIERARCHY                DEVCLASS  STEFFAN     20230622132436STEFFAN     20230622132436
+AGR_FLAGS                                         800ZXTBWHIERARCHY                FORCE_MIX STEFFAN     20230622132818STEFFAN     20230622144654
+AGR_FLAGS                                         800ZXTBWHIERARCHY                MASTER_LANSTEFFAN     20230622132436STEFFAN     20230622132436E
+AGR_FLAGS                                         800ZXTBWHIERARCHY                RESP_USER STEFFAN     20230622132436STEFFAN     20230622132436
+AGR_TIME                                          800ZXTBWHIERARCHY                PROFILE   STEFFAN     20230622132818000000000000000STEFFAN     20230622144654000000000000000
+AGR_LSD                                           800ZXTBWHIERARCHY                                              E

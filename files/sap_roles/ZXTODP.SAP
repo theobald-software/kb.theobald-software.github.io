@@ -1,0 +1,41 @@
+DATE                                              20190819                                          111418
+RELEASE                                           740
+LOADED_AGRS                                       ZXTODP
+AGR_DEFINE                                        800ZXTODP                                                      STEFFAN     20190723153058000000000000000STEFFAN     20190723154502000000000000000
+AGR_1250                                          800ZXTODP                        000001S_ADMI_FCDT-E555125300    U  O000013System Authorizations
+AGR_1250                                          800ZXTODP                        000002S_APPL_LOGT-E555125300    U  O000017Applications log
+AGR_1250                                          800ZXTODP                        000003S_RFC     T-E555125300    U  O000004Authorization Check for RFC Access
+AGR_1250                                          800ZXTODP                        000004S_RO_OSOA T-E555125300    U  O000023SAP DataSource Authorizations
+AGR_1250                                          800ZXTODP                        000005S_TCODE   T-E555125300    U  O000009Transaction Code Check at Transaction Start
+AGR_1251                                          800ZXTODP                        000001S_ADMI_FCDT-E555125300    S_ADMI_FCDNADM                                                                            U  O000014
+AGR_1251                                          800ZXTODP                        000002S_APPL_LOGT-E555125300    ACTVT     03                                                                              U  O000018
+AGR_1251                                          800ZXTODP                        000003S_APPL_LOGT-E555125300    ACTVT     06                                                                              U  O000018
+AGR_1251                                          800ZXTODP                        000004S_APPL_LOGT-E555125300    ALG_OBJECTODQ                                                                             U  O000019
+AGR_1251                                          800ZXTODP                        000005S_APPL_LOGT-E555125300    ALG_SUBOBJ*                                                                               U  O000020
+AGR_1251                                          800ZXTODP                        000006S_RFC     T-E555125300    ACTVT     16                                                                              U  O000005
+AGR_1251                                          800ZXTODP                        000007S_RFC     T-E555125300    RFC_NAME  RODPS_REPL                                                                      U  O000006
+AGR_1251                                          800ZXTODP                        000008S_RFC     T-E555125300    RFC_TYPE  FUNC                                                                            U  O000007
+AGR_1251                                          800ZXTODP                        000009S_RO_OSOA T-E555125300    ACTVT     03                                                                              U  O000024
+AGR_1251                                          800ZXTODP                        000010S_RO_OSOA T-E555125300    OLTPSOURCE*                                                                               U  O000025
+AGR_1251                                          800ZXTODP                        000011S_RO_OSOA T-E555125300    OSOAAPCO  *                                                                               U  O000026
+AGR_1251                                          800ZXTODP                        000012S_RO_OSOA T-E555125300    OSOAPART  DATA                                                                            U  O000027
+AGR_1251                                          800ZXTODP                        000013S_TCODE   T-E555125300    TCD       BSANL_ACWB                                                                      U  O000010
+AGR_1251                                          800ZXTODP                        000014S_TCODE   T-E555125300    TCD       ODQMON                                                                          U  O000010
+AGR_1251                                          800ZXTODP                        000015S_TCODE   T-E555125300    TCD       RODPS_ODP_IMG                                                                   U  O000010
+AGR_1251                                          800ZXTODP                        000016S_TCODE   T-E555125300    TCD       RSO2                                                                            U  O000010
+AGR_1251                                          800ZXTODP                        000017S_TCODE   T-E555125300    TCD       RSOR                                                                            U  O000010
+AGR_1251                                          800ZXTODP                        000018S_TCODE   T-E555125300    TCD       RSRTS_ODP_DIS                                                                   U  O000010
+AGR_1251                                          800ZXTODP                        000019S_RFC     T-E555125300    RFC_TYPE  FUGR                                                                            U  O000007
+AGR_TEXTS                                         800ZXTODP                        E00000Authority Objects for ODP Component
+AGR_FLAGS                                         800ZXTODP                        COLL_AGR  STEFFAN     20190723153058STEFFAN     20190723153058
+AGR_FLAGS                                         800ZXTODP                        DEVCLASS  STEFFAN     20190723153058STEFFAN     20190723153058
+AGR_FLAGS                                         800ZXTODP                        EXTSAP_F01STEFFAN     20190723153058STEFFAN     20190723153058
+AGR_FLAGS                                         800ZXTODP                        EXTSAP_F02STEFFAN     20190723153058STEFFAN     20190723153058
+AGR_FLAGS                                         800ZXTODP                        EXTSAP_F03STEFFAN     20190723153058STEFFAN     20190723153058
+AGR_FLAGS                                         800ZXTODP                        EXTSAP_F04STEFFAN     20190723153058STEFFAN     20190723153058
+AGR_FLAGS                                         800ZXTODP                        EXTSAP_F05STEFFAN     20190723153058STEFFAN     20190723153058
+AGR_FLAGS                                         800ZXTODP                        FORCE_MIX STEFFAN     20190723153553STEFFAN     20190723154501
+AGR_FLAGS                                         800ZXTODP                        MASTER_LANSTEFFAN     20190723153058STEFFAN     20190723153058E
+AGR_FLAGS                                         800ZXTODP                        RESP_USER             20190723153058STEFFAN     20190723153058
+AGR_TIME                                          800ZXTODP                        PROFILE   STEFFAN     20190723153553000000000000000STEFFAN     20190723154501000000000000000
+AGR_LSD                                           800ZXTODP                                                      E

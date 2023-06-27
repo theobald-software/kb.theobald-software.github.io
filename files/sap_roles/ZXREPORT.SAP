@@ -1,0 +1,32 @@
+DATE                                              20190802                                          155114
+RELEASE                                           740
+LOADED_AGRS                                       ZXREPORT
+AGR_DEFINE                                        800ZXREPORT                                                    WEINREICH   20190403160850000000000000000STEFFAN     20190802131854000000000000000
+AGR_1250                                          800ZXREPORT                      000001S_BTCH_ADMT-E555124700    U  O000010Background Processing: Background Administrator
+AGR_1250                                          800ZXREPORT                      000002S_BTCH_JOBT-E555124700    U  O000013Background Processing: Operations on Background Jobs
+AGR_1250                                          800ZXREPORT                      000003S_GUI     T-E555124700    U  O000017Authorization for GUI activities
+AGR_1250                                          800ZXREPORT                      000004S_RFC     T-E555124700    U  O000004Authorization Check for RFC Access
+AGR_1250                                          800ZXREPORT                      000005S_TABU_DIST-E555124700    U  O000020Table Maintenance (via standard tools such as SM30)
+AGR_1251                                          800ZXREPORT                      000001S_BTCH_ADMT-E555124700    BTCADMIN  Y                                                                               U  O000011
+AGR_1251                                          800ZXREPORT                      000002S_BTCH_JOBT-E555124700    JOBACTION RELE                                                                            U  O000014
+AGR_1251                                          800ZXREPORT                      000003S_BTCH_JOBT-E555124700    JOBGROUP  *                                                                               U  O000015
+AGR_1251                                          800ZXREPORT                      000004S_GUI     T-E555124700    ACTVT     61                                                                              U  O000018
+AGR_1251                                          800ZXREPORT                      000005S_RFC     T-E555124700    ACTVT     16                                                                              U  O000005
+AGR_1251                                          800ZXREPORT                      000006S_RFC     T-E555124700    RFC_NAME  ZXTRACTABAP                                                                     U  O000006
+AGR_1251                                          800ZXREPORT                      000007S_RFC     T-E555124700    RFC_TYPE  FUGR                                                                            U  O000007
+AGR_1251                                          800ZXREPORT                      000008S_TABU_DIST-E555124700    ACTVT     03                                                                              U  O000021
+AGR_1251                                          800ZXREPORT                      000009S_TABU_DIST-E555124700    DICBERCLS SS                                                                              U  O000022
+AGR_1251                                          800ZXREPORT                      000010S_TABU_DIST-E555124700    DICBERCLS &NC&                                                                            U  O000022
+AGR_TEXTS                                         800ZXREPORT                      E00000Authority objects for Report Component
+AGR_FLAGS                                         800ZXREPORT                      COLL_AGR  WEINREICH   20190403160850STEFFAN     20190723130846
+AGR_FLAGS                                         800ZXREPORT                      DEVCLASS  WEINREICH   20190403160850WEINREICH   20190403160850
+AGR_FLAGS                                         800ZXREPORT                      EXTSAP_F01WEINREICH   20190403160850WEINREICH   20190403160850
+AGR_FLAGS                                         800ZXREPORT                      EXTSAP_F02WEINREICH   20190403160850WEINREICH   20190403160850
+AGR_FLAGS                                         800ZXREPORT                      EXTSAP_F03WEINREICH   20190403160850WEINREICH   20190403160850
+AGR_FLAGS                                         800ZXREPORT                      EXTSAP_F04WEINREICH   20190403160850WEINREICH   20190403160850
+AGR_FLAGS                                         800ZXREPORT                      EXTSAP_F05WEINREICH   20190403160850WEINREICH   20190403160850
+AGR_FLAGS                                         800ZXREPORT                      FORCE_MIX WEINREICH   20190403161256STEFFAN     20190802131853
+AGR_FLAGS                                         800ZXREPORT                      MASTER_LANWEINREICH   20190403160850WEINREICH   20190403160850E
+AGR_FLAGS                                         800ZXREPORT                      RESP_USER             20190403160850WEINREICH   20190403160850
+AGR_TIME                                          800ZXREPORT                      PROFILE   WEINREICH   20190403161256000000000000000STEFFAN     20190802131853000000000000000
+AGR_LSD                                           800ZXREPORT                                                    E

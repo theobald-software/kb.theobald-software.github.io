@@ -1,0 +1,22 @@
+DATE                                              20190813                                          131317
+RELEASE                                           740
+LOADED_AGRS                                       ZXTGENERAL
+AGR_DEFINE                                        800ZXTGENERAL                                                  BABI        20190116130752000000000000000STEFFAN     20190722145632000000000000000
+AGR_1250                                          800ZXTGENERAL                    000001S_RFC     ZXTGENERAL00    U  O000004Authorization Check for RFC Access
+AGR_1251                                          800ZXTGENERAL                    000001S_RFC     ZXTGENERAL00    ACTVT     16                                                                              U  O000005
+AGR_1251                                          800ZXTGENERAL                    000002S_RFC     ZXTGENERAL00    RFC_NAME  RFC1                                                                            U  O000006
+AGR_1251                                          800ZXTGENERAL                    000003S_RFC     ZXTGENERAL00    RFC_NAME  SYST                                                                            U  O000006
+AGR_1251                                          800ZXTGENERAL                    000004S_RFC     ZXTGENERAL00    RFC_TYPE  FUGR                                                                            U  O000007
+AGR_TEXTS                                         800ZXTGENERAL                    E00000General Authority Objects for Theobald Software Products
+AGR_FLAGS                                         800ZXTGENERAL                    COLL_AGR  BABI        20190116130752WEINREICH   20190805115518
+AGR_FLAGS                                         800ZXTGENERAL                    DEVCLASS  BABI        20190116130752BABI        20190116130752
+AGR_FLAGS                                         800ZXTGENERAL                    EXTSAP_F01BABI        20190116130752BABI        20190116130752
+AGR_FLAGS                                         800ZXTGENERAL                    EXTSAP_F02BABI        20190116130752BABI        20190116130752
+AGR_FLAGS                                         800ZXTGENERAL                    EXTSAP_F03BABI        20190116130752BABI        20190116130752
+AGR_FLAGS                                         800ZXTGENERAL                    EXTSAP_F04BABI        20190116130752BABI        20190116130752
+AGR_FLAGS                                         800ZXTGENERAL                    EXTSAP_F05BABI        20190116130752BABI        20190116130752
+AGR_FLAGS                                         800ZXTGENERAL                    FORCE_MIX BABI        20190116130922STEFFAN     20190722145630
+AGR_FLAGS                                         800ZXTGENERAL                    MASTER_LANBABI        20190116130752BABI        20190116130752E
+AGR_FLAGS                                         800ZXTGENERAL                    RESP_USER             20190116130752BABI        20190116130752
+AGR_TIME                                          800ZXTGENERAL                    PROFILE   BABI        20190116130922000000000000000STEFFAN     20190722145630000000000000000
+AGR_LSD                                           800ZXTGENERAL                                                  E
