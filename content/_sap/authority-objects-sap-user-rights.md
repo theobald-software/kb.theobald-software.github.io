@@ -9,29 +9,30 @@ weight: 1
 ### About
 To use Theobald Software products you need an SAP connection user with sufficient authorization in SAP. Authorizations are assigned via authorization objects in SAP. <br>
 
-The authorizations in the first section "General authorization objects" are required to establish an SAP connection with the SAP application server. 
+The authorizations in the first section [General authorization objects](#general-authorization-objects) are required to establish an SAP connection with the SAP application server. 
+
 The remaining sections show the authorizations required for the respective components. Depending on the component in use, the corresponding authorizations are required. 
 
 Redirect this article to your SAP Basis admins to get the relevant authorization objects for your SAP connection user.  
 
 ### SAP Authorization Profiles
 
-The following table contains a collection of roles required access rights SAP roles in the form of dowloadable SAP profile files:
-
+Theobald Software collected and combined the necessary authorizations into corresponding SAP roles. You can download the offered SAP profiles and directly upload them to your SAP system:
 
 Component / Extraction Type  | SAP Role File
 ------------ | -------------
 [General authorization objects](#general-authorization-objects) | [ZXTGENERAL.SAP](/files/sap_roles/ZXTGENERAL.SAP)
 [BAPI](#bapi) | [ZXTBAPI.SAP](/files/sap_roles/ZXTBAPI.SAP)
-[BW Cube](#bw-cube--bw-query)|
-[BW Hierarchy](#bw-hierarchy) |
-[ODP (Operational Data Provisioning)](#odp) |
-[OHS (Open Hub Services)](#ohs) |
-[SAP Query](#sap-query)|
-[Report](#report)|
+[BW Cube](#bw-cube--bw-query)|[ZXTQUERY.SAP](/files/sap_roles/ZXTQUERY.SAP)
+[BW Hierarchy](#bw-hierarchy) |[ZXTBWHIERARCHY.SAP](/files/sap_roles/ZXTBWHIERARCHY.SAP)
+[ODP (Operational Data Provisioning)](#odp) |[ZXTODP.SAP](/files/sap_roles/ZXTODP.SAP)
+[OHS (Open Hub Services)](#ohs) |[ZXTOHS.SAP](/files/sap_roles/ZXTOHS.SAP)
+[SAP Query](#sap-query)|[ZXTQUERY.SAP](/files/sap_roles/ZXTQUERY.SAP)
+[Report](#report)|[ZXREPORT.SAP](/files/sap_roles/ZXREPORT.SAP)
 [Table](#table) | [ZXTABLE.SAP](/files/sap_roles/ZXTABLE.SAP) 
-[Table CDC](#table-cdc) | ..
-[DeltaQ (depricated)](#deltaq-depricated) |
+[Table CDC](#table-cdc) | [ZXTABLECDC.SAP](/files/sap_roles/ZXTABLECDC.SAP)
+[DeltaQ (depricated)](#deltaq-depricated) |[ZXTDELTAQ.SAP](/files/sap_roles/ZXTDELTAQ.SAP),[DELTAQ_CUSTOMIZING_CHECK](/files/sap_roles/DELTAQ_CUSTOMIZING_CHECK.SAP)
+
 
 
 {: .box-note }
@@ -51,17 +52,19 @@ S_RFC            RFC_TYPE=FUGR; RFC_NAME=RFC1; ACTVT=16
 
 
 </details> 
-Download the corresponding SAP role --- [SAP profile for general authorization](/files/sap_roles/ZXTGENERAL.SAP)
+
+Download the corresponding SAP role --- [SAP profile for general authorization](/files/sap_roles/ZXTGENERAL.SAP).
 
 ### BAPI
+*Click to expand the details:*
+<details> <summary> Necessary SAP authorizations </summary>
 
-Necessary SAP authorizations 
-
-```
+<pre>
 S_RFC            ACTVT=16; RFC_TYPE=FUGR; RFC_NAME=DDIF_FIELDINFO_GET, SDIFRUNTIME     
-```
-         
-Download the corresponding SAP role ---  [SAP profile for BAPI Extractions](/files/sap_roles/ZXTBAPI.SAP)
+</pre>
+</details> 
+
+Download the corresponding SAP role --- [SAP profile for BAPI Extractions](/files/sap_roles/ZXTBAPI.SAP).
 
 ### BW Cube / BW Query 
 
@@ -88,8 +91,7 @@ S_TABU_NAM       ACTVT=03; TABLE=RSZGLOBV
 </details>
 
 
-
-<details> <summary> BICS mode </summary>
+<details> <summary> Necessary SAP authorizations - BICS mode </summary>
 
 <pre>
 S_RFC            RFC_TYPE=FUGR;RFC_NAME=SYST;ACTVT=16;type=RF;name=RFCPING;
@@ -103,15 +105,20 @@ S_ADMI_FCD       S_ADMI_FCD=PADM;
 
 </details>
 
-Date conversion (optional):
 
-```
+
+<details> <summary> Necessary SAP authorizations - Date conversion (optional) </summary>
+
+<pre>
 S_TABU_NAM       ACTVT=03; TABLE=DD03L
-```
+</pre>
 
-Alternatively, you can assign pfcg template ```S_RS_RREPU``` - BW Role: Reporting User. This template contains above authorizations except for ```S_ADMI_FCD```.
+</details>
 
-Download the corresponding SAP role ---  
+Alternatively, you can assign the SAP profile ```S_RS_RREPU``` - BW Role: Reporting User. <br>
+This template contains above authorizations except for ```S_ADMI_FCD```.
+
+Download the corresponding SAP role --- [SAP profile for BW Cube / BW Query](/files/sap_roles/ZXTQUERY.SAP).
 
 ### BW Hierarchy
 *Click to expand the details:*
@@ -140,15 +147,24 @@ S_TABU_NAM     ACTVT=02, 03; TABLE=RSHIEDIR
 
 </details>
 
+
+Download the corresponding SAP role --- [SAP profile for BW Hierarchy](/files/sap_roles/ZXTBWHIERARCHY.SAP).
+
+
 ### ODP
 
 For a complete and detailed list of authorization objects refer to [SAP Note 2855052](https://launchpad.support.sap.com/#/notes/2855052) - Authorizations required for ODP Data Replication API 2.0. 
 
-When using "Adjust currency decimals" setting:
-```
+*Click to expand the details:*
+<details> <summary>Necessary SAP authorizations - <i>Adjust currency decimals</i> setting</summary> 
+
+<pre>
 S_TABU_NAM       ACTVT=03; TABLE=TCURX
-```
-Download the corresponding SAP role ---   
+</pre>
+
+</details> 
+
+Download the corresponding SAP role ---  [SAP profile for ODP](/files/sap_roles/ZXTODP.SAP). 
 
 
 ### OHS
@@ -175,17 +191,25 @@ S_RS_AUTH  BIAUTH=0BI_ALL
 S_ADMI_FCD S_ADMI_FCD=ST0R
 
 </pre>
+
 </details>
 
-Download the corresponding SAP role ---  
+Download the corresponding SAP role ---  [SAP profile for OHS](/files/sap_roles/ZXTOHS.SAP).
 
 
 
 ### SAP Query
+*Click to expand the details:*
+<details> <summary> Necessary SAP authorizations </summary>
 
-```
+<pre>
 S_RFC            RFC_TYPE=FUGR; RFC_NAME=AQRC; ACTVT=16 
-```
+</pre>
+
+</details>
+
+Download the corresponding SAP role ---  [SAP profile for SAP Query](/files/sap_roles/ZXTQUERY.SAP).
+
 
 ### Report
 
@@ -194,8 +218,6 @@ S_RFC            RFC_TYPE=FUGR; RFC_NAME=AQRC; ACTVT=16
 <details> <summary> Necessary SAP authorizations </summary>
 
 <pre>
-
-
 S_RFC            RFC_TYPE=FUGR; RFC_NAME=ZXTRACTABAP; ACTVT=16
 S_TABU_NAM       ACTVT=03; TABLE=TRDIR, TRDIRT, TSTC, VARID
 S_GUI            ACTVT=61 
@@ -205,52 +227,63 @@ S_BTCH_ADM       BTCADMIN=Y
 S_BTCH_JOB       JOBGROUP=*; JOBACTION=RELE
 </pre>
 
+</details>
 
 {: .box-note }
 **Note** The necessary transport request for function group *ZXTRACTABAP* is located in the following path: ```C:\Program Files\[XtractProduct]\ABAP\Report\Z_XTRACT_IS_REMOTE_REPORT-transport.zip``` of the default installation.
 
 
+Download the corresponding SAP role ---  [SAP profile for Report](/files/sap_roles/ZXREPORT.SAP).
+
 
 ### Table
-
+*Click to expand the details:*
 <details> <summary> Necessary SAP authorizations </summary>
 
 <pre>
-
-
-S_RFC            ACTVT=16; RFC_TYPE=FUGR; RFC_NAME=RFC_READ_TABLE, DDIF_FIELDINFO_GET, SDTX, SDIFRUNTIME, Z_THEO_READ_TABLE                   
+S_RFC            ACTVT=16; RFC_TYPE=FUGR; RFC_NAME=SDTX, SDIFRUNTIME, Z_THEO_READ_TABLE                   
 S_TABU_DIS       ACTVT=03; DICBERCLS=XXXX
 S_TABU_NAM       ACTVT=03; TABLE=DD02V, DD17S, DD27S, ENLFDIR
+S_DSAUTH         ACTVT=16;    
 
 </pre>
 
-XXXX (stands for a placeholder) is the Authorization Group for the table. To determine, which authorization group belongs to which table look at table TDDAT (e.g. with SE16). 
+XXXX (stands for a placeholder) is the authorization group for the table. To determine, which authorization group belongs to which table, check the table TDDAT - Maintenance Areas for Tables. 
 If the table is not listed, the authorization group is &NC&. For authorizing specific tables use authorization object S_TABU_NAM instead of S_TABU_DIS.
+</details>
 
 {: .box-note }
 **Note** The transport request for function group *Z_THEO_READ_TABLE* is located in the following path: ```C:\Program Files\[XtractProduct]\ABAP\Table``` of the default installation. 
 
 When executing the custom function module Z_THEO_READ_TABLE in the background:
 
-```
+<details> <summary> Necessary SAP authorizations </summary>
+
+<pre>
 S_BTCH_ADM       BTCADMIN=Y
 S_BTCH_JOB       JOBGROUP=*; JOBACTION=RELE
-```
+</pre>
 
-When using the *count rows* button (if not using Z_THEO_READ_TABLE): 
+</details>
 
-```
+<details> <summary> Necessary SAP authorizations - <i>Count Rows</i> button using Z_THEO_READ_TABLE</summary> 
+
+<pre>
 S_RFC            RFC_TYPE=FUNC; RFC_NAME=EM_GET_NUMBER_OF_ENTRIES; ACTVT=16  
-```
+</pre>
+</details>
 
-When using *Adjust currency decimals* setting:
-```
+<details> <summary>Necessary SAP authorizations - <i>Adjust currency decimals<i> setting</summary> 
+<pre>
 S_TABU_NAM       ACTVT=03; TABLE=TCURX
-```
+</pre>
 
+</details>
+
+Download the corresponding SAP role ---  [SAP profile for Table](/files/sap_roles/ZXTABLE.SAP). 
 
 ### Table CDC
-
+*Click to expand the details:*
 <details> <summary> Necessary SAP authorizations </summary>
 
 <pre>
@@ -260,32 +293,36 @@ S_CTS_ADMI       CTS_ADMFCT=TABL
 S_TABU_CLI       CLIIDMAINT=X
 S_TABU_DIS       ACTVT=02, 03; DICBERCLS=*
 S_DEVELOP        ACTVT=02; DEVCLASS=$TMP; OBJNAME=/1LT/TS_*; OBJTYPE=*; P_GROUP=*
+
 </pre>
+
 </details> 
+
 
 {: .box-note }
 **Note** The transport requests for the required function groups *Z_THEO_DELETE_LOG_ENTRIES* and *Z_THEO_READ_TABLE* are located in ```C:\Program Files\[XtractProduct]\ABAP\TableCDC``` and ```C:\Program Files\[XtractProduct]\ABAP\Table```. 
 
+Download the corresponding SAP role ---  [SAP profile for Table CDC](/files/sap_roles/ZXTABLECDC.SAP).
 
 ### DeltaQ (Depricated)
 *Click to expand the details:*
 
 <details>
-<summary> Authorization objects for the customizing check:</summary>
+<summary> Necessary SAP authorizations for the customizing check:</summary>
 <pre>
-S_RFC       RFC_TYPE=FUGR; RFC_NAME=SUSR; ACTVT=16  
+S_RFC           RFC_TYPE=FUGR; RFC_NAME=SUSR; ACTVT=16  
 S_RFC           RFC_TYPE=FUNC; RFC_NAME=RFC_GET_SYSTEM_INFO; ACTVT= 16 
 S_ADMI_FCD      S_ADMI_FCD=NADM
 S_TABU_DIS      ACTVT = 02; DICBERCLS=SA
 S_TABU_DIS      ACTVT = 03; DICBERCLS=SA
-S_TABU_NAM     ACTVT = 02; TABLE=EDIPOA
+S_TABU_NAM      ACTVT = 02; TABLE=EDIPOA
 S_TABU_NAM      ACTVT = 03; TABLE=EDIPOA
 </pre>
 
 </details>
 
 <details>
-<summary>Authorization objects for initial DataSource activation</summary>
+<summary> Necessary SAP authorizations for initial DataSource activation</summary>
 
 <pre>
 S_RFC            RFC_TYPE=FUGR; RFC_NAME=SDIFRUNTIME; ACTVT=16 
@@ -298,18 +335,18 @@ S_IDOCDEFT       EDI_TCD=WE30; ACTVT=03; EDI_CIM=*; EDI_DOC=*
 
 </details>
 
-<details> <summary> Authorization objects for re-activating a DataSource </summary>
+<details> <summary>Necessary SAP authorizations for re-activating a DataSource </summary>
 
 <pre>
 S_RFC           RFC_TYPE=FUGR; RFC_NAME=SDIFRUNTIME; ACTVT=16
 S_TABU_DIS      ACTVT=03; DICBERCLS=SS                                 
 S_TABU_DIS      ACTVT=03; DICBERCLS=SC                                               
-S_IDOCDEFT     EDI_TCD=WE30; ACTVT=02; EDI_CIM=*; EDI_DOC=*
+S_IDOCDEFT      EDI_TCD=WE30; ACTVT=02; EDI_CIM=*; EDI_DOC=*
 </pre>
 
 </details> 
 
-<details> <summary> Authorization objects for processing:</summary>
+<details> <summary> Necessary SAP authorizations for processing:</summary>
 
 <pre>
 S_RFC            RFC_TYPE=FUGR; RFC_NAME=EDI1; ACTVT=16
@@ -344,6 +381,8 @@ S_RO_OSOA        OLTPSOURCE=*; OSOAAPCO=*; OSOAPART=DATA; ACTVT=03;  | Only in S
 </pre>
 
 </details>
+
+Download the corresponding SAP roles ---  [SAP profile for DeltaQ](/files/sap_roles/ZXTDELTAQ.SAP), [SAP profile for DeltaQ Customizing Check](/files/sap_roles/DELTAQ_CUSTOMIZING_CHECK.SAP). 
 
 
 ******
