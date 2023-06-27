@@ -245,7 +245,6 @@ S_RFC            ACTVT=16; RFC_TYPE=FUGR; RFC_NAME=SDTX, SDIFRUNTIME, Z_THEO_REA
 S_TABU_DIS       ACTVT=03; DICBERCLS=XXXX
 S_TABU_NAM       ACTVT=03; TABLE=DD02V, DD17S, DD27S, ENLFDIR
 S_DSAUTH         ACTVT=16;    
-
 </pre>
 
 XXXX (stands for a placeholder) is the authorization group for the table. To determine, which authorization group belongs to which table, check the table TDDAT - Maintenance Areas for Tables. 
@@ -271,6 +270,7 @@ S_BTCH_JOB       JOBGROUP=*; JOBACTION=RELE
 <pre>
 S_RFC            RFC_TYPE=FUNC; RFC_NAME=EM_GET_NUMBER_OF_ENTRIES; ACTVT=16  
 </pre>
+
 </details>
 
 <details> <summary>Necessary SAP authorizations - <i>Adjust currency decimals<i> setting</summary> 
