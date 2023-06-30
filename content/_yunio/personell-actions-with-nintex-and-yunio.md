@@ -29,13 +29,13 @@ For more information on yunIO, see [Theobald Software: yunIO](https://theobald-s
 2. [Create a new service](https://help.theobald-software.com/en/yunio/getting-started#creating-a-service) in yunIO. 
 This example uses the integration type *Transaction* for the service.
 3. Record SAP transactions to create a new employee in SAP, see [Working with Transaction PA40](https://kb.theobald-software.com/yunio/transaction-pa40). Example:<br>
-![PA40](/img/contents/yunio/pa40.gif){:class="img-responsive" style="border:1px solid black;"}
+![PA40](/img/contents/yunio/pa40.gif){:class="img-responsive" width="800px" style="border:1px solid black;"}
 4. Parameterize all mandatory SAP fields in the yunIO service. 
 For information on how to parameterize services, see [yunIO Help: Parameterize Transactions](https://help.theobald-software.com/en/yunio/transactions#parameterize-transactions).<br>
 This example uses the following input parameters:
 *EntryDate*, *FirstName*, *LastName*, *BirthDate*, *BirthPlace*, *Language*, *Nationality*, *Street*, *City*, *PostalCode*.<br>
 The input parameters can be adjusted according to your individual scenario requirements.
-![PA40](/img/contents/yunio/pa40-parameters.gif){:class="img-responsive" style="border:1px solid black;"}
+![PA40](/img/contents/yunio/pa40-parameters.gif){:class="img-responsive" width="800px" style="border:1px solid black;"}
 5. Download the service definition (![download-file](/img/contents/yunio/download.png) icon).<br>
 ![yunio-Services-Function-Download](/img/contents/yunio/yunio-run-services-function-download.png){:class="img-responsive"}
 
