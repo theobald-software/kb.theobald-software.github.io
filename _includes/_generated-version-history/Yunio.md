@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.21.1 [L]|2023-06-30|Theobald.Server|Fixed download behavior for OpenApi/Swagger files. Fixed internal server error when requesting the servers version information.|
 |1.21.0 [M]|2023-06-27|Designer|Service based access control.|
 |1.20.4 [L]|2023-06-15|Designer|Preparations for Service Access Control|
 |1.20.3 [L]|2023-06-09|Designer|Delete button inside services fix|
