@@ -29,6 +29,7 @@ Component / Extraction Type  | SAP Role File
 [BW Cube](#bw-cube--bw-query)|[ZXTQUERY.SAP](/files/sap_roles/ZXTQUERY.SAP)
 [BW Hierarchy](#bw-hierarchy) |[ZXTBWHIERARCHY.SAP](/files/sap_roles/ZXTBWHIERARCHY.SAP)
 [ODP (Operational Data Provisioning)](#odp) |[ZXTODP.SAP](/files/sap_roles/ZXTODP.SAP)
+[OHS (Open Hub Services)](#ohs) |[ZXTOHS.SAP](/files/sap_roles/ZXTOHS.SAP)
 [SAP Query](#sap-query)|[ZXTQUERY.SAP](/files/sap_roles/ZXTQUERY.SAP)
 [Report](#report)|[ZXREPORT.SAP](/files/sap_roles/ZXREPORT.SAP)
 [Table](#table) | [ZXTABLE.SAP](/files/sap_roles/ZXTABLE.SAP) 
@@ -196,6 +197,8 @@ S_ADMI_FCD S_ADMI_FCD=ST0R
 
 </details>
 
+
+Download the corresponding SAP role ---  [SAP profile for OHS](/files/sap_roles/ZXTOHS.SAP).
 
 ### SAP Query
 *Click to expand the details:*
