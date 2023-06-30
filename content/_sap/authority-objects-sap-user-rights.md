@@ -83,12 +83,10 @@ Authorizations for the underlying Queries, Cubes, InfoAreas and analysis need to
 <details> <summary> Necessary SAP authorizations </summary>
 
 <pre>
-
 S_RFC            RFC_TYPE=FUGR; RFC_NAME=RSOB; ACTVT=16
 S_RFC            RFC_TYPE=FUGR; RFC_NAME=RRX1; ACTVT=16
 S_TABU_NAM       ACTVT=03; TABLE=RSRREPDIR
 S_TABU_NAM       ACTVT=03; TABLE=RSZGLOBV
-
 </pre>
 
 </details>
@@ -118,8 +116,7 @@ S_TABU_NAM       ACTVT=03; TABLE=DD03L
 
 </details>
 
-Alternatively, you can assign the SAP profile ```S_RS_RREPU``` - BW Role: Reporting User. <br>
-This template contains above authorizations except for ```S_ADMI_FCD```.
+Alternatively, you can assign the SAP role template  ```S_RS_RREPU```. <br>
 
 Download the corresponding SAP role --- [SAP profile for BW Cube / BW Query](/files/sap_roles/ZXTQUERY.SAP).
 
@@ -171,12 +168,14 @@ Download the corresponding SAP role ---  [SAP profile for ODP](/files/sap_roles/
 
 
 ### OHS
+
+Alternatively, you can assign the SAP role template  ```S_BI-WHM_RFC ```. <br>
+
 *Click to expand the details:*
 
 <details> <summary> Necessary SAP authorizations </summary>
 
 <pre>
-
 S_RFC      RFC_TYPE=FUGR; RFC_NAME=RSB3RD; ACTVT=16
 S_RFC      RFC_TYPE=FUGR; RFC_NAME=SDTX; ACTVT=16
 S_RFC      RFC_TYPE=FUGR; RFC_NAME=BAPT; ACTVT=16
@@ -192,7 +191,6 @@ S_BTCH_JOB JOBGROUP=*; JOBACTION=RELE
 S_RS_TR    RSTLOGOSRC=CUBE; RSSTTRSRC=*; RSOBJNMSRC=0D_DECU; RSTLOGOTGT=DEST; RSSTTRTGT=' '; RSOBJNMTG=*; ACTVT=16
 S_RS_AUTH  BIAUTH=0BI_ALL
 S_ADMI_FCD S_ADMI_FCD=ST0R
-
 </pre>
 
 </details>
