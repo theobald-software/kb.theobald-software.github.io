@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.44.1 [L]|2023-06-30|General|Added groupable filterboxes to filter a datagrid by multiple columns|
 |1.44.0 [L]|2023-06-28|Table|Added support for list parameters |
 |1.43.9 [L]|2023-06-18|BW Cube|BICS: Fixed integer, decimal and partial float key figure values|
 |1.43.8 [L]|2023-06-15|BW Cube|MDX: Fixed legacy name conflict resolution|
