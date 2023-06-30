@@ -6,12 +6,12 @@ permalink: /:collection/:path
 weight: 27
 ---
 
-This article shows how to use the Nintex [template for Employee Onboarding](https://gallery.nintex.com/t/employee-onboarding) with yunIO to create new employees in SAP.<br>
+This article shows how to use the Nintex [Employee Onboarding scenario template](https://gallery.nintex.com/t/employee-onboarding) with yunIO to create new employees in SAP.<br>
 
 
 ### About
 
-The [Employee Onboarding](https://gallery.nintex.com/t/employee-onboarding) workflow provided by Nintex includes a form for filling in employee details. 
+The [Employee Onboarding scenario template](https://gallery.nintex.com/t/employee-onboarding) provided by Nintex includes a form for filling in employee details. 
 Based on the input, the workflow generates and sends the new hire their ‘Employee Contract’. 
 Once the contract is signed, the workflow automatically stores the employee contract in a file storage system, starts user provisioning with Active Directory, and sends the new hire a welcome email.
 
@@ -32,8 +32,9 @@ This example uses the integration type *Transaction* for the service.
 ![PA40](/img/contents/yunio/pa40.gif){:class="img-responsive" style="border:1px solid black;"}
 4. Parameterize all mandatory SAP fields in the yunIO service. 
 For information on how to parameterize services, see [yunIO Help: Parameterize Transactions](https://help.theobald-software.com/en/yunio/transactions#parameterize-transactions).<br>
-This example uses the following input parameters:<br>
-*EntryDate*, *FirstName*, *LastName*, *BirthDate*, *BirthPlace*, *Language*, *Nationality*, *Street*, *City*, *PostalCode*.
+This example uses the following input parameters:
+*EntryDate*, *FirstName*, *LastName*, *BirthDate*, *BirthPlace*, *Language*, *Nationality*, *Street*, *City*, *PostalCode*.<br>
+The input parameters can be adjusted according to your individual scenario requirements.
 ![PA40](/img/contents/yunio/pa40-parameters.gif){:class="img-responsive" style="border:1px solid black;"}
 5. Download the service definition (![download-file](/img/contents/yunio/download.png) icon).<br>
 ![yunio-Services-Function-Download](/img/contents/yunio/yunio-run-services-function-download.png){:class="img-responsive"}
