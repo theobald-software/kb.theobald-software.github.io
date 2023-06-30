@@ -1,0 +1,64 @@
+DATE                                              20230629                                          092304
+RELEASE                                           740
+LOADED_AGRS                                       ZXTOHS
+AGR_DEFINE                                        800ZXTOHS                                                      STEFFAN     20190813131745000000000000000STEFFAN     20230629092213000000000000000
+AGR_1250                                          800ZXTOHS                        000001S_ADMI_FCDT-B212002200    U  O000016System Authorizations
+AGR_1250                                          800ZXTOHS                        000002S_BTCH_ADMT-B212002200    U  O000019Background Processing: Background Administrator
+AGR_1250                                          800ZXTOHS                        000003S_BTCH_JOBT-B212002200    U  O000022Background Processing: Operations on Background Jobs
+AGR_1250                                          800ZXTOHS                        000004S_CTS_ADMIT-B212002200    U  O000026Administration Functions in Change and Transport System
+AGR_1250                                          800ZXTOHS                        000005S_RFC     T-B212002200    U  O000004Authorization Check for RFC Access
+AGR_1250                                          800ZXTOHS                        000006S_RFC_ADM T-B212002200    U  O000009Administration for RFC Destination
+AGR_1250                                          800ZXTOHS                        000007S_RS_AUTH T-B212002200    U  O000034BI Analysis Authorizations in Role
+AGR_1250                                          800ZXTOHS                        000008S_RS_DTP  T-B212002200    U  O000037Data Warehousing Workbench - Data Transfer Process
+AGR_1250                                          800ZXTOHS                        000009S_RS_PC   T-B212002200    U  O000046Data Warehousing Workbench - Process Chains
+AGR_1250                                          800ZXTOHS                        000010S_RS_TR   T-B212002200    U  O000052Data Warehousing Workbench - Transformation
+AGR_1250                                          800ZXTOHS                        000011S_TABU_DIST-B212002200    U  O000029Table Maintenance (via standard tools such as SM30)
+AGR_1251                                          800ZXTOHS                        000001S_ADMI_FCDT-B212002200    S_ADMI_FCDST0R                                                                            U  O000017
+AGR_1251                                          800ZXTOHS                        000002S_BTCH_ADMT-B212002200    BTCADMIN  Y                                                                               U  O000020
+AGR_1251                                          800ZXTOHS                        000003S_BTCH_JOBT-B212002200    JOBACTION RELE                                                                            U  O000023
+AGR_1251                                          800ZXTOHS                        000004S_BTCH_JOBT-B212002200    JOBGROUP  *                                                                               U  O000024
+AGR_1251                                          800ZXTOHS                        000005S_CTS_ADMIT-B212002200    CTS_ADMFCTTABL                                                                            U  O000027
+AGR_1251                                          800ZXTOHS                        000006S_RFC     T-B212002200    ACTVT     16                                                                              U  O000005
+AGR_1251                                          800ZXTOHS                        000007S_RFC     T-B212002200    RFC_NAME  BAPT                                                                            U  O000006
+AGR_1251                                          800ZXTOHS                        000008S_RFC     T-B212002200    RFC_NAME  BATG                                                                            U  O000006
+AGR_1251                                          800ZXTOHS                        000009S_RFC     T-B212002200    RFC_NAME  RSB3RD                                                                          U  O000006
+AGR_1251                                          800ZXTOHS                        000010S_RFC     T-B212002200    RFC_NAME  RSPC_API                                                                        U  O000006
+AGR_1251                                          800ZXTOHS                        000011S_RFC     T-B212002200    RFC_NAME  SDTX                                                                            U  O000006
+AGR_1251                                          800ZXTOHS                        000012S_RFC     T-B212002200    RFC_TYPE  FUGR                                                                            U  O000007
+AGR_1251                                          800ZXTOHS                        000013S_RS_AUTH T-B212002200    BIAUTH    0BI_ALL                                                                         U  O000035
+AGR_1251                                          800ZXTOHS                        000014S_RS_DTP  T-B212002200    ACTVT     16                                                                              U  O000038
+AGR_1251                                          800ZXTOHS                        000015S_RS_DTP  T-B212002200    RSONDTPSRC*                                                                               U  O000039
+AGR_1251                                          800ZXTOHS                        000016S_RS_DTP  T-B212002200    RSONDTPTGT*                                                                               U  O000040
+AGR_1251                                          800ZXTOHS                        000017S_RS_DTP  T-B212002200    RSSTDTPSRC*                                                                               U  O000041
+AGR_1251                                          800ZXTOHS                        000018S_RS_DTP  T-B212002200    RSSTDTPTGT*                                                                               U  O000042
+AGR_1251                                          800ZXTOHS                        000019S_RS_DTP  T-B212002200    RSTLDTPSRC*                                                                               U  O000043
+AGR_1251                                          800ZXTOHS                        000020S_RS_DTP  T-B212002200    RSTLDTPTGT*                                                                               U  O000044
+AGR_1251                                          800ZXTOHS                        000021S_RS_PC   T-B212002200    ACTVT     03                                                                              U  O000047
+AGR_1251                                          800ZXTOHS                        000022S_RS_PC   T-B212002200    RSPCAPPLNM*                                                                               U  O000048
+AGR_1251                                          800ZXTOHS                        000023S_RS_PC   T-B212002200    RSPCCHAIN *                                                                               U  O000049
+AGR_1251                                          800ZXTOHS                        000024S_RS_PC   T-B212002200    RSPCPART  DEFINITION                                                                      U  O000050
+AGR_1251                                          800ZXTOHS                        000025S_RS_TR   T-B212002200    ACTVT     16                                                                              U  O000053
+AGR_1251                                          800ZXTOHS                        000026S_RS_TR   T-B212002200    RSOBJNMSRC*                                                                               U  O000054
+AGR_1251                                          800ZXTOHS                        000027S_RS_TR   T-B212002200    RSOBJNMTGT*                                                                               U  O000055
+AGR_1251                                          800ZXTOHS                        000028S_RS_TR   T-B212002200    RSSTTRSRC *                                                                               U  O000056
+AGR_1251                                          800ZXTOHS                        000029S_RS_TR   T-B212002200    RSSTTRTGT *                                                                               U  O000057
+AGR_1251                                          800ZXTOHS                        000030S_RS_TR   T-B212002200    RSTLOGOSRCCUBE                                                                            U  O000058
+AGR_1251                                          800ZXTOHS                        000031S_RS_TR   T-B212002200    RSTLOGOTGTDEST                                                                            U  O000059
+AGR_1251                                          800ZXTOHS                        000032S_TABU_DIST-B212002200    ACTVT     03                                                                              U  O000030
+AGR_1251                                          800ZXTOHS                        000033S_TABU_DIST-B212002200    DICBERCLS &NC&                                                                            U  O000031
+AGR_1251                                          800ZXTOHS                        000034S_RS_PC   T-B212002200    RSPCPART  RUNTIME                                                                         U  O000050
+AGR_1251                                          800ZXTOHS                        000036S_RFC     T-B212002200    RFC_TYPE  FUNC                                                                            U  O000007
+AGR_1251                                          800ZXTOHS                        000037S_RFC     T-B212002200    RFC_NAME  Z_THEO_READ_TABLE                                                               U  O000006
+AGR_1251                                          800ZXTOHS                        000038S_RS_PC   T-B212002200    ACTVT     16                                                                              U  O000047
+AGR_1251                                          800ZXTOHS                        000043S_RFC_ADM T-B212002200    RFCTYPE   T                                                                               U  O000013
+AGR_1251                                          800ZXTOHS                        000044S_RFC_ADM T-B212002200    RFCDEST   *                                                                               U  O000012
+AGR_1251                                          800ZXTOHS                        000045S_RFC_ADM T-B212002200    ICF_VALUE *                                                                               U  O000011
+AGR_1251                                          800ZXTOHS                        000046S_RFC_ADM T-B212002200    ACTVT     03                                                                              U  O000010
+AGR_TEXTS                                         800ZXTOHS                        E00000needed authority objects for OHS component
+AGR_FLAGS                                         800ZXTOHS                        COLL_AGR  STEFFAN     20190813131745STEFFAN     20190813131745
+AGR_FLAGS                                         800ZXTOHS                        DEVCLASS  STEFFAN     20190813131745STEFFAN     20190813131745
+AGR_FLAGS                                         800ZXTOHS                        FORCE_MIX STEFFAN     20190813132834STEFFAN     20230629092117
+AGR_FLAGS                                         800ZXTOHS                        MASTER_LANSTEFFAN     20190813131745STEFFAN     20190813131745E
+AGR_FLAGS                                         800ZXTOHS                        RESP_USER STEFFAN     20190813131745STEFFAN     20190813131745
+AGR_TIME                                          800ZXTOHS                        PROFILE   STEFFAN     20190813132834000000000000000STEFFAN     20230629092117000000000000000
+AGR_LSD                                           800ZXTOHS                                                      E
