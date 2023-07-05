@@ -7,24 +7,32 @@ weight: 45
 ---
 
 This article shows how to synchronize Dynamics 365 in near-real time with SAP.<br>
-In the following scenario, data from Dynamics 365 is used to automatically create a purchase requisition in SAP. The newly created SAP purchase requisition number is then written back to Dynamics 365.
+In the following scenario, data from Dynamics 365 Business Central is used to automatically create a purchase requisition in SAP. The newly created SAP purchase requisition number is then written back to Dynamics 365.
 
 ### About
 This article leads you through all necessary steps to set up the following process:
-
-- When a new purchase requisition is added to a Dynamics 365 list, a Power Automate workflow is triggered. 
-This process also works with other automation tools, e.g. Nintex.
-- The workflow uses the Dynamics 365 data to run a yunIO service that creates a new purchase requisition in SAP.
-- When the purchase requisition is created in SAP, the new SAP purchase requisition number is written back to the Dynamics 365 list.
+- When a customer account in Dynamics 365 Business Central is modified, a Power Automate workflow is triggered.
+- The workflow checks if the customer exists in SAP.
+- If both conditions are true, a yunIO service that writes customer data from Dynamics 365 to SAP is executed.
+- When the customer is created in SAP, the new SAP customer number is written back to Dynamics 365.
 
 ### Setup in yunIO
 
 yunIO is the connector that reads and writes data from and to SAP.
 For more information on yunIO, see [Theobald Software: yunIO](https://theobald-software.com/en/yunio/).<br>
-Follow the steps below to set up a yunIO service that creates purchase requisitions in SAP:
+Follow the steps below to set up a yunIO service that adds customers to the customer master data in SAP:
 
-{: .box-note }
-**Note:** The parameters that are needed to create purchase requisitions are dependent on your customized SAP settings.
+1. Define a [connection to your SAP system](https://help.theobald-software.com/en/yunio/sap-connection) in yunIO. 
+2. [Create a new service](https://help.theobald-software.com/en/yunio/getting-started#creating-a-service) in yunIO. 
+This example uses the integration type *Function Module* for the service.
+3. [Look up](https://help.theobald-software.com/en/yunio/bapis-and-function-modules#look-up-a-function-module--bapi) the standard BAPI BAPI_CUSTOMER_CREATEFROMDATA1 that creates customers in SAP. 
+4. Set all import parameters you want to transfer from Salesforce to SAP to *Supplied by Caller* e.g., NAME, CITY, POSTL_COD1, STREET, etc.<br>
+5. Select CUSTOMERNO for export. This Export parameter contains the newly created SAP customer number that is written back to Salesforce.<br>
+![yunio-Services-Function-Download](/img/contents\yunio\yunio-bapi-createcustomer.png){:class="img-responsive"}
+6. Download the service definition (![download-file](/img/contents/yunio/download.png) icon).<br>
+![yunio-Services-Function-Download](/img/contents/yunio/yunio-run-services-function-download.png){:class="img-responsive" }
+
+<!---
 
 1. Define a [connection to your SAP system](https://help.theobald-software.com/en/yunio/sap-connection) in yunIO. 
 2. [Create a new service](https://help.theobald-software.com/en/yunio/getting-started#creating-a-service) in yunIO. This example uses the integration type *Function Module* for the service.
@@ -47,29 +55,33 @@ Follow the steps below to set up a yunIO service that creates purchase requisiti
 8. Download the service definition (![download-file](/img/contents/yunio/download.png) icon).<br>
 ![yunio-Services-Function-Download](/img/contents/yunio/yunio-run-services-function-download.png){:class="img-responsive" }
 
+-->
+
 {: .box-tip }
 **Tip:** It is recommended to test a yunIO service in a REST client before integrating it with Power Automate, see [Running a yunIO Service in Swagger Inspector](https://kb.theobald-software.com/yunio/running-a-yunio-service-in-swagger-inspector) or [Running a yunIO Service in Postman](https://kb.theobald-software.com/yunio/running-a-yunio-service-in-postman). 
+your comment goes here
 
 ### Setup in Dynamics 365
 
-Create ... that provides SAP-related fields.
-For this example, create the following columns:
-- Material
-- Plant
-- Quantity
-- Delivery Date
-- Cost Center
-- Purchase Requisition Number (when a purchase requisition number is created in SAP, it is written back to this column)
+Customize your Salesforce account to provide SAP-related fields:
+
+- Create a field SAP ID. Once a customer is created in SAP, the customer number is written back into SAP ID.
+- Company Code, Sales Org, Distribution Channel and Division are organization details required to create the SAP customer.
+- Create a checkbox that indicates if the customer exists in SAP.
+
+For more information on how to customize fields in Salesforce, see Salesforce Documentation: Create Custom Fields.
+
+{: .box-note }
+**Note:** Creating *Company Code*, *Sales Org*, *Distribution Channel* and *Division* in Dynamics 365 is optional as they can also be set as static values in Power Automate.
+
+
 
 ![sharepoint-purchase-requisition](/img/contents/yunio/sharepoint-purchase-requisition0.png){:class="img-responsive" }
 
-For more information on SharePoint lists, see [Microsoft Documentation: Introduction to lists](https://support.microsoft.com/en-us/office/introduction-to-lists-0a1c3ace-def0-44af-b225-cfa8d92c52d7).
+For more information on Dynamics 365, see [Microsoft Documentation: Introduction to lists](https://support.microsoft.com/en-us/office/introduction-to-lists-0a1c3ace-def0-44af-b225-cfa8d92c52d7).
 
 {: .box-note }
-**Note:** Defining other input parameters in SharePoint is optional as they can also be set as static values in Power Automate.
-
-{: .box-tip }
-**Tip:** You can use a Power App form to simplify and validate the SharePoint input, see [Using yunIO Services in Power Apps](https://kb.theobald-software.com/yunio/populating-drop-down-controls-in-power-apps#using-yunio-services-in-power-apps).
+**Note:** Defining other input parameters in Dynamics is optional as they can also be set as static values in Power Automate.
 
 
 ### Setup in Power Automate
