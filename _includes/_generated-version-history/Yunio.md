@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.21.3 [L]|2023-07-05|Designer|Improved behaviour for undefined services|
 |1.21.2 [L]|2023-07-04|Designer|Small fixes for search input in services list.|
 |1.21.1 [L]|2023-06-30|Theobald.Server|Fixed download behavior for OpenApi/Swagger files. Fixed internal server error when requesting the servers version information.|
 |1.21.0 [M]|2023-06-27|Designer|Service based access control.|
