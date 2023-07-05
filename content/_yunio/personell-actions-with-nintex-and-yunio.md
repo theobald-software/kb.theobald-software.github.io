@@ -36,7 +36,7 @@ This example uses the following input parameters:
 *EntryDate*, *FirstName*, *LastName*, *BirthDate*, *BirthPlace*, *Language*, *Nationality*, *Street*, *City*, *PostalCode*.<br>
 The input parameters can be adjusted according to your individual scenario requirements.
 ![PA40](/img/contents/yunio/pa40-parameters.gif){:class="img-responsive" width="800px" style="border:1px solid black;"}
-5. Download the service definition (![download-file](/img/contents/yunio/download.png) icon).<br>
+5. Click ![download-file](/img/contents/yunio/download.png) to download the service definition.<br>
 ![yunio-Services-Function-Download](/img/contents/yunio/yunio-run-services-function-download.png){:class="img-responsive" width="800px"}
 
 <!---

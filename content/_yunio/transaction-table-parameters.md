@@ -106,7 +106,7 @@ Incorrect: `"RV45A-KWMENG": ""`
 
 
 ### Running a Service with Table Parameters
-1. Copy the URL of the service definition (![copy-URL](/img/contents/yunio/copyURL.png) icon) or download the service definition (![download-file](/img/contents/yunio/download.png) icon).<br>
+1. Click ![copy-URL](/img/contents/yunio/copyURL.png) to copy the URL of the service definition or click ![download-file](/img/contents/yunio/download.png) to download the service definition.<br>
 ![yunio-Services](/img/contents/yunio/yunio-run-services.png){:class="img-responsive" }
 2. Open the service in a tool that supports OpenAPI/Swagger definitions, e.g., [Swagger Inspector](https://inspector.swagger.io/). 
 3. Use the `POST` method when integrating the service. The `GET` method does not support table parameters.

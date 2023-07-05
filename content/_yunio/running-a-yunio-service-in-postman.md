@@ -17,7 +17,7 @@ For more information on Postman, see [Postman Documentation](https://learning.po
 The service has the following settings:<br>
 - Set the Import Parameter NAME1 to *Supplied by Caller*.
 - Select all fields in the Table *CUSTOMER_T* for the output.
-2. Copy the URL of the service definition (![copy-URL](/img/contents/yunio/copyURL.png) icon) or download the service definition (![download-file](/img/contents/yunio/download.png) icon).<br>
+2. Click ![copy-URL](/img/contents/yunio/copyURL.png) to copy the URL of the service definition or click ![download-file](/img/contents/yunio/download.png) to download the service definition.<br>
 ![yunio-Services](/img/contents/yunio/yunio-run-services.png){:class="img-responsive" width="800px"}
 
 

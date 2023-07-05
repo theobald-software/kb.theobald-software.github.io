@@ -52,11 +52,11 @@ This example uses the BAPI_INCOMINGINVOICE_CREATE1 to create an incoming invoice
 - ITEM_AMOUNT (Amount in document currency)<br>
 - QUANTITY (Quantity)<br>
 - PO_UNIT (Purchase Order Unit of Measure)	<br>
-6. Download the service definition (![download-file](/img/contents/yunio/download.png) icon).<br>
+6. Click ![download-file](/img/contents/yunio/download.png) to download the service definition.<br>
 ![yunio-Services-Function-Download](/img/contents/yunio/yunio-run-services-function-download-invoices.png){:class="img-responsive" width="800px"}
 
 {: .box-tip }
-**Tip:** It is recommended to test a yunIO service in a REST client before integrating it with Power Automate, see [Running a yunIO Service in Swagger Inspector](https://kb.theobald-software.com/yunio/running-a-yunio-service-in-swagger-inspector) or [Running a yunIO Service in Postman](https://kb.theobald-software.com/yunio/running-a-yunio-service-in-postman). 
+**Tip:** Test a yunIO service in a REST client before integrating it with Power Automate, see [Running a yunIO Service in Swagger Inspector](https://kb.theobald-software.com/yunio/running-a-yunio-service-in-swagger-inspector) or [Running a yunIO Service in Postman](https://kb.theobald-software.com/yunio/running-a-yunio-service-in-postman). 
 
 
 ### Configuring a yunIO Custom Connector in Power Automate
