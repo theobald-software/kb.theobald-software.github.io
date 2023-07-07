@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.44.4 [L]|2023-07-07|BW Cube|BICS: Improved safeguards against truncated decimal key figure values|
 |1.44.3 [L]|2023-07-06|BW Cube|BICS: Added safeguards against truncated decimal key figure values|
 |1.44.2 [L]|2023-07-06|BW Cube|BICS: Added support for time, date and null key figure values|
 |1.44.1 [L]|2023-06-30|General|Added groupable filterboxes to filter a datagrid by multiple columns|
