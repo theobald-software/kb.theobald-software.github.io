@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|3.8.5 [L]|2023-07-07|General|Fixed CORS for specific domains|
 |3.8.4 [L]|2023-07-07|General|Fixed handling of extractions with empty result sets.|
 |3.8.3 [L]|2023-07-06|General|Fix auth / cors sequence, logic|
 |3.8.2 [L]|2023-06-30|General|Fix clean up logic for HTTP bytes responses.|
