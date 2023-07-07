@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.25.7 [L]|2023-07-07|Destinations|Fix for not correctly escaped column names in Qlik scripts.|
 |5.25.6 [L]|2023-06-30|General|Added filterboxes in the designer for name, type, source and destination. Changed initial sorting order for dates, removed the old filter tool and implemented right-click option in the datagrid to add keywords to several selected extractions|
 |5.25.5 [L]|2023-06-22|Server|Fixed a bug where logging into the Designer with a valid AD-User would result in an authorization error.|
 |5.25.4 [L]|2023-06-21|General|Added removed tablecdc component to xu-config|
