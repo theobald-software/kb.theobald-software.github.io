@@ -40,7 +40,7 @@ To edit the SAP connection, select the SAP connection from the dropdown list (2)
 There are two possibilities to connect to an SAP source system:
 - Use a Single Application Server
 	- **Host**:  host name or IP address of the application server (Property Host) 
-	- **Sys. No.:**: a two-digit number between 00 und 99 (Property SystemNumber)
+	- **Sys. No.:**: a two-digit number between 00 and 99 (Property SystemNumber)
 
 - Use a Load Balancing Server (message server)
 	- **Message Server**: name or IP address of the message server (Property MessageServer) 
