@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.44.5 [L]|2023-07-10|Hierarchy|Fixed a bug where description texts were not extracted when the InfoObject name was shorter than expected.|
 |1.44.4 [L]|2023-07-07|BW Cube|BICS: Improved safeguards against truncated decimal key figure values|
 |1.44.3 [L]|2023-07-06|BW Cube|BICS: Added safeguards against truncated decimal key figure values|
 |1.44.2 [L]|2023-07-06|BW Cube|BICS: Added support for time, date and null key figure values|
