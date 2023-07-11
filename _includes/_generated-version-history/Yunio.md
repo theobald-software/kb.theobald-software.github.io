@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.21.6 [L]|2023-07-07|Theobald.Server|CORS: improved allowed origins header|
 |1.21.5 [L]|2023-07-07|Runtime|Fixed a bug where a service with an empty result set would run into a timeout.|
 |1.21.4 [L]|2023-07-06|Theobald.Server|Resolved issue with CORS.|
 |1.21.3 [L]|2023-07-05|Designer|Improved behaviour for undefined services|
