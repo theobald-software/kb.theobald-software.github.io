@@ -8,7 +8,7 @@ weight: 5
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
 
-ERPConnect Services Runtime offers a very good REST interface which is well explained in the help portal (see [here](https://help.theobald-software.com/en/erpconnect-services/ecs-core/webservices/rest-web-services)). The initial idea behind this interface is to offer SAP connectivity through EPPConnect Services to non-.NET environments like Java Script, PHP or Objective C. However it might be necessary as well to use the REST interfaces through C#.NET. This little sample shows the basic concept behind it. To get this sample to work, please make sure, that Basic Authentication is turned on at the SharePoint site on which ECS is running.
+ERPConnect Services Runtime offers a very good REST interface which is well explained in the help portal. The initial idea behind this interface is to offer SAP connectivity through EPPConnect Services to non-.NET environments like Java Script, PHP or Objective C. However it might be necessary as well to use the REST interfaces through C#.NET. This little sample shows the basic concept behind it. To get this sample to work, please make sure, that Basic Authentication is turned on at the SharePoint site on which ECS is running.
 
 The first step is to create a proper WebRequest object, that points to the Webservice URL (in this sample we use the ExecuteTableQuery entry point, but the others work in the same manner). *MethodType* must be *Post, Content Type* is test/json, because we submit a JSON request in the body. 
 
