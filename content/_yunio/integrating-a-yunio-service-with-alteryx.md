@@ -20,7 +20,6 @@ For more information on yunIO, see [Theobald Software: yunIO](https://theobald-s
 1. Open or create a new Alteryx workflow.
 2. Add a **Download** tool to your workflow.
 3. In the *Configuration* section of the **Download** tool activate the option **Use Data Connection Manager (DCM)** and click **[Set Up Connection]**. The Alteryx Data Connection Manager (DCM) opens.
-For more information on the Alteryx **Download** tool, see [Alteryx Designer Documentation: Download-Tool](https://help.alteryx.com/20231/designer/download-tool).<br>
 ![yunio-download-tool1](/img/contents/yunio/yunio-download-tool1.png){:class="img-responsive"}
 4. Click **[New]** to create a new data source.
 5. Enter a name for the connection.<br>
@@ -36,8 +35,10 @@ For more information on the Alteryx **Download** tool, see [Alteryx Designer Doc
 ![yunio-credentials](/img/contents/yunio/yunio-credentials.png){:class="img-responsive"}
 11. Click **[Connect]** to establish a connection to yunIO. The Data Connection Manager closes.<br>
 ![yunio-data-source](/img/contents/yunio/yunIO-data-source-connect.png){:class="img-responsive"}
-12. Use the name of a service as an input for the **Download** tool to call the service. <br>
-For more information about calling and passing parameters to services, see [Calling yunIO Services in Alteryx](#calling-yunio-services-in-alteryx).
+12. Use the name of a yunIO service as input for the **Download** tool to call the service. <br>
+For more information about calling and passing parameters to yunIO services, see [Calling yunIO Services in Alteryx](#calling-yunio-services-in-alteryx).
+
+For more information about the Alteryx **Download** tool, see [Alteryx Designer Documentation: Download-Tool](https://help.alteryx.com/20231/designer/download-tool).
 
 <!---
 {: .box-note }
