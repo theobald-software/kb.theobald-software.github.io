@@ -3,7 +3,7 @@ layout: page
 title: Establish an Azure Relay Hybrid Connection to yunIO
 description: Establish an Azure Relay Hybrid Connection
 permalink: /:collection/:path
-weight: 4
+weight: 5
 progressstate: 5
 ---
 
