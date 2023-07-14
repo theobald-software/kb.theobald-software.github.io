@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.44.8 [L]|2023-07-14|Hierarchy|Enabled 'dateTo' property of Hierarchy catalog entry to be set by runtime parameter. Improved value validation and error handling.|
 |1.44.7 [L]|2023-07-13|BW Cube|BICS: Fixed direct extraction of SNUMC InfoObjects|
 |1.44.6 [L]|2023-07-12|BW Cube|BICS: Fixes for SNUMC characteristics|
 |1.44.5 [L]|2023-07-10|Hierarchy|Fixed a bug where description texts were not extracted when the InfoObject name was shorter than expected.|
