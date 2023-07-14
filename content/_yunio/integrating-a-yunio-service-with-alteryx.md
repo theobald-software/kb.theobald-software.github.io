@@ -30,7 +30,7 @@ For more information on yunIO, see [Theobald Software: yunIO](https://theobald-s
 - *No Credentials* (if no authentication is set up in yunIO).
 - *Username* (if no authentication is set up in yunIO).
 - *Username and password* (if Basic Authentication is set up in yunIO, see [yunIO Online Help: Access Control](https://help.theobald-software.com/en/yunio/access-control#global-access-control)).
-9. Select an [existing credential](#creating-credentials) or click **+ Connect Credential** to create a new credential that can access and run yunIO services.
+9. Select an existing credential or click **+ Connect Credential** to create a new credential that can access and run yunIO services.
 10. Click **[Link]** / **[Create and link]** to link the credential to the connection.<br>
 ![yunio-credentials](/img/contents/yunio/yunio-credentials.png){:class="img-responsive"}
 11. Click **[Connect]** to establish a connection to yunIO. The Data Connection Manager closes.<br>
