@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.25.10 [L]|2023-07-14|Designer|Fixed a bug on displaying entries on the log window|
 |5.25.9 [L]|2023-07-11|Destinations|Fixed escaping of table names that contain brackets|
 |5.25.8 [L]|2023-07-10|Hierarchy|Fixed a bug where description texts were not extracted when the InfoObject name was shorter than expected.|
 |5.25.7 [L]|2023-07-07|Destinations|Fix for not correctly escaped column names in Qlik scripts.|
