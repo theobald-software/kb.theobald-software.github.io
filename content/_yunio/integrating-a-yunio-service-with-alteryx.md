@@ -51,7 +51,7 @@ Follow the steps below to call yunIO services in Alteryx.<br>
 
 1. Define a [connection to your SAP system](https://help.theobald-software.com/en/yunio/sap-connection) in yunIO. 
 2. [Create a new service](https://help.theobald-software.com/en/yunio/getting-started#creating-a-service) in yunIO.
-This example uses a yunIO transaction service, that changes customer master data in SAP, see [Working with Transaction XA02](https://kb.theobald-software.com/yunio/transaction-xa02).<br>
+This example uses a yunIO transaction service, that changes customer master data in SAP, see [Working with Transaction XD02](https://kb.theobald-software.com/yunio/transaction-xd02).<br>
 3. Open or create a new Alteryx workflow.<br>
 ![yunio-workflow](/img/contents/yunio/yunIO-workflow.png){:class="img-responsive"}
 4. Add an **Input Data** tool (1) that provides values for the input parameters of the yunIO service. Example:
