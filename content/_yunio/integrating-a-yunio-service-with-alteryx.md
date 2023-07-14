@@ -33,7 +33,7 @@ For more information on the Alteryx **Download** tool, see [Alteryx Designer Doc
 - *Username and password* (if Basic Authentication is set up in yunIO, see [yunIO Online Help: Access Control](https://help.theobald-software.com/en/yunio/access-control#global-access-control)).
 9. Select an [existing credential](#creating-credentials) or click **+ Connect Credential** to create a new credential that can access and run yunIO services.
 10. Click **[Link]** / **[Create and link]** to link the credential to the connection.<br>
-![yunio-credentials](/img/contents/yunio/yunIO-data-source.png){:class="img-responsive"}
+![yunio-credentials](/img/contents/yunio/yunio-credentials.png){:class="img-responsive"}
 11. Click **[Connect]** to establish a connection to yunIO. The Data Connection Manager closes.<br>
 ![yunio-data-source](/img/contents/yunio/yunIO-data-source-connect.png){:class="img-responsive"}
 12. Use the name of a service as an input for the **Download** tool to call the service. <br>
