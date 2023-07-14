@@ -19,24 +19,24 @@ For more information on yunIO, see [Theobald Software: yunIO](https://theobald-s
 
 1. Open or create a new Alteryx workflow.
 2. Add a **Download** tool to your workflow.
-3. In the *Configuration* section of the **Download** tool activate **Use Data Connection Manager (DCM) and click **[Set Up Connection]**. The Alteryx Data Connection Manager (DCM) opens.
-For more information on the **Download** tool, see [Alteryx Designer Documentation: Download-Tool](https://help.alteryx.com/20231/designer/download-tool).<br>
+3. In the *Configuration* section of the **Download** tool activate the option **Use Data Connection Manager (DCM)** and click **[Set Up Connection]**. The Alteryx Data Connection Manager (DCM) opens.
+For more information on the Alteryx **Download** tool, see [Alteryx Designer Documentation: Download-Tool](https://help.alteryx.com/20231/designer/download-tool).<br>
 ![yunio-download-tool1](/img/contents/yunio/yunio-download-tool1.png){:class="img-responsive"}
 4. Click **[New]** to create a new data source.
 5. Enter a name for the connection.<br>
 ![yunio-data-source](/img/contents/yunio/yunIO-data-source.png){:class="img-responsive"}
 6. Copy the Base URL of your yunIO instance into the field **Base URL**.
 7. Click **[Save]**. The subsection *Connection* is displayed.
-5. In the subsection *Connection* select one of the following authentication methods: <br>
+8. In the subsection *Connection* select one of the following authentication methods: <br>
 - *No Credentials* (if no authentication is set up in yunIO).
 - *Username* (if no authentication is set up in yunIO).
 - *Username and password* (if Basic Authentication is set up in yunIO, see [yunIO Online Help: Access Control](https://help.theobald-software.com/en/yunio/access-control#global-access-control)).
-6. Select an [existing credential](#creating-credentials) or click **+ Connect Credential** to create a new credential that can access and run yunIO services.
-7. Click **[Link]** / **[Create and link]** to link the credential to the connection.<br>
+9. Select an [existing credential](#creating-credentials) or click **+ Connect Credential** to create a new credential that can access and run yunIO services.
+10. Click **[Link]** / **[Create and link]** to link the credential to the connection.<br>
 ![yunio-credentials](/img/contents/yunio/yunIO-data-source.png){:class="img-responsive"}
-12. Click **[Connect]** to establish a connection to yunIO. The Data Connection Manager closes.<br>
+11. Click **[Connect]** to establish a connection to yunIO. The Data Connection Manager closes.<br>
 ![yunio-data-source](/img/contents/yunio/yunIO-data-source-connect.png){:class="img-responsive"}
-13. Use the name of a service as an input for the **Download** tool to call the service. <br>
+12. Use the name of a service as an input for the **Download** tool to call the service. <br>
 For more information about calling and passing parameters to services, see [Calling yunIO Services in Alteryx](#calling-yunio-services-in-alteryx).
 
 <!---
