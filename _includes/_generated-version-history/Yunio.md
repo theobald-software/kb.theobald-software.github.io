@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.21.8 [M]|2023-07-17|Runtime|Transaction: Improved "skipPopups" behavior to only skip unexpected popups |
 |1.21.7 [L]|2023-07-13|Gateway|Relay: fixed request content type header.|
 |1.21.6 [L]|2023-07-07|Theobald.Server|CORS: improved allowed origins header|
 |1.21.5 [L]|2023-07-07|Runtime|Fixed a bug where a service with an empty result set would run into a timeout.|
