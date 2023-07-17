@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.25.12 [L]|2023-07-17|Hierarchy|Fixed a bug where runtime parameter "dateTo" was ignored|
 |5.25.11 [L]|2023-07-14|Hierarchy|Fixed the 'hierarchyName' runtime parameter for Hierarchy extractions being ignored.|
 |5.25.10 [L]|2023-07-14|Designer|Fixed a bug on displaying entries on the log window|
 |5.25.9 [L]|2023-07-11|Destinations|Fixed escaping of table names that contain brackets|
