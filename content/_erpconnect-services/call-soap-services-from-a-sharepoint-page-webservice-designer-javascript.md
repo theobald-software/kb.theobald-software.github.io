@@ -301,10 +301,6 @@ Paste the following code to the part (customize it with your Service name, actio
 
 ![wsd_soap-8](/img/contents/wsd_soap-8.jpg){:class="img-responsive"}
 
-To find out APIs of tEcs+ wsdSoapQuery function go to:
-
-[https://static.theobald-software.com/theobald.ecs](https://static.theobald-software.com/theobald.ecs)
-
 Now save the page:
 
 ![wsd_soap-9](/img/contents/wsd_soap-9.jpg){:class="img-responsive"}
@@ -343,11 +339,6 @@ Enjoy delivering your SAP data with ERPConnect Services and WebService Designer!
 ### 5. Links
 
 References:
-
-
-tEcs+ (API and download):
-
-[https://static.theobald-software.com/theobald.ecs](https://static.theobald-software.com/theobald.ecs)
 
 jQuery:
 
