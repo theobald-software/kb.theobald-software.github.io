@@ -6,16 +6,18 @@ permalink: /:collection/:path
 weight: 77
 ---
 
-This article shows how to pass tables as input parameters to *Transaction* services.<br>
-The following example application uses the transaction VA02 to change a sales order in SAP, see [Working with Transaction VA02](./transaction-va02).
+The following article shows how to pass tables as input parameters to *Transaction* services.<br>
+The depicted example application uses the transaction VA02 to change a sales order in SAP, see [Working with Transaction VA02](./transaction-va02).
 
 ### Prerequisites
 
-The SAP connection assigned to a transaction service must use an SAP dialog user with enough access rights to edit sales orders. 
+{: .box-note }
+**Note:**
+Make sure the transaction service uses an SAP dialog user with sufficient access rights to edit sales orders for the assigned SAP connection. 
 
 {: .box-tip }
 **Tip:** The transaction feature of yunIO offers the same functionalities as the SAP GUI. 
-Therefore knowing how to navigate the SAP GUI makes it easier to use the transaction feature. 
+
 
 ### Selecting a Table as an Input Parameter
 
@@ -28,7 +30,7 @@ The following example uses a service that changes sales orders via transaction V
 All fields that can be parameterized are highlighted in green when hovering over them.<br>
 ![table-parameters](/img/contents/yunio/table-parameter.gif){:class="img-responsive" style="border:1px solid black;"}
 5. In the window “Parameterize Element”, select **Input** to override the content of the table when running the service. 
-6. Enter a custom name for the parameter, e.g. *ITEMS*.<br>
+6. Enter a custom name for the parameter, e.g., *ITEMS*.<br>
 ![transaction-va02-order](/img/contents/yunio/transaction-va02-order.png){:class="img-responsive"}
 7. Click **[OK]** to save the parameter. The window “Parameterize Element” closes.
 8. Click **[Save]** to save the service.
@@ -100,7 +102,7 @@ ITEMS:
 </tr>
 </table>
 
-When passing a table to yunIO, only pass fields that have values assigned to them. Delete all table fields that are not subject to change from the request body.<br>
+When passing a table to yunIO, only pass fields with values assigned. Delete all table fields that are not subject to change from the request body.<br>
 Correct: `"RV45A-KWMENG": "5"`<br>
 Incorrect: `"RV45A-KWMENG": ""`
 
