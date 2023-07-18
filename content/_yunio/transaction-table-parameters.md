@@ -11,11 +11,7 @@ The depicted example application uses the transaction VA02 to change a sales ord
 
 ### Prerequisites
 
-The SAP connection assigned to a transaction service must use an SAP dialog user with enough access rights to edit sales orders. 
-
-{: .box-note }
-**Note:**
-Make sure the transaction service uses an SAP dialog user with sufficient access rights to edit sales orders for the assigned SAP connection. 
+Use an SAP dialog user with sufficient access rights to edit sales orders for the SAP connection assigned to the service. 
 
 {: .box-tip }
 **Tip:** The transaction feature of yunIO offers the same functionalities as the SAP GUI. 
