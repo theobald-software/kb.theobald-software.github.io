@@ -6,7 +6,7 @@ permalink: /:collection/:path
 weight: 3
 ---
 
-This article shows how to integrate a yunIO service with Microsoft Power Automate.
+The following article shows how to integrate a yunIO service with Microsoft Power Automate.
 
 Power Automate is a cloud-based process automation service provided by Microsoft. 
 The platform can be used to create automated workflows between different cloud apps and services that synchronize and collect data, get notifications, start approvals, and more. 

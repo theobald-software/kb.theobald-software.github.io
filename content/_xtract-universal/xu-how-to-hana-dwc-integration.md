@@ -15,7 +15,7 @@ Xtract Universal enables data extraction **from** ABAP based SAP systems, like S
 - BI Analytic clients
 - etc.
 
-This article describes the simple steps how to extract and load SAP data to a database table on SAP DWC. This would be the data ingestion or staging part of a data load. <br>
+The following article describes the simple steps how to extract and load SAP data to a database table on SAP DWC. This would be the data ingestion or staging part of a data load. <br>
 Any post-processing and data modeling on DWC is **not** covered in this article.
 
 

@@ -8,7 +8,7 @@ weight: 80
 
 
 ### About
-This article describes how Azure Data Factory can be used to trigger and automate SAP data movements using [Xtract Universal's](https://theobald-software.com/en/xtract-universal/) webservices. <br>
+The following article describes how Azure Data Factory can be used to trigger and automate SAP data movements using [Xtract Universal's](https://theobald-software.com/en/xtract-universal/) webservices. <br>
 Target audience: Customers who utilize Azure Data Factory (ADF) as a platform for orchestrating data movement and transformation. <br>
 
 {: .box-note}

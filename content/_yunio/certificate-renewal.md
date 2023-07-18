@@ -6,7 +6,7 @@ permalink: /:collection/:path
 weight: 5
 ---
 
-This article shows how to manually and automatically renew a X.509 certificate used for TLS in yunIO.
+The following article shows how to manually and automatically renew a X.509 certificate used for TLS in yunIO.
 
 ### Renewing a Certificate Manually
 

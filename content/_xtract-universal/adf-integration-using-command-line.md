@@ -7,7 +7,7 @@ weight: 75
 ---
 Target audience: Customers who utilize Azure Data Factory as a platform orchestrating data movement and transformation. <br>
 
-This article shows how Azure Data Factory can be used to trigger and automate SAP data movements using [Xtract Universal's](https://theobald-software.com/en/xtract-universal/) command line tool.
+The following article shows how Azure Data Factory can be used to trigger and automate SAP data movements using [Xtract Universal's](https://theobald-software.com/en/xtract-universal/) command line tool.
 
 ### Prerequisites
 

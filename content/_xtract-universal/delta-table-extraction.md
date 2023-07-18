@@ -6,12 +6,12 @@ permalink: /:collection/:path
 weight: 30
 ---
 
-This article shows how to load data incrementally from an SAP Table based on date fields.
-The following example scenarios use the table VBAK (SAP Sales Document Header), which has two date fields: ERDAT for creation date and AEDAT for update date.
+The following article shows how to load data incrementally from an SAP Table based on date fields.
+The depicted example scenarios use the table VBAK (SAP Sales Document Header), which has two date fields: ERDAT for creation date and AEDAT for update date.
 
 ### Extract Data using a Date Parameter
 
-The following example extracts data that was created or changed after a specific date.
+The depicted example extracts data that was created or changed after a specific date.
 The date is provided as a parameter at runtime.
 
 1. Create a new Table extraction.
@@ -31,7 +31,7 @@ Or the data has changed (ARDAT) after the date provided by the parameter `@LastD
 
 ### Daily Data Extraction
 
-The following example extracts data that was created or changed the day before.
+The depicted example extracts data that was created or changed the day before.
 This example uses script expressions to query the current date.
 
 1. Create a new Table extraction.

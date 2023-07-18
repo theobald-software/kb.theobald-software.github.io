@@ -6,7 +6,7 @@ permalink: /:collection/:path
 weight: 135
 ---
 
-This article shows how to create a custom connector in Matillion Data Loader that loads SAP data via Xtract Universal into Snowflake.<br>
+The following article shows how to create a custom connector in Matillion Data Loader that loads SAP data via Xtract Universal into Snowflake.<br>
 Matillion Data Loader is a cloud based data loading platform that extracts data from popular sources and loads it into cloud destinations, see [Official Website: Matillion Data Loader](https://www.matillion.com/products/data-loader/).
 
 ### Prerequisites
@@ -18,7 +18,7 @@ Matillion Data Loader is a cloud based data loading platform that extracts data 
 ### Setup in Xtract Universal
 
 1. Create an extraction in Xtract Universal, see [Online Help: Defining an Extraction](https://help.theobald-software.com/en/xtract-universal/getting-started/define-a-table-extraction). <br>
-The following example scenario extracts the SAP table KNA1 (General Data in Customer Master).<br>
+The depicted example scenario extracts the SAP table KNA1 (General Data in Customer Master).<br>
 ![KNA1](/img/contents/xu/kna1.png){:class="img-responsive"}
 2. Assign the `http-json` destination to the extraction, see [Online Help: Assigning Destinations](https://help.theobald-software.com/en/xtract-universal/getting-started/write-data-to-destination#assigning-destinations-to-extractions).
 

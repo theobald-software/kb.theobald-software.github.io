@@ -8,7 +8,7 @@ weight: 2
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
 
-This article shows how to execute some custom action,<br>
+The following article shows how to execute some custom action,<br>
 e.g. open the SAP-GUI for the current row (purchase order number).
 
 Using common Board techniques and a correctly configured DataView component

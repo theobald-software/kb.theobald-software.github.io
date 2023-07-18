@@ -6,7 +6,7 @@ permalink: /:collection/:path
 weight: 45
 ---
 
-This article shows how to synchronize SharePoint custom lists in near-real time with SAP.<br>
+The following article shows how to synchronize SharePoint custom lists in near-real time with SAP.<br>
 In the following scenario, data from SharePoint is used to automatically create a purchase requisition in SAP. The newly created SAP purchase requisition number is then written back to SharePoint.
 
 ### About

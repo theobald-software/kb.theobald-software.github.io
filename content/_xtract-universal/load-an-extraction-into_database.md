@@ -8,7 +8,7 @@ weight: 162
 lang: en_GB
 ---
 
-This article shows how to load the data of an extraction into a Microsoft SQL Server database. <br>
+The following article shows how to load the data of an extraction into a Microsoft SQL Server database. <br>
 
 
 ### Creating a Microsoft SQL Server destination

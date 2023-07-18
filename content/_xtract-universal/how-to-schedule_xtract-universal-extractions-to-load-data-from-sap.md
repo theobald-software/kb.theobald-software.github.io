@@ -16,7 +16,7 @@ As an alternative you can just call the correspondent URL that can be found in t
 
 ![XU schedule 01](/img/contents/xu/xu-schedule-01.jpg){:class="img-responsive"}
 
-This article describes how to schedule Xtract Universal extractions with the command line tool using dynamic parameters.
+The following article describes how to schedule Xtract Universal extractions with the command line tool using dynamic parameters.
 
 Xtract Universal delivers the command line tool **xu.exe** (to be found in the installation folder, e.g. **C:\Program Files\XtractUniversal\xu.exe** to run an extraction using the command line. <br>
 We will use this approach to schedule an extraction with the "Windows Task Scheduler" and the "SQL Server Agent".

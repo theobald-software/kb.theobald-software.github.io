@@ -12,7 +12,7 @@ Function modules are single functions that are managed by the SAP Function Build
 
 Every function module provides import and export parameters. These parameters are either given to or from the function module. Besides these scalar parameters, there can be also an exchange of tables. The figure below shows the principle of the object hierarchy that is provided by ERPConnect.net to manage the exchange of imports, exports and table parameters.
 
-The following examples show how to log on to a SAP system, and how to use these objects to call function modules within the SAP system.
+The depicted examples show how to log on to a SAP system, and how to use these objects to call function modules within the SAP system.
 
 - Call a simple function module: SD_RFC CUSTOMER GET
 - Retrieving Stock Quantity via BAPI

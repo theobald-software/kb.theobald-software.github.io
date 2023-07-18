@@ -193,7 +193,7 @@ Letter
 {% endhighlight %}
 </details>
 
-The following examples show how XtractQL can be used.
+The depicted examples show how XtractQL can be used.
 
 **Table**
 

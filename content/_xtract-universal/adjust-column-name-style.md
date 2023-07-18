@@ -16,7 +16,7 @@ Xtract Universal offers 4 different [Column Name Styles](https://help.theobald-s
 - TextAndCode - `[FieldDescription]_[FieldName]`
 
 The metadata of the SAP objects is fetched from the SAP source object. 
-In the following example, the Column Name Style 'Prefixed Code' is used, which connects each existing table field in the form [TabName][ColumnName] with the SAP standard separator '~'. 
+In the depicted example, the Column Name Style 'Prefixed Code' is used, which connects each existing table field in the form [TabName][ColumnName] with the SAP standard separator '~'. 
 This naming of table columns is mainly used for table joins, since identical column identifiers exist in the different tables. A typical example is the table join of 'EKKO', table Purchasing Document Header and 'EKPO', table Purchasing Document Item. 
 Both tables have the following identical column descriptions: 'MANDT', 'EBELN'. When selecting the standard Column Name Style 'Code' in [destination settings](https://help.theobald-software.com/en/xtract-universal/destinations/microsoft-sql-server#destination-settings), the following error occurs on the SQL side when selecting these fields.
 

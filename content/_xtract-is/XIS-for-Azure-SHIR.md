@@ -18,7 +18,7 @@ To overcome the challenge of connecting to on-premises resources from a cloud en
 Xtract IS for Azure supports both options. Actually, it supports those options pretty much out of the box. So, that's good news for you. The second option requires XIS for Azure version 6.5.10 or higher.
 
 ## Goal
-This article describes how to enable usage of Xtract IS for Azure with a self-hosted IR. This article is a supplement to Microsoft's documentation on How to [Enable custom/3rd party components](https://docs.microsoft.com/en-us/azure/data-factory/self-hosted-integration-runtime-proxy-ssis#enable-custom3rd-party-components) for usage with a self-hosted IR. 
+The following article describes how to enable usage of Xtract IS for Azure with a self-hosted IR. This article is a supplement to Microsoft's documentation on How to [Enable custom/3rd party components](https://docs.microsoft.com/en-us/azure/data-factory/self-hosted-integration-runtime-proxy-ssis#enable-custom3rd-party-components) for usage with a self-hosted IR. 
 
 ## Let's get started
 Read the Microsoft documentation about [configuring a self-hosted IR as a proxy for an Azure-SSIS IR in Azure Data Factory](https://docs.microsoft.com/en-us/azure/data-factory/self-hosted-integration-runtime-proxy-ssis) and implement the steps mentioned therein. That's the major part of the work you need to do. And you would need to do this, irrespective of whether you use Xtract IS for Azure or not.

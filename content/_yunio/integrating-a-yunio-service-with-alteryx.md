@@ -8,7 +8,7 @@ progressstate: 5
 ---
 
 
-This article shows how to integrate a yunIO service with Alteryx.<br>
+The following article shows how to integrate a yunIO service with Alteryx.<br>
 Alteryx is a software platform that allows people to to access, cleanse, test, combine, analyze and output data. 
 For more Information on Alteryx, see [Alteryx Official Website](https://www.alteryx.com/).
 

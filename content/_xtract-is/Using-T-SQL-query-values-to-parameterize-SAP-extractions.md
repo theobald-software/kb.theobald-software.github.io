@@ -11,7 +11,7 @@ The following article describes how T-SQL query results can be passed to SSIS va
 
 The T-SQL query on existing SQL table objects is a single value that is then passed to a dedicated selection criterion. 
 
-The following example uses the Xtract BAPI task, which dynamically executes the *FISCYEAR* selection field at runtime. 
+The depicted example uses the Xtract BAPI task, which dynamically executes the *FISCYEAR* selection field at runtime. 
 
 {: .box-note }
 **Note:**  This example case can also be used for other Xtract IS tasks within SQL Sever Integration Services (SSIS).

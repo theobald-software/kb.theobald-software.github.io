@@ -6,8 +6,8 @@ permalink: /:collection/:path
 weight: 20
 ---
 
-This article describes a common problem that occurs when pushing SAP data into an SQL server database when collation is not set case-sensitive.
-The given example shows how to customize the drop & create SQL server statement within Xtract Universal destination settings.
+The following article describes a common problem that occurs when pushing SAP data into an SQL server database when collation is not set case-sensitive.
+The depicted example shows how to customize the drop & create SQL server statement within Xtract Universal destination settings.
 
 ### Collation SQL Server
 
@@ -28,7 +28,7 @@ Accent-sensitive (_AS) | Distinguishes between accented and unaccented character
 Check the complete list of [usable collations](https://docs.microsoft.com/en-us/sql/relational-databases/collations/collation-and-unicode-support?redirectedfrom=MSDN&view=sql-server-ver15#Collation_Defn). 
 
 For more detailed information, see [Microsoft site](https://docs.microsoft.com/en-us/sql/relational-databases/collations/collation-and-unicode-support?redirectedfrom=MSDN&view=sql-server-ver15). 
-The following example shows the possibility to use the column collation within Xtract Universal with [Custom SQL](https://help.theobald-software.com/en/xtract-universal/destinations/microsoft-sql-server#custom-sql-1) statement.
+The depicted example shows the column collation within Xtract Universal with [Custom SQL](https://help.theobald-software.com/en/xtract-universal/destinations/microsoft-sql-server#custom-sql-1) statement.
 
 ### SQL Server Management Studio (SSMS)
 

@@ -6,7 +6,7 @@ permalink: /:collection/:path
 weight: 154
 ---
 
-This article shows how to set up Single Sign-On (SSO) with Secure Network Communication (SNC) and External ID.<br>
+The following article shows how to set up Single Sign-On (SSO) with Secure Network Communication (SNC) and External ID.<br>
 *SSO with External ID* uses a Personal Security Environment (PSE) to create a trust relationship between the SAP application server and the service account that runs Xtract Universal.
 This allows Xtract Universal to impersonate any SAP user.<br>
 

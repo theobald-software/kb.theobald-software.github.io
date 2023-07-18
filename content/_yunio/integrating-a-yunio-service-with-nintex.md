@@ -8,7 +8,7 @@ progressstate: 5
 ---
 
 
-This article shows how to integrate a yunIO service with Nintex Automation Cloud.
+The following article shows how to integrate a yunIO service with Nintex Automation Cloud.
 
 The Nintex Automation Cloud is a cloud-based process automation service provided by Nintex. 
 The platform can be used to create automated workflows between different cloud apps and services that synchronize and collect data, generates documents and more. 

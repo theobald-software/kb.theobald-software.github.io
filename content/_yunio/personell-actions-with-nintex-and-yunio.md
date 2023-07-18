@@ -6,7 +6,7 @@ permalink: /:collection/:path
 weight: 27
 ---
 
-This article shows how to use the Nintex [Employee Onboarding scenario template](https://gallery.nintex.com/t/employee-onboarding) with yunIO to create new employees in SAP.<br>
+The following article shows how to use the Nintex [Employee Onboarding scenario template](https://gallery.nintex.com/t/employee-onboarding) with yunIO to create new employees in SAP.<br>
 
 
 ### About

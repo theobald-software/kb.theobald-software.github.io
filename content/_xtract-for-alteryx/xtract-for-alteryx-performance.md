@@ -52,7 +52,7 @@ This means that the user can continue to work on the same machine while the extr
 
 ### Example 
 
-The following example workflow finishes within 7.2 seconds:<br>
+The depicted example workflow finishes within 7.2 seconds:<br>
 
 - Workflow: contains Xtract Table to extract SAP tables and a Browse tool to view the extracted data
 - Extracted data: 166.169 rows and 15 columns from the SAP Table ACDOCA (Universal Ledger)

@@ -6,7 +6,7 @@ permalink: /:collection/:path
 weight: 35
 ---
 
-This article shows how to import transport requests for custom functions modules that are included in the installation directory of your product, e.g., `C:\Program Files\[XtractProduct]\ABAP`.
+The following article shows how to import transport requests for custom functions modules that are included in the installation directory of your product, e.g., `C:\Program Files\[XtractProduct]\ABAP`.
 
 <!---
 ### Upload SAP Transport Requests to SAP Via Transactions

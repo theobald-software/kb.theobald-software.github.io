@@ -8,9 +8,9 @@ weight: 4
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
 
-We can use the component XtractIS Report to use reports as a data source. But sometimes reports contain groups and headers or any other disturbing rows between the relevant rows (e.g. delimiters or column names in the middle of the report). This Article shows how you can eliminate the rows which are containing no relevant data, and how to insert information from the group header to referred columns and rows.
+We can use the component XtractIS Report to use reports as a data source. But sometimes reports contain groups and headers or any other disturbing rows between the relevant rows (e.g. delimiters or column names in the middle of the report). The following article shows how you can eliminate the rows which are containing no relevant data, and how to insert information from the group header to referred columns and rows.
 
-The following example extracts data from the Report RFITEMAP. The report RFITEMAP - Vendor Line Item Display - groups the Report to the single Vendor. The Report is called with the Transaction FBL1N.
+The depicted example extracts data from the Report RFITEMAP. The report RFITEMAP - Vendor Line Item Display - groups the Report to the single Vendor. The Report is called with the Transaction FBL1N.
 
 After we have put the component into the Data Flow task and we double click it, we get into the Editor. We assign a Variant to get the Data assessable.
 

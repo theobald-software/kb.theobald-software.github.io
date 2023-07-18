@@ -8,7 +8,7 @@ weight: 45
 
 ### About
 
-This article shows how to execute and schedule all defined extractions in the Xtract Universal Designer. 
+The following article shows how to execute and schedule all defined extractions in the Xtract Universal Designer. 
 
 The implementation of this scenario is realized via the integration of an SSIS-package. 
 

@@ -10,7 +10,7 @@ Please also have a look in our [OnlineHelp](https://help.theobald-software.com/e
 
 Of course, ERPConnect is ready for ASP.NET so you will be able to write really cool web applications with a direct link to SAP R/3.
 
-The following example shows the development process for the ASP.NET/ERPConnect project.
+The depicted example shows the development process for the ASP.NET/ERPConnect project.
 
 The ERPConnect.dll class library must be added as a reference to the project. The dll will be copied to the bin directory when compiling the project. But you need to add one more dll to your bin directory: librfc32.dll. This one is contained in the rfcsdk provided by the SAP GUI installation (System32 directory).
 

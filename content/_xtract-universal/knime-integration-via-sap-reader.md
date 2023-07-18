@@ -5,7 +5,7 @@ description: KNIME Integration via SAP Reader (Theobald Software)
 permalink: /:collection/:path
 weight: 90
 ---
-This article describes the integration of Xtract Universal into the BI tool KNIME via SAP Reader (Theobald Software).
+The following article describes the integration of Xtract Universal into the BI tool KNIME via SAP Reader (Theobald Software).
 
 ### Requirements
 The following software applications must be installed for integration into KNIME:

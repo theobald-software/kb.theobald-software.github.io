@@ -6,7 +6,7 @@ permalink: /:collection/:path
 weight: 2
 ---
 
-This article shows how to run a yunIO service in Swagger Inspector.
+The following article shows how to run a yunIO service in Swagger Inspector.
 
 Swagger Inspector is an OpenAPI design and documentation tool that allows validation of APIs and automatic creation of OpenAPI files for any end point you call.
 For more information on the Swagger Inspector, see [Swagger Inspector Documentation](https://swagger.io/docs/swagger-inspector/how-to-use-swagger-inspector/).

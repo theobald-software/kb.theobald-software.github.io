@@ -24,7 +24,7 @@ The dynamization of Xtract IS Table components increases the maintainability of 
 
 ### Step-by-step instructions for the use of [Xtract Table].[WhereClause]
 
-In the following example, only results till 01.01 of the current fiscal year are to be extracted. The SAP standard table *BKPF - Accounting Document Header* and the table field *BUDAT - Posting Date in the Document* are used. 
+In the depicted example, only results till 01.01 of the current fiscal year are to be extracted. The SAP standard table *BKPF - Accounting Document Header* and the table field *BUDAT - Posting Date in the Document* are used. 
 
 1. Create a SSIS package, see [Xtract IS Table](https://help.theobald-software.com/en/xtract-is/table)
 2. Right-click on Data Flow canvas and open **[Properties]**

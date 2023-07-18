@@ -6,7 +6,7 @@ permalink: /:collection/:path
 weight: 5
 ---
 
-This article shows how to activate DataSources in your SAP system and make them available for Theobald Software products.
+The following article shows how to activate DataSources in your SAP system and make them available for Theobald Software products.
 
 ### About DataSources
 

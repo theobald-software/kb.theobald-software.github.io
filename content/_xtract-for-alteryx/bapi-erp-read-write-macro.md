@@ -6,7 +6,7 @@ permalink: /:collection/:path
 weight: 50
 ---
 
-This article shows how to use the Xtract BAPI component of Xtract for Alteryx to create a new purchase requisition in SAP and how to load the data of the purchase requisition into Alteryx.
+The following article shows how to use the Xtract BAPI component of Xtract for Alteryx to create a new purchase requisition in SAP and how to load the data of the purchase requisition into Alteryx.
 
 ### About this Workflow
 

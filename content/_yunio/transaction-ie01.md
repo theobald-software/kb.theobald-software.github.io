@@ -6,8 +6,8 @@ permalink: /:collection/:path
 weight: 50
 ---
 
-This article shows how to use the integration type *Transaction* with transaction IE01 in yunIO.<br>
-The following example application uses transaction IE01 to create new equipment in SAP.
+The following article shows how to use the integration type *Transaction* with transaction IE01 in yunIO.<br>
+The depicted example application uses transaction IE01 to create new equipment in SAP.
 For more information on creating equipment, see [SAP Help: Creating a Piece of Equipment](https://help.sap.com/viewer/f0e0dd7850e64947aa66a647f8d3af09/6.18.latest/en-US/bc78bb53707db44ce10000000a174cb4.html).
 
 
@@ -17,7 +17,7 @@ The SAP connection assigned to a transaction service must use an SAP dialog user
 
 {: .box-tip }
 **Tip:** The transaction feature of yunIO offers the same functionalities as the SAP GUI. 
-Therefore knowing how to navigate the SAP GUI makes it easier to use the transaction feature. 
+  
 
 ### Create Equipment
 

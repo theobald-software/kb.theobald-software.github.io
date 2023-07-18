@@ -14,7 +14,7 @@ The examples are based on a BW query, which in turn is based on the cube 0D_DECU
 
 The following figure shows the query in the designer. The dimensions “material” and “client” as well as the key figures “billed amount” and “costs” are drawn into the query output. The dimension has a variable called MAT01, which allows a limitation to the material number.
 
-The following example shows a query being executed in .NET. First a BWCube object is built with the help of the CreateCube function. Its name is made up of the cube name and query name.
+The depicted example shows a query being executed in .NET. First a BWCube object is built with the help of the CreateCube function. Its name is made up of the cube name and query name.
 
 The cube object offers a collection for all of the contained dimensions (“Dimensions”) and key figures (“Measures”). The attribute SelectForFlatMDX defines whether or not each component should be contained in the query output. It is set to true in our example. Please note that the denomination of the key figures via the query generation in the designer does not follow from the original technical name, so the key figures in our example here are addressed by the ordinal number, not the name.
 

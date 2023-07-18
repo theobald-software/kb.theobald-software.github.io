@@ -6,7 +6,7 @@ permalink: /:collection/:path
 weight: 180
 ---
 
-This article shows how to use the Xtract ODP component of Xtract for Alteryx to load sales documents and customer master data from an SAP ERP system.<br>
+The following article shows how to use the Xtract ODP component of Xtract for Alteryx to load sales documents and customer master data from an SAP ERP system.<br>
 
 ### About this Workflow
 

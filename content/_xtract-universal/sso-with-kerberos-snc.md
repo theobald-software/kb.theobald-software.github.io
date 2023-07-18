@@ -6,7 +6,7 @@ permalink: /:collection/:path
 weight: 152
 ---
 
-This article describes the required steps for setting up Single Sign-On (SSO) with Secure Network Communication (SNC) and Kerberos encryption.
+The following article describes the required steps for setting up Single Sign-On (SSO) with Secure Network Communication (SNC) and Kerberos encryption.
 
 {: .box-warning }
 **Warning! SAP officially does not support the Kerberos Wrapper Library (gx64krb5.dll) anymore.** 

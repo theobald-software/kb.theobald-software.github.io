@@ -6,11 +6,11 @@ permalink: /:collection/:path
 weight: 10
 ---
 
-This article shows how to call Xtract Universal extractions dynamically from Azure Data Factory (ADF) using user-defined variables. <br>
+The following article shows how to call Xtract Universal extractions dynamically from Azure Data Factory (ADF) using user-defined variables. <br>
 
 ### Calling Dynamic Extractions with Variables
 
-In the following example, an extraction with a date parameter is called in ADF.
+In The depicted example, an extraction with a date parameter is called in ADF.
 The date parameter is set dynamically using a user-defined variable.<br>
 The goal of this example is to run daily extractions that only write data added or updated on the day before to the destination.
 

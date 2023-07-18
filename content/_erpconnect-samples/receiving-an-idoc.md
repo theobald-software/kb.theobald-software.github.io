@@ -8,7 +8,7 @@ weight: 36
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
 
-The following example shows how to receive a MATMAS IDoc.
+The depicted example shows how to receive a MATMAS IDoc.
 
 As shown in another example (RFC server), an RFCServer object is needed to accept calls from the SAP system. To receive IDocs with the RFCServer object we need to set the property CanReceiveIdocs to true. The event IncomingIdoc is fired when an IDoc is received by ERPConnect.net, so you can use this event to process the IDoc object. The code shows how to initialize and start the RFC Server, and how to install the event.
 

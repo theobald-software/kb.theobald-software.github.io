@@ -6,11 +6,11 @@ permalink: /:collection/:path
 weight: 20
 ---
 
-This article shows how to use yunIO with Microsoft Power Automate to create multiple items in SAP with one service call.<br>
+The following article shows how to use yunIO with Microsoft Power Automate to create multiple items in SAP with one service call.<br>
 Power Automate is a cloud-based process automation service provided by Microsoft. For more Information on Power Automate see [Microsoft Power Automate Documentation](https://docs.microsoft.com/en-us/power-automate/).
 
 ### About
-The following example scenario creates multiple cost centers in the SAP cost center master data. This article guides you through the following process:
+The depicted example scenario creates multiple cost centers in the SAP cost center master data. This article guides you through the following process:
 - Create a yunIO service that can handle multiple input values.
 - Create multiple data sets and that can be used as an input for the yunIO service.<br>
 In this example, multiple items are passed to the SAP function via an Excel spreadsheet. 

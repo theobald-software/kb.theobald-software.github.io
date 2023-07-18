@@ -8,7 +8,7 @@ progressstate: 5
 ---
 
 
-This article shows how to set up the Azure Relay Hybrid Connection in yunIO.<br>
+The following article shows how to set up the Azure Relay Hybrid Connection in yunIO.<br>
 An Azure Relay Hybrid Connection can be used to make yunIO services accessible to applications running in the Azure cloud. 
 For more information on Azure Relay, see [Microsoft Documentation: What is Azure Relay?](https://learn.microsoft.com/en-us/azure/azure-relay/relay-what-is-it).
 

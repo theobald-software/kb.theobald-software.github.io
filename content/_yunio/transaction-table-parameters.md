@@ -11,6 +11,8 @@ The depicted example application uses the transaction VA02 to change a sales ord
 
 ### Prerequisites
 
+The SAP connection assigned to a transaction service must use an SAP dialog user with enough access rights to edit sales orders. 
+
 {: .box-note }
 **Note:**
 Make sure the transaction service uses an SAP dialog user with sufficient access rights to edit sales orders for the assigned SAP connection. 
@@ -22,7 +24,7 @@ Make sure the transaction service uses an SAP dialog user with sufficient access
 ### Selecting a Table as an Input Parameter
 
 1. Create a transaction service that uses tables. <br>
-The following example uses a service that changes sales orders via transaction VA02, see [Working with Transaction VA02](./transaction-va02). 
+The depicted example uses a service that changes sales orders via transaction VA02, see [Working with Transaction VA02](./transaction-va02). 
 2. Click ![change-sales-order](/img/contents/yunio/edit-cog-icon.png) to open the service. <br>
 ![change-sales-order](/img/contents/yunio/transaction-edit.png){:class="img-responsive"}
 3. Click on the documented actions in the section *GUI Steps* to navigate to the screen that contains the table you want to parameterize.<br>
@@ -117,7 +119,7 @@ Incorrect: `"RV45A-KWMENG": ""`
 5. Delete all table entries that are not subject to change. 
 6. Enter values for all fields that you want to overwrite, e.g., `"RV45A-MABNR": "M-01"`, `"RV45A-KWMENG": "5"`, etc.
 The http request body must only contain table fields with valid input values.
-The following example changes the order quantity of the first two items to 1 and 2:
+The depicted example changes the order quantity of the first two items to 1 and 2:
 ```
 {
     "ITEMS": [
@@ -143,7 +145,7 @@ The following example changes the order quantity of the first two items to 1 and
 
 #### Adding new Items to a Table
 When adding new items to a table, the existing table rows must be passed as empty to avoid overwriting existing content. <br>
-The following example adds a new item at the 4th row of the table:
+The depicted example adds a new item at the 4th row of the table:
 
 ```
 "ITEMS": [

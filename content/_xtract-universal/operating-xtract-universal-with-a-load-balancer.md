@@ -6,7 +6,7 @@ permalink: /:collection/:path
 weight: 105
 ---
 
-This article shows how to operate Xtract Universal with load balancing.<br>
+The following article shows how to operate Xtract Universal with load balancing.<br>
 In this context, load balancing means to distribute the network traffic across multiple Windows servers to avoid server overloads. 
 
 ### About Load Balancing

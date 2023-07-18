@@ -7,8 +7,8 @@ weight: 15
 progressstate: 5
 ---
 
-This article shows how to load data incrementally from an SAP Table with no delta pointers / date fields.
-The following example scenario uses two tables:
+The following article shows how to load data incrementally from an SAP Table with no delta pointers / date fields.
+The depicted example scenario uses two tables:
 - MAKT (Material Descriptions), which has no date fields.
 - CDHDR (Change Documents Header), which holds the header information of the changed records.
 CDHDR is used to determine the delta information of MAKT and other tables.

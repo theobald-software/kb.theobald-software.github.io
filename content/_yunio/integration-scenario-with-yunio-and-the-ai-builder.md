@@ -6,12 +6,12 @@ permalink: /:collection/:path
 weight: 4
 ---
 
-This article shows how to integrate yunIO with Microsoft Power Automate and the [Microsoft AI Builder](https://docs.microsoft.com/en-gb/ai-builder/overview).<br>
+The following article shows how to integrate yunIO with Microsoft Power Automate and the [Microsoft AI Builder](https://docs.microsoft.com/en-gb/ai-builder/overview).<br>
 AI Builder enables the usage of artificial intelligence to automate processes in Power Apps and Power Automate.
 Microsoft offers pre-built AI models to start using the tool without training the AI model first.
 
 ### About
-The following example scenario uses an AI Builder template in Power Automate to automatically extract and post invoice information to the backend SAP ERP system. 
+The depicted example scenario uses an AI Builder template in Power Automate to automatically extract and post invoice information to the backend SAP ERP system. 
 In the SAP system an incoming invoice for a previously created purchase order is booked.
  
 ### Prerequisites

@@ -6,7 +6,7 @@ permalink: /:collection/:path
 weight: 10
 ---
 
-This article shows how to create the Z_TS_PROG authorization object for the custom function module Z_XTRACT_IS_REMOTE_REPORT.<br>
+The following article shows how to create the Z_TS_PROG authorization object for the custom function module Z_XTRACT_IS_REMOTE_REPORT.<br>
 
 ### About
 The Theobald Software custom function module Z_XTRACT_IS_REMOTE_REPORT enables the extractions of reports from SAP systems.

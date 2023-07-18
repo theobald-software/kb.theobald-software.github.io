@@ -16,7 +16,7 @@ To do this, filter parameters need to be passed as runtime parameters to Xtract 
 In Visual Studio's Report Server Projects the runtime parameters of Xtract Universal allow only one parameter input for each runtime parameter.
 To pass multiple parameters you can use a computed query parameter.
 
-The following example uses the [WHERE clause](https://help.theobald-software.com/en/xtract-universal/table/where-clause) of a table extraction to show how to pass multiple filter parameters using a single computed query parameter.
+The depicted example uses the [WHERE clause](https://help.theobald-software.com/en/xtract-universal/table/where-clause) of a table extraction to show how to pass multiple filter parameters using a single computed query parameter.
 
 ### Prerequisites
 

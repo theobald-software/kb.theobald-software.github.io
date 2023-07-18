@@ -6,7 +6,7 @@ permalink: /:collection/:path
 weight: 1
 ---
 
-This article shows how to run a yunIO service in Postman.
+The following article shows how to run a yunIO service in Postman.
 
 Postman is an API platform for building and using APIs. You can use Postmn as a Desktop App or in your browser.
 For more information on Postman, see [Postman Documentation](https://learning.postman.com/docs/getting-started/introduction/).

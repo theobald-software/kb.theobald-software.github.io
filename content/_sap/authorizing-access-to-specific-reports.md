@@ -6,7 +6,7 @@ permalink: /:collection/:path
 weight: 10
 ---
 
-This article shows how to set up access control for reports.<br>
+The following article shows how to set up access control for reports.<br>
 
 ### About
 To grant access to a report, an authorization group must be assigned to the report.<br>

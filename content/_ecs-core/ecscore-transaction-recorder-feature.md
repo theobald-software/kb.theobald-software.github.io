@@ -38,7 +38,7 @@ allowfullscreen></iframe>
 
 **Practical example**
 
-In practice there are numerous use cases where the transaction recorder feature can add some value. In the following example we demonstrate, how transaction recording can be used for journal entry creation in SAP.
+In practice there are numerous use cases where the transaction recorder feature can add some value. In the depicted example we demonstrate, how transaction recording can be used for journal entry creation in SAP.
 Journal entries are a term from the SAP FI module and represent debit and credit postings in the General Ledger. A practical example we used for demo purposes here, are so called “petty cash” transactions denoting small amounts of cash to cover minor expenditures such as transportation costs.
 
 Such petty cash postings and journal entries in general are handled in SAP through transaction code FB50, if a document shall be posted right away, or transaction FBV0 respectively, if the journal entry shall be “parked” first for further review.

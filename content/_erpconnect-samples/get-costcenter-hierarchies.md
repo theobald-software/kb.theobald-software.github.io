@@ -8,7 +8,7 @@ weight: 11
 
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
 
-Cost center hierarchies are stored in SAP in different tables. Every controlling area has one standard hierarchy defined. Cost centers belong to this standard hierarchies. In this following example we want to build a treeview with the cost centers of one selected standard hierarchy.
+Cost center hierarchies are stored in SAP in different tables. Every controlling area has one standard hierarchy defined. Cost centers belong to this standard hierarchies. In this depicted example we want to build a treeview with the cost centers of one selected standard hierarchy.
 
 The form should contain following elements:
 

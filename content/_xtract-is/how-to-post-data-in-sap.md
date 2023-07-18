@@ -6,8 +6,8 @@ permalink: /:collection/:path
 weight: 24
 ---
 
-This article shows how to use the Xtract BAPI component to post data to SAP.<br>
-The following example uses the custom function module Z_ECS_PRODUCT_CREATE_MULTI to add new products to SAP.
+The following article shows how to use the Xtract BAPI component to post data to SAP.<br>
+The depicted example uses the custom function module Z_ECS_PRODUCT_CREATE_MULTI to add new products to SAP.
 A table that contains the product information and is stored on an SQL Server is used as input for the function module.
 
 

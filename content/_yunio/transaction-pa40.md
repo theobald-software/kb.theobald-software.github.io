@@ -6,8 +6,8 @@ permalink: /:collection/:path
 weight: 55
 ---
 
-This article shows how to use the integration type *Transaction* with transaction PA40 in yunIO.<br>
-The following example application uses the transaction PA40 to define personnel actions in SAP.
+The following article shows how to use the integration type *Transaction* with transaction PA40 in yunIO.<br>
+The depicted example application uses the transaction PA40 to define personnel actions in SAP.
 
 ### Prerequisites
 
@@ -15,11 +15,11 @@ The SAP connection assigned to a transaction service must use an SAP dialog user
 
 {: .box-tip }
 **Tip:** The transaction feature of yunIO offers the same functionalities as the SAP GUI. 
-Therefore knowing how to navigate the SAP GUI makes it easier to use the transaction feature. 
+  
 
 ### Create a new Employee in SAP
 
-The following example application uses a yunIO service to create a new employee in SAP.
+The depicted example application uses a yunIO service to create a new employee in SAP.
 
 {: .box-note }
 **Note:** The parameters that are needed to create new employees are dependent on your customized SAP settings.

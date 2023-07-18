@@ -10,7 +10,7 @@ This section shows how to call an extraction from a [Windows script (.bat)](./ca
 
 ### Call via Windows script (.bat)
 
-The following example shows how to run an extraction using a Windows script.
+The depicted example shows how to run an extraction using a Windows script.
 First, you create a batch file in which you call the command line tool *xu.exe*.
 
 #### Define Variables

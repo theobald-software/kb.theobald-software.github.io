@@ -29,7 +29,7 @@ The *Row settings* allows skipping rows at the top and at the bottom of the repo
 
 ### How to Use Row Skip Patterns
 
-In the following example, the report RFITEMGL contains rows that totals the content of the rows before. 
+In the depicted example, the report RFITEMGL contains rows that totals the content of the rows before. 
 These rows are marked with an * symbol: <br>
 ![report-no-skip-rows](/img/contents/xu/report-no-skip-rows.png){:class="img-responsive"}
 

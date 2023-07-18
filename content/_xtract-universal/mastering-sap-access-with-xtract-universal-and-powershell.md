@@ -123,7 +123,7 @@ $XUResult = XURun -XUCmd $XUCmd -XUServer $XUServer -XUPort $XUPort -XUExtractio
 
 ### How to loop an array with different parameter values
 
-The following example uses a loop to run an extraction with different parameter values. The parameters values are defined in an array.
+The depicted example uses a loop to run an extraction with different parameter values. The parameters values are defined in an array.
 
 ```shell
 $Months = @("200401","200402","200403")
@@ -134,7 +134,7 @@ XURun -XUCmd $XUCmd -XUServer $XUServer -XUPort $XUPort -XUExtraction $XUExtract
 
 ### How to run multiple extractions in sequence
 
-The following example uses a loop tu run multiple extractions in sequence. The extraction names are defined in an array.
+The depicted example uses a loop tu run multiple extractions in sequence. The extraction names are defined in an array.
 
 ```shell
 Function XURun-Multi ($XUCmd, $XUServer, $XUPort, $XUExtractions,$XUParameters){

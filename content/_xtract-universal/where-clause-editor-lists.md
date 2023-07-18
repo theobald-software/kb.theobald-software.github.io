@@ -6,7 +6,7 @@ permalink: /:collection/:path
 weight: 160
 ---
 
-This article shows how to use static lists and SELECT statements in the [WHERE Clause Editor](https://help.theobald-software.com/en/xtract-universal/table/where-clause#where-clause-editor).<br>
+The following article shows how to use static lists and SELECT statements in the [WHERE Clause Editor](https://help.theobald-software.com/en/xtract-universal/table/where-clause#where-clause-editor).<br>
 
 {: .box-note }
 **Note:** List parameters or not yet supported by the Table component.
@@ -22,7 +22,7 @@ This article shows how to use static lists and SELECT statements in the [WHERE C
 
 ### Static Lists
 
-The following example statement returns all the active customers (rows in the table KNA1) that have an address in one of the following cities: Berlin, Stuttgart, Paris, Seattle, Hong Kong or Dongguan.
+The depicted example statement returns all the active customers (rows in the table KNA1) that have an address in one of the following cities: Berlin, Stuttgart, Paris, Seattle, Hong Kong or Dongguan.
 
 1. Create a Table extraction for the SAP table KNA1, see [Online Help: Defining a Table Extraction](https://help.theobald-software.com/en/xtract-universal/getting-started/define-a-table-extraction).<br>
 2. Navigate to the *WHERE Clause* tab in the main window of the extraction and click **[Editor Mode]** to open the WHERE clause editor. <br>
@@ -43,7 +43,7 @@ The following example statement returns all the active customers (rows in the ta
 ### SELECT Statement
 
 SELECT statements can be used to select data from SAP tables, see [ABAP Documentation: Open SQL SELECT](https://help.sap.com/doc/abapdocu_750_index_htm/7.50/en-us/abapselect.htm).<br>
-The following example statement returns all the active customers (rows in the table KNA1) that have a sales document in the table VBAK for sales document header data.
+The depicted example statement returns all the active customers (rows in the table KNA1) that have a sales document in the table VBAK for sales document header data.
 
 {: .box-note }
 **Note:** The usage of SELECT statements is only possible as of SAP Release 7.40, SP05.

@@ -7,7 +7,7 @@ weight: 1
 progressstate: 0
 ---
 
-This article describes/is about/shows how to ... <br>
+The following article describes/is about/shows how to ... <br>
 For more information on ... , see [Source:Title](Link).
 
 <!---
