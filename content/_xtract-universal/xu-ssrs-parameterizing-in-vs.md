@@ -20,12 +20,12 @@ The depicted example uses the [WHERE clause](https://help.theobald-software.com/
 
 ### Prerequisites
 
-Create a table extraction with an SSRS destination in Xtract Universal. This example uses the SAP standard table *MAKT*. <br>
+Create a table extraction with an SSRS destination in Xtract Universal. The depicted example uses the SAP standard table *MAKT*. <br>
 Add the extraction as a data source in Visual Studio and create a report ad described in [SSRS in Visual Studio](https://help.theobald-software.com/en/xtract-universal/destinations/server-report-services#adding-an-extraction-as-a-data-source-in-visual-studio).
 
 ### Computed Query Parameters
 
-This example uses data from the columns SPRAS and MATNR to filter the SAP standard table *MAKT*.
+The depicted example uses data from the columns SPRAS and MATNR to filter the SAP standard table *MAKT*.
 Input parameters for both columns are combined in a single computed parameter that is passed to the where clause.
 
 How to create a parameter that encapsulates 2 other parameters:

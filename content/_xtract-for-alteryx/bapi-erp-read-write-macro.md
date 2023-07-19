@@ -85,7 +85,7 @@ Follow the steps below to create a [batch macro](http://downloads.alteryx.com/be
 8. Click **[OK]**. The window "Function Module Lookup" closes.
 9. In the main window of the component click **[Edit Parameters]**. The window "Edit Runtime Parameters" opens.
 10. Click **[Add Scalar]** to define a new input parameter for the Xtract BAPI component.
-This example uses a string parameter *Req_Number* to represent the purchase requisition number.<br>
+The depicted example uses a string parameter *Req_Number* to represent the purchase requisition number.<br>
 ![load-purchase-requisition-runtime-parameter](/img/contents/xfa/load-purchase-requisition-runtime-parameter.png){:class="img-responsive"}
 11. Click **[OK]**. The window "Edit Runtime Parameters" closes.
 12. In the *Imports* tab assign the parameter *Req_Number* to the import parameter NUMBER.<br>

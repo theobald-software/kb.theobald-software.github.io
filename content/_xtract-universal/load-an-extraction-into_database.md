@@ -33,7 +33,7 @@ To load data into a Microsoft SQL Server, a Microsoft SQL Server destination mus
 2. Click **[Destination]**. The window "Destination Settings" opens.
 ![Load-Destinations](/img/contents/xu/xu_designer_destination.png){:class="img-responsive"}
 3. In the "Destination Settings" window, choose the **SQLServer** destination from the drop down menu. 
-You can change the extraction-specific settings, if needed. This example uses the default settings:<br>
+You can change the extraction-specific settings, if needed. The depicted example uses the default settings:<br>
 ![Load-Shared-Destination-SQLServer](/img/contents/xu/sqlserver_destination-settings.png){:class="img-responsive"}
 4. Click **[OK]** to get back to the main window of the Designer.       
 5. Click **[Run] > [Run]** to start the extraction. A successful extraction procedure ends with the status *Extraction finished successfully*.

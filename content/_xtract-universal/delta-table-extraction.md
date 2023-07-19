@@ -32,7 +32,7 @@ Or the data has changed (ARDAT) after the date provided by the parameter `@LastD
 ### Daily Data Extraction
 
 The depicted example extracts data that was created or changed the day before.
-This example uses script expressions to query the current date.
+The depicted example uses script expressions to query the current date.
 
 1. Create a new Table extraction.
 2. Look up a table you want to extract data from, e.g., VBAK. <br>

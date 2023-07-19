@@ -15,7 +15,7 @@ The date parameter is set dynamically using a user-defined variable.<br>
 The goal of this example is to run daily extractions that only write data added or updated on the day before to the destination.
 
 1. Create an extraction in Xtract Universal that uses runtime parameters.<br>
-This example uses an extraction called *0COSTCENTER_0101_HIER* with a date parameter called *myDate*. 
+The depicted example uses an extraction called *0COSTCENTER_0101_HIER* with a date parameter called *myDate*. 
 2. Create a pipeline in ADF that stores yesterday's date in a variable (1).<br>
 ![adf-pipeline](/img/contents/adf-pipeline.png){:class="img-responsive"}
 3. Format the date to the internal SAP date format (YYYYMMDD).<br>

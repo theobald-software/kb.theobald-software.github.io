@@ -35,7 +35,7 @@ These rows are marked with an * symbol: <br>
 
 To remove all rows that contain the * symbol, follow the instructions below:
 
-1. Look up the report. This example uses the report RFITEMGL. 
+1. Look up the report. The depicted example uses the report RFITEMGL. 
 2. Define the columns of the report, see [Online Help: Defining a Report Extraction](https://help.theobald-software.com/en/xtract-universal/abap-reports/report-extraction-define). <br>
 ![report-no-skip-rows](/img/contents/xu/report-skip-rows-preview.png){:class="img-responsive"}
 3. Click **Extraction Settings**. The window "Extraction Settings" open.<br>

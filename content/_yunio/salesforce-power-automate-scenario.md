@@ -6,7 +6,7 @@ permalink: /:collection/:path
 weight: 40
 ---
 
-The following article shows how to synchronize a Salesforce account in near-real time with SAP.<br>
+This article shows how to synchronize a Salesforce account in near-real time with SAP.<br>
 In the following scenario, data from Salesforce is used to automatically create a customer account in SAP. 
 The newly created SAP customer number is then written back to Salesforce.
 
@@ -26,7 +26,7 @@ For more information on yunIO, see [Theobald Software: yunIO](https://theobald-s
 
 1. Define a [connection to your SAP system](https://help.theobald-software.com/en/yunio/sap-connection) in yunIO. 
 2. [Create a new service](https://help.theobald-software.com/en/yunio/getting-started#creating-a-service) in yunIO. 
-This example uses the integration type *Function Module* for the service.
+The depicted example uses the integration type *Function Module* for the service.
 3. [Look up](https://help.theobald-software.com/en/yunio/bapis-and-function-modules#look-up-a-function-module--bapi) the standard BAPI BAPI_CUSTOMER_CREATEFROMDATA1 that creates customers in SAP. 
 4. Set all import parameters you want to transfer from Salesforce to SAP to *Supplied by Caller* e.g., NAME, CITY, POSTL_COD1, STREET, etc.<br>
 5. Select CUSTOMERNO for export. This Export parameter contains the newly created SAP customer number that is written back to Salesforce.<br>

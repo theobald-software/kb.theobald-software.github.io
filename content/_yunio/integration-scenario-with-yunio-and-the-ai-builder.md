@@ -26,7 +26,7 @@ Create a yunIO service for incoming invoices.<br>
 **Note:** The parameters that are needed to create an incoming invoice are dependent on your customized SAP settings for the invoicing process.
 
 1. Create a service in yunIO. Select *Function Module / BAPI* as the extraction type for the service. <br>
-This example uses the BAPI_INCOMINGINVOICE_CREATE1 to create an incoming invoice in SAP. 
+The depicted example uses the BAPI_INCOMINGINVOICE_CREATE1 to create an incoming invoice in SAP. 
 2. Set the following import parameters to *Supplied by Caller* (Structure *HEADERDATA*):<br>
 - INVOICE_IND (Indicator: post invoice)<br>
 - DOC_TYPE (Document Type)<br>
