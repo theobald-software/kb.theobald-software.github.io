@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Xtract fo Alteryx Performance Considerations
+title: Xtract for Alteryx Performance Considerations
 description: Test
 permalink: /:collection/:path
 weight: 20
