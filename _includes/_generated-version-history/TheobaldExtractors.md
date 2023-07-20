@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.44.10 [L]|2023-07-20|BW Cube|Fixed a bug that caused unexpected measure precision in MDX query extractions.|
 |1.44.9 [L]|2023-07-17|Hierarchy|Improved error handling in refresh metadata; added validation to DateTo property; made DateTo property setter public so that it is available for runtime parameters|
 |1.44.8 [L]|2023-07-14|Hierarchy|Enabled 'dateTo' property of Hierarchy catalog entry to be set by runtime parameter. Improved value validation and error handling.|
 |1.44.7 [L]|2023-07-13|BW Cube|BICS: Fixed direct extraction of SNUMC InfoObjects|
