@@ -7,8 +7,8 @@ weight: 39
 progressstate: 5
 ---
 
-This article shows how to synchronize a Nintex form for Office 365 in near-real time with SAP using custom java scripts.<br>
-In the following scenario, SAP data is made available in a Nintex form for data selection in dropdown lists using JavaScript and REST services.
+The following article shows how to synchronize a Nintex form for Office 365 with SAP using custom JavaScript.<br>
+In the depicted scenario, SAP data is made available in a Nintex form for data selection in dropdown lists using JavaScript and REST services.
 
 For more information on Nintex form for Office 365, see [Nintex Documentation: Office 365 Forms](https://help.nintex.com/en-US/office365/Forms/DesignForms.htm).
 
@@ -34,13 +34,17 @@ The depicted example uses the integration type *SAP Table or View* for the servi
 
 ### Setup in SharePoint
 
+In the depicted example, SAP materials are added to a custom SharePoint list via a Nintex form:
+
 1. Create a SharePoint custom list with a column "Material".<br>
 ![nintex-sharepoint](/img/contents/yunio/nintex-sharepoint.png){:class="img-responsive" }
 2. Click **[Nintex Forms]** to create a new Nintex input form for the SharePoint custom list, see [Setup in Nintex for Office 365](#setup-in-nintex-for-office-365).
 
 ### Setup in Nintex for Office 365
 
-1. Create a new Nintex form for the SharePoint custom list created in the section [Setup in SharePoint](#setup-in-sharepoint):<br>
+Follow the steps below to set up the Nintex form for the SharePoint custom list created in the section [Setup in SharePoint](#setup-in-sharepoint):
+
+1. Create a new Nintex form:<br>
 ![nintex-office-design](/img/contents/yunio/nintex-office-design.png){:class="img-responsive" }
 2. Define the following text fields:
 - the field "Material" of type *Single Line Textbox* is the input field that contains the material number. 
@@ -64,7 +68,8 @@ The depicted example uses the integration type *SAP Table or View* for the servi
 
 #### Integrating JavaScript Code
 
-The depicted example uses the following JavaScript code to call the yunIO service "MAKTService" that reads the material number and the material long text from the SAP table MAKT:
+The [JavaScript library for REST services](https://github.com/theobald-software/static.theobald-software.github.io/tree/main/theobald.yunio.client.js) by Theobald Software enables the use of yunIO services via JavaScript.<br>
+The depicted example uses the following JavaScript code to import the JavaScript library and to call the yunIO service "MAKTService" that reads the material number and the material long text from the SAP table MAKT:
 
 ```java
 document.addEventListener("DOMContentLoaded", async () => {
@@ -99,7 +104,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 {: .box-note }
 **Note:** To use this script in your application, replace the connection URL. 
-If your yunIO service has a different name, edit and the table settings accordingly.
+If your yunIO service has a different name, edit the table settings accordingly.
 
 Follow the steps below to integrate the script in your Nintex Form:
 
