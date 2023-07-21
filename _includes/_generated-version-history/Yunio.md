@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.21.10 [L]|2023-07-21|Gateway|Improved Azure logic for long running requests|
 |1.21.9 [L]|2023-07-20|Designer|Search and sort for columns in table services|
 |1.21.8 [M]|2023-07-17|Runtime|Transaction: Improved "skipPopups" behavior to only skip unexpected popups |
 |1.21.7 [L]|2023-07-13|Gateway|Relay: fixed request content type header.|
