@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.21.11 [L]|2023-07-24|Theobald.Server|Fixed a bug where the browser would not ask for username and password again if the credentials were invalid.|
 |1.21.10 [L]|2023-07-21|Gateway|Improved Azure logic for long running requests|
 |1.21.9 [L]|2023-07-20|Designer|Search and sort for columns in table services|
 |1.21.8 [M]|2023-07-17|Runtime|Transaction: Improved "skipPopups" behavior to only skip unexpected popups |
