@@ -66,10 +66,13 @@ Follow the steps below to set up the Nintex form for the SharePoint custom list 
 ![nintex-office-output](/img/contents/yunio/nintex-office-output.png){:class="img-responsive" }
 14. Add a **[Save]** and **[Cancel]** button to the form.
 
-#### Integrating JavaScript Code
+### Integrating JavaScript Code in Nintex
 
 The [JavaScript library for REST services](https://github.com/theobald-software/static.theobald-software.github.io/tree/main/theobald.yunio.client.js) by Theobald Software enables the use of yunIO services via JavaScript.<br>
-The depicted example uses the following JavaScript code to import the JavaScript library and to call the yunIO service "MAKTService" that reads the material number and the material long text from the SAP table MAKT:
+The depicted example uses the following JavaScript code to:
+- import the JavaScript library for REST services.
+- connect to yunIO.
+- run the service "MAKTService" that reads the material number and the material long text from the SAP table MAKT.
 
 ```java
 document.addEventListener("DOMContentLoaded", async () => {
