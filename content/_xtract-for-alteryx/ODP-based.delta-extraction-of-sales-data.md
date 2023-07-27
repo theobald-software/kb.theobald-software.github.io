@@ -1,6 +1,6 @@
 ---
 layout: page
-title: ODP based Delta Extraction of Sales and Customer Data from an SAP ERP System 
+title: ODP-based Delta Extraction of Sales and Customer Data from SAP ERP  
 description: Test
 permalink: /:collection/:path
 weight: 180
