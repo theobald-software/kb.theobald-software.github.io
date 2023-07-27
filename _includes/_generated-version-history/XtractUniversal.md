@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.25.14 [L]|2023-07-27|Designer|Fixed a bug where the duration of extractions was displayed incorrectly when the extraction took longer than 24 hours|
 |5.25.13 [L]|2023-07-18|General|Added support for BW Cube selection values in Script Expressions|
 |5.25.12 [L]|2023-07-17|Hierarchy|Fixed a bug where runtime parameter "dateTo" was ignored|
 |5.25.11 [L]|2023-07-14|Hierarchy|Fixed the 'hierarchyName' runtime parameter for Hierarchy extractions being ignored.|
