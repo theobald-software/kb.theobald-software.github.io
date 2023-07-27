@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.21.13 [L]|2023-07-27|Designer|Consolidated duplicated code for deleting services/sources functionality (part of the big refactoring task)|
 |1.21.12 [L]|2023-07-27|Runtime|Transaction: Fixed a bug that caused the service execution to fail when the result contained non-ascii data|
 |1.21.11 [L]|2023-07-24|Theobald.Server|Fixed a bug where the browser would not ask for username and password again if the credentials were invalid.|
 |1.21.10 [L]|2023-07-21|Gateway|Improved Azure logic for long running requests|
