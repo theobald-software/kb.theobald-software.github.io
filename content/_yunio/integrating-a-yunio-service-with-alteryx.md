@@ -9,17 +9,17 @@ progressstate: 5
 
 
 This article shows how to integrate a yunIO service with Alteryx.<br>
-Alteryx is a software platform that allows people to to access, cleanse, test, combine, analyze and output data. 
+Alteryx is a software platform, which allows accessing, cleansing, testing, combining and analyzing output data. 
 For more Information on Alteryx, see [Alteryx Official Website](https://www.alteryx.com/).
 
 ### Integrating yunIO in Alteryx
 
-yunIO is the connector that reads and writes data from and to SAP.
+yunIO is the connector, which reads and writes data from and to SAP.
 For more information on yunIO, see [Theobald Software: yunIO](https://theobald-software.com/en/yunio/).
 
 1. Open or create a new Alteryx workflow.
 2. Add a **Download** tool to your workflow.
-3. In the *Configuration* section of the **Download** tool activate the option **Use Data Connection Manager (DCM)** and click **[Set Up Connection]**. The Alteryx Data Connection Manager (DCM) opens.
+3. In the *Configuration* section of the **Download** tool, activate the option **Use Data Connection Manager (DCM)** and click **[Set Up Connection]**. The Alteryx Data Connection Manager (DCM) opens.
 ![yunio-download-tool1](/img/contents/yunio/yunio-download-tool1.png){:class="img-responsive"}
 4. Click **[New]** to create a new data source.
 5. Enter a name for the connection.<br>
@@ -47,11 +47,11 @@ For more information about the Alteryx **Download** tool, see [Alteryx Designer 
 
 ### Calling yunIO Services in Alteryx
 
-Follow the steps below to call yunIO services in Alteryx.<br>
+Follow the steps below to call yunIO services in Alteryx:<br>
 
 1. Define a [connection to your SAP system](https://help.theobald-software.com/en/yunio/sap-connection) in yunIO. 
 2. [Create a new service](https://help.theobald-software.com/en/yunio/getting-started#creating-a-service) in yunIO.
-This example uses a yunIO transaction service, that changes customer master data in SAP, see [Working with Transaction XD02](https://kb.theobald-software.com/yunio/transaction-xd02).<br>
+This example uses a yunIO transaction service that changes customer master data in SAP, see [Working with Transaction XD02](https://kb.theobald-software.com/yunio/transaction-xd02).<br>
 3. Open or create a new Alteryx workflow.<br>
 ![yunio-workflow](/img/contents/yunio/yunIO-workflow.png){:class="img-responsive"}
 4. Add an **Input Data** tool (1) that provides values for the input parameters of the yunIO service. Example:
@@ -72,10 +72,10 @@ This example uses a yunIO transaction service, that changes customer master data
 5. Add a **JSON Build** tool (2) to format the input data into a JSON format that can be processed by the yunIO service. Example:<br>
 ![yunio-json-format](/img/contents/yunio/yunio-json-format.png){:class="img-responsive"}
 6. Add a **Formula** tool (3) to add a new column *Service* to the result of the **JSON Build** tool. 
-The column contains the name of the service you want to call, e.g. `/Customer_Change_Alteryx`.<br>
+The column contains the name of the service you want to call e.g., `/Customer_Change_Alteryx`.<br>
 ![alteryx-formula](/img/contents/yunio/alteryx-formula.png){:class="img-responsive"}
 7. Add a **Download** tool (4) to your workflow and set up a connection to yunIO, see [Integrating yunIO in Alteryx](#integrating-yunio-in-alteryx). 
-8. Select the *Service* column that contains the name of the service as the input for the URL field. Make sure that the combination of the base URL and the service name represents a valid URL, e.g., `https://yunio.example.com:8175/services/Customer_Change_Alteryx`.<br>
+8. Select the *Service* column that contains the name of the service as the input for the URL field. Make sure that the combination of the base URL and the service name represents a valid URL e.g., `https://yunio.example.com:8175/services/Customer_Change_Alteryx`.<br>
 ![yunio-download-tool](/img/contents/yunio/yunio-download-tool.png){:class="img-responsive"}
 8. Add a **JSON Parse** tool (5) to parse the JSON results returned by the service. 
 9. Add a **Browse** tool (6) to view the parsed result message of the yunIO service. 
