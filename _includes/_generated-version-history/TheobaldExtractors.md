@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.46.0 [L]|2023-08-02|ODP|Usage of all available contexts is now allowed. This enables SLT support.|
 |1.45.2 [L]|2023-07-28|Query|Added support for runtime parameters|
 |1.45.1 [M]|2023-07-27|ODP|TS_SEQUENCE_NUMBER is now a 64 bit integer and supports extractions with more than 2 billion rows. Additionally, it can also be selected for generation in full extractions. |
 |1.45.0 [M]|2023-07-24|TableCDC|Added support for where conditions|
