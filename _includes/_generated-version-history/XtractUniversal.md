@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.26.1 [L]|2023-08-02|Destinations|Fix for rollback in Exasol destination not working properly when using transaction style OneTransaction.|
 |5.26.0 [L]|2023-08-01|Query|New Query Extractor (config conversion required)|
 |5.25.14 [L]|2023-07-27|Designer|Fixed a bug where the duration of extractions was displayed incorrectly when the extraction took longer than 24 hours|
 |5.25.13 [L]|2023-07-18|General|Added support for BW Cube selection values in Script Expressions|
