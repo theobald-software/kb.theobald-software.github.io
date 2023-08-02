@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.21.15 [L]|2023-08-02|Theobald.Server|Fixes for CORS handling. Fixes for error handling for errors during the HTTP authentication step.|
 |1.21.14 [M]|2023-08-02|General|Non-admin users can now set their own password|
 |1.21.13 [L]|2023-07-27|Designer|Consolidated duplicated code for deleting services/sources functionality (part of the big refactoring task)|
 |1.21.12 [L]|2023-07-27|Runtime|Transaction: Fixed a bug that caused the service execution to fail when the result contained non-ascii data|
