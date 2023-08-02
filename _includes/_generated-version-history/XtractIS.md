@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|[7.2.0 [L]](https://kb.theobald-software.com/release-notes/XtractIS-7.2.0.html)|2023-08-02|Hierarchy|New Hierarchy Extractor - POSSIBLE BREAKING CHANGES for Hierarchy extractions([Release note](https://kb.theobald-software.com/release-notes/XtractIS-7.2.0.html))|
 |7.1.6 [L]|2023-06-12|General|Fixed a bug that caused the connection manager to not be saved when multiple XTRACT connection managers exist|
 |7.1.5 [L]|2023-04-17|BAPI|Connection managers can now be changed using the tool editor GUI|
 |7.1.4 [L]|2023-03-31|Setup|Setup now checks if there are any running processes and offers option to abort setup.|
