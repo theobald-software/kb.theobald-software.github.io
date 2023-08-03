@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.13.3 [L]|2023-08-03|General|Filterboxes will now be cleared after disconnecting.|
 |5.13.2 [L]|2023-06-30|General|Added filterboxes in the designer for name, type, source and destination. Changed initial sorting order for dates, removed the old filter tool and implemented right-click option in the datagrid to add keywords to several selected extractions|
 |5.13.1 [L]|2023-06-22|Server|Fixed a bug where logging into the Designer with a valid AD-User would result in an authorization error.|
 |[5.13.0 [L]](https://kb.theobald-software.com/release-notes/BOARDConnector-5.13.0.html)|2023-04-27|Hierarchy|New Hierarchy Extractor - POSSIBLE BREAKING CHANGES for Hierarchy extractions([Release note](https://kb.theobald-software.com/release-notes/BOARDConnector-5.13.0.html))|
