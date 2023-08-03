@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.26.2 [L]|2023-08-03|General|Filterboxes will now be cleared after disconnecting.|
 |5.26.1 [L]|2023-08-02|Destinations|Fix for rollback in Exasol destination not working properly when using transaction style OneTransaction.|
 |5.26.0 [L]|2023-08-01|Query|New Query Extractor (config conversion required)|
 |5.25.14 [L]|2023-07-27|Designer|Fixed a bug where the duration of extractions was displayed incorrectly when the extraction took longer than 24 hours|
