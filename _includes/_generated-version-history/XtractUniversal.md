@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.26.3 [L]|2023-08-03|Hierarchy|Removed XML config converter code for Hierarchy in old XML file format.|
 |5.26.2 [L]|2023-08-03|General|Filterboxes will now be cleared after disconnecting.|
 |5.26.1 [L]|2023-08-02|Destinations|Fix for rollback in Exasol destination not working properly when using transaction style OneTransaction.|
 |5.26.0 [L]|2023-08-01|Query|New Query Extractor (config conversion required)|
