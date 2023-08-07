@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.13.5 [M]|2023-08-07|DeltaQ|Fixed conversion errors for some data types|
 |5.13.4 [L]|2023-08-03|Hierarchy|Removed XML config converter code for Hierarchy in old XML file format.|
 |5.13.3 [L]|2023-08-03|General|Filterboxes will now be cleared after disconnecting.|
 |5.13.2 [L]|2023-06-30|General|Added filterboxes in the designer for name, type, source and destination. Changed initial sorting order for dates, removed the old filter tool and implemented right-click option in the datagrid to add keywords to several selected extractions|
