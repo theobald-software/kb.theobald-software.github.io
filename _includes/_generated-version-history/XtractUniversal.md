@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.26.4 [L]|2023-08-07|Destinations|Hana destination: upgraded data provider to version 2.17.22.0 and added support for BIGINT.|
 |5.26.3 [L]|2023-08-03|Hierarchy|Removed XML config converter code for Hierarchy in old XML file format.|
 |5.26.2 [L]|2023-08-03|General|Filterboxes will now be cleared after disconnecting.|
 |5.26.1 [L]|2023-08-02|Destinations|Fix for rollback in Exasol destination not working properly when using transaction style OneTransaction.|
