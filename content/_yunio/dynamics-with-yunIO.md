@@ -16,6 +16,8 @@ This article leads you through all necessary steps to set up the following proce
 - If both conditions are true, a yunIO service that writes customer data from Dynamics 365 to SAP is executed.
 - When the customer is created in SAP, the new SAP customer number is written back to Dynamics 365.
 
+
+
 ### Setup in yunIO
 
 yunIO is the connector that reads and writes data from and to SAP.
@@ -62,6 +64,8 @@ This example uses the integration type *Function Module* for the service.
 your comment goes here
 
 ### Setup in Dynamics 365
+
+Business Central 2022 wave 2 (BC21) new features: Auto-save as you work
 
 Customize your Salesforce account to provide SAP-related fields:
 
