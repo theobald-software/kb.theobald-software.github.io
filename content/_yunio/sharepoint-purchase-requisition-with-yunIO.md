@@ -75,8 +75,8 @@ Follow the steps below to set up a yunIO service that creates purchase requisiti
 8. Activate the advanced setting **Commits Transaction**. If this option is active, the function module “BAPI_TRANSACTION_COMMIT” is called after processing the selected Function Module / BAPI. 
 BAPI_PR_CREATE require this commit function to successfully update data in the database.<br>
 ![SAPPurchaseRequisitionCreate-export](/img/contents/yunio/SAPPurchaseRequisitionCreate-export.png){:class="img-responsive"}
-8. Download the service definition (![download-file](/img/contents/yunio/download.png) icon).<br>
-![yunio-Services-Function-Download](/img/contents/yunio/yunio-run-services-function-download.png){:class="img-responsive" }
+8. Click ![download-file](/img/contents/yunio/download.png) to download the service definition. <br>
+The service definition can be imported to Power Automate to create a custom connector for the service.<br>
 
 {: .box-tip }
 **Tip:** It is recommended to test a yunIO service in a REST client before integrating it with Power Automate, see [Running a yunIO Service in Swagger Inspector](https://kb.theobald-software.com/yunio/running-a-yunio-service-in-swagger-inspector) or [Running a yunIO Service in Postman](https://kb.theobald-software.com/yunio/running-a-yunio-service-in-postman). 
