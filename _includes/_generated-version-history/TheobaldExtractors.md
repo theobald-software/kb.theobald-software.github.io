@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.46.4 [L]|2023-08-09|General|Fixed column encryption buffer writing validation|
 |1.46.3 [L]|2023-08-03|General|Added clear option for grouped filter boxes.|
 |1.46.2 [L]|2023-08-02|Hierarchy|Improved behaviour around DateTo property of Hierarchy extractor. Empty values are now considered invalid instead of falling back to SAP max date.|
 |1.46.1 [L]|2023-08-02|BAPI|Function for BapiExtractor which communicates when data was received from the SAP system.|
