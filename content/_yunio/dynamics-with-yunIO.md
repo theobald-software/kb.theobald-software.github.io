@@ -15,7 +15,7 @@ This article leads you through all necessary steps to set up the following proce
 - When a customer account in Dynamics 365 Business Central is modified, a Power Automate workflow is triggered.
 - The workflow checks if the customer exists in SAP.
 - If the customer does not exist, a yunIO service writes the customer data from Dynamics 365 Business Central to SAP.
-- When the customer is created in SAP, the new SAP customer number is written back to Dynamics 365 Business Central.
+- If the customer is successfully created in SAP, the new SAP customer number is written back to Dynamics 365 Business Central.
 
 
 ### Setup in yunIO
@@ -31,8 +31,7 @@ This example uses the integration type *Function Module* for the service.
 4. Set all import parameters you want to transfer from Dynamics 365 Business Central to SAP to *Supplied by Caller* e.g., NAME, CITY, POSTL_COD1, STREET, etc.<br>
 5. Select CUSTOMERNO for export. This Export parameter contains the newly created SAP customer number that is written back to Dynamics 365 Business Central.<br>
 ![yunio-Services-Function-Download](/img/contents\yunio\yunio-bapi-createcustomer.png){:class="img-responsive"}
-6. Click ![download-file](/img/contents/yunio/download.png) to download the service definition. <br>
-The service definition can be imported to Power Automate to create a custom connector for the service.<br>
+6. Click ![download-file](/img/contents/yunio/download.png) to download the service definition. The service definition can be imported to Power Automate.<br>
 ![yunio-Services-Function-Download](/img/contents/yunio/yunio-run-services-function-download.png){:class="img-responsive" }
 
 {: .box-tip }
@@ -50,32 +49,37 @@ For more information on how to customize table fields via custom development, se
 {: .box-note }
 **Note:** Creating *Sales Org*, *Distribution Channel* and *Division* in Dynamics 365 Business Central is optional as they can also be set as static values in Power Automate.
 
-![sharepoint-purchase-requisition](/img/contents/yunio/sharepoint-purchase-requisition0.png){:class="img-responsive" }
+![dynamics-custom-field](/img/contents/yunio/dynamics-custom-field.png){:class="img-responsive" }
 
 
 ### Setup in Power Automate
 
-1. Integrate the yunIO service created in [Setup in yunIO](#setup-in-yunio) as a Custom Connector in Power Automate, see [Integrating a yunIO Service with Power Automate](https://kb.theobald-software.com/yunio/integrating-a-yunio-service-with-power-automate#configuring-a-yunio-custom-connector-in-power-automate).
+Follow the steps below to synchronize customer data in Dynamics 356 Business Central with customer data in SAP:
+
+1. Integrate the yunIO service created in [Setup in yunIO](#setup-in-yunio) as a custom connector in Power Automate, see [Integrating a yunIO Service with Power Automate](https://kb.theobald-software.com/yunio/integrating-a-yunio-service-with-power-automate#configuring-a-yunio-custom-connector-in-power-automate).
 2. Create a new workflow that is triggered when a customer data is modified in the Dynamics 365 Business Central table *customers*.
-3. Use a *RowID* to keep track of the modified record.
-4.. Check if the customer already exists in SAP...
-5. ..
-6. Add the yunIO connector created in step 1 to the workflow and map the customer data from Dynamics 365 Business Central to the input parameters of yunIO.<br>
-![sharepoint-purchase-requisition3](/img/contents/yunio/sharepoint-purchase-requisition3.png){:class="img-responsive"}
-7. Add a Business Central **Update Record** tool to write the SAP customer number returned by the yunIO custom connector back to Business Central.<br>
-![sharepoint-purchase-requisition2](/img/contents/yunio/sharepoint-purchase-requisition2.png){:class="img-responsive"}
+3. Use a *RowID* to keep track of the modified record.<br>
+![dynamics-get-data](/img/contents/yunio/dynamics-get-data.png){:class="img-responsive"}
+4. Check if the custom field "SAP Customer Number" created in [Setup in Dynamics 365](#setup-in-dynamics-365) is empty. <br>
+If the customer does not have an SAP customer number, the customer is created in SAP.
+5. Add the yunIO connector created in step 1 to the workflow and map the customer data from Dynamics 365 Business Central to the input parameters of the yunIO custom connector.<br>
+![dynamics](/img/contents/yunio/dynamics-create-customer.png){:class="img-responsive"}
+6. Check if the SAP customer was created using the yunIO return field TYPE (5).<br>
+If TYPE does not equal ‘E’ (error), the SAP customer number is written back to Dynamics 365 Business Central.
+7. Add a Business Central **Update Record** tool to write the SAP customer number returned by the yunIO custom connector back to Business Central.
 8. Use the *RowID* of the workflow trigger to pass the SAP customer number to the modified record in Dynamics 365 Business Central.<br>
-screenshot
-9. Optional: Send notifications when a purchase requisition is created. 
-8. Turn on the workflow.
+![dynamics-write-back](/img/contents/yunio/dynamics-write-back.png){:class="img-responsive"}
+9. Optional: if the customer already has an SAP customer number, use the SAP customer number to call a yunIO service that changes SAP customer data to synchronize the modified data.
+10. Turn on the workflow.<br>
+![dynamics-workflow](/img/contents/yunio/dynamics-workflow.png){:class="img-responsive"} 
 
 {: .box-note }
 **Note:** As of Business Central 2022 wave 2 (BC21) any changes in Dynamics 365 Business Central are saved automatically.
-To avoid triggering the Power Automate workflow multiple times due to auto-save actions, add a **Delay** tool to the workflow or schedule the SAP synchronization, e.g., once a day.
+To avoid triggering the Power Automate workflow multiple times due to auto-save actions, add a **Delay** tool after the workflow trigger or schedule the SAP synchronization, e.g., once a day.
 
 ### Triggering the Process
 
 1. Open Dynamics 365 Business Central and add a new customer.
 2. The Power Automate workflow runs and creates the customer in SAP.
-3. Check if the SAP customer number is written back to Dynamics 365 Business Central.
-![sharepoint-purchase-requisition](/img/contents/yunio/sharepoint-purchase-requisition.png){:class="img-responsive" }
+3. Check if the SAP customer number is written back to Dynamics 365 Business Central.<br>
+![dynamics-test-result](/img/contents/yunio/dynamics-test-result.png){:class="img-responsive" }
