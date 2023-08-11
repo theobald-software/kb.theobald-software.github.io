@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.23.9 [L]|2023-08-11|WPF|Added NumericTextBox|
 |2.23.8 [L]|2023-08-09|General|Fixed byte buffer manager empty string writing|
 |2.23.7 [L]|2023-08-02|General|DateTime to/from string conversion helpers. Function for opening a file with timeout.|
 |2.23.6 [L]|2023-06-06|General|Added some ergonomics for arrays and DateTime formats. Added JSON serialization for various classes.|
