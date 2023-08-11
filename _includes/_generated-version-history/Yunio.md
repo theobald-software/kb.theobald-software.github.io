@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.22.0 [M]|2023-08-11|Designer|Run dialog for testing the services.|
 |1.21.16 [L]|2023-08-03|Runtime|Fixed an error when wrapping up transaction extraction execution.|
 |1.21.15 [L]|2023-08-02|Theobald.Server|Fixes for CORS handling. Fixes for error handling for errors during the HTTP authentication step.|
 |1.21.14 [M]|2023-08-02|General|Non-admin users can now set their own password|
