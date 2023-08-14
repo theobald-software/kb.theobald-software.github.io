@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|3.9.2 [L]|2023-08-14|General|Fixed a bug where parameters supplied as JSON to table extractions would be ignored. Reworked the license check of the new runtime.|
 |3.9.1 [L]|2023-08-03|General|Fixed an error when wrapping up transaction extraction execution.|
 |[3.9.0 [L]](https://kb.theobald-software.com/release-notes/TheobaldServer-3.9.0.html)|2023-08-02|General|Fixes and refactoring for new runtime. Fixes for CORS and error handling in HTTP server.([Release note](https://kb.theobald-software.com/release-notes/TheobaldServer-3.9.0.html))|
 |3.8.8 [M]|2023-08-02|General|Non-admin users can now set their own password|
