@@ -1,4 +1,3 @@
-
 ---
 layout: page
 title: LIKE operand in WHERE-Clauses

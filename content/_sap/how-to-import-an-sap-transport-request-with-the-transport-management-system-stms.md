@@ -118,3 +118,27 @@ The checkmark ![STMSIcon04](/img/contents/STMSIcon04.png){:class="img-responsive
 ![STMS11](/img/contents/STMS11.png){:class="img-responsive"}
 your comment goes here
 -->
+
+------
+
+#### Related Links
+
+Find more information on Theobald Software transport requests in the Online Help.
+
+Xtract Universal:
+- [Custom function module for Table extractions](https://help.theobald-software.com/en/xtract-universal/sap-customizing/custom-function-module-for-table-extraction)
+- [Custom function module for TableCDC extractions](https://help.theobald-software.com/en/xtract-universal/sap-customizing/custom-function-module-for-tablecdc)
+- [Custom function module for Report extractions](https://help.theobald-software.com/en/xtract-universal/sap-customizing/install-report-custom-function-module)
+
+Xtract IS:
+- [Custom function module for Table extractions](https://help.theobald-software.com/en/xtract-is/sap-customizing/custom-function-module-for-table-extraction)
+- [Custom function module for Report extractions](https://help.theobald-software.com/en/xtract-is/sap-customizing/install-report-custom-function-module)
+
+Xtract for Alterx:
+- [Custom function module for Table extractions](https://help.theobald-software.com/en/xtract-for-alteryx/sap-customizing/custom-function-module-for-table-extraction)
+- [Custom function module for Report extractions](https://help.theobald-software.com/en/xtract-for-alteryx/sap-customizing/install-report-custom-function-module)
+
+Board Connector:
+- [Custom function module for Table extractions](https://help.theobald-software.com/en/board-connector/sap-customizing/custom-function-module-for-table-extraction)
+- [Custom function module for TableCDC extractions](https://help.theobald-software.com/en/board-connector/sap-customizing/custom-function-module-for-tablecdc)
+- [Custom function module for Report extractions](https://help.theobald-software.com/en/board-connector/sap-customizing/install-report-custom-function-module)
