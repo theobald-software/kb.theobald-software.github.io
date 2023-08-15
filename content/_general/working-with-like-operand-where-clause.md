@@ -29,8 +29,9 @@ The pattern is case-sensitive. Trailing blanks in operands are ignored. This als
   
 ![like_](/img/contents/like_operator.png){:class="img-responsive"}
 
-
 ![like_%](/img/contents/like_percent_operator.png){:class="img-responsive"}
+
+![like](/img/contents/like_operand.png){:class="img-responsive"}
 
 
 ****
