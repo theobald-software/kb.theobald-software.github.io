@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.13.6 [L]|2023-08-16|General|Fixed a bug where validation of a valid license file might fail.|
 |5.13.5 [M]|2023-08-07|DeltaQ|Fixed conversion errors for some data types|
 |5.13.4 [L]|2023-08-03|Hierarchy|Removed XML config converter code for Hierarchy in old XML file format.|
 |5.13.3 [L]|2023-08-03|General|Filterboxes will now be cleared after disconnecting.|
