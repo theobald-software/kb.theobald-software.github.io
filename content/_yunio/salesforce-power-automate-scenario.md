@@ -31,7 +31,7 @@ The depicted example uses the integration type *Function Module* for the service
 4. Set all import parameters you want to transfer from Salesforce to SAP to *Supplied by Caller* e.g., NAME, CITY, POSTL_COD1, STREET, etc.<br>
 5. Select CUSTOMERNO for export. This Export parameter contains the newly created SAP customer number that is written back to Salesforce.<br>
 ![yunio-Services-Function-Download](/img/contents\yunio\yunio-bapi-createcustomer.png){:class="img-responsive"}
-6. Click ![download-file](/img/contents/yunio/download.png) to download the service definition.<br>
+6. Click ![download-file](/img/contents/yunio/download.png) to download the service definition. The service definition can be imported to Power Automate.<br>
 ![yunio-Services-Function-Download](/img/contents/yunio/yunio-run-services-function-download.png){:class="img-responsive" }
 
 {: .box-tip }

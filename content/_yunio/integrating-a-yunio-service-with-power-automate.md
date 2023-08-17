@@ -59,18 +59,14 @@ For more information on how to test yunIO services in Swagger Inspector, refer t
 
 ### Testing the Service
 
-The custom connector can be tested in the **Test** tab. <br>
-- Create a connection with **+ New connection**. 
-- Enter the credentials of the SAP user you have defined in the yunIO connection settings. If you select to connect via an on-premises gateway in the *General* tab, select your gateway instance.
-- Confirm the settings with **Create connection**.   
-
+1. Navigate to the **Test** tab of the custom connector. <br>
+2. Create a connection with **+ New connection**. 
+3. Enter the credentials of the SAP user you have defined in the yunIO connection settings. If you select to connect via an on-premises gateway in the *General* tab, select your gateway instance.
+4. Confirm the settings with **Create connection**.<br>
 ![Power-Automate-Custom-Connector-Test-Connection.png](/img/contents/yunio/power-automate-custom-connector-test-connection.png){:class="img-responsive"} 
-
-To test run the service 
-- **(1)** enter valid import values for the parameters you defined as *Supplied by caller* in the yunIO service settings. 
-- **(2)** click **Test operation**. 
-- **(3)** the SAP response is displayed in the Request Body. 
-
+5. Enter valid import values for the parameters you defined as *Supplied by caller* in the yunIO service settings (1). 
+6. Click **Test operation** (2). 
+7. Check the SAP response displayed in the request body of the custom connector (3). <bR>
 ![Power-Automate-Custom-Connector-Test-Operation.png](/img/contents/yunio/power-automate-custom-connector-test-operation.png){:class="img-responsive"} 
 
 {: .box-tip }
@@ -79,9 +75,9 @@ To test run the service
 
 ### Using the Service in a Power Automate Flow
 After a connector is successfully tested, it can be used in a Flow. 
-- Add a new action to the Flow and search for the name of the custom connector. <br>
+1. Add a new action to the Flow and search for the name of the custom connector. <br>
 ![Power-Automate-Custom-Connector-Flow-Action.png](/img/contents/yunio/power-automate-custom-connector-flow-action.png){:class="img-responsive"} 
-- Once the connector is added, the input fields can be parameterized. <br>
+2. Enter values in the input fields of the custom connector. <br>
 ![Power-Automate-Custom-Connector-Flow.png](/img/contents/yunio/power-automate-custom-connector-flow.png){:class="img-responsive"} 
 
 ******
