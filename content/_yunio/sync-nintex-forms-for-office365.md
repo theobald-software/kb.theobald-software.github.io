@@ -31,6 +31,8 @@ The depicted example uses the integration type *SAP Table or View* for the servi
 3. [Look up](https://help.theobald-software.com/en/yunio/bapis-and-function-modules#look-up-a-function-module--bapi) the table MAKT that contains material descriptions. 
 4. Select the columns MATNR, SPRAS and MAKTX for the output of the service.<br>
 ![nintex-office-design](/img/contents/yunio/nintex-office-yunIO.png){:class="img-responsive" }
+5. Click ![download-file](/img/contents/yunio/download.png) to download the service definition.<br>
+![yunio-Services-Function-Download](/img/contents/yunio/yunio-run-services-function-download.png){:class="img-responsive" }
 
 ### Setup in SharePoint
 
