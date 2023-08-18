@@ -15,7 +15,7 @@ For more information on Nintex form for Office 365, see [Nintex Documentation: O
 ### About 
 
 This article leads you through all necessary steps to set up the following process in Nintex for Office 365:
-- when an SAP material number is entered in an input field, the possible hits are displayed in a dropdown list.
+- When an SAP material number is entered in an input field, the possible hits are displayed in a dropdown list.
 - If a material is selected in the drop-down list, the material text is displayed in a text field.
 - When the input is confirmed, the selected material is written to SharePoint.
 
@@ -49,32 +49,32 @@ Follow the steps below to set up the Nintex form for the SharePoint custom list 
 1. Create a new Nintex form:<br>
 ![nintex-office-design](/img/contents/yunio/nintex-office-design.png){:class="img-responsive" }
 2. Define the following text fields:
-- the field "Material" of type *Single Line Textbox* is the input field that contains the material number. 
-- the field "Suggested Materials" of type *Choice* displays the possible hits for the material number in a dropdown list. 
-- the third field "Selected Material" of type *Single Line Textbox* displays the material text of the selected material.
-3. Open the advanced settings of the field "Material" and set **Store Client ID in JavaScript Variable** to *Yes*.
-4. In the field **Client ID JavaScript variable name** enter the variable name "inputMaterial".<br>
+- "Material" of type *Single Line Textbox* is the input field that contains the material number. 
+- "Suggested Materials" of type *Choice* displays the possible hits for the material number in a dropdown list. 
+- "Selected Material" of type *Single Line Textbox* displays the material text of the selected material.
+3. Open the advanced settings of the field "Material" and set *Store Client ID in JavaScript Variable* to *Yes*.
+4. In the field *Client ID JavaScript variable name* enter the variable name "inputMaterial".<br>
 ![nintex-office-material-number](/img/contents/yunio/nintex-office-material-number.png){:class="img-responsive" }
 5. Click **[Save]**.
-6. Open the general settings of the field "Suggested Materials" and set **Display format** to *Drop down list*.
-7. In the field **Choices** enter "no matches". This input will be overwritten via JavaScript.
-8. Open the advanced settings of the field "Suggested Materials" and set **Store Client ID in JavaScript Variable** to *Yes*.
-9. In the field **Client ID JavaScript variable name** enter the variable name "selectMaterial".<br>
+6. Open the general settings of the field "Suggested Materials" and set *Display format* to *Drop down list*.
+7. In the field *Choices* enter "no matches". This input will be overwritten via JavaScript.
+8. Open the advanced settings of the field "Suggested Materials" and set *Store Client ID in JavaScript Variable* to *Yes*.
+9. In the field *Client ID JavaScript variable name* enter the variable name "selectMaterial".<br>
 ![nintex-office-dropdown](/img/contents/yunio/nintex-office-dropdown.png){:class="img-responsive" }
 10. Click **[Save]**.
-11. Open the general settings of the field "Selected Material" and set **Connected to** to the SharePoint column *Material*.
-12. Open the advanced settings of the field "Selected Material" and set **Store Client ID in JavaScript Variable** to *Yes*.
-13. In the field **Client ID JavaScript variable name** enter the variable name "outputMaterialId".<br>
+11. Open the general settings of the field "Selected Material" and set *Connected to* to the SharePoint column *Material*.
+12. Open the advanced settings of the field "Selected Material" and set *Store Client ID in JavaScript Variable* to *Yes*.
+13. In the field *Client ID JavaScript variable name* enter the variable name "outputMaterialId".<br>
 ![nintex-office-output](/img/contents/yunio/nintex-office-output.png){:class="img-responsive" }
 14. Add a **[Save]** and **[Cancel]** button to the form.
 
 ### Integrating JavaScript Code in Nintex
 
 The [JavaScript library for REST services](https://github.com/theobald-software/static.theobald-software.github.io/tree/main/theobald.yunio.client.js) by Theobald Software enables the use of yunIO services via JavaScript.<br>
-The depicted example uses the following JavaScript code to:
-- import the JavaScript library for REST services.
-- connect to yunIO.
-- run the service "MAKTService" that reads the material number and the material long text from the SAP table MAKT.
+The depicted example uses the following JavaScript code for the following:
+- To import the JavaScript library for REST services.
+- To connect to yunIO.
+- To run the service "MAKTService" that reads the material number and the material long text from the SAP table MAKT.
 
 ```java
 document.addEventListener("DOMContentLoaded", async () => {
