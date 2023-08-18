@@ -36,7 +36,6 @@ This example uses the integration type *Function Module* for the service.
 
 {: .box-tip }
 **Tip:** It is recommended to test a yunIO service in a REST client before integrating it with Power Automate, see [Running a yunIO Service in Swagger Inspector](https://kb.theobald-software.com/yunio/running-a-yunio-service-in-swagger-inspector) or [Running a yunIO Service in Postman](https://kb.theobald-software.com/yunio/running-a-yunio-service-in-postman). 
-your comment goes here
 
 ### Setup in Dynamics 365
 
@@ -83,3 +82,9 @@ To avoid triggering the Power Automate workflow multiple times due to auto-save 
 2. The Power Automate workflow runs and creates the customer in SAP.
 3. Check if the SAP customer number is written back to Dynamics 365 Business Central.<br>
 ![dynamics-test-result](/img/contents/yunio/dynamics-test-result.png){:class="img-responsive" }
+
+***
+### Related Links
+- [AL Development Environment](https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-reference-overview) 
+- [Microsoft Apps](https://appsource.microsoft.com/en-us/marketplace/apps) 
+- [Microsoft Documentation: Development - Table Object](https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-table-object)
