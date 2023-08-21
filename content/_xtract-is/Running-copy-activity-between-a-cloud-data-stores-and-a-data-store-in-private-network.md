@@ -19,6 +19,9 @@ The self-hosted integration runtime only makes outbound HTTP-based connections t
 The SSIS package was created in advance on a development environment (Visual Studio) and the execution was tested successfully. Subsequently, the SSIS project was published to an SSIS in ADF.
 The following prerequisites are mostly based on the official Microsoft documentation for using Azure integration runtime (IR) as well as Self-Hosted Integration Runtime (SHIR). 
 
+{: .box-note }
+**Note:** Finally, you download and install the latest version of self-hosted IR, as well as the additional drivers and runtime, on your on-premises machine or Azure virtual machine (VM).
+
 1. The Azure Data Factory IR has been configured and started with the necessary files to run the [Xtract IS for Azure extension in ADF](https://help.theobald-software.com/en/xtract-is/for-azure/installation).
 2. Download and install the SHIR on the local Windows server (on-prem) -[Microsoft Integration Runtime](https://www.microsoft.com/en-us/download/details.aspx?id=39717)
 3. Register the Integration Runtime (Self-hosted) - [Configure a self-hosted IR via UI](https://learn.microsoft.com/en-US/azure/data-factory/create-self-hosted-integration-runtime?tabs=data-factory#configure-a-self-hosted-ir-via-ui)
@@ -29,7 +32,7 @@ The following prerequisites are mostly based on the official Microsoft documenta
 
 
 {: .box-note }
-**Note:** Finally, you download and install the latest version of self-hosted IR, as well as the additional drivers and runtime, on your on-premises machine or Azure virtual machine (VM).
+**Note:** The Integration Runtime (Self-hosted) node has encountered an error during execution, error logs are provided using the Windows Event Viewer.
 
 
 #### Related Links:
