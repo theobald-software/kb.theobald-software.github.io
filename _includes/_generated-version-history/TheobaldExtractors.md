@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.46.6 [L]|2023-08-21|TableCDC|The maximum allowed value for the log table size limit has been raised to 200.000 entries.|
 |1.46.5 [M]|2023-08-15|TableCDC|Fixed a bug that caused log table creation to fail when ".INCLUDE" structures were part of primary keys in source table.|
 |1.46.4 [L]|2023-08-09|General|Fixed column encryption buffer writing validation|
 |1.46.3 [L]|2023-08-03|General|Added clear option for grouped filter boxes.|
