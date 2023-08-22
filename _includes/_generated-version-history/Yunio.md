@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.22.3 [L]|2023-08-17|Designer|Initial implementations for upcoming SNC support.|
 |1.22.2 [L]|2023-08-14|Runtime|Fixed a bug where parameters supplied as JSON to table extractions would be ignored.|
 |1.22.1 [M]|2023-08-12|Runtime|Fixed: missing dependency|
 |1.22.0 [M]|2023-08-11|Designer|Run dialog for testing the services.|
