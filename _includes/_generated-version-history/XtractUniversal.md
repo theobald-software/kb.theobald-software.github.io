@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.27.0 [L]|2023-08-22|DeltaQ|Added the new DeltaQ component|
 |5.26.6 [L]|2023-08-08|Destinations|Fixed Snowflake connection test for non-default schemas|
 |5.26.5 [M]|2023-08-07|DeltaQ|Fixed conversion errors for some data types|
 |5.26.4 [L]|2023-08-07|Destinations|Hana destination: upgraded data provider to version 2.17.22.0 and added support for BIGINT.|
