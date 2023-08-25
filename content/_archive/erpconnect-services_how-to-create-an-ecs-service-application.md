@@ -1,6 +1,6 @@
 ---
 layout: page
-title: How to create an ECS Service Application
+title: ERPConnect-Services - How to create an ECS Service Application
 description: How to create an ECS Service Application
 permalink: /:collection/:path
 weight: 1

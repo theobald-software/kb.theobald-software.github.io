@@ -1,6 +1,6 @@
 ---
 layout: page
-title: The Syntax of XtractQL and Examples
+title: ERPConnect-Services - The Syntax of XtractQL and Examples
 description: The Syntax of XtractQL and Examples
 permalink: /:collection/:path
 weight: 2

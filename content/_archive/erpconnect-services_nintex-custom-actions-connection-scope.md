@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Connection Scope for Nintex Workflow Custom Actions
+title: ERPConnect-Services - Connection Scope for Nintex Workflow Custom Actions
 description: Connection Scope for Nintex Workflow Custom Actions
 permalink: /:collection/:path
 weight: 1
