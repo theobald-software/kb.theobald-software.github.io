@@ -101,10 +101,6 @@ collections:
     output: true
     name: 'ERPConnect - Samples'
     weight: 9
-  erpconnect-services:
-    output: true
-    name: 'ERPConnect Services'
-    weight: 10
   version-history:
     output: true
     name: 'Version History'
