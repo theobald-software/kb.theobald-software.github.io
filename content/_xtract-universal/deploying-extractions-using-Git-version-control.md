@@ -74,7 +74,7 @@ by reverting them in Gitand is agnostic towards the use of containers (such as D
 #### Releated Link
 
 - [GitForWindows Download](https://gitforwindows.org/)
-- [Manual Migration to a Different Machine](https://help.theobald-software.com/en/xtract-universal/advanced-techniques/backup-and-migration#migration-to-a-different-machine)
+- [Manual Migration to a Different Machine](https://help.theobald-software.com/en/xtract-universal/introduction/backup-and-migration#migration-to-a-different-machine)
 - [Getting Started - About Version Control](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control)
 - [Git Basics - Getting a Git Repository](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository)
 - [Git Branching - Branches in a Nutshell](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell)
