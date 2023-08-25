@@ -56,7 +56,7 @@ For information on troubleshooting and error messages, refer to our <a href="htt
 
 {% assign collections = site.collections | sort: 'weight' %}
         {% for collection in collections %}
-            {% unless collection.label == "posts" %}
+            {% unless collection.label == "archive" or collection.label == "posts"%}
                 <div class="col-md-6 col-sm-6">
                     <div class="double-listing {% cycle 'double-listing-uneven', 'double-listing-even' %}">
                         {% assign collection_doc = collection.docs | where_exp:"doc", "doc.relative_path contains '/index'" %}
