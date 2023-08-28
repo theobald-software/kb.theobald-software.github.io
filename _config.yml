@@ -65,13 +65,13 @@ content:
 ##########  requires more than just adding a language here.
 collections_dir: content
 collections:
-  general:
-    output: true
-    name: 'General'
-    weight: 1
   sap:
     output: true
     name: 'SAP'
+    weight: 1
+  sap-connection:
+    output: true
+    name: 'Security (SNC, SSO, etc.)'
     weight: 2
   xtract-is:
     output: true
@@ -89,10 +89,6 @@ collections:
     output: true
     name: 'yunIO'
     weight: 6
-  board-connector:
-    output: true
-    name: 'BOARD Connector'
-    weight: 7
   erpconnect-general:
     output: true
     name: 'ERPConnect - General'
@@ -121,18 +117,18 @@ collections:
     output: true
     name: 'ODP Extractions'
     weight: 14
-  ohs:
-    output: true
-    name: 'OHS Extractions'
-    weight: 15
-  hierarchy:
-    output: true
-    name: 'Hierarchy Extractions'
-    weight: 16
-  queries:
-    output: true
-    name: 'Query Extractions'
-    weight: 17
+#  ohs:
+#    output: true
+#    name: 'OHS Extractions'
+#    weight: 15
+#  hierarchy:
+#    output: true
+#    name: 'Hierarchy Extractions'
+#    weight: 16
+#  queries:
+#    output: true
+#    name: 'Query Extractions'
+#    weight: 17
   archive:
     output: true
     name: 'Archive'

@@ -1,18 +1,21 @@
 ---
 layout: page
-title: Operating Xtract Universal with Load Balancing
-description: Operating Xtract Universal with a Load-Balancing
+title: Load Balancing
+description: Load-Balancing
 permalink: /:collection/:path
 weight: 105
 ---
 
-The following article shows how to operate Xtract Universal with load balancing.<br>
+The following article shows how to operate Xtract products with load balancing.<br>
 In this context, load balancing means to distribute the network traffic across multiple Windows servers to avoid server overloads. 
+
+{:.box-note}
+**Note:** The following article uses Xtract Universal (XU) as an example for using Load Balancing. The same process applies to other Xtract products, e.g., Xtract IS, Xtract for Alteryx and Board Connector.
 
 ### About Load Balancing
 
 In today's highly interconnected world, a load balancer is a crucial tool for managing traffic effectively. 
-When distributing network traffic caused by Xtract Universal it is necessary to use a load balancer between different Windows servers that run Xtract Universal.
+When distributing network traffic caused by Xtract Universal, it is necessary to use a load balancer between different Windows servers that run the Xtract Universal.
 
 Typical use cases for load balancing include:
 - Improved Performance: By distributing network traffic across multiple Xtract Universal servers, a load balancer can significantly improve the performance of your network. 

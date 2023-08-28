@@ -1,6 +1,6 @@
 ---
 layout: section-page
-title: SAP
+title: SAP - General
 description: SAP
 permalink: /:collection
 search-ignore: true

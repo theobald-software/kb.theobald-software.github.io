@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Pentaho Integration via HTTP
+title: Xtract Universal - Pentaho Integration via HTTP
 description: Pentaho Integration via HTTP
 permalink: /:collection/:path
 weight: 111

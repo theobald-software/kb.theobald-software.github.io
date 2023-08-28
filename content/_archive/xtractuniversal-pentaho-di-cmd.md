@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Pentaho Integration via the Command Line
+title: Xtract Universal - Pentaho Integration via the Command Line
 description: Pentaho Integration via the Command Line
 permalink: /:collection/:path
 weight: 110
