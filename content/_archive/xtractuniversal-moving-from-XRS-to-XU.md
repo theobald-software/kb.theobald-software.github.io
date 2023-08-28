@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Migrating from Xtract RS to Xtract Universal (with SSRS destination)
+title: Xtract Universal - Migrating from Xtract RS to Xtract Universal
 description: Migrating from Xtract RS to Xtract Universal (with SSRS destination)
 permalink: /:collection/:path
 weight: 105

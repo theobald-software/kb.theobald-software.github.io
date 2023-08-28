@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Talend Integration via HTTP
+title: Xtract Universal - Talend Integration via HTTP
 description: Talend Integration HTTP
 permalink: /:collection/:path
 weight: 160

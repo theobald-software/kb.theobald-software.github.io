@@ -101,14 +101,46 @@ collections:
     output: true
     name: 'ERPConnect - Samples'
     weight: 9
+  bapis:
+    output: true
+    name: 'BAPI'
+    weight: 10
+  tables:
+    output: true
+    name: 'Table Extractions'
+    weight: 11
+  reports:
+    output: true
+    name: 'Report Extractions'
+    weight: 12
+  cubes:
+    output: true
+    name: 'BWCube Extractions'
+    weight: 13
+  odp:
+    output: true
+    name: 'ODP Extractions'
+    weight: 14
+  ohs:
+    output: true
+    name: 'OHS Extractions'
+    weight: 15
+  hierarchy:
+    output: true
+    name: 'Hierarchy Extractions'
+    weight: 16
+  queries:
+    output: true
+    name: 'Query Extractions'
+    weight: 17
   archive:
     output: true
     name: 'Archive'
-    weight: 10
+    weight: 18
   version-history:
     output: true
     name: 'Version History'
-    weight: 11
+    weight: 19
   posts:
     output: true
 
