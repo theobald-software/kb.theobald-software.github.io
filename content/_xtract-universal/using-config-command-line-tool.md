@@ -74,7 +74,7 @@ The xu-config.exe tool only supports SAP connections with plain authentication.
 3. Use the following command to select the *xu-config.exe* command line tool from the Xtract Universal installation directory and to create a new Table extraction: <br>
 `xu-config.exe --extraction <source> <destination> --table <table>`.
 4. Replace the parameters in `< >`with actual values (3). 
-5. Enter a [defined SAP Connection, Destination](https://help.theobald-software.com/en/xtract-universal/inroduction/backup-and-migration#configuration-files) and an SAP Table object for the parameters \<source\>, \<destination\> and \<table\>. 
+5. Enter a [defined SAP Connection, Destination](https://help.theobald-software.com/en/xtract-universal/introduction/backup-and-migration#configuration-files) and an SAP Table object for the parameters \<source\>, \<destination\> and \<table\>. 
 The names of the parameters are not case sensitive. <br>
 ![administrator-command-prompt-xu-config](/img/contents/administrator-command-prompt-xu-config.png){:class="img-responsive"}
 6. Press **[Enter]** to run the command. 
