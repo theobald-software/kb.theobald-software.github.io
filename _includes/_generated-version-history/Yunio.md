@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.23.2 [L]|2023-08-29|Designer|Designer run dialog minor refactoring.|
 |1.23.1 [M]|2023-08-29|Designer|Run dialog improvements for table (limited UI output, performance)|
 |1.23.0 [M]|2023-08-24|Designer|Connections support SNC login.|
 |1.22.3 [L]|2023-08-17|Designer|Initial implementations for upcoming SNC support.|
