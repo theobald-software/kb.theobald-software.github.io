@@ -11,7 +11,7 @@ An SAP connection is required to use any Xtract for Alteryx component.
 
 {: .box-note }
 **Note:** Creating SAP connections using the Xtract for Alteryx UI is deprecated.<br>
-The recommended method for creating SAP connections involves the use of Alteryx' Data Connection Manager and requires an Alteryx Designer version >= 2021.4.
+The recommended method for creating SAP connections involves the use of Alteryx' Data Connection Manager and requires an Alteryx Designer version >= 2022.3.
 For more information, see [Online Help: SAP-Connection](https://help.theobald-software.com/en/xtract-for-alteryx/sap-connection). 
 
 
