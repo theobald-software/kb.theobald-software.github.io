@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.20.2 [M]|2023-09-01|General|Fixed a bug where no new connections could be created with Alteryx Designer versions below 2022.3|
 |1.20.1 [L]|2023-08-10|Setup|Fixed a bug where a error was displayed after choosing to cancel the setup because of a running process (e.g. Alteryx Server or Designer currently running/busy).|
 |1.20.0 [M]|2023-07-20|General|New and edited SAP connections are now saved within the Alteryx DCM when possible|
 |1.19.4 [L]|2023-06-28|Table|Runtime parameters of type list can now be used for (NOT) IN operators in the where builder|
