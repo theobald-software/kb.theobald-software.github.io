@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.48.0 [M]|2023-09-01|Query|Added support for list parameters|
 |1.47.1 [L]|2023-08-29|TableCDC|Added option to configure package size for initial load.|
 |1.47.0 [L]|2023-08-22|DeltaQ|Ported the DeltaQ component from XtractKernel with new UI|
 |1.46.6 [L]|2023-08-21|TableCDC|The maximum allowed value for the log table size limit has been raised to 200.000 entries.|
