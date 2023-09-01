@@ -89,10 +89,6 @@ collections:
     output: true
     name: 'yunIO'
     weight: 6
-  erpconnect-general:
-    output: true
-    name: 'ERPConnect - General'
-    weight: 8
   erpconnect-samples:
     output: true
     name: 'ERPConnect - Samples'
