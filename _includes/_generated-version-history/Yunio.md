@@ -1,5 +1,7 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.23.4 [L]|2023-09-04|Management|Added ABAP transport request for report.|
+|1.23.3 [L]|2023-09-01|Designer|Run dialog better error handling.|
 |1.23.2 [L]|2023-08-29|Designer|Designer run dialog minor refactoring.|
 |1.23.1 [M]|2023-08-29|Designer|Run dialog improvements for table (limited UI output, performance)|
 |1.23.0 [M]|2023-08-24|Designer|Connections support SNC login.|
