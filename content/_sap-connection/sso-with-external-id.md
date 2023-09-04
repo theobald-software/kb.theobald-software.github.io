@@ -10,6 +10,9 @@ The following article shows how to set up Single Sign-On (SSO) with Secure Netwo
 *SSO with External ID* uses a Personal Security Environment (PSE) to create a trust relationship between the SAP application server and the service account that runs Xtract Universal.
 This allows Xtract Universal to impersonate any SAP user.<br>
 
+{: .box-note }
+**Note:** SSO with External ID is only supported by Xtract Universal and Board Connector.
+
 ### Requirements
 
 The usage of *SSO with External ID* requires:

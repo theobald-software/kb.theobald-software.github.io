@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Uploading CATS data using Xtract BAPI
+title: Xtract IS - Uploading CATS data using Xtract BAPI
 description: uploading-cats-data-by-using-xtract-is-bapi
 permalink: /:collection/:path
 weight: 110

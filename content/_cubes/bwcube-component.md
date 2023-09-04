@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Useful information regarding the new BWCube component
+title: Useful information regarding the BWCube component
 description: Useful information regarding the new BWCube component
 permalink: /:collection/:path
 weight: 6

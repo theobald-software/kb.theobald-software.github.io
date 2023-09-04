@@ -9,6 +9,9 @@ weight: 155
 The following article describes the process of running extractions for [pull destinations](https://help.theobald-software.com/en/xtract-universal/destinations#pull-and-push-destinations) using Single-Sign-On (SSO) with SAP Logon-Ticket. <br>
 For more information on using SSO with Xtract Universal, refer to [Online Help: SAP Single-Sign-On](https://help.theobald-software.com/en/xtract-universal/advanced-techniques/sap-single-sign-on).
 
+{: .box-note }
+**Note:** SSO with Logon-Ticket is only supported by Xtract Universal and Board Connector.
+
 ### Requirements
 
 - The XU server must be set up to use HTTPS, see [SSO with Kerberos SNC](https://kb.theobald-software.com/xtract-universal/sso-with-kerberos-snc). 
