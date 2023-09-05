@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|7.3.0 [M]|2023-09-05|TableCDC|Added Table CDC component|
 |7.2.2 [L]|2023-08-31|General|Added additional check in the setup for process DTExec|
 |7.2.1 [L]|2023-08-10|Setup|Improved wording in setup dialog when SSIS server seems to be currently busy|
 |[7.2.0 [L]](https://kb.theobald-software.com/release-notes/XtractIS-7.2.0.html)|2023-08-02|Hierarchy|New Hierarchy Extractor - POSSIBLE BREAKING CHANGES for Hierarchy extractions([Release note](https://kb.theobald-software.com/release-notes/XtractIS-7.2.0.html))|
