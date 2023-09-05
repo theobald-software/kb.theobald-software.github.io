@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.23.6 [L]|2023-09-05|Runtime|Fixed a bug where Bapi extraction output would not be handled correctly.|
 |1.23.5 [M]|2023-09-05|Runtime|Transaction: Fixed an issue that could cause (semi-)infinite loops when "skip popups" was enabled|
 |1.23.4 [L]|2023-09-04|Management|Added ABAP transport request for report.|
 |1.23.3 [L]|2023-09-01|Designer|Run dialog better error handling.|
