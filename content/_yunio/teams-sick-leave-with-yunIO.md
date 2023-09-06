@@ -43,6 +43,11 @@ Repeat steps 3 to 6 to create a service for every relevant type of sick leave:
 - Unpaid leave (*Infotype* 2001 and *STy* 0620) 
 - Sick child (*Infotype* 2001 and *STy* 0550).
 
+{: .box-note }
+**Note:** Every type of sick leave requires a designated yunIO service. 
+It is not possible to cover multiple types of sick leave in a single service, because of varying input screens.
+
+
 ### Setup in Microsoft Teams
 
 The setup in Teams requires the installation of the Teams app [Team Forms](https://teamforms.app/) from the Microsoft Teams app store.
