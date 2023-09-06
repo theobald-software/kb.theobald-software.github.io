@@ -1,7 +1,7 @@
 ---
 layout: section-page
-title: SAP - General
-description: SAP
+title: Hierarchy Extractions
+description: Hierarchy Extractions
 permalink: /:collection
 search-ignore: true
 ---

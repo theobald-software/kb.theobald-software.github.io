@@ -1,7 +1,7 @@
 ---
 layout: section-page
-title: SAP - General
-description: SAP
+title: Query Extractions
+description: Query Extractions
 permalink: /:collection
 search-ignore: true
 ---
