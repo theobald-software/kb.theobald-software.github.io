@@ -23,6 +23,10 @@ For more information on yunIO, see [Theobald Software: yunIO](https://theobald-s
 Follow the steps below to set up a yunIO service that creates sick leaves in SAP:
 
 {: .box-note }
+**Note:** Every type of sick leave requires a designated yunIO service. 
+It is not possible to cover multiple types of sick leave in a single service, because of varying input screens.
+
+{: .box-note }
 **Note:** The parameters that are needed to create a sick leave are dependent on your customized SAP settings.
 
 1. Define a [connection to your SAP system](https://help.theobald-software.com/en/yunio/sap-connection) in yunIO. 
@@ -42,10 +46,6 @@ Repeat steps 3 to 6 to create a service for every relevant type of sick leave:
 - Parental leave (*Infotype* 2001 and *STy* 0600)
 - Unpaid leave (*Infotype* 2001 and *STy* 0620) 
 - Sick child (*Infotype* 2001 and *STy* 0550).
-
-{: .box-note }
-**Note:** Every type of sick leave requires a designated yunIO service. 
-It is not possible to cover multiple types of sick leave in a single service, because of varying input screens.
 
 
 ### Setup in Microsoft Teams
