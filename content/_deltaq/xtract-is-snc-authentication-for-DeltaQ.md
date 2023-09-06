@@ -1,23 +1,26 @@
 ---
 layout: page
-title: SNC Authentication for DeltaQ and OHS extraction types
+title: Xtract IS - SNC Authentication for DeltaQ and OHS
 description: SNC Authentication for DeltaQ and OHS extraction types
 permalink: /:collection/:path
 weight: 55
 ---
+
+
 ### About this Article
-The following article is intended to the users who use Xtract IS and wanted to run the SSIS packages with SNC Authentication when DeltaQ or OHS dataflow components are used.  
-When SNC is used, it is a prerequisite that the associated Application server, RFC destination (*SM59*) and SAP user have set SNC via partner name. This way the communication between the Application server and Xtract IS takes place via RFC destination for DeltaQ and OHS dataflow components. 
-Make sure the SAP user with which the Source is created in Xtract IS had enabled with SNC name (1) of the user
-We will now see all the required configurations in detail below.
+The following article is intended to the users who use Xtract IS and wanted to run the SSIS packages with SNC Authentication when DeltaQ or OHS dataflow components are used. 
+When SNC is used, it is a prerequisite that the associated Application server, RFC destination (*SM59*) and SAP user have set SNC via partner name. 
+This way the communication between the Application server and Xtract IS takes place via RFC destination for DeltaQ and OHS dataflow components. 
 
 ### User maintenance configuration
 In *SU01*, enter the User and click on **[Change]**. 
 Go to SNC tab provide the SNC Name of the SAP user and click on **[Save]**. In our case, *MALAPATI* is the user and *THEOBALD.LOCAL* is the domain.
 ![sap_user_settings_snc](/img/contents/xis/sap_user_settings_snc.png){:class="img-responsive"}
 
-### SAP Source settings in Xtract IS
-1. Login to Visual Studio and double click **[Xtract Connection]** in Connection Managers.
+Make sure the SAP user used in Xtract IS is enabled with the SNC name (1) of the user.
+
+### SAP Source Settings
+1. Open the Connection Manager of the SAP connection.
 2. Provide the user details for which the SNC is enabled (1).
 ![connection_manager](/img/contents/xis/connection_manager.png){:class="img-responsive"}
 3. Click on **[Additions]**.

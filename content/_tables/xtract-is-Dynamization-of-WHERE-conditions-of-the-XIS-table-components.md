@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Dynamization of WHERE conditions of the XIS table components
+title: Xtract IS - Dynamization of WHERE conditions
 description: Dynamization of WHERE conditions of the XIS table components
 permalink: /:collection/:path
 weight: 1

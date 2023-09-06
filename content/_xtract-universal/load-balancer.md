@@ -6,11 +6,8 @@ permalink: /:collection/:path
 weight: 105
 ---
 
-The following article shows how to operate Xtract products with load balancing.<br>
+The following article shows how to operate Xtract Universal with load balancing.<br>
 In this context, load balancing means to distribute the network traffic across multiple Windows servers to avoid server overloads. 
-
-{:.box-note}
-**Note:** The following article uses Xtract Universal (XU) as an example for using Load Balancing. The same process applies to other Xtract products, e.g., Xtract IS, Xtract for Alteryx and Board Connector.
 
 ### About Load Balancing
 
@@ -28,6 +25,8 @@ This can be important for businesses that experience sudden spikes in traffic.
 This makes it easier to monitor your network, troubleshoot issues, and make necessary adjustments.
 - Parallel Processing: A load balancer allows running multiple extractions at the same time on different servers. 
 This increases the amount of extractions that can be run in parallel, see [Online Help: Execute and Automate Extractions - Running parallel Extractions](https://help.theobald-software.com/en/xtract-universal/execute-and-automate-extractions#running-parallel-extractions)
+
+![Load-Balancer](/img/contents/xu/load-balancer.png){:class="img-responsive" width="700px"}
 
 ### Prerequisites
 
@@ -50,7 +49,6 @@ A load balancer setup with two Xtract Universal servers uses the following proce
 5. The load balancer receives the response from the selected server and forwards the response to the client.
 6. For subsequent web requests, the load balancer repeats this process.
 
-![Load-Balancer](/img/contents/xu/load-balancer.png){:class="img-responsive" width="700px"}
 
 This setting can also be configured to act as Active / Standby servers. <br>
 This means you have multiple servers with identical configurations and applications where only one server is active, while the others remain passive or on standby until a failover event occurs.

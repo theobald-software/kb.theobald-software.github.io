@@ -71,7 +71,7 @@ collections:
     weight: 1
   sap-connection:
     output: true
-    name: 'Security (SNC, SSO, etc.)'
+    name: 'Single Sign-On & Secure Network Connection'
     weight: 2
   xtract-is:
     output: true
@@ -95,7 +95,7 @@ collections:
     weight: 9
   bapis:
     output: true
-    name: 'BAPI'
+    name: 'BAPI Extractions'
     weight: 10
   tables:
     output: true
@@ -121,10 +121,10 @@ collections:
 #    output: true
 #    name: 'Hierarchy Extractions'
 #    weight: 16
-#  queries:
-#    output: true
-#    name: 'Query Extractions'
-#    weight: 17
+  deltaq:
+    output: true
+    name: 'DeltaQ Extractions'
+    weight: 17
   archive:
     output: true
     name: 'Archive'

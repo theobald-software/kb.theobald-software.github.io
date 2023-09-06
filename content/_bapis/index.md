@@ -6,5 +6,7 @@ permalink: /:collection
 search-ignore: true
 ---
 
-{% comment %} This is content from the config, but the tag can be replaced by custom text here too! {% endcomment %}
-{{ site.content.section-page-default-explanation }}
+This section contains articles on how to extract / upload SAP data using funtion modules / BAPIs in [Xtract Universal](../xtract-universal), [Xtract IS](../xtract-is), [Xtract for Alteryx](../xtract-for-alteryx) or Board Connector.<br>
+
+
+{% comment %} {{ site.content.section-page-default-explanation }} {% endcomment %}

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: How to Post Data in SAP with Xtract BAPI
+title: Xtract IS - How to Post Data in SAP with Xtract BAPI
 description: How to Post Data in SAP with Xtract BAPI
 permalink: /:collection/:path
 weight: 24
