@@ -81,4 +81,4 @@ We recommend including only a small number of records in each posting.
 
 #### Related Links
 - [Online Help: Xtract BAPI](https://help.theobald-software.com/en/xtract-is/bapi) 
-- [Knowledge Base Article: How to Post Data in SAP with Xtract BAPI](https://kb.theobald-software.com/xtract-is/how-to-post-data-in-sap)
+- [Knowledge Base Article: How to Post Data in SAP with Xtract BAPI](./xtract-is-how-to-post-data-in-sap)

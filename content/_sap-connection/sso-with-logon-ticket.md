@@ -14,7 +14,7 @@ For more information on using SSO with Xtract Universal, refer to [Online Help: 
 
 ### Requirements
 
-- The XU server must be set up to use HTTPS, see [SSO with Kerberos SNC](https://kb.theobald-software.com/xtract-universal/sso-with-kerberos-snc). 
+- The XU server must be set up to use HTTPS, see [SSO with Kerberos SNC](./sso-with-kerberos-snc). 
 - The Xtract Universal service must run under an [XU Service Account](https://help.theobald-software.com/en/xtract-universal/advanced-techniques/service-account).
 - The XU service account must be configured for *Constrained Delegation* to the SPN of the AS Java in AD.
 - An Application Server Java (AS Java) must be set up as a Ticket Issuing System, see [SAP Help: Configuring the AS Java to Issue Logon Tickets](https://help.sap.com/doc/saphelp_nw75/7.5.5/EN-US/4a/412251343f2ab1e10000000a42189c/frameset.htm).
