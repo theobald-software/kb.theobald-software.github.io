@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|[6.0.0 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-6.0.0.html)|2023-09-07|General|**Breaking Changes!** We have rewritten the web API and runtime to improve long term ergonomics, stability and maintainability.([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-6.0.0.html))|
 |5.27.0 [L]|2023-08-22|DeltaQ|Added the new DeltaQ component|
 |5.26.6 [L]|2023-08-08|Destinations|Fixed Snowflake connection test for non-default schemas|
 |5.26.5 [M]|2023-08-07|DeltaQ|Fixed conversion errors for some data types|
