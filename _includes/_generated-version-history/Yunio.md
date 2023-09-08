@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.23.11 [L]|2023-09-08|Designer|Designer, table service: improved flow for connection validation and extraction functions.|
 |1.23.10 [L]|2023-09-08|Designer|New service creation: fixed notifications on problems while searching for items.|
 |1.23.9 [L]|2023-09-08|Designer|Run dialog return types handling improved.|
 |1.23.8 [L]|2023-09-08|Designer|Run credentials inputs clarification text.|
