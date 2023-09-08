@@ -54,4 +54,4 @@ The data in the source is automatically mapped to the corresponding table in the
 *****
 #### Related Links
 - [Online Help: Xtract BAPI](https://help.theobald-software.com/en/xtract-is/bapi)
-- [Knowledge Base Article: Uploading CATS data using Xtract BAPI](./xtract-is-uploading-cats-data-by-using-xtract-is-bapi)
+- [Knowledge Base Article: Uploading CATS data using Xtract BAPI](./xtract-is-uploading-cats-data)
