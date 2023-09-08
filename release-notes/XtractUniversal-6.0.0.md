@@ -7,14 +7,14 @@ layout: releaseNotes
 ### Breaking changes
 
 - Web API
-  - /log/req_type=all has been removed
+  - /log?req_type=all has been removed
     - To fetch the full logs for an extraction the prefered workflow is:
       - Get the timestamp for the extraction from the xu.exe output or the header of the HTTP response.
-      - Request the run log for the extraction with log/req_type=extraction&name=extractionname&timestamp=extractionTimestamp
+      - Request the run log for the extraction with log?req_type=extraction&name=extractionname&timestamp=extractionTimestamp
       - If that does not hold the desired information:
-        - There now is a 'WebLog' column when listing the extractions runs with log/req_type=extraction&name=extractionname
-        - Use this timestamp to request the corresponding server log for the extraction with log/req_type=server&timestamp=serverTimestamp
-  - /log/req_type=server now yields the worker instead of listener log
+        - There now is a 'WebLog' column when listing the extractions runs with log?req_type=extraction&name=extractionname
+        - Use this timestamp to request the corresponding server log for the extraction with log?req_type=server&timestamp=serverTimestamp
+  - /log?req_type=server now yields the worker instead of listener log
   - /metadata?name=extractionName has been removed
     - Use [json endpoint](https://help.theobald-software.com/en/xtract-universal/advanced-techniques/metadata-access-via-http-json) instead
   - /parameters?name=extractionName has been removed
