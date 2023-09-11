@@ -17,9 +17,9 @@ Open the graphic in a new tab to zoom in.
 ![Report-Workflow](/img/contents/tablecdc-process.png){:class="img-responsive"}
 
 The delta mechanism of TableCDC includes the following processes:
-- lookup process to read SAP metadata for the definition of the TableCDC extraction.
-- CDC watch process to create and start tracking the TableCDC log table in SAP.
-- synchronize data process to run the TableCDC extractions regularly.
+- Lookup process to read SAP metadata for the definition of the TableCDC extraction.
+- CDC watch process to create a database trigger on the source table and to create the corresponding log table in SAP.
+- Synchronize data process to run the TableCDC extractions regularly.
 
 
 {: .box-tip }
