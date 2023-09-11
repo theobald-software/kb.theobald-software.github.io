@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.0.2 [L]|2023-09-11|General|Fixed inconsistencies in the authentication logic and connection handling|
 |4.0.1 [L]|2023-09-11|General|Fixed a bug which caused failed extractions to contain in "running" state.|
 |[4.0.0 [L]](https://kb.theobald-software.com/release-notes/TheobaldServer-4.0.0.html)|2023-09-07|General|The new runtime is now feature complete and generally available.([Release note](https://kb.theobald-software.com/release-notes/TheobaldServer-4.0.0.html))|
 |3.9.3 [L]|2023-09-05|General|Fixed a bug where the new runtime would use the wrong extraction method for BAPI extractions.|
