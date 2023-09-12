@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.0.5 [L]|2023-09-12|Server|Fixed a bug where the xu.exe cli tool got confused by an ambiguous 'WWW-Authenticate' header from the server. Fixed an error which could occur during database destination clean up procedures and hide another original error.|
 |6.0.4 [L]|2023-09-11|Server|Fixed an issue where the web server would expect authentication credentials despite authentication being turned off.|
 |6.0.3 [L]|2023-09-11|Server|Fixed a bug which could cause the server start to fail because of inconsistent state.|
 |6.0.2 [L]|2023-09-08|General|Fixed the default setting of the config converter for the XU 6 upgrade. Fixed the web worker log window not showing any logs. Fixed some typos in the XU 6.0.0 release notes.|
