@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.0.9 [L]|2023-09-14|General|Fixed web server issues causing responses to be in the wrong format. This affected Qlik and Knime destinations. Fixed a confusing error message when opening the destination settings for a malformed extraction.|
 |6.0.8 [L]|2023-09-14|Setup|Fixed a bug which deleted all Tableau hyper sdk files before installation|
 |6.0.7 [L]|2023-09-13|General|Fixed a bug which caused the AzureBlob destination to stop working when the data format was Parquet.|
 |6.0.6 [L]|2023-09-13|Destinations|Oracle: Added support for INT8 (Int64) types as NUMBER(19)|
