@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.0.8 [L]|2023-09-14|Setup|Fixed a bug which deleted all Tableau hyper sdk files before installation|
 |6.0.7 [L]|2023-09-13|General|Fixed a bug which caused the AzureBlob destination to stop working when the data format was Parquet.|
 |6.0.6 [L]|2023-09-13|Destinations|Oracle: Added support for INT8 (Int64) types as NUMBER(19)|
 |6.0.5 [L]|2023-09-12|Server|Fixed a bug where the xu.exe cli tool got confused by an ambiguous 'WWW-Authenticate' header from the server. Fixed an error which could occur during database destination clean up procedures and hide another original error.|
