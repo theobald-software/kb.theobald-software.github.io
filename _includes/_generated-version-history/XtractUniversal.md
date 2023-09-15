@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.0.11 [L]|2023-09-15|Designer|Added sort option on designer's main window's state column|
 |6.0.10 [L]|2023-09-15|Destinations|Added role setting on Snowflake destination|
 |6.0.9 [L]|2023-09-14|General|Fixed web server issues causing responses to be in the wrong format. This affected Qlik and Knime destinations. Fixed a confusing error message when opening the destination settings for a malformed extraction.|
 |6.0.8 [L]|2023-09-14|Setup|Fixed a bug which deleted all Tableau hyper sdk files before installation|
