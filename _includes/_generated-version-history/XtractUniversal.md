@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|[6.0.12 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-6.0.12.html)|2023-09-15|Destinations|SSRS / Power BI Report Server Data Extension: fixed crash due a bad assembly reference that was introduced in XtractUniversal 6.0 ([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-6.0.12.html))|
 |6.0.11 [L]|2023-09-15|Designer|Added sort option on designer's main window's state column|
 |6.0.10 [L]|2023-09-15|Destinations|Added role setting on Snowflake destination|
 |6.0.9 [L]|2023-09-14|General|Fixed web server issues causing responses to be in the wrong format. This affected Qlik and Knime destinations. Fixed a confusing error message when opening the destination settings for a malformed extraction.|
