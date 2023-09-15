@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.23.14 [L]|2023-09-15|Runtime|Fixed DateTime data types in table services.|
 |1.23.13 [L]|2023-09-11|Theobald.Server|Fixed some inconsistencies in the authentication logic|
 |1.23.12 [L]|2023-09-08|Designer|Table saving flow improved.|
 |1.23.11 [L]|2023-09-08|Designer|Designer, table service: improved flow for connection validation and extraction functions.|
