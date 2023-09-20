@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.0.4 [L]|2023-09-20|General|Improved error messages of the HTTP server when invalid values were provided for parameters.|
 |4.0.3 [L]|2023-09-12|General|Fixed the value of the 'WWW-Authenticate' header for the extraction run endpoint.|
 |4.0.2 [L]|2023-09-11|General|Fixed inconsistencies in the authentication logic and connection handling|
 |4.0.1 [L]|2023-09-11|General|Fixed a bug which caused failed extractions to contain in "running" state.|
