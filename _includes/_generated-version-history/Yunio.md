@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.23.19 [L]|2023-09-22|Theobald.Server|Fixed a bug causing incomplete response data when executing a service.|
 |1.23.18 [M]|2023-09-22|Gateway|Addressing race conditions on high frequency requests over Azure relay.|
 |1.23.17 [L]|2023-09-20|Runtime|Disabled a conversion routine for date types which was erroneously applied in table services.|
 |1.23.16 [L]|2023-09-18|Gateway|Mitigation/fix for high frequency requests running via Azure.|
