@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.0.14 [L]|2023-09-22|Server|Fixed crashes when fetching parameter and result column information for various extraction types.|
 |6.0.13 [L]|2023-09-22|Server|Parameters for table and query extractions with values larger than allowed do now default to the configured values from the extraction.|
 |[6.0.12 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-6.0.12.html)|2023-09-15|Destinations|SSRS / Power BI Report Server Data Extension: fixed crash due a bad assembly reference that was introduced in XtractUniversal 6.0 ([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-6.0.12.html))|
 |6.0.11 [L]|2023-09-15|Designer|Added sort option on designer's main window's state column|
