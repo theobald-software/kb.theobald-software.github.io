@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.0.16 [L]|2023-09-25|Server|Fixed a bug causing parameters to be ignored in ODP extractions. Fixed parameter handling in table and query extractions causing issue in Alteryx Designer. Fixed errors when fetching parameter information for some extraction types.|
 |6.0.15 [L]|2023-09-25|Destinations|Alteryx: Improved detection for installed Alteryx instances when installing the plugin|
 |6.0.14 [L]|2023-09-22|Server|Fixed crashes when fetching parameter and result column information for various extraction types.|
 |6.0.13 [L]|2023-09-22|Server|Parameters for table and query extractions with values larger than allowed do now default to the configured values from the extraction.|
