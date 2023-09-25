@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         tableSettings: {
             serviceName: "MAKTService",
             idField: "MATNR",
-            textField: "MAKTX",
+            description field: "MAKTX",
             language: "E"
         },
         connection: {
