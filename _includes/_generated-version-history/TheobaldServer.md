@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.0.7 [L]|2023-09-25|General|Fixed the handling of invalid parameters for table and query extractions.|
 |4.0.6 [L]|2023-09-22|General|Use the default values if a parameter value is too large in a table or query extraction.|
 |4.0.5 [L]|2023-09-22|General|Fixed a bug causing the HTTP server to send incomplete data, when using compression.|
 |4.0.4 [L]|2023-09-20|General|Improved error messages of the HTTP server when invalid values were provided for parameters.|
