@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.48.3 [L]|2023-09-28|General|Enable f1 help hotkey for extraction windows. These link to the online help entry.|
 |1.48.2 [L]|2023-09-27|Table|Fixed a bug where changing function module in settings would in some cases cause an error.|
 |1.48.1 [L]|2023-09-26|ODP|Fixed an issue that caused NotSupportExceptions for Hierarchy extractions|
 |1.48.0 [M]|2023-09-01|Query|Added support for list parameters|
