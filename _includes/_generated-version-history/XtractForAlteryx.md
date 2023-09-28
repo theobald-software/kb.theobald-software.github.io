@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.20.5 [L]|2023-09-28|Designer|Enable f1 hotkey to link window specific online help entry.|
 |1.20.4 [M]|2023-09-27|General|Fixed a bug that caused errors on the Alteryx Server when DCM connections were used (Bug introduced in 1.20.3)|
 |1.20.3 [M]|2023-09-13|Designer|Improved error handling for Alteryx DCM integration|
 |1.20.2 [M]|2023-09-01|General|Fixed a bug where no new connections could be created with Alteryx Designer versions below 2022.3|
