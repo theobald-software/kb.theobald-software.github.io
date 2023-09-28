@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.23.13 [L]|2023-09-28|WPF|Added a hotkey window|
 |2.23.12 [L]|2023-09-12|General|Added JsonReader.ReadObjectDynamicObject() and JsonReader.ReadDynamicArray()|
 |2.23.11 [L]|2023-08-14|Licensing|Marked LicenseLoader as obsolete; introduced new LicenseValidator class instead which can perform license validation checks; added method CheckProductAndKind to ProductLicense; added unit tests|
 |2.23.10 [L]|2023-08-11|Licensing|Updated & improved texts for various licensing error messages; fixed possible bugs|
