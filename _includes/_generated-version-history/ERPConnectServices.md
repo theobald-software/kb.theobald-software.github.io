@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.12.6 [L]|2023-09-28|General|Deployments on Shared MinRoles: ApplicationWithSearch, WebFrontEndWithDistributedCache|
 |1.12.5 [L]|2023-03-07|General|New EULA|
 |1.12.4 [L]|2022-08-31|General|Hotfix Setup not recognizing installed .NET Framework|
 |1.12.3 [L]|2021-03-04|WebServiceDesigner|Correction in a web services' administration web page|
