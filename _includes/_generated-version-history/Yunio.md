@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.23.22 [M]|2023-09-29|Designer|Function: add support for table types in tables|
 |[1.23.21 [L]](https://kb.theobald-software.com/release-notes/Yunio-1.23.21.html)|2023-09-26|General|Performance and stability fixes.([Release note](https://kb.theobald-software.com/release-notes/Yunio-1.23.21.html))|
 |1.23.20 [L]|2023-09-26|Runtime|Transaction: Reduced the amount of data written to logs |
 |1.23.19 [L]|2023-09-22|Theobald.Server|Fixed a bug causing incomplete response data when executing a service.|
