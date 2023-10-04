@@ -6,7 +6,7 @@ layout: releaseNotes
 
 Config files need to be [converted when upgrading.](https://help.theobald-software.com/en/xtract-universal/introduction/installation-and-update#upgrading-major-releases---configconverter)
 
-There is a [knowledge base article](https://kb.theobald-software.com/cubes/bwcube-component) with some general information about the new component.
+There is a [knowledge base article](https://kb.theobald-software.com/general/New-BWCube-Component) with some general information about the new component.
 
 ## General improvements
 - Introduction of a new column name style "Text" that replaces the "Use description for columns" setting. Column names might not be unique with this style. Use at own risk.
