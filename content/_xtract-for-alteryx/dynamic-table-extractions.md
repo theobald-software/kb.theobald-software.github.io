@@ -32,27 +32,34 @@ For more information, refer to the knowledge base article [SAP User Rights: Tabl
 
 ### Scalar Parameters
 
-![table-scalar](/img/contents/xfa/table-scalar.png){:class="img-responsive"}
 
+Follow the steps below to dynamically filter SAP journal data based on the year :
+Follow the steps below to ...
 
-Follow the steps below to ...:
 1. Drag & drop the Xtract Table component into your Alteryx workflow (1).<br>
 ![xfa_create_table_extraction_01_extraction_01](/img/contents/xfa/xfa_create_table_extraction_01.png){:class="img-responsive" width="900px"}
 2. Select an SAP connection (2). If no SAP connection is available, create a new connection, see [Online Help: Creating an SAP Connection](https://help.theobald-software.com/en/xtract-for-alteryx/sap-connection).
 3. Click **[Edit]** (3) to open the main window of the Xtract Table component.
-4. In the main window of the component click ![magnifying-glass](/img/contents/icons/magnifying-glass.png). The window “Table Lookup” opens.
-5. In the field **Name** (4) enter the name of an SAP table, e.g., *ACDOCA*. Use wildcards (*), if needed.<br>
-![odp-lookup-sales-data](/img/contents/xfa/odp-lookup-sales-data.png){:class="img-responsive"}
-6. Click ![magnifying-glass](/img/contents/icons/magnifying-glass.png) and select a table from the displayed list (5).
-7. Click **[OK]**.
-8. Click **[Edit Parameters]**. The window "
-9. 
+4. [Look up](https://help.theobald-software.com/en/xtract-universal/table/extract-table-data#look-up-a-table) an SAP table, e.g., *ACDOCA* (Universal Journal Entry Line Items).<br>
+![single-table](/img/contents/xfa/single-table.png){:class="img-responsive"}
+5. Click **[Edit Parameters]**. The window "Edit Runtime Parameters" opens.
+6. Click **[Add Scalar]** (4) to create a new runtime parameter for passing single values.<br>
+**Tip:** Parameter0..-n is the default naming for added runtime parameters. You can enter a name of your choice, e.g., PARAM.
 ![single-table-parameter](/img/contents/xfa/single-table-parameter.png){:class="img-responsive"}
-9. WHERE clause
-10. Click **[Load live preview]** (6) to display a live preview of the data without running an extraction.
-11. Click **[OK]** to save your input.
+7. Click on the drop-down menu (5) and assign a data type to the parameter. The data types can, but don’t have to correlate to SAP data types.
+8. Click **[OK]** to save the runtime parameter. 
+9. Define a WHERE clause to filter the SAP data using the runtime parameter created in step 6. <br>
+Example: `ACDOCA~GJAHR >= [PARAM]` only extracts SAP journal entries created after or in the year provided by the runtime parameter PARAM.<br>
+![single-where](/img/contents/xfa/single-where.png){:class="img-responsive"}
+10. Click **[Load live preview]** to display a live preview of the data without running the extraction.<br>
+When prompted, provide a value for the runtime parameter.
+11. Click **[OK]** to save the extraction.
+12. Create/add input values for the runtime parameter in your workflow. 
+Make sure that the name and data type of the input matches the name and data type of the runtime parameter created in step 6.<br>
+![table-scalar](/img/contents/xfa/table-scalar.png){:class="img-responsive"}
+13. Connect the input to the input anchor "P" of the Xtract Table component (6).
 
-The Xtract ODP component can now be used to access and process the extracted SAP sales data.
+The Xtract Table component can now be used to access and process the filtered SAP data.
 
 ### List Parameters
 
