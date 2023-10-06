@@ -1,5 +1,7 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.0.20 [L]|2023-10-05|Destinations|Fixed SSRS destination writing invalid JSON.|
+|6.0.19 [L]|2023-10-04|Destinations|Fix incorrect link to online help in Huawei destination window|
 |6.0.18 [L]|2023-09-28|Designer|Enable destination settings to link their entry in the online help when pressing f1.|
 |6.0.17 [L]|2023-09-28|Destinations|Salesforce: Fixed a bug that caused the extraction to fail when multiple primary keys were selected|
 |6.0.16 [L]|2023-09-25|Server|Fixed a bug causing parameters to be ignored in ODP extractions. Fixed parameter handling in table and query extractions causing issue in Alteryx Designer. Fixed errors when fetching parameter information for some extraction types.|

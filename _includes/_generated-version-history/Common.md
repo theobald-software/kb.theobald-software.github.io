@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.23.14 [L]|2023-10-04|Licensing|Removed optional business rule ServerNameShouldBeSet for XtractForAlteryx Designer ("Desktop") licenses. Since we can't enforce this limit it doesnt make sense to save it into the licenses. With this business rule gone, the automated license tool can now create new XfA Designer licenses without a server name (field is entirely optional now).|
 |2.23.13 [L]|2023-09-28|WPF|Added a hotkey window|
 |2.23.12 [L]|2023-09-12|General|Added JsonReader.ReadObjectDynamicObject() and JsonReader.ReadDynamicArray()|
 |2.23.11 [L]|2023-08-14|Licensing|Marked LicenseLoader as obsolete; introduced new LicenseValidator class instead which can perform license validation checks; added method CheckProductAndKind to ProductLicense; added unit tests|
