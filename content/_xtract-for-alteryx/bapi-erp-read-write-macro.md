@@ -112,4 +112,3 @@ The batch macro can now be used to load SAP purchase requisition data of any giv
 - [Download Link for BAPI-ERP-ReadAndWriteWithMacro.yxzp](/files/xfa/BAPI-ERP-ReadAndWriteWithMacro.yxzp){:download="BAPI-ERP-ReadAndWriteWithMacro.yxzp"}
 - [Online Help: Xtract BAPI](https://help.theobald-software.com/en/xtract-for-alteryx/bapi)
 - [Online Help: Sample Workflows](https://help.theobald-software.com/en/xtract-for-alteryx/sample-workflows)
-- [Online Help: Parameterizing](https://help.theobald-software.com/en/xtract-for-alteryx/parameterizing)
