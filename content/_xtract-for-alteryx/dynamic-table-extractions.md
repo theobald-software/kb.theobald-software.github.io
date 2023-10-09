@@ -6,7 +6,7 @@ permalink: /:collection/:path
 weight: 180
 ---
 
-The following article shows how to use the Xtract Table component of Xtract for Alteryx with different kinds of runtime parameters.<br>
+The following article shows how to use the Xtract Table component of Xtract for Alteryx with different types of runtime parameters.<br>
 
 ### About this Workflow
 
@@ -46,7 +46,7 @@ The depicted example uses the runtime parameter to dynamically filter SAP journa
 6. Click **[Add Scalar]** (4) to create a new runtime parameter for passing single values.<br>
 **Tip:** Parameter0..-n is the default naming for added runtime parameters. You can enter a name of your choice, e.g., PARAM.
 ![single-table-parameter](/img/contents/xfa/single-table-parameter.png){:class="img-responsive"}
-7. Click on the drop-down menu (5) and assign a data type to the parameter. The data types can, but don’t have to correlate to SAP data types.
+7. Click the drop-down menu (5) and assign a data type to the parameter. The data types can, but don’t need to correlate to SAP data types.
 8. Click **[OK]** to save the runtime parameter. 
 9. Define a WHERE clause to filter the SAP data using the runtime parameter created in step 6. <br>
 Example: `ACDOCA~GJAHR >= [PARAM]` only extracts SAP journal entries that contain the fiscal year provided by the runtime parameter PARAM.<br>
