@@ -17,9 +17,8 @@ This process uses a simple input table that contains the data for the purchase r
 This process uses an input parameter and a batch macro to pass the input parameter to the Xtract BAPI component.
 
 {: .box-note }
-**Note:** When using Xtract for Alteryx version 1.18 and below tables can be passed to the Xtract BAPI component directly, while single values require the usage of batch macros.
-As of Xtract for Alteryx version 1.19 all input parameters can be passed to the Xtract BAPI component without the use of a batch macro. 
-For more information, see [Online Help: Parameterizing](https://help.theobald-software.com/en/xtract-for-alteryx/parameterizing). 
+**Note:** When using Xtract for Alteryx version 1.18 and below tables can be passed to the Xtract BAPI component directly via an input anchor, while single values require the use of batch macros.
+As of Xtract for Alteryx version 1.19 all input parameters can be passed to the Xtract BAPI component without batch macros.
 
 
 | SAP System | SAP Objects | Xtract for Alteryx Component |

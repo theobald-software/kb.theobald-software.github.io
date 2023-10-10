@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|5.7.0 [L]|2023-10-09|Query|Removed Query|
 |5.6.0 [L]|2023-08-03|Hierarchy|Removed Hierarchy|
 |5.5.1 [L]|2023-03-15|DeltaQ|Replaced the local byte serialization/deserialization on IpcChannel with the ByteSerialization from Theobald.Common (introduced on 2.22.0)|
 |5.5.0 [M]|2022-09-08|OHS|Removed OHS|

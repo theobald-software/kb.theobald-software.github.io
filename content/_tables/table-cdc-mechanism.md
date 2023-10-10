@@ -11,7 +11,7 @@ The following article illustrates the process of delta table extractions using t
 
 ### Table CDC Process
 
-The depicted graphic illustrates the processes in both the Xtract product and in SAP.
+The depicted graphic illustrates the processes in both the Xtract product and in SAP. <br>
 Open the graphic in a new tab to zoom in.
 
 ![Report-Workflow](/img/contents/tablecdc-process.png){:class="img-responsive"}
