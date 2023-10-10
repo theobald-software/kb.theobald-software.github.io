@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Sync Nintex Forms for Office 365 with SAP using JavaScript
+title: Sync Nintex Forms with SAP using JavaScript (SAP Material Data)
 description: Sync Nintex Forms for Office 365 with SAP using JavaScript
 permalink: /:collection/:path
 weight: 39
