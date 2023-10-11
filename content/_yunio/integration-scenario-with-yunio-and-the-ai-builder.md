@@ -56,7 +56,7 @@ The depicted example uses the BAPI_INCOMINGINVOICE_CREATE1 to create an incoming
 ![yunio-Services-Function-Download](/img/contents/yunio/yunio-run-services-function-download-invoices.png){:class="img-responsive" width="800px"}
 
 {: .box-tip }
-**Tip:** Test a yunIO service in a REST client before integrating it with Power Automate, see [Running a yunIO Service in Swagger Inspector](https://kb.theobald-software.com/yunio/running-a-yunio-service-in-swagger-inspector) or [Running a yunIO Service in Postman](https://kb.theobald-software.com/yunio/running-a-yunio-service-in-postman). 
+**Tip:** Test a yunIO service in a REST client before integrating it with Power Automate, see [Running a yunIO Service in SwaggerHub Explore](https://kb.theobald-software.com/yunio/running-a-yunio-service-in-swagger-hub) or [Running a yunIO Service in Postman](https://kb.theobald-software.com/yunio/running-a-yunio-service-in-postman). 
 
 
 ### Configuring a yunIO Custom Connector in Power Automate

@@ -46,7 +46,7 @@ This option is mandatory when using BAPI_COSTCENTER_CREATEMULTIPLE.<br>
 ![yunio-Services-Function-Download](/img/contents/yunio/yunio-run-services-function-download.png){:class="img-responsive" width="800px"}
 
 {: .box-tip }
-**Tip:** Test a yunIO service in a REST client before integrating it with Power Automate, see [Running a yunIO Service in Swagger Inspector](https://kb.theobald-software.com/yunio/running-a-yunio-service-in-swagger-inspector) or [Running a yunIO Service in Postman](https://kb.theobald-software.com/yunio/running-a-yunio-service-in-postman). 
+**Tip:** Test a yunIO service in a REST client before integrating it with Power Automate, see [Running a yunIO Service in SwaggerHub Explore](https://kb.theobald-software.com/yunio/running-a-yunio-service-in-swagger-hub) or [Running a yunIO Service in Postman](https://kb.theobald-software.com/yunio/running-a-yunio-service-in-postman). 
 
 ### Configuring a yunIO Custom Connector in Power Automate
 
@@ -75,7 +75,7 @@ The following workflow reads and processes data from a table and to create new c
 Select the list of items from the SharePoint table as the input for the *Apply to each* action.
 6. Add a *Compose* action to *Apply to each*. 
 Use *Compose* to create the body of the yunIO web service that contains the table parameters and to map the input data.<br>
-**Tip:** You can run the service in a REST client like [Swagger Inspector](https://inspector.swagger.io/builder) to copy the empty body into the *Compose* action.
+**Tip:** You can run the service in a REST client like [SwaggerHub Explore](https://explore.swaggerhub.com/builder) to copy the empty body into the *Compose* action.
 ```
 {
   "COSTCENTER": "",

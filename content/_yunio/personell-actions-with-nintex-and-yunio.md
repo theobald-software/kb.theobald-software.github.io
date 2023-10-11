@@ -53,7 +53,7 @@ The input parameters can be adjusted according to your individual scenario requi
 -->
 
 {: .box-tip }
-**Tip:** It is recommended to test a yunIO service in a REST client before integrating it with Nintex, see [Running a yunIO Service in Swagger Inspector](https://kb.theobald-software.com/yunio/running-a-yunio-service-in-swagger-inspector) or [Running a yunIO Service in Postman](https://kb.theobald-software.com/yunio/running-a-yunio-service-in-postman). 
+**Tip:** It is recommended to test a yunIO service in a REST client before integrating it with Nintex, see [Running a yunIO Service in SwaggerHub Explore](https://kb.theobald-software.com/yunio/running-a-yunio-service-in-swagger-hub) or [Running a yunIO Service in Postman](https://kb.theobald-software.com/yunio/running-a-yunio-service-in-postman). 
 
 ### Setup in Nintex
 

@@ -36,7 +36,7 @@ For more information on how to create services, see [Online Help: Creating a Ser
 **Note:** In Power Apps every data source is limited to 500 items. Therefore, it is recommended to pre-filter requests to a manageable amount of data e.g., by using a row limit in the yunIO service. 
 
 {: .box-tip }
-**Tip:** It is recommended to test a yunIO service in a REST client before integrating it with a Microsoft Power Platform, see [Running a yunIO Service in Swagger Inspector](https://kb.theobald-software.com/yunio/running-a-yunio-service-in-swagger-inspector) or [Running a yunIO Service in Postman](https://kb.theobald-software.com/yunio/running-a-yunio-service-in-postman). 
+**Tip:** It is recommended to test a yunIO service in a REST client before integrating it with a Microsoft Power Platform, see [Running a yunIO Service in SwaggerHub Explore](https://kb.theobald-software.com/yunio/running-a-yunio-service-in-swagger-hub) or [Running a yunIO Service in Postman](https://kb.theobald-software.com/yunio/running-a-yunio-service-in-postman). 
 
 
 ### Configuring a yunIO Custom Connector in Power Automate
