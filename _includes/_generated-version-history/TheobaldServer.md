@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.0.9 [L]|2023-10-11|General|Fixed and improve behavior and logging of the extraction cache, its clean up and when aborting extractions.|
 |4.0.8 [L]|2023-09-26|General|Fixed SAP connection management in the new runtime. This caused severe performance regression under high load. Fixed a deadlock which could occur under high load in the HTTP server.|
 |4.0.7 [L]|2023-09-25|General|Fixed the handling of invalid parameters for table and query extractions.|
 |4.0.6 [L]|2023-09-22|General|Use the default values if a parameter value is too large in a table or query extraction.|
