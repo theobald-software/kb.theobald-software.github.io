@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.0.21 [L]|2023-10-11|General|Fixed the abort endpoint routing. Fixed various cache clean up and invalidation issues. Improved behavior of the run dialog when fetching extraction logs. Fixed timeout in xu.exe and xu.elf.|
 |6.0.20 [L]|2023-10-05|Destinations|Fixed SSRS destination writing invalid JSON.|
 |6.0.19 [L]|2023-10-04|Destinations|Fix incorrect link to online help in Huawei destination window|
 |6.0.18 [L]|2023-09-28|Designer|Enable destination settings to link their entry in the online help when pressing f1.|
