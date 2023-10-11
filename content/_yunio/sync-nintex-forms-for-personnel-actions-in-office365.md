@@ -31,8 +31,9 @@ The depicted example uses the integration type *SAP Table or View* for the servi
 3. [Look up](https://help.theobald-software.com/en/yunio/bapis-and-function-modules#look-up-a-function-module--bapi) the table PA0002 that contains HR master data. 
 4. Select the columns PERNR, NACHN and VORNA for the output of the service.<br>
 ![nintex-office-design](/img/contents/yunio/nintex-office-yunIO2.png){:class="img-responsive" }
-5. Click ![download-file](/img/contents/yunio/download.png) to download the service definition.<br>
-![yunio-Services-Function-Download](/img/contents/yunio/yunio-run-services-function-download.png){:class="img-responsive" }
+5. Click ![run](/img/contents/yunio/run-icon.png) to testrun the service in yunIO (1). For more information, see [Online Help: Testing a Service](https://help.theobald-software.com/en/yunio/run-services#testing-a-service).
+6. Click ![download-file](/img/contents/yunio/download.png) to download the service definition (2).<br>
+![yunio-Services-Function-Download](/img/contents/yunio/yunio-run-services-function-download.png){:class="img-responsive" width="800px"}
 
 ### Setup in SharePoint
 

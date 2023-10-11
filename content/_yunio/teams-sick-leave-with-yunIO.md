@@ -38,10 +38,10 @@ It is not possible to cover multiple types of sick leave in a single service, be
 - Start date of the sick leave
 - End date of the sick leave
 5. Click **[Save]** to save the service.
-6. Click ![download-file](/img/contents/yunio/download.png) to download the service definition.<br>
-![yunio-Services-Function-Download](/img/contents/yunio/yunio-run-services-function-download.png){:class="img-responsive" }
-
-Repeat steps 3 to 6 to create a service for every relevant type of sick leave:
+6. Click ![run](/img/contents/yunio/run-icon.png) to testrun the service in yunIO (1). For more information, see [Online Help: Testing a Service](https://help.theobald-software.com/en/yunio/run-services#testing-a-service).
+7. Click ![download-file](/img/contents/yunio/download.png) to download the service definition (2).<br>
+![yunio-Services-Function-Download](/img/contents/yunio/yunio-run-services-function-download.png){:class="img-responsive" width="800px"}
+8. Repeat steps 3 to 7 to create a service for every relevant type of sick leave:
 - Illness with certificate (*Infotype* 2001 and *STy* 0200)
 - Parental leave (*Infotype* 2001 and *STy* 0600)
 - Unpaid leave (*Infotype* 2001 and *STy* 0620) 

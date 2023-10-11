@@ -42,11 +42,9 @@ This option is mandatory when using BAPI_COSTCENTER_CREATEMULTIPLE.<br>
 - CURRENCY_ISO<br>
 - PROFIT_CTR<br>
 - NAME<br>
-6. Click ![download-file](/img/contents/yunio/download.png) to download the service definition.<br>
+6. Click ![run](/img/contents/yunio/run-icon.png) to testrun the service in yunIO (1). For more information, see [Online Help: Testing a Service](https://help.theobald-software.com/en/yunio/run-services#testing-a-service).
+7. Click ![download-file](/img/contents/yunio/download.png) to download the service definition (2).<br>
 ![yunio-Services-Function-Download](/img/contents/yunio/yunio-run-services-function-download.png){:class="img-responsive" width="800px"}
-
-{: .box-tip }
-**Tip:** Test a yunIO service in a REST client before integrating it with Power Automate, see [Running a yunIO Service in SwaggerHub Explore](https://kb.theobald-software.com/yunio/running-a-yunio-service-in-swagger-hub) or [Running a yunIO Service in Postman](https://kb.theobald-software.com/yunio/running-a-yunio-service-in-postman). 
 
 ### Configuring a yunIO Custom Connector in Power Automate
 
