@@ -9,7 +9,7 @@ weight: 2
 The following article shows how to run a yunIO service in Swagger Inspector.
 
 Swagger Inspector is an OpenAPI design and documentation tool that allows validation of APIs and automatic creation of OpenAPI files for any end point you call.
-For more information on the Swagger Inspector, see [Swagger Inspector Documentation](https://swagger.io/docs/swagger-inspector/how-to-use-swagger-inspector/).
+For more information on the Swagger Inspector, see [Swagger Inspector Documentation](https://support.smartbear.com/swaggerhub-explore/docs/en/get-started.html).
 
 ### Prerequisites in yunIO
 
@@ -61,6 +61,5 @@ The results are displayed in the **Response** section of Swagger Inspector.
 ******
 
 #### Related Links
-- [Web Version of the Swagger Inspector](https://inspector.swagger.io/builder)
-- [Swagger Inspector Documentation](https://swagger.io/docs/swagger-inspector/how-to-use-swagger-inspector/)
+- [Swagger Inspector Documentation]([Swagger Inspector Documentation](https://support.smartbear.com/swaggerhub-explore/docs/en/get-started.html))
 - [yunIO Help: How to Run a Service](https://help.theobald-software.com/en/yunio#how-to-run-a-service)

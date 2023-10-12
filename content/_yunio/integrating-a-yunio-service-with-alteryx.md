@@ -84,9 +84,6 @@ The column contains the name of the service you want to call e.g., `/Customer_Ch
 
 You can download the Alteryx workflow for this application here: [yunIO_Customer_Update.yxwz](/files/yunio/yunIO_Customer_Update.yxwz){:download="yunIO_Customer_Update.yxwz"}
 
-{: .box-tip }
-**Tip:** It is recommended to test a yunIO service in a REST client before integrating it with Alteryx, see [Running a yunIO Service in Swagger Inspector](https://kb.theobald-software.com/yunio/running-a-yunio-service-in-swagger-inspector) or [Running a yunIO Service in Postman](https://kb.theobald-software.com/yunio/running-a-yunio-service-in-postman). 
-
 <!--- The service uses the following input parameters:<br>
 - skipPopups (this is a default parameter that is used by every service)
 - CustomerNo

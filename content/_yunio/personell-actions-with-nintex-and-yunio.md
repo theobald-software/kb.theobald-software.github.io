@@ -36,7 +36,8 @@ The depicted example uses the following input parameters:
 *EntryDate*, *FirstName*, *LastName*, *BirthDate*, *BirthPlace*, *Language*, *Nationality*, *Street*, *City*, *PostalCode*.<br>
 The input parameters can be adjusted according to your individual scenario requirements.
 ![PA40](/img/contents/yunio/pa40-parameters.gif){:class="img-responsive" width="800px" style="border:1px solid black;"}
-5. Click ![download-file](/img/contents/yunio/download.png) to download the service definition.<br>
+5. Click ![run](/img/contents/yunio/run-icon.png) to testrun the service in yunIO (1). For more information, see [Online Help: Testing a Service](https://help.theobald-software.com/en/yunio/run-services#testing-a-service).
+6. Click ![download-file](/img/contents/yunio/download.png) to download the service definition (2).<br>
 ![yunio-Services-Function-Download](/img/contents/yunio/yunio-run-services-function-download.png){:class="img-responsive" width="800px"}
 
 <!---
@@ -51,9 +52,6 @@ The input parameters can be adjusted according to your individual scenario requi
 &bull; City <br>
 &bull; Postal Code <br>
 -->
-
-{: .box-tip }
-**Tip:** It is recommended to test a yunIO service in a REST client before integrating it with Nintex, see [Running a yunIO Service in Swagger Inspector](https://kb.theobald-software.com/yunio/running-a-yunio-service-in-swagger-inspector) or [Running a yunIO Service in Postman](https://kb.theobald-software.com/yunio/running-a-yunio-service-in-postman). 
 
 ### Setup in Nintex
 

@@ -27,16 +27,14 @@ Select the table fields KOSTL (Cost Center), KTEXT (General Name) and LTEXT (Des
 - Create a Function Module service that calls the function SD_RFC_CUSTOMER_GET with the following settings:<br>
 Set the input parameter NAME1 (Customer's Name) to *Supplied by caller*.
 Select all fields in the table *CUSTOMER_T* for the output.<br>
-2. Download the service definition (![download-file](/img/contents/yunio/download.png) icon) of all 3 services.<br>
+2. Click ![run](/img/contents/yunio/run-icon.png) to testrun the service in yunIO (1). For more information, see [Online Help: Testing a Service](https://help.theobald-software.com/en/yunio/run-services#testing-a-service).
+3. Click ![download-file](/img/contents/yunio/download.png) to download the service definition (2).<br>
 ![yunio-Services-Function-Download](/img/contents/yunio/yunio-run-services-function-download.png){:class="img-responsive" width="800px"}
 
 For more information on how to create services, see [Online Help: Creating a Service](https://help.theobald-software.com/en/yunio/getting-started#creating-a-service).
 
 {: .box-note }
 **Note:** In Power Apps every data source is limited to 500 items. Therefore, it is recommended to pre-filter requests to a manageable amount of data e.g., by using a row limit in the yunIO service. 
-
-{: .box-tip }
-**Tip:** It is recommended to test a yunIO service in a REST client before integrating it with a Microsoft Power Platform, see [Running a yunIO Service in Swagger Inspector](https://kb.theobald-software.com/yunio/running-a-yunio-service-in-swagger-inspector) or [Running a yunIO Service in Postman](https://kb.theobald-software.com/yunio/running-a-yunio-service-in-postman). 
 
 
 ### Configuring a yunIO Custom Connector in Power Automate

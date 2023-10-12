@@ -31,11 +31,9 @@ The depicted example uses the integration type *Function Module* for the service
 4. Set all import parameters you want to transfer from Salesforce to SAP to *Supplied by Caller* e.g., NAME, CITY, POSTL_COD1, STREET, etc.<br>
 5. Select CUSTOMERNO for export. This Export parameter contains the newly created SAP customer number that is written back to Salesforce.<br>
 ![yunio-Services-Function-Download](/img/contents\yunio\yunio-bapi-createcustomer.png){:class="img-responsive"}
-6. Click ![download-file](/img/contents/yunio/download.png) to download the service definition. The service definition can be imported to Power Automate.<br>
-![yunio-Services-Function-Download](/img/contents/yunio/yunio-run-services-function-download.png){:class="img-responsive" }
-
-{: .box-tip }
-**Tip:** Test a yunIO service in a REST client before integrating it with Power Automate, see [Running a yunIO Service in Swagger Inspector](https://kb.theobald-software.com/yunio/running-a-yunio-service-in-swagger-inspector) or [Running a yunIO Service in Postman](https://kb.theobald-software.com/yunio/running-a-yunio-service-in-postman). 
+6. Click ![run](/img/contents/yunio/run-icon.png) to testrun the service in yunIO (1). For more information, see [Online Help: Testing a Service](https://help.theobald-software.com/en/yunio/run-services#testing-a-service).
+7. Click ![download-file](/img/contents/yunio/download.png) to download the service definition (2).<br>
+![yunio-Services-Function-Download](/img/contents/yunio/yunio-run-services-function-download.png){:class="img-responsive" width="800px"}
 
 ### Setup in Salesforce
 
