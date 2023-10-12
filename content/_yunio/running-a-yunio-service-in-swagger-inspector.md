@@ -1,15 +1,15 @@
 ---
 layout: page
-title: Running a yunIO Service in SwaggerHub Explore
-description: Running a yunIO Service in SwaggerHub Explore
+title: Running a yunIO Service in Swagger Inspector
+description: Running a yunIO Service in Swagger Inspector
 permalink: /:collection/:path
 weight: 2
 ---
 
-The following article shows how to run a yunIO service in SwaggerHub Explore.
+The following article shows how to run a yunIO service in Swagger Inspector.
 
-SwaggerHub Explore is an OpenAPI design and documentation tool that allows validation of APIs and automatic creation of OpenAPI files for any end point you call.
-For more information on the SwaggerHub Explore, see [SwaggerHub Explore Documentation](https://support.smartbear.com/swaggerhub-explore/docs/en/get-started.html).
+Swagger Inspector is an OpenAPI design and documentation tool that allows validation of APIs and automatic creation of OpenAPI files for any end point you call.
+For more information on the Swagger Inspector, see [Swagger Inspector Documentation](https://support.smartbear.com/swaggerhub-explore/docs/en/get-started.html).
 
 ### Prerequisites in yunIO
 
@@ -18,10 +18,10 @@ For more information on the SwaggerHub Explore, see [SwaggerHub Explore Document
 2. Click ![copy-URL](/img/contents/yunio/copyURL.png) to copy the URL of the service definition or click ![download-file](/img/contents/yunio/download.png) to download the service definition.<br>
 ![yunio-Services](/img/contents/yunio/yunio-run-services.png){:class="img-responsive" width="800px"}
 
-### Loading a yunIO Service into SwaggerHub Explore
+### Loading a yunIO Service into Swagger Inspector
 
-1. Open SwaggerHub Explore in your browser.
-2. Navigate to the **Definition** menu (1). There are 2 ways to load a yunIO service definition into the SwaggerHub Explore:<br>
+1. Open Swagger Inspector in your browser.
+2. Navigate to the **Definition** menu (1). There are 2 ways to load a yunIO service definition into the Swagger Inspector:<br>
 - Paste the URL of the service definition into the designated input field (2).
 - Click on the upload icon to load a service definition from your hard drive (2).
 3. Click **[PARSE]** to analyze the service definition (3).<br>
@@ -47,19 +47,19 @@ To set parameters, edit the *Body*, e.g. change the WHERE clause of the table ex
 ### Running the Service
 
 {: .box-note }
-**Note:** If the option [*Request credentials from callers when running services*](https://help.theobald-software.com/en/yunio/sap-connection#authentication) is active in the connection settings in yunIO, select *Basic Authentication* in the *Authentication & Headers* tab of SwaggerHub Explore and enter your SAP credentials before running the service.
+**Note:** If the option [*Request credentials from callers when running services*](https://help.theobald-software.com/en/yunio/sap-connection#authentication) is active in the connection settings in yunIO, select *Basic Authentication* in the *Authentication & Headers* tab of Swagger Inspector and enter your SAP credentials before running the service.
 
 After parsing the service definition, the URL of the service endpoint should be available in the main URI input line.
 If not, enter the URL and select the *POST* method. 
 Click **[Send]** to execute the service.<br>
 ![Swagger-Inspector](/img/contents/yunio/swagger-inspector-run.png){:class="img-responsive"}
 
-The results are displayed in the **Response** section of SwaggerHub Explore.
+The results are displayed in the **Response** section of Swagger Inspector.
 ![Swagger-Inspector-Results](/img/contents/yunio/swagger-inspector-results.png){:class="img-responsive"}
 
 
 ******
 
 #### Related Links
-- [SwaggerHub Explore Documentation]([SwaggerHub Explore Documentation](https://support.smartbear.com/swaggerhub-explore/docs/en/get-started.html))
+- [Swagger Inspector Documentation]([Swagger Inspector Documentation](https://support.smartbear.com/swaggerhub-explore/docs/en/get-started.html))
 - [yunIO Help: How to Run a Service](https://help.theobald-software.com/en/yunio#how-to-run-a-service)

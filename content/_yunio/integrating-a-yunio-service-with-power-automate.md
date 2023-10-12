@@ -51,9 +51,6 @@ This means that the SAP user name and password used for the SAP connection, must
 {: .box-note }
 **Note:** Before the service can be tested in the **Test** tab, the custom connector must be published with **Create connector**. 
 
-{: .box-tip }
-**Tip:** When testing a new custom connector, you can switch to **Swagger Editor** mode and paste test sets directly from Swagger Editor / SwaggerHub Explore.
-For more information on how to test yunIO services in SwaggerHub Explore, refer to the knowledge base article [Running a yunIO Service in SwaggerHub Explore](https://kb.theobald-software.com/yunio/running-a-yunio-service-in-swagger-hub).
 
 ### Testing the Service
 

@@ -73,7 +73,6 @@ The following workflow reads and processes data from a table and to create new c
 Select the list of items from the SharePoint table as the input for the *Apply to each* action.
 6. Add a *Compose* action to *Apply to each*. 
 Use *Compose* to create the body of the yunIO web service that contains the table parameters and to map the input data.<br>
-**Tip:** You can run the service in a REST client like [SwaggerHub Explore](https://explore.swaggerhub.com/builder) to copy the empty body into the *Compose* action.
 ```
 {
   "COSTCENTER": "",
