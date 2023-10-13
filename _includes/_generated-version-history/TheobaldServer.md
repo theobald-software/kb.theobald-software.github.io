@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.0.11 [L]|2023-10-13|General|Fix & improve parameter output processing|
 |4.0.10 [L]|2023-10-13|General|Fixed a bug, where the runtime would hang if an error happened at a specific time. Improved logging for certain errors.|
 |4.0.9 [L]|2023-10-11|General|Fixed and improve behavior and logging of the extraction cache, its clean up and when aborting extractions.|
 |4.0.8 [L]|2023-09-26|General|Fixed SAP connection management in the new runtime. This caused severe performance regression under high load. Fixed a deadlock which could occur under high load in the HTTP server.|
