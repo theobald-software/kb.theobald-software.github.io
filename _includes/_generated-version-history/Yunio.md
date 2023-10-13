@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.24.0 [M]|2023-10-13|General|Function: Add support for various scenarios with nested output tables|
 |1.23.23 [L]|2023-10-06|Designer|Fixed deletion in edit view. Improved error handling on TCODE search (Report).|
 |1.23.22 [M]|2023-09-29|Designer|Function: add support for table types in tables|
 |[1.23.21 [L]](https://kb.theobald-software.com/release-notes/Yunio-1.23.21.html)|2023-09-26|General|Performance and stability fixes.([Release note](https://kb.theobald-software.com/release-notes/Yunio-1.23.21.html))|
