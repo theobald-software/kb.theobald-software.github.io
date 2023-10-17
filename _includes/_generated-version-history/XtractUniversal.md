@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.0.24 [L]|2023-10-17|General|Fixed RequestSize error in xu.exe. Removed an external dependency of xu.exe.|
 |6.0.23 [L]|2023-10-13|Server|Fixed a bug where the web worker would not send a response when running an extraction in case of errors occurring at destination setup. Fixed the xu.exe command in the Run Dialog, which could get out of sync with the actual command used.|
 |6.0.22 [L]|2023-10-12|Designer|Fixed a bug that would not allow changing source for multiple extractions|
 |6.0.21 [L]|2023-10-11|General|Fixed the abort endpoint routing. Fixed various cache clean up and invalidation issues. Improved behavior of the run dialog when fetching extraction logs. Fixed timeout in xu.exe and xu.elf.|
