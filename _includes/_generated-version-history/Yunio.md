@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.25.1 [L]|2023-10-18|Designer|Designer run dialog output buttons fix.|
 |1.25.0 [L]|2023-10-17|Designer|Run dialog: output with a browsable results|
 |1.24.0 [M]|2023-10-13|General|Function: Add support for various scenarios with nested output tables|
 |1.23.23 [L]|2023-10-06|Designer|Fixed deletion in edit view. Improved error handling on TCODE search (Report).|
