@@ -28,14 +28,14 @@ For more information on the SwaggerHub, see [SwaggerHub Documentation](https://s
 4. Click **[Import]** / **[Upload File]** to load the service definition. 
 5. Open the POST method of the service to access headers and parameter settings.<br>
 We recommend using the POST method with Transport Layer Security (HTTPS) to ensure data protection. 
-Do not use the GET method to send sensible data, e.g. credentials.<br>
+Do not use the GET method to send sensible data, e.g., credentials.<br>
 ![Swagger-Hub-Loaded](/img/contents/yunio/swagger-hub-loaded.png){:class="img-responsive"}
 6. Click **[Try it out]** to pass parameters and credentials and to run the service in Swagger Hub.<br>
 ![Swagger-Hub-Try](/img/contents/yunio/swagger-hub-try.png){:class="img-responsive"}
-7. Optional: Edit the parameters in the request body of the service, e.g. change the WHERE clause of the table extraction. 
+7. Optional: Edit the parameters in the request body of the service, e.g., change the WHERE clause of the table extraction. 
 8. Click **[Execute]** to run the service.<br>
 ![Swagger-Hub-Results](/img/contents/yunio/swagger-hub-results.png){:class="img-responsive"}
-9. If the service requires Basic Authentication, you are prompted to enter your credentials.
+9. If the service requires *Basic Authentication*, you are prompted to enter your credentials.
 10. The results are displayed in the *Response body* section of SwaggerHub.
 
 
