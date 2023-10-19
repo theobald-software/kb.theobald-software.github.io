@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.48.6 [L]|2023-10-19|DeltaQ|Fixed DeltaQ check window's help link|
 |1.48.5 [L]|2023-10-11|BAPI|Fix tables in tables|
 |1.48.4 [L]|2023-10-05|ODP|Fixed a bug that caused the preview button to be disabled after initial lookup regardless of whether previewing was supported by the provider|
 |1.48.3 [L]|2023-09-28|General|Enable f1 help hotkey for extraction windows. These link to the online help entry.|
