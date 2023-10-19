@@ -14,7 +14,7 @@ Azure SSIS-IR Cluster ID is needed to create a customer bound license.
 
 -  Within Azure Data Factory (ADF) navigate to **[Launch Studio]** and select **Configure SSIS**.
 
-![Landing page](/img/contents/landing.jpg){:class="img-responsive" }
+![Landing page](/img/contents/landing.png){:class="img-responsive" }
 
 -  Select Data Factory: *[data factory name]* (in the given example: *Xtract-ADF*).
 
