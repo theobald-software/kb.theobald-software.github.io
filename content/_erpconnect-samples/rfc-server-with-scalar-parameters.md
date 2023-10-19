@@ -6,7 +6,7 @@ permalink: /:collection/:path
 weight: 4
 ---
 
-Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
+Check out our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
 
 Apart from the client functionality that allows function modules or BAPIs to be accessed in the SAP system, ERPConnect also offers the possibility of easily developing a server function. Transactional RFC functions are, of course, supported.
 

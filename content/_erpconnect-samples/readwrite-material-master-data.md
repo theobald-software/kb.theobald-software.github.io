@@ -6,7 +6,7 @@ permalink: /:collection/:path
 weight: 16
 ---
 
-Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
+Check out our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
 
 This little article shows the minimum requirement to create and read material master data in SAP. A material object consists of multiple layers or so called views. Each view may exist multiple times (e.g. one plant view for plant 1000 and one for plant 2000 both for the same material). To keep the samples as simple and short as possible this code only shows how to handle the basic views but the others will work in the same way. The attributes of the basic view are the Material Number itself, the so called Old Material Number (which can come from a legacy system), the Industry Sector and the Material Type (in our case HAWA which stands for Trading Goods, if you know German: HAWA is the abbreviation for Handelsware). And last but not least the basic measure unit, which is mandatory.
 

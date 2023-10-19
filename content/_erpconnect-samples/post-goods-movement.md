@@ -6,7 +6,7 @@ permalink: /:collection/:path
 weight: 27
 ---
 
-Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
+Check out our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
 
 In this sample we create a goods receipt for a goods movement with BAPI_GOODSMVT_CREATE. The Parameter "GM_CODE" represents the transaction code that would be used to post the movement as dialog user. The value “01” is replaced by SAP with the transaction code MB01. MB01 is used to create a goods receipt for purchase order. Further values for this parameter would be “02” for goods receipt for order (MB31) or "05" for other goods receipts (MB1C).
 

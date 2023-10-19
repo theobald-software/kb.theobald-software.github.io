@@ -6,7 +6,7 @@ permalink: /:collection/:path
 weight: 32
 ---
 
-Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
+Check out our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
 
 If you have to define the SAP type QUAN in your RFC Server you have to define it as BCD on .NET side. But you can't just take over the length from SAP.
 

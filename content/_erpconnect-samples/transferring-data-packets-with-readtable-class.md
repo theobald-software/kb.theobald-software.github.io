@@ -6,7 +6,7 @@ permalink: /:collection/:path
 weight: 6
 ---
 
-Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
+Check out our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
 
 If you want to extract more than a certain number of table rows (between 100,000 and 1,000,000 depending on the system) it is not possible at once anymore. That's why the ReadTable class offers the Packaging mechanism that is explained in the following.
 

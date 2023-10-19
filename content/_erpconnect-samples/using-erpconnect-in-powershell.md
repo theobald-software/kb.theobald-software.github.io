@@ -6,7 +6,7 @@ permalink: /:collection/:path
 weight: 23
 ---
 
-Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
+Check out our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
 
 n this Article ERPConnect is used in a Powerhell Environment to connect to SAP, extract Data from a table (MAKT) and print it directly to the console in Powershell.
 

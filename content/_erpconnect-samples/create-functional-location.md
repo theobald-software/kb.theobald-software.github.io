@@ -6,7 +6,7 @@ permalink: /:collection/:path
 weight: 41
 ---
 
-Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
+Check out our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
 
 This sample shows how to create a Functional Location. The Functional Location(External Number) must match the structure definied in the exporting parameter STRIND. You can export the default value for the superior functional location under data_specific - SUPFLOC.
 

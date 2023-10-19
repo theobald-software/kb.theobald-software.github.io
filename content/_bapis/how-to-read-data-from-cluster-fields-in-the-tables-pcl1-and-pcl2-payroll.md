@@ -6,7 +6,7 @@ permalink: /:collection/:path
 weight: 8
 ---
 
-Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
+Check out our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
 
 Data from SAP HCM tables PCL1 and PCL2 can only be extracted using the Xtract BAPI component. Data extraction via Xtract Table component is not supported.
 

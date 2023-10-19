@@ -6,7 +6,7 @@ permalink: /:collection/:path
 weight: 44
 ---
 
-Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
+Check out our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
 
 In this sample we are going to change a production order by using the function CLOI_CHANGES_UPL_31. This, for example, could be useful, if an external programm does the planning of the productions orders and sends back the changes to SAP.
 

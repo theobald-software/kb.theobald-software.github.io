@@ -6,7 +6,7 @@ permalink: /:collection/:path
 weight: 34
 ---
 
-Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
+Check out our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
 
 In some situations it might be useful, to use a so called connection pool. This means that several processes or threads are using a set of SAP connections together, e.g. in a web application: 30 users work with an application but there are only 10 concurrent connections to SAP. Everytime an application process needs a connection a free connection is allocated by the pool. After having used the connection it is freed by the process and can now be used by another one.
 

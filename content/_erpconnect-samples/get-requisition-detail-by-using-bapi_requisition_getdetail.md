@@ -6,7 +6,7 @@ permalink: /:collection/:path
 weight: 40
 ---
 
-Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
+Check out our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
 
 To list detailed data on a purchase requisition we use the BAPI BAPI_REQUISITION_GETDETAIL. In our sample we want to get the processing status of a purchase requisition.
 

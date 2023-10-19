@@ -6,7 +6,7 @@ permalink: /:collection/:path
 weight: 35
 ---
 
-Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
+Check out our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
 
 With ERPConnect it is easy to upload documents like excel sheets, word documents or images to the BDS (Business Document Service). All you have to do is to read the file into a byte array and send the array line after line to the function module BDS_BUSINESSDOCUMENT_CREA_TAB.
 

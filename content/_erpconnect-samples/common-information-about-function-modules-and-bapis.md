@@ -6,7 +6,7 @@ permalink: /:collection/:path
 weight: 12
 ---
 
-Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
+Check out our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
 
 Function modules are single functions that are managed by the SAP Function Builder (transaction SE37) and developed in SAP's own programming language, ABAP. The function module should have the attribute Remote Enabled to be called from outside the SAP system via the RFC protocol. It's very easy to call these functions with the help of ERPConnect.net.
 

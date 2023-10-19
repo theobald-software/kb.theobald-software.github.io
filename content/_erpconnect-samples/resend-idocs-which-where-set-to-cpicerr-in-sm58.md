@@ -6,7 +6,7 @@ permalink: /:collection/:path
 weight: 33
 ---
 
-Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
+Check out our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
 
 When IDocs are sent by SAP while the external system is not available at this moment, these IDocs / calls are flagged with error in SM58 (tRFC monitor). The calls are resent automatically after minutes depending on the system configuration.
 

@@ -6,7 +6,7 @@ permalink: /:collection/:path
 weight: 14
 ---
 
-Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
+Check out our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
 
 Of course, ERPConnect is ready for ASP.NET so you will be able to write really cool web applications with a direct link to SAP R/3.
 

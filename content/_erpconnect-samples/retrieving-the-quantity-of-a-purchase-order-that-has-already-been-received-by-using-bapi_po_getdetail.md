@@ -6,7 +6,7 @@ permalink: /:collection/:path
 weight: 37
 ---
 
-Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
+Check out our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
 
 This function shows how to get the history of a purchase order to find out which part of the quantity has already been received.
 

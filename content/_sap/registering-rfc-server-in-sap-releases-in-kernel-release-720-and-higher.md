@@ -6,7 +6,7 @@ permalink: /:collection/:path
 weight: 40
 ---
 
-Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
+Check out our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
 
 As of Kernel Release 720, you can use the parameter *gw/acl_mode* to set an initial security environment with regard to starting and registering external programs e.g., RFC Server required for DeltaQ processing / customizing check. If this value is set to *1*, the DeltaQ component cannot register the RFC Server and the Customizing Check quits with following exception: 
 *RFC server is not working, please check gateway info..*

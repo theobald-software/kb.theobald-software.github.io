@@ -6,7 +6,7 @@ permalink: /:collection/:path
 weight: 8
 ---
 
-Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
+Check out our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
 
 This sample console program shows how to use the function BAPI_BARCODE_SENDLIST to send a list of barcodes to SAP. It is part of the ArchiveLink BAPI.
 

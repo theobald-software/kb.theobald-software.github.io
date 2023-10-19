@@ -6,7 +6,7 @@ permalink: /:collection/:path
 weight: 45
 ---
 
-Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
+Check out our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
 
 The screenshot shows the texts tab in VA01 where the user can store different kinds of texts.
 

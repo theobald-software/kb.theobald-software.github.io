@@ -6,7 +6,7 @@ permalink: /:collection/:path
 weight: 1
 ---
 
-Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
+Check out our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
 
 The dynamization of Xtract IS Table components increases the maintainability of SSIS packages / projects. So-called SSIS expressions based on table properties are used for this functionality. The following table shows all defined table properties that can be used dynamically at runtime of the SSIS package:
 

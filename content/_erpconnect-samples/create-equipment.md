@@ -6,7 +6,7 @@ permalink: /:collection/:path
 weight: 42
 ---
 
-Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
+Check out our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
 
 With this sample you can create equipment. The equipment name (equi_master["EQUIPMENT"]) musst be written in uppercase, otherwise the function won't work. The fields EQUITYPE,INVENTORY and MANFACTURE are optional and can be filled with this function if needed.
 

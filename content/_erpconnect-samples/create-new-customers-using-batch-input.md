@@ -6,7 +6,7 @@ permalink: /:collection/:path
 weight: 46
 ---
 
-Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
+Check out our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
 
 Using the BAPI BAPI_CUSTOMER_CREATEFROMDATA1 is not recommended because this BAPI doesn't support a lot of fields that are needed to create valid customer master data.
 The best way to create a new customer is to use batch input. You can use the transaction recorder located in the installation directory to create a template and then use this template for your own code as described in the manual.

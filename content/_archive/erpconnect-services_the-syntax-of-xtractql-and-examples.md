@@ -6,7 +6,7 @@ permalink: /:collection/:path
 weight: 2
 ---
 
-Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
+Check out our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
 
 The complete syntax of XtractQL language is shown below.
 

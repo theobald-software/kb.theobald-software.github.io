@@ -6,7 +6,7 @@ permalink: /:collection/:path
 weight: 29
 ---
 
-Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
+Check out our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
 
 In the following sample we want to build a RFC server, which supports transactional RFCs.
 

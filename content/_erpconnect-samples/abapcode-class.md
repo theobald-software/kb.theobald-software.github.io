@@ -6,7 +6,7 @@ permalink: /:collection/:path
 weight: 2
 ---
 
-Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
+Check out our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
 
 The class ABAPCode offers nearly unlimited possibilities. You can execute ABAP code on the fly and retrieve the result in a string array. The example below shows how to create a simple ABAP interpreter that executes a dynamic SQL statement.
 

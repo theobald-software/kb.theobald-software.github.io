@@ -6,7 +6,7 @@ permalink: /:collection/:path
 weight: 26
 ---
 
-Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
+Check out our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
 
 This sample shows how to obtain a list of purchase orders. The return value is a DataTable object. To get the function running a connection object (Con) must be available.
 

@@ -6,7 +6,7 @@ permalink: /:collection/:path
 weight: 43
 ---
 
-Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
+Check out our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
 
 This code snippet shows how to obtain an Equipment list. You can use the function module BAPI_EQUI_GETLIST or the business object method PieceOfEquipment.GetList.
 

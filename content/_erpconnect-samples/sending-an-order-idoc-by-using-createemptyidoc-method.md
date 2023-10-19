@@ -6,7 +6,7 @@ permalink: /:collection/:path
 weight: 20
 ---
 
-Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
+Check out our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
 
 We have already discussed IDoc handling in another sample. This time we want to create a more complex IDoc type: ORDERS01. This IDoc will create a sales order in the SAP system.
 

@@ -6,7 +6,7 @@ permalink: /:collection/:path
 weight: 1
 ---
 
-Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
+Check out our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
 
 An ERPConnect Service Application in SharePoint represents the main connectivity component to an SAP system. <br>
 The service application stores all the information required to establish a connection to the SAP system (see screen below). 

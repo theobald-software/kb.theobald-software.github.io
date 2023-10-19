@@ -6,7 +6,7 @@ permalink: /:collection/:path
 weight: 30
 ---
 
-Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
+Check out our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
 
 When extracting BW queries with a huge amount of data it might be useful not to extract the whole result set at once (see also Transferring data packets with ReadTable class ).
 

@@ -6,7 +6,7 @@ permalink: /:collection/:path
 weight: 70
 ---
 
-Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/xtract-universal/security/user-management) for further information.
+Check out our [OnlineHelp](https://help.theobald-software.com/en/xtract-universal/security/user-management) for further information.
 
 ### Target principal
 
