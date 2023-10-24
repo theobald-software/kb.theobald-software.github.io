@@ -69,5 +69,5 @@ Example: 000000000000000023 as input for *p_MATNR_low* and 000000000000000100 as
 
 ****
 #### Related Links
-- [Alteryx Help](https://help.alteryx.com/20212/designer)
+- [Alteryx Help](https://help.alteryx.com/current/en/designer.html)
 - [Alteryx Help: Batch Macros](http://downloads.alteryx.com/betawh_xnext/BatchMacro.htm)

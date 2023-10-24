@@ -116,6 +116,6 @@ You can download the Alteryx workflow for this application here: [yunIO_Customer
 #### Related Links
 - [Download yunIO_Customer_Update.yxwz](/files/yunio/yunIO_Customer_Update.yxwz){:download="yunIO_Customer_Update.yxwz"}
 - [yunIO Online Help](https://help.theobald-software.com/en/yunio/index)
-- [Alteryx Designer Documentation: Data Connection Manager](https://help.alteryx.com/20231/designer/dcm-designer)
-- [Alteryx Designer Documentation: Download-Tool](https://help.alteryx.com/20231/designer/download-tool)
-- [Alteryx Designer Documentation: JSON Build-Tool](https://help.alteryx.com/20231/designer/json-build-tool)
+- [Alteryx Designer Documentation: Data Connection Manager](https://help.alteryx.com/current/en/designer/tools/dcm---designer.html)
+- [Alteryx Designer Documentation: Download-Tool](https://help.alteryx.com/current/en/designer/tools/developer/download-tool.html)
+- [Alteryx Designer Documentation: JSON Build-Tool](https://help.alteryx.com/current/en/designer/tools/developer/json-parse-tool.html)
