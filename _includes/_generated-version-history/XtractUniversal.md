@@ -26,7 +26,7 @@
 |6.0.2 [L]|2023-09-08|General|Fixed the default setting of the config converter for the XU 6 upgrade. Fixed the web worker log window not showing any logs. Fixed some typos in the XU 6.0.0 release notes.|
 |6.0.1 [L]|2023-09-08|Server|Fixed a bug where the web server port was not known after the update to version 6.|
 |[6.0.0 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-6.0.0.html)|2023-09-07|General|**Breaking Changes!** We have rewritten the web API and runtime to improve long term ergonomics, stability and maintainability.([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-6.0.0.html))|
-|5.27.0 [L]|2023-08-22|DeltaQ|Added the new DeltaQ component|
+|[5.27.0 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-5.27.0.html)|2023-08-22|DeltaQ|Added the new DeltaQ component([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-5.27.0.html))|
 |5.26.6 [L]|2023-08-08|Destinations|Fixed Snowflake connection test for non-default schemas|
 |5.26.5 [M]|2023-08-07|DeltaQ|Fixed conversion errors for some data types|
 |5.26.4 [L]|2023-08-07|Destinations|Hana destination: upgraded data provider to version 2.17.22.0 and added support for BIGINT.|

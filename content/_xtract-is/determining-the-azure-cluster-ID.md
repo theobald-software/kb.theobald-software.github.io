@@ -19,7 +19,7 @@ Azure SSIS-IR Cluster ID is needed to create a customer bound license.
 
 The Azure SSIS-IR Cluster ID is composed of the name of the Data Factory and the name of the Integration Runtime.<br>
 Syntax example: `Microsoft.DataFactory/factories/[data factory name]/integrationruntimes/[integration runtime name]`.<br>
-Syntax in the given example: `Microsoft.DataFactory/factories/ADF-XIS-YW/integrationruntimes/ADF-IR-XIS2`
+Syntax in the given example: `Microsoft.DataFactory/factories/Xtract-ADF/integrationruntimes/XTRACT-IR`
 
 ****
 #### Related Links
