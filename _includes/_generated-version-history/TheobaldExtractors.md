@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.48.7 [L]|2023-10-25|TableCDC|The maximum allowed value for the log table size limit has been raised to 500.000 entries.|
 |1.48.6 [L]|2023-10-19|DeltaQ|Fixed DeltaQ check window's help link|
 |1.48.5 [L]|2023-10-11|BAPI|Fix tables in tables|
 |1.48.4 [L]|2023-10-05|ODP|Fixed a bug that caused the preview button to be disabled after initial lookup regardless of whether previewing was supported by the provider|
