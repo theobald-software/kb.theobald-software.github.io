@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|7.7.2 [L]|2023-10-25|NWRFC|Fixed a parallelization issue caused by limitations in the callback handling when using NWRFC.|
 |7.7.1 [L]|2023-07-12|General|Replaced AbapSignedNumericCharacter.ToLong() with AbapSignedNumericCharacter.ToDecimal()|
 |7.7.0 [L]|2023-06-04|General|Added AbapSignedNumericCharacter|
 |7.6.1 [L]|2023-04-05|RFC Client|R3Connection.GetSSOTicket() now supports SNC SSO with NWRFC|
