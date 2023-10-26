@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.25.2 [L]|2023-10-26|Designer|Service filtering UI improvement.|
 |1.25.1 [L]|2023-10-18|Designer|Designer run dialog output buttons fix.|
 |1.25.0 [L]|2023-10-17|Designer|Run dialog: output with a browsable results|
 |1.24.0 [M]|2023-10-13|General|Function: Add support for various scenarios with nested output tables|
