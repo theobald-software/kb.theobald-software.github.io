@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.49.0 [M]|2023-10-26|Table|Released /THEO/READ_TABLE function module.|
 |1.48.7 [L]|2023-10-25|TableCDC|The maximum allowed value for the log table size limit has been raised to 500.000 entries.|
 |1.48.6 [L]|2023-10-19|DeltaQ|Fixed DeltaQ check window's help link|
 |1.48.5 [L]|2023-10-11|BAPI|Fix tables in tables|
