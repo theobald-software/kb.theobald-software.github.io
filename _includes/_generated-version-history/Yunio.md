@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.25.3 [L]|2023-10-27|Runtime|yunIOs server version will now be logged to the services log after its creation.|
 |1.25.2 [L]|2023-10-26|Designer|Service filtering UI improvement.|
 |1.25.1 [L]|2023-10-18|Designer|Designer run dialog output buttons fix.|
 |1.25.0 [L]|2023-10-17|Designer|Run dialog: output with a browsable results|
