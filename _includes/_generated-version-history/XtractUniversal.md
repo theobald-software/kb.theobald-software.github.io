@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.1.2 [L]|2023-10-31|Destinations|Changed Snowflake definition window to list only internal stages to be selected|
 |[6.1.1 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-6.1.1.html)|2023-10-27|Server|Small fixes and improvements for error handling, scripting and logging.([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-6.1.1.html))|
 |6.1.0 [L]|2023-10-19|Destinations|Removed the Hadoop destination|
 |6.0.24 [L]|2023-10-17|General|Fixed RequestSize error in xu.exe. Removed an external dependency of xu.exe.|
