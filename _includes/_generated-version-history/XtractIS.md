@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|7.4.2 [L]|2023-11-02|Query|Fixed a bug where data was not converted to XIS data types.|
 |7.4.1 [L]|2023-10-25|Table|Fixed crashes occurring when running table extractions in parallel.|
 |7.4.0 [L]|2023-10-09|Query|New Query Extractor|
 |7.3.0 [M]|2023-09-05|TableCDC|Added Table CDC component|
