@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.1.4 [L]|2023-11-02|DeltaQ|Slightly refactored some DeltaQ windows|
 |6.1.3 [L]|2023-10-31|Query|Fixed a bug that caused legacy queries with obligatory selection parameters to not be converted correctly.|
 |6.1.2 [L]|2023-10-31|Destinations|Changed Snowflake definition window to list only internal stages to be selected|
 |[6.1.1 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-6.1.1.html)|2023-10-27|Server|Small fixes and improvements for error handling, scripting and logging.([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-6.1.1.html))|
