@@ -1,5 +1,7 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|7.4.4 [L]|2023-11-02|License Manager|Removed UninstallDllLicense.bat|
+|7.4.3 [L]|2023-11-02|DeltaQ|Replaced the XtractKernel.DeltaQ component with Theobald.Extractors.DeltaQ|
 |7.4.2 [L]|2023-11-02|Query|Fixed a bug where data was not converted to XIS data types.|
 |7.4.1 [L]|2023-10-25|Table|Fixed crashes occurring when running table extractions in parallel.|
 |7.4.0 [L]|2023-10-09|Query|New Query Extractor|
