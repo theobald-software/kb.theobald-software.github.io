@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.50.2 [L]|2023-11-06|BAPI|Fixed a bug that caused invalid results when function modules contained DECFLOAT16/34 parameters or fields|
 |1.50.1 [L]|2023-11-03|General|Do not fallback to default, if SNC environment variable is not set|
 |1.49.2 [L]|2023-11-02|DeltaQ|Slightly refactored the DeltaQ extractor|
 |1.49.1 [L]|2023-10-31|TableCDC|Added support for SAP systems below version 7.40SP05. Requires /THEO/READ_TABLE to be installed.|
