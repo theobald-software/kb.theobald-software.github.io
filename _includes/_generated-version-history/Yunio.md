@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.26.2 [L]|2023-11-09|Designer|Designer Run Dialog Input Parameters: improved nested arrays of scalars.|
 |1.26.1 [L]|2023-11-09|General|Fixed an error caused by a missing library.|
 |1.26.0 [L]|2023-11-09|Designer|Designer Run Dialog: UI for Input Parameters|
 |1.25.4 [L]|2023-11-08|General|Improved toast pop up in case of showing exceptions, so you can now copy the stacktrace of the excpetion to the clipboard.|
