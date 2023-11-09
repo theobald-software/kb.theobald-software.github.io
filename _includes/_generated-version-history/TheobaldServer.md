@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.0.15 [L]|2023-11-09|General|Fixed a bug where runtime parameters were not passed on to the destination.|
 |4.0.14 [L]|2023-11-03|General|Only override SNC library path for Designer connections, if environment variable is set|
 |[4.0.13 [L]](https://kb.theobald-software.com/release-notes/TheobaldServer-4.0.13.html)|2023-10-27|General|Small fixes and improvements to error handling, scripting and logging.([Release note](https://kb.theobald-software.com/release-notes/TheobaldServer-4.0.13.html))|
 |4.0.12 [L]|2023-10-24|General|Fixed a bug that caused custom runtime parameter values to not be passed to the Query extractor.|
