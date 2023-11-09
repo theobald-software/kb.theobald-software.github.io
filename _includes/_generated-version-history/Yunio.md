@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.26.0 [L]|2023-11-09|Designer|Designer Run Dialog: UI for Input Parameters|
 |1.25.4 [L]|2023-11-08|General|Improved toast pop up in case of showing exceptions, so you can now copy the stacktrace of the excpetion to the clipboard.|
 |1.25.3 [L]|2023-10-27|Runtime|yunIOs server version will now be logged to the services log after its creation.|
 |1.25.2 [L]|2023-10-26|Designer|Service filtering UI improvement.|
