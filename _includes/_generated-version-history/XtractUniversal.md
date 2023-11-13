@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.1.8 [L]|2023-11-13|Server|Fixed a bug where an extraction would fail with a license error.|
 |6.1.7 [L]|2023-11-09|Destinations|Added the OneTransaction transaction style in the Snowflake destination|
 |6.1.6 [L]|2023-11-09|Destinations|Fixed a bug where custom SQL ad-hoc parameters were not evaluated.|
 |6.1.5 [L]|2023-11-09|BW Cube|Fixed an issue that caused errors when using MDX cube selections with list runtime parameters in script expressions |
