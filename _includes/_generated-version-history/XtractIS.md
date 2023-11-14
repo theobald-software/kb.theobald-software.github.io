@@ -1,6 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
-|7.4.6 [L]|2023-11-13|BAPI|Fixed a bug that caused errors while converting old tasks that assigned a single variable to multiple parameters|
+|7.4.6 [L]|2023-11-13|BAPI|Fixed a bug that caused errors while converting old tasks (created in versions earlier than 6.10.0) that assigned a single variable to multiple parameters|
 |7.4.5 [M]|2023-11-06|DeltaQ|Fixed legacy update mode variable|
 |7.4.4 [L]|2023-11-02|License Manager|Removed UninstallDllLicense.bat|
 |7.4.3 [L]|2023-11-02|DeltaQ|Replaced the XtractKernel.DeltaQ component with Theobald.Extractors.DeltaQ|
