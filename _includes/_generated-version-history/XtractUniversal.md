@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.1.10 [L]|2023-11-15|Server|Fixed a bug causing cache entries of failed extractions to not be invalidated correctly. Fixed the timestamp format for script expression of `Extraction.Timestamp`.|
 |6.1.9 [L]|2023-11-14|xu-config|Updated remaining XtractKernel DeltaQ definition in xu-config.exe|
 |6.1.8 [H]|2023-11-13|General|Fixed a bug where extractions would fail with a license expired error. Issue affects all XU releases since 6.0.|
 |6.1.7 [L]|2023-11-09|Destinations|Added the OneTransaction transaction style in the Snowflake destination|
