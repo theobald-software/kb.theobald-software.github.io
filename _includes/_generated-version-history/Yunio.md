@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.26.4 [L]|2023-11-15|Designer|Designer improvement: addressed flickering on page navigation.|
 |1.26.3 [L]|2023-11-13|Designer|Swagger filename, pre-support for Nintex xtensions OpenApi format.|
 |1.26.2 [L]|2023-11-09|Designer|Designer Run Dialog Input Parameters: improved nested arrays of scalars.|
 |1.26.1 [L]|2023-11-09|General|Fixed an error caused by a missing library.|
