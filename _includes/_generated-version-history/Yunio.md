@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.27.0 [L]|2023-11-15|Designer|Designer: added a Run button in the header to conveniently switch from the edit mode.|
 |1.26.4 [L]|2023-11-15|Designer|Designer improvement: addressed flickering on page navigation.|
 |1.26.3 [L]|2023-11-13|Designer|Swagger filename, pre-support for Nintex xtensions OpenApi format.|
 |1.26.2 [L]|2023-11-09|Designer|Designer Run Dialog Input Parameters: improved nested arrays of scalars.|
