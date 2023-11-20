@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.50.5 [L]|2023-11-20|Table|Fixed an issue where data would not be properly extracted when using STREAM_READ_TABLE function modules in combination with some SAP code pages.|
 |1.50.4 [L]|2023-11-09|Table|Added a separate /THEO/READ_TABLE transport request for SAP versions 6.40 to 7.03.|
 |1.50.3 [L]|2023-11-09|BW Cube|Improved handling of list runtime parameters in MDX filter selections|
 |1.50.2 [L]|2023-11-06|BAPI|Fixed a bug that caused invalid results when function modules contained DECFLOAT16/34 parameters or fields|
