@@ -26,7 +26,7 @@ Target audience: Customers who utilize Azure Data Factory (ADF) as a platform fo
 
 - Xtract Universal offers a Web-API through which various actions can be performed via http(s) calls:
 	- Xtract Universal extractions can be triggered via http(s), see [Call via Webservice](https://help.theobald-software.com/en/xtract-universal/execute-and-automate-extractions/call-via-webservice).
-	- The status of an extraction can be queried using the extraction's name and timestamp, see [Querying the extraction status ](https://help.theobald-software.com/en/xtract-universal/logging/logging-access-via-http#querying-the-extraction-status).
+	- The status of an extraction can be queried using the extraction's name and timestamp, see [Querying the extraction status ](https://help.theobald-software.com/en/xtract-universal/logging/logging-access-via-http#query-the-extraction-status).
 	- The extraction's log can be requested, see [HTTP Log Parameter ](https://help.theobald-software.com/en/xtract-universal/logging/logging-access-via-http#http-log-parameter).
 	- XU extractions can be triggered with an asynchronous mode, see [Options for Calling Extractions](https://help.theobald-software.com/en/xtract-universal/execute-and-automate-extractions/call-via-webservice#options-for-calling-extractions): An http response containing the extraction's timestamp is immediately returned to the caller (ADF pipeline). The extraction keeps on running on the XU side.
 	- A list of XU extractions writing to a specific destination can be requested, see [List of extractions with a specific destination type ](https://help.theobald-software.com/en/xtract-universal/advanced-techniques/metadata-access-via-http-json#list-of-extractions-with-a-specific-destination-type) .
