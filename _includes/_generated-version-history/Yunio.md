@@ -1,6 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
-|1.27.1 [L]|2023-11-16|Designer|Bugfix: Designer table service, column sort now respects the selection set by select-all checkbox|
+|1.27.1 [L]|2023-11-16|Designer|Fixed a bug in the designer for table service, column sort now respects the selection set by select-all checkbox|
 |1.27.0 [L]|2023-11-15|Designer|Designer: added a Run button in the header to conveniently switch from the edit mode.|
 |1.26.4 [L]|2023-11-15|Designer|Designer improvement: addressed flickering on page navigation.|
 |1.26.3 [L]|2023-11-13|Designer|Swagger filename, pre-support for Nintex xtensions OpenApi format.|
