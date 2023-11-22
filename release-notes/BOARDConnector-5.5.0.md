@@ -6,6 +6,7 @@ layout: releaseNotes
 
 Config files need to be [converted when upgrading.](https://help.theobald-software.com/en/board-connector/introduction/installation-and-update#upgrading-major-releases---configconverter)
 
+
 ## General improvements
 - Introduction of a new column name style "Text" that replaces the "Use description for columns" setting. Column names might not be unique with this style. Use at own risk.
 - Definition of runtime parameters as known from other extractors for manual filters and BEx variables
