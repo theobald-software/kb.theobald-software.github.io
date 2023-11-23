@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.50.8 [L]|2023-11-23|Hierarchy|Added /THEO/READ_TABLE as most preferred internal table extraction function module|
 |[1.50.7 [L]](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.50.7.html)|2023-11-23|Table|Updated /THEO/READ_TABLE to version 3.1([Release note](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.50.7.html))|
 |1.50.6 [L]|2023-11-22|Hierarchy|Fixed a bug where no description texts were retrieved. Extractor now uses a fallback logic where the longest available and non-empty text is retrieved.|
 |1.50.5 [L]|2023-11-20|Table|Fixed an issue where data would not be properly extracted when using STREAM_READ_TABLE function modules in combination with some SAP code pages.|
