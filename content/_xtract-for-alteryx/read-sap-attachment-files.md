@@ -88,8 +88,7 @@ Follow the steps below to download SAP attachment files using their Object ID as
 11. Define an Object ID as the input for the runtime parameter of the Xtract BAPI component, e.g., *FOL18          4 EXT45000000000229*.<br>
 **Tip:** Object IDs are available in the SAP table SRGBTBREL, see [Get a List of all SAP Attachments](#get-a-list-of-all-sap-attachments).
 ![attachment-files-bapi-input](/img/contents/xfa/attachment-files-bapi-input.png){:class="img-responsive"}
-12. Add a **Summarize** tool (4) to concatenate the multi-line HEX string returned by the Xtract BAPI component into a single line.<br>
-![attachment-files-workflow2](/img/contents/xfa/attachment-files-workflow2.png){:class="img-responsive"}
+12. Add a **Summarize** tool (4) to concatenate the multi-line HEX string returned by the Xtract BAPI component into a single line.
 13. Add a **Select** (5) and a **Formula** tool to concatenate the file name using the Xtract BAPI output fields OBJDES and FILE_EXT, e.g., `example.pdf`.<br>
 ![attachment-files-formula-filename](/img/contents/xfa/attachment-files-formula-filename.png){:class="img-responsive"}
 14. Add a **Append Fields** tool to append the file name to the HEX string.<br>
