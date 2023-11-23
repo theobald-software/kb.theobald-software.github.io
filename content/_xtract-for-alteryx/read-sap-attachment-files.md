@@ -6,7 +6,7 @@ permalink: /:collection/:path
 weight: 180
 ---
 
-The following article shows how to extract attachment files of all formats from an SAP systems, e.g., .pdf files of purchase orders.<br>
+The following article shows how to extract attachment files of all formats from an SAP system, e.g., .pdf files of purchase orders.<br>
 
 ### About this Workflow
 
@@ -20,7 +20,7 @@ This article leads you through all necessary steps to set up the following workf
 | SAP ERP | *SO_DOCUMENT_READ_API1* (SAPoffice: View object from folder using RFC) | Xtract BAPI |
 
 
-You can download the Alteryx workflow for this application in the [Alteryx Community - Read SAP Attachment Files](...).
+You can download the Alteryx workflow for this application in the [Alteryx Community - Read SAP Attachment Files](https://community.alteryx.com/t5/Community-Gallery/Read-and-Download-SAP-Attachment-Files-using-Xtract-for-Alteryx/ta-p/1212418).
 <!---
 ![sap-attachments-workflow](/img/contents/xfa/sap-attachments-workflow.png){:class="img-responsive"}
 -->
@@ -102,7 +102,7 @@ BLOB data types can store multiple file types, e.g., images, audio, and other ob
 
 *****
 #### Related Links
-- [Alteryx Community - Read SAP Attachment Files](...)
+- [Alteryx Community - Read SAP Attachment Files](https://community.alteryx.com/t5/Community-Gallery/Read-and-Download-SAP-Attachment-Files-using-Xtract-for-Alteryx/ta-p/1212418)
 - [Online Help: Xtract Table](https://help.theobald-software.com/en/xtract-for-alteryx/table)
 - [Online Help: Xtract BAPI](https://help.theobald-software.com/en/xtract-for-alteryx/bapi)
 - [Online Help: Sample Workflows](https://help.theobald-software.com/en/xtract-for-alteryx/sample-workflows)
