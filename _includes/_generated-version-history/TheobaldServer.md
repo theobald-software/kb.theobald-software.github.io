@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.0.18 [L]|2023-11-24|General|Fixed a bug causing failed extractions when using Not Assigned (#) member in MDX cube filter.|
 |4.0.17 [L]|2023-11-20|General|Fixed a bug where a cache entry would not be invalidated when aborting the extraction. Fixed a bug where the cache entries for an extraction would not get deleted due to wrong directory operations.|
 |4.0.16 [L]|2023-11-15|General|Fixed a bug causing cache entries of failed extractions to not be invalidated correctly. Fixed the timestamp format for script expression of `Extraction.Timestamp`.|
 |4.0.15 [L]|2023-11-09|General|Fixed a bug where runtime parameters were not passed on to the destination.|
