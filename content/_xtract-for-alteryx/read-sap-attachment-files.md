@@ -29,8 +29,8 @@ You can download the Alteryx workflow for this application in the [Alteryx Commu
 ### Get a List of all SAP Attachments
 
 Follow the steps below to set up the following workflow:
-- Read the table SRGBTBREL to get all Object IDs that are attached to business objects
-- Read the table SOOD to get the corresponding file names and extensions of the Object IDs.
+- Read the table *SRGBTBREL* to get all object IDs that are attached to business objects
+- Read the table *SOOD* to get the corresponding file names and extensions of the object IDs.
 
 #### Get a List of Object IDs
 
