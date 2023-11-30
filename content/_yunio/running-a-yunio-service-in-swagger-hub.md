@@ -2,6 +2,8 @@
 layout: page
 title: Running a yunIO Service in SwaggerHub
 description: Running a yunIO Service in SwaggerHub
+redirect_from:
+  - running-a-yunio-service-in-swagger-inspector
 permalink: /:collection/:path
 weight: 2
 ---
