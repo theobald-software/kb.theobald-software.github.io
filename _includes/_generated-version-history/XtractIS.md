@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|7.4.7 [L]|2023-11-30|DeltaQ|Changed DeltaQ legacy reader to skip selection filters without corresponding field|
 |7.4.6 [L]|2023-11-13|BAPI|Fixed a bug that caused errors while converting old tasks (created in versions earlier than 6.10.0) that assigned a single variable to multiple parameters|
 |7.4.5 [M]|2023-11-06|DeltaQ|Fixed legacy update mode variable|
 |7.4.4 [L]|2023-11-02|License Manager|Removed UninstallDllLicense.bat|
