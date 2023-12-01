@@ -6,6 +6,11 @@ permalink: /:collection/:path
 weight: 3
 ---
 
+
+<!---
+move to: https://help.theobald-software.com/en/erpconnect/special-classes/managing-and-executing-transactions-the-class-transaction
+-->
+
 Working up to SAP GUI 7.50
 
 The class Transaction offers the possibility of executing SAP transactions in the foreground as well as in a background process. This technique is called Batch Input. By executing in a background process, you will be able to process mass data and transfer it to the SAP system. This technique is often used if no BAPI exists.
@@ -15,63 +20,55 @@ Another possibility is to jump directly to an SAP transaction from your .NET app
 The user is able to enter a material number and the name of a plant. After doing so, she/he can click the button and the SAP GUI is launched with transaction MMBE (stock overview). A special tool, the TransactionRecorder, is also included in the installation package to record such transactions and implement them easily in your own program code.
 
 
-<details>
-<summary>[C#]</summary>
-{% highlight csharp %}
-private void button1_Click(object sender, System.EventArgs e)
-{
-    // Reset the batch steps
-    transaction1.BatchSteps.Clear();
-  
-    // fill new steps
-    transaction1.ExecutionMode =    ERPConnect.Utils.TransactionDialogMode.ShowOnlyErrors;
-    transaction1.TCode = "MMBE";
-    transaction1.AddStepSetNewDynpro("RMMMBEST","1000");
-    transaction1.AddStepSetOKCode("ONLI");
-    transaction1.AddStepSetCursor("MS_WERKS-LOW");
-    transaction1.AddStepSetField("MS_MATNR-LOW",textBox1.Text);
-    transaction1.AddStepSetField("MS_WERKS-LOW",textBox2.Text);
-  
-    // connect to SAP
-    r3Connection1.UseGui = true;
-  
-   R3Connection r3Connection1= new R3Connection("SAPServer",00,"SAPUser","Password","EN","800");
-     r3Connection1.Open(false);
-     // Run
-     transaction1.Execute();
-  
-}
-{% endhighlight %}
-</details>
+```csharp
+using System;
+using ERPConnect;
+using ERPConnect.Utils;
 
-<details>
-<summary>[VB]</summary>
-{% highlight visualbasic %}
-Private Sub button1_Click(ByVal sender As System.Object, _
-         ByVal e As System.EventArgs) Handles button1.Click
-  
-        ' Reset the batch steps
-        transaction1.BatchSteps.Clear()
-  
-        ' fill new steps
-        transaction1.ExecutionMode = ERPConnect.Utils.TransactionDialogMode.ShowOnlyErrors
-        transaction1.TCode = "MMBE"
-        transaction1.AddStepSetNewDynpro("RMMMBEST", "1000")
-        transaction1.AddStepSetOKCode("ONLI")
-        transaction1.AddStepSetCursor("MS_WERKS-LOW")
-        transaction1.AddStepSetField("MS_MATNR-LOW", textBox1.Text)
-        transaction1.AddStepSetField("MS_WERKS-LOW", textBox2.Text)
-  
-        ' connect to SAP
-        r3Connection1.UseGui = True
-  
-        Dim r3Connection1 As New R3Connection("SAPServer",00,"SAPUser","Password","EN","800")
-        con.Open(False)
-            transaction1.Execute()
-         
-  
-    End Sub
-{% endhighlight %}
-</details>
+// Set your ERPConnect license
+LIC.SetLic("xxxx");
+
+using var connection = new R3Connection(
+    host: "server.acme.org",
+    systemNumber: 00,
+    userName: "user",
+    password: "passwd",
+    language: "EN",
+    client: "001")
+{
+    Protocol = ClientProtocol.NWRFC,
+    UseGui = true,
+};
+
+connection.Open();
+
+Console.Write("Material: ");
+string material = Console.ReadLine();
+
+Console.Write("Plant: ");
+string plant = Console.ReadLine();
+
+var transaction = new Transaction(connection)
+{
+    ExecutionMode = TransactionDialogMode.ShowAll,
+    TCode = "MMBE"
+};
+
+transaction.AddStepSetNewDynpro("RMMMBEST", "1000");
+transaction.AddStepSetOKCode("ONLI");
+transaction.AddStepSetCursor("MS_WERKS-LOW");
+transaction.AddStepSetField("MS_MATNR-LOW", material);
+transaction.AddStepSetField("MS_WERKS-LOW", plant);
+
+// run
+transaction.Execute();
+```
+
+Input:
+```
+Material: 100-100
+Plant: 1000
+```
+
 
 ![MMBE1_kl](/img/contents/MMBE1_kl.jpg){:class="img-responsive"}

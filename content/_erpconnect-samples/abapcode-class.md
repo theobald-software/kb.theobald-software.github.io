@@ -6,61 +6,86 @@ permalink: /:collection/:path
 weight: 2
 ---
 
-Check out our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
+<!---
+move to: https://help.theobald-software.com/en/erpconnect/special-classes/abap-code
+-->
 
-The class ABAPCode offers nearly unlimited possibilities. You can execute ABAP code on the fly and retrieve the result in a string array. The example below shows how to create a simple ABAP interpreter that executes a dynamic SQL statement.
+The class ABAPCode offers nearly unlimited possibilities. You can execute ABAP code on the fly and retrieve the result in a string array.
 
-Like other client classes, ABAPCode needs a valid R/3 connection. With the help of the method AddCodeLine, a new line of code will be added to the dynamic report. The report will be executed via Execute. The result set (regarding the ABAP list) can be read by the method GetResultLine.
+### Creating an ABAP Interpreter
+The following sample shows how to create a simple ABAP interpreter that executes a dynamic SQL statement.
 
-<details>
-<summary>[C#]</summary>
-{% highlight csharp %}
-private void button1_Click(object sender, System.EventArgs e)
-        {
-            R3Connection con = new R3Connection("SAPServer",00,"SAPUser","Password","EN","800");
-            con.Open(false);
-            ERPConnect.Utils.ABAPCode code = new ERPConnect.Utils.ABAPCode();
-            code.Connection = con;
-  
-            foreach(string s in textBox1.Lines)
-                code.AddCodeLine(s);
-  
-            if (code.Execut e())
-            {
-                for(int i=0; i < code.ResultLineCount; i++)
-                    textBox2.Text += code.GetResultLine(i) + "\r\n";
-            }
-            else
-                textBox2.Text = "ABAP Error: " + code.LastABAPSyntaxError;
-        }
-{% endhighlight %}
-</details>
+1. Open a client connection to the R/3 system using *R3Connection*.
+2. Add a new line of code to the dynamic report using *AddCodeLine*.
+3. Execute the report using *Execute*.
+4. Read the result set (regarding the ABAP list) using *GetResultLine*.
 
-<details>
-<summary>[VB]</summary>
-{% highlight visualbasic %}
-Private Sub button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles button1.Click
-        Dim con As New R3Connection("SAPServer",00,"SAPUser","Password","EN","800")
-        con.Open(False)
-  
-        Dim code = New ERPConnect.Utils.ABAPCode
-        code.Connection = con
-  
-        Dim s As String
-        For Each s In textBox1.Lines
-            code.AddCodeLine(s)
-        Next
-  
-        Dim i As Integer
-        If code.Execut e() Then
-            For i = 0 To code.ResultLineCount - 1
-                textBox2.Text += code.GetResultLine(i) + vbCrLf
-            Next
-        Else
-            textBox2.Text = "ABAP Error: " + code.LastABAPSyntaxError
-        End If
-    End Sub
-{% endhighlight %}
-</details>
+```csharp
+using System;
+using ERPConnect;
+using ERPConnect.Utils;
+
+// Set your ERPConnect license
+LIC.SetLic("xxxx");
+
+// Open the connection to SAP
+using var connection = new R3Connection(
+    host: "server.acme.org",
+    systemNumber: 00,
+    userName: "user",
+    password: "passwd",
+    language: "EN",
+    client: "001")
+{
+    Protocol = ClientProtocol.NWRFC,
+};
+
+connection.Open();
+
+const string code =
+    """
+    REPORT ztestreport NO STANDARD PAGE HEADING.
+
+    TABLES kna1.
+
+    DATA c TYPE i.
+
+    SELECT COUNT(*) INTO c FROM kna1.
+
+    WRITE: /'System time ', sy-timlo.
+    WRITE: /'Number of rows in KNA1: ', c.
+    """;
+
+var abapCode = new ABAPCode
+{
+    Connection = connection
+};
+
+string[] lines = code.Split('\n');
+foreach (string s in lines)
+{
+    abapCode.AddCodeLine(s.Trim());
+}
+
+if (abapCode.Execute())
+{
+    for (int i = 0; i < abapCode.ResultLineCount; i++)
+    {
+        Console.WriteLine(abapCode.GetResultLine(i));
+    }
+}
+else
+{
+    Console.WriteLine($"ABAP Error: {abapCode.LastABAPSyntaxError}");
+}
+```
+
+Output:
+```
+System time  11:17:46
+Number of rows in KNA1:       7.705
+```
+
 
 ![ABAPPad](/img/contents/ABAPPad.jpg){:class="img-responsive"}
+

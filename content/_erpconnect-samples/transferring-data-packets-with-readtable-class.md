@@ -6,70 +6,74 @@ permalink: /:collection/:path
 weight: 6
 ---
 
-Check out our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
+This article shows how to use the data packaging mechanism of the the *ReadTable* class.
 
-If you want to extract more than a certain number of table rows (between 100,000 and 1,000,000 depending on the system) it is not possible at once anymore. That's why the ReadTable class offers the Packaging mechanism that is explained in the following.
+### About 
 
-- Set the property PackageSize to a value greater than 0 to enable packaging.
-- Set the property RaiseIncomingPackageEvent to true to enable the event to be raised when a new data packet has to be processed.
-- Implement the IncomingPackage event to process each data packet. The packet will be provided as a Datatable object.
+Table extractions have a limit of table rows that can be extracted at once (between 100,000 and 1,000,000 depending on the system).
+To avoid this limitation, the *ReadTable* class offers a packaging mechanism to extract a huge number of table rows.
 
-<details>
-<summary>[C#]</summary>
-{% highlight csharp %}
-static void Main(string[] args)
+{: .box-note }
+**Note:** The SAP standard function module RFC_READ_TABLE is not suited for mass data extraction. 
+
+### Set Up Data Packaging
+
+1. Set the *ReadTable* property *PackageSize* to a value greater than 0 to enable packaging.
+2. Set the *ReadTable* property *RaiseIncomingPackageEvent* to *true* to raise an event *IncomingPackage* when a new data packet is processed.
+3. Implement the *IncomingPackage* event to process each data packet. The packet is provided as a *Datatable* object.
+
+```csharp 
+using System;
+using System.Data;
+using ERPConnect;
+using ERPConnect.Utils;
+
+// Set your ERPConnect license
+LIC.SetLic("xxxx");
+
+using var connection = new R3Connection(
+    host: "server.acme.org",
+    systemNumber: 00,
+    userName: "user",
+    password: "passwd",
+    language: "EN",
+    client: "001")
 {
-    R3Connection con = new R3Connection("XXX", 11, "XXX", 
-        "XXX", "DE", "800");
-  
-    con.Open();
-  
-    ReadTable read = new ReadTable(con);
-    read.PackageSize = 10000;
-    read.RaiseIncomingPackageEvent = true;
-    read.TableName = "MKPF";
-    read.IncomingPackage += new ReadTable.OnIncomingPackage(read_IncomingPackage);
-  
-    read.Run();
-  
-    Console.WriteLine("Press enter to exit");
-    Console.ReadLine();
-}
-  
-static void read_IncomingPackage(ReadTable Sender, DataTable PackageResult)
-{
-    Console.WriteLine("Processing data package with " + 
-        PackageResult.Rows.Count.ToString() + " rows");
-}
-{% endhighlight %}
-</details>
+    Protocol = ClientProtocol.NWRFC,
+};
 
-<details>
-<summary>[VB]</summary>
-{% highlight visualbasic %}
-Imports ERPConnect
-Imports ERPConnect.Utils
-  
-Module Module1
-  
-  Dim con As New R3Connection("xxx", 7, "xxx", "xxx", "DE", "800")
-  Dim WithEvents read As New ReadTable(con)
-  
-Sub Main()
-   con.Open()
-   read.PackageSize = 10000
-   read.RaiseIncomingPackageEvent = True
-   read.TableName = "MKPF"
-   read.Run()
-   Console.WriteLine("Press enter to exit")
-   Console.ReadLine()
-End Sub
-  
-Public Sub OnIncomingPackage(ByVal Sender As ERPConnect.Utils.ReadTable, _
-  ByVal PackageResult As System.Data.DataTable) Handles read.IncomingPackage
-  Console.WriteLine("Processing data package with " + _
-                    PackageResult.Rows.Count.ToString() + " rows")
-End Sub
-End Module
-{% endhighlight %}
-</details>
+connection.Open();
+
+var read = new ReadTable(connection)
+{
+    PackageSize = 10000,
+    RaiseIncomingPackageEvent = true,
+    TableName = "MKPF"
+};
+
+read.IncomingPackage += OnIncomingPackage;
+
+read.Run();
+
+Console.WriteLine("Press enter to exit");
+Console.ReadLine();
+return;
+
+static void OnIncomingPackage(ReadTable sender, DataTable packageResult)
+{
+    Console.WriteLine($"Processing data package with {packageResult.Rows.Count} rows");
+}
+```
+
+Output:
+```
+Processing data package with 10000 rows
+Processing data package with 10000 rows
+Processing data package with 10000 rows
+Processing data package with 10000 rows
+Processing data package with 10000 rows
+Processing data package with 10000 rows
+Processing data package with 10000 rows
+Processing data package with 798 rows
+Press enter to exit
+```
