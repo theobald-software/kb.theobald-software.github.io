@@ -3,7 +3,7 @@ layout: page
 title: Integrating a yunIO Service via Nintex Gateway
 description: Integrating a yunIO Service with Nintex
 permalink: /:collection/:path
-weight: 5
+weight: 4
 progressstate: 5
 ---
 
