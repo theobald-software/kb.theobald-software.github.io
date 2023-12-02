@@ -1,24 +1,39 @@
 ---
 layout: page
-title: Reset User's Password
+title: Reset the Password of an SAP User
 description: Reset User's Password
 permalink: /:collection/:path
 weight: 7
 ---
 
-The sample below shows how to reset a user's password. 
-This might be useful in web portals with employee self services.  
+This sample shows how to reset the password of an SAP user using the BAPI BAPI_USER_CHANGE. 
 
-<details>
-<summary>Click to open C# example.</summary>
-{% highlight csharp %}
-// open connection
-ERPConnect.R3Connection con = new R3Connection("SAPServer",00,"SAPUser","Password","EN","800");
-ERPConnect.LIC.SetLic("xxxxxxxxxxxxx"); //Set your ERPConnect License.
+{: .box-tip }
+**Tip:** Resetting the password of SAP users can be useful in web portals with employee self services.  
 
-con.Open();  //Open the connection to SAP.
+```csharp
+using System;
+using ERPConnect;
+using ERPConnect.Utils;
+
+// Set your ERPConnect license
+LIC.SetLic("xxxx");
+
+// Open the connection to SAP
+using var connection = new R3Connection(
+    host: "server.acme.org",
+    systemNumber: 00,
+    userName: "user",
+    password: "passwd",
+    language: "EN",
+    client: "001")
+{
+    Protocol = ClientProtocol.NWRFC,
+};
+
+connection.Open();
   
-RFCFunction func = con.CreateFunction("BAPI_USER_CHANGE");
+RFCFunction func = connection.CreateFunction("BAPI_USER_CHANGE");
   
 Console.WriteLine("Please type user's name to reset password");
 string UserName = Console.ReadLine();
@@ -32,10 +47,10 @@ func.Execute();
 foreach(RFCStructure retrow in func.Tables["RETURN"].Rows)
     Console.WriteLine(retrow["MESSAGE"].ToString());
   
-con.Close();
+connection.Close();
   
 Console.WriteLine("");
 Console.WriteLine("Press enter to quit.");
 Console.ReadLine();
-{% endhighlight %}
-</details>
+
+```

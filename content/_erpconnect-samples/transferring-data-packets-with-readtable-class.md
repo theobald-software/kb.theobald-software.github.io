@@ -1,12 +1,12 @@
 ---
 layout: page
-title: Transferring data packets with ReadTable class
+title: Transferring data packets with ReadTable
 description: Transferring data packets with ReadTable class
 permalink: /:collection/:path
 weight: 6
 ---
 
-This article shows how to use the data packaging mechanism of the the *ReadTable* class.
+This sample shows how to use the data packaging mechanism of the *ReadTable* class.
 
 ### About 
 
@@ -18,9 +18,11 @@ To avoid this limitation, the *ReadTable* class offers a packaging mechanism to 
 
 ### Set Up Data Packaging
 
-1. Set the *ReadTable* property *PackageSize* to a value greater than 0 to enable packaging.
-2. Set the *ReadTable* property *RaiseIncomingPackageEvent* to *true* to raise an event *IncomingPackage* when a new data packet is processed.
-3. Implement the *IncomingPackage* event to process each data packet. The packet is provided as a *Datatable* object.
+Follow the steps below to set up data packaging:
+
+1. Set the *ReadTable* property `PackageSize` to a value greater than 0 to enable packaging.
+2. Set the *ReadTable* property `RaiseIncomingPackageEvent` to *true* to raise an event `IncomingPackage` when a new data packet is processed.
+3. Implement the `IncomingPackage` event to process each data packet. The packet is provided as a *Datatable* object.
 
 ```csharp 
 using System;

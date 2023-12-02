@@ -6,22 +6,42 @@ permalink: /:collection/:path
 weight: 11
 ---
 
-Check out our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
 
-Cost center hierarchies are stored in SAP in different tables. Every controlling area has one standard hierarchy defined. Cost centers belong to this standard hierarchies. In this depicted example we want to build a treeview with the cost centers of one selected standard hierarchy.
+This sample shows how to build a treeview with cost centers of one selected standard hierarchy.
+
+### About
+
+Cost center hierarchies are stored in different tables in SAP. 
+Every controlling area has one standard hierarchy defined. 
+Cost centers belong to these standard hierarchies. 
+
+### Set Up a Treeview of Cost Centers
 
 The form should contain following elements:
 
-One button: btnGetCC One DataGridView: dgContArea One TreeView: tvCC
+- One button: *btnGetCC* 
+- One DataGridView: *dgContArea* 
+- One TreeView: *tvCC*
 
-During the FormLoad event insert the following code. First we open the SAP connection and the table with the controlling area standard hierarchy relations is shown in a DataGridView.
+![CostCenterHier](/img/contents/CostCenterHier.jpg){:class="img-responsive"}
 
-<details>
-<summary>[C#]</summary>
-{% highlight csharp %}
+Follow the steps below to build a treeview during *FormLoad*:
+
+1. Connect to the SAP system using `R3Connection`.
+2. Read the table with the controlling area standard hierarchy relations.
+3. Display the table in a *DataGridView*.
+4. When selecting a controlling area with a click in the *DataGridView*, the standard hierarchy is written inzo a variable.
+5. When clicking the button, the structure of the cost centers and the hierarchy are build and shown in the treeview.
+
+<!---
+multiple tabs?. first tab includes step 1-3, second tab includes step 4, thirs tab includes step
+-->
+
+```csharp
 R3Connection con = new R3Connection();
- string KOKRS;
- string STDHIER;
+string KOKRS;
+string STDHIER;
+
 private void frmMain_Load(object sender, EventArgs e)
 {
    try
@@ -47,28 +67,17 @@ private void frmMain_Load(object sender, EventArgs e)
       MessageBox.Show(e1.Message);
    }
 }
+```
 
-{% endhighlight %}
-</details>
-
-After we select one controling area with a click in the DataGridView, the standard hierarchy is written in a variable.
-
-<details>
-<summary>[C#]</summary>
-{% highlight csharp %}
+```csharp
 private void dgContArea_Click(object sender, EventArgs e)
 {
    STDHIER = dgContArea.CurrentRow.Cells["KHINR"].Value.ToString();
    KOKRS = dgContArea.CurrentRow.Cells["KOKRS"].Value.ToString();
 }
-{% endhighlight %}
-</details>
+```
 
-After clicking the button, the whole structure of the cost centers and the hierarchy are build and shown in the treeview.
-
-<details>
-<summary>[C#]</summary>
-{% highlight csharp %}
+```csharp
 private void btnGetCC_Click(object sender, EventArgs e)
 {
    tvCC.Nodes.Clear();
@@ -82,7 +91,9 @@ private void btnGetCC_Click(object sender, EventArgs e)
       MessageBox.Show(e1.Message);
    }
 }
-  
+```
+
+```csharp
 public void PopulateTreeView(string Setname, TreeNode parentNode)
 {
    try
@@ -119,7 +130,9 @@ public void PopulateTreeView(string Setname, TreeNode parentNode)
       parentNode.Nodes.Add("Access denied");
    } 
 }
-  
+```
+
+```csharp  
 public void PopulateTreeViewKST(string Setname, TreeNode parentNode)
    {
    try
@@ -153,7 +166,9 @@ public void PopulateTreeViewKST(string Setname, TreeNode parentNode)
       parentNode.Nodes.Add("Access denied");
    } 
 }
-  
+```
+
+```csharp
 public string TreeViewKSTGroupText(string Setname)
 {
    ReadTable tableKST = new ReadTable(con);
@@ -178,6 +193,9 @@ public string TreeViewKSTGroupText(string Setname)
       return " ";
    }
 }
+```
+
+```csharp
 public string TreeViewKSTText(string KST)
 {
    ReadTable tableKST = new ReadTable(con);
@@ -202,9 +220,4 @@ public string TreeViewKSTText(string KST)
    return " ";
    }
 }
-{% endhighlight %}
-</details>
-
-The screenshot shows the application with one selected hierarchy.
-
-![CostCenterHier](/img/contents/CostCenterHier.jpg){:class="img-responsive"}
+```
