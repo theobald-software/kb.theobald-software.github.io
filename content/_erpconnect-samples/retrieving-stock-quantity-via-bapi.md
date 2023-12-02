@@ -6,31 +6,67 @@ permalink: /:collection/:path
 weight: 13
 ---
 
-A BAPI is a Business Object method in SAP. There are hundreds of BAPIs in an SAP system, one of them is BAPI_MATERIAL_AVAILABILITY. BAPI_MATERIAL_AVAILABILITY shows the  Availability of a Material. This availability provides the so-called ATP (stock quantity Available To Promise). You can use the Object Repository (TXCode BAPI) to search or execute BAPIs and Business Objects. The example below shows how to execute the BAPI BAPI_MATERIAL_AVAILABILITY in a Windows Forms application. The figure below shows the form during design time.
+This sample shows how to check the availability of materials using the BAPI BAPI BAPI_MATERIAL_AVAILABILITY.
+
+### About
+
+BAPI_MATERIAL_AVAILABILITY shows the availability of a material. 
+This availability provides the so-called ATP (stock quantity Available To Promise). 
+BAPI_MATERIAL_AVAILABILITY requires at least three import parameters: 
+- the Plant (PLANT)
+- the material number (MATERIAL) 
+- the unit (UNIT) 
+
+### Call BAPI_MATERIAL_AVAILABILITY
+
+The Windows form for the BAPI BAPI_MATERIAL_AVAILABILITY should contain following elements:
+
+- Three text boxes for import parameters: 
+	- *txtPlant* 
+	- *txtMaterial* 
+	- *txtUnit* 
+- One Button: *btnGetQuantity* 
+- Two text boxes to display results: 
+	- *txtStock*
+	- *txtBAPIMessage*
 
 ![BAPIStockQuan](/img/contents/BAPIStockQuant.jpg){:class="img-responsive"}
 
-**Coding**
+Follow the steps below to call the BAPI API_MATERIAL_AVAILABILITY:
 
-Before executing the BAPI, there are at least three import parameters to be defined: the Plant (PLANT), the material number (MATERIAL) and the unit (UNIT). As you can see in the code below, the BAPI object is created by the CreateFunction method of the R3Connection object. The imports will be set the same way as we did when calling 'normal' function modules. After executing this BAPI we can evaluate the return parameters. In case of an error, we have to analyze the Return structure. If no error has occurred, the AV_QTY_PLT parameter contains the stock quantity in the given unit.
+1. Connect to the SAP system using `R3Connection`.
+2. Create an RFCFunction object using `CreateFunction`.
+3. Assign the import parameters to the RFCFunction object.
+4. Execute the function module using `Execute`.
+5. If the BAPI returns an error, display the error message in the Windows form. <br>
+If no error occurred, the BAPI returns the parameter *AV_QTY_PLT* that contains the stock quantity in the given unit. 
+Display the stock quantity in the Windows form.
 
-
-<details>
-<summary>[C#]</summary>
-{% highlight csharp %}
+```csharp
 private void btnGetQuantity_Click(object sender, System.EventArgs e)
         {
             try
             {
         
-                ERPConnect.LIC.SetLic("xxxxxxxxxxxxx"); //Set your ERPConnect License. 
-  
-                R3Connection con = new R3Connection("SAPServer",00,"SAPUser","Password","EN","800");  //Set Connection Properties
-  
-                con.Open(); //Open the SAP Connection 
+                // Set your ERPConnect license
+                LIC.SetLic("xxxx");
+
+                // Open the connection to SAP
+                using var connection = new R3Connection(
+                    host: "server.acme.org",
+                    systemNumber: 00,
+                    userName: "user",
+                    password: "passwd",
+                    language: "EN",
+                    client: "001")
+                {
+                    Protocol = ClientProtocol.NWRFC,
+                };
+
+                connection.Open();
                 
                 // Create a Bapi object, fill parameters and execute
-                RFCFunction f = con.CreateFunction("BAPI_MATERIAL_AVAILABILITY");
+                RFCFunction f = connection.CreateFunction("BAPI_MATERIAL_AVAILABILITY");
                 f.Exports["PLANT"].ParamValue = txtPlant.Text;
                 f.Exports["MATERIAL"].ParamValue = txtMaterial.Text;
                 f.Exports["UNIT"].ParamValue = txtUnit.Text;
@@ -46,11 +82,10 @@ private void btnGetQuantity_Click(object sender, System.EventArgs e)
             catch (ERPException e1)
             { MessageBox.Show(e1.Message); }
         }
-{% endhighlight %}
-</details>
+```
 
-The figures below show the example program in action. On the first try, the user types a non-existing material number so an error message is given by the BAPI. The right hand figure shows a correct quantity indication.
+The screenshots below show the sample program in action. <br>
+On the first try, the user types a non-existing material number so an error message is given by the BAPI. 
 
 ![ScreenshotBeispielBapi1](/img/contents/ScreenshotBeispielBapi01.jpg){:class="img-responsive"}
-
 ![ScreenshotBeispielBapi2](/img/contents/ScreenshotBeispielBapi02.jpg){:class="img-responsive"}

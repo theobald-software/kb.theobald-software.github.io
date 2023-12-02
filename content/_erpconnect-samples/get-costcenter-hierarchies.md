@@ -17,7 +17,7 @@ Cost centers belong to these standard hierarchies.
 
 ### Set Up a Treeview of Cost Centers
 
-The form should contain following elements:
+The Windows form for the treeview should contain following elements:
 
 - One button: *btnGetCC* 
 - One DataGridView: *dgContArea* 
