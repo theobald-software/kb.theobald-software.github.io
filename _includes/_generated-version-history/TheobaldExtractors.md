@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.51.0 [L]|2023-12-04|General|Added the result columns custom order implementation|
 |1.50.9 [L]|2023-11-24|TableCDC|Fixed a bug where Z_THEO_READ_TABLE could not be used as fallback to /THEO/READ_TABLE|
 |1.50.8 [L]|2023-11-23|Hierarchy|Added /THEO/READ_TABLE as most preferred internal table extraction function module|
 |[1.50.7 [L]](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.50.7.html)|2023-11-23|Table|Updated /THEO/READ_TABLE to version 3.1([Release note](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.50.7.html))|
