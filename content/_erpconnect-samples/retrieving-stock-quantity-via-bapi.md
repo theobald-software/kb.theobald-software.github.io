@@ -19,16 +19,11 @@ BAPI_MATERIAL_AVAILABILITY requires at least three import parameters:
 
 ### Call BAPI_MATERIAL_AVAILABILITY
 
-The Windows form for the BAPI BAPI_MATERIAL_AVAILABILITY should contain following elements:
+The Windows form for the BAPI BAPI_MATERIAL_AVAILABILITY contains the following elements:
 
-- Three text boxes for import parameters: 
-	- *txtPlant* 
-	- *txtMaterial* 
-	- *txtUnit* 
+- Three text boxes for import parameters: *txtPlant*, *txtMaterial* and *txtUnit* 
 - One Button: *btnGetQuantity* 
-- Two text boxes to display results: 
-	- *txtStock*
-	- *txtBAPIMessage*
+- Two text boxes to display results: *txtStock* and *txtBAPIMessage*
 
 ![BAPIStockQuan](/img/contents/BAPIStockQuant.jpg){:class="img-responsive"}
 

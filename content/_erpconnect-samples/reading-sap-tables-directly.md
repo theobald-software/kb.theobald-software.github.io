@@ -58,7 +58,9 @@ for (int i = 0; i < result.Rows.Count; i++)
 Console.ReadLine();
 ```
 
-Output produced:
+Output:
+<!---
+
 ```
 000000000000000023 Pawan Kalyan_08
 000000000000000038 Test US colleagues upd4
@@ -71,5 +73,5 @@ Output produced:
 000000000000000089 AS-100 T-shirt
 000000000000000098 PCB Subassembly
 ```
-
+-->
 ![ReadTableDemoConsole](/img/contents/ReadTableDemoConsole.jpg){:class="img-responsive"}

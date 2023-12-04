@@ -38,7 +38,25 @@ multiple tabs?. first tab includes step 1-3, second tab includes step 4, thirs t
 -->
 
 ```csharp
-R3Connection con = new R3Connection();
+using System;
+using ERPConnect;
+
+// Set your ERPConnect license
+LIC.SetLic("xxxx");
+
+using var connection = new R3Connection(
+    host: "server.acme.org",
+    systemNumber: 00,
+    userName: "user",
+    password: "passwd",
+    language: "EN",
+    client: "001")
+{
+    Protocol = ClientProtocol.NWRFC,
+};
+
+connection.Open();
+
 string KOKRS;
 string STDHIER;
 
@@ -46,8 +64,8 @@ private void frmMain_Load(object sender, EventArgs e)
 {
    try
    {
-      con.AskUserAndOpen (true);
-      ReadTable table = new ReadTable(con);
+      connection.AskUserAndOpen (true);
+      ReadTable table = new ReadTable(connection);
       table.AddField("KOKRS");
       table.AddField("BEZEI");
       table.AddField("KHINR");
@@ -98,7 +116,7 @@ public void PopulateTreeView(string Setname, TreeNode parentNode)
 {
    try
    {
-      ReadTable table = new ReadTable(con);
+      ReadTable table = new ReadTable(connection);
       table.AddField("SETCLASS");
       table.AddField("SUBCLASS");
       table.AddField("SETNAME");
@@ -137,7 +155,7 @@ public void PopulateTreeViewKST(string Setname, TreeNode parentNode)
    {
    try
    {
-      ReadTable table = new ReadTable(con);
+      ReadTable table = new ReadTable(connection);
       table.AddField("SETCLASS");
       table.AddField("SUBCLASS");
       table.AddField("SETNAME");
@@ -171,7 +189,7 @@ public void PopulateTreeViewKST(string Setname, TreeNode parentNode)
 ```csharp
 public string TreeViewKSTGroupText(string Setname)
 {
-   ReadTable tableKST = new ReadTable(con);
+   ReadTable tableKST = new ReadTable(connection);
    tableKST.AddField("SETCLASS");
    tableKST.AddField("SUBCLASS");
    tableKST.AddField("SETNAME");
@@ -198,7 +216,7 @@ public string TreeViewKSTGroupText(string Setname)
 ```csharp
 public string TreeViewKSTText(string KST)
 {
-   ReadTable tableKST = new ReadTable(con);
+   ReadTable tableKST = new ReadTable(connection);
    tableKST.AddField("KOKRS");
    tableKST.AddField("KOSTL");
   

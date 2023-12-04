@@ -1,41 +1,58 @@
 ---
 layout: page
-title: Sending an ORDER IDoc by using CreateEmptyIdoc method
+title: Send an ORDER IDoc
 description: Sending an ORDER IDoc by using CreateEmptyIdoc method
 permalink: /:collection/:path
 weight: 20
 ---
 
-Check out our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
+This sample shows to create a sales order in the SAP system using the IDoc type ORDERS01.
 
-We have already discussed IDoc handling in another sample. This time we want to create a more complex IDoc type: ORDERS01. This IDoc will create a sales order in the SAP system.
+### About
 
-There are some things to do before sending this type of IDoc. Please refer to the administra-tion chapter to learn how to configure a correct partner profile. If there is no partner profile found for an incoming IDoc, no order will be created.
+An IDoc to create sales orders requires three different kinds of segment types:
+- E1EDK01 is the main segment of an ORDERS01 IDoc. 
+We leave it empty, but it must be provided by the calling program to pass the SAP IDoc syntax check.
+- E1EDP01 is the segment for a single order position. The field MENGE contains the quantity. 
+This segment can occur more than once.
+- E1EDP19 represents an object definition and is a child of E1EDP01. In this case the object is a material number. 
+The field QUALF is therefore set to "002" and the material number is written into the IDTNR field. 
 
-There are two possible ways to create an IDoc object after having established a connection to the SAP system. Use the CreateIdoc method to create an IDoc with all segments located in the segment collections. This might be useful for sending very simple IDocs. In this example we use the CreateEmptyIdoc method to create only the segments we need with the CreateSegment method.
+{: .box-tip }
+**Tip:** Use SAP transaction WE60 to look up the segment documentation of IDoc type ORDERS01.
 
-The example below is a simple WinForms application with two textboxes: The material number (txtMaterialNumber) and the quantity (txtQty) can be entered by the user.
+### Prerequisites
 
-Our sample IDoc needs three different kinds of segment types:
+Set up an RFC destination to enable calls from an SAP system to a subsystem, see [Online Help: IDocs Prerequisites](https://help.theobald-software.com/en/erpconnect/receiving-and-sending-idocs/prerequisites).<br>
+If there is no partner profile found for an incoming IDoc, no order will be created.
 
-E1EDK01 is the main segment of an ORDERS01 IDoc. We leave it empty, but it must be provided by the calling program to pass the SAP IDoc syntax check.
+### Send an ORDER IDoc
 
-E1EDP01 is the segment for a single order position. The field MENGE contains the quantity. Of course, this segment can occur more than once.
-
-E1EDP19 represents an object definition. In this case the object is a material number. The field QUALF is therefore set to 002 and the material number is written into the IDTNR field. E1EDP19 segments are always children of E1EDP01.
-
-If you like, take a look at transaction WE60 to search for the segment documentation of IDoc type ORDERS01.
-
-<details>
-<summary>[C#]</summary>
-{% highlight csharp %}
+The Windows form for the sales order contains the following elements:
+- Two text boxes for input: *txtMaterialNumber* (material number) and *txtQty* (quantity).
+- One button: *button1*
+ 
+``` csharp 
 private void button1_Click(object sender, System.EventArgs e)
 {
  
- R3Connection con = new R3Connection("SAPServer",00,"SAPUser","Password","EN","800");
- con.Open(false);
+ // Set your ERPConnect license
+ LIC.SetLic("xxxx");
+
+ using var connection = new R3Connection(
+    host: "server.acme.org",
+    systemNumber: 00,
+    userName: "user",
+    password: "passwd",
+    language: "EN",
+    client: "001")
+ {
+    Protocol = ClientProtocol.NWRFC,
+ };
+
+ connection.Open(false);
   
- Idoc idoc = con.CreateEmptyIdoc("ORDERS01","");
+ Idoc idoc = connection.CreateEmptyIdoc("ORDERS01","");
  idoc.MESTYP = "ORDERS";
   
  // Fill information about idoc sender
@@ -60,8 +77,9 @@ private void button1_Click(object sender, System.EventArgs e)
  idoc.Send();
  this.lblInfo.Text = "Idoc sent";
 }
-{% endhighlight %}
-</details>
+```
 
-![IdocSalesOrder](/img/contents/IdocSalesOrder.jpg){:class="img-responsive"}
+Output:
+
+![IdocSalesOrder](/img/contents/IdocSalesOrder.png){:class="img-responsive"}
 

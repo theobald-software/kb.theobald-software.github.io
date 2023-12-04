@@ -13,7 +13,7 @@ This sample shows how to query personnel data in ERPConnect using the BAPI BAPI_
 
 BAPI_EMPLOYEE_GETDATA is an RFC-enabled function module that should be present in every SAP system. <br>
 The depicted sample programs use the last name / personnel number of an employee as an input parameter for the BAPI.
-The BAPI returns the employee's personnel data in a table parameter.
+The BAPI returns the employee's personnel data in table parameters.
 
 ### Read Personnel Data using Names
 
@@ -110,7 +110,7 @@ AB*
 ```
 -->
 
-### Read Personnel Data using Personnel Number
+### Read Personnel Data using Personnel Numbers
 
 Follow the steps below to call the BAPI BAPI_EMPLOYEE_GETDATA:
 
