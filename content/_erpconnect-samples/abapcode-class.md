@@ -81,11 +81,13 @@ else
 ```
 
 Output:
+
+<!---
 ```
 System time  11:17:46
 Number of rows in KNA1:       7.705
 ```
-
+-->
 
 ![ABAPPad](/img/contents/ABAPPad.jpg){:class="img-responsive"}
 

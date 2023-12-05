@@ -59,8 +59,8 @@ Console.ReadLine();
 ```
 
 Output:
-<!---
 
+<!---
 ```
 000000000000000023 Pawan Kalyan_08
 000000000000000038 Test US colleagues upd4
@@ -74,4 +74,5 @@ Output:
 000000000000000098 PCB Subassembly
 ```
 -->
+
 ![ReadTableDemoConsole](/img/contents/ReadTableDemoConsole.jpg){:class="img-responsive"}

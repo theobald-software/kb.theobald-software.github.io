@@ -70,5 +70,6 @@ Material: 100-100
 Plant: 1000
 ```
 
+Output:
 
 ![MMBE1_kl](/img/contents/MMBE1_kl.jpg){:class="img-responsive"}

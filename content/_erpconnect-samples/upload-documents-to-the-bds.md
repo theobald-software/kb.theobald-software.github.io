@@ -6,20 +6,28 @@ permalink: /:collection/:path
 weight: 35
 ---
 
-Check out our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
+This sample shows how to upload documents to the BDS (Business Document Service) using the function module BDS_BUSINESSDOCUMENT_CREA_TAB.
 
-With ERPConnect it is easy to upload documents like excel sheets, word documents or images to the BDS (Business Document Service). All you have to do is to read the file into a byte array and send the array line after line to the function module BDS_BUSINESSDOCUMENT_CREA_TAB.
+### About
 
-In the code below you can see how to upload an excel sheet to the BDS. With just a few changes in the coding like the document class, the document and MIME-type you can easily upload other document types.
+Upload documents like excel sheets, word documents or images to the BDS by reading the file into a byte array and sending the array line after line to the function module BDS_BUSINESSDOCUMENT_CREA_TAB.
 
-The relevant document classes and type you can find in the SAP IMG --> Basis Services --> Archive Link --> Basic Customizing
+The depicted example uploads an excel sheet to the BDS. 
+With small code changes to the document class, the document and MIME-type you can upload other document types.
 
-The Classname (BKPF) is standing for the Accounting document type. In the Document Navigator (TA OAOR) you can find other Classes.
-The objectkey (100000000115642009) for BKPF is build from the company code, document number and the fiscal year.
+{: .box-tip }
+**Tip:** You can look up the relevant document classes and types in SAP **IMG > Basis Services > Archive Link > Basic Customizing**.
 
-<details>
-<summary>[C#]</summary>
-{% highlight csharp %}
+In the sample code the class name (BKPF) represents the Accounting document type. You can find other classes in the Document Navigator (TA OAOR).<br>
+The object key (100000000115642009) for BKPF is build from the company code, document number and the fiscal year.
+
+![BusinessDocumentNavigator01](/img/contents/BusinessDocumentNavigator01.png){:class="img-responsive"}
+
+### Upload an Excel File to the BDS
+
+The following sample code uploads an excel sheet to the BDS:
+
+```csharp
 static void Main(string[] args)
         {
   
@@ -118,9 +126,8 @@ static void Main(string[] args)
                 Console.ReadLine();
             }
         }
-{% endhighlight %}
-</details>
+```
 
-![BusinessDocumentNavigator01](/img/contents/BusinessDocumentNavigator01.jpg){:class="img-responsive"}
+Output:
 
-![BDNDisplayDocument](/img/contents/BDNDisplayDocument.jpg){:class="img-responsive"}
+![BDNDisplayDocument](/img/contents/BDNDisplayDocument.png){:class="img-responsive"}

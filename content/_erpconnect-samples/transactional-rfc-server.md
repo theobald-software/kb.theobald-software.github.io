@@ -6,17 +6,25 @@ permalink: /:collection/:path
 weight: 29
 ---
 
-Check out our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
+This sample shows how to build an RFC server that supports transactional RFCs.
 
-In the following sample we want to build a RFC server, which supports transactional RFCs.
+### About
 
-An ABAP program sends two strings as export parameters to .Net. These strings are merged in .Net and inserted into a SQL server table. Within a tRFC context only export parameter and tables are sent to the RFC server. A transactional RFC call cannot receive results.
+How it works:
+- An ABAP program sends two strings as export parameters to .NET. 
+- The strings are merged in .NET and inserted into an SQL server table. 
+- Within a tRFC context only export parameters and tables are sent to the RFC server. 
 
-The following code is based on the known example RFC-Server
+For more information on how to create RFC functions, see [Online Help: RFC Server](https://help.theobald-software.com/en/erpconnect/rfc-server).
 
-<details>
-<summary>[C#]</summary>
-{% highlight csharp %}
+{: .box-note }
+**Note:** A transactional RFC call cannot receive results.
+
+### Build an RFC Server in ERPConnect
+
+The following code creates an RFC function Z_TRFC that reads two strings provided by an ABAP program:
+
+```csharp
 static RFCServer s = new RFCServer();
         static SqlConnection SQLConn = null;
   
@@ -43,8 +51,7 @@ static void Main(string[] args)
   Console.ReadLine();
   s.Stop();        
 }
-{% endhighlight %}
-</details>
+```
 
 The following events are fired from the client within the server program:
 
@@ -54,30 +61,7 @@ The following events are fired from the client within the server program:
 - TRFCConfirm
 - TRFCRollback
 
-In the ABAP program the Function is called with the ABAP function *CALL FUNCTION “Z_TRFC” IN BACKGROUND TASK* for the asynchronous execution.
-
-```
-REPORT  ZTESTTRFC                             .
-
-CALL FUNCTION 'Z_TRFC' in background task DESTINATION 'ERPTEST'
-  EXPORTING
-    STRING1  = 'Hello'
-    STRING2  = 'World'.
-
-Commit Work.
-
-WRITE: / 'strings sent'.
-```
-
-The ABAP statement is not executed immediately, but with the EXPORTING and/or TABLES content stored in a SAP database table. A COMMIT WORK starts the processing of the function, and on the .Net side the event TRFCCheckTID is fired. The transaction ID in our example is checked whether it can be found in our table on the SQL server. If the TID is missing, or available but not executed yet, TRFCCheckTID returns True (check was successful). After this the IncomingCall event is fired. In case of successful processing, the Commit event is fired, which confirms the execution. The Confirm event is fired to tidy up the transaction management.
-
-With tRFC you can guarantee that the remote function is processed, even if at the time of the call the remote partner is not available or the connection was lost.
-
-Contrary to the synchronous RFC you can combine different functions for the remote processing into a logical unit or work (SAP-LUW). Rollback on the whole unit is then possible. Furthermore tools for monitoring and administration are available with transaction SM58.
-
-<details>
-<summary>[C#]</summary>
-{% highlight csharp %}
+```csharp
 static void s_TRFCCheckTID(RFCServer Sender, string TID, ref bool OK)
  {
   DataTable DtTID = GetDataTableBySQL("Select * from TransactionID 
@@ -132,7 +116,49 @@ static void s_TRFCRollback(RFCServer Sender, string TID)
    Console.WriteLine("TransactionalID " + TID + " is rolled back");
    InsertUpdateBySQL("Update TransactionID set XRolledBack = 'True' where TID = '" + TID + "'");
  }
-{% endhighlight %}
-</details>
+```
 
-We also need a table on the SQL server (TransactionID) for our example. In this table, there are 4 flags (XCommit, XConfirm, XRollback and XExecuted), the field with the transaction ID (TID) and a field for the result (Result).
+### Function Call in ABAP
+
+In the ABAP program the RFC function is called with the ABAP function *CALL FUNCTION “Z_TRFC” IN BACKGROUND TASK* for the asynchronous execution:
+
+```
+REPORT  ZTESTTRFC                             .
+
+CALL FUNCTION 'Z_TRFC' in background task DESTINATION 'ERPTEST'
+  EXPORTING
+    STRING1  = 'Hello'
+    STRING2  = 'World'.
+
+Commit Work.
+
+WRITE: / 'strings sent'.
+```
+
+#### Workflow
+
+- The ABAP statement is not executed immediately, but with the EXPORTING and/or TABLES content stored in a SAP database table. 
+- COMMIT WORK starts the processing of the function
+- .NET fires the event TRFCCheckTID.
+- The transaction ID in the depicted example is checked to see if it can be found in the [table on the SQL server](#table-on-the-sql-server). 
+- If the transaction ID is missing, or available but not executed yet, TRFCCheckTID returns *True*. 
+- The IncomingCall event is fired. 
+- If the processing is successful, the Commit event is fired, which confirms the execution. 
+- The Confirm event is fired to tidy up the transaction management.
+
+With tRFC the remote function is processed, even if at the time of the call the remote partner is not available or the connection was lost.
+
+Contrary to the synchronous RFC you can combine different functions for the remote processing into a logical unit or work (SAP-LUW). 
+Rollback on the whole unit is then possible. 
+
+{: .box-tip }
+**Tip:** Tools for monitoring and administration are available with SAP transaction SM58.
+
+
+### Table on the SQL Server
+
+The depicted example requires a table on the SQL server (TransactionID). The table includes: 
+
+- 4 flags (XCommit, XConfirm, XRollback and XExecuted)
+- a field with the transaction ID (TID) 
+- a field for the result (Result).
