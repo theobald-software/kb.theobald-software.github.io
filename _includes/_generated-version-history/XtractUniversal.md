@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.2.1 [L]|2023-12-05|BW Cube|Fix an issue that made ConfigConverter fail to upgrade some extractions containing orphaned filters|
 |[6.2.0 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-6.2.0.html)|2023-12-04|General|Added the result columns custom order feature([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-6.2.0.html))|
 |6.1.12 [L]|2023-11-24|BW Cube|Fixed a bug causing failed extractions when using Not Assigned (#) member in MDX cube filter.|
 |6.1.11 [L]|2023-11-20|Server|Fixed a bug where a cache entry would not be invalidated when aborting the extraction. Fixed an error when invalidating the cache for an extraction after editing.|
