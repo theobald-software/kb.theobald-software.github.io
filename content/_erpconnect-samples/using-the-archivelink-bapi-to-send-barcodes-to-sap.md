@@ -1,26 +1,38 @@
 ---
 layout: page
-title: Using the ArchiveLink BAPI to send barcodes to SAP
+title: Using the ArchiveLink BAPI to send Barcodes to SAP
 description: Using the ArchiveLink BAPI to send barcodes to SAP
 permalink: /:collection/:path
 weight: 8
 ---
 
-Check out our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
+This sample shows how to use the BAPI BAPI_BARCODE_SENDLIST to send a list of barcodes to SAP. <br>
+BAPI_BARCODE_SENDLIST is part of the ArchiveLink BAPI.
 
-This sample console program shows how to use the function BAPI_BARCODE_SENDLIST to send a list of barcodes to SAP. It is part of the ArchiveLink BAPI.
+```csharp
+using System;
+using ERPConnect;
+using ERPConnect.Utils;
 
-Releated Links:
-[http://help.sap.com/saphelp_45b/helpdata/en/52/3b27181bb011d295840000e82deb58/content.htm](http://help.sap.com/saphelp_45b/helpdata/en/52/3b27181bb011d295840000e82deb58/content.htm)
+// Set your ERPConnect license
+LIC.SetLic("xxxx");
 
-<details>
-<summary>[C#]</summary>
-{% highlight csharp %}
-R3Connection con = new R3Connection("SAPServer", 00, "SAPUSer","Password", "EN", "800");
-con.Open();
+// Open the connection to SAP
+using var connection = new R3Connection(
+    host: "server.acme.org",
+    systemNumber: 00,
+    userName: "user",
+    password: "passwd",
+    language: "EN",
+    client: "001")
+{
+    Protocol = ClientProtocol.NWRFC,
+};
+
+connection.Open();
   
 // create the function
-RFCFunction barfunc = con.CreateFunction("BAPI_BARCODE_SENDLIST");
+RFCFunction barfunc = connection.CreateFunction("BAPI_BARCODE_SENDLIST");
   
 // Create and fill the frist row
 RFCStructure row = barfunc.Tables["BARCODETABLE"].AddRow();
@@ -38,8 +50,8 @@ row["DOCID"] = "0045935683";
 row["ARDATE"] = "20070702";
 row["DOCTYPE"] = "ZTA"; 
   
-// Execut e the function
-barfunc.Execut e();
+// Execute the function
+barfunc.Execute();
   
 // process return structure
 RFCStructure ret = barfunc.Imports["RETURN"].ToStructure();
@@ -51,5 +63,4 @@ else
   
 Console.WriteLine("Press Enter to exit");
 Console.ReadLine();
-{% endhighlight %}
-</details>
+```

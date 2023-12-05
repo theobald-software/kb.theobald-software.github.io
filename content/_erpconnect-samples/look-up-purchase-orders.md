@@ -1,98 +1,117 @@
 ---
 layout: page
-title: Look up purchase orders
+title: Look up Purchase Orders
 description: Look up purchase orders
 permalink: /:collection/:path
 weight: 26
 ---
 
-Check out our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
+This sample shows how to get a list of purchase orders using the BAPI BAPI_PO_GETITEMS. 
 
-This sample shows how to obtain a list of purchase orders. The return value is a DataTable object. To get the function running a connection object (Con) must be available.
 
-<details>
-<summary>[C#]</summary>
-{% highlight csharp %}
-public DataTable FindPurchaseOrders(string Werk,string BestellNr, string MaterialNr)
+```csharp
+using System;
+using System.Globalization;
+using ERPConnect;
+
+// Set your ERPConnect license
+LIC.SetLic("xxxx");
+
+Console.Write("Plant: ");
+string plant = Console.ReadLine();
+
+Console.Write("Purchase Order: ");
+string purchaseOrder = Console.ReadLine();
+
+Console.Write("Material: ");
+string material = Console.ReadLine();
+
+using var connection = new R3Connection(
+    host: "server.acme.org",
+    systemNumber: 00,
+    userName: "user",
+    password: "passwd",
+    language: "EN",
+    client: "001")
 {
-    // Prepare DataTable
-    DataTable ret = new DataTable();
-    ret.BeginInit();
-    ret.Columns.Add("BestellNr",System.Type.GetType("System.String"));
-    ret.Columns.Add("BestellPos",System.Type.GetType("System.String"));
-    ret.Columns.Add("MaterialNr",System.Type.GetType("System.String"));
-    ret.Columns.Add("Bezeichnungstext",System.Type.GetType("System.String"));
-    ret.Columns.Add("Datum",System.Type.GetType("System.DateTime"));
-    ret.Columns.Add("Lieferant",System.Type.GetType("System.String"));
-    ret.Columns.Add("OffeneMenge",System.Type.GetType("System.Int32"));
-    ret.EndInit();
-  
-  
-    // Fill Export Params for the FunctionModule
-    RFCFunction func = Con.CreateFunction("BAPI_PO_GETITEMS");
-    func.Exports["PLANT"].ParamValue = Werk;
-    func.Exports["PURCHASEORDER"].ParamValue = BestellNr;
-    func.Exports["MATERIAL"].ParamValue = MaterialNr;
-    func.Exports["ITEMS_OPEN_FOR_RECEIPT"].ParamValue = "X";
-    func.Exports["WITH_PO_HEADERS"].ParamValue = "X";
-    func.Execut e();
-  
-    // Check Return-Table
-    for(int i=0; i < func.Tables["PO_ITEMS"].RowCount; i++)
+    Protocol = ClientProtocol.NWRFC,
+};
+
+connection.Open();
+
+RFCFunction function = connection.CreateFunction("BAPI_PO_GETITEMS");
+function.Exports["PLANT"].ParamValue = plant;
+function.Exports["PURCHASEORDER"].ParamValue = purchaseOrder;
+function.Exports["MATERIAL"].ParamValue = material;
+function.Exports["ITEMS_OPEN_FOR_RECEIPT"].ParamValue = "X";
+function.Exports["WITH_PO_HEADERS"].ParamValue = "X";
+function.Execute();
+
+RFCTable headersTable = function.Tables["PO_HEADERS"];
+RFCTable itemsTable = function.Tables["PO_ITEMS"];
+
+for (int i = 0; i < itemsTable.RowCount; i++)
+{
+    var purchaseOrderNumber = (string) itemsTable.Rows[i, "PO_NUMBER"];
+    var item = (string) itemsTable.Rows[i, "PO_ITEM"];
+
+    var total = (decimal) itemsTable.Rows[i, "DISP_QUAN"];
+    decimal delivered = GetDeliveredQuantityForPurchaseOrder(
+        connection,
+        purchaseOrderNumber,
+        item);
+
+    Console.WriteLine("Purchase Order:");
+    Console.WriteLine($"  Number: {purchaseOrderNumber}");
+    Console.WriteLine($"  Item: {item}");
+    Console.WriteLine($"  Material: {itemsTable.Rows[i, "PUR_MAT"]}");
+    Console.WriteLine($"  Text: {itemsTable.Rows[i, "SHORT_TEXT"]}");
+    Console.WriteLine($"  Open: {total - delivered}");
+
+    // Loop header table and find the right PO
+    for (int j = 0; j < headersTable.RowCount; j++)
     {
-        DataRow retrow = ret.NewRow();
-  
-        retrow["BestellNr"] = func.Tables["PO_ITEMS"].Rows[i,"PO_NUMBER"];
-        retrow["BestellPos"] = func.Tables["PO_ITEMS"].Rows[i,"PO_ITEM"];
-        retrow["MaterialNr"] = func.Tables["PO_ITEMS"].Rows[i,"PUR_MAT"];
-        retrow["Bezeichnungstext"] = func.Tables["PO_ITEMS"].Rows[i,"SHORT_TEXT"];
-        retrow["OffeneMenge"] = (Decimal)func.Tables["PO_ITEMS"].Rows[i,"DISP_QUAN"] 
-            - GetRecToPO(func.Tables["PO_ITEMS"].Rows[i,"PO_NUMBER"].ToString(),
-            func.Tables["PO_ITEMS"].Rows[i,"PO_ITEM"].ToString());
-  
-        // Loope Header Table and find the right PO
-        for (int j=0; j < func.Tables["PO_HEADERS"].RowCount; j++)
+        var headerNumber = (string) headersTable.Rows[j, "PO_NUMBER"];
+        if (headerNumber == purchaseOrderNumber)
         {
-            if (func.Tables["PO_HEADERS"].Rows[j,"PO_NUMBER"].ToString().Equals(func.Tables["PO_ITEMS"].Rows[i,"PO_NUMBER"]))
-            {
-                retrow["Datum"] = ERPConnect.ConversionUtils.SAPDate2NetDate(func.Tables["PO_HEADERS"].Rows[j,"DOC_DATE"].ToString());
-                retrow["Lieferant"] = func.Tables["PO_HEADERS"].Rows[i,"VEND_NAME"];
-            }
+            var date = (string) headersTable.Rows[j, "DOC_DATE"];
+            DateTime parsedDate = DateTime.ParseExact(
+                date,
+                "yyyyMMdd",
+                CultureInfo.InvariantCulture);
+
+            Console.WriteLine($"  Date: {parsedDate}");
+            Console.WriteLine($"  Vendor: {headersTable.Rows[i, "VEND_NAME"]}");
         }
-  
-        ret.Rows.Add(retrow);
     }
-    return ret;
 }
-{% endhighlight %}
-</details>
 
+return;
 
-The function GetRecToPO determines the quantity that is already receipted.
-
-<details>
-<summary>[C#]</summary>
-{% highlight csharp %}
-public Decimal GetRecToPO(string BestellNr, string BestellPos)
+// Determine the quantity that is already receipted
+static decimal GetDeliveredQuantityForPurchaseOrder(
+    R3Connection connection,
+    string purchaseOrder,
+    string item)
 {
-    // Fill Export Params for the FunctionModule
-    RFCFunction func = Con.CreateFunction("BAPI_PO_GETDETAIL");
-    func.Exports["PURCHASEORDER"].ParamValue = BestellNr;
+    RFCFunction func = connection.CreateFunction("BAPI_PO_GETDETAIL");
+    func.Exports["PURCHASEORDER"].ParamValue = purchaseOrder;
     func.Exports["HISTORY"].ParamValue = "X";
     func.Exports["ITEMS"].ParamValue = " ";
-    func.Execut e();
-  
-    // Check Return-Table
-    for(int i=0; i < func.Tables["PO_ITEM_HISTORY_TOTALS"].RowCount; i++)
+    func.Execute();
+
+    RFCTable table = func.Tables["PO_ITEM_HISTORY_TOTALS"];
+    for (int i = 0; i < table.RowCount; i++)
     {
-        if (func.Tables["PO_ITEM_HISTORY_TOTALS"].Rows[i,"PO_ITEM"].ToString().Equals(BestellPos))
+        RFCStructure row = table.Rows[i];
+        var historyItem = (string) row["PO_ITEM"];
+        if (historyItem == item)
         {
-            return (decimal)func.Tables["PO_ITEM_HISTORY_TOTALS"].Rows[i,"DELIV_QTY"];
+            return (decimal) row["DELIV_QTY"];
         }
     }
+
     return 0;
 }
-{% endhighlight %}
-</details>
-
+```
 

@@ -6,24 +6,60 @@ permalink: /:collection/:path
 weight: 27
 ---
 
-Check out our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
+This sample shows how to create a goods receipt for a goods movement using the BAPI BAPI_GOODSMVT_CREATE. 
 
-In this sample we create a goods receipt for a goods movement with BAPI_GOODSMVT_CREATE. The Parameter "GM_CODE" represents the transaction code that would be used to post the movement as dialog user. The value “01” is replaced by SAP with the transaction code MB01. MB01 is used to create a goods receipt for purchase order. Further values for this parameter would be “02” for goods receipt for order (MB31) or "05" for other goods receipts (MB1C).
+### About
 
-Important values for the header data structure are the Posting Date of the Document, the Username, and the Document Date. The item data rows are filled in our example with reference to the purchase order. The parameter MOVE_TYPE "101" is the Movement Type for the goods receipt for purchase order into warehouse/stores. The Storage Location for the goods can be set in the parameter "STGE_LOC". Since we create a goods movement for a purchase order, we have to set the parameters PO_NUMBER and the PO_ITEM with the Purchase Order Number and the Purchase Order Item. The Movement Indicator in the parameter "MVT_IND" specifies the type of document that constitutes the basis for the movement. Possible types are Purchase Order or Delivery Note for example.
+The BAPI BAPI_GOODSMVT_CREATE requires multiple parameters to create a goods receipt for a goods movement.<br>
+The export parameter GM_CODE of BAPI_GOODSMVT_CREATE represents the transaction code that would be used to post the movement as a dialog user. Values for GM_CODE include: 
+- “01” is replaced by SAP with the transaction code MB01 that creates a goods receipt for purchase orders. 
+- “02” is replaced by SAP with the transaction code MB31 for goods receipt for production orders.
+- "05" is replaced by SAP with the transaction code MB1C for other goods receipts.
 
+Other export parameters for BAPI_GOODSMVT_CREATE include:
+- the Posting Date of the Document
+- the Username
+- the Document Date. 
+
+The table parameters for BAPI_GOODSMVT_CREATE include:
+- PLANT (Plant)
+- PO_NUMBER (Purchase Order Number) 
+- PO_ITEM (Purchase Order Item)
+- ENTRY_QNT (Quantity)
+- MOVE_TYPE "101" is the Movement Type for the goods receipt for purchase order into warehouse/stores.
+- MVT_IND is the Movement Indicator that specifies the type of document that constitutes the basis for the movement.
+- STGE_LOC is the Storage Location for the goods. 
+
+### Call BAPI_GOODSMVT_CREATE
+
+The following code sample calls the BAPI BAPI_GOODSMVT_CREATE.
 If a goods receipt is successfully created the function returns the material document number and the year.
 
-To get the function running a connection object (Con) must be available.
+```csharp
+using System;
+using ERPConnect;
 
-<details>
-<summary>[C#]</summary>
-{% highlight csharp %}
+// Set your ERPConnect license
+LIC.SetLic("xxxx");
+
+using var connection = new R3Connection(
+    host: "server.acme.org",
+    systemNumber: 00,
+    userName: "user",
+    password: "passwd",
+    language: "EN",
+    client: "001")
+{
+    Protocol = ClientProtocol.NWRFC,
+};
+
+connection.Open();
+
 public bool GoodsReceipt101(string PO_Number, string PO_ITEM, string Plant, decimal Quantity)
   {
      string rMessage;
      // Fill Export Structures for the FunctionModule
-     RFCFunction func = Con.CreateFunction("BAPI_GOODSMVT_CREATE");
+     RFCFunction func = connection.CreateFunction("BAPI_GOODSMVT_CREATE");
      func.Exports["GOODSMVT_HEADER"].ToStructure()["PSTNG_DATE"] = "20070921"; //Posting Date in the Document
      func.Exports["GOODSMVT_HEADER"].ToStructure()["PR_UNAME"] = "HUGO";       //UserName
      func.Exports["GOODSMVT_HEADER"].ToStructure()["HEADER_TXT"] = "XXX";      //HeaderText
@@ -44,7 +80,7 @@ public bool GoodsReceipt101(string PO_Number, string PO_ITEM, string Plant, deci
      // Execute Function Module
      func.Execut e();
   
-     RFCFunction funcCommit = Con.CreateFunction("BAPI_TRANSACTION_COMMIT");
+     RFCFunction funcCommit = connection.CreateFunction("BAPI_TRANSACTION_COMMIT");
      funcCommit.Exports["WAIT"].ParamValue = "X";
   
      string MaterialDocument = func.Imports["MATERIALDOCUMENT"].ParamValue.ToString();
@@ -59,10 +95,9 @@ public bool GoodsReceipt101(string PO_Number, string PO_ITEM, string Plant, deci
       }
      else
       {
-        funcCommit.Execut e();
+        funcCommit.Execute();
         rMessage = "";
         return true;
       }
  }
-{% endhighlight %}
-</details>
+```

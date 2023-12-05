@@ -1,32 +1,44 @@
 ---
 layout: page
-title: Get meta data of a table
+title: Read meta data of a table
 description: Get meta data of a table
 permalink: /:collection/:path
 weight: 10
 ---
 
-Check out our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
+This sample shows how to read the meta data of an SAP table using the *ReadTable* class.<br>
 
-The code snippet shows, how to obtain the meta data of a SAP table by using the ReadTable class.
 
-After calling RetrieveAllFieldsOfTable() the Fields collection is filled with detailed information on each column.
+```csharp
+using System;
+using ERPConnect;
+using ERPConnect.Utils;
 
-<details>
-<summary>[C#]</summary>
-{% highlight csharp %}
-R3Connection con = new R3Connection("SAPServer", 00, "SAPUSer","Password", "en", "800");
+// Set your ERPConnect license
+LIC.SetLic("xxxx");
+
+// Open the connection to SAP
+using var connection = new R3Connection(
+    host: "server.acme.org",
+    systemNumber: 00,
+    userName: "user",
+    password: "passwd",
+    language: "EN",
+    client: "001")
+{
+    Protocol = ClientProtocol.NWRFC,
+};
+
+connection.Open();
   
-con.Open();
-  
-ReadTable read = new ReadTable(con);
+ReadTable read = new ReadTable(connection);
 read.TableName = "MKPF";
 read.RetrieveAllFieldsOfTable();
   
+// Fill the fields collection with detailed information on each column
 for(int i=0; i < read.Fields.Count; i++)
     Console.WriteLine(read.Fields[i].FieldName + " (" +
         read.Fields[i].ABAPType + ", " + read.Fields[i].Length + ")");
   
-con.Close();
-{% endhighlight %}
-</details>
+connection.Close();
+```
