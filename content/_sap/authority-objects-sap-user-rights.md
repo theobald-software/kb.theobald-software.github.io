@@ -243,7 +243,7 @@ Download the corresponding SAP role ---  [SAP profile for Report](/files/sap_rol
 <details> <summary> Necessary SAP authorizations </summary>
 
 <pre>
-S_RFC            ACTVT=16; RFC_TYPE=FUGR; RFC_NAME=SDTX, SDIFRUNTIME, Z_THEO_READ_TABLE                   
+S_RFC            ACTVT=16; RFC_TYPE=FUGR; RFC_NAME=SDTX, SDIFRUNTIME, /THEO/READ_TABLE                   
 S_TABU_DIS       ACTVT=03; DICBERCLS=XXXX
 S_TABU_NAM       ACTVT=03; TABLE=DD02V, DD17S, DD27S, ENLFDIR
 S_DSAUTH         ACTVT=16;    
@@ -254,7 +254,7 @@ If the table is not listed, the authorization group is &NC&. For authorizing spe
 </details>
 
 {: .box-note }
-**Note** The transport request for function group *Z_THEO_READ_TABLE* is located in the following path: ```C:\Program Files\[XtractProduct]\ABAP\Table``` of the default installation. 
+**Note** The transport request for function group */THEO/READ_TABLE* and *Z_THEO_READ_TABLE* is located in the following path: ```C:\Program Files\[XtractProduct]\ABAP\Table``` of the default installation. 
 
 When executing the custom function module Z_THEO_READ_TABLE in the background:
 
@@ -303,7 +303,7 @@ XXXX (stands for a placeholder) is the authorization group for the source table.
 </details> 
 
 {: .box-note }
-**Note** The transport requests for the required function groups *Z_THEO_DELETE_LOG_ENTRIES* and *Z_THEO_READ_TABLE* are located in ```C:\Program Files\[XtractProduct]\ABAP\TableCDC``` and ```C:\Program Files\[XtractProduct]\ABAP\Table```. 
+**Note** The transport requests for the required function groups */THEO/READ_TABLE* is located in ```C:\Program Files\[XtractProduct]\ABAP\TableCDC``` and ```C:\Program Files\[XtractProduct]\ABAP\Table```. 
 
 Download the corresponding SAP role ---  [SAP profile for Table CDC](/files/sap_roles/ZXTABLECDC.SAP).
 
