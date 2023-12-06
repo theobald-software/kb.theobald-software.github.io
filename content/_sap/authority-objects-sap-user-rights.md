@@ -302,7 +302,7 @@ XXXX (stands for a placeholder) is the authorization group for the source table.
 </details> 
 
 {: .box-note }
-**Note** The transport requests for the required function groups */THEO/READ_TABLE* is located in ```C:\Program Files\[XtractProduct]\ABAP\TableCDC``` and ```C:\Program Files\[XtractProduct]\ABAP\Table```. 
+**Note** The transport requests for the required function groups */THEO/READ_TABLE* are located in ```C:\Program Files\[XtractProduct]\ABAP\TableCDC``` and ```C:\Program Files\[XtractProduct]\ABAP\Table```. 
 
 Download the corresponding SAP role ---  [SAP profile for Table CDC](/files/sap_roles/ZXTABLECDC.SAP).
 
