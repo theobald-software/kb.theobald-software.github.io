@@ -292,17 +292,15 @@ Download the corresponding SAP role ---  [SAP profile for Table](/files/sap_role
 <details> <summary> Necessary SAP authorizations </summary>
 
 <pre>
-S_RFC            ACTVT=16; RFC_TYPE=FUGR, FUNC; RFC_NAME=CNV0, IUUC_ADBC, IUUC_REMOTE, SDIFRUNTIME, SDTX, Z_THEO_DELETE_LOG_ENTRIES, Z_THEO_READ_TABLE            
-S_DMC_S_R        ACTVT=33
-S_CTS_ADMI       CTS_ADMFCT=TABL
-S_TABU_CLI       CLIIDMAINT=X
-S_TABU_DIS       ACTVT=02, 03; DICBERCLS=*
-S_DEVELOP        ACTVT=02; DEVCLASS=$TMP; OBJNAME=/1LT/TS_*; OBJTYPE=*; P_GROUP=*
+S_RFC            ACTVT=16; RFC_TYPE=FUGR, FUNC; RFC_NAME=SDTX, SDIFRUNTIME, /THEO/CDC_*, /THEO/READ_TABLE            
+S_TABU_DIS       ACTVT=03; DICBERCLS=XXXX
+S_TABU_NAM       ACTVT=03; TABLE=DD02V, D17S, D27S, ENLFDIR
 
 </pre>
 
-</details> 
+XXXX (stands for a placeholder) is the authorization group for the source table. To determine, which authorization group belongs to which table, check the table TDDAT - Maintenance Areas for Tables. If the table is not listed, the authorization group is &NC&. For authorizing specific tables use authorization object S_TABU_NAM instead of S_TABU_DIS.
 
+</details> 
 
 {: .box-note }
 **Note** The transport requests for the required function groups *Z_THEO_DELETE_LOG_ENTRIES* and *Z_THEO_READ_TABLE* are located in ```C:\Program Files\[XtractProduct]\ABAP\TableCDC``` and ```C:\Program Files\[XtractProduct]\ABAP\Table```. 
