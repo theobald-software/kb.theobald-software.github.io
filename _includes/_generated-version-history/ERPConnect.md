@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|7.8.0 [M]|2023-12-07|NWRFC|Changed the default R3Connection Protocol to NWRFC as announced in 7.6.0. Added support for RFC over WebSocket.|
 |7.7.3 [L]|2023-11-15|NWRFC|Added TraceLevel property to R3Connection|
 |7.7.2 [L]|2023-10-25|NWRFC|Fixed a parallelization issue caused by limitations in the callback handling when using NWRFC.|
 |7.7.1 [L]|2023-07-12|General|Replaced AbapSignedNumericCharacter.ToLong() with AbapSignedNumericCharacter.ToDecimal()|
