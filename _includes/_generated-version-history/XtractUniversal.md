@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.2.2 [L]|2023-12-07|General|Fixed a bug where custom parameters in the finalization step in snowflake destinations would not be evaluated. The columns in the Designer's main view now allow more flexibility when resizing. The run window does not show an error anymore when trying to abort an extraction, which just finished.|
 |6.2.1 [L]|2023-12-05|BW Cube|Fix an issue that made ConfigConverter fail to upgrade some extractions containing orphaned filters|
 |[6.2.0 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-6.2.0.html)|2023-12-04|General|Added the result columns custom order feature([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-6.2.0.html))|
 |6.1.12 [L]|2023-11-24|BW Cube|Fixed a bug causing failed extractions when using Not Assigned (#) member in MDX cube filter.|
