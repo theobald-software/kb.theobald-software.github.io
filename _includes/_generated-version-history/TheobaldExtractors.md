@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.52.1 [L]|2023-12-08|TableCDC|Create table statement will now be logged in CDC initialization step.|
 |[1.52.0 [H]](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.52.0.html)|2023-12-06|TableCDC|Released /THEO/CDC package. **Breaking changes** - Please see release notes for details.([Release note](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.52.0.html))|
 |1.51.0 [L]|2023-12-04|General|Added the result columns custom order implementation|
 |1.50.9 [L]|2023-11-24|TableCDC|Fixed a bug where Z_THEO_READ_TABLE could not be used as fallback to /THEO/READ_TABLE|
