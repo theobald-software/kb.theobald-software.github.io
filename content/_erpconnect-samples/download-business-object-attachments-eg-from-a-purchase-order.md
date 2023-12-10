@@ -6,28 +6,37 @@ permalink: /:collection/:path
 weight: 39
 ---
 
-Check out our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
+This sample shows how to download attached files from common business objects using the SAP tables SRGBTBREL and SOOD and the function module SO_DOCUMENT_READ_API1. 
 
-**Introductions**
+### About
 
-From SAP rel. 4.6 the user can attach documents to all common business objects. The image shows how to attach a drawing to a purchase order.
-
+As of SAP rel. 4.6 users can attach documents to all common business objects, e.g., purchase orders:
 ![POAttachment01](/img/contents/POAttachment01.png){:class="img-responsive"}
 
-![POAttachment02](/img/contents/POAttachment02.png){:class="img-responsive"}
+This sample uses the following workflow to download attachment files:
+1. Read the table SRGBTBREL to get all object IDs that are attached to business objects.
+2. Read the table SOOD to get the corresponding file names and extensions of the object IDs.
+3. Use SO_DOCUMENT_READ_API1 to download an attachment with a given object ID.
 
-**Main Functions**
+{: .box-note }
+**Note*: The function modules BDS_CONNECTIONS_GET and BDS_DOCUMENT_GET_TABLE can not be used in this scenario. 
+Even if BDS_CONNECTIONS_GET delivers correct document IDs, the function module BDS_DOCUMENT_GET_TABLE throws an exception (NOTHING_FOUND).
 
-The function modules BDS_CONNECTIONS_GET and BDS_DOCUMENT_GET_TABLE can't be used here. Even if BDS_CONNECTIONS_GET delivers correct document IDs the function BDS_DOCUMENT_GET_TABLE throws a NOTHING_FOUND exception.
-So we have to discuss a different way to query attachments of a business object. The following code shows how to read the table SRGBTBREL to obtain all document IDs attached to a business object. The object key is the document number (e.g. the purchase number) the object type is the name of the business object (e,.g. BUS2012 for POs or BUS2010 for RFQs). The function returns an array of strings each representing a key to a downloadable attachment.
+### Get a List of all SAP Attachments
 
-<details>
-<summary>[C#]</summary>
-{% highlight csharp %}
-public static string[] GetAllAttachmentKeys(R3Connection con, 
+#### Get a List of Object IDs
+
+The following sample code reads the table SRGBTBREL to obtain all document IDs attached to a business object. 
+- The object key is the document number, e.g., the purchase number
+- The object type is the name of the business object, e.g., BUS2012 for POs or BUS2010 for RFQs). 
+
+The function returns an array of strings each representing a key to a downloadable attachment.
+
+```csharp
+public static string[] GetAllAttachmentKeys(R3Connection connection, 
     string ObjectType, string ObjectKey)
 {
-    ReadTable read = new ReadTable(con);
+    ReadTable read = new ReadTable(connection);
     read.TableName = "SRGBTBREL";
     read.AddField("INSTID_B");
     read.AddCriteria("RELTYPE = 'ATTA'");
@@ -45,20 +54,21 @@ public static string[] GetAllAttachmentKeys(R3Connection con,
   
     return DocIDs;
 }
-{% endhighlight %}
-</details>
+```
 
-To find out some more details on each attachment we have to take a look into table SOOD. The primary key of the table entry is defined by certain parts of the document IDs provided by the function above. The file name of the attachment can be created by concatenating OBJDES and FILE_EXT.
+#### Get a List of File Names
 
-<details>
-<summary>[C#]</summary>
-{% highlight csharp %}
-public static string GetFileName(R3Connection con, string DocID)
+The following sample code reads the table SOOD to get the file name of each attachment. <br>
+- The primary key of the table entry is defined by parts of the document IDs provided by the function `GetAllAttachmentKeys` above. 
+- The file name of the attachment can be created by concatenating OBJDES and FILE_EXT.
+
+```csharp
+public static string GetFileName(R3Connection connection, string DocID)
 {
     string OBJTP = DocID.Substring(17, 3);
     string OBJYR = DocID.Substring(20, 2);
     string OBJNO = DocID.Substring(22, 12);
-    ReadTable readsood = new ReadTable(con);
+    ReadTable readsood = new ReadTable(connection);
     readsood.TableName = "SOOD";
     readsood.AddField("OBJDES");
     readsood.AddField("FILE_EXT");
@@ -76,19 +86,21 @@ public static string GetFileName(R3Connection con, string DocID)
             "." + readsood.Result.Rows[0]["FILE_EXT"].ToString();
     }
 }
-{% endhighlight %}
-</details>
+```
 
-To download an attachment by a given object ID we use SO_DOCUMENT_READ_API1. The returning structure DOCUMENT_DATA contains some information about the file (e.g. DOC_SIZE). The table OBJECT_CONTENT returns the binary content of the attachment as a string (don't ask why). The strings are converted into byte arrays and stored to disk.
+### Download SAP Attachment Files
 
-<details>
-<summary>[C#]</summary>
-{% highlight csharp %}
-public static void DownloadDocument(R3Connection con, string Path, string key)
+The following sample code downloads an attachment with a given object ID using the function module SO_DOCUMENT_READ_API1.
+- The returning structure DOCUMENT_DATA contains information about the file, e.g., DOC_SIZE. 
+- The table OBJECT_CONTENT returns the binary content of the attachment as a string. 
+- The strings are converted into byte arrays and stored to the disk.
+
+```csharp
+public static void DownloadDocument(R3Connection connection, string Path, string key)
 {
-    RFCFunction func = con.CreateFunction("SO_DOCUMENT_READ_API1");
+    RFCFunction func = connection.CreateFunction("SO_DOCUMENT_READ_API1");
     func.Exports["DOCUMENT_ID"].ParamValue = key;
-    func.Execut e();
+    func.Execute();
   
     Int32 len = Convert.ToInt32(func.Imports["DOCUMENT_DATA"].ToStructure()["DOC_SIZE"]);
   
@@ -119,19 +131,34 @@ public static void DownloadDocument(R3Connection con, string Path, string key)
     }
   
 }
-{% endhighlight %}
-</details>
+```
 
-This sample program uses the three functions discussed earlier to download all attachments to a given purchase order number. To download attachments of other business objects, just change the object type (e.g. BUS2010 for RFQ).
+### Read and Download Attachment Files
 
-<details>
-<summary>[C#]</summary>
-{% highlight csharp %}
-R3Connection con = new R3Connection("SAPServer", 00, "SAPUser", "Password", "EN", "800");
+The following sample code queries a list of available attachments and downloads the attachments to the disk.<br>
+To download attachments of other business objects, change the object type, e.g., BUS2010 for RFQ.
+
+```csharp
+using System;
+using ERPConnect;
+
+// Set your ERPConnect license
+LIC.SetLic("xxxx");
+
+using var connection = new R3Connection(
+    host: "server.acme.org",
+    systemNumber: 00,
+    userName: "user",
+    password: "passwd",
+    language: "EN",
+    client: "001")
+{
+    Protocol = ClientProtocol.NWRFC,
+};
+
+connection.Open();
   
-con.Open();
-  
-string[] DocIDs = GetAllAttachmentKeys(con, "BUS2012", "4500014561");
+string[] DocIDs = GetAllAttachmentKeys(connection, "BUS2012", "4500014561");
   
 if (DocIDs.Length == 0)
     Console.WriteLine("No attachments found");
@@ -139,14 +166,13 @@ else
 {
     for (int i=0; i < DocIDs.Length ;i++)
     {
-        string FileName = GetFileName(con, DocIDs[i]);
+        string FileName = GetFileName(connection, DocIDs[i]);
         Console.WriteLine("Now downloading " + FileName);
-        DownloadDocument(con, @"c:\" + FileName, DocIDs[i]);
+        DownloadDocument(connection, @"c:\" + FileName, DocIDs[i]);
     }
 }
   
 Console.WriteLine("Press enter to exit");
 Console.ReadLine();
-{% endhighlight %}
-</details>
+```
 

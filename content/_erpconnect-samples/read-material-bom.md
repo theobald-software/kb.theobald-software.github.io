@@ -1,28 +1,39 @@
 ---
 layout: page
-title: Reading material BOM
+title: Read Material BOM
 description: Reading material BOM
 permalink: /:collection/:path
 weight: 38
 ---
 
-Check out our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
+This sample shows how to obtain the components of a material BOM using the function module CSAP_MAT_BOM_READ.
 
-This sample shows how to obtain the components of a material BOM by using the function module CSAP_MAT_BOM_READ.
+{: .box-tip }
+**Tip**: To change a material BOM use the function modules CSAP_MAT_BOM_OPEN, CSAP_MAT_BOM_MAINTAIN and CSAP_MAT_BOM_CLOSE.
+To create a new BOM use the function modules CSAP_MAT_BOM_ALLOC_CREATE and CSAP_MAT_BOM_CREATE.
 
-To change a material BOM you may use CSAP_MAT_BOM_OPEN, CSAP_MAT_BOM_MAINTAIN and CSAP_MAT_BOM_CLOSE.
+```csharp
+using System;
+using ERPConnect;
 
-To create a new BOM use CSAP_MAT_BOM_ALLOC_CREATE and CSAP_MAT_BOM_CREATE.
+// Set your ERPConnect license
+LIC.SetLic("xxxx");
 
-<details>
-<summary>[C#]</summary>
-{% highlight csharp %}
-R3Connection con = new R3Connection("hamlet", 11, "XXX", 
-    "XXX", "EN", "800");
-con.Open();
+using var connection = new R3Connection(
+    host: "server.acme.org",
+    systemNumber: 00,
+    userName: "user",
+    password: "passwd",
+    language: "EN",
+    client: "001")
+{
+    Protocol = ClientProtocol.NWRFC,
+};
+
+connection.Open();
   
 //Create function
-RFCFunction func = con.CreateFunction("CSAP_MAT_BOM_READ");
+RFCFunction func = connection.CreateFunction("CSAP_MAT_BOM_READ");
 func.Exports["MATERIAL"].ParamValue = "100-100"; // Material
 func.Exports["PLANT"].ParamValue = "1000"; // Plant
 func.Exports["BOM_USAGE"].ParamValue = "1"; // Usage -> 1 = Production
@@ -57,5 +68,4 @@ else
   
 Console.WriteLine("Ready");
 Console.ReadLine();
-{% endhighlight %}
-</details>
+```

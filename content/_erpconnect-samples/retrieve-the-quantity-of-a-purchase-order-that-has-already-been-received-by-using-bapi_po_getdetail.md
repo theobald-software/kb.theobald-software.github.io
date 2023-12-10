@@ -1,22 +1,18 @@
 ---
 layout: page
-title: Retrieving the quantity of a purchase order that has already been received by using BAPI_PO_GETDETAIL
+title: Retrieve the quantity of a purchase order that has already been received by using BAPI_PO_GETDETAIL
 description: Retrieving the quantity of a purchase order that has already been received by using BAPI_PO_GETDETAIL
 permalink: /:collection/:path
 weight: 37
 ---
 
-Check out our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
+This sample shows how to get the history of a purchase order to find out which part of the quantity has already been received.
 
-This function shows how to get the history of a purchase order to find out which part of the quantity has already been received.
-
-<details>
-<summary>[C#]</summary>
-{% highlight csharp %}
+```csharp
 public Decimal GetPODetail(string BestellNr, string BestellPos)
 {
      
-    RFCFunction func = Con.CreateFunction("BAPI_PO_GETDETAIL");
+    RFCFunction func = connection.CreateFunction("BAPI_PO_GETDETAIL");
     func.Exports["PURCHASEORDER"].ParamValue = BestellNr;
     func.Exports["HISTORY"].ParamValue = "X";
     func.Exports["ITEMS"].ParamValue = " ";
@@ -32,5 +28,4 @@ public Decimal GetPODetail(string BestellNr, string BestellPos)
     }
     return 0;
 }
-{% endhighlight %}
-</details>
+```
