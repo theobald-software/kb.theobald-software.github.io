@@ -78,7 +78,7 @@ public bool GoodsReceipt101(string PO_Number, string PO_ITEM, string Plant, deci
      itemrow["STGE_LOC"] = "0001";            //Storage Location
   
      // Execute Function Module
-     func.Execut e();
+     func.Execute();
   
      RFCFunction funcCommit = connection.CreateFunction("BAPI_TRANSACTION_COMMIT");
      funcCommit.Exports["WAIT"].ParamValue = "X";
@@ -90,7 +90,7 @@ public bool GoodsReceipt101(string PO_Number, string PO_ITEM, string Plant, deci
      if (func.Tables["RETURN"].RowCount > 0)
       {
         rMessage = func.Tables["RETURN"].Rows[0, "MESSAGE"].ToString();
-        funcCommit.Execut e();
+        funcCommit.Execute();
         return !func.Tables["RETURN"].Rows[0, "TYPE"].ToString().Equals("E");
       }
      else

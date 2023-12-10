@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Retrieve texts from a sales order by using RFC_READ_TEXT
+title: Retrieve Texts from a Sales Order
 description: Retrieve texts from a sales order by using RFC_READ_TEXT
 permalink: /:collection/:path
 weight: 45
@@ -40,8 +40,8 @@ newrow["TDNAME"] = "0000008221000010"; // Key
 newrow["TDID"] = "0001"; // Text-ID
 newrow["TDSPRAS"] = "DE"; // Language
   
-// Execut e the function          
-func.Execut e();
+//Execute the function          
+func.Execute();
   
 // Loop the table
 foreach(RFCStructure row in func.Tables["TEXT_LINES"].Rows)

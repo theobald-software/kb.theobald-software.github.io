@@ -38,8 +38,8 @@ func.Exports["MATERIAL"].ParamValue = "100-100"; // Material
 func.Exports["PLANT"].ParamValue = "1000"; // Plant
 func.Exports["BOM_USAGE"].ParamValue = "1"; // Usage -> 1 = Production
   
-// Execut e
-func.Execut e();
+//Execute
+func.Execute();
   
 // reading header
 if (func.Tables["T_STKO"].Rows.Count > 0)

@@ -19,7 +19,7 @@ This sample uses the following workflow to download attachment files:
 3. Use SO_DOCUMENT_READ_API1 to download an attachment with a given object ID.
 
 {: .box-note }
-**Note*: The function modules BDS_CONNECTIONS_GET and BDS_DOCUMENT_GET_TABLE can not be used in this scenario. 
+**Note**: The function modules BDS_CONNECTIONS_GET and BDS_DOCUMENT_GET_TABLE can not be used in this scenario. 
 Even if BDS_CONNECTIONS_GET delivers correct document IDs, the function module BDS_DOCUMENT_GET_TABLE throws an exception (NOTHING_FOUND).
 
 ### Get a List of all SAP Attachments

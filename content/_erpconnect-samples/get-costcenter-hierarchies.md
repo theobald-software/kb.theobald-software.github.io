@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Get CostCenter hierarchies
+title: Get CostCenter Hierarchies
 description: Get CostCenter hierarchies
 permalink: /:collection/:path
 weight: 11

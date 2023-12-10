@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Retrieve the quantity of a purchase order that has already been received by using BAPI_PO_GETDETAIL
+title: Retrieve the Quantity of a Purchase Order that has already been received
 description: Retrieving the quantity of a purchase order that has already been received by using BAPI_PO_GETDETAIL
 permalink: /:collection/:path
 weight: 37
@@ -16,7 +16,7 @@ public Decimal GetPODetail(string BestellNr, string BestellPos)
     func.Exports["PURCHASEORDER"].ParamValue = BestellNr;
     func.Exports["HISTORY"].ParamValue = "X";
     func.Exports["ITEMS"].ParamValue = " ";
-    func.Execut e();
+    func.Execute();
   
      // Check Return-Table
     for(int i=0; i < func.Tables["PO_ITEM_HISTORY_TOTALS"].RowCount; i++)

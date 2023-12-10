@@ -202,13 +202,13 @@ The execution of the function uses the same principle as `CreateFunction()`:
 - Deallocate
 
 ```csharp
-public void Execut eFunction(RFCFunction func)
+public void ExecuteFunction(RFCFunction func)
 {
     R3ConnectionEx con = this.AllocConnection();
     try
     {
         func.Connection = (R3Connection)con;
-        func.Execut e();
+        func.Execute();
   
     }
     catch (Exception e1)
@@ -296,7 +296,7 @@ class Program
         Console.WriteLine("Current Number of connections: " + ConPool.CurrentNumberOfConnection);
     }
   
-    static void Execut eALongRunningFunctionModule(object SearchTerm)
+    static void ExecuteALongRunningFunctionModule(object SearchTerm)
     {
         RFCFunction func = ConPool.CreateFunction("BAPI_EMPLOYEE_GETLIST");
   

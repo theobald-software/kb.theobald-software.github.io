@@ -116,7 +116,7 @@ static void Main(string[] args)
                 recSig["COMP_COUNT"] = 1;
                 recSig["PROP_NAME"] = "LANGUAGE";
                 recSig["PROP_VALUE"] = "EN"; 
-                func.Execut e();
+                func.Execute();
                 Console.WriteLine("Upload OK");
                 Console.ReadLine();
             }

@@ -115,7 +115,7 @@ trans.AddStepSetField("KNVI-TAXKD(01)","1"); // Tax classification
 trans.AddStepSetNewDynpro("SAPMF02D","1350");
 trans.AddStepSetOKCode("=UPDA");
   
-trans.Execut e();
+trans.Execute();
   
 foreach(ERPConnect.Utils.BatchReturn ret in trans.Returns)
     Console.WriteLine(ret.Message);
