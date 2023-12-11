@@ -6,39 +6,70 @@ permalink: /:collection/:path
 weight: 45
 ---
 
-Check out our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
+This sample shows how to get texts from sales orders using the function module RFC_READ_TEXT.
 
-The screenshot shows the texts tab in VA01 where the user can store different kinds of texts.
+### About
 
+Sales orders can store different kinds of texts.
+The texts can be attached to the order header or the order items.<br>
+Use the SAP standard function module RFC_READ_TEXT to retrieve the texts.
+RFC_READ_TEXT requires the following table input (table TEXT_LINES) for each text you want to fetch:
+
+- TDOBJECT is the name of the text object, e.g., VBBK for sales order header or VBBP for sales order item.
+- TBNAME is the key, e.g., in case of VBBP it is the sales order number and the Sales order item number.
+- TDID is the text ID that defines the text type, e.g., 0001 for Material sales text.
+- TDSPRAS is the language key.
+
+<!--- 
+The following screenshot shows the texts of order items in a sales order. 
 ![ReadTextVA01](/img/contents/ReadTextVA01.jpg){:class="img-responsive"}
+-->
 
-The texts can be attached to the order header or the order items.
+### Look up Text Information in SAP
 
-To retrieve these texts we can use the function module RFC_READ_TEXT. We have to fill the table TEXT_LINES for each text we want to fetch. These elements must be filled:
+Follow the steps below to look up the correct text name, text object and text ID of a text in SAP:
+1. Open the sales order.
+2. Access item texts via **More > Goto > Item > Texts** or access header texts via **More > Goto > Header > Texts**.
+3. Click **[Detail]** (magnifying glass icon). The text editor opens.
+4. Navigate to **Goto > Header**. The window "Text Header" opens.<br>
+![TextDetails](/img/contents/TextDetails.png){:class="img-responsive"}
 
-- TDOBJECT is the name of the text object (e.g. VBBK for sales order header or VBBP for sales order item)
-- TBNAME is the key (in case of VBBP it is the sales order number and the Sales order item number)
-- TDID is the text id which defines the kind of text (e.g. 0001 for Material sales text).
-- TDSPRAS is the language key
+{: .box-tip}
+**Tip:** Use SAP transaction SE75 to look up all available text objects and the underlaying text IDs.
 
-This code shows how to execute the function module:
+### Call RFC_READ_TEXT
 
-<details>
-<summary>[C#]</summary>
-{% highlight csharp %}
-// open connection
-ERPConnect.R3Connection con = new R3Connection("SapServer",00,"SapUser","Password","en","800");
-con.Open();
+The following sample code calls RFC_READ_TEXT to query the item text of a sales order:
+
+```csharp
+using System;
+using ERPConnect;
+
+// Set your ERPConnect license
+LIC.SetLic("xxxx");
+
+using var connection = new R3Connection(
+    host: "server.acme.org",
+    systemNumber: 00,
+    userName: "user",
+    password: "passwd",
+    language: "EN",
+    client: "001")
+{
+    Protocol = ClientProtocol.NWRFC,
+};
+
+connection.Open();
   
 // Create function object
-RFCFunction func = con.CreateFunction("RFC_READ_TEXT");
+RFCFunction func = connection.CreateFunction("RFC_READ_TEXT");
   
 // Add a new table row and fill it
 RFCStructure newrow = func.Tables["TEXT_LINES"].Rows.Add();
 newrow["TDOBJECT"] = "VBBP"; // Text object
 newrow["TDNAME"] = "0000008221000010"; // Key
 newrow["TDID"] = "0001"; // Text-ID
-newrow["TDSPRAS"] = "DE"; // Language
+newrow["TDSPRAS"] = "EN"; // Language
   
 //Execute the function          
 func.Execute();
@@ -47,21 +78,13 @@ func.Execute();
 foreach(RFCStructure row in func.Tables["TEXT_LINES"].Rows)
     Console.WriteLine(row["TDLINE"].ToString());
   
-con.Close();
+connection.Close();
   
 Console.WriteLine("");
 Console.WriteLine("Press enter to quit.");
 Console.ReadLine();
-{% endhighlight %}
-</details>
+```
+
+Output:
 
 ![ReadTextConsole](/img/contents/ReadTextConsole.jpg){:class="img-responsive"}
-
-#### Additional Information
-
-Goto transaction SE75 to find out more about all available text objects and the underlaying text IDs.
-
-If you want to know what the correct text name, text object and text id of a certain text is, go to the editor and then click on Goto -> Header.
-
-![TextDetails](/img/contents/TextDetails.png){:class="img-responsive"}
-

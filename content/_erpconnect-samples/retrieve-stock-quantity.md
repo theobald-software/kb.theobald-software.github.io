@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Retrieving Stock Quantity via BAPI
+title: Retrieve Stock Quantity
 description: Retrieving Stock Quantity via BAPI
 permalink: /:collection/:path
 weight: 13
