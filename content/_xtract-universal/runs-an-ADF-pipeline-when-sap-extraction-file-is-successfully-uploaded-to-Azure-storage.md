@@ -6,10 +6,9 @@ permalink: /:collection/:path
 weight: 125
 ---
 
+The following article shows how to run an event-driven pipeline in Azure Data Factory to process SAP data extracted with [Xtract Universal](https://theobald-software.com/en/xtract-universal/) into an Azure Storage. <br>
 
 ### About
-
-The following article shows how to run an event-driven pipeline in Azure Data Factory to process SAP data extracted with [Xtract Universal](https://theobald-software.com/en/xtract-universal/) into an Azure Storage. <br>
 
 Xtract Universal is a universal SAP extraction platform that is used in this example to extract and upload SAP customer master data to Azure Storage. <br> 
 An event then triggers an ADF pipeline to process the SAP parquet file, e.g. with [Databricks](https://learn.microsoft.com/en-us/azure/databricks/).
