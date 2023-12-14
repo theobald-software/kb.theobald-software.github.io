@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Executing BW Queries
+title: Execute BW Queries
 description: Executing BW Queries
 permalink: /:collection/:path
 weight: 31
@@ -11,7 +11,7 @@ The following sample shows how to fetch data from a BW Query using ERPConnect.
 ### About
 This example uses the BW query *ZSIMPLEQUERY* which is based on the cube *0D_DECU*. <br>
 The following screenshot shows the query in the designer. <br>
-![BW-001](/img/content/BW-001.png){:class="img-responsive" }
+![BW-001](/img/contents/BW-001.png){:class="img-responsive" }
 
 {: .box-note }
 **Note**: To allow external access to a BW Query the checkbox **Allow external access** has to be set to active in the preferences for the query.
@@ -19,7 +19,7 @@ The following screenshot shows the query in the designer. <br>
 The dimensions *Material* and *Sold-to party* as well as the key figures *Billed Quantity* and *Costs* are drawn into a *DataGrid*, see screenshot below. <br>
 The dimension has a variable called *MAT01* that allows a limitation to the material number.
 
-![BW-002](/img/content/BW-002.png){:class="img-responsive" width="600px" }
+![BW-002](/img/contents/BW-002.png){:class="img-responsive" width="600px" }
 
 ### Executing Queries
 1. Open a client connection to the R/3 system using the *R3Connection* class.

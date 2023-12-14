@@ -8,6 +8,10 @@ weight: 47
 
 This sample shows how to change the batch values in SAP in an outbound delivery using the BAPI BAPI_OUTB_DELIVERY_CHANGE. 
 
+### Call BAPI_OUTB_DELIVERY_CHANGE
+
+The following sample code changes the batch values in SAP in an outbound delivery:
+
 ```csharp
 using System;
 using ERPConnect;

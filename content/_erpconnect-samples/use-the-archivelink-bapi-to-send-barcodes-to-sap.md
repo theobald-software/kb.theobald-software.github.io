@@ -9,6 +9,9 @@ weight: 8
 This sample shows how to use the BAPI BAPI_BARCODE_SENDLIST to send a list of barcodes to SAP. <br>
 BAPI_BARCODE_SENDLIST is part of the ArchiveLink BAPI.
 
+### Call BAPI_BARCODE_SENDLIST
+The following sample code sends a list of barcodes to SAP:
+
 ```csharp
 using System;
 using ERPConnect;

@@ -9,9 +9,22 @@ weight: 1
 <!---
 move to: https://help.theobald-software.com/en/erpconnect/special-classes/reading-sap-tables-directly-with-readtable
 -->
-A recurrent task in daily work with SAP and .NET applications is to read directly from tables of the SAP system. You can use the ReadTable class to manage this demand. The sample below shows how to select data from the table. The result is passed back via an easy-to-use ADO.net table object.
 
-In this sample we want to read material description texts which are located in the table MAKT. So we need the two columns MATNR (material number) and MAKTX (material description). Furthermore we want only the English texts so we have to add the WHERE statement SPRAS='EN'. SPRAS is the column which contains the language keys. The method Run executes the query and passes back the ADO.net table.
+The following sample shows how to use the *ReadTable* class to select data from the SAP table *MAKT* and how to process the ADO.NET result table object. 
+
+### About
+
+The SAP table MAKT contains material descriptions.
+- This sample reads the material description texts of *MAKT*. 
+For this the columns *MATNR* (material number) and *MAKTX* (material text) are needed.
+- Add a corresponding WHERE statement `SPRAS='EN'` to make sure only the English language texts are read (SPRAS is the column that contains the language keys).
+
+{: .box-note }
+**Note:** The *RFC_READ_TABLE* function module for table extractions is not suitable for mass data extraction, see [Table Restrictions](#table-restrictions).
+
+### Read the SAP Table MAKT
+
+The following sample code reads the English material description texts of the SAP table MAKT:
 
 ``` csharp
 using System;
@@ -59,8 +72,6 @@ Console.ReadLine();
 ```
 
 Output:
-
-<!---
 ```
 000000000000000023 Pawan Kalyan_08
 000000000000000038 Test US colleagues upd4
@@ -73,6 +84,5 @@ Output:
 000000000000000089 AS-100 T-shirt
 000000000000000098 PCB Subassembly
 ```
--->
 
 ![ReadTableDemoConsole](/img/contents/ReadTableDemoConsole.jpg){:class="img-responsive"}

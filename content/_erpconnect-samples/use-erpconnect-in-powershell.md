@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Using ERPConnect in PowerShell
+title: Use ERPConnect in PowerShell
 description: Using ERPConnect in Powershell
 permalink: /:collection/:path
 weight: 23

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: ERPConnect in a web application- Creating a Purchase Order via BAPI
+title: Create a Purchase Order in a Web Application
 description: ERPConnect in a web application- Creating a Purchase Order via BAPI
 permalink: /:collection/:path
 weight: 14
@@ -11,8 +11,32 @@ move to: https://help.theobald-software.com/en/erpconnect/calling-bapis-and-func
 -->
 
 
-![CreatePurchaseOrderIE](/img/contents/CreatePurchaseOrderIE.jpg){:class="img-responsive"}
+The following sample shows how to create a purchase order using the *BAPI_PO_CREATE*.
+The sample uses an ASP page to enter data for a purchase order, see screenshot below. <br>
+![purchase-order1](/img/contents/CreatePurchaseOrderIE.jpg){:class="img-responsive"}  
 
+Input:
+```
+Vendor: 0000001070
+Material: B-7000
+Plant: 1000
+Quantity: 10
+```
+
+#### How to Create a Purchase Order 
+
+To create a purchase order using the *BAPI_PO_CREATE* BAPI, follow the steps below:
+1. Establish a connection to the SAP system 
+2. Create an RFC-Function object for the BAPI *BAPI_PO_CREATE*.
+3. Fill the structure *PO_HEADER* with the following values: 
+- DOC_TYPE -> Order type (NB normal order)
+- PURCH_ORG -> Purchasing organization
+- PUR_GROUP -> Purchasing group
+- DOC_DATE -> Date 
+- VENDOR -> Vendor number
+4. Define the items *PLANT* and *PUR_MAT* (material number) in the table *PO_ITEMS*. <br>
+5. The values for the quantity (*QUANTITY*) and the delivery date (*DELIV_DATE*) must be placed in the table *PO_ITEM_SHEDULES*.
+6. Execute the BAPI and process the return messages.
 
 ```csharp
 using System;
@@ -79,12 +103,9 @@ var returnMessage = func.Tables["RETURN"].Rows[0, "MESSAGE"].ToString();
 Console.WriteLine($"Message: {returnMessage}");
 ```
 
-Input/Output:
+Output:
+
 ```
-Vendor: 0000001070
-Material: B-7000
-Plant: 1000
-Quantity: 10
 Message: Standard PO created under the number 4500018292
 ```
 

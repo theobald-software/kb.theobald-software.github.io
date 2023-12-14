@@ -12,6 +12,9 @@ This sample shows how to obtain the components of a material BOM using the funct
 **Tip**: To change a material BOM use the function modules CSAP_MAT_BOM_OPEN, CSAP_MAT_BOM_MAINTAIN and CSAP_MAT_BOM_CLOSE.
 To create a new BOM use the function modules CSAP_MAT_BOM_ALLOC_CREATE and CSAP_MAT_BOM_CREATE.
 
+### Call CSAP_MAT_BOM_READ
+The following sample code retrieves the components of a material BOM:
+
 ```csharp
 using System;
 using ERPConnect;

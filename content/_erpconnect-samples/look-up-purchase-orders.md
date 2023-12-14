@@ -8,6 +8,9 @@ weight: 26
 
 This sample shows how to get a list of purchase orders using the BAPI BAPI_PO_GETITEMS. 
 
+### Call BAPI_PO_GETITEMS
+
+The following sample code retrieves a list of purchase orders from SAP:
 
 ```csharp
 using System;

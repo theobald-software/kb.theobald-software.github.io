@@ -1,13 +1,16 @@
 ---
 layout: page
-title: Receiving a list of all users
+title: Get a List of all users
 description: Receiving a list of all users
 permalink: /:collection/:path
 weight: 9
 ---
 
 This sample shows how to read the user names and address data of all users in the SAP system using the function module BAPI_HELPVALUES_GET.<br>
-BAPI_HELPVALUES_GET requires the use of selection parameters, because it contains an import Table (SELECTION_FOR_HELPVALUES)
+
+### Call BAPI_HELPVALUES_GET
+
+The following sample code reads user names and address data of SAP users using uses selection parameters for the import Table (SELECTION_FOR_HELPVALUES) of BAPI_HELPVALUES_GET.
 
 ```csharp
 static ArrayList getUserList(string sign, string option, string low, string high)

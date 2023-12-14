@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Managing and Executing Batch Input Transactions
+title: Manage and Execute Batch Input Transactions
 description: Managing and Executing Batch Input Transactions
 permalink: /:collection/:path
 weight: 3
@@ -11,14 +11,27 @@ weight: 3
 move to: https://help.theobald-software.com/en/erpconnect/special-classes/managing-and-executing-transactions-the-class-transaction
 -->
 
-Working up to SAP GUI 7.50
 
-The class Transaction offers the possibility of executing SAP transactions in the foreground as well as in a background process. This technique is called Batch Input. By executing in a background process, you will be able to process mass data and transfer it to the SAP system. This technique is often used if no BAPI exists.
+The following sample application shows how to execute the SAP transaction MMBE (stock overview) using the *Transaction* class.
 
-Another possibility is to jump directly to an SAP transaction from your .NET application. The example below covers this.
+### About
 
-The user is able to enter a material number and the name of a plant. After doing so, she/he can click the button and the SAP GUI is launched with transaction MMBE (stock overview). A special tool, the TransactionRecorder, is also included in the installation package to record such transactions and implement them easily in your own program code.
+In this application the user can enter a material number and the name of a plant. 
+By clicking a button, the SAP GUI is launched and the transaction MMBE (stock overview) is executed to list the entered materials and plants. 
 
+![Call-Transaction-002](/img/contents/Call-Transaction-002.png){:class="img-responsive" width="300px" }
+
+{: .box-tip }
+**Tip**: The installation package of ERPConnect includes the *Transaction-Recorder* tool. 
+This tool records transactions and implements them to code, see [Transaction-Recorder](../tools/transaction-recorder). 
+
+The code below shows how to add batch steps with the method *AddStep*. <br>
+When connecting to SAP set the *UseGui* property to true. 
+The SAP GUI is launched using the method *Execute*.
+
+### Execute SAP Transactions
+
+The following sample code executes the SAP transaction MMBE (stock overview):
 
 ```csharp
 using System;
@@ -73,3 +86,7 @@ Plant: 1000
 Output:
 
 ![MMBE1_kl](/img/contents/MMBE1_kl.jpg){:class="img-responsive"}
+
+{: .box-note }
+**Note**: If you only want to execute a single transaction without adding several batch steps, simply set the property *TCode* and execute the transaction. 
+

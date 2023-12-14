@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Download Business Object Attachments (e.g. from a purchase order)
+title: Download Business Object Attachments
 description: Download Business Object Attachments (e.g. from a purchase order)
 permalink: /:collection/:path
 weight: 39

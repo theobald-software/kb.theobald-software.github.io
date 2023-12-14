@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Transferring data packets with ReadTable
+title: Transfer data packets with ReadTable
 description: Transferring data packets with ReadTable class
 permalink: /:collection/:path
 weight: 6

@@ -10,15 +10,16 @@ weight: 2
 move to: https://help.theobald-software.com/en/erpconnect/special-classes/abap-code
 -->
 
-The class ABAPCode offers nearly unlimited possibilities. You can execute ABAP code on the fly and retrieve the result in a string array.
+The following sample shows how to create a simple ABAP interpreter that executes a dynamic SQL statement.<br>
 
-### Creating an ABAP Interpreter
-The following sample shows how to create a simple ABAP interpreter that executes a dynamic SQL statement.
+### Create an ABAP Interpreter
 
-1. Open a client connection to the R/3 system using *R3Connection*.
-2. Add a new line of code to the dynamic report using *AddCodeLine*.
-3. Execute the report using *Execute*.
-4. Read the result set (regarding the ABAP list) using *GetResultLine*.
+Follow the steps below to crate an ABAP interpreter:
+
+1. Connect to the SAP system using `R3Connection`.
+2. Add a new line of code to the dynamic report using `AddCodeLine`.
+3. Execute the report using `Execute`.
+4. Read the result set (regarding the ABAP list) using `GetResultLine`.
 
 ```csharp
 using System;
@@ -80,14 +81,14 @@ else
 }
 ```
 
-Output:
-
 <!---
 ```
 System time  11:17:46
 Number of rows in KNA1:       7.705
 ```
 -->
+
+Output:
 
 ![ABAPPad](/img/contents/ABAPPad.jpg){:class="img-responsive"}
 
