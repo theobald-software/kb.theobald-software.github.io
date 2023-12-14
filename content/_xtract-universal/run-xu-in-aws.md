@@ -1,12 +1,12 @@
 ---
 layout: page
 title: Run Xtract Universal in AWS
-description: Run Xtract Universal in AWS
+description: Run Xtract Universal in a VM on AWS EC2
 permalink: /:collection/:path
 weight: 127
 ---
 
-The following article shows how to run Xtract Universal in [Amazon Web Services (AWS)](https://aws.amazon.com/marketplace/pp/prodview-anarfo2osmhl4?sr=0-1&ref_=beagle&applicationId=AWSMPContessa#pdp-reviews).
+The following article shows how to run Xtract Universal in a virtual machine on an AWS EC2.
 
 ### About
 
