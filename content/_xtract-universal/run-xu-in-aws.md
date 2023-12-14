@@ -12,12 +12,7 @@ The following article shows how to run Xtract Universal in [Amazon Web Services 
 
 AWS enables running virtual servers (instances) in the cloud, see [AWS Documentation: EC2](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/concepts.html).
 Theobald Software offers Xtract Universal as an [Amazon Machine Image (AMI)](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/AMIs.html) for customers who want to evaluate Xtract Universal or who want to host Xtract Universal in the cloud.
-After susbcribing to Xtract Universal you can select the Xtract Universal AMI when launching an instance in AWS.
-
-<!---
-Xtract Universal is provided as an [Amazon Machine Image (AMI)](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/AMIs.html).
-![XUinAWS-subscribe](/img/contents/xu/XUinAWS-subscribe.png)
--->
+The Xtract Universal AMI can be selected when launching an instance in AWS.
 
 When starting an Xtract Universal instance, the following settings are pre-configured:
 
@@ -30,9 +25,15 @@ When starting an Xtract Universal instance, the following settings are pre-confi
 - AWS account
 - Access to the [EC2](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/concepts.html) console
 
-### Use Xtract Universal in AWS
+There are multiple ways to start using Xtract Universal in EC2.
+- [Set Up Xtract Universal from the AWS Marketplace](#set-up-xtract-universal-from-the-aws-marketplace)
+- [Set Up Xtract Universal directly from the EC2 Console](#set-up-xtract-universal-from-the-ec2-console)
 
-1. Log in to AWS marketplace and look up [Xtract Universal in AWS](https://aws.amazon.com/marketplace/pp/prodview-anarfo2osmhl4?sr=0-1&ref_=beagle&applicationId=AWSMPContessa#pdp-reviews).
+### Set Up Xtract Universal from the AWS Marketplace
+
+Follow the steps below to set up Xtract Universal from the AWS Marketplace:
+
+1. Log in to AWS marketplace and open the [Xtract Universal product page in AWS](https://aws.amazon.com/marketplace/pp/prodview-anarfo2osmhl4?sr=0-1&ref_=beagle&applicationId=AWSMPContessa#pdp-reviews).
 2. Click **[Continue to Subscribe]** to [subscribe](https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-ami-contracts.html) to Xtract Universal.<br>
 ![XUinAWS-marketplace](/img/contents/xu/XUinAWS-marketplace.png)
 3. Click **[Continue to Configuration]** to select a software version and a region for hosting Xtract Universal.
@@ -41,7 +42,31 @@ When starting an Xtract Universal instance, the following settings are pre-confi
 5. In **Choose Action** select *Launch through EC2* to access all options for configuring a virtual machine in EC2. 
 ![XUinAWS-launch](/img/contents/xu/XUinAWS-launch.png)
 6. Click **[Launch]**. The EC2 console opens.
-3. Open Xtract Universal.
+7. Set up your virtual machine, see [AWS Documentation: Launch an Instance](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/EC2_GetStarted.html#ec2-launch-instance).
+The Xtract Universal AMI is already selected.<br>
+![XUinAWS-ec2setup](/img/contents/xu/XUinAWS-ec2setup.png)
+8. Start the EC2 instance and connect to it, see [AWS Documentation: Connect to an Instance](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/EC2_GetStarted.html#ec2-connect-to-instance-windows)
+9. When connected, the Xtract Universal Designer is located on the Desktop. Start the Xtract Universal Designer.
+10. Set up an SAP connection and extractions, see [Online Help: Getting Started](https://help.theobald-software.com/en/xtract-universal/getting-started/connect-designer-with-server).
 
+### Set Up Xtract Universal from the EC2 Console
 
-Connect to the server with the Xtract Universal Designer, which you can find on the Desktop.
+Follow the steps below to set up Xtract Universal directly from the EC2 console:
+
+1. Open the [Amazon EC2 console](https://console.aws.amazon.com/ec2/).
+2. In the EC2 console dashboard, click **[Launch instance]**.<br>
+![XUinAWS-XUinAWS-ec2-launch](/img/contents/xu/XUinAWS-ec2-launch.png)
+3. In the *Quick Start* tab of **Application and OS Images (Amazon Machine Image)** click **[Browse more AMIs]**. <br>
+![XUinAWS-browseAMIs](/img/contents/xu/XUinAWS-browseAMIs.png)
+4. Enter "Xtract Universal" in the search bar. Xtract Universal is listed under *AWS Marketplace AMIs*.
+5. Click **[Select]**. The application returns to the EC2 console.<br>
+![XUinAWS-ec2-select](/img/contents/xu/XUinAWS-ec2-select.png)
+6. Set up your virtual machine, see [AWS Documentation: Launch an Instance](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/EC2_GetStarted.html#ec2-launch-instance).
+The Xtract Universal AMI is already selected.<br>
+![XUinAWS-ec2setup](/img/contents/xu/XUinAWS-ec2setup.png)
+7. Start the EC2 instance and connect to it, see [AWS Documentation: Connect to an Instance](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/EC2_GetStarted.html#ec2-connect-to-instance-windows)
+8. When connected, the Xtract Universal Designer is located on the Desktop. Start the Xtract Universal Designer.
+9. Set up an SAP connection and extractions, see [Online Help: Getting Started](https://help.theobald-software.com/en/xtract-universal/getting-started/connect-designer-with-server).
+
+{: .box-note }
+**Note:** If you are not already [subscribed](https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-ami-contracts.html) to Xtract Universal, launching the EC2 instance automatically adds the subscription.
