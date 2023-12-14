@@ -19,13 +19,13 @@ The following article describes the simple steps how to extract and load SAP dat
 Any post-processing and data modeling on DWC is **not** covered in this article.
 
 
-### Assumption
-This article assumes:
-- Xtract Universal is already installed on a Windows machine; a number of extractions have been created.
+### Prerequisites
+
+- Xtract Universal is installed on a Windows machine; extractions exist.
 - You have an SAP DWC environment in place.
 - *Optional*: You have a cloud storage environment (Azure Storage, AWS S3, Google Cloud Storage) in place.
 
-If you are not familiar with Xtract Universal, you may want to first take a look at our [Getting Started with Xtract Universal](https://help.theobald-software.com/en/xtract-universal/getting-started) pages.
+If you are not familiar with Xtract Universal, refer to [Getting Started with Xtract Universal](https://help.theobald-software.com/en/xtract-universal/getting-started) pages.
 
 ### General Workflow for Creating and Running Extractions
 
