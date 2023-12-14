@@ -6,28 +6,46 @@ permalink: /:collection/:path
 weight: 46
 ---
 
-Check out our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
+This sample shows how to use batch input with SAP transaction XD01 in ERPConnect to create new customers in SAP.
 
-Using the BAPI BAPI_CUSTOMER_CREATEFROMDATA1 is not recommended because this BAPI doesn't support a lot of fields that are needed to create valid customer master data.
-The best way to create a new customer is to use batch input. You can use the transaction recorder located in the installation directory to create a template and then use this template for your own code as described in the manual.
-Have a look at the screenshot that shows how to use the transaction recorder. The code below shows the ready-to-use program.
+{: .box-note}
+**Note:** Using the BAPI BAPI_CUSTOMER_CREATEFROMDATA1 is not recommended because it does not support some fields that are needed to create valid customer master data.
+
+### Create a Code Template
+
+Use the [transaction recorder](https://help.theobald-software.com/en/erpconnect/tools/transaction-recorder) tool located in the installation directory of ERPConnect (`C:\Program Files\ERPConnect`) to create a code template for the SAP transaction XD01:
 
 ![CreateCustomerBatchInput00](/img/contents/CreateCustomerBatchInput00.png){:class="img-responsive"}
 
-![CreateCustomerBatchInput01](/img/contents/CreateCustomerBatchInput01.png){:class="img-responsive"}
+### Call Transaction XD01
 
-![CreateCustomerBatchInput02](/img/contents/CreateCustomerBatchInput02.png){:class="img-responsive"}
+The following sample code calls SAP transaction XD01 to create new customers in SAP:
 
-<details>
-<summary>[C#]</summary>
-{% highlight csharp %}
-R3Connection con = new R3Connection("USER=XXX LANG=EN CLIENT=800 SYSNR=11 ASHOST=XXPASSWD=XXX");
-con.Open();
+```csharp
+using System;
+using ERPConnect;
+using ERPConnect.Utils;
+
+// Set your ERPConnect license
+LIC.SetLic("xxxx");
+
+using var connection = new R3Connection(
+    host: "server.acme.org",
+    systemNumber: 00,
+    userName: "user",
+    password: "passwd",
+    language: "EN",
+    client: "001")
+{
+    Protocol = ClientProtocol.NWRFC,
+};
+
+connection.Open();
   
 Transaction trans = new Transaction();
   
-trans.Connection=con;
-trans.TCode="XD01"; // Transaktion XD01
+trans.Connection=connection;
+trans.TCode="XD01"; // Transaction XD01
   
   
 // First Dynpro
@@ -115,12 +133,15 @@ trans.AddStepSetField("KNVI-TAXKD(01)","1"); // Tax classification
 trans.AddStepSetNewDynpro("SAPMF02D","1350");
 trans.AddStepSetOKCode("=UPDA");
   
-trans.Execut e();
+trans.Execute();
   
 foreach(ERPConnect.Utils.BatchReturn ret in trans.Returns)
     Console.WriteLine(ret.Message);
   
 Console.WriteLine("Press Enter to exit");
 Console.ReadLine();
-{% endhighlight %}
-</details>
+```
+
+Output:
+
+![CreateCustomerBatchInput01](/img/contents/CreateCustomerBatchInput01.png){:class="img-responsive"}

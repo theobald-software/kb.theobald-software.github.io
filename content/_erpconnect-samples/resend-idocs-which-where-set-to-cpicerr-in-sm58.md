@@ -6,45 +6,69 @@ permalink: /:collection/:path
 weight: 33
 ---
 
-Check out our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
+This sample shows how to resend IDocs that are flagged with an error in the tRFC monitor.
 
-When IDocs are sent by SAP while the external system is not available at this moment, these IDocs / calls are flagged with error in SM58 (tRFC monitor). The calls are resent automatically after minutes depending on the system configuration.
+### About
 
-These code snippet shows an option to force the resend.
+When IDocs are sent by SAP while the external system is not available, the IDocs / calls are flagged with error in SM58 (tRFC monitor). 
+The calls are resent automatically after minutes depending on the system configuration.
 
-It looks up all errors in tables ARFCSSTATE of a given destination and then calls ARFC_RUN_NOWAIT to resend each call.
+### Force Resend of an IDoc
 
-<details>
-<summary>[C#]</summary>
-{% highlight csharp %}
-static void CheckAndResendTRFCErrors(R3Connection con, string RFCDestination)
+The following code sample looks up all errors in the table ARFCSSTATE of a given destination and then calls ARFC_RUN_NOWAIT to resend each call.
+
+```csharp
+using System;
+using ERPConnect;
+using ERPConnect.Utils;
+
+// Set your ERPConnect license
+LIC.SetLic("xxxx");
+
+using var connection = new R3Connection(
+    host: "server.acme.org",
+    systemNumber: 00,
+    userName: "user",
+    password: "passwd",
+    language: "EN",
+    client: "001")
 {
-    // Look up errors in table ARFCSSTATE
-    string MyDate = ERPConnect.ConversionUtils.NetDate2SAPDate(DateTime.Now.AddDays(-1));
-    ReadTable r = new ReadTable(con);
-    r.TableName = "ARFCSSTATE";
-    r.AddCriteria("ARFCDEST = '" + RFCDestination + "'");
-    r.AddCriteria("AND ARFCDATUM >= '" + MyDate + "'");
-    r.AddCriteria("AND ARFCSTATE = 'CPICERR'");
-    r.Run();
-    if (r.Result.Rows.Count == 0)
-        return;
-  
-    // Execute ARFC_RUN_NOWAIT for each call
-    RFCFunction f = con.CreateFunction("ARFC_RUN_NOWAIT");
-    f.Exports["WITH_ENQ"].ParamValue = "X";
-  
-    for (int i = 0; i < r.Result.Rows.Count; i++)
-    {
-        f.Tables["DATA"].Clear();
-        f.Tables["STATES"].Clear();
-        RFCStructure struc = f.Exports["TID"].ToStructure();
-        struc["ARFCIPID"] = r.Result.Rows[i]["ARFCIPID"].ToString();
-        struc["ARFCPID"] = r.Result.Rows[i]["ARFCPID"].ToString();
-        struc["ARFCTIME"] = r.Result.Rows[i]["ARFCTIME"].ToString();
-        struc["ARFCTIDCNT"] = r.Result.Rows[i]["ARFCTIDCNT"].ToString();
-        f.Execut e();
-    }
+    Protocol = ClientProtocol.NWRFC,
+};
+
+connection.Open();
+
+// Look up errors in table ARFCSSTATE
+string date = DateTime.Now.AddDays(-1).ToString("yyyyMMdd");
+var readTable = new ReadTable(connection)
+{
+    TableName = "ARFCSSTATE",
+    WhereClause = $"ARFCDEST = 'DEST' AND ARFCDATUM >= '{date}' AND ARFCSTATE = 'CPICERR'"
+};
+
+readTable.Run();
+if (readTable.Result.Rows.Count == 0)
+{
+    return;
 }
-{% endhighlight %}
-</details>
+
+// Execute ARFC_RUN_NOWAIT for each call
+RFCFunction function = connection.CreateFunction("ARFC_RUN_NOWAIT");
+function.Exports["WITH_ENQ"].ParamValue = "X";
+
+for (int i = 0; i < readTable.Result.Rows.Count; i++)
+{
+
+    function.Tables["DATA"].Clear();
+    function.Tables["STATES"].Clear();
+
+    var row = readTable.Result.Rows[i];
+    RFCStructure structure = function.Exports["TID"].ToStructure();
+    structure["ARFCIPID"] = row["ARFCIPID"].ToString();
+    structure["ARFCPID"] = row["ARFCPID"].ToString();
+    structure["ARFCTIME"] = row["ARFCTIME"].ToString();
+    structure["ARFCTIDCNT"] = row["ARFCTIDCNT"].ToString();
+
+    function.Execute();
+}
+```

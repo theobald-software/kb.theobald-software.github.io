@@ -1,25 +1,55 @@
 ---
 layout: page
-title: Read/Write material master data
+title: Read/Write Material Master Data
 description: Read/Write material master data
 permalink: /:collection/:path
 weight: 16
 ---
 
-Check out our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
+This sample shows how to create and read material master data in SAP using the BAPI BAPI_MATERIAL_SAVEDATA. 
 
-This little article shows the minimum requirement to create and read material master data in SAP. A material object consists of multiple layers or so called views. Each view may exist multiple times (e.g. one plant view for plant 1000 and one for plant 2000 both for the same material). To keep the samples as simple and short as possible this code only shows how to handle the basic views but the others will work in the same way. The attributes of the basic view are the Material Number itself, the so called Old Material Number (which can come from a legacy system), the Industry Sector and the Material Type (in our case HAWA which stands for Trading Goods, if you know German: HAWA is the abbreviation for Handelsware). And last but not least the basic measure unit, which is mandatory.
+### About
 
-We use the BAPI BAPI_MATERIAL_SAVEDATA which can be used for both creating a new material or changing / extending an existing Material. As you see in the code, beside the regular structure for submitting data (CLIENTDATA) there an additional so called checkbox structure called CLIENTDATAX. Any data that is submitted in CLIENTDATA must be confirmed by an X value in the CLIENTDATAX structure.
+A material object consists of multiple layers or so called views. 
+Each view may exist multiple times, e.g., one plant view for plant 1000 and one for plant 2000 - both for the same material. 
+To keep it simple, the provided sample code only shows how to handle the basic views. The other views work the same way. 
 
-<details>
-<summary>[C#]</summary>
-{% highlight csharp %}
-R3Connection con = new R3Connection("...");
-con.Open();
+The attributes of the basic view include:
+- the Material Number
+- the Old Material Number (which can come from a legacy system)
+- the Industry Sector 
+- the Material Type (in this case HAWA - Trading Goods)
+- the basic measure unit (mandatory).
+
+### Write Material Master Data
+
+The BAPI BAPI_MATERIAL_SAVEDATA can be used for both creating a new material or changing / extending an existing Material. 
+Aside from the regular structure for submitting data (CLIENTDATA) there is an additional checkbox structure called CLIENTDATAX. 
+Any data that is submitted in CLIENTDATA must be confirmed by an X value in the CLIENTDATAX structure.
+
+The following sample code adds material attributes:
+
+```csharp
+using System;
+using ERPConnect;
+
+// Set your ERPConnect license
+LIC.SetLic("xxxx");
+
+using var connection = new R3Connection(
+    host: "server.acme.org",
+    systemNumber: 00,
+    userName: "user",
+    password: "passwd",
+    language: "EN",
+    client: "001")
+{
+    Protocol = ClientProtocol.NWRFC,
+};
+
+connection.Open();
  
-RFCFunction func = con.CreateFunction("BAPI_MATERIAL_SAVEDATA");
- 
+RFCFunction func = connection.CreateFunction("BAPI_MATERIAL_SAVEDATA");
 RFCStructure header = func.Exports["HEADDATA"].ToStructure();
 RFCStructure basedata = func.Exports["CLIENTDATA"].ToStructure();
 RFCStructure basedatax = func.Exports["CLIENTDATAX"].ToStructure();
@@ -45,32 +75,50 @@ func.Execute();
 Console.WriteLine(func.Imports["RETURN"].ToStructure()["MESSAGE"].ToString());
  
 // And Commit everything
-RFCFunction funccommit = con.CreateFunction("BAPI_TRANSACTION_COMMIT");
+RFCFunction funccommit = connection.CreateFunction("BAPI_TRANSACTION_COMMIT");
 funccommit.Execute();
  
 Console.WriteLine("\r\nPress Enter to exit");
 Console.ReadLine();
-{% endhighlight %}
-</details>
+```
 
-![Material-Sample-001](/img/contents/Material-Sample-001.png){:class="img-responsive"}
+Output:
+
+```
+The material SAMPLE001 has been created or extended
+```
 
 ![Material-Sample-002](/img/contents/Material-Sample-002.png){:class="img-responsive"}
 
-Here's the code snippet for reading the material attributes that were used in the first sample:
+### Read Material Master Data
 
-<details>
-<summary>[C#]</summary>
-{% highlight csharp %}
-R3Connection con = new R3Connection("...");
-con.Open();
+The following sample code reads the material attributes used in [Write Material Master Data](#write-material-master-data):
+
+```csharp
+using System;
+using ERPConnect;
+
+// Set your ERPConnect license
+LIC.SetLic("xxxx");
+
+using var connection = new R3Connection(
+    host: "server.acme.org",
+    systemNumber: 00,
+    userName: "user",
+    password: "passwd",
+    language: "EN",
+    client: "001")
+{
+    Protocol = ClientProtocol.NWRFC,
+};
+
+connection.Open();
  
-RFCFunction func = con.CreateFunction("BAPI_MATERIAL_GET_DETAIL");
- 
+RFCFunction func = connection.CreateFunction("BAPI_MATERIAL_GET_DETAIL");
 func.Exports["MATERIAL"].ParamValue = "SAMPLE001";
- 
 func.Execute();
- 
+
+// Read data
 RFCStructure basedata = func.Imports["MATERIAL_GENERAL_DATA"].ToStructure();
  
 Console.WriteLine("Description Text: " + basedata["MATL_DESC"].ToString());
@@ -80,7 +128,13 @@ Console.WriteLine("Material Type: " + basedata["MATL_TYPE"].ToString());
  
 Console.WriteLine("\r\nPress Enter to exit");
 Console.ReadLine();
-{% endhighlight %}
-</details>
+```
 
-![Material-Sample-003](/img/contents/Material-Sample-003.png){:class="img-responsive"}
+Output:
+
+```
+Description Text: My New Material
+Old Material No: 4711
+Industry Sector: M
+Material Type: HAWA
+```

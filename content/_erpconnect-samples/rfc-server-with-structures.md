@@ -6,13 +6,21 @@ permalink: /:collection/:path
 weight: 28
 ---
 
-Check out our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
+This sample shows how to use structures between SAP and .NET with a RFC server.
 
-Our third sample now shows how to use structures between SAP and .NET with a RFC server.
+### About
 
-A structure with the name NUMBERS is added to the Z_ADD_2 function and the table is being deleted (see also RFC Server with tables). Now we rename the function to Z_ADD_3. The structure is build with 2 columns named NUMB1 and NUMB2. Both columns are filled in ABAP and should be added by the .NET programm.
+A structure with the name NUMBERS is added to the Z_ADD_2 function and the table is being deleted (see also RFC Server with tables). 
+Now we rename the function to Z_ADD_3. 
+The structure is build with 2 columns named NUMB1 and NUMB2. 
+Add the 2 columns to the RFCTableColumnCollection. 
+Then add the Structure NUMBERS with the Columns Collection to the IMPORT definition.
 
-The code below shows how to initialize the RFCServer object. Please have a close look on how to create the structure NUMBERS. First add the 2 columns to the RFCTableColumnCollection. Then you can add the Structure NUMBERS with the Columns Collection to the IMPORT definition.
+Both columns are filled in ABAP and should be added by the .NET program.
+
+### Initialize RFCServer
+
+The following sample code shows how to initialize the RFCServer object:
 
 <details>
 <summary>[C#]</summary>
@@ -67,7 +75,9 @@ static void s_IncomingCall(RFCServer Sender, RFCServerFunction CalledFunction)
 {% endhighlight %}
 </details>
 
-Here is the sample ABAP code to call the function in a foreign destination.
+### Call the Function
+
+The following sample ABAP code calls the function in a foreign destination.
 
 ```
 REPORT  ZADDTEST3
@@ -87,7 +97,10 @@ CALL FUNCTION 'Z_ADD_3' DESTINATION 'ERPTEST'
 WRITE: / 'Result: ', res.
 ```
 
-The same sample here with import and export structure. Add a structure to the EXPORTS-Collection on the SAP side. Remove the RES Parameter. The .NET programm is modified also with a structure to the EXPORTS-Collection with 2 added Columns (NUMB1 and NUMB2). The ABAP Coding is also getting modified see Coding below.
+The same sample here with import and export structure. A
+dd a structure to the EXPORTS-Collection on the SAP side. 
+Remove the RES Parameter. The .NET programm is modified also with a structure to the EXPORTS-Collection with 2 added Columns (NUMB1 and NUMB2). 
+The ABAP Coding is also getting modified see Coding below.
 
 <details>
 <summary>[C#]</summary>
@@ -124,7 +137,8 @@ static RFCServer s = new RFCServer();
 {% endhighlight %}
 </details>
 
-The Values from the IMPORTS-Collection are set in variables. Then different values are added to them and are written back to the EXPORTS-Collection.
+The Values from the IMPORTS-Collection are set in variables. 
+Then different values are added to them and are written back to the EXPORTS-Collection.
 
 <details>
 <summary>[C#]</summary>

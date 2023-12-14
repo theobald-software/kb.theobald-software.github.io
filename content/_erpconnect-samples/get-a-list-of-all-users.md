@@ -1,28 +1,39 @@
 ---
 layout: page
-title: Receiving a list of all users
+title: Get a List of all users
 description: Receiving a list of all users
 permalink: /:collection/:path
 weight: 9
 ---
 
-This example acquires the user names and the address data of all users in the SAP system.
+This sample shows how to read the user names and address data of all users in the SAP system using the function module BAPI_HELPVALUES_GET.<br>
 
-Basis for this example is the function module BAPI_HELPVALUES_GET.
-This function module provides the use of selection parameters, because it contains an import Table (SELECTION_FOR_HELPVALUES)
+### Call BAPI_HELPVALUES_GET
 
-<details>
-<summary>[C#]</summary>
-{% highlight csharp %}
+The following sample code reads user names and address data of SAP users using uses selection parameters for the import Table (SELECTION_FOR_HELPVALUES) of BAPI_HELPVALUES_GET.
+
+```csharp
 static ArrayList getUserList(string sign, string option, string low, string high)
         { 
   
-            ERPConnect.R3Connection con = new R3Connection("SAPServer",00,"SAPUser","Password","EN","800");
-            ERPConnect.LIC.SetLic("xxxxxxxxxxxxx"); //Set your ERPConnect License.
+            // Set your ERPConnect license
+            LIC.SetLic("xxxx");
 
-            con.Open();  //Open the connection to SAP.       
+            // Open the connection to SAP
+            using var connection = new R3Connection(
+                host: "server.acme.org",
+                systemNumber: 00,
+                userName: "user",
+                password: "passwd",
+                language: "EN",
+                client: "001")
+            {
+                Protocol = ClientProtocol.NWRFC,
+            };
+
+            connection.Open();    
   
-            RFCFunction func = con.CreateFunction("BAPI_HELPVALUES_GET");
+            RFCFunction func = connection.CreateFunction("BAPI_HELPVALUES_GET");
   
             func.Exports["OBJTYPE"].ParamValue = "USER";
             func.Exports["METHOD"].ParamValue = "GETDETAIL";
@@ -41,7 +52,7 @@ static ArrayList getUserList(string sign, string option, string low, string high
   
             func.Execute();
   
-            con.Close();
+            connection.Close();
   
             ArrayList user = new ArrayList();
             for (int i = 0; i < func.Tables["HELPVALUES"].RowCount; i++)
@@ -55,14 +66,11 @@ static ArrayList getUserList(string sign, string option, string low, string high
   
             return user;                           
         }
-{% endhighlight %}
-</details>
+```
 
-For example we are going to display all users, whose name starts with M, on the console
+How to display all users, whose name start with M:
 
-<details>
-<summary>[C#]</summary>
-{% highlight csharp %}
+```csharp
 static void Main(string[] args)
         {
             ArrayList users = getUserList("I","CP","M*","");
@@ -72,5 +80,4 @@ static void Main(string[] args)
             }
             Console.ReadLine();
         }
-{% endhighlight %}
-</details>
+```

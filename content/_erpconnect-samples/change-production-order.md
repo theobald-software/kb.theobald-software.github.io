@@ -6,27 +6,38 @@ permalink: /:collection/:path
 weight: 44
 ---
 
-Check out our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
+This sample shows how to change a production order using the function module CLOI_CHANGES_UPL_31. 
 
-In this sample we are going to change a production order by using the function CLOI_CHANGES_UPL_31. This, for example, could be useful, if an external programm does the planning of the productions orders and sends back the changes to SAP.
+### About
 
-To change the header data you need the production order number and the fieldname you are going to change. You can get an overview of the fields in the SAP documentation, which can be found here: here
+This sample can be used to send changes to SAP if an external program does the planning of the productions orders.
 
-In our sample we change the Start Date (Field GSTRP) und the End Date (Field GLTRP). You can also change the quantity (Field BDMNG) or the Start Time (Field GSUZP). For Rescheduling the production order you have to fill the field METHOD with the value "SCHEDULE". The table CLOI_MESSAGE_LOG_EXP contains the message codes. When the changing was successful we get following message back:
+To change the header data you need the production order number and the field name you are going to change. 
+For a complete list of all fields, refer to the [SAP Documentation: Function Module CLOI_CHANGES_UPL_31](https://help.sap.com/docs/SAP_ERP/812f0b55261a4d58abe8af46f4bd8cc5/fa1ebf53d25ab64ce10000000a174cb4.html?version=6.05.latest)
+
+Typical applications include:
+- changing the start date (Field GSTRP)
+- changing the end date (Field GLTRP)
+- changing the quantity (Field BDMNG) 
+- changing the start time (Field GSUZP) 
+- rescheduling the production order using the field METHOD with the value "SCHEDULE"
+
+The table CLOI_MESSAGE_LOG_EXP contains the message codes of the function module. 
 
 
-![Cloi_Success_Message01](/img/contents/Cloi_Success_Message01.jpg){:class="img-responsive"}
 
-The Messagecode C7 - 071 means "Operation has been scheduled". You can find the message codes in the transaction SE91. To get the function running a connection object (Con) must be available.
+### Call CLOI_CHANGES_UPL_31
 
-<details>
-<summary>[C#]</summary>
-{% highlight csharp %}
+#### Change Start and End Date
+
+The following sample code changes the start date (Field GSTRP) and the end date (Field GLTRP) of a production order.
+
+```csharp
 public static string ChangeProductionOrder(string AUFNR, string VORNR, string APLFL)
  {
    string rMessage = "";
   
-   RFCFunction func = Con.CreateFunction("CLOI_CHANGES_UPL_31");
+   RFCFunction func = connection.CreateFunction("CLOI_CHANGES_UPL_31");
   
    func.Exports["CLOI_IF_PAR"].ToStructure()["COMMITFLG"] = "C";
    func.Exports["CLOI_IF_PAR"].ToStructure()["R3_VERSION"] = "60";   //SAP Version
@@ -58,7 +69,7 @@ public static string ChangeProductionOrder(string AUFNR, string VORNR, string AP
    orduRow["FIELD"] = "METHOD";
    orduRow["VALUE"] = "SCHEDULE";       
   
-   func.Execut e();
+   func.Execute();
   
    if (func.Tables["CLOI_MESSAGE_LOG_EXP"].RowCount > 0)
     {
@@ -74,19 +85,21 @@ public static string ChangeProductionOrder(string AUFNR, string VORNR, string AP
     } 
      return rMessage;
  }
-{% endhighlight %}
-</details>
+```
 
-In our second sample we change the item data. We want to change the Start Time and End Time, and the Start and End Dates of a given operation (we define the operation in the variable VORNR). In this case the value of the field METHOD is "DISPATCH", which reschedules all the item data of the production order. More changeable fields you can find again in the SAP documentation
+#### Reschedule All Item Data
 
-<details>
-<summary>[C#]</summary>
-{% highlight csharp %}
+The following sample code changes the item data of a production order.
+It changes the start and end dates of a given operation defined in the variable VORNR.
+
+To reschedule all the item data of the production order the value of the field METHOD is set to "DISPATCH". 
+
+```csharp
 public static string ChangeProductionOrderPos(string AUFNR, string VORNR, string APLFL)
  {
    string rMessage = "";
   
-   RFCFunction func = Con.CreateFunction("CLOI_CHANGES_UPL_31");
+   RFCFunction func = connection.CreateFunction("CLOI_CHANGES_UPL_31");
   
    func.Exports["CLOI_IF_PAR"].ToStructure()["COMMITFLG"] = "C";
    func.Exports["CLOI_IF_PAR"].ToStructure()["R3_VERSION"] = "60";   //SAP Version
@@ -246,7 +259,7 @@ public static string ChangeProductionOrderPos(string AUFNR, string VORNR, string
    opruRow["FIELD"] = "METHOD";
    opruRow["VALUE"] = "DISPATCH";
   
-   func.Execut e();
+   func.Execute();
   
    if (func.Tables["CLOI_MESSAGE_LOG_EXP"].RowCount > 0)
     {
@@ -257,6 +270,11 @@ public static string ChangeProductionOrderPos(string AUFNR, string VORNR, string
     }
      return rMessage;
  }
-{% endhighlight %}
-</details>
+```
 
+Output:
+
+![Cloi_Success_Message01](/img/contents/Cloi_Success_Message01.jpg){:class="img-responsive"}
+
+{: .box-tip }
+**Tipp**: Use SAP transaction SE91 to look up all message codes. The Messagecode C7 - 071 means "Operation has been scheduled". 

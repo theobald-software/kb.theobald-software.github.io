@@ -1,24 +1,26 @@
 ---
 layout: page
-title: How to implement a connection pool
+title: Implement a connection pool
 description: How to implement a connection pool
 permalink: /:collection/:path
 weight: 34
 ---
 
-Check out our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
+This sample shows how to implement a connection pool for SAP connections.
 
-In some situations it might be useful, to use a so called connection pool. This means that several processes or threads are using a set of SAP connections together, e.g. in a web application: 30 users work with an application but there are only 10 concurrent connections to SAP. Everytime an application process needs a connection a free connection is allocated by the pool. After having used the connection it is freed by the process and can now be used by another one.
+### About
 
-### Before we start
+In some situations it can be useful to use a connection pool. 
+This means that several processes or threads use a set of SAP connections together, e.g., in a web application: 30 users work with an application but there are only 10 concurrent connections to SAP. 
+Everytime an application process needs a connection a free connection is allocated by the pool. 
+After having used the connection it is freed by the process and can be used by another one.
 
-Before we start with the pool class we need to extend the R3Connection class by inheriting it.
+### Prerequisites
 
-We will need the two new properties LastUsage and IsInUse later on.
+Before the ConnectionPool class can be used, the *R3Connection* class must be extended by inheriting it.<br>
+The two new properties *LastUsage* and *IsInUse* will be used later.
 
-<details>
-<summary>[C#]</summary>
-{% highlight csharp %}
+```csharp
 class R3ConnectionEx : ERPConnect.R3Connection
 {
     private DateTime _LastUsage = DateTime.Now;
@@ -35,18 +37,16 @@ class R3ConnectionEx : ERPConnect.R3Connection
         set { _IsInUse = value; }
     }
 }
-{% endhighlight %}
-</details>
+```
 
-### The class ConnectionPool
+### The ConnectionPool Class
 
-The following text describes the methods of the connection pool class.
+The following sample code shows how to use the methods of the ConnectionPool class.
 
-In the constructor of the class a timer is initialized. The timer is responsible for closing connections that are not used for a certain period of time.
+In the constructor of the class a timer is initialized. 
+The timer is responsible for closing connections that are not used for a certain period of time.
 
-<details>
-<summary>[C#]</summary>
-{% highlight csharp %}
+```csharp
 class R3ConnectionPool
 {
   
@@ -77,14 +77,12 @@ class R3ConnectionPool
     {
         get { return MyConnectionList.Count; }
     }
-{% endhighlight %}
-</details>
+```
 
-The generic list MyConnectionList holds all active connections. When the last usage was more than 60 seconds ago and it is not currently in use, the connection is closed and removed from the list.
+The generic list *MyConnectionList* holds all active connections. 
+When the last usage was more than 60 seconds ago and it is not currently in use, the connection is closed and removed from the list.
 
-<details>
-<summary>[C#]</summary>
-{% highlight csharp %}
+```csharp
 private System.Collections.Generic.List
     MyConnectionList = new System.Collections.Generic.List();
   
@@ -106,14 +104,12 @@ private void MyTimer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
         }
     }
 }
-{% endhighlight %}
-</details>
+```
 
-The two internal private functions AllocConnection() and FreeConnection() are for allocating and deallocating connections. If there is no free connection available a new connection is created and added to the connection list.
+The two internal private functions `AllocConnection()` and `FreeConnection()` are for allocating and deallocating connections. 
+If there is no free connection available a new connection is created and added to the connection list.
 
-<details>
-<summary>[C#]</summary>
-{% highlight csharp %}
+```csharp
 private R3ConnectionEx AllocConnection()
 {
     lock (MyConnectionList)
@@ -148,14 +144,14 @@ private void FreeConnection(R3ConnectionEx con)
     con.LastUsage = DateTime.Now;
     con.IsInUse = false;
 }
-{% endhighlight %}
-</details>
+```
 
-Without the pool you would call CreateFunction() directly (e.g. MyConnection.CreateFunction(..)). If you are using the new pool class the CreateFunction() method is called by the pool after having allocated a connection dynamically. The RFCFunction object is cashed with the help of XML serialization and deserialization. This avoids retrieving the function's meta data from SAP every time CreateFunction() is called.
+Without the pool you would call `CreateFunction()` directly, e.g., `MyConnection.CreateFunction()`). 
+When using the new pool class the `CreateFunction()` method is called by the pool after having allocated a connection dynamically. 
+The RFCFunction object is cashed with the help of XML serialization and deserialization. 
+This avoids retrieving the function's meta data from SAP every time `CreateFunction()` is called.
 
-<details>
-<summary>[C#]</summary>
-{% highlight csharp %}
+```csharp
 private Hashtable FunctionHash = new Hashtable();
 public RFCFunction CreateFunction(string FunctionName)
 {
@@ -198,22 +194,21 @@ public RFCFunction CreateFunction(string FunctionName)
         }
     }
 }
+```
 
-{% endhighlight %}
-</details>
+The execution of the function uses the same principle as `CreateFunction()`: 
+- Allocate connection
+- Execute
+- Deallocate
 
-The execution of the function uses the same principle as CreateFunction(): Allocate connection, execut e, deallocate.
-
-<details>
-<summary>[C#]</summary>
-{% highlight csharp %}
-public void Execut eFunction(RFCFunction func)
+```csharp
+public void ExecuteFunction(RFCFunction func)
 {
     R3ConnectionEx con = this.AllocConnection();
     try
     {
         func.Connection = (R3Connection)con;
-        func.Execut e();
+        func.Execute();
   
     }
     catch (Exception e1)
@@ -229,17 +224,18 @@ public void Execut eFunction(RFCFunction func)
   
     FreeConnection(con);
 }
-{% endhighlight %}
-</details>
+```
 
 
 ### Test the connection pool
 
 The following console program shows how to test and apply the connection pool class.
 
-First 3 separate threads are started. After pressing Enter 3 more threads are startetd. The timer shows the current number of active connections.
-
-Depending on how many threads have already finished after the new ones have been started, the connections are recycled or newly connected.
+How it works:
+- First 3 separate threads are started. 
+- After pressing Enter 3 more threads are started. 
+- The timer shows the current number of active connections.
+- Depending on how many threads have already finished after the new ones have been started, the connections are recycled or newly connected.
 
 The output shows:
 
@@ -250,11 +246,9 @@ The output shows:
 
 ![ThreadPoolDemo](/img/contents/ThreadPoolDemo.png){:class="img-responsive"}
 
-Here is the source code of the sample program:
+Source code of the sample program:
 
-<details>
-<summary>[C#]</summary>
-{% highlight csharp %}
+```csharp
 class Program
 {
     static R3ConnectionPool ConPool = new R3ConnectionPool();
@@ -302,7 +296,7 @@ class Program
         Console.WriteLine("Current Number of connections: " + ConPool.CurrentNumberOfConnection);
     }
   
-    static void Execut eALongRunningFunctionModule(object SearchTerm)
+    static void ExecuteALongRunningFunctionModule(object SearchTerm)
     {
         RFCFunction func = ConPool.CreateFunction("BAPI_EMPLOYEE_GETLIST");
   
@@ -318,8 +312,7 @@ class Program
     }
   
 }
-{% endhighlight %}
-</details>
+```
 
 
 

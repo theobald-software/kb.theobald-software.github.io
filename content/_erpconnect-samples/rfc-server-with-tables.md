@@ -6,11 +6,18 @@ permalink: /:collection/:path
 weight: 5
 ---
 
-The first sample ([RFC Server]()) only showed the exchange of scalar parameters. The following sample shows how to exchange tables between SAP and .NET using a RFC server.
+This sample shows how to exchange tables between SAP and .NET using a RFC server.
 
-A table with name NUMBERS is added to the Z_ADD function and the function is renamed to Z_ADD_2. All entries in table NUMBERS in column NUMB should be added by the .NET program.
+### About
 
-The code below shows how to initialize the RFCServer object. Please have a close look on how to create the table NUMBERS. It is added to the Tables collection. The column NUMB is added to the empty Columns collection with Add(...).
+A table with name NUMBERS is added to the Z_ADD function and the function is renamed to Z_ADD_2. 
+All entries in table NUMBERS in column NUMB should be added by the .NET program.
+The table NUMBERS is added to the Tables collection. 
+The column NUMB is added to the empty Columns collection with `Add()`.
+
+### Initialize RFCServer
+
+The following sample code shows how to initialize the RFCServer object:
 
 <details>
 <summary>[C#]</summary>
@@ -39,7 +46,9 @@ static void Main(string[] args)
 {% endhighlight %}
 </details>
 
-The handling of the tables is done as always. We are using the object hierarchy to iterate through the rows and add the values. The result is returned in the scalar export parameter RES.
+The handling of the tables is done as always. 
+We are using the object hierarchy to iterate through the rows and add the values. 
+The result is returned in the scalar export parameter RES.
 
 
 <details>
@@ -59,8 +68,9 @@ static void s_IncomingCall(RFCServer Sender, RFCServerFunction CalledFunction)
 {% endhighlight %}
 </details>
 
+### Call the Function
 
-Here is the sample ABAP code to call the function in a foreign destination.
+The following sample ABAP code calls the function in a foreign destination.
 
 ```
 REPORT  zaddtest2                               .

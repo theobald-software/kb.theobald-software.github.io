@@ -1,19 +1,36 @@
 ---
 layout: page
-title: Sending a MATMAS IDoc
+title: Send a MATMAS IDoc
 description: Sending a MATMAS IDoc
 permalink: /:collection/:path
 weight: 21
 ---
 
-This sample code shows, how to create and send a MATMAS IDoc.
-Please note, that the code only creates the basic data. If you want to add more sophisticated data, have a look at the IDoc documentation transaction WE60 to find out more about the segments.
+This sample shows how to create and send a MATMAS IDoc.
 
-<details>
-<summary>[C#]</summary>
-{% highlight csharp %}
-R3Connection con = new R3Connection("SAPServer",00,"SAPUser","Password","EN","800");
-con.Open(false);
+{: .box-note }
+**Note:** This sample only creates basic data. 
+To add more sophisticated data, look up the IDoc documentation via SAP transaction WE60 to find out more about the segments.
+
+```csharp
+using System;
+using ERPConnect;
+
+// Set your ERPConnect license
+LIC.SetLic("xxxx");
+
+using var connection = new R3Connection(
+    host: "server.acme.org",
+    systemNumber: 00,
+    userName: "user",
+    password: "passwd",
+    language: "EN",
+    client: "001")
+{
+    Protocol = ClientProtocol.NWRFC,
+};
+
+connection.Open(false);
   
 ERPConnect.Idocs.Idoc id = con.CreateEmptyIdoc("MATMAS01","");
   
@@ -52,8 +69,9 @@ id.Send();
   
 Console.WriteLine("Ready..");
 Console.ReadLine();
-{% endhighlight %}
-</details>
+```
+
+Output:
 
 ![MatmasSend](/img/contents/MatmasSend.jpg){:class="img-responsive"}
 

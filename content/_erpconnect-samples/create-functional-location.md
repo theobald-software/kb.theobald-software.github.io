@@ -6,54 +6,71 @@ permalink: /:collection/:path
 weight: 41
 ---
 
-Check out our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
+This sample shows how to create a [Functional Location](https://help.sap.com/doc/saphelp_nw70/7.0.12/ja-JP/01/d5438b4ab311d189740000e8322d00/content.htm?no_cache=true) in SAP using the BAPI BAPI_FUNCLOC_CREATE. 
 
-This sample shows how to create a Functional Location. The Functional Location(External Number) must match the structure definied in the exporting parameter STRIND. You can export the default value for the superior functional location under data_specific - SUPFLOC.
+### About
 
-To change a Functional Location replace the function "BAPI_FUNCLOC_CREATE" with the function "BAPI_FUNCLOC_CHANGE". To get the function running a connection object (Con) must be available.
+The Functional Location (External Number) must match the structure defined in the exporting parameter STRIND of BAPI_FUNCLOC_CREATE. 
+You can export the default value for the superior functional location under data_specific - SUPFLOC.
 
-<details>
-<summary>[C#]</summary>
-{% highlight csharp %}
-static void Main(string[] args)
-        {
-            R3Connection con = new R3Connection("SAPServer", 00, "SAPUser", "Password", "en", "800");
-            con.Open(false);
+{: .box-tip }
+**Tipp**:  To change a Functional Location replace the function module "BAPI_FUNCLOC_CREATE" with the function module "BAPI_FUNCLOC_CHANGE". 
+
+
+### Call BAPI_FUNCLOC_CREATE
+
+The following sample code calls the BAPI BAPI_FUNCLOC_CREATE to create a Functional Location in SAP:
+
+```csharp
+using System;
+using ERPConnect;
+
+// Set your ERPConnect license
+LIC.SetLic("xxxx");
+
+using var connection = new R3Connection(
+    host: "server.acme.org",
+    systemNumber: 00,
+    userName: "user",
+    password: "passwd",
+    language: "EN",
+    client: "001")
+{
+    Protocol = ClientProtocol.NWRFC,
+};
+
+connection.Open();
+
+RFCFunction func = connection.CreateFunction("BAPI_FUNCLOC_CREATE");
+RFCStructure data_specific = func.Exports["DATA_SPECIFIC"].ToStructure();
   
-            RFCFunction func = con.CreateFunction("BAPI_FUNCLOC_CREATE");
+	data_specific["STRIND"] = "A"; //StrIndicator
+	data_specific["CATEGORY"] = "M"; //Category
+	data_specific["SUPFLOC"] = ""; //Superior Function Location
   
-            RFCStructure data_specific = func.Exports["DATA_SPECIFIC"].ToStructure();
+RFCStructure data_general = func.Exports["DATA_GENERAL"].ToStructure();
   
-                data_specific["STRIND"] = "A"; //StrIndicator
-                data_specific["CATEGORY"] = "M"; //Category
-                data_specific["SUPFLOC"] = ""; //Superior Function Location
+    data_general["DESCRIPT"] = "My New Location2"; //Description
+    data_general["MAINTPLANT"] = "1000"; //Mainplant        
   
-            RFCStructure data_general = func.Exports["DATA_GENERAL"].ToStructure();
+func.Exports["LABELING_SYSTEM"].ParamValue = "A"; //Labeling System
+func.Exports["EXTERNAL_NUMBER"].ParamValue = "1111-111-AA-15";  //Functional Location
   
-                data_general["DESCRIPT"] = "My New Location2"; //Description
-                data_general["MAINTPLANT"] = "1000"; //Mainplant        
+func.Execute();
   
-            func.Exports["LABELING_SYSTEM"].ParamValue = "A"; //Labeling System
-            func.Exports["EXTERNAL_NUMBER"].ParamValue = "1111-111-AA-15";  //Functional Location
+RFCFunction funcCommit = connection.CreateFunction("BAPI_TRANSACTION_COMMIT");
   
-            func.Execut e();
+funcCommit.Exports["WAIT"].ParamValue  = "X"; 
+funcCommit.Execute();
   
-            RFCFunction funcCommit = con.CreateFunction("BAPI_TRANSACTION_COMMIT");
+ // ReturnMessage from BAPI
+RFCStructure funcRet = func.Imports["RETURN"].ToStructure();
+//strmessage = funcRet["MESSAGE"].ToString();
   
-            funcCommit.Exports["WAIT"].ParamValue  = "X"; 
-            funcCommit.Execut e();
+Console.WriteLine (funcRet["MESSAGE"].ToString());
+Console.WriteLine ("Please press a Key to continue")
   
-            // ReturnMessage from BAPI
-            RFCStructure funcRet = func.Imports["RETURN"].ToStructure();
-            //strmessage = funcRet["MESSAGE"].ToString();
+Console.ReadLine();
   
-            Console.WriteLine (funcRet["MESSAGE"].ToString());
-            Console.WriteLine ("Please press a Key to continue")
-  
-            Console.ReadLine();
-  
-  
-        }
-{% endhighlight %}
-</details>
+```
 

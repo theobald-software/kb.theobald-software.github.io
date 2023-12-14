@@ -6,52 +6,68 @@ permalink: /:collection/:path
 weight: 42
 ---
 
-Check out our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
+This sample shows how to create equipment in SAP using the BAPI BAPI_EQMT_MODIFY.
 
-With this sample you can create equipment. The equipment name (equi_master["EQUIPMENT"]) musst be written in uppercase, otherwise the function won't work. The fields EQUITYPE,INVENTORY and MANFACTURE are optional and can be filled with this function if needed.
+### About
 
-To change the equipment you can use the function BAPI_EQMT_MODIFY.
+The BAI BAPI_EQMT_MODIFY can be used to create or change equipment in SAP.
 
-<details>
-<summary>[C#]</summary>
-{% highlight csharp %}
-static void Main(string[] args)
-        {
-            R3Connection con = new R3Connection("SAPUser", 00, "SAPUser", "Password", "en", "800");
-            con.Open(false);
+To create equipment using the BAPI BAPI_EQMT_MODIFY the equipment name (equi_master["EQUIPMENT"]) must be written in uppercase.
+The fields EQUITYPE,INVENTORY and MANFACTURE are optional.
+
+### Call BAPI_EQMT_MODIFY
+
+The following sample code creates equipment in SAP using the BAPI BAPI_EQMT_MODIFY:
+
+```csharp
+using System;
+using ERPConnect;
+
+// Set your ERPConnect license
+LIC.SetLic("xxxx");
+
+using var connection = new R3Connection(
+    host: "server.acme.org",
+    systemNumber: 00,
+    userName: "user",
+    password: "passwd",
+    language: "EN",
+    client: "001")
+{
+    Protocol = ClientProtocol.NWRFC,
+};
+
+connection.Open();
+
+RFCFunction func = connection.CreateFunction("BAPI_EQMT_CREATE");
   
-            RFCFunction func = con.CreateFunction("BAPI_EQMT_CREATE");
+RFCStructure equi_master = func.Exports["EQUIMASTER"].ToStructure();
   
-            RFCStructure equi_master = func.Exports["EQUIMASTER"].ToStructure();
+    equi_master["EQUIPMENT"] = "TESTEQUIP04"; //  Equipment
+    equi_master["EQUICATGRY"] = "M"; //EquipmentCategory
+    equi_master["EQUITYPE"] = "5000"; //ObjectType     optional
+    equi_master["INVENTORY"] = "123456"; //Inventury No.  optional
+    equi_master["MANFACTURE"] = "TEST AG"; //Manufacturer   optional
   
-                equi_master["EQUIPMENT"] = "TESTEQUIP04"; //  Equipment
-                equi_master["EQUICATGRY"] = "M"; //EquipmentCategory
-                equi_master["EQUITYPE"] = "5000"; //ObjectType     optional
-                equi_master["INVENTORY"] = "123456"; //Inventury No.  optional
-                equi_master["MANFACTURE"] = "TEST AG"; //Manufacturer   optional
+RFCStructure equi_text = func.Exports["EQUITEXT"].ToStructure();
   
-            RFCStructure equi_text = func.Exports["EQUITEXT"].ToStructure();
+    equi_text["EQUIDESCR"] = "TestDescription"; //Description
   
-                equi_text["EQUIDESCR"] = "TestDescription"; //Description
+RFCStructure equi_location = func.Exports["EQUILOCATION"].ToStructure();
   
-            RFCStructure equi_location = func.Exports["EQUILOCATION"].ToStructure();
+    equi_location["MAINTPLANT"] = "1000"; //Plant
   
-                equi_location["MAINTPLANT"] = "1000"; //Plant
-  
-            func.Execut e();
+func.Execute();
   
   
-            // ReturnMessage from BAPI
-            RFCStructure funcRet = func.Imports["RETURN"].ToStructure();
-            if (funcRet["Type"].ToString() == "S")
-                Console.WriteLine("Equipment was created succesfully");
-            else
-            Console.WriteLine (funcRet["MESSAGE"].ToString());
-            Console.WriteLine("Please Press Enter to continue");
+// ReturnMessage from BAPI
+RFCStructure funcRet = func.Imports["RETURN"].ToStructure();
+if (funcRet["Type"].ToString() == "S")
+    Console.WriteLine("Equipment was created succesfully");
+else
+Console.WriteLine (funcRet["MESSAGE"].ToString());
+Console.WriteLine("Please Press Enter to continue");
   
-            Console.ReadLine();
+Console.ReadLine();
   
-  
-        }
-{% endhighlight %}
-</details>
+ ```
