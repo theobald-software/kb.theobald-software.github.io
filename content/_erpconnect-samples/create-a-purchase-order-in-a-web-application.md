@@ -23,7 +23,7 @@ Plant: 1000
 Quantity: 10
 ```
 
-#### How to Create a Purchase Order 
+### Call BAPI_PO_CREATE
 
 To create a purchase order using the *BAPI_PO_CREATE* BAPI, follow the steps below:
 1. Establish a connection to the SAP system 

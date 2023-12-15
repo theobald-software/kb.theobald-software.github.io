@@ -6,7 +6,7 @@ permalink: /:collection/:path
 weight: 13
 ---
 
-This sample shows how to check the availability of materials using the BAPI BAPI BAPI_MATERIAL_AVAILABILITY.
+This sample shows how to check the availability of materials using the BAPI BAPI_MATERIAL_AVAILABILITY.
 
 ### About
 

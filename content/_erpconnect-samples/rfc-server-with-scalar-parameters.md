@@ -16,7 +16,7 @@ Two input parameters (*NUMBER1* and *NUMBER2*) are added and result (*RES*) is p
 ### Register the RFC Server Function
 
 1. Initialize an *RFCServer* object by providing the gateway host, the gateway service and the program ID to register on the SAP gateway.
-For this, the program ID must be available as a registered destination in SAP, see [Setting Up an RFC Destination](./maintaining-rfc-destinations). 
+For this, the program ID must be available as a registered destination in SAP, see [Setting Up an RFC Destination](https://help.theobald-software.com/en/erpconnect/rfc-server/maintaining-rfc-destinations#setting-up-an-rfc-destination). 
 2. Use the method *RegisteredFunctions.Add* to register an *RFCServerFunction* object.
 An *RFCServer* object can hold more than one *RFCServerFunction* object.  
 3. Add Imports and Exports. They are handled the same way as when calling RFC functions as a client. 
