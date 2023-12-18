@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.0.21 [L]|2023-12-18|General|Fixed authentication logic for extractions when using source impersonation with Kerberos authentication.|
 |4.0.20 [L]|2023-12-04|General|Added the mapping for the result columns custom order file and its logic for column transformation in runtime|
 |[4.0.19 [L]](https://kb.theobald-software.com/release-notes/TheobaldServer-4.0.19.html)|2023-11-24|General|Fixes for HTTP based Windows authentication and Table runtime parameters and logging improvements for extraction runs.([Release note](https://kb.theobald-software.com/release-notes/TheobaldServer-4.0.19.html))|
 |4.0.18 [L]|2023-11-24|General|Fixed a bug causing failed extractions when using Not Assigned (#) member in MDX cube filter.|
