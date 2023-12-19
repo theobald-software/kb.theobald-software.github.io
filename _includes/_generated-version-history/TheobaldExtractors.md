@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.52.3 [M]|2023-12-19|TableCDC|Added support for SAP Max DB databases|
 |1.52.2 [L]|2023-12-13|TableCDC|Fixed a bug that caused Delta extractions to fail if source table was client-independent|
 |1.52.1 [L]|2023-12-08|TableCDC|Create table statement will now be logged in CDC initialization step.|
 |[1.52.0 [H]](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.52.0.html)|2023-12-06|TableCDC|Released /THEO/CDC package. **Breaking changes** - Please see release notes for details.([Release note](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.52.0.html))|
