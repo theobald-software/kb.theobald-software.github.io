@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.29.2 [L]|2023-12-20|Designer|Hotfix designer function-service save-button permissions, improved service permission diialog.|
 |1.29.1 [L]|2023-12-20|Designer|Fixed a bug in the designer run dialog, which serialized service payload's number type as string to JSON .|
 |1.29.0 [L]|2023-12-20|Designer|Designer: respecting current user's permissions and hiding unavailable actions.|
 |1.28.0 [L]|2023-12-06|Designer|Designer improvements: user management (respects current user's permissions, password strength hint). Explicit removal of connection password. Clearer messages for issues with connection password. Better support for long service names.|
