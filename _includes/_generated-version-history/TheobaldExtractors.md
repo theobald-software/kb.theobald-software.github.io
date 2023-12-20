@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.52.4 [L]|2023-12-20|TableCDC|Improved error handling in log table creation step|
 |1.52.3 [M]|2023-12-19|TableCDC|Added support for SAP Max DB databases|
 |1.52.2 [L]|2023-12-13|TableCDC|Fixed a bug that caused Delta extractions to fail if source table was client-independent|
 |1.52.1 [L]|2023-12-08|TableCDC|Create table statement will now be logged in CDC initialization step.|
