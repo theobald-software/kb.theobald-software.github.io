@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|[1.52.6 [L]](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.52.6.html)|2023-12-29|DeltaQ|Fixed bugs in the DeltaQ extractor - Details in release notes([Release note](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.52.6.html))|
 |1.52.5 [L]|2023-12-20|BAPI|Fixed a bug that caused obscure error messages in case of special library errors |
 |1.52.4 [L]|2023-12-20|TableCDC|Improved error handling in log table creation step|
 |1.52.3 [M]|2023-12-19|TableCDC|Added support for SAP Max DB databases|
