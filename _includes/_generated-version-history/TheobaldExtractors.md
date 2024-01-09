@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.52.9 [L]|2024-01-09|TableCDC|Log table key field number and maintenance level is now set explicitly. Fixed a bug where fallback logic would not work if system language is set to 'D'.|
 |[1.52.8 [M]](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.52.8.html)|2024-01-08|DeltaQ|Fixed a bug in the activation process for DeltaQ hierarchy extractions([Release note](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.52.8.html))|
 |[1.52.7 [L]](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.52.7.html)|2024-01-03|Table|Fixed a bug where table settings UI would cause an error when saving. Updated /THEO/READ_TABLE to version 3.2 (see notes).([Release note](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.52.7.html))|
 |[1.52.6 [L]](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.52.6.html)|2023-12-29|DeltaQ|Fixed bugs in the DeltaQ extractor - Details in release notes([Release note](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.52.6.html))|
