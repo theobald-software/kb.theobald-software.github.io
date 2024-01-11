@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|7.4.10 [M]|2024-01-11|DeltaQ|Fixed a date conversion bug on DeltaQ|
 |7.4.9 [L]|2023-12-29|DeltaQ|Fixed parametrization of request id|
 |7.4.8 [L]|2023-12-15|DeltaQ|Fixed date conversion handling for DeltaQ|
 |7.4.7 [L]|2023-11-30|DeltaQ|Changed DeltaQ legacy reader to skip selection filters without corresponding field|
