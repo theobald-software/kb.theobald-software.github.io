@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.29.3 [L]|2024-01-11|Designer|Fixed a bug in the designer's source details.|
 |1.29.2 [L]|2023-12-20|Designer|Hotfix designer function-service save-button permissions, improved service permission diialog.|
 |1.29.1 [L]|2023-12-20|Designer|Fixed a bug in the designer run dialog, which serialized service payload's number type as string to JSON .|
 |1.29.0 [L]|2023-12-20|Designer|Designer: respecting current user's permissions and hiding unavailable actions.|
