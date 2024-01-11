@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|[1.30.0 [H]](https://kb.theobald-software.com/release-notes/Yunio-1.30.0.html)|2024-01-11|Designer|The new parts of yunIO's UI following the new Style Guide.([Release note](https://kb.theobald-software.com/release-notes/Yunio-1.30.0.html))|
 |1.29.3 [L]|2024-01-11|Designer|Fixed a bug in the designer's source details.|
 |1.29.2 [L]|2023-12-20|Designer|Hotfix designer function-service save-button permissions, improved service permission diialog.|
 |1.29.1 [L]|2023-12-20|Designer|Fixed a bug in the designer run dialog, which serialized service payload's number type as string to JSON .|
