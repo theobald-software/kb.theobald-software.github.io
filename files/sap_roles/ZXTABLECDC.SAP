@@ -1,7 +1,7 @@
-DATE                                              20231206                                          123326
+DATE                                              20240112                                          124340
 RELEASE                                           740
 LOADED_AGRS                                       ZXTABLECDC
-AGR_DEFINE                                        800ZXTABLECDC                                                  STEFFAN     20230605173353000000000000000STEFFAN     20231206123004000000000000000
+AGR_DEFINE                                        800ZXTABLECDC                                                  STEFFAN     20230605173353000000000000000STEFFAN     20240112123611000000000000000
 AGR_1250                                          800ZXTABLECDC                    000001S_CTS_ADMIT-EP55168300    U  O000013Administration Functions in Change and Transport System
 AGR_1250                                          800ZXTABLECDC                    000002S_DEVELOP T-EP55168300    U  O000024ABAP Workbench
 AGR_1250                                          800ZXTABLECDC                    000003S_DMC_S_R T-EP55168300    U  O000004MWB: Reading / writing authorization in sender / receiver
@@ -16,7 +16,7 @@ AGR_1251                                          800ZXTABLECDC                 
 AGR_1251                                          800ZXTABLECDC                    000006S_TABU_DIST-EP55168300    ACTVT     03                                                                              U  O000020
 AGR_1251                                          800ZXTABLECDC                    000007S_DEVELOP T-EP55168300    ACTVT     02                                                                              U  O000025
 AGR_1251                                          800ZXTABLECDC                    000008S_DEVELOP T-EP55168300    DEVCLASS  $TMP                                                                            U  O000026
-AGR_1251                                          800ZXTABLECDC                    000009S_DEVELOP T-EP55168300    OBJNAME   /THEO/CDC_*                                                                     U  O000027
+AGR_1251                                          800ZXTABLECDC                    000009S_DEVELOP T-EP55168300    OBJNAME   ZTSCDC_*                                                                        U  O000027
 AGR_1251                                          800ZXTABLECDC                    000010S_DEVELOP T-EP55168300    OBJTYPE   *                                                                               U  O000028
 AGR_1251                                          800ZXTABLECDC                    000011S_DEVELOP T-EP55168300    P_GROUP   *                                                                               U  O000029
 AGR_1251                                          800ZXTABLECDC                    000012S_RFC     T-EP55168300    ACTVT     16                                                                              U  O000008
@@ -39,8 +39,8 @@ AGR_FLAGS                                         800ZXTABLECDC                 
 AGR_FLAGS                                         800ZXTABLECDC                    EXTSAP_F03STEFFAN     20230605173353STEFFAN     20230605173353
 AGR_FLAGS                                         800ZXTABLECDC                    EXTSAP_F04STEFFAN     20230605173353STEFFAN     20230605173353
 AGR_FLAGS                                         800ZXTABLECDC                    EXTSAP_F05STEFFAN     20230605173353STEFFAN     20230605173353
-AGR_FLAGS                                         800ZXTABLECDC                    FORCE_MIX STEFFAN     20230605173551STEFFAN     20231206123002
+AGR_FLAGS                                         800ZXTABLECDC                    FORCE_MIX STEFFAN     20230605173551STEFFAN     20240112123608
 AGR_FLAGS                                         800ZXTABLECDC                    MASTER_LANSTEFFAN     20230605173353STEFFAN     20230605173353E
 AGR_FLAGS                                         800ZXTABLECDC                    RESP_USER             20230605173353STEFFAN     20230605173353
-AGR_TIME                                          800ZXTABLECDC                    PROFILE   STEFFAN     20230605173551000000000000000STEFFAN     20231206123002000000000000000
+AGR_TIME                                          800ZXTABLECDC                    PROFILE   STEFFAN     20230605173551000000000000000STEFFAN     20240112123608000000000000000
 AGR_LSD                                           800ZXTABLECDC                                                  E
