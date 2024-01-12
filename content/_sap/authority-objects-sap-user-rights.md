@@ -293,11 +293,11 @@ Download the corresponding SAP role ---  [SAP profile for Table](/files/sap_role
 
 <pre>
 S_RFC            ACTVT=16; RFC_TYPE=FUGR, FUNC; RFC_NAME=SDTX, SDIFRUNTIME, /THEO/CDC_*, /THEO/READ_TABLE            
-S_TABU_DIS       ACTVT=03; DICBERCLS=XXXX
+S_TABU_DIS       ACTVT=02, 03; DICBERCLS=*
+S_TABU_CLI       CLIIDMAINT=X 
 S_TABU_NAM       ACTVT=03; TABLE=DD02V, D17S, D27S, ENLFDIR
+S_DEVELOP        ACTVT=02; DEVCLASS=$TMP; OBJNAME=ZTSCDC_*; OBJTYPE=*; P_GROUP=*
 </pre>
-
-XXXX (stands for a placeholder) is the authorization group for the source table. To determine, which authorization group belongs to which table, check the table TDDAT - Maintenance Areas for Tables. If the table is not listed, the authorization group is &NC&. For authorizing specific tables use authorization object S_TABU_NAM instead of S_TABU_DIS.
 
 </details> 
 
