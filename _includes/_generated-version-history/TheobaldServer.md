@@ -1,6 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
-|4.0.22 [L]|2024-01-10|General|Fixed a bug where SAP SSO would still search for a saved password and fail if none is found. Fixed a bug where destination settings would not be applied correctly when switching the parameter with the "destination" parameter in a web API call.|
+|4.0.22 [L]|2024-01-10|General|Fixed a bug where the server would try to read the SAP password from json file even though SSO is enabled and fail if none is found. Fixed a bug where destination settings would not be applied correctly when switching the parameter with the "destination" parameter in a web API call.|
 |4.0.21 [L]|2023-12-18|General|Fixed authentication logic for extractions when using source impersonation with Kerberos authentication.|
 |4.0.20 [L]|2023-12-04|General|Added the mapping for the result columns custom order file and its logic for column transformation in runtime|
 |[4.0.19 [L]](https://kb.theobald-software.com/release-notes/TheobaldServer-4.0.19.html)|2023-11-24|General|Fixes for HTTP based Windows authentication and Table runtime parameters and logging improvements for extraction runs.([Release note](https://kb.theobald-software.com/release-notes/TheobaldServer-4.0.19.html))|
