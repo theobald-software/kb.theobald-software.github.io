@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.52.11 [L]|2024-01-16|Hierarchy|Removed debug logging statement that wrote the first 2 items of the extracted data into the log|
 |[1.52.10 [M]](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.52.10.html)|2024-01-11|TableCDC|Fixed a bug where log table creation failed due to missing namespace license. Requires update of /THEO/CDC_* package. Check release notes for details([Release note](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.52.10.html))|
 |1.52.9 [L]|2024-01-09|TableCDC|Log table key field number and maintenance level is now set explicitly. Fixed a bug where fallback logic would not work if system language is set to 'D'.|
 |[1.52.8 [M]](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.52.8.html)|2024-01-08|DeltaQ|Fixed a bug in the activation process for DeltaQ hierarchy extractions([Release note](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.52.8.html))|
