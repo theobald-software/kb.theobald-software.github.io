@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.31.0 [L]|2024-01-18|Designer|Better consistency for read-only permissions throughout the designer. Popup with an error includes complete error on copy now.|
 |1.30.2 [M]|2024-01-17|Runtime|transaction: Fixed an issue that caused errors when starting services with table inputs from the run dialog.|
 |1.30.1 [L]|2024-01-15|General|Fixed a bug that caused errors on transaction recording or replay when specific tables were present|
 |[1.30.0 [H]](https://kb.theobald-software.com/release-notes/Yunio-1.30.0.html)|2024-01-11|Designer|The new parts of yunIO's UI following the new Style Guide.([Release note](https://kb.theobald-software.com/release-notes/Yunio-1.30.0.html))|
