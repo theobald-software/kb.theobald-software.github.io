@@ -1,6 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
-|6.2.6 [L]|2024-01-16|Destinations|GCS: Added ability to use Script Expressions in destination folder.|
+|6.2.6 [L]|2024-01-16|Destinations|Google Cloud Storage: added support for Script Expressions in destination folder field.|
 |6.2.5 [L]|2024-01-16|BW Cube|Fixed a bug for BWCube extractions with filters on dimensions that have a slash in their name.|
 |[6.2.4 [M]](https://kb.theobald-software.com/release-notes/XtractUniversal-6.2.4.html)|2024-01-15|DeltaQ|Fixed some bugs related to legacy DeltaQ extractions conversion (see release notes for more details)([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-6.2.4.html))|
 |6.2.3 [L]|2023-12-18|Server|Fixed source impersonation with Kerberos authentication when running extractions.|

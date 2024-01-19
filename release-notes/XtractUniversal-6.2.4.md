@@ -6,4 +6,4 @@ layout: releaseNotes
 
 - convert correctly length for non-unicode legacy fields
 - consider legacy empty transfer mode as tRFC (default option)
-- handle null selection type an description on legacy oltp fields conversion
+- handle null selection type and description on legacy oltp fields conversion
