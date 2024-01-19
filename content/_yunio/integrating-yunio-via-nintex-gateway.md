@@ -22,11 +22,12 @@ The Nintex Gateway is an on-premises application that enables Nintex Automation 
 
 1. Create a service in yunIO. The depicted example uses the BAPI SD_RFC_CUSTOMER_GET to search and extract customer data from SAP. 
 2. Click ![run](/img/contents/yunio/run-icon.png) to testrun the service in yunIO (1). For more information, see [Online Help: Testing a Service](https://help.theobald-software.com/en/yunio/run-services#testing-a-service).
-3. Click **[Ctrl]** + ![download-file](/img/contents/yunio/download.png) to download the service definition with predefined Nintex Gateway properties (2).<br>
+3. Navigate to **Settings** and select *Nintex Gateway* as the **OpenAPI Target Kind** to add predefined Nintex Gateway properties to the service definition.<br>
+![nintex-gateway-target](/img/contents/yunio/nintex-gateway-target.png){:class="img-responsive"}
+4. Navigate to **Services** and click ![download-file](/img/contents/yunio/download.png) to download the service definition (2).<br>
 ![yunio-Services-Function-Download](/img/contents/yunio/yunio-run-services-function-download.png){:class="img-responsive" width="800px"}
-4. Open the service definition and check if the following properties are available at the end of the service definition:
+5. Open the service definition and check if the following properties are available at the end of the service definition:
 ```json
-...
 "securityDefinitions": {
         "basic": {
             "type": "basic",
