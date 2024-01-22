@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.52.14 [L]|2024-01-22|Table|Fixed a bug where subqueries in WHERE clause would cause an error.|
 |1.52.13 [L]|2024-01-19|TableCDC|Fix for trigger syntax error in IBM DB for z/os (DB6). Requires update of /THEO/CDC_ECC|
 |1.52.12 [L]|2024-01-18|TableCDC|Fixed a bug where trigger creation failed if ".INCLUDE" structures were part of the primary key of the source table. Requires update of /THEO/CDC_* package.|
 |1.52.11 [L]|2024-01-16|Hierarchy|Removed debug logging statement that wrote the first 2 items of the extracted data into the log|
