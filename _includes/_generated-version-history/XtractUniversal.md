@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.2.7 [L]|2024-01-23|Destinations|Upgraded Npgsql for PostgreSql destination to version 8.0.1|
 |6.2.6 [L]|2024-01-16|Destinations|Google Cloud Storage: added support for Script Expressions in destination folder field.|
 |6.2.5 [L]|2024-01-16|BW Cube|Fixed a bug for BWCube extractions with filters on dimensions that have a slash in their name.|
 |[6.2.4 [M]](https://kb.theobald-software.com/release-notes/XtractUniversal-6.2.4.html)|2024-01-15|DeltaQ|Fixed some bugs related to legacy DeltaQ extractions conversion (see release notes for more details)([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-6.2.4.html))|
