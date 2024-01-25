@@ -1,6 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
-|6.2.7 [L]|2024-01-23|Destinations|Upgraded Npgsql for PostgreSql destination to version 8.0.1|
+|6.2.7 [L]|2024-01-23|Destinations|Upgraded SQL driver for PostgreSql destination to version 8.0.1. Fixed a bug that was present in build 6.2.6.12 released on 22.01.2024 - if you have that version installed and if you are using the PostgreSql destination, please upgrade to a newer version.|
 |6.2.6 [L]|2024-01-16|Destinations|Google Cloud Storage: added support for Script Expressions in destination folder field.|
 |6.2.5 [L]|2024-01-16|BW Cube|Fixed a bug for BWCube extractions with filters on dimensions that have a slash in their name.|
 |[6.2.4 [M]](https://kb.theobald-software.com/release-notes/XtractUniversal-6.2.4.html)|2024-01-15|DeltaQ|Fixed some bugs related to legacy DeltaQ extractions conversion (see release notes for more details)([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-6.2.4.html))|
@@ -12,7 +12,7 @@
 |6.1.11 [L]|2023-11-20|Server|Fixed a bug where a cache entry would not be invalidated when aborting the extraction. Fixed an error when invalidating the cache for an extraction after editing.|
 |6.1.10 [L]|2023-11-15|Server|Fixed a bug causing cache entries of failed extractions to not be invalidated correctly. Fixed the timestamp format for script expression of `Extraction.Timestamp`.|
 |6.1.9 [L]|2023-11-14|xu-config|Updated remaining XtractKernel DeltaQ definition in xu-config.exe|
-|6.1.8 [H]|2023-11-13|General|Fixed a bug where extractions would fail with a license expired error. Issue affects all XU releases since 6.0.|
+|6.1.8 [H]|2023-11-13|General|Fixed a bug where all extractions would fail with a license expired error. **Issue affects all XU releases since 6.0.0** If you have any version of XtractUniversal starting with 6.x.x please update immediately to this or any newer version.|
 |6.1.7 [L]|2023-11-09|Destinations|Added the OneTransaction transaction style in the Snowflake destination|
 |6.1.6 [L]|2023-11-09|Destinations|Fixed a bug where custom SQL ad-hoc parameters were not evaluated.|
 |6.1.5 [L]|2023-11-09|BW Cube|Fixed an issue that caused errors when using MDX cube selections with list runtime parameters in script expressions |
