@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.0.25 [M]|2024-01-25|General|Fixed DeltaQ update mode runtime parameter handling|
 |4.0.24 [L]|2024-01-24|General|Fixed a bug where cleaning up old cache entries would not correctly purge all obsolete entries.|
 |4.0.23 [L]|2024-01-23|General|Fixed a bug causing authentication in the webserver to fail when the username had different casing.|
 |4.0.22 [L]|2024-01-10|General|Fixed a bug where the server would try to read the SAP password from json file even though SSO is enabled and fail if none is found. Fixed a bug where destination settings would not be applied correctly when switching the parameter with the "destination" parameter in a web API call.|
