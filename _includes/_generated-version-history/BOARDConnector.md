@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.1.1 [L]|2024-01-25|BW Cube|Cube config converter: improved logging of warnings and fix for failing conversion of extractions created in Board Connector 2.11.4 or lower.|
 |[6.1.0 [L]](https://kb.theobald-software.com/release-notes/BOARDConnector-6.1.0.html)|2023-12-04|General|Added the result columns custom order feature([Release note](https://kb.theobald-software.com/release-notes/BOARDConnector-6.1.0.html))|
 |6.0.1 [L]|2023-11-29|General|Fixed a bug where the server would erroneously detect a version from version.txt as invalid and not start.|
 |[6.0.0 [L]](https://kb.theobald-software.com/release-notes/BOARDConnector-6.0.0.html)|2023-11-15|General|*BREAKING CHANGES:* Please see release notes for more information.([Release note](https://kb.theobald-software.com/release-notes/BOARDConnector-6.0.0.html))|
