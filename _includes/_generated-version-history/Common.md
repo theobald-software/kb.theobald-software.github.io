@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.23.17 [L]|2024-01-26|Licensing|Removed internal references of defunct products (XtractPPV, XtractQV, XtractRS) and destinations (AlteryxConnect, GoodData, MicroStrategy, ODataAtom, PowerBI, TableauConnector, Teradata, Vertica) from code base|
 |2.23.16 [L]|2024-01-23|General|Allow for dynamic buffers in encoding classes. Add helper functions for ignoring exceptions.|
 |2.23.15 [L]|2023-10-19|Licensing|Removed Hadoop from license library|
 |2.23.14 [L]|2023-10-04|Licensing|Removed optional business rule ServerNameShouldBeSet for XtractForAlteryx Designer ("Desktop") licenses. Since we can't enforce this limit it doesnt make sense to save it into the licenses. With this business rule gone, the automated license tool can now create new XfA Designer licenses without a server name (field is entirely optional now).|
