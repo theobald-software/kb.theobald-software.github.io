@@ -6,7 +6,7 @@ permalink: /:collection/:path
 weight: 165
 ---
 
-This article contains information on how to parameterize extractions in Visual Studio in context of Xtract Universal's [SSRS destination](https://help.theobald-software.com/en/xtract-universal/destinations/server-report-services).
+This article contains information on how to parameterize extractions in Visual Studio in context of Xtract Universal's [Power BI Report Server destination](https://help.theobald-software.com/en/xtract-universal/destinations/server-report-services).
 
 ### About
 
@@ -21,7 +21,7 @@ The depicted example uses the [WHERE clause](https://help.theobald-software.com/
 ### Prerequisites
 
 Create a table extraction with an SSRS destination in Xtract Universal. The depicted example uses the SAP standard table *MAKT*. <br>
-Add the extraction as a data source in Visual Studio and create a report ad described in [SSRS in Visual Studio](https://help.theobald-software.com/en/xtract-universal/destinations/server-report-services#adding-an-extraction-as-a-data-source-in-visual-studio).
+Add the extraction as a data source in Visual Studio and create a report ad described in [Power BI Report Server in Visual Studio](https://help.theobald-software.com/en/xtract-universal/destinations/server-report-services#adding-an-extraction-as-a-data-source-in-visual-studio).
 
 ### Computed Query Parameters
 
