@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.52.16 [L]|2024-01-29|TableCDC|Add deletion transport request for Z_THEO_DELETE_LOG_ENTRIES function module.|
 |1.52.15 [L]|2024-01-23|TableCDC|RFC Service objects are now excluded from /THEO/CDC_ECC to avoid issues during import of the transport request.|
 |1.52.14 [L]|2024-01-22|Table|Fixed a bug where subqueries in WHERE clause would cause an error.|
 |1.52.13 [L]|2024-01-19|TableCDC|Fix for trigger syntax error in IBM DB for z/os (DB6). Requires update of /THEO/CDC_ECC|
