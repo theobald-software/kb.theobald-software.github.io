@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.2.9 [L]|2024-01-30|Destinations|Fixed an error that caused CSV destinations to fail when an empty result set (no rows or columns) was extracted|
 |6.2.8 [L]|2024-01-25|BW Cube|Cube config converter: improved logging of warnings and fix for failing conversion of extractions created in Xtract Universal 2.46.0 or lower.|
 |6.2.7 [L]|2024-01-23|Destinations|Upgraded SQL driver for PostgreSql destination to version 8.0.1. Fixed a bug that was present in build 6.2.6.12 released on 22.01.2024 - if you have that version installed and if you are using the PostgreSql destination, please upgrade to a newer version.|
 |6.2.6 [L]|2024-01-16|Destinations|Google Cloud Storage: added support for Script Expressions in destination folder field.|
