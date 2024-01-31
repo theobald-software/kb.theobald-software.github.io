@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.32.0 [L]|2024-01-31|Designer|Added payload loading and saving in the Run Dialog. The runtime parameter values of last run are saved in the browser.|
 |1.31.0 [L]|2024-01-18|Designer|Better consistency for read-only permissions throughout the designer. Popup with an error includes complete error on copy now.|
 |1.30.2 [M]|2024-01-17|Runtime|transaction: Fixed an issue that caused errors when starting services with table inputs from the run dialog.|
 |1.30.1 [L]|2024-01-15|General|Fixed a bug that caused errors on transaction recording or replay when specific tables were present|
