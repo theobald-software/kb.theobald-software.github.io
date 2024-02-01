@@ -25,7 +25,7 @@ Through this procedure, only changed entries from the SAP table EKKO are extract
 The following BI architecture must be available and configured:
 
 - Latest version of the [KNIME Analytics Platform](https://www.knime.com/downloads).
-- Installed KNIME extension [SAP Reader (Theobald Software)](https://hub.knime.com/knime/extensions/org.knime.features.sap.theobald/latest/org.knime.sap.theobald.node.SAPTheobaldReaderNodeFactory).
+- Installed KNIME extension [SAP Reader (Theobald Software)](https://hub.knime.com/knime/extensions/org.knime.features.sap.theobald/latest/org.knime.sap.theobald.node.v2.SAPTheobaldReader2NodeFactory).
 - Existing table object in a Microsoft database (SQL-Server).
 - Latest version of Xtract Universal, obtained from the [Theobald Software website](https://theobald-software.com/en/download-trial).
 - Existing table extraction of table *EKKO - Purchasing Document Header* in Xtract Universal, see [Defining a Table Extraction](https://help.theobald-software.com/en/xtract-universal/getting-started/define-a-table-extraction).
