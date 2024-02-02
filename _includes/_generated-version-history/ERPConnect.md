@@ -1,6 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
-|7.9.1 [L]|2024-02-01|NWRFC|Fixed a bug where WebSocket RFC properties to not be cloned when calling R3Connection.Clone|
+|7.9.1 [L]|2024-02-01|NWRFC|Fixed a bug where WebSocket RFC properties would not be cloned when calling R3Connection.Clone|
 |7.9.0 [M]|2023-12-18|General|Removed obsolete APIs as announced in 7.6.0|
 |7.8.1 [L]|2023-12-11|General|Fixed a bug that may cause missing fields in RFCFunction parameters if they contain table types with one unique key component.|
 |7.8.0 [M]|2023-12-07|NWRFC|Changed the default R3Connection Protocol to NWRFC as announced in 7.6.0. Added support for RFC over WebSocket.|
