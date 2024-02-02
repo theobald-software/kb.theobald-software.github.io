@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.0.27 [L]|2024-02-02|General|Fixed a bug in the HTTP server causing the request to hang and massive memory usage.|
 |[4.0.26 [L]](https://kb.theobald-software.com/release-notes/TheobaldServer-4.0.26.html)|2024-01-31|General|Fixed multiple run information and cache issues.([Release note](https://kb.theobald-software.com/release-notes/TheobaldServer-4.0.26.html))|
 |4.0.25 [M]|2024-01-25|General|Fixed DeltaQ update mode runtime parameter handling|
 |4.0.24 [L]|2024-01-24|General|Fixed a bug where cleaning up old cache entries would not correctly purge all obsolete entries.|
