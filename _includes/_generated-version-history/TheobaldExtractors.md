@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.52.18 [L]|2024-02-05|DeltaQ|Fixed a bug, introduced in 1.47.0, that would not create the LeafFrom and LeaftTo columns for hierarchy extractors|
 |1.52.17 [L]|2024-01-30|BAPI|Fixed a bug that caused the BAPI result row count to be 1 when it was actually 0|
 |1.52.16 [L]|2024-01-29|TableCDC|Add deletion transport request for Z_THEO_DELETE_LOG_ENTRIES function module.|
 |1.52.15 [L]|2024-01-23|TableCDC|RFC Service objects are now excluded from /THEO/CDC_ECC to avoid issues during import of the transport request.|
