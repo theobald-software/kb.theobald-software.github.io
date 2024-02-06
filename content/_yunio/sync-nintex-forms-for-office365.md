@@ -108,9 +108,11 @@ document.addEventListener("DOMContentLoaded", async () => {
 });
 ```
 
-{: .box-note }
-**Note:** To use this script in your application, replace the connection URL. 
+To use this script in your application, replace the connection URL. 
 If your yunIO service has a different name or settings, edit the table settings accordingly.
+
+{: .box-note }
+**Note:** Do not use *//* for comments in the custom java script, as *//* causes errors. 
 
 Follow the steps below to integrate the script in your Nintex Form:
 
