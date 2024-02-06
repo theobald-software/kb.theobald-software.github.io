@@ -123,10 +123,11 @@ searchOptions: {
 });
 ```
 
-{: .box-note }
-**Note:** To use this script in your application, replace the connection URL. 
+To use this script in your application, replace the connection URL. 
 If your yunIO service has a different name or settings, edit the table settings accordingly.
 
+{: .box-note }
+**Note:** Do not use *//* for comments in the custom java script, as *//* causes errors. 
 Follow the steps below to integrate the script in your Nintex Form:
 
 1. Open the settings of the Nintex form and copy the JavaScript into the field **Custom JavaScript**.
