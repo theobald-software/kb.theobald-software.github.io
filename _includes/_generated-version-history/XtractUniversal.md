@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.2.12 [L]|2024-02-07|Designer|Renamed some destination types in order to increase clarity and align with online help. List of destination types is now sorted alphabetically.|
 |6.2.11 [L]|2024-02-01|Destinations|Power BI: Fixed an issue that caused extractions to be missing or authentication errors in the connector UI due to caching issues|
 |6.2.10 [L]|2024-01-31|Server|Fixed a bug which would crash the configuration converter when an unhandled property was read in a legacy server file.|
 |6.2.9 [L]|2024-01-30|Destinations|Fixed an error that caused CSV destinations to fail when an empty result set (no rows or columns) was extracted|
