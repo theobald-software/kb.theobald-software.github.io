@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.32.3 [L]|2024-02-07|Designer|Improved performance for big objects in the run dialog for non-table services.|
 |1.32.2 [L]|2024-02-07|Designer|Run dialog improved UI (full screen, collapsing of objects)|
 |1.32.1 [L]|2024-02-07|Designer|Fixed a bug in rendering of complex structures in the run dialog (output).|
 |1.32.0 [L]|2024-01-31|Designer|Added payload loading and saving in the Run Dialog. The runtime parameter values of last run are saved in the browser.|
