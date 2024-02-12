@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|[6.3.0 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-6.3.0.html)|2024-02-12|Server|Implemented a new log endpoint with responses in JSON format.  Fixed bugs in the web server.  ([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-6.3.0.html))|
 |6.2.14 [L]|2024-02-12|Server|Fixed a bug where the configured maximum age of log files would be ignored and always be the default of seven days.|
 |6.2.13 [H]|2024-02-08|Security|Fixed an issue that caused the result cache to be used independently from caller supplied SAP credentials|
 |6.2.12 [L]|2024-02-07|Designer|Renamed some destination types in order to increase clarity and align with online help. List of destination types is now sorted alphabetically.|
