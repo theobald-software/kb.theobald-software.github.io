@@ -9,7 +9,7 @@ weight: 105
 The Xtract Universal server allows accessing meta data and logging information through web calls. 
 
 {: .box-note }
-**Note:** This article uses the syntax of the Xtract Universal Webserver before version 6.0.0.
+**Note:** This article uses the syntax of the Xtract Universal Webserver before version 6.0.0. and before version 6.3.0.
 When using the latest Xtract Universal version, refer to [Online Help: Log Access via Web Service](https://help.theobald-software.com/en/xtract-universal/logging/logging-access-via-http).
 
 ## Basic URL
@@ -390,7 +390,7 @@ FinishedErrors
 </pre></div></td></tr></tbody>
 </table>
 
-## After Version 6.0.0
+## Before Version 6.3.0
 
 ### Query All Server Logs
 
