@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.32.6 [L]|2024-02-12|General|Removed "Preview" status from the Report service type|
 |1.32.5 [L]|2024-02-09|Designer|Run dialog supports showing the results as a table for table services.|
 |1.32.4 [L]|2024-02-09|Designer|Added named payload for the run dialog and other improvements.|
 |1.32.3 [L]|2024-02-07|Designer|Improved performance for big objects in the run dialog for non-table services.|
