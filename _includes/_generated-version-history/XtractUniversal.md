@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.2.14 [L]|2024-02-12|Server|Fixed a bug where the configured maximum age of log files would be ignored and always be the default of seven days.|
 |6.2.13 [H]|2024-02-08|Security|Fixed an issue that caused the result cache to be used independently from caller supplied SAP credentials|
 |6.2.12 [L]|2024-02-07|Designer|Renamed some destination types in order to increase clarity and align with online help. List of destination types is now sorted alphabetically.|
 |6.2.11 [L]|2024-02-01|Destinations|Power BI: Fixed an issue that caused extractions to be missing or authentication errors in the connector UI due to caching issues|
