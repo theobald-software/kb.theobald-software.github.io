@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.1.1 [L]|2024-02-13|General|Fixed legacy update type runtime parameter for DeltaQ|
 |[4.1.0 [L]](https://kb.theobald-software.com/release-notes/TheobaldServer-4.1.0.html)|2024-02-12|General|Implemented subdirectory support for the stores([Release note](https://kb.theobald-software.com/release-notes/TheobaldServer-4.1.0.html))|
 |4.0.29 [H]|2024-02-08|General|Fixed an issue that caused the result cache to be used independently from caller supplied SAP credentials|
 |4.0.28 [L]|2024-02-05|General|Fixed a bug where an extractions directory would not be deleted entirely when deleting the extraction in the designer. Fixed the error message sent by the HTTP-server if supplied parameters are ambiguous.|
