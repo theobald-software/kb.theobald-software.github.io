@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.52.22 [L]|2024-02-13|DeltaQ|Enabled column selection for hierarchy extractors, so that selectors can be used. Added proper message to inform that DeltaQ does not support variable length strings.|
 |1.52.21 [L]|2024-02-09|TableCDC|Fixed a bug that prevented log table create statement from being generated on S4 systems with SAP_BASIS version 7.53 or below. Requires update of /THEO/CDC_S4.|
 |1.52.20 [L]|2024-02-08|Table|Fix for using /THEO/READ_TABLE on big endian systems|
 |1.52.19 [L]|2024-02-05|TableCDC|Added option to select function module that is used during the extraction runs|
