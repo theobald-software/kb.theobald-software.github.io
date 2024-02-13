@@ -404,7 +404,7 @@ The web call returns timestamps in the format `[yyyy-MM-dd_HH:mm:ss.SSS]`.<br>
 Use the timestamps to query the content of the server logs, see [Query Server Logs at Specific Timestamps](#query-server-logs-at-specific-timestamps).
 
 {: .box-note }
-**Note:** Server log files are deleted after a defined period of days, see [Server Setting - Web Server](../server/server-settings#web-server).
+**Note:** Server log files are deleted after a defined period of days, see [Server Setting - Web Server](https://help.theobald-software.com/en/xtract-universal/server/server-settings#web-server).
 
 #### Example
 
@@ -431,7 +431,7 @@ Timestamp
 **Tip:** Query timestamps of all server logs, see [Query All Server Logs](#query-all-server-logs) or query timestamps that correspond to an extraction run, see [Query Extraction Runs of a Specific Extraction](#query-extraction-runs-of-a-specific-extraction).
 
 {: .box-note }
-**Note:** Server log files are deleted after a defined period of days, see [Server Setting - Web Server](../server/server-settings#web-server).
+**Note:** Server log files are deleted after a defined period of days, see [Server Setting - Web Server](https://help.theobald-software.com/en/xtract-universal/server/server-settings#web-server).
 
 #### Response
 
@@ -579,7 +579,7 @@ The web call returns the following information:
 | 3     | FinishedNoErrors | Extraction succeeded without errors.                                     |
 | 4     | FinishedErrors   | Extraction is finished with at least one error. |
 
-For information on how to read extractions logs, see [Reading Extraction Logs](../logging#reading-logs---extraction-log).
+For information on how to read extractions logs, see [Reading Extraction Logs](https://help.theobald-software.com/en/xtract-universal/logging#reading-logs---extraction-log).
 
 #### Example
 
@@ -608,7 +608,7 @@ Follow the steps below to create a status check routine:
 1. Run your extraction in asynchronous mode using the following URL schema:<br>
 `http(s)://[host]:[port]/?name=[extraction_name]&wait=false`<br>
 The asynchronous extraction immediately returns an HTTP-response, while the extraction is still running. 
-For more information on how to trigger extractions, see [Execute and Automate - Call via Webservice](../execute-and-automate-extractions/call-via-webservice).
+For more information on how to trigger extractions, see [Execute and Automate - Call via Webservice](https://help.theobald-software.com/en/xtract-universal/execute-and-automate-extractions/call-via-webservice).
 2. Copy the timestamp that is returned in the HTTP-response header of the asynchronous extraction. <br>Example: *X-XU-Timestamp: 2023-01-28_09:58:47.312*.
 3. Use the extraction name and the timestamp to query the status of the extraction using the following URL schema:<br>
 `http(s)://[host]:[port]/status/?name=[extraction_name]&timestamp=[yyyy-MM-dd_HH:mm:ss.SSS]`<br>
