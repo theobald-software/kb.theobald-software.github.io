@@ -17,7 +17,7 @@ This release introduces a new log API returning payloads in JSON format. The API
 - /logs/extractions/$name/$timestamp/log
   - run information and log entries for run $timestamp 
 
-**Documentation will be available in a few days**  
+https://help.theobald-software.com/en/xtract-universal/web-api
 
 - Improvements
   - Improved structure of the urls where resources are identified by paths instead of url parameters 
