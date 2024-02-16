@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.3.3 [L]|2024-02-16|Destinations|Alteryx: Do not pass values for rows parameter to XU, that are out of range|
 |6.3.2 [L]|2024-02-16|Destinations|Flat File Parquet: Fixed an issue with files being kept open for longer than needed potentially causing errors when trying to open the file in another application|
 |6.3.1 [H]|2024-02-16|Server|Reverted a change in 6.3.0, where extraction names in Config-API response would be erroneously written as array|
 |[6.3.0 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-6.3.0.html)|2024-02-12|Server|Implemented a new log endpoint with responses in JSON format.  Fixed bugs in the web server.  ([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-6.3.0.html))|
