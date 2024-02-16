@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.2.1 [H]|2024-02-16|Server|Reverted a change in 6.2.0, where extraction names in Config-API response would be erroneously written as array|
 |[6.2.0 [L]](https://kb.theobald-software.com/release-notes/BOARDConnector-6.2.0.html)|2024-02-13|Server|Implemented a new log endpoint with responses in JSON format.  Fixed bugs in the web server. ([Release note](https://kb.theobald-software.com/release-notes/BOARDConnector-6.2.0.html))|
 |6.1.2 [L]|2024-01-30|General|Fixed an error that caused CSV output to fail when an empty result set (no rows or columns) was extracted|
 |6.1.1 [L]|2024-01-25|BW Cube|Cube config converter: improved logging of warnings and fix for failing conversion of extractions created in Board Connector 2.11.4 or lower.|
