@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.3.4 [M]|2024-02-19|Server|Hotfix: Fixed the format for `duration` and `timestamp` properties in the config and logs API. The issues were introduced in 6.3.|
 |6.3.3 [L]|2024-02-16|Destinations|Alteryx: Do not pass values for rows parameter to XU, that are out of range|
 |6.3.2 [L]|2024-02-16|Destinations|Flat File Parquet: Fixed an issue with files being kept open for longer than needed potentially causing errors when trying to open the file in another application|
 |6.3.1 [H]|2024-02-16|Server|Reverted a change in 6.3.0, where extraction names in Config-API response would be erroneously written as array|
