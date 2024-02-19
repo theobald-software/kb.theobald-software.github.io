@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.1.2 [L]|2024-02-19|General|Fixed a bug where cloning an extraction would not be possible due to the required item privilege being too high.|
 |4.1.1 [L]|2024-02-13|General|Fixed legacy update type runtime parameter for DeltaQ|
 |[4.1.0 [L]](https://kb.theobald-software.com/release-notes/TheobaldServer-4.1.0.html)|2024-02-12|General|Implemented subdirectory support for the stores([Release note](https://kb.theobald-software.com/release-notes/TheobaldServer-4.1.0.html))|
 |4.0.29 [H]|2024-02-08|General|Fixed an issue that caused the result cache to be used independently from caller supplied SAP credentials|
