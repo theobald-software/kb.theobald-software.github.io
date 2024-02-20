@@ -27,32 +27,40 @@ If you have already an InfoObject, skip to [Setup in SAP](#setup-in-sap).
 
 ### Setup in SAP 
 
-1. Create an RFC Destination (XTRACT 01) using transaction SM59. <br>
+#### Creating an RFC Destination
+
+Create an RFC Destination (XTRACT 01) using transaction SM59. <br>
 ![data-into-a-bw_05](/img/contents/xis/data-into-a-bw_05.jpg){:class="img-responsive"}
-2. Create an InfoSource 3.x.<br>
+
+#### Creating an InfoSource
+
+1. Create an InfoSource 3.x.<br>
 ![data-into-a-bw_06](/img/contents/xis/data-into-a-bw_06.jpg){:class="img-responsive"}
-3. Select the option **[Direct Update of Master Data]** and select the InfoObject ZCUSTOMER.<br>
+2. Select the option **[Direct Update of Master Data]** and select the InfoObject ZCUSTOMER.<br>
 ![data-into-a-bw_07](/img/contents/xis/data-into-a-bw_07.jpg){:class="img-responsive"}
-4. Create the transfer rules for ZCUSTOMER.<br>
+3. Create the transfer rules for ZCUSTOMER.<br>
 ![data-into-a-bw_09](/img/contents/xis/data-into-a-bw_09.jpg){:class="img-responsive"}
-5. Select the Source System XTRACT01.
+4. Select the Source System XTRACT01.
 ![data-into-a-bw_10](/img/contents/xis/data-into-a-bw_10.jpg){:class="img-responsive"}
-6. Click **[Save]**. <br>
+5. Click **[Save]**. <br>
 ![data-into-a-bw_11](/img/contents/xis/data-into-a-bw_11.jpg){:class="img-responsive"}
-7. Create an InfoPackage.<br>
+
+#### Creating an InfoPackage
+
+1. Create an InfoPackage.<br>
 ![data-into-a-bw_13](/img/contents/xis/data-into-a-bw_13.jpg){:class="img-responsive"}
-8. Enter the description, select the Destination and click **[Save]**.
+2. Enter the description, select the Destination and click **[Save]**.
 ![data-into-a-bw_14](/img/contents/xis/data-into-a-bw_14.jpg){:class="img-responsive"}
-9. In the tab "Schedule", select **[Start later in Background]** and click **[Scheduling options] > [immediate]**.
+3. In the tab "Schedule", select **[Start later in Background]** and click **[Scheduling options] > [immediate]**.
 ![data-into-a-bw_15](/img/contents/xis/data-into-a-bw_15.jpg){:class="img-responsive"}
-10. Click **[Save]**. <br>
+4. Click **[Save]**. <br>
 ![data-into-a-bw_16](/img/contents/xis/data-into-a-bw_16.jpg){:class="img-responsive"}
 
 
 ### Setup in Xtract IS
 
 1. Create a data flow task and [define an SAP connection](https://help.theobald-software.com/en/xtract-is/sap-connection/the-connection-manager).
-2. Add an OLE DB Source for the SQL table to the workflow.
+2. Optional: add an OLE DB Source for the SQL table to the workflow.
 The following SQL table is used as input for the InfoObject:<br>
 ![data-into-a-bw_17](/img/contents/xis/data-into-a-bw_17.jpg){:class="img-responsive"}
 ![data-into-a-bw_18](/img/contents/xis/data-into-a-bw_18.jpg){:class="img-responsive"}
