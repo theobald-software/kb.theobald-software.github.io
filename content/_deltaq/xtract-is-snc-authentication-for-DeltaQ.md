@@ -7,10 +7,9 @@ weight: 55
 ---
 
 
-### About this Article
-The following article is intended to the users who use Xtract IS and wanted to run the SSIS packages with SNC Authentication when DeltaQ or OHS dataflow components are used. 
-When SNC is used, it is a prerequisite that the associated Application server, RFC destination (*SM59*) and SAP user have set SNC via partner name. 
-This way the communication between the Application server and Xtract IS takes place via RFC destination for DeltaQ and OHS dataflow components. 
+The following article is intended for users who want to run SSIS packages with SNC Authentication when DeltaQ or OHS dataflow components are used. 
+When SNC is used, it is a prerequisite that the associated application server, RFC destination (*SM59*) and SAP user have set SNC via partner name. 
+This way the communication between the application server and Xtract IS takes place via RFC destination for DeltaQ and OHS dataflow components. 
 
 ### User maintenance configuration
 In *SU01*, enter the User and click on **[Change]**. 

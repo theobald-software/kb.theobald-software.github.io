@@ -57,7 +57,7 @@ Create an RFC Destination (XTRACT 01) using transaction SM59. <br>
 ![data-into-a-bw_16](/img/contents/xis/data-into-a-bw_16.jpg){:class="img-responsive"}
 
 
-### Setup in Xtract IS
+### Setup in SSIS
 
 1. Create a data flow task and [define an SAP connection](https://help.theobald-software.com/en/xtract-is/sap-connection/the-connection-manager).
 2. Optional: add an OLE DB Source for the SQL table to the workflow.

@@ -6,9 +6,11 @@ permalink: /:collection/:path
 weight: 1
 ---
 
-Check out our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
+The following article shows how to define dynamic WHERE conditions for Table extractions.
 
-The dynamization of Xtract IS Table components increases the maintainability of SSIS packages / projects. So-called SSIS expressions based on table properties are used for this functionality. The following table shows all defined table properties that can be used dynamically at runtime of the SSIS package:
+The dynamization of Xtract IS Table components increases the maintainability of SSIS packages / projects. 
+So-called SSIS expressions based on table properties are used for this functionality. 
+The following table shows all defined table properties that can be used dynamically at runtime of the SSIS package:
 
 
 |Property Name|Description|
@@ -22,28 +24,29 @@ The dynamization of Xtract IS Table components increases the maintainability of 
 | `[Xtract Table].[PackageSize]`| Specifies the number of records retrieved per data package.|
 
 
-### Step-by-step instructions for the use of [Xtract Table].[WhereClause]
+### How to use [Xtract Table].[WhereClause]
 
-In the depicted example, only results till 01.01 of the current fiscal year are to be extracted. The SAP standard table *BKPF - Accounting Document Header* and the table field *BUDAT - Posting Date in the Document* are used. 
+In the depicted example, only results until 01.01 of the current fiscal year are to be extracted. 
+The SAP standard table *BKPF - Accounting Document Header* and the table field *BUDAT - Posting Date in the Document* are used. 
 
-1. Create a SSIS package, see [Xtract IS Table](https://help.theobald-software.com/en/xtract-is/table)
-2. Right-click on Data Flow canvas and open **[Properties]**
+1. Create an SSIS package, see [Xtract IS Table](https://help.theobald-software.com/en/xtract-is/table).
+2. Right-click on Data Flow canvas and open **[Properties]**.
 ![data_flow_properties](/img/contents/xis/data_flow_properties_expressions.png){:class="img-responsive"}
-3. Add Expression by clicking on plus symbol and open expression context using **[...]**
-4. Select Property [Xtract Table].[WhereClause]
+3. Add Expression by clicking on plus symbol and open expression context using **[...]**.
+4. Select Property `[Xtract Table].[WhereClause]`.
 ![expression_editor](/img/contents/xis/property_expression_editor.png){:class="img-responsive"}
-5. Open expression Builder using **[...]**
-6. Copy & paste following expression `"BUDAT <= " + "'" +  (DT_STR, 4, 1252) DATEPART("yy" , GETDATE())  + "0101'"`
+5. Open expression Builder using **[...]**.
+6. Copy & paste following expression `"BUDAT <= " + "'" +  (DT_STR, 4, 1252) DATEPART("yy" , GETDATE())  + "0101'"`.
 ![expression_builder](/img/contents/xis/expression_builder.png){:class="img-responsive"}
-7. **[Evaluate Expression]** to check correct syntax
-8. Confirm entry by clicking **[OK]**
-9. Confirm entry by clicking **[OK]** within Property Expression Editor
-10. Check WHERE-Clause of the table extraction in tab *WHERE Clause*
+7. **[Evaluate Expression]** to check correct syntax.
+8. Confirm entry by clicking **[OK]**.
+9. Confirm entry by clicking **[OK]** within Property Expression Editor.
+10. Check WHERE-Clause of the table extraction in tab *WHERE Clause*.
 ![xis-where-condition](/img/contents/xis/xis_where_clause_tab.png){:class="img-responsive"}
-11. Run the SSIS Package / Project
+11. Run the SSIS Package / Project.
 
 
-### Examples of dynamic WHERE clauses
+### Examples of Dynamic WHERE clauses
 
 |SSIS Expression|	Output	| Description |
 |:----|:----|:----|
