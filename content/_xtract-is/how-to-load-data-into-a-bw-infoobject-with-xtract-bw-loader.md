@@ -27,12 +27,12 @@ If you have already an InfoObject, skip to [Setup in SAP](#setup-in-sap).
 
 ### Setup in SAP 
 
-#### Creating an RFC Destination
+#### RFC Destination
 
 Create an RFC Destination (XTRACT 01) using transaction SM59. <br>
 ![data-into-a-bw_05](/img/contents/xis/data-into-a-bw_05.jpg){:class="img-responsive"}
 
-#### Creating an InfoSource
+#### InfoSource
 
 1. Create an InfoSource 3.x.<br>
 ![data-into-a-bw_06](/img/contents/xis/data-into-a-bw_06.jpg){:class="img-responsive"}
@@ -45,7 +45,7 @@ Create an RFC Destination (XTRACT 01) using transaction SM59. <br>
 5. Click **[Save]**. <br>
 ![data-into-a-bw_11](/img/contents/xis/data-into-a-bw_11.jpg){:class="img-responsive"}
 
-#### Creating an InfoPackage
+#### InfoPackage
 
 1. Create an InfoPackage.<br>
 ![data-into-a-bw_13](/img/contents/xis/data-into-a-bw_13.jpg){:class="img-responsive"}
