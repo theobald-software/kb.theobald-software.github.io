@@ -6,104 +6,71 @@ permalink: /:collection/:path
 weight: 50
 ---
 
-### Content ###
+The following article shows how to use the Xtract BW Loader component with an InfoPackage to load data into InfoObject Texts.
 
-**Xtract BW Loader** is one out of the ten components of [Xtract IS](https://theobald-software.com/en/xtract-is/),  the SAP Connector for the SQL Server Integration Services (SSIS) by Theobald Software.
+{: .box-tip }
+**Tip:** Xtract BWLoader can load data to InfoPackages that can be forwarded to other SAP BW objects like InfoObject attributes, hierarchies or InfoCubes.
 
-BW Loader allows to load data to SAP BW objects using an InfoPackage (refer to [SAP help](http://help.sap.com/saphelp_nw04/helpdata/en/2e/20d704d45be7458582cdfcc5487090/frameset.htm) to know more about InfoPackages).
+### Creating an InfoObject
 
-In this article it is demonstrated how to use BW Loader in conjunction with an Infopackage to load data into  InfoObject Texts. <br> You can use BW Loader in conjunction with other Infopackages too, to load data to other BW objects, like InfoObject attributes, hierarchies or InfoCubes.
+In the depicted example an InfoObject ZCUSTOMER. <br>
+If you have already an InfoObject, skip to [Setup in SAP](#setup-in-sap).
 
-In this scenario the InfoObject ZCUSTOMER is created with the following settings. If you have already an InfoObject you can skip to **STEP 1: Create an RFC Destination**.
-### InfoObject Creation ###
-
-Create an InfoObject (using transaction code RSA1).
+1. Create an InfoObject using transaction RSA1.<br>
 ![data-into-a-bw_01](/img/contents/xis/data-into-a-bw_01.jpg){:class="img-responsive"}
-
-Set a name (e.g. ZCUSTOMER).
+2. Set a name, e.g.s ZCUSTOMER.<br>
 ![data-into-a-bw_02](/img/contents/xis/data-into-a-bw_02.jpg){:class="img-responsive"}
-
-Set data type and length.
+3. Set data type and length.<br>
 ![data-into-a-bw_03](/img/contents/xis/data-into-a-bw_03.jpg){:class="img-responsive"}
-
-On the Master data/texts tab select the following options.
+4. On the Master data/texts tab select the following options.<br>
 ![data-into-a-bw_04](/img/contents/xis/data-into-a-bw_04.jpg){:class="img-responsive"}
 
-### Step-by-step explanation ###  
+### Setup in SAP 
 
-**Step 1: Create an RFC Destination**
-
-Create an RFC Destination XTRACT 01 using the transaction code SM59 (for more information refer to [SAP help](http://help.sap.com/saphelp_nw04/helpdata/en/2e/20d704d45be7458582cdfcc5487090/frameset.htm)).
+1. Create an RFC Destination (XTRACT 01) using transaction SM59. <br>
 ![data-into-a-bw_05](/img/contents/xis/data-into-a-bw_05.jpg){:class="img-responsive"}
-
-**Step 2: Create an InfoSource 3.x**
-<br>
-Create an InfoSource 3.x (for more information refer to [SAP help](http://help.sap.com/saphelp_nw04/helpdata/en/2e/20d704d45be7458582cdfcc5487090/frameset.htm)).
+2. Create an InfoSource 3.x.<br>
 ![data-into-a-bw_06](/img/contents/xis/data-into-a-bw_06.jpg){:class="img-responsive"}
-
-Set the option **[Direct Update of Master Data]** und select the InfoObject ZCUSTOMER.
+3. Select the option **[Direct Update of Master Data]** and select the InfoObject ZCUSTOMER.<br>
 ![data-into-a-bw_07](/img/contents/xis/data-into-a-bw_07.jpg){:class="img-responsive"}
-
-Confirm the message.
-![data-into-a-bw_08](/img/contents/xis/data-into-a-bw_08.jpg){:class="img-responsive"}
-
-**Step 3: Create Transfer Rules**
-
-Now create the transfer rules (for more information refer to [SAP help](http://help.sap.com/saphelp_nw04/helpdata/en/2e/20d704d45be7458582cdfcc5487090/frameset.htm)).
+4. Create the transfer rules for ZCUSTOMER.<br>
 ![data-into-a-bw_09](/img/contents/xis/data-into-a-bw_09.jpg){:class="img-responsive"}
-
-Select the Source System XTRACT01.
+5. Select the Source System XTRACT01.
 ![data-into-a-bw_10](/img/contents/xis/data-into-a-bw_10.jpg){:class="img-responsive"}
-
-Confirm the message.
+6. Click **[Save]**. <br>
 ![data-into-a-bw_11](/img/contents/xis/data-into-a-bw_11.jpg){:class="img-responsive"}
-
-Click on the **[Save]** button.
-![data-into-a-bw_12](/img/contents/xis/data-into-a-bw_12.jpg){:class="img-responsive"}
-
-**Step 4: Create an InfoPackage**
-
-Create an InfoPackage.
+7. Create an InfoPackage.<br>
 ![data-into-a-bw_13](/img/contents/xis/data-into-a-bw_13.jpg){:class="img-responsive"}
-
-Set the description, select the Destination and click on **[Save]**.
+8. Enter the description, select the Destination and click **[Save]**.
 ![data-into-a-bw_14](/img/contents/xis/data-into-a-bw_14.jpg){:class="img-responsive"}
-
-On the tab "Schedule", select **[Start later in Background]**, click on **[Scheduling options]**, then on  **[immediate]** and on the **[Save]** button.
+9. In the tab "Schedule", select **[Start later in Background]** and click **[Scheduling options] > [immediate]**.
 ![data-into-a-bw_15](/img/contents/xis/data-into-a-bw_15.jpg){:class="img-responsive"}
-
-Save the InfoPackage.
+10. Click **[Save]**. <br>
 ![data-into-a-bw_16](/img/contents/xis/data-into-a-bw_16.jpg){:class="img-responsive"}
 
-**Step 5: Use Xtract BW Loader component**
-<br>
-As a source an SQL table with two columns is used defined as the following:
+
+### Setup in Xtract IS
+
+1. Create a data flow task and [define an SAP connection](https://help.theobald-software.com/en/xtract-is/sap-connection/the-connection-manager).
+2. Add an OLE DB Source for the SQL table to the workflow.
+The following SQL table is used as input for the InfoObject:<br>
 ![data-into-a-bw_17](/img/contents/xis/data-into-a-bw_17.jpg){:class="img-responsive"}
 ![data-into-a-bw_18](/img/contents/xis/data-into-a-bw_18.jpg){:class="img-responsive"}
-
-In SSIS create a data flow task, define the connections to the SQL database and to SAP, and add two components: an OLE DB Source for the SQL table and Xtract BW Loader.
+3. Add an Xtract BW Loader component to the workflow.<br>
 ![data-into-a-bw_19](/img/contents/xis/data-into-a-bw_19.jpg){:class="img-responsive"}
-
-Define the BW Loader component and map pipeline elements to the InfoObject fields.
+4. Look up InfoObject ZCUSTOMER.<br>
 ![data-into-a-bw_20](/img/contents/xis/data-into-a-bw_20.jpg){:class="img-responsive"}
+5. Map pipeline elements to the InfoObject fields.<br>
 ![data-into-a-bw_21](/img/contents/xis/data-into-a-bw_21.jpg){:class="img-responsive"}
-
-Execute the data flow in SSIS.
+6. Execute the data flow in SSIS.<br>
 ![data-into-a-bw_22](/img/contents/xis/data-into-a-bw_22.jpg){:class="img-responsive"}
-
-Check the log in SAP.
+7. Check the log in SAP.<br>
 ![data-into-a-bw_23](/img/contents/xis/data-into-a-bw_23.jpg){:class="img-responsive"}
-
-Check the content of the InfoObject ZCUSTOMER.
+8. Check the content of the InfoObject ZCUSTOMER. <br>
 ![data-into-a-bw_24](/img/contents/xis/data-into-a-bw_24.jpg){:class="img-responsive"}
 
-In this article it was demonstrated how to use Xtract BW Loader to load data from an SQL table into SAP BW InfoObject Texts. SSIS allows to use other Sources (e.g. FlatFiles). <br> 
-BWLoader can load data to Infopackages that can be forwarded to other SAP BW objects like InfoObject attributes, hierarchies or InfoCubes.
-
 *****
-Related Links <br>
 
-[Xtract IS](https://theobald-software.com/en/xtract-is/) - product information <br>
-[Xtract IS](https://help.theobald-software.com/en/xtract-is/) - OnlineHelp <br>
-[Xtract IS](https://help.theobald-software.com/en/xtract-is/bw-loader) - BW loader help section <br>
+##### Related Links 
+- [Xtract BW Loader](https://help.theobald-software.com/en/xtract-is/bw-loader) 
 

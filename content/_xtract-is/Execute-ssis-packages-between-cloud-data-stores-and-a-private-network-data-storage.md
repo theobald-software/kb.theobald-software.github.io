@@ -6,13 +6,11 @@ permalink: /:collection/:path
 weight: 16
 ---
 
-### About 
-
-The following article describes the secure data integration approach and shows the necessary steps to execute SSIS packages accessing an SAP source (Xtract Connection), which is located in a private network (domain) for security reasons.
+The following article describes the secure data integration approach and the necessary steps to execute SSIS packages that access an SAP source (Xtract Connection) located in a private network (domain).
 
 To perform data integration securely in a private network environment without a direct line-of-sight from the public cloud environment, you can install a self-hosted IR in your on-premises environment behind a firewall, or inside a virtual private network. 
-
-The self-hosted integration runtime only makes outbound HTTP-based connections to the internet. The Xtract Connection (SAP connection) with the property *ConnectByProxy = True* is used to implement access to the local network using the Self-Hosted Integration Runtime (SHIR).
+The self-hosted integration runtime only makes outbound HTTP-based connections to the internet. 
+The Xtract Connection (SAP connection) with the property *ConnectByProxy = True* is used to implement access to the local network using the Self-Hosted Integration Runtime (SHIR).
 
 ### Prerequisites
 
@@ -20,7 +18,7 @@ The SSIS package was created in advance on a development environment (Visual Stu
 The following prerequisites are mostly based on the official Microsoft documentation for using Azure integration runtime (IR) as well as Self-Hosted Integration Runtime (SHIR). 
 
 {: .box-note }
-**Note:** Finally, you download and install the latest version of self-hosted IR, as well as the additional drivers and runtime, on your on-premises machine or Azure virtual machine (VM).
+**Note:** Download and install the latest version of self-hosted IR, as well as the additional drivers and runtime, on your on-premises machine or Azure virtual machine (VM).
 
 ### Step-by-step Instruction
 

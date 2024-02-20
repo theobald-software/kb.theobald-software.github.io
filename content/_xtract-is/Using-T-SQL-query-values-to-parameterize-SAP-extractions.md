@@ -5,16 +5,15 @@ description: Using T-SQL query values to parameterize SAP extractions
 permalink: /:collection/:path
 weight: 20
 ---
-### About
 
-The following article describes how T-SQL query results can be passed to SSIS variables. These values can then be passed as call parameters to the Xtract IS tasks. 
+The following article describes how T-SQL query results can be passed to SSIS variables. 
+These values can then be passed as call parameters to Xtract IS tasks. 
 
-The T-SQL query on existing SQL table objects is a single value that is then passed to a dedicated selection criterion. 
-
-The depicted example uses the Xtract BAPI task, which dynamically executes the *FISCYEAR* selection field at runtime. 
+The T-SQL query on existing SQL table objects is a single value that is passed to a dedicated selection criterion. 
+The depicted example uses an Xtract BAPI task that dynamically executes the *FISCYEAR* selection field at runtime. 
 
 {: .box-note }
-**Note:**  This example case can also be used for other Xtract IS tasks within SQL Sever Integration Services (SSIS).
+**Note:**  This sample case can also be used for other Xtract IS tasks within SQL Sever Integration Services (SSIS).
 
 ### Step-by-Step Guide
 
@@ -32,7 +31,7 @@ The depicted example uses the Xtract BAPI task, which dynamically executes the *
 7. Proceed with configuring a Data Flow task with the Xtract BAPI task and corresponding OLE-DB task for processing the BAPI result.
 ![Execute SQL Task - Control Flow](/img/contents/xis/data-flow-task.png){:class="img-responsive"}
 ![Execute SQL Task - Control Flow](/img/contents/xis/data-flow-task-xtract-BAPI.png){:class="img-responsive"}
-8. Select the defnied SSIS variable myGJAHR to the corresponding selection criterion (5).
+8. Select the defined SSIS variable myGJAHR to the corresponding selection criterion (5).
 ![Execute SQL Task - Control Flow](/img/contents/xis/BAPI-task-selection-criterion.png){:class="img-responsive"}
 9. Execute the SSIS package and check the results with known built-in functionalities.
 
