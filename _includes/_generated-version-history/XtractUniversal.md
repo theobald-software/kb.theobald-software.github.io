@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.3.6 [L]|2024-02-21|Setup|Installation of Power BI Report Server Plugin is now an optional component in the setup and not selected by default.|
 |6.3.5 [L]|2024-02-19|Server|Fixed a bug where cloning an extraction would not be possible due to the required item privilege being too high.|
 |6.3.4 [M]|2024-02-19|Server|Hotfix: Fixed the format for `duration` and `timestamp` properties in the config and logs API. The issues were introduced in 6.3.|
 |6.3.3 [L]|2024-02-16|Destinations|Alteryx: Do not pass values for rows parameter to XU, that are out of range|
