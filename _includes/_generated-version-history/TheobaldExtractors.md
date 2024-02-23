@@ -1,5 +1,7 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|[1.52.26 [L]](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.52.26.html)|2024-02-23|Table|Updated /THEO/READ_TABLE to version 3.4.([Release note](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.52.26.html))|
+|1.52.25 [L]|2024-02-23|TableCDC|There are now 2 different transports for S4 systems. One for S4 systems up to 7.55 and one for 7.55 and newer|
 |1.52.24 [L]|2024-02-21|TableCDC|Fixed a bug that caused initial load rollback to not completely remove log table metadata from the SAP system|
 |1.52.23 [L]|2024-02-15|TableCDC|Results are now ordered by sequence number to prevent "Invalid result order" error during delta extractions.|
 |1.52.22 [L]|2024-02-13|DeltaQ|Enabled column selection for hierarchy extractors, so that selectors can be used. Added proper message to inform that DeltaQ does not support variable length strings.|
