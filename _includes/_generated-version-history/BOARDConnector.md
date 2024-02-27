@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.2.3 [L]|2024-02-27|BW Cube|Fixed a bug in the config converter that caused broken key figures and custom column order for extractions originally created in version 2.11.0 and before.|
 |6.2.2 [M]|2024-02-19|Server|Hotfix: Fixed the format for `duration` and `timestamp` properties in the config and logs API. The issues were introduced in 6.2.|
 |6.2.1 [H]|2024-02-16|Server|Reverted a change in 6.2.0, where extraction names in Config-API response would be erroneously written as array|
 |[6.2.0 [L]](https://kb.theobald-software.com/release-notes/BOARDConnector-6.2.0.html)|2024-02-13|Server|Implemented a new log endpoint with responses in JSON format.  Fixed bugs in the web server. ([Release note](https://kb.theobald-software.com/release-notes/BOARDConnector-6.2.0.html))|
