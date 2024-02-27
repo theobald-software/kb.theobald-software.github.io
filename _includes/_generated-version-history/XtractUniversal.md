@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.3.9 [L]|2024-02-27|BW Cube|Fixed a bug in the config converter that caused broken key figures and custom column order for extractions originally created in version 2.46.0 and before.|
 |6.3.8 [L]|2024-02-27|ODP|Fixed an issue that caused errors during extraction when the data contained invalid time or date values. The values are now passed through or converted according to the destination conversion settings.|
 |6.3.7 [L]|2024-02-23|Destinations|Fixed the file name generator for Snowflake's internal csv destination|
 |6.3.6 [L]|2024-02-21|Setup|Installation of Power BI Report Server Plugin is now an optional component in the setup and not selected by default.|
