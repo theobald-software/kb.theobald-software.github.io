@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.53.0 [L]|2024-02-27|ODP|Added direct read mode with support for aggregating fields|
 |1.52.27 [L]|2024-02-27|ODP|Fixed an issue that caused errors during extraction when the data contained invalid time or date values.|
 |[1.52.26 [L]](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.52.26.html)|2024-02-23|Table|Updated /THEO/READ_TABLE to version 3.4.([Release note](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.52.26.html))|
 |1.52.25 [L]|2024-02-23|TableCDC|There are now 2 different transports for S4 systems. One for S4 systems up to 7.55 and one for 7.55 and newer|
