@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.53.2 [L]|2024-03-05|General|Added the option on FilterTextBox to handle multiple entries separated by whitespace|
 |1.53.1 [L]|2024-02-28|Table|Fixed a bug where in some cases changing extraction settings would reset changes made to WHERE and HAVING clauses.|
 |1.53.0 [L]|2024-02-27|ODP|Added direct read mode with support for aggregating fields|
 |1.52.27 [L]|2024-02-27|ODP|Fixed an issue that caused errors during extraction when the data contained invalid time or date values.|
