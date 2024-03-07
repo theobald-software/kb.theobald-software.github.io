@@ -11,8 +11,8 @@ The following article shows how to handle the initial table load for delta extra
 The article applies in the following situation:
 
 - The TableCDC component is run on SAP releases < 7.10
-- The option **Extract table on first run** (Delta initialization) is activate.
-- The delta initialization takes longer than the maximum processing time specified in the SAP profile parameter **rdisp/max_w**.
+- The option **Extract table on first run** (Delta initialization) is activated.
+- The delta initialization takes longer than the maximum processing time specified in the SAP profile parameter **rdisp/max_wprun_time**.
 - The extraction aborts with an error message, e.g., `ERPConnect.ABAPRuntimeException: RfcInvoke failed(RFC_ABAP_RUNTIME_FAILURE): TIME_OUT - Time limit exceeded`.
 
 
