@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.53.3 [L]|2024-03-07|TableCDC|Fixed a bug that caused the result optimization to not work properly if fields of type "RAW" were part of the source table primary key|
 |1.53.2 [L]|2024-03-05|General|Added the option on FilterTextBox to handle multiple entries separated by whitespace|
 |1.53.1 [L]|2024-02-28|Table|Fixed a bug where in some cases changing extraction settings would reset changes made to WHERE and HAVING clauses.|
 |1.53.0 [L]|2024-02-27|ODP|Added direct read mode with support for aggregating fields|
