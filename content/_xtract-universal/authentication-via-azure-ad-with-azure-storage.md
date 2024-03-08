@@ -29,7 +29,7 @@ Follow the steps below to register a new app with your Azure AD tenant:
 7. Click **Grant admin consent**.<br>
 ![azure-app-grant-permission](/img/contents/xu/azure-storage/azure-app-grant-permission.png){:class="img-responsive"}
 
-### Access Rights to Azure Storage
+### Access Rights in Azure Storage
 
 Follow the steps below to assign access rights for the [new Azure app](#app-registration) in Azure Storage using the Storage Blob Data Contributor role:
 
