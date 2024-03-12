@@ -7,7 +7,7 @@ weight: 6
 ---
 
 The following article shows how to connect to the Azure Storage destination using Authentication via Azure Active Directory.<br>
-The article leads you through through the following process:
+The article leads you through the following process:
 
 1. Register a new app with your Azure AD tenant.
 2. Assign access rights for the new app in Azure Storage using the Storage Blob Data Contributor role.
