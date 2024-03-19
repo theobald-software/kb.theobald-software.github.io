@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|7.4.14 [L]|2024-03-19|General|Fixed an issue that caused errors while loading dependencies on SQL Server instances|
 |7.4.13 [L]|2024-01-29|DeltaQ|Fixed a bug introduced in version 7.4.10, which crashed VS on new extraction creation.|
 |7.4.12 [L]|2024-01-15|TableCDC|Fixed a bug that prevented the extractor from being notified about successful processing of result table|
 |7.4.11 [L]|2024-01-11|Setup|Fixed a bug that caused XtractExtensions.xml file to not get updated during setup|
