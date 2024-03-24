@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.53.6 [L]|2024-03-24|BAPI|Support input runtime parameters of type Flag|
 |1.53.4 [L]|2024-03-13|BAPI|Removed table parameter values from log output|
 |1.53.3 [L]|2024-03-07|TableCDC|Fixed a bug that caused the result optimization to not work properly if fields of type "RAW" were part of the source table primary key|
 |1.53.2 [L]|2024-03-05|General|Added the option on FilterTextBox to handle multiple entries separated by whitespace|
