@@ -6,6 +6,11 @@ permalink: /:collection/:path
 weight: 36
 ---
 
+{: .box-warning}
+**Warning: Deprecated articles** <br>
+You are using the old version of the knowledge base for ERPConnect.<br>
+Make sure to use the samples within the new [HelpCenter for ERPConnect](https://helpcenter.theobald-software.com/erpconnect/samples).
+
 
 This section shows how to receive and process a *MATMAS* IDoc.<br>
 To configure your SAP system to send *MATMAS* IDocs, see [Setting Up a Test Environment for IDocs](https://help.theobald-software.com/en/erpconnect/receiving-and-sending-idocs/prerequisites#setting-up-a-test-environment-for-idocs).

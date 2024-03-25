@@ -6,6 +6,11 @@ permalink: /:collection/:path
 weight: 32
 ---
 
+{: .box-warning}
+**Warning: Deprecated articles** <br>
+You are using the old version of the knowledge base for ERPConnect.<br>
+Make sure to use the samples within the new [HelpCenter for ERPConnect](https://helpcenter.theobald-software.com/erpconnect/samples).
+
 This sample shows how to calculate the length of the SAP type QUAN in .NET.
 
 When defining the SAP type QUAN in your RFC Server you also have to define it as a BCD (binary coded decimal) in .NET. 

@@ -6,6 +6,11 @@ permalink: /:collection/:path
 weight: 25
 ---
 
+{: .box-warning}
+**Warning: Deprecated articles** <br>
+You are using the old version of the knowledge base for ERPConnect.<br>
+Make sure to use the samples within the new [HelpCenter for ERPConnect](https://helpcenter.theobald-software.com/erpconnect/samples).
+
 This sample shows how to login to SAP with an SSO Logon Ticket.<br>
 The following sample code retrieves the cookie from the SAP Portal Ticketissuer that contains the SSO Ticket using an HTTP Request with a Basic Authentication:
 
