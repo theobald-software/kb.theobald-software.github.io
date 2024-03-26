@@ -1,5 +1,8 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.53.9 [L]|2024-03-26|BW Cube|BICS: Better error message for mandatory/state variables|
+|1.53.8 [L]|2024-03-26|BW Cube|BICS: preview will always return rows, if any exist|
+|1.53.7 [L]|2024-03-26|BW Cube|BICS: disabled filter context menu|
 |1.53.6 [L]|2024-03-24|BAPI|Support input runtime parameters of type Flag|
 |1.53.4 [L]|2024-03-13|BAPI|Removed table parameter values from log output|
 |1.53.3 [L]|2024-03-07|TableCDC|Fixed a bug that caused the result optimization to not work properly if fields of type "RAW" were part of the source table primary key|
