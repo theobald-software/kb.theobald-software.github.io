@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|[6.3.11 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-6.3.11.html)|2024-03-26|Destinations|Redshift destination: improvements, bug fixes and ODBC driver upgrade to version 2.1.0.0 (BREAKING). ([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-6.3.11.html))|
 |6.3.10 [L]|2024-02-29|Destinations|Added the .csv extension to Snowflake's staged file name|
 |6.3.9 [L]|2024-02-27|BW Cube|Fixed a bug in the config converter that caused broken key figures and custom column order for extractions originally created in version 2.46.0 and before.|
 |6.3.8 [L]|2024-02-27|ODP|Fixed an issue that caused errors during extraction when the data contained invalid time or date values. The values are now passed through or converted according to the destination conversion settings.|
