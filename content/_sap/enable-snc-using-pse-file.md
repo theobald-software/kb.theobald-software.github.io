@@ -5,7 +5,6 @@ description: Enabling Secure Network Communication (SNC) via X.509 certificate
 permalink: /:collection/:path
 weight: 20
 ---
-### About this approach
 
 The following article describes how an SNC connection to an SAP source system can be established with the Xtract products. 
 
