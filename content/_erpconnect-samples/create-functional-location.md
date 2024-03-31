@@ -6,6 +6,11 @@ permalink: /:collection/:path
 weight: 41
 ---
 
+{: .box-warning}
+**Warning: Deprecated articles** <br>
+You are using the old version of the knowledge base for ERPConnect.<br>
+Make sure to use the samples within the new [HelpCenter for ERPConnect](https://helpcenter.theobald-software.com/erpconnect/samples).
+
 This sample shows how to create a [Functional Location](https://help.sap.com/doc/saphelp_nw70/7.0.12/ja-JP/01/d5438b4ab311d189740000e8322d00/content.htm?no_cache=true) in SAP using the BAPI BAPI_FUNCLOC_CREATE. 
 
 ### About

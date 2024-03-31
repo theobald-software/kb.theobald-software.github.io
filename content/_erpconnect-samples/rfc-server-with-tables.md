@@ -6,6 +6,11 @@ permalink: /:collection/:path
 weight: 5
 ---
 
+{: .box-warning}
+**Warning: Deprecated articles** <br>
+You are using the old version of the knowledge base for ERPConnect.<br>
+Make sure to use the samples within the new [HelpCenter for ERPConnect](https://helpcenter.theobald-software.com/erpconnect/samples).
+
 This sample shows how to exchange tables between SAP and .NET using a RFC server.
 
 ### About
