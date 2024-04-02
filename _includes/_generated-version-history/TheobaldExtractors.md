@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.53.13 [L]|2024-04-02|BW Cube|BICS: Released as GA, no longer beta|
 |1.53.12 [L]|2024-03-27|BW Cube|BICS: Truncate NUMC values, if they are too long|
 |1.53.11 [L]|2024-03-27|BW Cube|BICS: Fix result metadata of key figures|
 |1.53.10 [L]|2024-03-27|BW Cube|BICS: Fix caching of results|
