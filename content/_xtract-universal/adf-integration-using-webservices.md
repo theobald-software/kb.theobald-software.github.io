@@ -50,7 +50,7 @@ Example: When the extraction fails, use a web activity to query the extraction l
 A follow up event can then be triggered by the *Storage event*, e.g., sending a notification email.<br>
 ![XU_ADF_global_parameter](/img/contents/xu/xu_ADF_2_Child_pipeline_write_Log.png)
 
-The pipeline functions as a standalone solution. It can be run in debug mode or can be triggered via a schedule. 
+The pipeline functions as a standalone solution. It can be run in debug mode or can be triggered via a scheduler. 
 
 ### Master Pipeline
 
