@@ -4,64 +4,75 @@ title: Integration in Azure Data Factory using Webservices
 description: automation-of-xu-data-extracts-with-adf-Part 2
 permalink: /:collection/:path
 weight: 80
+author: Yogen Weinreich, Valerie Schipka
 ---
 
 
-### About
-The following article describes how Azure Data Factory can be used to trigger and automate SAP data movements using [Xtract Universal's](https://theobald-software.com/en/xtract-universal/) webservices. <br>
-Target audience: Customers who utilize Azure Data Factory (ADF) as a platform for orchestrating data movement and transformation. <br>
+The following article describes a scenario that uses Azure Data Factory (ADF) to trigger and automate SAP data movements using Xtract Universal's [webservices](https://help.theobald-software.com/en/xtract-universal/execute-and-automate-extractions/call-via-webservice). <br>
+This article targets customers that utilize ADF as a platform for orchestrating data movement and transformation. <br>
 
 {: .box-note}
-**Note:** The following is a suggestion of how a possible orchestration of Xtract Universal extractions from ADF could look like. It describes the basic principles for doing so. It is no best practice document or recommendation.
+**Note:** The depicted scenario is no best practice or recommendation. 
+The following is a suggestion of how an orchestration of Xtract Universal extractions from ADF can look like, see also [Integration in Azure Data Factory using Commandline](adf-integration-using-command-line).
+
 
 ### Prerequisites
 
-- You are familiar with Xtract Universal and have created a number of extractions. Read the [Getting Started with Xtract Univeral](https://help.theobald-software.com/en/xtract-universal/getting-started) help pages if required.
-- You have assigned a [push-destination](https://help.theobald-software.com/en/xtract-universal/destinations#pull-and-push-destinations) like Azure Blob Storage or Azure SQL Server, to the extractions.<br> 
-- You can successfully execute the extraction from a web browser, as described [here](https://help.theobald-software.com/en/xtract-universal/getting-started/run-an-extraction#url-and-command-line-3).
-- You have set up a [self-hosted Integration runtime](https://docs.microsoft.com/EN-US/azure/data-factory/create-self-hosted-integration-runtime#create-a-self-hosted-ir-via-azure-data-factory-ui) on the server Xtract Universal runs on. This ensures that Xtract Universal's web server is accessible from ADF over http(s).   
-- You have access to Azure Data Factory and are familiar with the basic principles of how to build an ADF pipeline.
+- A [self-hosted Integration runtime](https://docs.microsoft.com/EN-US/azure/data-factory/create-self-hosted-integration-runtime#create-a-self-hosted-ir-via-azure-data-factory-ui) is set up on the server Xtract Universal runs on. 
+This ensures that Xtract Universal's web server is accessible from ADF over http(s).   
+- The extraction uses a [push-destination](https://help.theobald-software.com/en/xtract-universal/destinations#pull-and-push-destinations), e.g., Azure Blob Storage or Azure SQL Server.<br> 
+- The extraction runs successfully when called from a web browser, see [Execute and Automate - Call via Webservice](https://help.theobald-software.com/en/xtract-universal/execute-and-automate-extractions/call-via-webservice).
+- Access to Azure Data Factory.
+- Knowledge on how to build ADF pipelines.
 
-### Some basic principles this scenario builds upon
+### Basic Principles
 
-- Xtract Universal offers a Web-API through which various actions can be performed via http(s) calls:
-	- Xtract Universal extractions can be triggered via http(s), see [Call via Webservice](https://help.theobald-software.com/en/xtract-universal/execute-and-automate-extractions/call-via-webservice).
-	- The status of an extraction can be queried using the extraction's name and timestamp, see [Querying the extraction status ](https://help.theobald-software.com/en/xtract-universal/logging/logging-access-via-http#query-the-extraction-status).
-	- The extraction's log can be requested, see [HTTP Log Parameter ](https://help.theobald-software.com/en/xtract-universal/logging/logging-access-via-http#http-log-parameter).
-	- XU extractions can be triggered with an asynchronous mode, see [Options for Calling Extractions](https://help.theobald-software.com/en/xtract-universal/execute-and-automate-extractions/call-via-webservice#options-for-calling-extractions): An http response containing the extraction's timestamp is immediately returned to the caller (ADF pipeline). The extraction keeps on running on the XU side.
-	- A list of XU extractions writing to a specific destination can be requested, see [List of extractions with a specific destination type ](https://help.theobald-software.com/en/xtract-universal/advanced-techniques/metadata-access-via-http-json#list-of-extractions-with-a-specific-destination-type) .
+The depicted scenario builds upon the following basic principles:
+
+- Xtract Universal offers a [Web-API](https://help.theobald-software.com/en/xtract-universal/web-api) through which various actions can be performed via http(s) calls. The depicted scenario uses the web API to:
 - Microsoft's self-hosted Integration runtime enables access to on-prem resources, such as Xtract Universal, from ADF.
-- Microsft's ADF offers a *Web Activity* that allows calling resources (here: XU extraction) via http(s) via a self-hosted Integration runtime.
+- Microsoft's ADF offers a *Web Activity* that allows calling resources via http(s) and a self-hosted Integration runtime.
 
-### General overview
+The depicted scenario uses two ADF pipelines to run extractions from ADF:
+- a [Child Pipeline](#child-pipeline) that extracts data from SAP.
+- a [Master pipeline](#master-pipeline) that executes the child pipeline for different extractions.<br>
 
-The scenario consist of two ADF pipelines, *Child pipeline* and *Master pipeline*: <br>
-#### Child pipeline
-The *Child pipeline* runs an extraction (1) and polls the extraction status in regular intervals (2). In case the extraction status indicates that the extraction failed the extraction's log file is written to an Azure Blob Storage account (3). A follow up event, like sending a notification email, could then be triggered by this *Storage event*.<br>
-The actual data extraction from SAP is done in this pipeline. The pipeline functions by itself, it can be run in debug mode or can be triggered via a schedule. <br>
+### Child Pipeline
 
+Follow the steps below to create a child pipeline that extracts data from SAP:
+
+1. Run an extraction using a web activity (1), see [Web-API - Run Extractions](https://help.theobald-software.com/en/xtract-universal/web-api#run-extractions).<br>
 ![XU_ADF_global_parameter](/img/contents/xu/xu_ADF_2_Child_pipeline.png)
-
+2. Query the extraction status in regular intervals using a web activity (2), see [Web-API - Get Status of an Extraction](https://help.theobald-software.com/en/xtract-universal/web-api#get-status-of-an-extraction). <br>
 ![XU_ADF_global_parameter](/img/contents/xu/xu_ADF_2_Child_pipeline_Check_Status.png)
-
+3. Add a condition that checks the extraction status (3) and executes follow up activities in case the extractions fails.<br>
+Example: When the extraction fails, use a web activity to query the extraction log, see [Web-API - Get Extraction Logs](https://help.theobald-software.com/en/xtract-universal/web-api#get-extraction-logs), and write the logs to an Azure Blob Storage account. 
+A follow up event can then be triggered by the *Storage event*, e.g., sending a notification email.<br>
 ![XU_ADF_global_parameter](/img/contents/xu/xu_ADF_2_Child_pipeline_write_Log.png)
 
-#### Master pipeline
-The purpose of the second pipeline, the *Master pipeline*, is to call the child pipeline multiple times, each time for a different extraction. This allows automatic iteration through all extractions defined in Xtract Universal. For this purpose, the Master pipeline queries a list of all XU extractions (1) and then loops over that list (2). In each loop the name of the current extraction is passed on to the Child pipeline and the Child pipeline is executed for that extraction.
+The pipeline functions as a standalone solution. It can be run in debug mode or can be triggered via a schedule. 
 
+### Master Pipeline
+
+Follow the steps below to create a master pipeline that executes the child pipeline multiple times, each time for a different extraction.
+This allows automatic iteration through all extractions defined in Xtract Universal. 
+
+1. Query a list of extractions (1) using a web activity, see [Web-API - Get Extraction Details](https://help.theobald-software.com/en/xtract-universal/web-api#get-extraction-details).<br>
 ![XU_ADF_global_parameter](/img/contents/xu/xu_ADF_2_Master_pipeline.png)
-
+2. Loop over the list of extractions (2). 
+3. In the loop, pass the name of the current extraction to the *Child pipeline* and execute the *Child pipeline* for that extraction.<br>
 ![XU_ADF_global_parameter](/img/contents/xu/xu_ADF_2_Master_pipeline_ForEachLoop.png)
 
-#### Variables and parameters
+
+### Variables and Parameters
 
 Parameters and variables are used in both pipelines:
-- Parameters provide a constant value that is being used in various activities, so that we don't have to type in the same values again and again.
-- Variables take on dynamic values at runtime and are used to pass on data between different activities or pipelines.
+- Parameters provide constant values that are used in multiple activities. 
+- Variables provide dynamic values at runtime and are used to pass on data between different activities or pipelines.
 
-The following parameters and variables were created:
+The following parameters and variables are used in the depicted scenario:
 
-| Parameter/Variable | Name                         | Data Type | Defined in      | Description                                                                                                                                                                                      |
+| Parameter / Variable| Name                        | Data Type | Defined in      | Description                                                                                                                                                                                      |
 |--------------------|------------------------------|-----------|-----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Parameter          | p_global_XU_HOST             | String    | global          | This parameter contains the base URL of the Xtract Universal webserver, here: `https://MyOnPremXuServer.theobald.local:8165`. The parameter is used in every Web Activity.                       |
 | Variable           | v_XU_extractions_array       | Array     | Master pipeline | This variable stores the list of XU extractions returned by *Web* activity *Get_List_of_XU_extractions*. The variable's value is set in the *Set variable* activity *Set variable_extraction array*. |
@@ -70,10 +81,14 @@ The following parameters and variables were created:
 | Variable           | v_JOB_STATUS                 | String    | Child pipeline  | This variable stores the extraction's run status returned by *Web* activity*CHECK_XU_JOB_STATUS*. The variable’s value is set in the *Set variable* activity *JOB_STATUS*. As long as the variable has the status "Running", the *Until* activity *IS_JOB_RUNNING* is executed. Other values this variable can can have are "FinishedNoErrors" and "FinishedErrors".                                                                                                                                                                                                   |
 | Variable           | v_Log                        | String    | Child pipeline  |This variable stores the extraction's log returned by *Web* activity*XU_Get_Extraction_Log*. The variable’s value is set in the *Set variable* activity *Set_variable_XU_Log*. The value of this variable is appended to the log file in the *Copy data* activity *Copy Extraction Log to Blob*.                                                                                                                                                                                                  |
 
-For more information on using variables when calling extractions, see [Calling Dynamic Extractions with Variables in ADF](./calling-dynamic-extractions-with-variables-in-adf).
+For more information on variables in ADF, see [Calling Dynamic Extractions with Variables in ADF](./calling-dynamic-extractions-with-variables-in-adf).
 
-### JSON templates
+### Download JSON Templates
 
-- <a href="/files/xu/CHILD_pipeline_Execute_single_XU_extraction.json">Download CHILD pipeline as json</a> <br>
-- <a href="/files/xu/MASTER_pipeline_Loop_over_XU_extractions.json">Download MASTER pipeline as json</a>
+- [Download CHILD pipeline as json](/files/xu/CHILD_pipeline_Execute_single_XU_extraction.json){:download="Download CHILD pipeline as json"}
+- [Download MASTER pipeline as json](/files/xu/MASTER_pipeline_Loop_over_XU_extractions.json){:download="Download MASTER pipeline as json"}
 
+*****
+#### Related Links
+- [Calling Dynamic Extractions with Variables in ADF](./calling-dynamic-extractions-with-variables-in-adf).
+- [Integration in Azure Data Factory using Commandline](adf-integration-using-command-line)
