@@ -94,7 +94,7 @@ If the exitcode from xu.exe is 0, the data extraction was successful and the fol
 - the files **stderr.txt** and **stdout.txt** contain the output from xu.exe.<br>
 ![XU data extracts with adf 12](/img/contents/xu/xu-data-extracts-with-adf_12.jpg){:class="img-responsive"} 
 
-The pipeline functions as a standalone solution. It can be run in debug mode or can be triggered via a scheduler. 
+The pipeline can be run in debug mode or can be triggered via a scheduler. 
 
 *****
 #### Related Links
