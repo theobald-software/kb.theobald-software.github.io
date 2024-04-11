@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Integration in Azure Data Factory using Command Line
+title: Integration in Azure Data Factory using Commandline
 description: automation-of-xu-data-extracts-with-adf
 permalink: /:collection/:path
 weight: 75
@@ -32,7 +32,7 @@ For information on how to configure a batch account in the Azure portal, see [Mi
 
 ### Add a Pool to the Azure Batch Account 
 
-When creating a pool from a managed image in Azure, make sure to consider the following:
+When creating a pool from a managed image in the Azure portal, make sure to consider the following:
 
 - The **Pool** provides the computing resources (VM) to execute a task, in this case running the command line tool xu.exe. 
 This is not a very resource-intensive application, but if Azure Batch is used for other processing, choose an appropriately sized resource for your needs.
@@ -53,32 +53,34 @@ In the depicted example, the container is named ‘xuexe’.<br>
 
 ### Create a Linked Service to Azure Batch in ADF
 
-Follow the steps below to create a *Batch Linked Service* and a *Storage Linked Service*:
+Follow the steps below to create a *Batch Linked Service* and a *Storage Linked Service* in Azure Data Factory:
 
-1. In ADF navigate to **Connections > Linked Service** and create a new *Linked Service*. <br>
-2. From the available *Linked Services* options, Select the **Compute** category, then **Azure Batch**.
-3. Specify the **Batch Account**, **Access Key**, **Batch URL** and **Pool name** of the batch account. <br>
-![XU data extracts with adf 08](/img/contents/xu/xu-data-extracts-with-adf_08.jpg){:class="img-responsive" width="600px"}
-4. In **Storage linked service name**, select *New* to create a new linked service.
-5. Reference the storage account that contains the xu.exe file in the linked service. <br>
-![XU data extracts with adf 09](/img/contents/xu/xu-data-extracts-with-adf_09.jpg){:class="img-responsive" width="600px"} 
+1. In ADF, navigate to **Manage > Connections > Linked Services** and click **[New]** (1). The menu "New linked service" opens. <br>
+![azure-data-factory-linked-service](/img/contents/xu/azure-data-factory-linked-service.png)
+2. In the tab *Compute* category, select **Azure Batch** (2) and click **[Continue]** (3).
+3. Specify the **Batch Account**, **Access Key**, **Batch URL** and **Pool name** of the batch account. The data is available in the key settings of the batch account.<br>
+![XU data extracts with adf 08](/img/contents/xu/xu-data-extracts-with-adf_08.jpg){:class="img-responsive"}
+4. In **Storage linked service name**, select *New* to create a new linked service that references the storage account that contains the xu.exe file in the linked service. <br>
+![XU data extracts with adf 09](/img/contents/xu/xu-data-extracts-with-adf_09.jpg){:class="img-responsive"} 
 
 ### Create an ADF Pipeline with Custom Activity
 
 Follow the steps below to create a pipeline that runs extractions:
 
-1. Create a new **Pipeline**.
-2. Drag the **Custom Activity** under *Batch Service* into your pipeline. 
-3. In the *General* tab, provide a name for the activity, e.g., ‘KNA1’. <br>
-4. In the *Azure Batch* tab, select the **Batch Linked Service** from [Create a Linked Service to Azure Batch in ADF](#create-a-linked-service-to-azure-batch-in-adf). <br>
-5. In the *Settings* tab, specify the xu.exe command that you want to execute, e.g., `xu.exe [protocol]://[host or IP address]:[port]/?name=[name of the extraction]` to run an extraction. <br>
-6. Select the **Storage Linked Service** from [Create a Linked Service to Azure Batch in ADF](#create-a-linked-service-to-azure-batch-in-adf) and the container / folder  path where the xu.exe file is located. <br>
+1. Create a new **Pipeline** in ADF.
+2. Drag the **Custom Activity** under *Batch Service* (1) into your pipeline.  <br>
+![azure-data-factory-pipeline-general](/img/contents/xu/azure-data-factory-pipeline-general.png){:class="img-responsive"} 
+3. In the *General* tab, provide a name for the activity, e.g., ‘KNA1’ (2).
+4. In the *Azure Batch* tab, reference the *Batch Linked Service* from [Create a Linked Service to Azure Batch in ADF](#create-a-linked-service-to-azure-batch-in-adf). <br>
+5. In the *Settings* tab, specify the xu.exe command that you want to execute (3), e.g., `xu.exe [protocol]://[host or IP address]:[port]/?name=[name of the extraction]` to run an extraction.
+![azure-data-factory-pipeline-settings](/img/contents/xu/azure-data-factory-pipeline-settings.png){:class="img-responsive"} 
+6. Reference the *Storage Linked Service* from [Create a Linked Service to Azure Batch in ADF](#create-a-linked-service-to-azure-batch-in-adf) in the **Advanced Settings** (4).
+7. Specify the container / folder  path where the xu.exe file is located in the Azure storage account (5). <br>
 ![XU data extracts with adf 10](/img/contents/xu/xu-data-extracts-with-adf_10.jpg){:class="img-responsive" width="800px"} 
-7. Click **[Debug]** to test the execution of the SAP data extract. <br>
-You can review the input and output of the activity, including the exitcode from xu.exe, e.g., 0 = successful.<br>
-![XU data extracts with adf 11](/img/contents/xu/xu-data-extracts-with-adf_11.jpg){:class="img-responsive"} 
+8. Click **[Debug]** (6) to testrun the SAP data extraction. <br>
+In the *Output* tab, review the output of the activity. If the exitcode from xu.exe is 0, the data extraction was successful.
 
-If the extraction is successful, the following folders and files are available in the storage account:
+When the extraction is successful, the following folders and files are available in the Azure storage account:
 - the storage account contains a folder **adfjobs**.
 - for every pipeline execution, there is a subfolder with log information.
 - the files **stderr.txt** and **stdout.txt** contain the output from xu.exe.<br>
