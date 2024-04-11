@@ -4,10 +4,15 @@ title: Integration in Azure Data Factory using Commandline
 description: automation-of-xu-data-extracts-with-adf
 permalink: /:collection/:path
 weight: 75
+author: Christoph Schuler, Valerie Schipka
 ---
 
-The following article shows how to use Azure Data Factory (ADF) to trigger and automate SAP data movements using Xtract Universal's [command line tool](https://help.theobald-software.com/en/xtract-universal/execute-and-automate-extractions/call-via-commandline).
+The following article describes a scenario that uses Azure Data Factory (ADF) to trigger and automate SAP data movements using Xtract Universal's [command line tool](https://help.theobald-software.com/en/xtract-universal/execute-and-automate-extractions/call-via-commandline).
 This article targets customers that utilize ADF as a platform for orchestrating data movement and transformation. <br>
+
+{: .box-note}
+**Note:** The depicted scenario is no best practice or recommendation. 
+The following is a suggestion of how an orchestration of Xtract Universal extractions from ADF can look like, see also [Integration in Azure Data Factory using Webservices](adf-integration-using-webservices).
 
 ### Prerequisites
 
@@ -15,7 +20,7 @@ This article targets customers that utilize ADF as a platform for orchestrating 
 - The extraction uses a [push-destination](https://help.theobald-software.com/en/xtract-universal/destinations#pull-and-push-destinations), e.g., Azure Blob Storage or Azure SQL Server.<br> 
 - The extraction runs successfully when called from a remote machine via commandline, see [Execute and Automate - Call via Commandline](https://help.theobald-software.com/en/xtract-universal/execute-and-automate-extractions/call-via-commandline).
 This ensures that the XU server is reachable. 
-- Access to Azure Data Factory.
+- Access to the Azure portal and Azure Data Factory.
 - Knowledge on how to build ADF pipelines.
 
 ### Configure an Azure Batch Account
@@ -32,24 +37,28 @@ For information on how to configure a batch account in the Azure portal, see [Mi
 
 ### Add a Pool to the Azure Batch Account 
 
+The pool provides the computing resources (VM) to execute a task, in this case running the commandline tool xu.exe. 
 When creating a pool from a managed image in the Azure portal, make sure to consider the following:
 
-- The **Pool** provides the computing resources (VM) to execute a task, in this case running the command line tool xu.exe. 
-This is not a very resource-intensive application, but if Azure Batch is used for other processing, choose an appropriately sized resource for your needs.
+- The commandline tool xu.exe is not a very resource-intensive application, but if Azure Batch is used for other processing, choose an appropriately sized resource for your needs.
 Note that there is an Azure cost associated with the selected Pool.<br>
 The depicted example uses a Window Server 2019 Datacenter with small disk configuration.<br>
 ![XU data extracts with adf 05](/img/contents/xu/xu-data-extracts-with-adf_05.jpg){:class="img-responsive"}
-- When creating the **Pool**, specify the **Target dedicated nodes** as at least 1.<br>
-![XU data extracts with adf 06](/img/contents/xu/xu-data-extracts-with-adf_06.jpg){:class="img-responsive" width="600px"}
+- When creating the pool, set the **Scale** property **Target dedicated nodes** to at least 1.
 
 For information on how to create a pool, see [Microsoft Documentation: Use a managed image to create a custom image pool](https://docs.microsoft.com/en-us/azure/batch/batch-custom-images).
 
 ### Upload xu.exe to Storage Account
 
-1. Create a container for the Xtract Universal command line tool in the storage account associated with your Azure Batch account.
+Follow the steps below to make the command line tool xu.exe available in Azure:
+
+1. Create a container for the Xtract Universal commandline tool in the Azure storage account associated with the Azure Batch account.
 In the depicted example, the container is named ‘xuexe’.<br>
 ![XU data extracts with adf 07](/img/contents/xu/xu-data-extracts-with-adf_07.jpg){:class="img-responsive"}
-2. Upload the files xu.exe and xu.exe.config from your Xtract Universal server installation to the storage account. The files are located in `C:\Program Files\XtractUniversal`.
+2. Upload the files xu.exe and xu.exe.config from the Xtract Universal server installation to the Azure storage account. The files are located in `C:\Program Files\XtractUniversal`.
+
+{: .box-note }
+**Note:** Do not confuse the xu.exe.config file with the xu.config file.
 
 ### Create a Linked Service to Azure Batch in ADF
 
@@ -68,21 +77,20 @@ Follow the steps below to create a *Batch Linked Service* and a *Storage Linked 
 Follow the steps below to create a pipeline that runs extractions:
 
 1. Create a new **Pipeline** in ADF.
-2. Drag the **Custom Activity** under *Batch Service* (1) into your pipeline.  <br>
+2. Drag the **Custom Activity** under *Batch Service* into your pipeline.  <br>
 ![azure-data-factory-pipeline-general](/img/contents/xu/azure-data-factory-pipeline-general.png){:class="img-responsive"} 
-3. In the *General* tab, provide a name for the activity, e.g., ‘KNA1’ (2).
+3. In the *General* tab, provide a name for the activity, e.g., ‘KNA1’ (1).
 4. In the *Azure Batch* tab, reference the *Batch Linked Service* from [Create a Linked Service to Azure Batch in ADF](#create-a-linked-service-to-azure-batch-in-adf). <br>
-5. In the *Settings* tab, specify the xu.exe command that you want to execute (3), e.g., `xu.exe [protocol]://[host or IP address]:[port]/?name=[name of the extraction]` to run an extraction.
+5. In the *Settings* tab, specify the xu.exe command that you want to execute (2), e.g., `xu.exe [protocol]://[host or IP address]:[port]/?name=[name of the extraction]` to run an extraction.
 ![azure-data-factory-pipeline-settings](/img/contents/xu/azure-data-factory-pipeline-settings.png){:class="img-responsive"} 
-6. Reference the *Storage Linked Service* from [Create a Linked Service to Azure Batch in ADF](#create-a-linked-service-to-azure-batch-in-adf) in the **Advanced Settings** (4).
-7. Specify the container / folder  path where the xu.exe file is located in the Azure storage account (5). <br>
-![XU data extracts with adf 10](/img/contents/xu/xu-data-extracts-with-adf_10.jpg){:class="img-responsive" width="800px"} 
-8. Click **[Debug]** (6) to testrun the SAP data extraction. <br>
-In the *Output* tab, review the output of the activity. If the exitcode from xu.exe is 0, the data extraction was successful.
+6. Reference the *Storage Linked Service* from [Create a Linked Service to Azure Batch in ADF](#create-a-linked-service-to-azure-batch-in-adf) in the **Advanced Settings** (3).
+7. Specify the container / folder  path where the xu.exe file is located in the Azure storage account (4).
+8. Click **[Debug]** to testrun the SAP data extraction.
 
-When the extraction is successful, the following folders and files are available in the Azure storage account:
-- the storage account contains a folder **adfjobs**.
-- for every pipeline execution, there is a subfolder with log information.
+When the activity is finished, review the output of the activity in the *Output* tab.
+If the exitcode from xu.exe is 0, the data extraction was successful and the following folders / files are available in the Azure storage account:<br>
+- the storage account contains a folder **adfjobs**.<br>
+- for every pipeline execution, there is a subfolder with log information.<br>
 - the files **stderr.txt** and **stdout.txt** contain the output from xu.exe.<br>
 ![XU data extracts with adf 12](/img/contents/xu/xu-data-extracts-with-adf_12.jpg){:class="img-responsive"} 
 
