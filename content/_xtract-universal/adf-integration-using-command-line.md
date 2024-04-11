@@ -41,7 +41,7 @@ The pool provides the computing resources (VM) to execute a task, in this case r
 When creating a pool from a managed image in the Azure portal, make sure to consider the following:
 
 - The commandline tool xu.exe is not a very resource-intensive application, but if Azure Batch is used for other processing, choose an appropriately sized resource for your needs.
-Note that there is an Azure cost associated with the selected Pool.<br>
+Note that there is an Azure cost associated with the selected Pool.
 The depicted example uses a Window Server 2019 Datacenter with small disk configuration.<br>
 ![XU data extracts with adf 05](/img/contents/xu/xu-data-extracts-with-adf_05.jpg){:class="img-responsive"}
 - When creating the pool, set the **Scale** property **Target dedicated nodes** to at least 1.
