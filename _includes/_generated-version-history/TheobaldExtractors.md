@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.53.17 [L]|2024-04-18|BW Cube|MDX: Members named "all" are no longer removed from slicing|
 |1.53.16 [L]|2024-04-16|Report|Fixed a visual bug where when scrolling the selection screen some parameters would have values from other parameters displayed. Fixed a bug where double clicking the 'Load Preview' button would cause an error.|
 |1.53.14 [L]|2024-04-10|TableCDC|Fixed a bug that caused faulty log table metadata when decimal places of a source table primary key type was not 0|
 |1.53.13 [L]|2024-04-02|BW Cube|BICS: Released as GA, no longer beta|
