@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.4.4 [L]|2024-04-22|Server|Fixed a bug where the Power BI Plugin would erroneously receive dummy data on data load. Updating the plugin is NOT required.|
 |6.4.3 [L]|2024-04-22|Destinations|Fixed a bug where generating a Qlik Sense script failed.|
 |6.4.2 [L]|2024-04-19|BAPI|Add support for S4H cloud systems|
 |[6.4.1 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-6.4.1.html)|2024-04-11|Destinations|Json Destination: Implement file split functionality.([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-6.4.1.html))|
