@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.4.3 [L]|2024-04-22|Destinations|Fixed a bug where generating a Qlik Sense script failed.|
 |6.4.2 [L]|2024-04-19|BAPI|Add support for S4H cloud systems|
 |[6.4.1 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-6.4.1.html)|2024-04-11|Destinations|Json Destination: Implement file split functionality.([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-6.4.1.html))|
 |[6.4.0 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-6.4.0.html)|2024-04-11|Server|Introduce new endpoint to run/start extractions ([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-6.4.0.html))|
