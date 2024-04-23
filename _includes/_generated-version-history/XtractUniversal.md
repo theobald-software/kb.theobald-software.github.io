@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.4.5 [M]|2024-04-23|Server|Hotfix: Fixed a bug which can cause the extraction request to fail, when the client does not supply a user-agent header in certain circumstances. The bug was introduced in 6.4.4|
 |6.4.4 [L]|2024-04-22|Server|Fixed a bug where the Power BI Plugin would erroneously receive dummy data on data load. Updating the plugin is NOT required.|
 |6.4.3 [L]|2024-04-22|Destinations|Fixed a bug where generating a Qlik Sense script failed.|
 |6.4.2 [L]|2024-04-19|BAPI|Add support for S4H cloud systems|
