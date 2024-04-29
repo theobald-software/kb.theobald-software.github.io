@@ -1,6 +1,7 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
-|4.2.1 [L]|2024-04-29|General|Rpc Refresh Metadata (Table, Bapi)|
+|4.2.2 [L]|2024-04-29|General|Added extraction timestamp on response header upon runtime server error|
+|4.2.1 [L]|2024-04-29|General|Added an RPC exchange for refreshing the metadata (table, BAPI).|
 |[4.2.0 [L]](https://kb.theobald-software.com/release-notes/TheobaldServer-4.2.0.html)|2024-04-11|General|Implement subdirectory support for the run endpoint base ([Release note](https://kb.theobald-software.com/release-notes/TheobaldServer-4.2.0.html))|
 |4.1.3 [L]|2024-02-28|General|Fixed a bug where retrying to write the extractions status information would abort preemptively.|
 |4.1.2 [L]|2024-02-19|General|Fixed a bug where cloning an extraction would not be possible due to the required item privilege being too high.|
