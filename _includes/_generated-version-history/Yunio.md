@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.32.8 [L]|2024-04-29|Designer|Added a feature to refresh service metadata (table and function).|
 |1.32.7 [L]|2024-04-04|Designer|Added join functionality for tables|
 |1.32.6 [L]|2024-02-12|General|Removed "Preview" status from the Report service type|
 |1.32.5 [L]|2024-02-09|Designer|Run dialog supports showing the results as a table for table services.|
