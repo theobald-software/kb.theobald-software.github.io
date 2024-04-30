@@ -29,9 +29,10 @@ Follow the steps below to create a client PSE file that trusts the server certif
 4. Use the sapgenpse tool to create a client PSE file: 
 
 	```
-	sapgenpse.exe gen_pse -p <client.pse> -v [Distinguished name]
+	sapgenpse.exe gen_pse -p client.pse -v [Distinguished name]
 	```
 	Replace `[Distinguished name]` with the distinguished name of the server that runs the Xtract product, e.g., `"CN=COMPUTER.theobald.local, C=DE, S=BW, O=TS, OU=DEV"`. 
+	Optionally replace `client.pse` with a custom file name for the .pse file. 
 	The tool creates its own repository in a standard path, unless the path is changed by the environment variable SECUDIR or by specifying an absolute path. <br>
 	**Warning! The PSE must be created without a password/pin, otherwise reading is not possible.**  
 	
