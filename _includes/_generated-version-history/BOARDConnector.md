@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.3.1 [L]|2024-04-30|BAPI|Add support for S4H cloud systems|
 |[6.3.0 [L]](https://kb.theobald-software.com/release-notes/BOARDConnector-6.3.0.html)|2024-04-11|Server|Introduce new endpoint to run/start extractions ([Release note](https://kb.theobald-software.com/release-notes/BOARDConnector-6.3.0.html))|
 |6.2.3 [L]|2024-02-27|BW Cube|Fixed a bug in the config converter that caused broken key figures and custom column order for extractions originally created in version 2.11.0 and before.|
 |6.2.2 [M]|2024-02-19|Server|Hotfix: Fixed the format for `duration` and `timestamp` properties in the config and logs API. The issues were introduced in 6.2.|
