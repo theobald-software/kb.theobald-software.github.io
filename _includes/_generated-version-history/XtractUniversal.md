@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.4.7 [L]|2024-05-02|Designer|Fixed a bug where extractions could not be aborted in the run dialog when using windows AD authentication|
 |6.4.6 [L]|2024-04-29|Designer|Fixed a bug on the run window, which would not show logs when extraction failed before the prepare results step|
 |6.4.5 [M]|2024-04-23|Server|Hotfix: Fixed a bug which can cause the extraction request to fail, when the client does not supply a user-agent header in certain circumstances. The bug was introduced in 6.4.4|
 |6.4.4 [L]|2024-04-22|Server|Fixed a bug where the Power BI Plugin would erroneously receive dummy data on data load. Updating the plugin is NOT required.|
