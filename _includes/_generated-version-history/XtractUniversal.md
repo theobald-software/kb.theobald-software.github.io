@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.4.9 [L]|2024-05-03|Designer|Fixed a bug that caused errors when using the run dialog to run extractions with the "Request SAP credentials from caller when running extractions" option enabled on the source.|
 |6.4.8 [L]|2024-05-03|General|Fixed a bug where xu.exe was not able to handle URIs for running an extraction correctly. The issue was introduced in 6.4.0.|
 |6.4.7 [L]|2024-05-02|Designer|Fixed a bug where extractions could not be aborted in the run dialog when using windows AD authentication|
 |6.4.6 [L]|2024-04-29|Designer|Fixed a bug on the run window, which would not show logs when extraction failed before the prepare results step|
