@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.3.0 [M]|2024-05-06|General|Adjustments for new parameter system|
 |4.2.2 [L]|2024-04-29|General|Added extraction timestamp on response header upon runtime server error|
 |4.2.1 [L]|2024-04-29|General|Added an RPC exchange for refreshing the metadata (table, BAPI).|
 |[4.2.0 [L]](https://kb.theobald-software.com/release-notes/TheobaldServer-4.2.0.html)|2024-04-11|General|Implement subdirectory support for the run endpoint base ([Release note](https://kb.theobald-software.com/release-notes/TheobaldServer-4.2.0.html))|
