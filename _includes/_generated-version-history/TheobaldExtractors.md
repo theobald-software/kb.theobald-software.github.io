@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.0.1 [L]|2024-05-06|BW Cube|Add backward-compatibility for dimension on columns feature|
 |[2.0.0 [M]](https://kb.theobald-software.com/release-notes/TheobaldExtractors-2.0.0.html)|2024-05-06|General|New selection & parameter system([Release note](https://kb.theobald-software.com/release-notes/TheobaldExtractors-2.0.0.html))|
 |1.53.18 [H]|2024-04-25|TableCDC|Delta extractions now only fetch data up to the maximum log table sequence number at the start of the extraction to avoid cursor concurrency conflicts with simultaneous inserts. Update of /THEO/CDC required.|
 |1.53.17 [L]|2024-04-18|BW Cube|MDX: Members named "all" are no longer removed from slicing|
