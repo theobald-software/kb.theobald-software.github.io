@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.21.0 [M]|2024-05-06|General|Use new parameter system|
 |1.20.6 [L]|2024-03-25|Designer|Added refresh metadata functionality in the Table tool.|
 |1.20.5 [L]|2023-09-28|Designer|Enable f1 hotkey to link window specific online help entry.|
 |1.20.4 [M]|2023-09-27|General|Fixed a bug that caused errors on the Alteryx Server when DCM connections were used (Bug introduced in 1.20.3)|
