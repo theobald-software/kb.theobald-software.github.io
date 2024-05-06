@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|7.5.0 [M]|2024-05-06|General|Use new parameter system|
 |7.4.15 [L]|2024-04-08|DeltaQ|Fixed a bug to read variables on check and activation operations - introduced in 7.4.3|
 |7.4.14 [L]|2024-03-19|General|Fixed an issue that caused errors while loading dependencies on SQL Server instances|
 |7.4.13 [L]|2024-01-29|DeltaQ|Fixed a bug introduced in version 7.4.10, which crashed VS on new extraction creation.|
