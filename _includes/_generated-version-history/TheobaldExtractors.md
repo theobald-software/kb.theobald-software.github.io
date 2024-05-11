@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.0.3 [L]|2024-05-11|General|Reflect user changes in parameter default values|
 |2.0.2 [L]|2024-05-06|BW Cube|Fix dimension on columns deserialization|
 |2.0.1 [L]|2024-05-06|BW Cube|Add backward-compatibility for dimension on columns feature|
 |[2.0.0 [M]](https://kb.theobald-software.com/release-notes/TheobaldExtractors-2.0.0.html)|2024-05-06|General|New selection & parameter system([Release note](https://kb.theobald-software.com/release-notes/TheobaldExtractors-2.0.0.html))|
