@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.4.1 [L]|2024-05-11|Server|Parameter HTTP API: Respect user changes in default values (was broken since 6.4)|
 |6.4.0 [M]|2024-05-06|General|Use new parameter system|
 |6.3.1 [L]|2024-04-30|BAPI|Add support for S4H cloud systems|
 |[6.3.0 [L]](https://kb.theobald-software.com/release-notes/BOARDConnector-6.3.0.html)|2024-04-11|Server|Introduce new endpoint to run/start extractions ([Release note](https://kb.theobald-software.com/release-notes/BOARDConnector-6.3.0.html))|
