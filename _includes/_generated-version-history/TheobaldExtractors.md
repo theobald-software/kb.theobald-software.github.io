@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.0.5 [L]|2024-05-13|ODP|Fixed metadata and data retrieval for DF16_DEC and DF34_DEC|
 |2.0.4 [L]|2024-05-13|Table|Fixed a bug that caused refresh metadata to not work properly |
 |2.0.3 [L]|2024-05-11|General|Reflect user changes in parameter default values|
 |2.0.2 [L]|2024-05-06|BW Cube|Fix dimension on columns deserialization|
