@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.5.2 [L]|2024-05-14|ODP|Fixed metadata and data retrieval for DF16_DEC and DF34_DEC|
 |6.5.1 [L]|2024-05-11|Server|Parameter HTTP API: Respect user changes in default values (was broken since 6.5)|
 |6.5.0 [M]|2024-05-06|General|Use new parameter system|
 |6.4.9 [L]|2024-05-03|Designer|Fixed a bug that caused errors when using the run dialog to run extractions with the "Request SAP credentials from caller when running extractions" option enabled on the source.|
