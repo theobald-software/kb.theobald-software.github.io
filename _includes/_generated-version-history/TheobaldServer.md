@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.3.2 [L]|2024-05-14|General|Fixed a race condition which would not handle over server side errors|
 |4.3.1 [L]|2024-05-07|General|Transaction: Add support for checkboxes|
 |4.3.0 [M]|2024-05-06|General|Adjustments for new parameter system|
 |4.2.2 [L]|2024-04-29|General|Added extraction timestamp on response header upon runtime server error|
