@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.1.0 [L]|2024-05-17|TableCDC|Released Monitoring Feature for Log Tables and Triggers. Update of /THEO/CDC* package required.|
 |2.0.6 [M]|2024-05-13|Table|Improved table lookup window to not allow certain characters that would otherwise lead to errors on lookup.|
 |2.0.5 [L]|2024-05-13|ODP|Fixed metadata and data retrieval for DF16_DEC and DF34_DEC|
 |2.0.4 [L]|2024-05-13|Table|Fixed a bug that caused refresh metadata to not work properly |
