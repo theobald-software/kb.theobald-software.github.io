@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.1.3 [L]|2024-05-17|BW Cube|MDX: Fix column order of legacy extractions with key figures on rows|
 |2.1.2 [L]|2024-05-17|BW Cube|MDX: Support legacy extractions with key figures on rows|
 |2.1.1 [L]|2024-05-17|DeltaQ|Fixed a bug which would display only data sources using the language set in the connection (introduced in 1.47.0)|
 |2.1.0 [L]|2024-05-17|TableCDC|Released Monitoring Feature for Log Tables and Triggers. Update of /THEO/CDC* package required.|
