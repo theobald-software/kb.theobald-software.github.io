@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|7.6.0 [L]|2024-05-17|TableCDC|Released Monitoring Feature for Log Tables and Triggers. Update of /THEO/CDC* package required.|
 |7.5.1 [L]|2024-05-14|ODP|Fixed metadata and data retrieval for DF16_DEC and DF34_DEC|
 |7.5.0 [M]|2024-05-06|General|Use new parameter system|
 |7.4.15 [L]|2024-04-08|DeltaQ|Fixed a bug to read variables on check and activation operations - introduced in 7.4.3|
