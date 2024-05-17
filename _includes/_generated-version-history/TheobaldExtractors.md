@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.1.5 [L]|2024-05-17|BAPI|Fix non-structure table line types|
 |2.1.4 [L]|2024-05-17|General|Fix deletion of renamed parameters|
 |2.1.3 [L]|2024-05-17|BW Cube|MDX: Fix column order of legacy extractions with key figures on rows|
 |2.1.2 [L]|2024-05-17|BW Cube|MDX: Support legacy extractions with key figures on rows|
