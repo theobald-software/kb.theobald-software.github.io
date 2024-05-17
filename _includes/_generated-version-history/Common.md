@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.23.20 [L]|2024-05-17|General|Allow empty names in NamedList|
 |2.23.19 [L]|2024-04-22|General|Unicode control characters are now deleted before serializing log messages|
 |2.23.18 [L]|2024-02-15|WPF|Added input dialog|
 |2.23.17 [L]|2024-01-26|Licensing|Removed internal references of defunct products (XtractPPV, XtractQV, XtractRS) and destinations (AlteryxConnect, GoodData, MicroStrategy, ODataAtom, PowerBI, TableauConnector, Teradata, Vertica) from code base|
