@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.7.1 [L]|2024-05-24|Designer|Fixed a bug that would show incorrect information regarding extractions last run|
 |6.7.0 [L]|2024-05-21|Designer|Added extraction subdirectories support|
 |6.6.1 [L]|2024-05-17|BW Cube|Fix for config converter not converting custom column order in BW Cube extractions.|
 |6.6.0 [L]|2024-05-17|TableCDC|Released Monitoring Feature for Log Tables and Triggers. Update of /THEO/CDC* package required.|
