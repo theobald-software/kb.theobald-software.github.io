@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|7.6.2 [L]|2024-05-29|DeltaQ|Fixed legacy field length reading for systems that have changed between non-Unicode and Unicode|
 |7.6.1 [L]|2024-05-17|BAPI|Remove deselected exports from output|
 |7.6.0 [L]|2024-05-17|TableCDC|Released Monitoring Feature for Log Tables and Triggers. Update of /THEO/CDC* package required.|
 |7.5.1 [L]|2024-05-14|ODP|Fixed metadata and data retrieval for DF16_DEC and DF34_DEC|
