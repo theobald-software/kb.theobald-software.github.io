@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|[2.1.8 [L]](https://kb.theobald-software.com/release-notes/TheobaldExtractors-2.1.8.html)|2024-05-29|TableCDC|Result sorting now takes place on SAP side. Removed support for Z_THEO_READ_TABLE. Check release notes for details([Release note](https://kb.theobald-software.com/release-notes/TheobaldExtractors-2.1.8.html))|
 |2.1.7 [L]|2024-05-24|BW Cube|Fixed a bug where clicking on "Load live preview" multiple times would lead to errors|
 |2.1.6 [L]|2024-05-21|General|Fixed a bug where refreshing the metadata without any objects selected for extraction would cause an unexpected error.|
 |2.1.5 [L]|2024-05-17|BAPI|Fix non-structure table line types|
