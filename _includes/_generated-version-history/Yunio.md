@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.32.13 [L]|2024-05-30|Designer|Limiting arrays in the run dialog.|
 |1.32.12 [L]|2024-05-27|Designer|Remove run cache on service change.|
 |1.32.11 [L]|2024-05-24|Designer|Run dialog: Improve error message for HTTP status 500|
 |1.32.10 [L]|2024-05-07|Designer|Transaction: Add support for checkboxes|
