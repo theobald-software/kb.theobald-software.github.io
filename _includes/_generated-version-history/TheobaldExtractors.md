@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.1.9 [L]|2024-06-03|BAPI|GUI now allows assignment of output runtime parameters to export parameters|
 |[2.1.8 [L]](https://kb.theobald-software.com/release-notes/TheobaldExtractors-2.1.8.html)|2024-05-29|TableCDC|Result sorting now takes place on SAP side. Removed support for Z_THEO_READ_TABLE. Check release notes for details([Release note](https://kb.theobald-software.com/release-notes/TheobaldExtractors-2.1.8.html))|
 |2.1.7 [L]|2024-05-24|BW Cube|Fixed a bug where clicking on "Load live preview" multiple times would lead to errors|
 |2.1.6 [L]|2024-05-21|General|Fixed a bug where refreshing the metadata without any objects selected for extraction would cause an unexpected error.|
@@ -60,7 +61,7 @@
 |1.52.3 [M]|2023-12-19|TableCDC|Added support for SAP Max DB databases|
 |1.52.2 [L]|2023-12-13|TableCDC|Fixed a bug that caused Delta extractions to fail if source table was client-independent|
 |1.52.1 [L]|2023-12-08|TableCDC|Create table statement will now be logged in CDC initialization step.|
-|[1.52.0 [H]](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.52.0.html)|2023-12-06|TableCDC|Released /THEO/CDC package. **Breaking changes** - Please see release notes for details.([Release note](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.52.0.html))|
+|[1.52.0 [H]](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.52.0.html)|2023-12-06|TableCDC|Released /THEO/CDC package, see release notes for details.([Release note](https://kb.theobald-software.com/release-notes/TheobaldExtractors-1.52.0.html))|
 |1.51.0 [L]|2023-12-04|General|Added the result columns custom order implementation|
 |1.50.9 [L]|2023-11-24|TableCDC|Fixed a bug where Z_THEO_READ_TABLE could not be used as fallback to /THEO/READ_TABLE|
 |1.50.8 [L]|2023-11-23|Hierarchy|Added /THEO/READ_TABLE as most preferred internal table extraction function module|
