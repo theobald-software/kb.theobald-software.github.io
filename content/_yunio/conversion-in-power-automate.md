@@ -6,6 +6,11 @@ permalink: /:collection/:path
 weight: 10
 ---
 
+{: .box-warning}
+**Warning: Deprecated articles** <br>
+You are using the old version of the knowledge base for yunIO.<br>
+Make sure to use the samples within the new [HelpCenter for yunIO](https://helpcenter.theobald-software.com/yunio/knowledge-base).
+
 This article offers conversion tips and code templates for working with yunIO in Power Automate.
 
 ### Leading Zeros

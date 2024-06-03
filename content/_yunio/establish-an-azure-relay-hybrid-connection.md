@@ -7,6 +7,11 @@ weight: 5
 progressstate: 5
 ---
 
+{: .box-warning}
+**Warning: Deprecated articles** <br>
+You are using the old version of the knowledge base for yunIO.<br>
+Make sure to use the samples within the new [HelpCenter for yunIO](https://helpcenter.theobald-software.com/yunio/knowledge-base).
+
 
 The following article shows how to set up the Azure Relay Hybrid Connection in yunIO.<br>
 An Azure Relay Hybrid Connection can be used to make yunIO services accessible to applications running in the Azure cloud. 

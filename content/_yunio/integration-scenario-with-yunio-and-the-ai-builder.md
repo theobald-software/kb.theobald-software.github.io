@@ -6,6 +6,11 @@ permalink: /:collection/:path
 weight: 4
 ---
 
+{: .box-warning}
+**Warning: Deprecated articles** <br>
+You are using the old version of the knowledge base for yunIO.<br>
+Make sure to use the samples within the new [HelpCenter for yunIO](https://helpcenter.theobald-software.com/yunio/knowledge-base).
+
 The following article shows how to integrate yunIO with Microsoft Power Automate and the [Microsoft AI Builder](https://docs.microsoft.com/en-gb/ai-builder/overview).<br>
 AI Builder enables the usage of artificial intelligence to automate processes in Power Apps and Power Automate.
 Microsoft offers pre-built AI models to start using the tool without training the AI model first.

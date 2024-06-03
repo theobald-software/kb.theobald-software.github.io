@@ -7,6 +7,11 @@ weight: 100
 progressstate: 25
 ---
 
+{: .box-warning}
+**Warning: Deprecated articles** <br>
+You are using the old version of the knowledge base for yunIO.<br>
+Make sure to use the samples within the new [HelpCenter for yunIO](https://helpcenter.theobald-software.com/yunio/knowledge-base).
+
 The following article shows how to install an X.509 certificate for Transport encryption.<br>
 The installation of an X.509 certificate is required to use [Transport Layer Security (TLS)](https://learn.microsoft.com/en-us/windows/win32/secauthn/transport-layer-security-protocol) and secure authentication with yunIO.
 

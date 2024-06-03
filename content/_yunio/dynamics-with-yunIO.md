@@ -6,6 +6,11 @@ permalink: /:collection/:path
 weight: 45
 ---
 
+{: .box-warning}
+**Warning: Deprecated articles** <br>
+You are using the old version of the knowledge base for yunIO.<br>
+Make sure to use the samples within the new [HelpCenter for yunIO](https://helpcenter.theobald-software.com/yunio/knowledge-base).
+
 This article shows how to synchronize Dynamics 365 Business Central with SAP.<br>
 In the following scenario, data from Dynamics 365 Business Central is used to automatically create customer master data in SAP. 
 The newly created SAP customer number is then written back to Dynamics 365 Business Central.

@@ -6,6 +6,11 @@ permalink: /:collection/:path
 weight: 50
 ---
 
+{: .box-warning}
+**Warning: Deprecated articles** <br>
+You are using the old version of the knowledge base for yunIO.<br>
+Make sure to use the samples within the new [HelpCenter for yunIO](https://helpcenter.theobald-software.com/yunio/knowledge-base).
+
 The following article shows how to use the integration type *Transaction* with transaction IE01 in yunIO.<br>
 The depicted example application uses transaction IE01 to create new equipment in SAP.
 For more information on creating equipment, see [SAP Help: Creating a Piece of Equipment](https://help.sap.com/viewer/f0e0dd7850e64947aa66a647f8d3af09/6.18.latest/en-US/bc78bb53707db44ce10000000a174cb4.html).

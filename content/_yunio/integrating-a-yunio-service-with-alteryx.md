@@ -7,6 +7,11 @@ weight: 4
 progressstate: 5
 ---
 
+{: .box-warning}
+**Warning: Deprecated articles** <br>
+You are using the old version of the knowledge base for yunIO.<br>
+Make sure to use the samples within the new [HelpCenter for yunIO](https://helpcenter.theobald-software.com/yunio/knowledge-base).
+
 
 This article shows how to integrate a yunIO service with Alteryx.<br>
 Alteryx is a software platform, which allows accessing, cleansing, testing, combining and analyzing output data. 

@@ -6,6 +6,11 @@ permalink: /:collection/:path
 weight: 15
 ---
 
+{: .box-warning}
+**Warning: Deprecated articles** <br>
+You are using the old version of the knowledge base for yunIO.<br>
+Make sure to use the samples within the new [HelpCenter for yunIO](https://helpcenter.theobald-software.com/yunio/knowledge-base).
+
 The following article shows how to integrate yunIO services with Microsoft Power Apps.<br>
 Power Apps is a cloud-based platform to build custom business applications based on different data sources.
 For more Information on Power Apps, see [Microsoft Power Apps Documentation](https://docs.microsoft.com/en-us/powerapps/).

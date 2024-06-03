@@ -6,6 +6,11 @@ permalink: /:collection/:path
 weight: 1
 ---
 
+{: .box-warning}
+**Warning: Deprecated articles** <br>
+You are using the old version of the knowledge base for yunIO.<br>
+Make sure to use the samples within the new [HelpCenter for yunIO](https://helpcenter.theobald-software.com/yunio/knowledge-base).
+
 The following article shows how to run a yunIO service in Postman.
 
 Postman is an API platform for building and using APIs. You can use Postmn as a Desktop App or in your browser.

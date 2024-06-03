@@ -6,6 +6,11 @@ permalink: /:collection/:path
 weight: 55
 ---
 
+{: .box-warning}
+**Warning: Deprecated articles** <br>
+You are using the old version of the knowledge base for yunIO.<br>
+Make sure to use the samples within the new [HelpCenter for yunIO](https://helpcenter.theobald-software.com/yunio/knowledge-base).
+
 The following article shows how to use the integration type *Transaction* with transaction PA40 in yunIO.<br>
 The depicted example application uses the transaction PA40 to define personnel actions in SAP.
 

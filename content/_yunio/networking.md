@@ -7,6 +7,11 @@ weight: 95
 progressstate: 25
 ---
 
+{: .box-warning}
+**Warning: Deprecated articles** <br>
+You are using the old version of the knowledge base for yunIO.<br>
+Make sure to use the samples within the new [HelpCenter for yunIO](https://helpcenter.theobald-software.com/yunio/knowledge-base).
+
 
 When a call to a yunIO REST service is made, there are several ways a request and response can travel through networks from the caller to the SAP system and back. <br>
 This article provides examples of networking scenarios between a service caller and SAP.<br>

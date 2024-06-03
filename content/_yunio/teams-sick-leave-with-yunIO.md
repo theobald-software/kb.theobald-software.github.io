@@ -6,6 +6,11 @@ permalink: /:collection/:path
 weight: 46
 ---
 
+{: .box-warning}
+**Warning: Deprecated articles** <br>
+You are using the old version of the knowledge base for yunIO.<br>
+Make sure to use the samples within the new [HelpCenter for yunIO](https://helpcenter.theobald-software.com/yunio/knowledge-base).
+
 The following article shows how to use forms in Microsoft Teams to send data to SAP.<br>
 In the following scenario, a Teams form is used to transfer an employee's sick leave request to SAP.
 

@@ -7,6 +7,11 @@ weight: 4
 progressstate: 5
 ---
 
+{: .box-warning}
+**Warning: Deprecated articles** <br>
+You are using the old version of the knowledge base for yunIO.<br>
+Make sure to use the samples within the new [HelpCenter for yunIO](https://helpcenter.theobald-software.com/yunio/knowledge-base).
+
 
 The following article shows how to integrate a yunIO services via the Nintex Gateway.<br>
 The Nintex Gateway is an on-premises application that enables Nintex Automation Cloud to access on-premises resources.

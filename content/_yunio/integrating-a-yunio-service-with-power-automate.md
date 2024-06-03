@@ -6,6 +6,11 @@ permalink: /:collection/:path
 weight: 3
 ---
 
+{: .box-warning}
+**Warning: Deprecated articles** <br>
+You are using the old version of the knowledge base for yunIO.<br>
+Make sure to use the samples within the new [HelpCenter for yunIO](https://helpcenter.theobald-software.com/yunio/knowledge-base).
+
 The following article shows how to integrate a yunIO service with Microsoft Power Automate.
 
 Power Automate is a cloud-based process automation service provided by Microsoft. 

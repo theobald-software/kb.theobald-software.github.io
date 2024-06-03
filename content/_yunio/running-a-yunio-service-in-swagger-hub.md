@@ -8,6 +8,11 @@ permalink: /:collection/:path
 weight: 2
 ---
 
+{: .box-warning}
+**Warning: Deprecated articles** <br>
+You are using the old version of the knowledge base for yunIO.<br>
+Make sure to use the samples within the new [HelpCenter for yunIO](https://helpcenter.theobald-software.com/yunio/knowledge-base).
+
 The following article shows how to run a yunIO service in SwaggerHub.<br>
 SwaggerHub is an OpenAPI design and documentation tool that allows validation of APIs.
 For more information on the SwaggerHub, see [SwaggerHub Documentation](https://support.smartbear.com/swaggerhub/docs/).
