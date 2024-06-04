@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|[6.7.2 [H]](https://kb.theobald-software.com/release-notes/XtractUniversal-6.7.2.html)|2024-06-04|General|Fixed a denial of service vulnerability, where the server would hang in a cleanup loop and fill up its log file. Some limitations for when working with sub-directories were removed. Especially when consuming the API. Issues in the cache were fixed as well. Aborting extractions works more reliably now.([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-6.7.2.html))|
 |6.7.1 [L]|2024-05-24|Designer|Fixed a bug that would show incorrect information regarding extractions last run|
 |6.7.0 [L]|2024-05-21|Designer|Added extraction subdirectories support|
 |6.6.1 [L]|2024-05-17|BW Cube|Fix for config converter not converting custom column order in BW Cube extractions.|
