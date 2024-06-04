@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.1.11 [L]|2024-06-04|General|List selection GUI: rename "equal to" to "element of"|
 |2.1.10 [L]|2024-06-03|BW Cube|MDX: Fix structures (broken since 2.0)|
 |2.1.9 [L]|2024-06-03|BAPI|GUI now allows assignment of output runtime parameters to export parameters|
 |[2.1.8 [L]](https://kb.theobald-software.com/release-notes/TheobaldExtractors-2.1.8.html)|2024-05-29|TableCDC|Result sorting now takes place on SAP side. Removed support for Z_THEO_READ_TABLE. Check release notes for details([Release note](https://kb.theobald-software.com/release-notes/TheobaldExtractors-2.1.8.html))|
