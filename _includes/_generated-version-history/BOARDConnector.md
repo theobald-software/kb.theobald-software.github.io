@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|[6.5.2 [H]](https://kb.theobald-software.com/release-notes/BOARDConnector-6.5.2.html)|2024-06-04|Server|Fixed a denial of service vulnerability, where the server would hang in a cleanup loop and fill up its log file.([Release note](https://kb.theobald-software.com/release-notes/BOARDConnector-6.5.2.html))|
 |6.5.1 [L]|2024-05-17|BW Cube|Fix for config converter not converting custom column order in BW Cube extractions.|
 |6.5.0 [L]|2024-05-17|TableCDC|Released Monitoring Feature for Log Tables and Triggers. Update of /THEO/CDC* package required.|
 |6.4.2 [L]|2024-05-14|ODP|Fixed metadata and data retrieval for DF16_DEC and DF34_DEC|
