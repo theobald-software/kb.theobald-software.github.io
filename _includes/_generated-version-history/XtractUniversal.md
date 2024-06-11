@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.7.6 [L]|2024-06-11|Designer|Redshift destination: table column descriptions are now included in the output table comment field.|
 |6.7.5 [L]|2024-06-10|DeltaQ|Fixed a bug which would define a wrong field length for legacy DeltaQ extractions|
 |6.7.4 [L]|2024-06-07|Destinations|Fixed a bug where switching back and forth between FileType options in destination settings could lead to an error.|
 |6.7.3 [L]|2024-06-06|Designer|Fixed a bug that would lead to several duplicated and invalid designer connection settings entries|
