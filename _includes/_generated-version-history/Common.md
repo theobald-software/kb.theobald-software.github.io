@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.23.22 [L]|2024-06-11|General|Added support for new version history tools|
 |2.23.21 [L]|2024-05-21|WPF|Extended the CopyPasteTextBox to support error display.|
 |2.23.20 [L]|2024-05-17|General|Allow empty names in NamedList|
 |2.23.19 [L]|2024-04-22|General|Unicode control characters are now deleted before serializing log messages|
