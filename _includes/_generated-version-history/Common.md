@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.24.0 [L]|2024-06-12|General|Updated NW RFC SDK to 750 PL13|
 |2.23.22 [L]|2024-06-11|General|Added support for new version history tools|
 |2.23.21 [L]|2024-05-21|WPF|Extended the CopyPasteTextBox to support error display.|
 |2.23.20 [L]|2024-05-17|General|Allow empty names in NamedList|
