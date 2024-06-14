@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.7.9 [L]|2024-06-14|Destinations|BREAKING: reverted object naming change, where using "Same as extraction name" option would use extractions fully qualified name with path as object name.|
 |6.7.8 [L]|2024-06-14|Destinations|Redshift destination: fixed support for columns of type INT8.|
 |6.7.6 [L]|2024-06-11|Destinations|Redshift destination: table column descriptions are now included in the output table comment field.|
 |6.7.5 [L]|2024-06-10|DeltaQ|Fixed a bug which would define a wrong field length for legacy DeltaQ extractions|
