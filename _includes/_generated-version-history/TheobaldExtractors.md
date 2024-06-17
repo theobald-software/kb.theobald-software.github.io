@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.1.12 [L]|2024-06-17|BW Cube|BICS: Improve error message for metadata retrieval|
 |2.1.11 [L]|2024-06-04|General|List selection GUI: rename "equal to" to "element of"|
 |2.1.10 [L]|2024-06-03|BW Cube|MDX: Fix structures (broken since 2.0)|
 |2.1.9 [L]|2024-06-03|BAPI|GUI now allows assignment of output runtime parameters to export parameters|
