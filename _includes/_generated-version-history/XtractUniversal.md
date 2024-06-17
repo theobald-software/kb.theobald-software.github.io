@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|[6.8.0 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-6.8.0.html)|2024-06-17|General|We migrated XtractUniversal away from the Windows specific .NET Framework to the new .NET (Version 8.0). Salesforce and DB2 destination received some internal changes. See the release notes for more details.([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-6.8.0.html))|
 |[6.7.10 [L]](https://kb.theobald-software.com/release-notes/XtractUniversal-6.7.10.html)|2024-06-14|Designer|Fixed minor bugs in the main and run windows([Release note](https://kb.theobald-software.com/release-notes/XtractUniversal-6.7.10.html))|
 |6.7.9 [L]|2024-06-14|Destinations|BREAKING CHANGE: reverted object naming change, where using "Same as extraction name" option would use extractions fully qualified name with path as object name. Added "fully qualified extraction name" option to output object naming. This option uses extraction name with full extraction path as output object name.|
 |6.7.8 [L]|2024-06-14|Destinations|Redshift destination: fixed support for columns of type INT8.|
