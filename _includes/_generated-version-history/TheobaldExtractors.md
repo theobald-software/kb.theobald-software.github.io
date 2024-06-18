@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.1.14 [L]|2024-06-18|General|Fixed a bug where NameConverter would not shorten names correctly when the maximum length was an odd number.|
 |2.1.13 [L]|2024-06-17|General|Extractor libraries are now targeting net472 and net8.0. GUI libraries target net472 and net8.0-windows.|
 |2.1.12 [L]|2024-06-17|BW Cube|BICS: Improve error message for metadata retrieval|
 |2.1.11 [L]|2024-06-04|General|List selection GUI: rename "equal to" to "element of"|
