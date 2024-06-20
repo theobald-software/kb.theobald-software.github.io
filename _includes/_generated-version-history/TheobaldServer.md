@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.4.2 [L]|2024-06-20|General|Removed column encryption.|
 |4.4.1 [L]|2024-06-17|General|Adjusted config settings class to be compatible with rust listeners.|
 |[4.4.0 [L]](https://kb.theobald-software.com/release-notes/TheobaldServer-4.4.0.html)|2024-06-17|General|Migrated the server to .NET 8.0.([Release note](https://kb.theobald-software.com/release-notes/TheobaldServer-4.4.0.html))|
 |4.3.5 [L]|2024-06-14|General|Added new output object naming option "Fully qualified extraction name". This option uses extractions full name with path as output object name.|
