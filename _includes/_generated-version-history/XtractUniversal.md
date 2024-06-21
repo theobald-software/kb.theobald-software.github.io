@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.8.4 [L]|2024-06-21|BW Cube|Fixed a bug that caused filters to be removed when refreshing metadata|
 |6.8.3 [L]|2024-06-20|General|Removed column encryption feature.|
 |6.8.2 [L]|2024-06-18|Destinations|BREAKING CHANGE: fixed a bug where output object names would not get shortened properly in some cases. This affects only extractions where the output object name was too long and had to be automatically shortened.|
 |6.8.1 [L]|2024-06-17|Server|Fixed a bug introduced in 6.8.0 where the designer would not be able to connect due to the server misinterpreting the configuration file. Run the config converter during setup to fix the issue.|
