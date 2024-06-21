@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.1.17 [L]|2024-06-21|BW Cube|Fixed a bug that caused filters to be removed when refreshing metadata|
 |2.1.16 [L]|2024-06-20|General|Removed column encryption.|
 |[2.1.15 [L]](https://kb.theobald-software.com/release-notes/TheobaldExtractors-2.1.15.html)|2024-06-20|Report|Updated Z_XTRACT_IS_REMOTE_REPORT to version 1.3. Multiple changes to report component.([Release note](https://kb.theobald-software.com/release-notes/TheobaldExtractors-2.1.15.html))|
 |2.1.14 [L]|2024-06-18|General|Fixed a bug where NameConverter would not shorten names correctly when the maximum length was an odd number.|
