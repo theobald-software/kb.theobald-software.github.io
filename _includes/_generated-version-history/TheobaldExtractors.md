@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.2.1 [L]|2024-06-24|Table|Fixed transport request for /THEO/READ_TABLE for SAP versions 6.40 and newer.|
 |[2.2.0 [L]](https://kb.theobald-software.com/release-notes/TheobaldExtractors-2.2.0.html)|2024-06-24|TableCDC|Timestamp is now part of extraction result. Log tables are now created client dependent. Updated THEO/CDC/* to version 1.7. See release notes for details. ([Release note](https://kb.theobald-software.com/release-notes/TheobaldExtractors-2.2.0.html))|
 |2.1.18 [L]|2024-06-23|BW Cube|BICS: Try to fix metadata retrieval for newer BW releases|
 |2.1.17 [L]|2024-06-21|BW Cube|Fixed a bug that caused filters to be removed when refreshing metadata|
