@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.8.5 [L]|2024-06-25|ODP|Fixed a regression bug where ODP preview would fail for hierarchy DataSources.|
 |6.8.4 [L]|2024-06-21|BW Cube|Fixed a bug that caused filters to be removed when refreshing metadata|
 |6.8.3 [L]|2024-06-20|General|Removed column encryption feature.|
 |6.8.2 [L]|2024-06-18|Destinations|BREAKING CHANGE: fixed a bug where output object names would not get shortened properly in some cases. This affects only extractions where the output object name was too long and had to be automatically shortened.|
