@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.8.6 [L]|2024-07-01|General|Fixed a bug that causes missing sources after running the config converter when the service user was changed.|
 |6.8.5 [L]|2024-06-25|ODP|Fixed a regression bug where ODP preview would fail for hierarchy DataSources.|
 |6.8.4 [L]|2024-06-21|BW Cube|Fixed a bug that caused filters to be removed when refreshing metadata|
 |6.8.3 [L]|2024-06-20|General|Removed column encryption feature.|
