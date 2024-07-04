@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.8.8 [L]|2024-07-04|General|Fixed a bug in xu.exe that caused it to crash when generating the password file due to a missing library which was not actually required.|
 |6.8.7 [L]|2024-07-01|General|Fixed a usability issue in the config converter where the information that pressing any key will close the application. The prompt will now appear after all other text. In addition the application will now close automatically when the conversion did not run into errors.|
 |6.8.6 [L]|2024-07-01|General|Fixed a bug that causes missing sources after running the config converter when the service user was changed.|
 |6.8.5 [L]|2024-06-25|ODP|Fixed a regression bug where ODP preview would fail for hierarchy DataSources.|
