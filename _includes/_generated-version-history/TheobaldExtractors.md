@@ -1,6 +1,7 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
-|2.2.5 [L]|2024-07-03|TableCDC|Fixed a bug that caused trigger creation to fail on MaxDB databases. Required update of /THEO/CDC_ECC|
+|2.2.6 [L]|2024-07-05|General|GUI filters now respect wildcards (*)|
+|2.2.5 [L]|2024-07-03|TableCDC|Fixed a bug that caused trigger creation to fail on MaxDB databases. Requires update of /THEO/CDC_ECC|
 |2.2.4 [H]|2024-07-03|TableCDC|Fixed a bug that could cause optimization logic of delta extractions to not include all delta records in the result. Bug introduced in 2.2.0|
 |2.2.3 [L]|2024-06-26|TableCDC|Fixed a bug where tables could not be selected if they had multiple fields of type CLNT. This bug was introduced in 2.2.0|
 |2.2.2 [L]|2024-06-25|ODP|Fixed a regression bug where ODP preview would fail for hierarchy DataSources.|
