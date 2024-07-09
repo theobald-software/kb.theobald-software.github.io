@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.8.10 [L]|2024-07-09|Destinations|Fixed a bug where extractions using Huawei Cloud OBS destination could not be ran and destinations of that type could not be created or edited.|
 |6.8.9 [L]|2024-07-05|Designer|GUI filters now respect wildcards (*)|
 |6.8.8 [L]|2024-07-04|General|Fixed a bug in xu.exe that caused it to crash when generating the password file due to a missing library which was not actually required.|
 |6.8.7 [L]|2024-07-01|General|Fixed a usability issue in the config converter where the information that pressing any key will close the application. The prompt will now appear after all other text. In addition the application will now close automatically when the conversion did not run into errors.|
