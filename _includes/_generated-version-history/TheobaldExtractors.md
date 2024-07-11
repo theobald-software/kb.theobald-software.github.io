@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.2.7 [L]|2024-07-11|DeltaQ|Fixed a bug which would not consider selections from unselected columns|
 |2.2.6 [L]|2024-07-05|General|GUI filters now respect wildcards (*)|
 |2.2.5 [L]|2024-07-03|TableCDC|Fixed a bug that caused trigger creation to fail on MaxDB databases. Requires update of /THEO/CDC_ECC|
 |2.2.4 [H]|2024-07-03|TableCDC|Fixed a bug that could cause optimization logic of delta extractions to not include all delta records in the result. Bug introduced in 2.2.0|
