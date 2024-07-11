@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|7.7.5 [L]|2024-07-11|DeltaQ|Fixed legacy selections with variables. Fixed the serialization of a property that could get duplicated in the package file.|
 |7.7.4 [L]|2024-06-25|General|Fixed a bug that caused errors when using variables with same names but different scopes|
 |7.7.3 [L]|2024-06-25|ODP|Fixed a regression bug where ODP preview would fail for hierarchy DataSources.|
 |7.7.2 [L]|2024-06-18|General|Fixed a bug where most of the extractor windows were unusable due to a wrong version number in a required assembly.|
