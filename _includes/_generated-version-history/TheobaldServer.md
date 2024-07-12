@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.4.3 [L]|2024-07-12|General|The runtime now provides the extraction timestamp as DateTime type to the destinations.|
 |4.4.2 [L]|2024-06-20|General|Removed column encryption.|
 |4.4.1 [L]|2024-06-17|General|Adjusted config settings class to be compatible with rust listeners.|
 |[4.4.0 [L]](https://kb.theobald-software.com/release-notes/TheobaldServer-4.4.0.html)|2024-06-17|General|Migrated the server to .NET 8.0.([Release note](https://kb.theobald-software.com/release-notes/TheobaldServer-4.4.0.html))|
