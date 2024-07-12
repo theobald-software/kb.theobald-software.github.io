@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.8.12 [L]|2024-07-12|Designer|Fix Extraction.Fields for BWCube & ODP in destination settings script|
 |6.8.11 [L]|2024-07-12|Destinations|Snowflake destination: The settings now offer an option that, when enabled, causes the destination to append the extraction timestamp as a column to each row.|
 |6.8.10 [L]|2024-07-09|Destinations|Fixed a bug where extractions using Huawei Cloud OBS destination could not be ran and destinations of that type could not be created or edited.|
 |6.8.9 [L]|2024-07-05|Designer|GUI filters now respect wildcards (*)|
