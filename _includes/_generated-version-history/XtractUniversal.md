@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.8.11 [L]|2024-07-12|Destinations|Snowflake destination: The settings now offer an option that, when enabled, causes the destination to append the extraction timestamp as a column to each row.|
 |6.8.10 [L]|2024-07-09|Destinations|Fixed a bug where extractions using Huawei Cloud OBS destination could not be ran and destinations of that type could not be created or edited.|
 |6.8.9 [L]|2024-07-05|Designer|GUI filters now respect wildcards (*)|
 |6.8.8 [L]|2024-07-04|General|Fixed a bug in xu.exe that caused it to crash when generating the password file due to a missing library which was not actually required.|
