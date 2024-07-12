@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.2.8 [L]|2024-07-12|TableCDC|Fixed a bug where delta loads would fail if there are records evaluating to null during optimization. Bug introduced in 2.2.0|
 |2.2.7 [L]|2024-07-11|DeltaQ|Fixed a bug which would not consider selections from unselected columns|
 |2.2.6 [L]|2024-07-05|General|GUI filters now respect wildcards (*)|
 |2.2.5 [L]|2024-07-03|TableCDC|Fixed a bug that caused trigger creation to fail on MaxDB databases. Requires update of /THEO/CDC_ECC|
