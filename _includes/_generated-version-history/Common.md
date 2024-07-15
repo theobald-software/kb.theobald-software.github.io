@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.24.3 [L]|2024-07-15|General|Updated support for new version numbering features|
 |2.24.2 [L]|2024-06-18|WPF|Fix version number not written into assembly, causing problems in XtractIS due to the global assembly cache (GAC).|
 |2.24.1 [L]|2024-06-17|WPF|WPF library does now target net472 and net8.0-windows.|
 |2.24.0 [L]|2024-06-12|General|Updated NW RFC SDK to 750 PL13|
