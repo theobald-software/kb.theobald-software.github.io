@@ -17,6 +17,6 @@ layout: releaseNotes
   - The Windows Service was reimplemented in rust (old implementation was C++)
 - Floating point numbers
   - .NETFramework was not able to correctly convert floating point numbers into strings
-    - .NET fixes this - Hence, floating point numbers my now include or omit additional digits
+    - .NET fixes this - Hence, floating point numbers may now include or omit additional digits
     - Floating point numbers in text form are now guaranteed to represent the correct value
     - More information [here](https://github.com/dotnet/coreclr/pull/22040)
