@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.8.14 [L]|2024-07-18|Destinations|Database Destinations: Added #{Extraction.ExtractionName}# context for custom SQL statements and support for script extractions in row processing step|
 |6.8.13 [L]|2024-07-15|Destinations|Power BI Report Server Plugin: fixed an issue where the plugin couldn't be loaded by VisualStudio and Report Server. Bug introduced in version 6.8 (migration to .net8)|
 |6.8.12 [L]|2024-07-12|Designer|Fix Extraction.Fields for BWCube & ODP in destination settings script|
 |6.8.11 [L]|2024-07-12|Destinations|Snowflake destination: The settings now offer an option that, when enabled, causes the destination to append the extraction timestamp as a column to each row.|
