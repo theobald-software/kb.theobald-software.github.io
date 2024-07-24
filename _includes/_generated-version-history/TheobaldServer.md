@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.4.4 [L]|2024-07-24|General|Improved the performance of extractions which create a new cache entry. That process was not correctly parallelized.|
 |4.4.3 [L]|2024-07-12|General|The runtime now provides the extraction timestamp as DateTime type to the destinations.|
 |4.4.2 [L]|2024-06-20|General|Removed column encryption.|
 |4.4.1 [L]|2024-06-17|General|Adjusted config settings class to be compatible with rust listeners.|
