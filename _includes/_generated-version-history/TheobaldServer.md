@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|4.4.5 [L]|2024-07-25|General|Fixed a bug where ODP range selections would not be available in the extraction's script expressions.|
 |4.4.4 [L]|2024-07-24|General|Improved the performance of extractions which create a new cache entry. That process was not correctly parallelized.|
 |4.4.3 [L]|2024-07-12|General|The runtime now provides the extraction timestamp as DateTime type to the destinations.|
 |4.4.2 [L]|2024-06-20|General|Removed column encryption.|
