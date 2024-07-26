@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.2.12 [L]|2024-07-26|BW Cube|MDX: Ignore empty members in list parameters|
 |2.2.11 [L]|2024-07-25|Table|Fixed a bug where script expressions would not be correctly evaluated in the preview.|
 |2.2.10 [L]|2024-07-22|DeltaQ|Fixed a race condition which caused sporadically an error when multiple DeltaQ extractions were running simultaneously.|
 |2.2.9 [L]|2024-07-12|Hierarchy|Fixed a bug where Node Description Texts couldn't be found.|
