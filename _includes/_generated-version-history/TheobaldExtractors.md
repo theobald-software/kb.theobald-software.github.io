@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.2.14 [L]|2024-07-30|Table|Z_XTRACT_IS_TABLE_COMPRESSION marked as deprecated and cannot be selected anymore. The function module will be out of support starting 01/01/2025.|
 |2.2.13 [L]|2024-07-26|ODP|Fixed a performance regression causing XML reading when processing ODP packages to be extremely slow.|
 |2.2.12 [L]|2024-07-26|BW Cube|MDX: Ignore empty members in list parameters|
 |2.2.11 [L]|2024-07-25|Table|Fixed a bug where script expressions would not be correctly evaluated in the preview.|
