@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.6.1 [L]|2024-07-31|Designer|Updated link URLs in various windows that direct to the new HelpCenter when pressing F1|
 |[6.6.0 [L]](https://kb.theobald-software.com/release-notes/BOARDConnector-6.6.0.html)|2024-07-17|General|We migrated Board Connector away from the Windows specific .NETFramework to the new .NET (Version 8.0). Run the ConfigConverter during installation to make sure the server runs correctly.  The setup will install the runtimes automatically during installation of Board Connector.([Release note](https://kb.theobald-software.com/release-notes/BOARDConnector-6.6.0.html))|
 |6.5.4 [L]|2024-06-21|BW Cube|Fixed a bug that caused filters to be removed when refreshing metadata|
 |[6.5.2 [H]](https://kb.theobald-software.com/release-notes/BOARDConnector-6.5.2.html)|2024-06-04|Server|Fixed a denial of service vulnerability, where the server would hang in a cleanup loop and fill up its log file.([Release note](https://kb.theobald-software.com/release-notes/BOARDConnector-6.5.2.html))|
