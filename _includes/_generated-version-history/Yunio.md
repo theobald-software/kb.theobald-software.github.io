@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|1.32.19 [L]|2024-07-31|Designer|Updated link URLs in various places to direct to the new HelpCenter|
 |1.32.18 [L]|2024-07-08|Designer|CLNT fields are no longer shown in the table join editor when adding a condition.|
 |[1.32.17 [L]](https://kb.theobald-software.com/release-notes/Yunio-1.32.17.html)|2024-06-17|General|Moved to .NET 8. Fixed a shutdown bug in the windows service.([Release note](https://kb.theobald-software.com/release-notes/Yunio-1.32.17.html))|
 |1.32.15 [L]|2024-06-07|Designer|Added feature to edit joins for table services.|
