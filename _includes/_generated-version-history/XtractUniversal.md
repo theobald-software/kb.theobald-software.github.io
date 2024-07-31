@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|6.8.17 [L]|2024-07-31|Designer|Updated link URLs in various windows that direct to the new HelpCenter when pressing F1|
 |6.8.16 [L]|2024-07-26|General|Fixed a bug where the server would not correctly persist the version information for the current configuration format.|
 |6.8.15 [L]|2024-07-24|Destinations|Fixed a performance issue in the SQL Server destination where a data object would be rebuilt instead of reusing it. This change also reduces the destinations total memory usage.|
 |6.8.14 [L]|2024-07-18|Destinations|Database Destinations: Added #{Extraction.ExtractionName}# context for custom SQL statements and support for script extractions in row processing step|
