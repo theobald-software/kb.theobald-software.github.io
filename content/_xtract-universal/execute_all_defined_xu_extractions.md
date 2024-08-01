@@ -6,6 +6,11 @@ permalink: /:collection/:path
 weight: 45
 ---
 
+{: .box-warning}
+**Warning: Deprecated articles** <br>
+You are using the old version of the knowledge base for Xtract Universal.<br>
+Make sure to use the knowledge base within the new [HelpCenter for Xtract Universal](https://helpcenter.theobald-software.com/xtract-universal/knowledge-base/).
+
 ### About
 
 The following article shows how to execute and schedule all defined extractions in the Xtract Universal Designer. 

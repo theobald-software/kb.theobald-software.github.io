@@ -7,6 +7,11 @@ weight: 80
 author: Yogen Weinreich, Valerie Schipka
 ---
 
+{: .box-warning}
+**Warning: Deprecated articles** <br>
+You are using the old version of the knowledge base for Xtract Universal.<br>
+Make sure to use the knowledge base within the new [HelpCenter for Xtract Universal](https://helpcenter.theobald-software.com/xtract-universal/knowledge-base/).
+
 
 The following article describes a scenario that uses Azure Data Factory (ADF) to trigger and automate SAP data movements using Xtract Universal's [webservices](https://help.theobald-software.com/en/xtract-universal/execute-and-automate-extractions/call-via-webservice). <br>
 This article targets customers that utilize ADF as a platform for orchestrating data movement and transformation. <br>

@@ -6,6 +6,11 @@ permalink: /:collection/:path
 weight: 10
 ---
 
+{: .box-warning}
+**Warning: Deprecated articles** <br>
+You are using the old version of the knowledge base for Xtract Universal.<br>
+Make sure to use the knowledge base within the new [HelpCenter for Xtract Universal](https://helpcenter.theobald-software.com/xtract-universal/knowledge-base/).
+
 The following article shows how to call Xtract Universal extractions dynamically from Azure Data Factory (ADF) using user-defined variables. <br>
 
 ### Calling Dynamic Extractions with Variables

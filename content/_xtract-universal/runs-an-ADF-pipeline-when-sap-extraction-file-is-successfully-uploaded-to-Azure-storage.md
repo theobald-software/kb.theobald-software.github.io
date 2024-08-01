@@ -6,6 +6,11 @@ permalink: /:collection/:path
 weight: 125
 ---
 
+{: .box-warning}
+**Warning: Deprecated articles** <br>
+You are using the old version of the knowledge base for Xtract Universal.<br>
+Make sure to use the knowledge base within the new [HelpCenter for Xtract Universal](https://helpcenter.theobald-software.com/xtract-universal/knowledge-base/).
+
 The following article shows how to run an event-driven pipeline in Azure Data Factory to process SAP data extracted with [Xtract Universal](https://theobald-software.com/en/xtract-universal/) into an Azure Storage. <br>
 
 ### About

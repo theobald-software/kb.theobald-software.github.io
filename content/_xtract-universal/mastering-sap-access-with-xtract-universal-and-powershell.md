@@ -6,6 +6,11 @@ permalink: /:collection/:path
 weight: 100
 ---
 
+{: .box-warning}
+**Warning: Deprecated articles** <br>
+You are using the old version of the knowledge base for Xtract Universal.<br>
+Make sure to use the knowledge base within the new [HelpCenter for Xtract Universal](https://helpcenter.theobald-software.com/xtract-universal/knowledge-base/).
+
 This article showcases how to use PowerShell scripts in combination with Xtract Universal.
 
 Xtract Universal is an SAP connector that enables axtraction of save data streams from SAP ERP and BW objects to different target systems. 

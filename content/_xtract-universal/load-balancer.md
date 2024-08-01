@@ -6,6 +6,11 @@ permalink: /:collection/:path
 weight: 105
 ---
 
+{: .box-warning}
+**Warning: Deprecated articles** <br>
+You are using the old version of the knowledge base for Xtract Universal.<br>
+Make sure to use the knowledge base within the new [HelpCenter for Xtract Universal](https://helpcenter.theobald-software.com/xtract-universal/knowledge-base/).
+
 The following article shows how to operate Xtract Universal with load balancing.<br>
 In this context, load balancing means to distribute the network traffic across multiple Windows servers to avoid server overloads. 
 

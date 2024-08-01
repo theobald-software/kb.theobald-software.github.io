@@ -6,6 +6,13 @@ permalink: /:collection/:path
 weight: 16
 ---
 
+
+{: .box-warning}
+**Warning: Deprecated articles** <br>
+You are using the old version of the knowledge base for Xtract IS.<br>
+Make sure to use the knowledge base within the new [HelpCenter for Xtract IS](https://helpcenter.theobald-software.com/xtract-is/knowledge-base/).
+
+
 The following article describes the secure data integration approach and the necessary steps to execute SSIS packages that access an SAP source (Xtract Connection) located in a private network (domain).
 
 To perform data integration securely in a private network environment without a direct line-of-sight from the public cloud environment, you can install a self-hosted IR in your on-premises environment behind a firewall, or inside a virtual private network. 

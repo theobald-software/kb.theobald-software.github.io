@@ -6,6 +6,11 @@ permalink: /:collection/:path
 weight: 55
 ---
 
+{: .box-warning}
+**Warning: Deprecated articles** <br>
+You are using the old version of the knowledge base.<br>
+Make sure to use the knowledge base within the new [Theobald Software HelpCenter](https://helpcenter.theobald-software.com/).
+
 
 The following article is intended for users who want to run SSIS packages with SNC Authentication when DeltaQ or OHS dataflow components are used. 
 When SNC is used, it is a prerequisite that the associated application server, RFC destination (*SM59*) and SAP user have set SNC via partner name. 

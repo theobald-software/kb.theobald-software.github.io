@@ -6,6 +6,12 @@ permalink: /:collection/:path
 weight: 20
 ---
 
+
+{: .box-warning}
+**Warning: Deprecated articles** <br>
+You are using the old version of the knowledge base for Xtract IS.<br>
+Make sure to use the knowledge base within the new [HelpCenter for Xtract IS](https://helpcenter.theobald-software.com/xtract-is/knowledge-base/).
+
 The following article shows how to access the Azure SSIS-IR Cluster. 
 The Azure SSIS-IR ClusterID is needed to create a customer bound license.  
 

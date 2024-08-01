@@ -6,6 +6,11 @@ permalink: /:collection/:path
 weight: 8
 ---
 
+{: .box-warning}
+**Warning: Deprecated articles** <br>
+You are using the old version of the knowledge base.<br>
+Make sure to use the knowledge base within the new [Theobald Software HelpCenter](https://helpcenter.theobald-software.com/).
+
 Check out our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
 
 Data from SAP HCM tables PCL1 and PCL2 can only be extracted using the Xtract BAPI component. Data extraction via Xtract Table component is not supported.
@@ -41,7 +46,6 @@ CRT        LIKE=PC208
 
 
 ![payroll03](/img/contents/payroll03.png){:class="img-responsive"}
-
 
 Below you can find the ABAP source code of the function module. Please copy and paste this code in the source code area of the function module.
 

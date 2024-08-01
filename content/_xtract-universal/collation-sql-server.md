@@ -6,6 +6,11 @@ permalink: /:collection/:path
 weight: 20
 ---
 
+{: .box-warning}
+**Warning: Deprecated articles** <br>
+You are using the old version of the knowledge base for Xtract Universal.<br>
+Make sure to use the knowledge base within the new [HelpCenter for Xtract Universal](https://helpcenter.theobald-software.com/xtract-universal/knowledge-base/).
+
 The following article describes a common problem that occurs when pushing SAP data into an SQL server database when collation is not set case-sensitive.
 The depicted example shows how to customize the drop & create SQL server statement within Xtract Universal destination settings.
 

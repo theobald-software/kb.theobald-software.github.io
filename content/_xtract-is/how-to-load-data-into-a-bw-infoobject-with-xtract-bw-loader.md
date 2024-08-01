@@ -6,6 +6,12 @@ permalink: /:collection/:path
 weight: 50
 ---
 
+
+{: .box-warning}
+**Warning: Deprecated articles** <br>
+You are using the old version of the knowledge base for Xtract IS.<br>
+Make sure to use the knowledge base within the new [HelpCenter for Xtract IS](https://helpcenter.theobald-software.com/xtract-is/knowledge-base/).
+
 The following article shows how to use the Xtract BW Loader component with an InfoPackage to load data into InfoObject Texts.
 
 {: .box-tip }

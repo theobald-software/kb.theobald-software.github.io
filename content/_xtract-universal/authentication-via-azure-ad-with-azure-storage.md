@@ -6,6 +6,11 @@ permalink: /:collection/:path
 weight: 6
 ---
 
+{: .box-warning}
+**Warning: Deprecated articles** <br>
+You are using the old version of the knowledge base for Xtract Universal.<br>
+Make sure to use the knowledge base within the new [HelpCenter for Xtract Universal](https://helpcenter.theobald-software.com/xtract-universal/knowledge-base/).
+
 The following article shows how to connect to the Azure Storage destination using Authentication via Azure Active Directory.<br>
 The article leads you through the following process:
 

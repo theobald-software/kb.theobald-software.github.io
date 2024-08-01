@@ -6,6 +6,11 @@ permalink: /:collection/:path
 weight: 85
 ---
 
+{: .box-warning}
+**Warning: Deprecated articles** <br>
+You are using the old version of the knowledge base for Xtract Universal.<br>
+Make sure to use the knowledge base within the new [HelpCenter for Xtract Universal](https://helpcenter.theobald-software.com/xtract-universal/knowledge-base/).
+
 Theobald Software has partnered with Snowflake to build a showcase for integrating SAP ERP data into a Snowflake cloud data warehouse. 
 The solution described in this article is based on an actual customer use case.
 

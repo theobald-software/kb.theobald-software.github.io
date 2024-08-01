@@ -6,6 +6,11 @@ permalink: /:collection/:path
 weight: 145
 ---
 
+{: .box-warning}
+**Warning: Deprecated articles** <br>
+You are using the old version of the knowledge base for Xtract Universal.<br>
+Make sure to use the knowledge base within the new [HelpCenter for Xtract Universal](https://helpcenter.theobald-software.com/xtract-universal/knowledge-base/).
+
 Please also have a look in our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
 
 First of all, customer master data in table KNA1 will be loaded into SharePoint.

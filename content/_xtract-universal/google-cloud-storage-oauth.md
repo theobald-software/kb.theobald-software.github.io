@@ -6,6 +6,11 @@ permalink: /:collection/:path
 weight: 140
 ---
 
+{: .box-warning}
+**Warning: Deprecated articles** <br>
+You are using the old version of the knowledge base for Xtract Universal.<br>
+Make sure to use the knowledge base within the new [HelpCenter for Xtract Universal](https://helpcenter.theobald-software.com/xtract-universal/knowledge-base/).
+
 Xtract Universal supports OAuth 2.0 for authentication with the Google servers.
 To enable the OAuth 2.0 protocol, configure an OAuth flow with the required access permissions to Xtract Universal.
 

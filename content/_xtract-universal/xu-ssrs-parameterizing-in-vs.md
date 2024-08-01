@@ -6,6 +6,11 @@ permalink: /:collection/:path
 weight: 165
 ---
 
+{: .box-warning}
+**Warning: Deprecated articles** <br>
+You are using the old version of the knowledge base for Xtract Universal.<br>
+Make sure to use the knowledge base within the new [HelpCenter for Xtract Universal](https://helpcenter.theobald-software.com/xtract-universal/knowledge-base/).
+
 This article contains information on how to parameterize extractions in Visual Studio in context of Xtract Universal's [Power BI Report Server destination](https://help.theobald-software.com/en/xtract-universal/destinations/server-report-services).
 
 ### About

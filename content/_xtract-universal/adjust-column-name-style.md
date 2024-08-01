@@ -6,6 +6,11 @@ permalink: /:collection/:path
 weight: 115
 ---
 
+{: .box-warning}
+**Warning: Deprecated articles** <br>
+You are using the old version of the knowledge base for Xtract Universal.<br>
+Make sure to use the knowledge base within the new [HelpCenter for Xtract Universal](https://helpcenter.theobald-software.com/xtract-universal/knowledge-base/).
+
 The following section describes a common business scenario to rename column name style within Microsoft SQL-Server environment.
 The given example shows how to use Custom SQL in the Finalization step of the database transaction within Xtract Universal destination settings.
 

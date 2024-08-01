@@ -6,6 +6,11 @@ permalink: /:collection/:path
 weight: 180
 ---
 
+{: .box-warning}
+**Warning: Deprecated articles** <br>
+You are using the old version of the knowledge base for Xtract for Alteryx.<br>
+Make sure to use the knowledge base within the new [HelpCenter for Xtract for Alteryx](https://helpcenter.theobald-software.com/xtract-for-alteryx/knowledge-base/).
+
 The following article shows how to extract attachment files of all formats from an SAP system, e.g., .pdf files of purchase orders.<br>
 
 ### About this Workflow

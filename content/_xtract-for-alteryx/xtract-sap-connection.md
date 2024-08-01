@@ -6,6 +6,11 @@ permalink: /:collection/:path
 weight: 240
 ---
 
+{: .box-warning}
+**Warning: Deprecated articles** <br>
+You are using the old version of the knowledge base for Xtract for Alteryx.<br>
+Make sure to use the knowledge base within the new [HelpCenter for Xtract for Alteryx](https://helpcenter.theobald-software.com/xtract-for-alteryx/knowledge-base/).
+
 The following section shows how to create an SAP connection using the Xtract for Alteryx UI.<br>
 An SAP connection is required to use any Xtract for Alteryx component.
 

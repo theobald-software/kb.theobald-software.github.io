@@ -6,6 +6,11 @@ permalink: /:collection/:path
 weight: 110
 ---
 
+{: .box-warning}
+**Warning: Deprecated articles** <br>
+You are using the old version of the knowledge base.<br>
+Make sure to use the knowledge base within the new [Theobald Software HelpCenter](https://helpcenter.theobald-software.com/).
+
 The following article shows how to upload CATS data from an SQL server table by using SSIS and the [Xtract IS BAPI](https://help.theobald-software.com/en/xtract-is/bapi) component.
 
 ### About BAPI_CATIMESHEETMGR_INSERT

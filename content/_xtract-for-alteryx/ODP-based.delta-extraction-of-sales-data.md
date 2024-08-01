@@ -6,6 +6,11 @@ permalink: /:collection/:path
 weight: 180
 ---
 
+{: .box-warning}
+**Warning: Deprecated articles** <br>
+You are using the old version of the knowledge base for Xtract for Alteryx.<br>
+Make sure to use the knowledge base within the new [HelpCenter for Xtract for Alteryx](https://helpcenter.theobald-software.com/xtract-for-alteryx/knowledge-base/).
+
 The following article shows how to use the Xtract ODP component of Xtract for Alteryx to load sales documents and customer master data from an SAP ERP system.<br>
 
 ### About this Workflow

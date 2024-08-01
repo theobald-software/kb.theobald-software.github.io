@@ -6,6 +6,11 @@ permalink: /:collection/:path
 weight: 20
 ---
 
+{: .box-warning}
+**Warning: Deprecated articles** <br>
+You are using the old version of the knowledge base for Xtract for Alteryx.<br>
+Make sure to use the knowledge base within the new [HelpCenter for Xtract for Alteryx](https://helpcenter.theobald-software.com/xtract-for-alteryx/knowledge-base/).
+
 This article contains information on performance measurements for Xtract for Alteryx.<br>
 This includes the reliability of performance measurements, best practices to enhance the performance and an example benchmark.
 

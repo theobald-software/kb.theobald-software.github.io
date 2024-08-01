@@ -8,6 +8,11 @@ permalink: /:collection/:path
 weight: 25
 ---
 
+{: .box-warning}
+**Warning: Deprecated articles** <br>
+You are using the old version of the knowledge base for Xtract Universal.<br>
+Make sure to use the knowledge base within the new [HelpCenter for Xtract Universal](https://helpcenter.theobald-software.com/xtract-universal/knowledge-base/).
+
 As of Xtract Universal Version 4.26.1, the command line tool xu-config.exe is available to customers in the installation directory of Xtract Universal, e.g. `C:\Program Files\XtractUniversal\xu-config.exe`.
 The xu-config.exe tool creates extractions, sources and destinations outside of the Xtract Universal Designer.
 
