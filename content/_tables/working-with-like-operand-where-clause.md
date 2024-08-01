@@ -6,6 +6,11 @@ permalink: /:collection/:path
 weight: 12
 ---
 
+{: .box-warning}
+**Warning: Deprecated articles** <br>
+You are using the old version of the knowledge base.<br>
+Make sure to use the knowledge base within the new [Theobald Software HelpCenter](https://helpcenter.theobald-software.com/).
+
 Check the [OnlineHelp](https://help.theobald-software.com/en/) for further information.
 
 In addition to any known operands you can also use the LIKE operand in WHERE-Clauses.

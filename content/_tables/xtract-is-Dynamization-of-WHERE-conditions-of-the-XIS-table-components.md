@@ -6,6 +6,11 @@ permalink: /:collection/:path
 weight: 1
 ---
 
+{: .box-warning}
+**Warning: Deprecated articles** <br>
+You are using the old version of the knowledge base.<br>
+Make sure to use the knowledge base within the new [Theobald Software HelpCenter](https://helpcenter.theobald-software.com/).
+
 The following article shows how to define dynamic WHERE conditions for Table extractions.
 
 The dynamization of Xtract IS Table components increases the maintainability of SSIS packages / projects. 

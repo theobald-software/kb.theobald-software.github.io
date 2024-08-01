@@ -6,6 +6,11 @@ permalink: /:collection/:path
 weight: 154
 ---
 
+{: .box-warning}
+**Warning: Deprecated articles** <br>
+You are using the old version of the knowledge base.<br>
+Make sure to use the knowledge base within the new [Theobald Software HelpCenter](https://helpcenter.theobald-software.com/).
+
 The following article shows how to set up Single Sign-On (SSO) with Secure Network Communication (SNC) and External ID.<br>
 *SSO with External ID* uses a Personal Security Environment (PSE) to create a trust relationship between the SAP application server and the service account that runs Xtract Universal.
 This allows Xtract Universal to impersonate any SAP user.<br>

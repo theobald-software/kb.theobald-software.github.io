@@ -7,6 +7,11 @@ weight: 15
 progressstate: 5
 ---
 
+{: .box-warning}
+**Warning: Deprecated articles** <br>
+You are using the old version of the knowledge base.<br>
+Make sure to use the knowledge base within the new [Theobald Software HelpCenter](https://helpcenter.theobald-software.com/).
+
 The following article shows how to handle the initial table load for delta extractions using the Table component.
 The article applies in the following situation:
 

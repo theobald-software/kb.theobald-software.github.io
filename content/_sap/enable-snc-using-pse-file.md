@@ -6,6 +6,11 @@ permalink: /:collection/:path
 weight: 20
 ---
 
+{: .box-warning}
+**Warning: Deprecated articles** <br>
+You are using the old version of the knowledge base.<br>
+Make sure to use the knowledge base within the new [Theobald Software HelpCenter](https://helpcenter.theobald-software.com/).
+
 The following article describes how an SNC connection to an SAP source system can be established with the Xtract products. 
 
 A workflow with X.509 certificate is used as the basis, which provides the logon data of the Windows AD user. The correctness of this X.509 certificate is ensured via the company's internal certification authority (ca).

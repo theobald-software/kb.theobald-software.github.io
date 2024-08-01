@@ -6,6 +6,11 @@ permalink: /:collection/:path
 weight: 20
 ---
 
+{: .box-warning}
+**Warning: Deprecated version history** <br>
+This version history is deprecated.<br>
+Make sure to use the **changelog** within the new [Xtract UniversalHelpCenter](https://helpcenter.theobald-software.com/xtract-universal/changelog/).
+
 See the [Theobald Extractors Version History](./theobald-extractors-version-history) and the [Xtract Kernel Version History](./xtract-kernel-version-history) for changes related to core extraction logic.
 
 For changes related to the server, please also take a look at the [Theobald Server Version History](./theobald-server-version-history).

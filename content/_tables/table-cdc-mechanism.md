@@ -7,6 +7,11 @@ weight: 15
 progressstate: 5
 ---
 
+{: .box-warning}
+**Warning: Deprecated articles** <br>
+You are using the old version of the knowledge base.<br>
+Make sure to use the knowledge base within the new [Theobald Software HelpCenter](https://helpcenter.theobald-software.com/).
+
 The following article illustrates the process of delta table extractions using the TableCDC component.
 
 ### Table CDC Process

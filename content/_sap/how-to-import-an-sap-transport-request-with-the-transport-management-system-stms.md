@@ -6,6 +6,11 @@ permalink: /:collection/:path
 weight: 35
 ---
 
+{: .box-warning}
+**Warning: Deprecated articles** <br>
+You are using the old version of the knowledge base.<br>
+Make sure to use the knowledge base within the new [Theobald Software HelpCenter](https://helpcenter.theobald-software.com/).
+
 The following article shows how to import transport requests for custom functions modules that are included in the installation directory of your product, e.g., `C:\Program Files\[XtractProduct]\ABAP`.
 
 <!---
@@ -120,6 +125,11 @@ your comment goes here
 -->
 
 ------
+
+{: .box-warning}
+**Warning: Deprecated articles** <br>
+You are using the old version of the knowledge base.<br>
+Make sure to use the knowledge base within the new [Theobald Software HelpCenter](https://helpcenter.theobald-software.com/).
 
 #### Related Links
 

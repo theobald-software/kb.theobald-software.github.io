@@ -6,6 +6,11 @@ permalink: /:collection/:path
 weight: 150
 ---
 
+{: .box-warning}
+**Warning: Deprecated articles** <br>
+You are using the old version of the knowledge base.<br>
+Make sure to use the knowledge base within the new [Theobald Software HelpCenter](https://helpcenter.theobald-software.com/).
+
 The following article describes the process of setting up Single-Sign-On (SSO) via Secure Network Communication (SNC) with SAP client certificates. <br>
 For more information on using SSO with Xtract Universal, refer to [Online Help: SAP Single-Sign-On](https://help.theobald-software.com/en/xtract-universal/advanced-techniques/sap-single-sign-on).
 

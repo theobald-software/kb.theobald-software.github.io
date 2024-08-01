@@ -6,6 +6,11 @@ permalink: /:collection/:path
 weight: 25
 ---
 
+{: .box-warning}
+**Warning: Deprecated articles** <br>
+You are using the old version of the knowledge base.<br>
+Make sure to use the knowledge base within the new [Theobald Software HelpCenter](https://helpcenter.theobald-software.com/).
+
 Check out our [OnlineHelp](https://help.theobald-software.com/en/) for further information.
 
 Sometimes the firewall is blocking the traffic to the SAP System. This could be a local Firewall, but also a Firewall in the destination network.

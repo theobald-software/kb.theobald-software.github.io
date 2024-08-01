@@ -6,6 +6,11 @@ permalink: /:collection/:path
 weight: 50
 ---
 
+{: .box-warning}
+**Warning: Deprecated articles** <br>
+You are using the old version of the knowledge base.<br>
+Make sure to use the knowledge base within the new [Theobald Software HelpCenter](https://helpcenter.theobald-software.com/).
+
 The following article shows how to create a client [PSE (Personal Security Environment)](https://help.sap.com/saphelp_nw73/helpdata/en/4c/61a6c6364012f3e10000000a15822b/frameset.htm) that can be used to connect to SAP cloud systems via WebSocket RFC.<br>
 
 ### Prerequisites

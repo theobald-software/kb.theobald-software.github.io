@@ -6,6 +6,11 @@ permalink: /:collection/:path
 weight: 15
 ---
 
+{: .box-warning}
+**Warning: Deprecated articles** <br>
+You are using the old version of the knowledge base.<br>
+Make sure to use the knowledge base within the new [Theobald Software HelpCenter](https://helpcenter.theobald-software.com/).
+
 ### Delta fields ###
 
 For delta functionality you need a delta field. Some tables like VBAK (Sales Document: Header Data) don't have a timestamp field for creation/change that we can use as a unique delta field but have separate fields for creation date (<strong>ERDAT</strong>), creation time (<strong>ERZET</strong>) and change date (<strong>AEDAT</strong>). To get the data of the VBAK table by using delta functionality we will create a generic datasource using a custom function module which implements the necessary logic.
@@ -74,6 +79,11 @@ FUNCTION Z_RSAX_BIW_GET_DATA_VBAK.
 *"      NO_MORE_DATA
 *"      ERROR_PASSED_TO_MESS_HANDLER
 *"----------------------------------------------------------------------
+
+{: .box-warning}
+**Warning: Deprecated articles** <br>
+You are using the old version of the knowledge base.<br>
+Make sure to use the knowledge base within the new [Theobald Software HelpCenter](https://helpcenter.theobald-software.com/).
 
 * THE INPUT PARAMETER I_DATAPAKID IS NOT SUPPORTED YET !
 

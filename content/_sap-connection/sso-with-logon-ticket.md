@@ -6,6 +6,11 @@ permalink: /:collection/:path
 weight: 155
 ---
 
+{: .box-warning}
+**Warning: Deprecated articles** <br>
+You are using the old version of the knowledge base.<br>
+Make sure to use the knowledge base within the new [Theobald Software HelpCenter](https://helpcenter.theobald-software.com/).
+
 The following article describes the process of running extractions for [pull destinations](https://help.theobald-software.com/en/xtract-universal/destinations#pull-and-push-destinations) using Single-Sign-On (SSO) with SAP Logon-Ticket. <br>
 For more information on using SSO with Xtract Universal, refer to [Online Help: SAP Single-Sign-On](https://help.theobald-software.com/en/xtract-universal/advanced-techniques/sap-single-sign-on).
 

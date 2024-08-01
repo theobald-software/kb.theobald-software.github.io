@@ -6,6 +6,11 @@ permalink: /:collection/:path
 weight: 30
 ---
 
+{: .box-warning}
+**Warning: Deprecated articles** <br>
+You are using the old version of the knowledge base.<br>
+Make sure to use the knowledge base within the new [Theobald Software HelpCenter](https://helpcenter.theobald-software.com/).
+
 The following article shows how to load data incrementally from an SAP Table based on date fields.
 The depicted example scenarios use the table VBAK (SAP Sales Document Header), which has two date fields: ERDAT for creation date and AEDAT for update date.
 

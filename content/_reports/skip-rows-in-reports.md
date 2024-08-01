@@ -6,6 +6,11 @@ permalink: /:collection/:path
 weight: 132
 ---
 
+{: .box-warning}
+**Warning: Deprecated articles** <br>
+You are using the old version of the knowledge base.<br>
+Make sure to use the knowledge base within the new [Theobald Software HelpCenter](https://helpcenter.theobald-software.com/).
+
 This articles shows how to skip certain rows in a Report extraction.<br>
 The example application provided in this article uses the **Row Skip Pattern** option in Xtract Universal's Report component to remove rows that contain the * symbol from extracted reports.
 
