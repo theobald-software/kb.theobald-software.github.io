@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.2.16 [L]|2024-08-02|Table|Fixed a bug that would not allow editing runtime parameters if no table was added|
 |2.2.15 [L]|2024-07-31|General|Updated help links in various windows for new HelpCenter|
 |2.2.14 [L]|2024-07-30|Table|Z_XTRACT_IS_TABLE_COMPRESSION marked as deprecated and cannot be selected anymore. The function module will be out of support starting 01/01/2025.|
 |2.2.13 [L]|2024-07-26|ODP|Fixed a performance regression causing XML reading when processing ODP packages to be extremely slow.|
