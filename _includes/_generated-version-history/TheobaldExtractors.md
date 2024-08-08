@@ -1,5 +1,6 @@
 |Version|Date    |Component   |Description|
 |:-----:|:------:|:----------:|:----------|
+|2.2.17 [L]|2024-08-08|Table|Added a validation to disallow saving table joins without respective joining fields|
 |2.2.16 [L]|2024-08-02|Table|Fixed a bug that would not allow editing runtime parameters if no table was added|
 |2.2.15 [L]|2024-07-31|General|Updated help links in various windows for new HelpCenter|
 |2.2.14 [L]|2024-07-30|Table|Z_XTRACT_IS_TABLE_COMPRESSION marked as deprecated and cannot be selected anymore. The function module will be out of support starting 01/01/2025.|
