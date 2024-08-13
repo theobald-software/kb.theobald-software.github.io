@@ -8,7 +8,7 @@ search-ignore: true
 
 {: .box-warning}
 **Warning: Deprecated version history** <br>
-This version history is deprecated.<br>
+This version history is deprecated and will not be updated as of July 2024.<br>
 Make sure to use the **changelog** within the new [Theobald Software HelpCenter](https://helpcenter.theobald-software.com/).
 
 
