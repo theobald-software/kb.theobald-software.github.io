@@ -1,0 +1,38 @@
+- title: Definition Phase
+  activities:
+    - title: Creative Brief
+      start: 2022-03-03
+      lasts: 1 day
+    - title: Graphic Design Research
+      start: 2022-03-02
+      lasts: 2 weeks
+    - title: Brainstorming / Mood Boarding
+      start: 2022-03-11
+      lasts: 2 weeks
+
+- title: Creation Phase
+  activities:
+    - title: Sketching
+      start: 2022-03-21
+      lasts: 2 weeks
+    - title: Design Building
+      start: 2022-04-02
+      lasts: 4 weeks
+    - title: Refining
+      start: 2022-05-01
+      lasts: 2 weeks
+
+- title: Feedback Phase
+  activities:
+    - title: Presenting
+      start: 2022-05-01
+      lasts: 3 days
+    - title: Revisions
+      start: 2022-05-02
+      end: 2022-05-31
+
+- title: Delivery Phase
+  activities:
+    - title: Final delivery
+      start: 2022-06-05
+      end: 2022-06-06
